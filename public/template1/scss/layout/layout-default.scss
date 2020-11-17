@@ -1196,6 +1196,15 @@ $howManySteps: 100; //this needs to be even.
                 margin-right: 0;
             }
 
+            &.not-hover{
+                margin-right: 20px;
+                img{
+                    margin-right: 5px;
+                }
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
         }
     }
 }

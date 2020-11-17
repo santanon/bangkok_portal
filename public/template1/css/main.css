@@ -11967,6 +11967,9 @@ template {
 .color-green .social-wrapper ul li a:hover {
   background-color: #006600; }
 
+.color-green .social-wrapper ul li.not-hover {
+  color: #53954e; }
+
 .color-green .input-custom .select-wrapper .slc {
   background-image: url("../assets/images/icons/icon-arrow-dropdown-green.svg"); }
 
@@ -14186,6 +14189,12 @@ template {
         height: 20px; }
     .social-wrapper ul li:last-child {
       margin-right: 0; }
+    .social-wrapper ul li.not-hover {
+      margin-right: 20px; }
+      .social-wrapper ul li.not-hover img {
+        margin-right: 5px; }
+      .social-wrapper ul li.not-hover:last-child {
+        margin-right: 0; }
 
 .online-wrapper {
   position: absolute;

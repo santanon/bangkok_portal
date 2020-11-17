@@ -1,0 +1,397 @@
+.bg-color-white{
+    background-color: #fff;
+}
+.bg-color-gray{
+    background-color: #525252;
+}
+
+.color-green{
+    .bg-color-primary-opacity{
+        background-color: rgba($color: $color-green-primary, $alpha: 0.8);
+    }
+    .bg-color-primary{
+        background-color: $color-green-primary;
+    }
+    .bg-color-secondary{
+        background-color: $color-green-secondary;
+    }
+
+
+    #header-wrapper{
+        .header-lg{
+            .tools-web{
+                ul{
+                    .search-site{
+                        &:hover{
+                            background-color: $color-green-secondary;
+                        }
+                        &.active{
+                            background-color: $color-green-primary;
+                        }
+                    }
+                    .lang-site{
+                        .multi-lang{
+                            background-color: $color-green-primary;
+                        }
+                        &.active{
+                            background-color: $color-green-primary;
+                        }
+                    }
+                }
+            }
+            .menu-main-wrapper{
+                .sub-menu-main{
+                    li{
+                        &.open{
+                            &.show{
+                                background-color: $color-green-primary;
+                            }
+                            
+                        }
+                        &.list{
+                            &:hover{
+                                background-color: $color-green-primary;
+                            }
+                        }
+                        .sub-menu-lv2{
+                            .list-menu-lv2{
+                                .sub-menu-lv3{
+                                    .list-menu-lv3{
+                                        a{
+                                            &:hover{
+                                                color: $color-green-secondary;
+                                            }
+                                        }
+                                    }
+                                }
+                                &:hover{
+                                    a{
+                                        color: $color-green-secondary;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .section-search-wrapper{
+                .group-search{
+                    .input-custom{
+                        .btn-search{
+                            background-color: $color-green-primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // Canvas Menu
+    .canvas-menu-wrapper{
+        .canvas-menu{
+            .canvas-lang{
+                ul{
+                    li{
+                        &.lang{
+                            &.active{
+                                a{
+                                    background-color: $color-green-primary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+    .banner-wrapper{
+        .list-banner{
+            li{
+                .item-Onbanner-outer{
+                    .item-Onbanner-inner{
+                        .list{
+                            .action-link{
+                                background-color: rgba($color: $color-green-primary, $alpha: 0.8);
+                                &:hover{
+                                    background-color: rgba($color: $color-green-primary, $alpha: 1);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .slick-dots{
+            li.slick-active{
+                background-color: $color-green-primary;
+            }
+        }
+    }
+
+    .group-section-content{
+        .section-content{
+            .inner-content{
+                .top-content{
+                    .group-text{
+                        .title{
+                            color: $color-green-primary;
+                        }
+                        .desc{
+                            color: $color-green-secondary;
+                        }
+                    }
+                    .group-gotoall{
+                        a{
+                            &:hover{
+                                border: 1px solid $color-green-primary;
+                                background-color: $color-green-primary;
+                            }
+                        }
+                    }
+                }
+                .main-content{
+                    .main-news{
+                        .content-news-main{
+                            .date{
+                                span{
+                                    color: $color-green-secondary;
+                                }
+                            }
+                        }
+                        .read-news-outer{
+                            a{
+                                background-color: rgba($color: $color-green-primary, $alpha: 0.8);
+                                // &:hover{
+                                //     background-color: rgba($color: $color-green-primary, $alpha: 1);
+                                // }
+                            }
+                        }
+
+                        &:hover{
+                            .content-news-main{
+                                .desc-news{
+                                    a{
+                                        color: $color-green-secondary;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .sub-news{
+                        .img-news{
+                            .read-news-outer{
+                                a{
+                                    background-color: rgba($color: $color-green-primary, $alpha: 0.8);
+                                    // &:hover{
+                                    //     background-color: rgba($color: $color-green-primary, $alpha: 1);
+                                    // }
+                                }
+                            }
+                        }
+                        .content{
+                            .date{
+                                span{
+                                    color: $color-green-primary;
+                                }
+                            }
+                        }
+                        &:hover{
+                            .content{
+                                .desc-news{
+                                    a{
+                                        color: $color-green-secondary;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                    .group-slide{
+                        .list-item{
+                            li{
+                                .item{
+                                    .left{
+                                        background-color: $color-green-primary;
+                                        .text-content{
+                                            //color: $color-green-primary;
+                                        }
+                                        .text-onbottom{
+                                            background-color: $color-green-secondary;
+                                        }
+                                        .icon-content{
+                                            // svg {
+                                            //     stroke: $color-green-primary;
+                                            // }
+                                        }
+                                        &.active{
+                                            background-color: $color-green-primary;
+                                        }
+
+                                        .progress-content{
+                                            .progress {
+                                                &:after {
+                                                    border: 7px solid $color-green-primary;
+                                                }
+                                                .progress-bar {
+                                                    border-color: $color-green-secondary;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .right{
+                                        .text-ontop{
+                                            color: $color-green-secondary;
+                                        }
+                                        .text-onbottom{
+                                            &.-link{
+                                                a{
+                                                    background-color: $color-green-primary;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    &.-album{
+                                        .cover-album{
+                                            .bg-layer{
+                                                background-color: rgba($color: $color-green-primary, $alpha: 0.5);
+                                            }
+                                            .top-album{
+                                                .source{
+                                                    background-color: rgba($color: $color-green-primary, $alpha: 0.8);
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &.-download{
+                                        .box-full{
+                                            background-color: $color-green-primary;
+                                        }
+                                    }
+                                }
+                                &:hover{
+                                    .item{
+                                        .left{
+                                            //background-color: $color-green-secondary;
+                                        }
+                                        .right{
+                                            .text-content{
+                                                a{
+                                                    color: $color-green-secondary;
+                                                }
+                                            }
+                                        }
+                                        &.-download{
+                                            .box-full{
+                                                background-color: $color-green-secondary;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .group-vote{
+                        .score-wrapper{
+                            background-color: $color-green-primary;
+                            .percent-voter{
+                                .progress{
+                                    .progress-bar{
+                                        background-color: $color-green-secondary;
+                                    }
+                                }
+    
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    .group-link-mainbkk{
+        a{
+            .text-bkk{
+                label{
+                    color: $color-green-primary;
+                }
+            }
+        }
+    }
+
+    .social-wrapper{
+        ul{
+            li{
+                a{
+                    &:hover{
+                        background-color: $color-green-primary;
+                    }
+                }
+            }
+        }
+    }
+
+    .input-custom{
+        .select-wrapper{
+            .slc{
+                background-image: url('../assets/images/icons/icon-arrow-dropdown-green.svg');
+            }
+        }
+        .custom-control{
+            .custom-control-input[type="radio"]:checked ~ .custom-control-label{
+                &:before{
+                    border-color: $color-green-primary;
+                    background-color: $color-green-primary;
+                }
+            }
+            .custom-control-input[type="checkbox"]:checked ~ .custom-control-label{
+                &:before{
+                    border-color: $color-green-primary;
+                    background-color: $color-green-primary;
+                }
+            }
+        }
+        .input-box{
+            input{
+                &:focus ~ label{
+                    color: $color-green-primary;
+                }
+                &:valid ~ label{
+                    color: $color-green-primary;
+                }
+            }
+        }
+    }
+
+    .btn-custom{
+        &.bg-primary{
+            background-color: $color-green-primary !important;
+        }
+    }
+
+    .online-wrapper{
+        .group-online{
+            .icon-online{
+                svg{
+                    .st0{
+                        stroke: $color-green-secondary;
+                    }
+                    .st1{
+                        fill:$color-green-secondary;
+                    }
+                }
+            }
+        }
+        .num-online{
+            color: $color-green-secondary;
+        }
+    }
+}
+

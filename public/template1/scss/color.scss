@@ -334,6 +334,9 @@
                         background-color: $color-green-primary;
                     }
                 }
+                &.not-hover{
+                    color: $color-green-secondary;
+                }
             }
         }
     }

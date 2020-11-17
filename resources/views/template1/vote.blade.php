@@ -121,21 +121,15 @@
                                         </div>
                                     </form>
                                     <div class="social-wrapper">
-                                        <ul>
-                                            <li class="facebook">
-                                                <a href="" title="facebook">
-                                                    <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon">
-                                                </a>
+                                        <ul class="d-flex align-items-center">
+                                            <li class="facebook d-flex align-items-center not-hover">
+                                                <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"> 5
                                             </li>
-                                            <li class="twitter">
-                                                <a href="" title="twitter">
-                                                    <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon">
-                                                </a>
+                                            <li class="twitter d-flex align-items-center not-hover">
+                                                <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon">  5
                                             </li>
-                                            <li class="line">
-                                                <a href="" title="line">
-                                                    <img src="{{ asset('template1/assets/images/icons/icon-social-line.svg')}}" alt="icon">
-                                                </a>
+                                            <li class="line d-flex align-items-center not-hover">
+                                                <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon">   5
                                             </li>
                                         </ul>
                                     </div>

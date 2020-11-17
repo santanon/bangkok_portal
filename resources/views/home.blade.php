@@ -111,7 +111,6 @@
             @include('template1/questionnaire')
 
             @include('template1/vote')
-            
         </div>
 
         <!-- Check Sort DragDrop -->

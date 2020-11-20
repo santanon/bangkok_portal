@@ -38,7 +38,7 @@
                                 <ul id="slide_7" class="list-item">
                                     <li>
                                         <div class="item -album">
-                                            <div class="cover-album" style="background-image: url('../../template1/assets/images/img-album-demo2.png');">
+                                            <div class="cover-album" style="background-image: url('../../template1/assets/images/img-album-demo2.jpg');">
                                                 <a href="#">
                                                     <div class="bg-layer"></div>
                                                 </a>
@@ -56,7 +56,7 @@
                                     </li>
                                     <li>
                                         <div class="item -album">
-                                            <div class="cover-album" style="background-image: url('../../template1/assets/images/img-album-demo2.png');">
+                                            <div class="cover-album" style="background-image: url('../../template1/assets/images/img-album-demo2.jpg');">
                                                 <a href="#"><div class="bg-layer"></div></a>
                                                 <div class="icon-play"></div>
                                                 <div class="top-album">
@@ -72,7 +72,7 @@
                                     </li>
                                     <li>
                                         <div class="item -album">
-                                            <div class="cover-album" style="background-image: url('../../template1/assets/images/img-album-demo3.png');">
+                                            <div class="cover-album" style="background-image: url('../../template1/assets/images/img-album-demo3.jpg');">
                                                 <a href="#"><div class="bg-layer"></div></a>
                                                 <div class="icon-play"></div>
                                                 <div class="top-album">
@@ -88,7 +88,7 @@
                                     </li>
                                     <li>
                                         <div class="item -album">
-                                            <div class="cover-album" style="background-image: url('../../template1/assets/images/img-album-demo4.png');">
+                                            <div class="cover-album" style="background-image: url('../../template1/assets/images/img-album-demo4.jpg');">
                                                 <a href="#"><div class="bg-layer"></div></a>
                                                 <div class="icon-play"></div>
                                                 <div class="top-album">

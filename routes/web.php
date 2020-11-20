@@ -42,3 +42,18 @@ Route::get('/', function () {
 Route::get('/coverpage', function () {
     return view('coverpage');
 });
+
+
+Route::get('/news', function () {
+    return view('news-main');
+});
+Route::get('/news-detail', function () {
+    return view('news-detail');
+});
+
+Route::get('/calendar', function () {
+    return view('calendar-main');
+});
+Route::get('/calendar-detail', function () {
+    return view('calendar-detail');
+});

@@ -17,6 +17,11 @@
 <!-- DragDrop -->
 <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script> 
 
+<!-- Slick -->
+<link rel="stylesheet" href="{{ asset('template1/css/slick.css')}}">
+<link rel="stylesheet" href="{{ asset('template1/css/slick-theme.css')}}">
+<script type="text/javascript" src="{{ asset('template1/js/slick.min.js') }}"></script>
+
 <script>
    AOS.init();
 </script>

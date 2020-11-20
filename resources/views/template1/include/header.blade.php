@@ -230,7 +230,7 @@
         </div>
         
         <div class="row bg-color-secondary">
-            <div class="col-lg-12">
+            <div class="col-lg-12 p-0">
                 <div class="group-mange-section no-mg right-0">
                     <div class="manage-tools">
                         <ul>

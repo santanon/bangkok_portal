@@ -105,10 +105,6 @@
     }
 
 
-
-
-
-
     .banner-wrapper{
         .list-banner{
             li{
@@ -151,6 +147,14 @@
                                 border: 1px solid $color-green-primary;
                                 background-color: $color-green-primary;
                             }
+                        }
+                    }
+                }
+                .post-content{
+                    .source-post{
+                        color: $color-green-secondary;
+                        span{
+                            background-color: $color-green-secondary;
                         }
                     }
                 }
@@ -296,7 +300,20 @@
                             }
                         }
                     }
-
+                    .group-gallery{
+                        .thumbnail-slider{
+                            .slides{
+                                li{
+                                    &:hover{
+                                        .bg-layer{
+                                            background-color: rgba($color: $color-green-secondary, $alpha: 0.5);
+                                        }
+                                    }
+                                    
+                                }
+                            }
+                        }
+                    }
                     .group-vote{
                         .score-wrapper{
                             background-color: $color-green-primary;
@@ -311,6 +328,97 @@
                         }
                     }
 
+                    .group-editor{
+                        a{
+                            color: $color-green-secondary;
+                            &:hover{
+                                color: $color-green-primary;
+                            }
+                        }
+                    }
+                    .group-list-downloadfile{
+                        .item{
+                            .left{
+                                background-color: $color-green-primary;
+                                .text-onbottom{
+                                    background-color: $color-green-secondary;
+                                }
+                            }
+                            &:hover{
+                                .right{
+                                    .text-content{
+                                        a{
+                                            color: $color-green-secondary;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                    }
+                    .group-social-share{
+                        .shared-email{
+                            .social-wrapper{
+                                .text-social{
+                                    color: $color-green-secondary;
+                                }
+                            }
+                        }
+                        .views-like{
+                            .view-count{
+                                color: $color-green-secondary;
+                            }
+                            .like-count{
+                                span{
+                                    color: $color-green-secondary;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .vote-comment-content{
+                    .content{
+                        .box-title{
+                            .title-head{
+                                color: $color-green-primary;
+                            }
+                            .order-all{
+                                color: $color-green-secondary;
+                            }
+                        }
+                        &.-vote{
+                            .list-choice-vote{
+                                ul{
+                                    li{
+                                        .total-vote{
+                                            color: $color-green-secondary;
+                                        }
+                                    }
+                                }
+                            }
+                            .btn-choice-vote{
+                                .btn{
+                                    &.bg-color-primary{
+                                        background-color: $color-green-primary;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .user-comment-wrapper{
+                        ul{
+                            li{
+                                .list-comment{
+                                    .post-user{
+                                        .name{
+                                            color: $color-green-secondary;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -342,6 +450,13 @@
     }
 
     .input-custom{
+        &.inp-calendar{
+            .icon-calendar{
+                i{
+                    color: $color-green-secondary;
+                }
+            }
+        }
         .select-wrapper{
             .slc{
                 background-image: url('../assets/images/icons/icon-arrow-dropdown-green.svg');
@@ -359,6 +474,11 @@
                     border-color: $color-green-primary;
                     background-color: $color-green-primary;
                 }
+            }
+        }
+        .btn-search{
+            .icon-search{
+                background-color: $color-green-primary;
             }
         }
         .input-box{
@@ -395,6 +515,19 @@
         .num-online{
             color: $color-green-secondary;
         }
+    }
+
+
+
+    // Daterangpicker 
+    .daterangepicker td.active, .daterangepicker td.active:hover{
+        background-color: $color-green-primary !important;
+    }
+    .daterangepicker td.active.end-date, .daterangepicker td.active.end-date:hover{
+        background-color: $color-green-primary !important;
+    }
+    .daterangepicker td.in-range{
+        background-color: $color-green-secondary !important;
     }
 }
 

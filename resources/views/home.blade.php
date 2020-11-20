@@ -202,8 +202,6 @@
     </div>
 </div>
 
-
-
 <!-- Modal alert -->
 <div class="modal fade" id="modal_Alert" tabindex="-1" role="dialog" aria-labelledby="alertModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -246,17 +244,34 @@
 
 @include('template1/include.css_scripts')
 
-<!-- Slick -->
-<link rel="stylesheet" href="{{ asset('template1/css/slick.css')}}">
-<link rel="stylesheet" href="{{ asset('template1/css/slick-theme.css')}}">
-<script type="text/javascript" src="{{ asset('template1/js/slick.min.js') }}"></script>
-
-
 
 <script type="text/javascript">
     $(document).ready(function () {
         
         //$('#exampleModal').modal('show')
+
+        // DragDrop
+        var sortable = new Sortable(manage_dragdrop, {
+            ghostClass: "sortable-ghost",
+            chosenClass: "sortable-chosen",
+            dragClass: "sortable-drag",
+            swapThreshold: 1,
+            animation: 150,
+            dataIdAttr: "data-id",
+            //handle: '.manage-dragdrop',
+        });
+        //var order = sortable.toArray();
+        //console.log(order);
+        $('.getOrder_ele').click(function() {
+            var order = sortable.toArray();
+            alert(order);
+            // for (var i = 0; i < order.length; i++) {
+            //     alert("Position: " + i + " ID: " + order[i]);
+            // }
+        });
+
+
+
     });
 </script>
 @endsection

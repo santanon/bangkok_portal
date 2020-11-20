@@ -22,7 +22,7 @@
     
 </head>
 
-<body class="color-green manage">
+<body class="color-green">
 
     <!-- Script Loading -->
     <div class="se-pre-con loading">

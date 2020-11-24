@@ -403,6 +403,57 @@ $howManySteps: 100; //this needs to be even.
                         color: #fff;
                         padding: 5px 8px;
                         margin-left: 5px;
+                        i{
+                            margin-right: 5px;
+                        }
+                    }
+                    &.no-bg{
+                        span{
+                            background-color: inherit;
+                            color: #525252;
+                        }
+                    }
+                }
+            }
+
+            .group-inner{
+                margin-bottom: 20px;
+                .date{
+                    position: relative;
+                    height: 150px;
+                    flex: 0 0 140px;
+                    background-color: $color-green-primary;
+                    .text-content{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 30px;
+                        font-weight: $font-medium;
+                        height: 100%;
+                        color: #fff;
+                    }
+                    .text-onbottom{
+                        position: absolute;
+                        bottom: 0;
+                        width: 100%;
+                        color: #fff;
+                        text-align: center;
+                        font-size: 20px;
+                        font-weight: 400;
+                        background-color: $color-green-secondary;
+                    }
+                }
+                .content{
+                    padding-left: 20px;
+                    .top-content{
+                        .group-text{
+                            .title{
+                                margin-bottom: 10px;
+                            }
+                        }
+                    }
+                    .post-content{
+                        margin-bottom: 0;
                     }
                 }
             }
@@ -413,7 +464,7 @@ $howManySteps: 100; //this needs to be even.
                 }
                 .group-back{
                     display: inline-block;
-                    margin: 30px 0;
+                    margin: 0 0 30px;
                     a{
                         border: 1px solid #b1b1b1;
                         padding: 10px 15px;
@@ -1473,6 +1524,7 @@ $howManySteps: 100; //this needs to be even.
                     }
                 }
                 .group-activity-location{
+                    margin-bottom: 30px;
                     .location{
                         iframe{
                             width: 100%;
@@ -1564,6 +1616,107 @@ $howManySteps: 100; //this needs to be even.
                                 color: $color-green-primary;
                             }
                         }
+                        .calendar-wrapper-btn{
+                            text-align: right;
+                            #prev{
+                                border-radius: 0;
+                                background-color: #525252;
+                                width: 50px;
+                                height: 40px;
+                                background-image: url('../../template1/assets/images/icons/icon-slide-prev.png');
+                                background-repeat: no-repeat;
+                                background-position: center center;
+                                &:focus{
+                                    outline: none;
+                                    box-shadow: none;
+                                }
+                            }
+                            #next{
+                                border-radius: 0;
+                                background-color: #525252;
+                                width: 50px;
+                                height: 40px;
+                                background-image: url('../../template1/assets/images/icons/icon-slide-next.png');
+                                background-repeat: no-repeat;
+                                background-position: center center;
+                                &:focus{
+                                    outline: none;
+                                    box-shadow: none;
+                                }
+                            }
+                        }
+                    }
+                    .fc .fc-scrollgrid-section>*{
+                        border-right-width: 0;
+                    }
+                    #calendar{
+
+                        table{
+                            // border: none;
+                            border-width: 0;
+                            border-collapse: separate;
+                            border-spacing: 2px;
+                            thead{
+                                tr{
+                                    td{
+                                        border-right-width: 0;
+                                    }
+                                }
+                            }
+                        }
+                        .fc-daygrid-day-top{
+                            justify-content: center;
+                            a{
+                                font-weight: $font-regular;
+                                color: #525252;
+                            }
+                        }
+                        .fc-daygrid-day-events{
+                            .fc-daygrid-event-harness{
+                                .fc-h-event{
+                                    background-color: $color-green-secondary;
+                                    border: 1px solid $color-green-secondary;
+                                }
+                            }
+                            .fc-daygrid-day-bottom{
+                                .fc-daygrid-more-link{
+                                    color: $color-green-secondary;
+                                }
+                            }
+                        }
+                        .fc-col-header {
+                            tbody{
+                                tr{
+                                    .fc-col-header-cell{
+                                        background-color: $color-green-secondary;
+                                        border: 1px solid $color-green-secondary;
+                                        .fc-scrollgrid-sync-inner{
+                                            .fc-col-header-cell-cushion {
+                                                padding: 4px;
+                                                color: #fff;
+                                                font-weight: $font-regular;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .fc-daygrid-day.fc-day-today{
+                            border: 1px solid $color-green-primary;
+                            background-color: #fff;
+                        }
+
+                        .fc-popover{
+                            .fc-popover-body {
+                                .fc-daygrid-event-harness{
+                                    .fc-h-event{
+                                        background-color: $color-green-secondary;
+                                        border: 1px solid $color-green-secondary;
+                                    }
+                                }
+                            }
+                        }
+                        
                     }
                 }
             }
@@ -1941,6 +2094,25 @@ Due to the split circle of progress-left and progress right, we must use the ani
 
 
 @media only screen and (max-width: 992px) {
+    .group-inner{
+        .content{
+            .post-content{
+                margin-bottom: 0;
+                flex-wrap: wrap;
+                .public-post{
+                    margin-bottom: 5px;
+                }
+                .source-post{
+                    span{
+                        &:first-of-type{
+                            margin-left: 0;
+                            padding-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
     .group-list-downloadfile{
         .item{
             margin-bottom: 20px;
@@ -1967,6 +2139,27 @@ Due to the split circle of progress-left and progress right, we must use the ani
             }
             .email-link{
                 margin-bottom: 5px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .group-section-content{
+        .section-content{
+            .inner-content{
+                .group-inner{
+                    flex-wrap: wrap;
+                    .date{
+                        margin: auto;
+                        margin-bottom: 20px;
+                    }
+                    .content{
+                        .top-content{
+                            margin-bottom: 0;
+                        }
+                    }
+                }
             }
         }
     }

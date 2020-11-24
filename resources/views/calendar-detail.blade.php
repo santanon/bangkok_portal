@@ -1,4 +1,4 @@
-@section('title', 'รายการข่าว')
+@section('title', 'ปฎิทินกิจกรรม')
 @section('tagkeyword', '')
 @section('tagdescription', '')
 
@@ -51,7 +51,7 @@
                     <div class="item-Onbanner-outer">
                         <div class="item-Onbanner-inner">
                             <div class="list">
-                                <h2 class="title-banner">ข่าวสาร</h2>
+                                <h2 class="title-banner">ปฎิทินกิจกรรม</h2>
                                 <p class="desc-banner">มุ่งมั่นการทำงาน แหล่งค้นคว้าการประชุม เครือข่ายมหานครอาเซียน</p>
                             </div>
                         </div>
@@ -65,7 +65,8 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">หน้าแรก</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">ข่าวสาร</li>
+                        <li class="breadcrumb-item"><a href="#">ปฏิทินกิจกรรม</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">กิจกรรม</li>
                     </ol>
                 </nav>
             </div>
@@ -73,7 +74,7 @@
         </div> 
 
         <div class="group-section-content">
-            @include('template1/news.list')
+            @include('template1/calendar.detail')
         </div>
 
     </div>
@@ -132,32 +133,46 @@
 
 
 @include('template1/include.css_scripts')
-<!-- navgoco -->
-<link rel="stylesheet" href="{{ asset('template1/css/daterangepicker.css')}}">
-<script type="text/javascript" src="{{ asset('template1/js/moment.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('template1/js/daterangepicker.js') }}"></script>
+<!-- FlexSlider -->
+<link rel="stylesheet" href="{{ asset('template1/css/flexslider.css')}}">
+<script type="text/javascript" src="{{ asset('template1/js/jquery.flexslider.js') }}"></script>
+
+<!-- CKeditor -->
+<script src="https://cdn.ckeditor.com/ckeditor5/23.1.0/inline/ckeditor.js"></script>
 
 
 <script type="text/javascript">
-    $(document).ready(function () {
-        
-        //$('#exampleModal').modal('show')
+    $(window).load(function(){
+        $('#carousel').flexslider({
+            animation: "slide",
+            controlNav: false,
+            animationLoop: false,
+            slideshow: false,
+            itemWidth: 260,
+            itemMargin: 30,
+            asNavFor: '#slider'
+        });
 
-        $('input[name="datefilter"]').daterangepicker({
-            autoUpdateInput: false,
-            locale: {
-                cancelLabel: 'Clear'
+        $('#slider').flexslider({
+            animation: "slide",
+            controlNav: false,
+            animationLoop: false,
+            slideshow: false,
+            sync: "#carousel",
+            start: function(slider){
+                $('body').removeClass('loading');
             }
         });
-
-        $('input[name="datefilter"]').on('apply.daterangepicker', function(ev, picker) {
-            $(this).val(picker.startDate.format('DD/MM/YYYY') + ' - ' + picker.endDate.format('DD/MM/YYYY'));
-        });
-
-        $('input[name="datefilter"]').on('cancel.daterangepicker', function(ev, picker) {
-            $(this).val('');
-        });
+    });
+    $(document).ready(function () {
+        
     });
 </script>
+<script>
+    InlineEditor
+        .create( document.querySelector( '#editor' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+</script>
 @endsection
-

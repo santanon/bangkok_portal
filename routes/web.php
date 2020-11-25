@@ -34,7 +34,6 @@ Route::get('panel/templatestep3', function(){
 
 
 
-
 /* Front */
 Route::get('/', function () {
     return view('home');
@@ -49,6 +48,10 @@ Route::get('/news', function () {
 });
 Route::get('/news-detail', function () {
     return view('news-detail');
+});
+
+Route::get('/album', function () {
+    return view('gallery-main');
 });
 
 Route::get('/calendar', function () {

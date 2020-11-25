@@ -1,4 +1,4 @@
-@section('title', 'ปฎิทินกิจกรรม')
+@section('title', 'QUESTIONNAIRE')
 @section('tagkeyword', '')
 @section('tagdescription', '')
 
@@ -51,7 +51,7 @@
                     <div class="item-Onbanner-outer">
                         <div class="item-Onbanner-inner">
                             <div class="list">
-                                <h2 class="title-banner">ปฎิทินกิจกรรม</h2>
+                                <h2 class="title-banner">การรับฟังปัญหา/ข้อคิดเห็น</h2>
                                 <p class="desc-banner">มุ่งมั่นการทำงาน แหล่งค้นคว้าการประชุม เครือข่ายมหานครอาเซียน</p>
                             </div>
                         </div>
@@ -65,7 +65,7 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">หน้าแรก</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">ปฎิทินกิจกรรม</li>
+                        <li class="breadcrumb-item active" aria-current="page">QUESTIONNAIRE</li>
                     </ol>
                 </nav>
             </div>
@@ -73,7 +73,7 @@
         </div> 
 
         <div class="group-section-content">
-            @include('template1/calendar.list')
+            @include('template1/questionnaire.list')
         </div>
 
     </div>
@@ -132,98 +132,32 @@
 
 
 @include('template1/include.css_scripts')
+<!-- navgoco -->
+<link rel="stylesheet" href="{{ asset('template1/css/daterangepicker.css')}}">
+<script type="text/javascript" src="{{ asset('template1/js/moment.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('template1/js/daterangepicker.js') }}"></script>
 
-<link rel="stylesheet" href="{{ asset('template1/css/calendar/main.min.css')}}">
-<script type="text/javascript" src="{{ asset('template1/js/calendar/main.min.js') }}"></script>
 
 <script type="text/javascript">
     $(document).ready(function () {
         
-        //$('#exampleModal').modal('show');
+        //$('#exampleModal').modal('show')
 
+        $('input[name="datefilter"]').daterangepicker({
+            autoUpdateInput: false,
+            locale: {
+                cancelLabel: 'Clear'
+            }
+        });
+
+        $('input[name="datefilter"]').on('apply.daterangepicker', function(ev, picker) {
+            $(this).val(picker.startDate.format('DD/MM/YYYY') + ' - ' + picker.endDate.format('DD/MM/YYYY'));
+        });
+
+        $('input[name="datefilter"]').on('cancel.daterangepicker', function(ev, picker) {
+            $(this).val('');
+        });
     });
-</script>
-<script>
-
-    // Calendar
-    document.addEventListener('DOMContentLoaded', function() {
-        var calendarEl = document.getElementById('calendar');
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-            initialView: 'dayGridMonth',
-            headerToolbar: false,
-            locale: 'th',
-            dayMaxEventRows: true,
-            events: [
-                {
-                    "title": "All Day Event",
-                    "start": "2020-11-23",
-                    //"color": "#E76F0E",
-                    "url": "/calendar-detail"
-                },
-                {
-                    "title": "บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือasdalk k;lkdpa sk",
-                    "start": "2020-11-23",
-                    //"color": "#8CB81F",
-                    "url": "/calendar-detail"
-                },
-                {
-                    "title": "บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือ บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือ",
-                    "start": "2020-11-23",
-                    //"color": "#8CB81F",
-                    "url": "/calendar-detail"
-                },
-                {
-                    "title": "บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือasdalk k;lkdpa sk",
-                    "start": "2020-11-23",
-                    //"color": "#8CB81F",
-                    "url": "/calendar-detail"
-                },
-                {
-                    "title": "บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือasdalk k;lkdpa sk",
-                    "start": "2020-11-23",
-                    //"color": "#8CB81F",
-                    "url": "/calendar-detail"
-                },
-            ],
-
-        });
-        calendar.render();
-
-        document.getElementById('prev').addEventListener('click', function () {
-            calendar.prev(); // call method
-
-            var view = calendar.view;
-            var v_title = view.title;
-            //console.log(v_title);
-            var c_month = (view.title).split(' ');
-            var c_year = (view.title).split(' ');
-            $('.month-title').html(c_month[0]);
-            $('.year-title').html(c_year[1]);
-
-        });
-
-        document.getElementById('next').addEventListener('click', function () {
-            calendar.next(); // call method
-
-            var view = calendar.view;
-            var v_title = view.title;
-            //console.log(v_title);
-            var c_month = (view.title).split(' ');
-            var c_year = (view.title).split(' ');
-            $('.month-title').html(c_month[0]);
-            $('.year-title').html(c_year[1]);
-        });
-
-        // default
-        var view = calendar.view;
-        var v_title = view.title;
-        var c_month = (view.title).split(' ');
-        var c_year = (view.title).split(' ');
-        $('.month-title').html(c_month[0]);
-        $('.year-title').html(c_year[1]);
-
-    });
-
 </script>
 @endsection
 

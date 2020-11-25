@@ -57,3 +57,10 @@ Route::get('/calendar', function () {
 Route::get('/calendar-detail', function () {
     return view('calendar-detail');
 });
+
+Route::get('/questionnaire', function () {
+    return view('questionnaire-main');
+});
+Route::get('/questionnaire-detail', function () {
+    return view('questionnaire-detail');
+});

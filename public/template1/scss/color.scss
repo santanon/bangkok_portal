@@ -218,66 +218,7 @@
                     .group-slide{
                         .list-item{
                             li{
-                                .item{
-                                    .left{
-                                        background-color: $color-green-primary;
-                                        .text-content{
-                                            //color: $color-green-primary;
-                                        }
-                                        .text-onbottom{
-                                            background-color: $color-green-secondary;
-                                        }
-                                        .icon-content{
-                                            // svg {
-                                            //     stroke: $color-green-primary;
-                                            // }
-                                        }
-                                        &.active{
-                                            background-color: $color-green-primary;
-                                        }
-
-                                        .progress-content{
-                                            .progress {
-                                                &:after {
-                                                    border: 7px solid $color-green-primary;
-                                                }
-                                                .progress-bar {
-                                                    border-color: $color-green-secondary;
-                                                }
-                                            }
-                                        }
-                                    }
-                                    .right{
-                                        .text-ontop{
-                                            color: $color-green-secondary;
-                                        }
-                                        .text-onbottom{
-                                            &.-link{
-                                                a{
-                                                    background-color: $color-green-primary;
-                                                }
-                                            }
-                                        }
-                                    }
-
-                                    &.-album{
-                                        .cover-album{
-                                            .bg-layer{
-                                                background-color: rgba($color: $color-green-primary, $alpha: 0.5);
-                                            }
-                                            .top-album{
-                                                .source{
-                                                    background-color: rgba($color: $color-green-primary, $alpha: 0.8);
-                                                }
-                                            }
-                                        }
-                                    }
-                                    &.-download{
-                                        .box-full{
-                                            background-color: $color-green-primary;
-                                        }
-                                    }
-                                }
+                                
                                 &:hover{
                                     .item{
                                         .left{
@@ -294,6 +235,83 @@
                                             .box-full{
                                                 background-color: $color-green-secondary;
                                             }
+                                        }
+                                    }
+                                }
+                            }
+                            .item{
+                                .left{
+                                    background-color: $color-green-primary;
+                                    .text-content{
+                                        //color: $color-green-primary;
+                                    }
+                                    .text-onbottom{
+                                        background-color: $color-green-secondary;
+                                    }
+                                    .icon-content{
+                                        // svg {
+                                        //     stroke: $color-green-primary;
+                                        // }
+                                    }
+                                    &.active{
+                                        background-color: $color-green-primary;
+                                    }
+
+                                    .progress-content{
+                                        .progress {
+                                            &:after {
+                                                border: 7px solid $color-green-primary;
+                                            }
+                                            .progress-bar {
+                                                border-color: $color-green-secondary;
+                                            }
+                                        }
+                                    }
+                                }
+                                .right{
+                                    .text-ontop{
+                                        color: $color-green-secondary;
+                                    }
+                                    .text-onbottom{
+                                        &.-link{
+                                            a{
+                                                background-color: $color-green-primary;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                &.-album{
+                                    .cover-album{
+                                        .bg-layer{
+                                            background-color: rgba($color: $color-green-primary, $alpha: 0.5);
+                                        }
+                                        .top-album{
+                                            .source{
+                                                background-color: rgba($color: $color-green-primary, $alpha: 0.8);
+                                            }
+                                        }
+                                    }
+                                }
+                                &.-download{
+                                    .box-full{
+                                        background-color: $color-green-primary;
+                                    }
+                                }
+                                &:hover{
+                                    .left{
+                                        //background-color: $color-green-secondary;
+                                    }
+                                    .right{
+                                        .text-content{
+                                            a{
+                                                color: $color-green-secondary;
+                                            }
+                                        }
+                                    }
+                                    &.-download{
+                                        .box-full{
+                                            background-color: $color-green-secondary;
                                         }
                                     }
                                 }

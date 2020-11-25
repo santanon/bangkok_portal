@@ -70,7 +70,6 @@
                     </ol>
                 </nav>
             </div>
-            
         </div> 
 
         <div class="group-section-content">

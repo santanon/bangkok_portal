@@ -1,0 +1,48 @@
+/* grid system */
+@import "bootstrap/bootstrap";
+@import "bootstrap/bootstrap-grid";
+@import "bootstrap/bootstrap-reboot";
+
+@import "variables";
+@import "color";
+@import "button";
+@import "input";
+
+
+
+@import "layout/header";
+@import "layout/header-mobile";
+@import "layout/footer";
+@import "layout/footer-mobile";
+@import "layout/layout-default";
+@import "components/banner-slide";
+@import "content/page-login";
+
+
+
+
+@import "layout/layout-default-manage";
+
+// *{
+//     transition: all 0.5s ease;
+// }
+body{
+    font-family: 'Kanit', sans-serif;
+    background-color: #f8f8f8;
+    
+}
+.clearboth{
+    clear: both;
+}
+a{
+    outline: none;
+    &:hover{
+        text-decoration: none;
+    }
+    &:active{
+        outline: none;
+    }
+    &:focus{
+        outline: none;
+    }
+}

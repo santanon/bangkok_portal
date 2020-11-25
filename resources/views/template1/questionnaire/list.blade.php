@@ -39,7 +39,7 @@
                         </div>
                         <div class="main-content">
                             <div class="row">
-                                <div class="col-lg-6">
+                                <div class="col-lg-12">
                                     <div class="group-slide">
                                         <div class="list-item page-list">
                                             <div class="item -question">
@@ -92,9 +92,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-lg-12">
                                     <div class="group-slide">
-                                        <div class="list-item">
+                                        <div class="list-item page-list">
                                             <div class="item -question">
                                                 <div class="left active">
                                                     <div class="progress-content">
@@ -145,7 +145,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-lg-12">
                                     <div class="group-slide">
                                         <div class="list-item page-list">
                                             <div class="item -question">
@@ -198,9 +198,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-lg-12">
                                     <div class="group-slide">
-                                        <div class="list-item">
+                                        <div class="list-item page-list">
                                             <div class="item -question">
                                                 <div class="left active">
                                                     <div class="progress-content">
@@ -252,7 +252,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-lg-6">
+                                <div class="col-lg-12">
                                     <div class="row no-gutters">
                                         <div class="col-lg-6">
                                             <div class="add-news">

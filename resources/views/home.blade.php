@@ -1,8 +1,8 @@
-@section('title', 'หน้าแรก')
+@section('title', 'กรุงเทพมหานคร')
 @section('tagkeyword', '')
 @section('tagdescription', '')
 
-@extends('template2/include/start')
+@extends('template1/include/start')
 @section('contentpage')
 
 <div class="main-wrapper">
@@ -13,7 +13,7 @@
     </div>
 
     <header id="header-wrapper">
-        @include('template2/include.header')
+        @include('template1/include.header')
     </header>
     
     <div id="site-content">
@@ -21,7 +21,7 @@
         <div class="group-link-mainbkk">
             <a href="">
                 <div class="icon-bkk">
-                    <img src="{{ asset('template2/assets/images/icons/icon-bkk.png')}}" alt="icon">
+                    <img src="{{ asset('template1/assets/images/icons/icon-bkk.png')}}" alt="icon">
                 </div>
                 <div class="text-bkk">
                     <label>กรุงเทพมหานคร</label>
@@ -31,27 +31,27 @@
         </div>
 
         <div class="banner-wrapper">
-            @include('template2/main-slide')
+            @include('template1/main-slide')
         </div>
 
         <div class="group-section-content" id="manage_dragdrop">
-            @include('template2/news')
+            @include('template1/news')
 
-            @include('template2/calendar')
+            @include('template1/calendar')
 
-            @include('template2/faq')
+            @include('template1/faq')
 
-            @include('template2/album')
+            @include('template1/album')
 
-            @include('template2/vdo')
+            @include('template1/vdo')
 
-            @include('template2/download')
+            @include('template1/download')
 
-            @include('template2/bannerlink')
+            @include('template1/bannerlink')
 
-            @include('template2/questionnaire')
+            @include('template1/questionnaire')
 
-            @include('template2/vote')
+            @include('template1/vote')
         </div>
 
         <!-- Check Sort DragDrop -->
@@ -66,7 +66,7 @@
     </div>
 
     <footer id="footer-wrapper">
-        @include('template2/include.footer')
+        @include('template1/include.footer')
     </footer>
 
 
@@ -91,7 +91,7 @@
                     <!-- <div class="col-md-12">
                         <div class="group-modal">
                             <div class="img-modal">
-                                <img src="{{ asset('template2/assets/images/img-modal-demo.png')}}" alt="icon">
+                                <img src="{{ asset('template1/assets/images/img-modal-demo.png')}}" alt="icon">
                             </div>
                             <div class="section-btn">
                                 <ul>
@@ -112,7 +112,7 @@
                     <div class="col-md-12">
                         <div class="group-modal">
                             <div class="img-modal">
-                                <img src="{{ asset('template2/assets/images/img-modal-demo.png')}}" alt="icon">
+                                <img src="{{ asset('template1/assets/images/img-modal-demo.png')}}" alt="icon">
                             </div>
                             <div class="section-btn">
                                 <ul>
@@ -183,7 +183,7 @@
 </div>
 
 
-@include('template2/include.css_scripts')
+@include('template1/include.css_scripts')
 
 
 <script type="text/javascript">

@@ -1162,6 +1162,31 @@ $howManySteps: 100; //this needs to be even.
                                                 stroke-miterlimit: 10;
                                                 vertical-align: bottom;
                                             }
+                                            &.-download-Doc{
+                                                svg{
+                                                    .st0{
+                                                        fill:none;
+                                                        stroke:#FFFFFF;
+                                                        stroke-width:2;
+                                                        stroke-linecap:round;
+                                                        stroke-linejoin:round;
+                                                        stroke-miterlimit:10;
+                                                    }
+                                                    .st1{
+                                                        fill:none;
+                                                        stroke:#FFFFFF;
+                                                        stroke-width:2;
+                                                        stroke-linecap:round;
+                                                        stroke-miterlimit:10;
+                                                    }
+                                                    .st2{
+                                                        fill:none;
+                                                        stroke:#FFFFFF;
+                                                        stroke-width:2;
+                                                        stroke-miterlimit:10;
+                                                    }
+                                                }
+                                            }
                                         }
                                         .text-content{
                                             font-size: 20px;
@@ -1187,7 +1212,19 @@ $howManySteps: 100; //this needs to be even.
                     }
                     .page-list{
                         .item{
-                            margin-bottom: 30px;
+                            //margin-bottom: 30px;
+                            .right{
+                                .text-ontop{
+                                    position: absolute;
+                                    top: 10px;
+                                }
+                            }
+                            &.-question{
+                                .right{
+                                    display: flex;
+                                    align-items: center;
+                                }
+                            }
                         }
                     }
                 }
@@ -1765,6 +1802,74 @@ $howManySteps: 100; //this needs to be even.
                         
                     }
                 }
+                .download-file-wrapper{
+                    //margin-bottom: 30px;
+                    .topic-category{
+                        font-size: 20px;
+                        font-weight: $font-regular;
+                        line-height: 25px;
+                        color: #fff;
+                        display: flex;
+                        align-items: center;
+                        background-color: $color-green-primary;
+                        padding: 8px 15px;
+                        margin-bottom: 20px;
+                        svg {
+                            fill: none;
+                            stroke: #fff;
+                            stroke-width: 2;
+                            stroke-miterlimit: 10;
+                            vertical-align: bottom;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+                .page-list-item-wrapper{
+                    .topic-category{
+                        font-size: 20px;
+                        font-weight: $font-regular;
+                        line-height: 25px;
+                        color: #fff;
+                        display: flex;
+                        align-items: center;
+                        background-color: $color-green-primary;
+                        padding: 8px 15px;
+                        margin-bottom: 20px;
+                        svg {
+                            fill: none;
+                            stroke: #fff;
+                            stroke-width: 2;
+                            stroke-miterlimit: 10;
+                            vertical-align: bottom;
+                            margin-right: 5px;
+                        }
+                    }
+                    .group-list-item{
+                        ul{
+                            margin: 0;
+                            padding: 0;
+                            li{
+                                list-style: none;
+                                margin-bottom: 30px;
+                                .page-list{
+                                    .item{
+                                        .right{
+                                            .text-onbottom{
+                                                .social-wrapper{
+                                                    ul{
+                                                        li{
+                                                            margin-bottom: 0;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
 
             .vote-comment-content{
@@ -2041,6 +2146,7 @@ $howManySteps: 100; //this needs to be even.
 
 // Pagination
 .pagination-custom{
+    margin-bottom: 30px;
     .all-page{
         font-size: 18px;
         font-weight: $font-regular;

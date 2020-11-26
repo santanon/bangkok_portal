@@ -14417,6 +14417,24 @@ template {
             stroke-width: 2;
             stroke-miterlimit: 10;
             vertical-align: bottom; }
+          .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item.-download .box-full a .icon-content.-download-Doc svg .st0 {
+            fill: none;
+            stroke: #FFFFFF;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-miterlimit: 10; }
+          .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item.-download .box-full a .icon-content.-download-Doc svg .st1 {
+            fill: none;
+            stroke: #FFFFFF;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-miterlimit: 10; }
+          .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item.-download .box-full a .icon-content.-download-Doc svg .st2 {
+            fill: none;
+            stroke: #FFFFFF;
+            stroke-width: 2;
+            stroke-miterlimit: 10; }
         .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item.-download .box-full a .text-content {
           font-size: 20px;
           font-weight: 400;
@@ -14434,8 +14452,16 @@ template {
           text-overflow: ellipsis; }
         .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item.-download .box-full a:hover {
           text-decoration: none; }
-  .group-section-content .section-content .inner-content .main-content .group-slide .page-list .item {
-    margin-bottom: 30px; }
+  .group-section-content .section-content .inner-content .main-content .group-slide .page-list .item .right .text-ontop {
+    position: absolute;
+    top: 10px; }
+  .group-section-content .section-content .inner-content .main-content .group-slide .page-list .item.-question .right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
   .group-section-content .section-content .inner-content .main-content .group-vote .score-wrapper {
     padding: 20px; }
     .group-section-content .section-content .inner-content .main-content .group-vote .score-wrapper .text-score .num-vote {
@@ -14871,6 +14897,56 @@ template {
   .group-section-content .section-content .inner-content .main-content .clendar-warpper #calendar .fc-popover .fc-popover-body .fc-daygrid-event-harness .fc-h-event {
     background-color: #53954e;
     border: 1px solid #53954e; }
+  .group-section-content .section-content .inner-content .main-content .download-file-wrapper .topic-category {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #006600;
+    padding: 8px 15px;
+    margin-bottom: 20px; }
+    .group-section-content .section-content .inner-content .main-content .download-file-wrapper .topic-category svg {
+      fill: none;
+      stroke: #fff;
+      stroke-width: 2;
+      stroke-miterlimit: 10;
+      vertical-align: bottom;
+      margin-right: 5px; }
+  .group-section-content .section-content .inner-content .main-content .page-list-item-wrapper .topic-category {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #006600;
+    padding: 8px 15px;
+    margin-bottom: 20px; }
+    .group-section-content .section-content .inner-content .main-content .page-list-item-wrapper .topic-category svg {
+      fill: none;
+      stroke: #fff;
+      stroke-width: 2;
+      stroke-miterlimit: 10;
+      vertical-align: bottom;
+      margin-right: 5px; }
+  .group-section-content .section-content .inner-content .main-content .page-list-item-wrapper .group-list-item ul {
+    margin: 0;
+    padding: 0; }
+    .group-section-content .section-content .inner-content .main-content .page-list-item-wrapper .group-list-item ul li {
+      list-style: none;
+      margin-bottom: 30px; }
+      .group-section-content .section-content .inner-content .main-content .page-list-item-wrapper .group-list-item ul li .page-list .item .right .text-onbottom .social-wrapper ul li {
+        margin-bottom: 0; }
   .group-section-content .section-content .inner-content .vote-comment-content {
     margin-top: 30px; }
     .group-section-content .section-content .inner-content .vote-comment-content .content .box-title .title-head {
@@ -15100,46 +15176,45 @@ template {
     line-height: 40px;
     margin: 0; }
 
-.pagination-custom .all-page {
-  font-size: 18px;
-  font-weight: 400;
-  color: #525252; }
-  .pagination-custom .all-page span {
-    padding: 0 5px; }
-
-.pagination-custom .item-page .slide-prev {
-  width: 50px;
-  height: 40px;
-  background-color: #585c5f;
-  margin: 0 5px;
-  cursor: pointer;
-  background-image: url("../../template1/assets/images/icons/icon-slide-prev.png");
-  background-repeat: no-repeat;
-  background-position: center center; }
-  .pagination-custom .item-page .slide-prev.disabled {
-    opacity: 0.5;
-    cursor: not-allowed; }
-
-.pagination-custom .item-page .input-custom {
-  width: 60px;
-  margin: 0 5px; }
-  .pagination-custom .item-page .input-custom .style-input {
-    text-align: center;
-    -webkit-box-shadow: none;
-    box-shadow: none; }
-
-.pagination-custom .item-page .slide-next {
-  width: 50px;
-  height: 40px;
-  background-color: #585c5f;
-  margin: 0 5px;
-  cursor: pointer;
-  background-image: url("../../template1/assets/images/icons/icon-slide-next.png");
-  background-repeat: no-repeat;
-  background-position: center center; }
-  .pagination-custom .item-page .slide-next.disabled {
-    opacity: 0.5;
-    cursor: not-allowed; }
+.pagination-custom {
+  margin-bottom: 30px; }
+  .pagination-custom .all-page {
+    font-size: 18px;
+    font-weight: 400;
+    color: #525252; }
+    .pagination-custom .all-page span {
+      padding: 0 5px; }
+  .pagination-custom .item-page .slide-prev {
+    width: 50px;
+    height: 40px;
+    background-color: #585c5f;
+    margin: 0 5px;
+    cursor: pointer;
+    background-image: url("../../template1/assets/images/icons/icon-slide-prev.png");
+    background-repeat: no-repeat;
+    background-position: center center; }
+    .pagination-custom .item-page .slide-prev.disabled {
+      opacity: 0.5;
+      cursor: not-allowed; }
+  .pagination-custom .item-page .input-custom {
+    width: 60px;
+    margin: 0 5px; }
+    .pagination-custom .item-page .input-custom .style-input {
+      text-align: center;
+      -webkit-box-shadow: none;
+      box-shadow: none; }
+  .pagination-custom .item-page .slide-next {
+    width: 50px;
+    height: 40px;
+    background-color: #585c5f;
+    margin: 0 5px;
+    cursor: pointer;
+    background-image: url("../../template1/assets/images/icons/icon-slide-next.png");
+    background-repeat: no-repeat;
+    background-position: center center; }
+    .pagination-custom .item-page .slide-next.disabled {
+      opacity: 0.5;
+      cursor: not-allowed; }
 
 /* This for loop creates the necessary css animation names 
 Due to the split circle of progress-left and progress right, we must use the animations on each side. 

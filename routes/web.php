@@ -64,3 +64,7 @@ Route::get('/questionnaire', function () {
 Route::get('/questionnaire-detail', function () {
     return view('questionnaire-detail');
 });
+
+Route::get('/download', function () {
+    return view('download-main');
+});

@@ -2311,6 +2311,11 @@ $howManySteps: 100; //this needs to be even.
                     }
                 }
             }
+
+            .exthumb{
+                display: none;
+                opacity: 0;
+            }
         }
 
         &:hover{

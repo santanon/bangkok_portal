@@ -38,6 +38,7 @@
                             <div class="item video">
                                 <div class="cover" style="background-image: url('../../template1/assets/images/img-album-demo1.png');">
                                     <a href="https://youtu.be/YD_gvR234qg">
+                                        <img class="exthumb" src="template1/assets/images/img-album-demo1.png">
                                         <div class="bg-layer">
                                             <div class="icon-search-hover">
                                                 <img src="{{ asset('template1/assets/images/icons/icon-play.png')}}" alt="banner">
@@ -68,10 +69,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6" data-exThumbImage="template1/assets/images/img-album-demo2.jpg" data-sub-html="video caption1" data-html="#video1">
+                        <div class="col-lg-3 col-md-4 col-sm-6" data-sub-html="video caption1" data-html="#video1">
                             <div class="item video">
                                 <div class="cover" style="background-image: url('../../template1/assets/images/img-album-demo2.jpg');">
                                     <a href="javascript:void(0)" >
+                                        <img class="exthumb" src="template1/assets/images/img-album-demo2.jpg">
                                         <div class="bg-layer">
                                             <div class="icon-search-hover">
                                                 <img src="{{ asset('template1/assets/images/icons/icon-play.png')}}" alt="banner">
@@ -106,6 +108,7 @@
                             <div class="item video">
                                 <div class="cover" style="background-image: url('../../template1/assets/images/img-album-demo3.jpg');">
                                     <a href="https://youtu.be/YD_gvR234qg">
+                                        <img class="exthumb" src="template1/assets/images/img-album-demo3.jpg">
                                         <div class="bg-layer">
                                             <div class="icon-search-hover">
                                                 <img src="{{ asset('template1/assets/images/icons/icon-play.png')}}" alt="banner">
@@ -136,10 +139,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6" data-exThumbImage="template1/assets/images/img-album-demo2.jpg" data-sub-html="video caption1" data-html="#video1">
+                        <div class="col-lg-3 col-md-4 col-sm-6" data-sub-html="video caption1" data-html="#video1">
                             <div class="item video">
                                 <div class="cover" style="background-image: url('../../template1/assets/images/img-album-demo4.jpg');">
                                     <a href="javascript:void(0)" >
+                                        <img class="exthumb" src="template1/assets/images/img-album-demo4.jpg">
                                         <div class="bg-layer">
                                             <div class="icon-search-hover">
                                                 <img src="{{ asset('template1/assets/images/icons/icon-play.png')}}" alt="banner">
@@ -175,6 +179,7 @@
                             <div class="item video">
                                 <div class="cover" style="background-image: url('../../template1/assets/images/img-album-demo1.png');">
                                     <a href="https://youtu.be/YD_gvR234qg">
+                                        <img class="exthumb" src="template1/assets/images/img-album-demo1.png">
                                         <div class="bg-layer">
                                             <div class="icon-search-hover">
                                                 <img src="{{ asset('template1/assets/images/icons/icon-play.png')}}" alt="banner">
@@ -205,10 +210,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6" data-exThumbImage="template1/assets/images/img-album-demo2.jpg" data-sub-html="video caption1" data-html="#video1">
+                        <div class="col-lg-3 col-md-4 col-sm-6" data-sub-html="video caption1" data-html="#video1">
                             <div class="item video">
                                 <div class="cover" style="background-image: url('../../template1/assets/images/img-album-demo2.jpg');">
                                     <a href="javascript:void(0)" >
+                                        <img class="exthumb" src="template1/assets/images/img-album-demo2.jpg">
                                         <div class="bg-layer">
                                             <div class="icon-search-hover">
                                                 <img src="{{ asset('template1/assets/images/icons/icon-play.png')}}" alt="banner">
@@ -243,6 +249,7 @@
                             <div class="item video">
                                 <div class="cover" style="background-image: url('../../template1/assets/images/img-album-demo3.jpg');">
                                     <a href="https://youtu.be/YD_gvR234qg">
+                                        <img class="exthumb" src="template1/assets/images/img-album-demo3.jpg">
                                         <div class="bg-layer">
                                             <div class="icon-search-hover">
                                                 <img src="{{ asset('template1/assets/images/icons/icon-play.png')}}" alt="banner">
@@ -273,10 +280,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6" data-exThumbImage="template1/assets/images/img-album-demo2.jpg" data-sub-html="video caption1" data-html="#video1">
+                        <div class="col-lg-3 col-md-4 col-sm-6" data-sub-html="video caption1" data-html="#video1">
                             <div class="item video">
                                 <div class="cover" style="background-image: url('../../template1/assets/images/img-album-demo4.jpg');">
                                     <a href="javascript:void(0)" >
+                                        <img class="exthumb" src="template1/assets/images/img-album-demo4.jpg">
                                         <div class="bg-layer">
                                             <div class="icon-search-hover">
                                                 <img src="{{ asset('template1/assets/images/icons/icon-play.png')}}" alt="banner">
@@ -312,6 +320,7 @@
                             <div class="item video">
                                 <div class="cover" style="background-image: url('../../template1/assets/images/img-album-demo1.png');">
                                     <a href="https://youtu.be/YD_gvR234qg">
+                                        <img class="exthumb" src="template1/assets/images/img-album-demo1.png">
                                         <div class="bg-layer">
                                             <div class="icon-search-hover">
                                                 <img src="{{ asset('template1/assets/images/icons/icon-play.png')}}" alt="banner">
@@ -342,10 +351,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6" data-exThumbImage="template1/assets/images/img-album-demo2.jpg" data-sub-html="video caption1" data-html="#video1">
+                        <div class="col-lg-3 col-md-4 col-sm-6" data-sub-html="video caption1" data-html="#video1">
                             <div class="item video">
                                 <div class="cover" style="background-image: url('../../template1/assets/images/img-album-demo2.jpg');">
                                     <a href="javascript:void(0)" >
+                                        <img class="exthumb" src="template1/assets/images/img-album-demo2.jpg">
                                         <div class="bg-layer">
                                             <div class="icon-search-hover">
                                                 <img src="{{ asset('template1/assets/images/icons/icon-play.png')}}" alt="banner">
@@ -380,6 +390,7 @@
                             <div class="item video">
                                 <div class="cover" style="background-image: url('../../template1/assets/images/img-album-demo3.jpg');">
                                     <a href="https://youtu.be/YD_gvR234qg">
+                                        <img class="exthumb" src="template1/assets/images/img-album-demo3.jpg">
                                         <div class="bg-layer">
                                             <div class="icon-search-hover">
                                                 <img src="{{ asset('template1/assets/images/icons/icon-play.png')}}" alt="banner">
@@ -410,10 +421,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6" data-exThumbImage="template1/assets/images/img-album-demo2.jpg" data-sub-html="video caption1" data-html="#video1">
+                        <div class="col-lg-3 col-md-4 col-sm-6" data-sub-html="video caption1" data-html="#video1">
                             <div class="item video">
                                 <div class="cover" style="background-image: url('../../template1/assets/images/img-album-demo4.jpg');">
                                     <a href="javascript:void(0)" >
+                                        <img class="exthumb" src="template1/assets/images/img-album-demo4.jpg">
                                         <div class="bg-layer">
                                             <div class="icon-search-hover">
                                                 <img src="{{ asset('template1/assets/images/icons/icon-play.png')}}" alt="banner">
@@ -449,6 +461,7 @@
                             <div class="item video">
                                 <div class="cover" style="background-image: url('../../template1/assets/images/img-album-demo1.png');">
                                     <a href="https://youtu.be/YD_gvR234qg">
+                                        <img class="exthumb" src="template1/assets/images/img-album-demo1.png">
                                         <div class="bg-layer">
                                             <div class="icon-search-hover">
                                                 <img src="{{ asset('template1/assets/images/icons/icon-play.png')}}" alt="banner">
@@ -479,10 +492,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6" data-exThumbImage="template1/assets/images/img-album-demo2.jpg" data-sub-html="video caption1" data-html="#video1">
+                        <div class="col-lg-3 col-md-4 col-sm-6" data-sub-html="video caption1" data-html="#video1">
                             <div class="item video">
                                 <div class="cover" style="background-image: url('../../template1/assets/images/img-album-demo2.jpg');">
                                     <a href="javascript:void(0)" >
+                                        <img class="exthumb" src="template1/assets/images/img-album-demo2.jpg">
                                         <div class="bg-layer">
                                             <div class="icon-search-hover">
                                                 <img src="{{ asset('template1/assets/images/icons/icon-play.png')}}" alt="banner">
@@ -517,6 +531,7 @@
                             <div class="item video">
                                 <div class="cover" style="background-image: url('../../template1/assets/images/img-album-demo3.jpg');">
                                     <a href="https://youtu.be/YD_gvR234qg">
+                                        <img class="exthumb" src="template1/assets/images/img-album-demo3.jpg">
                                         <div class="bg-layer">
                                             <div class="icon-search-hover">
                                                 <img src="{{ asset('template1/assets/images/icons/icon-play.png')}}" alt="banner">
@@ -547,10 +562,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6" data-exThumbImage="template1/assets/images/img-album-demo2.jpg" data-sub-html="video caption1" data-html="#video1">
+                        <div class="col-lg-3 col-md-4 col-sm-6" data-sub-html="video caption1" data-html="#video1">
                             <div class="item video">
                                 <div class="cover" style="background-image: url('../../template1/assets/images/img-album-demo4.jpg');">
                                     <a href="javascript:void(0)" >
+                                        <img class="exthumb" src="template1/assets/images/img-album-demo4.jpg">
                                         <div class="bg-layer">
                                             <div class="icon-search-hover">
                                                 <img src="{{ asset('template1/assets/images/icons/icon-play.png')}}" alt="banner">

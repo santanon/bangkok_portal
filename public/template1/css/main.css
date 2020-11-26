@@ -13457,6 +13457,9 @@ template {
   padding-bottom: 12px;
   line-height: 1.2em; }
 
+.group-section-breadcrumb {
+  margin-bottom: 30px; }
+
 .modal-open .modal.modal-center {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
@@ -14987,7 +14990,8 @@ template {
   -ms-flex-direction: row;
   flex-direction: row;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  margin-bottom: 30px; }
   .gallery-template .item > div {
     -webkit-box-flex: 1;
     -ms-flex: 1 0 50%;
@@ -15282,62 +15286,100 @@ template {
           text-overflow: ellipsis; }
         .gallery-template .item.-album .cover-album .caption-album.show {
           bottom: 0; }
-  .gallery-template .item.-question .left {
-    height: 180px;
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 250px;
-    flex: 0 0 250px; }
-  .gallery-template .item.-question .right {
-    display: block;
-    height: 180px;
-    -webkit-box-align: normal;
-    -ms-flex-align: normal;
-    align-items: normal;
-    padding-top: 10px; }
-    .gallery-template .item.-question .right .page-detail {
-      display: block; }
-      .gallery-template .item.-question .right .page-detail .title {
-        font-size: 36px;
-        line-height: 36px;
-        font-weight: 500;
-        color: #006600;
-        margin-bottom: 30px; }
-      .gallery-template .item.-question .right .page-detail p {
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 25px;
-        color: #525252; }
-  .gallery-template .item.-download .box-full {
-    text-align: center;
-    padding: 20px;
-    -webkit-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease; }
-    .gallery-template .item.-download .box-full a .icon-content {
-      margin-bottom: 10px; }
-      .gallery-template .item.-download .box-full a .icon-content svg {
-        fill: none;
-        stroke: #fff;
-        stroke-width: 2;
-        stroke-miterlimit: 10;
-        vertical-align: bottom; }
-    .gallery-template .item.-download .box-full a .text-content {
-      font-size: 20px;
-      font-weight: 400;
-      line-height: 25px;
-      color: #fff;
-      -webkit-transition: all 0.3s ease;
-      -o-transition: all 0.3s ease;
-      transition: all 0.3s ease;
-      min-height: 50px;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      -o-text-overflow: ellipsis;
-      text-overflow: ellipsis; }
-    .gallery-template .item.-download .box-full a:hover {
-      text-decoration: none; }
+  .gallery-template .item.video {
+    position: relative; }
+    .gallery-template .item.video .cover {
+      position: relative;
+      width: 100%;
+      height: 186px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center; }
+      .gallery-template .item.video .cover img {
+        max-width: 100%;
+        max-height: 100%; }
+      .gallery-template .item.video .cover .bg-layer {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-repeat: repeat;
+        -webkit-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out; }
+        .gallery-template .item.video .cover .bg-layer .icon-search-hover {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          height: 100%; }
+      .gallery-template .item.video .cover .title {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between; }
+        .gallery-template .item.video .cover .title .source {
+          padding: 7px 15px;
+          -webkit-transition: all 0.5s ease-in-out;
+          -o-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out; }
+          .gallery-template .item.video .cover .title .source span {
+            display: block;
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 400;
+            color: #fff;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis; }
+        .gallery-template .item.video .cover .title .social-wrapper {
+          padding-right: 5px;
+          padding-top: 7px; }
+      .gallery-template .item.video .cover .caption {
+        position: absolute;
+        bottom: 0;
+        padding: 5px 15px;
+        width: 100%;
+        text-align: center;
+        min-height: 10px;
+        height: 56px;
+        left: 0;
+        -webkit-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease; }
+        .gallery-template .item.video .cover .caption .icon-now-moving {
+          float: left;
+          margin-right: 5px;
+          position: relative;
+          top: -3px; }
+        .gallery-template .item.video .cover .caption span {
+          font-size: 16px;
+          line-height: 18px;
+          font-weight: 400;
+          color: #fff;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          -o-text-overflow: ellipsis;
+          text-overflow: ellipsis; }
+        .gallery-template .item.video .cover .caption.show {
+          bottom: 0; }
   .gallery-template .item:hover .left {
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
@@ -15361,6 +15403,12 @@ template {
     bottom: 0; }
     .gallery-template .item:hover.-album .cover-album .caption-album.bg-color-primary-opacity {
       background-color: inherit; }
+  .gallery-template .item:hover.video .cover .bg-layer {
+    background-color: rgba(0, 102, 0, 0.5); }
+  .gallery-template .item:hover.video .cover .title .source {
+    background-color: inherit; }
+  .gallery-template .item:hover.video .cover .caption.bg-color-primary-opacity {
+    background-color: inherit; }
 
 .group-link-mainbkk {
   position: absolute;

@@ -57,7 +57,9 @@
     padding-bottom: 12px;
     line-height: 1.2em;
 }
-
+.group-section-breadcrumb{
+    margin-bottom: 30px;
+}
 
 // Modal
 .modal-open .modal.modal-center {
@@ -196,7 +198,6 @@
         }
     }
 }
-
 
 //Loading
 .loading{
@@ -1906,6 +1907,7 @@ $howManySteps: 100; //this needs to be even.
         flex-direction: row;
         flex-wrap: wrap;
         //justify-content: center;
+        margin-bottom: 30px;
         >div{
             flex: 1 0 50%;
         }
@@ -2209,68 +2211,103 @@ $howManySteps: 100; //this needs to be even.
                 }
             }
         }
-        &.-question{
-            .left{
-                height: 180px;
-                flex: 0 0 250px;
-            }
-            .right{
-                display: block;
-                height: 180px;
-                align-items: normal;
-                padding-top: 10px;
-                .page-detail{
-                    display: block;
-                    .title{
-                        font-size: 36px;
-                        line-height: 36px;
-                        font-weight: $font-medium;
-                        color: $color-green-primary;
-                        margin-bottom: 30px;
-                        
-                    }
-                    p{
-                        font-size: 20px;
-                        font-weight: $font-regular;
-                        line-height: 25px;
-                        color: #525252;
+
+        &.video{
+            position: relative;
+
+            .cover{
+                position: relative;
+                width: 100%;
+                height: 186px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+
+                img{
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+
+                .bg-layer {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-repeat: repeat;
+                    // opacity: 0;
+                    transition: all 0.5s ease-in-out;
+                    .icon-search-hover{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 100%;
+
+                        img{}
                     }
                 }
-                
-            }
-        }
-        &.-download{
-            .box-full{
-                text-align: center;
-                padding: 20px;
-                transition: all 0.3s ease;
-                a{
-                    .icon-content{
-                        margin-bottom: 10px;
-                        svg {
-                            fill: none;
-                            stroke: #fff;
-                            stroke-width: 2;
-                            stroke-miterlimit: 10;
-                            vertical-align: bottom;
+
+                .title{
+                    position: absolute;
+                    width: 100%;
+                    top: 0;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                    .source{
+                        padding: 7px 15px;
+                        //max-width: 150px;
+                        transition: all 0.5s ease-in-out;
+                        span{
+                            display: block;
+                            //padding-right: 10px;
+                            font-size: 16px;
+                            line-height: 20px;
+                            font-weight: $font-regular;
+                            color: #fff;
+                            //text-transform: uppercase;
+
+                            display: -webkit-box;
+                            -webkit-line-clamp: 1;
+                            -webkit-box-orient: vertical;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+
                         }
                     }
-                    .text-content{
-                        font-size: 20px;
+                    .social-wrapper{
+                        padding-right: 5px;
+                        padding-top: 7px;
+                    }
+                }
+                .caption{
+                    position: absolute;
+                    bottom: 0;
+                    padding: 5px 15px;
+                    width: 100%;
+                    text-align: center;
+                    min-height: 10px;
+                    height: 56px;
+                    left: 0;
+                    // bottom: -100%;
+                    transition: all 0.5s ease;
+                    .icon-now-moving{
+                        float: left;
+                        margin-right: 5px;
+                        position: relative;
+                        top: -3px;
+                    }
+                    span{
+                        font-size: 16px;
+                        line-height: 18px;
                         font-weight: $font-regular;
-                        line-height: 25px;
                         color: #fff;
-                        transition: all 0.3s ease;
-                        min-height: 50px;
-
                         display: -webkit-box;
                         -webkit-line-clamp: 2;
                         -webkit-box-orient: vertical;
                         overflow: hidden;
                         text-overflow: ellipsis;
                     }
-                    &:hover{
-                        text-decoration: none;
+                    &.show{
+                        bottom: 0;
                     }
                 }
             }
@@ -2310,6 +2347,24 @@ $howManySteps: 100; //this needs to be even.
                     }
                     .caption-album{
                         bottom: 0;
+                        &.bg-color-primary-opacity{
+                            background-color: inherit;
+                        }
+                    }
+                }
+            }
+
+            &.video{
+                .cover{
+                    .bg-layer{
+                        background-color: rgba(0, 102, 0, 0.5);
+                    }
+                    .title{
+                        .source{
+                            background-color: inherit;
+                        }
+                    }
+                    .caption{
                         &.bg-color-primary-opacity{
                             background-color: inherit;
                         }

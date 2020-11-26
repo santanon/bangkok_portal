@@ -66,7 +66,7 @@
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">หน้าแรก</a></li>
                         <li class="breadcrumb-item"><a href="#">ข่าวสาร</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">อัลบั้มภาพ</li>
+                        <li class="breadcrumb-item active" aria-current="page">สถานี VDO</li>
                     </ol>
                 </nav>
             </div>
@@ -74,7 +74,7 @@
         </div> 
 
         <div class="group-section-content">
-            @include('template1/gallery.list')
+            @include('template1/video.list')
         </div>
 
     </div>
@@ -137,64 +137,12 @@
 <link rel="stylesheet" href="{{ asset('gallery/lightgallery.css')}}">
 <script type="text/javascript" src="{{ asset('gallery/lightgallery.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('gallery/lg-thumbnail.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('gallery/lg-zoom.min.js') }}"></script>
-<style type="text/css">
-    #lg-zoom-in, #lg-zoom-out{
-        display: none;
-    }
-</style>
-<script>
-    $(document).ready(function() {
-        let $document = $(this);
-
-        $document.on('onCloseAfter.lg', function(event) {
-            $document.data('lightGallery').destroy(true);
-        });
-
-        $('#dynamic1').on('click', function(e) {
-            $(document).lightGallery({
-                dynamic: true,
-                dynamicEl: [{
-                    src: 'https://sachinchoolur.github.io/lightGallery/static/img/1.jpg',
-                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-1.jpg'
-                },{
-                    src: 'https://www.youtube.com/watch?v=meBbDqAXago',
-                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-v-y-1.jpg',
-                    poster: 'https://sachinchoolur.github.io/lightGallery/static/img/videos/y-video1-cover.jpg'
-                },{
-                    html: '#video2',
-                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/videos/y-video1-cover.jpg',
-                    poster: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-v-y-1.jpg'
-                },{
-                    src: 'https://sachinchoolur.github.io/lightGallery/static/img/4.jpg',
-                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-4.jpg'
-                }],
-                slideEndAnimatoin: false,
-                loop: false,
-                hideControlOnEnd: true,
-                download: false,
-            });
-        });
-
-        $('#dynamic2').on('click', function(e) {
-            $(document).lightGallery({
-                dynamic: true,
-                dynamicEl: [{
-                    src: 'https://sachinchoolur.github.io/lightGallery/static/img/1.jpg',
-                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-1.jpg'
-                },{
-                    src: 'https://www.youtube.com/watch?v=meBbDqAXago',
-                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-v-y-1.jpg',
-                    poster: 'https://sachinchoolur.github.io/lightGallery/static/img/videos/y-video1-cover.jpg'
-                },{
-                    src: 'https://sachinchoolur.github.io/lightGallery/static/img/4.jpg',
-                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-4.jpg'
-                }],
-                slideEndAnimatoin: false,
-                loop: false,
-                hideControlOnEnd: true,
-                download: false,
-            });
+<script type="text/javascript" src="{{ asset('gallery/lg-fullscreen.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('gallery/lg-video.min.js') }}"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#lightgallery').lightGallery({
+            thumbnail:true
         });
     });
 </script>

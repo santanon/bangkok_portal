@@ -54,6 +54,10 @@ Route::get('/album', function () {
     return view('gallery-main');
 });
 
+Route::get('/video', function () {
+    return view('video-main');
+});
+
 Route::get('/calendar', function () {
     return view('calendar-main');
 });

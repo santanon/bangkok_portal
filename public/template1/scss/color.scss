@@ -535,7 +535,31 @@
         }
     }
 
+    .sitemap-container{
+        .level-01{
+            color: $color-green-primary;
 
+            &:hover{
+                color: $color-green-secondary;
+            }
+        }
+    
+        .level-02{
+            color: #282828;
+
+            &:hover{
+                color: $color-green-secondary;
+            }
+        }
+    
+        .level-03{
+            color: #282828;
+
+            &:hover{
+                color: $color-green-secondary;
+            }
+        }
+    }
 
     // Daterangpicker 
     .daterangepicker td.active, .daterangepicker td.active:hover{

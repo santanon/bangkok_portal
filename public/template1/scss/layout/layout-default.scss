@@ -2488,6 +2488,90 @@ $howManySteps: 100; //this needs to be even.
     }
 }
 
+.sitemap-container{
+    position: relative;
+    margin: 0 0 125px 0;
+
+    .level-01{
+        font-size: 36px;
+        line-height: 50px;
+    }
+
+    .level-02{
+        font-size: 26px;
+        line-height: 30px;
+    }
+
+    .level-03{
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .sitemap{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        .line-sub{
+            display: block;
+            margin-bottom: 40px;
+        }
+
+        .line-group{
+            list-style: none;
+            padding: 0;
+            padding-top: 30px;
+            margin: 0;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-gap: 30px;
+
+            .line-item{
+                height: auto;
+            }
+
+            @include media-breakpoint-down(lg) {
+                grid-template-columns: auto auto auto;
+            }
+
+            @include media-breakpoint-down(md) {
+                grid-template-columns: auto auto;
+            }
+
+            @include media-breakpoint-down(sm) {
+                grid-template-columns: auto;
+            }
+        }
+
+        .link-group{
+            list-style-image: url('../../template1/assets/images/icons/list-style-01.png');
+            padding-top: 20px;
+            padding-left: 17px;
+
+            .link-item{
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        // .level-01{
+        //     font-size: 34px;
+        //     line-height: 44px;
+        // }
+    
+        // .level-02{
+        //     font-size: 20px;
+        //     line-height: 24px;
+        // }
+    
+        // .level-03{
+        //     font-size: 18px;
+        //     line-height: 24px;
+        // }
+    }
+}
+
 .group-link-mainbkk{
     position: absolute;
     z-index: 9;

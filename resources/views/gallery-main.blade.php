@@ -1,4 +1,4 @@
-@section('title', 'รายการข่าว')
+@section('title', 'รายการข่าว:อัลบั้มภาพ')
 @section('tagkeyword', '')
 @section('tagdescription', '')
 

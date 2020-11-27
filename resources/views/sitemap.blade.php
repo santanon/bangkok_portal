@@ -1,4 +1,4 @@
-@section('title', 'รายการข่าว:สถานี VDO')
+@section('title', 'แผนผังเว็บไซต์')
 @section('tagkeyword', '')
 @section('tagdescription', '')
 
@@ -51,7 +51,7 @@
                     <div class="item-Onbanner-outer">
                         <div class="item-Onbanner-inner">
                             <div class="list">
-                                <h2 class="title-banner">ข่าวสาร</h2>
+                                <h2 class="title-banner">แผนผังเว็บไซต์</h2>
                                 <p class="desc-banner">มุ่งมั่นการทำงาน แหล่งค้นคว้าการประชุม เครือข่ายมหานครอาเซียน</p>
                             </div>
                         </div>
@@ -65,8 +65,7 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">หน้าแรก</a></li>
-                        <li class="breadcrumb-item"><a href="#">ข่าวสาร</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">สถานี VDO</li>
+                        <li class="breadcrumb-item active" aria-current="page">แผนผังเว็บไซต์</li>
                     </ol>
                 </nav>
             </div>
@@ -74,7 +73,7 @@
         </div> 
 
         <div class="group-section-content">
-            @include('template1/video.list')
+            @include('template1/sitemap.list')
         </div>
 
     </div>

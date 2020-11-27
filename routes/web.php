@@ -75,3 +75,7 @@ Route::get('/questionnaire-detail', function () {
 Route::get('/download', function () {
     return view('download-main');
 });
+
+Route::get('/sitemap', function () {
+    return view('sitemap');
+});

@@ -422,7 +422,6 @@ $howManySteps: 100; //this needs to be even.
                     position: relative;
                     height: 150px;
                     flex: 0 0 140px;
-                    background-color: $color-green-primary;
                     .text-content{
                         display: flex;
                         align-items: center;
@@ -440,7 +439,6 @@ $howManySteps: 100; //this needs to be even.
                         text-align: center;
                         font-size: 20px;
                         font-weight: 400;
-                        background-color: $color-green-secondary;
                     }
                 }
                 .content{
@@ -578,7 +576,6 @@ $howManySteps: 100; //this needs to be even.
                             right: 10px;
                             i{
                                 font-size: 20px;
-                                color: $color-green-primary;
                             }
                         }
                         .read-news-outer{
@@ -1133,9 +1130,7 @@ $howManySteps: 100; //this needs to be even.
                                             font-size: 36px;
                                             line-height: 36px;
                                             font-weight: $font-medium;
-                                            color: $color-green-primary;
                                             margin-bottom: 30px;
-                                            
                                         }
                                         p{
                                             font-size: 20px;
@@ -1206,23 +1201,6 @@ $howManySteps: 100; //this needs to be even.
                                             text-decoration: none;
                                         }
                                     }
-                                }
-                            }
-                        }
-                    }
-                    .page-list{
-                        .item{
-                            //margin-bottom: 30px;
-                            .right{
-                                .text-ontop{
-                                    position: absolute;
-                                    top: 10px;
-                                }
-                            }
-                            &.-question{
-                                .right{
-                                    display: flex;
-                                    align-items: center;
                                 }
                             }
                         }
@@ -1690,13 +1668,11 @@ $howManySteps: 100; //this needs to be even.
                             .month-title{
                                 font-size: 26px;
                                 font-weight: $font-regular;
-                                color: $color-green-primary;
                                 margin-right: 10px;
                             }
                             .year-title{
                                 font-size: 26px;
                                 font-weight: $font-regular;
-                                color: $color-green-primary;
                             }
                         }
                         .calendar-wrapper-btn{
@@ -1754,25 +1730,11 @@ $howManySteps: 100; //this needs to be even.
                                 color: #525252;
                             }
                         }
-                        .fc-daygrid-day-events{
-                            .fc-daygrid-event-harness{
-                                .fc-h-event{
-                                    background-color: $color-green-secondary;
-                                    border: 1px solid $color-green-secondary;
-                                }
-                            }
-                            .fc-daygrid-day-bottom{
-                                .fc-daygrid-more-link{
-                                    color: $color-green-secondary;
-                                }
-                            }
-                        }
+                        
                         .fc-col-header {
                             tbody{
                                 tr{
                                     .fc-col-header-cell{
-                                        background-color: $color-green-secondary;
-                                        border: 1px solid $color-green-secondary;
                                         .fc-scrollgrid-sync-inner{
                                             .fc-col-header-cell-cushion {
                                                 padding: 4px;
@@ -1785,45 +1747,11 @@ $howManySteps: 100; //this needs to be even.
                             }
                         }
                         .fc-daygrid-day.fc-day-today{
-                            border: 1px solid $color-green-primary;
                             background-color: #fff;
                         }
+                    }
+                }
 
-                        .fc-popover{
-                            .fc-popover-body {
-                                .fc-daygrid-event-harness{
-                                    .fc-h-event{
-                                        background-color: $color-green-secondary;
-                                        border: 1px solid $color-green-secondary;
-                                    }
-                                }
-                            }
-                        }
-                        
-                    }
-                }
-                .download-file-wrapper{
-                    //margin-bottom: 30px;
-                    .topic-category{
-                        font-size: 20px;
-                        font-weight: $font-regular;
-                        line-height: 25px;
-                        color: #fff;
-                        display: flex;
-                        align-items: center;
-                        background-color: $color-green-primary;
-                        padding: 8px 15px;
-                        margin-bottom: 20px;
-                        svg {
-                            fill: none;
-                            stroke: #fff;
-                            stroke-width: 2;
-                            stroke-miterlimit: 10;
-                            vertical-align: bottom;
-                            margin-right: 5px;
-                        }
-                    }
-                }
                 .page-list-item-wrapper{
                     .topic-category{
                         font-size: 20px;
@@ -1832,7 +1760,6 @@ $howManySteps: 100; //this needs to be even.
                         color: #fff;
                         display: flex;
                         align-items: center;
-                        background-color: $color-green-primary;
                         padding: 8px 15px;
                         margin-bottom: 20px;
                         svg {
@@ -1854,6 +1781,10 @@ $howManySteps: 100; //this needs to be even.
                                 .page-list{
                                     .item{
                                         .right{
+                                            .text-ontop{
+                                                position: absolute;
+                                                top: 10px;
+                                            }
                                             .text-onbottom{
                                                 .social-wrapper{
                                                     ul{
@@ -1864,7 +1795,162 @@ $howManySteps: 100; //this needs to be even.
                                                 }
                                             }
                                         }
+                                        &.-question{
+                                            .right{
+                                                display: flex;
+                                                align-items: center;
+                                            }
+                                        }
                                     }
+                                }
+                            }
+                        }
+                    }
+                }
+                .accordion-wrapper{
+                    .accordion{
+                        .card{
+                            border-radius: 0;
+                            border: none;
+                            margin-bottom: 30px;
+                            .card-header{
+                                padding: 0;
+                                border: none;
+                                background-color: #fff;
+                                cursor: pointer;
+                                .card-header-item{
+                                    .icon-card-header{
+                                        position: relative;
+                                        flex: 0 0 120px;
+                                        padding: 15px 20px;
+                                        min-height: 80px;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        .icon-content{
+                                            
+                                            height: 100%;
+                                            svg {
+                                                width: 32px;
+                                                height: 32px;
+                                                fill:none;
+                                                stroke: #fff;
+                                                stroke-width:2;
+                                                stroke-miterlimit:10;
+                                                vertical-align: bottom;
+                                            }
+                                        }
+                                    }
+                                    .title-card-header{
+                                        font-size: 20px;
+                                        line-height: 25px;
+                                        font-weight: $font-regular;
+                                        color: #525252;
+                                        padding: 15px 20px;
+                                    }
+                                }
+                            }
+                            .collapse, .collapsing{
+                                .card-body{
+                                    position: relative;
+                                    padding: 20px;
+                                    .show-view{
+                                        position: relative;
+                                        //text-align: right;
+                                        font-size: 18px;
+                                        font-weight: $font-regular;
+                                        line-height: 25px;
+                                        margin-bottom: 10px;
+                                    }
+                                    .content{
+                                        font-size: 18px;
+                                        font-weight: $font-regular;
+                                        line-height: 25px;
+                                        color: #525252;
+                                    }
+                                    &:after{
+                                        content: '';
+                                        width: 0;
+                                        height: 0;
+                                        border-style: solid;
+                                        border-width: 16px 15.5px 0 15.5px;
+                                        position: absolute;
+                                        top: 0;
+                                        left: 4%;
+                                    }
+                                }
+                            }
+                            // &:last-of-type{
+                            //     margin-bottom: 30px;
+                            // }
+                        }
+                    }
+                }
+
+                &.-contact{
+                    .contact-tel{
+                        img{
+                            margin-right: 5px;
+                        }
+                        a{
+                            font-size: 18px;
+                            font-weight: $font-regular;
+                            color: #525252;
+                        }
+                    }
+                    .iframe-map{
+                        margin: 20px 0;
+                        iframe{
+                            width: 100%;
+                            height: 400px;
+                        }
+                    }
+                    .list-item-gov{
+                        margin-bottom: 30px;
+                        .title-gov{
+                            font-size: 18px;
+                            font-weight: $font-regular;
+                            line-height: 25px;
+                            color: #525252;
+                            text-align: center;
+                            padding: 8px 15px;
+                            box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
+                        }
+                        .contact-gov{
+                            .tel-gov{
+                                background-color: $color-green-secondary;
+                                padding: 5px 10px;
+                                width: 50%;
+                                .on{
+                                    width: 14px;
+                                    height: 18px;
+                                    img{
+                                        width: 100%;
+                                        display: block;
+                                    }
+                                }
+                                .number{
+                                    font-size: 18px;
+                                    line-height: 25px;
+                                    font-weight: $font-regular;
+                                    color: #fff;
+                                }
+                            }
+                            .tel-internal{
+                                background-color: $color-green-primary;
+                                padding: 5px 10px;
+                                width: 50%;
+                                text-align: right;
+                                .on{
+                                    font-size: 12px;
+                                    font-weight: $font-regular;
+                                    color: #fff;
+                                }
+                                .number{
+                                    font-size: 18px;
+                                    line-height: 25px;
+                                    font-weight: $font-regular;
+                                    color: #fff;
                                 }
                             }
                         }
@@ -2291,6 +2377,37 @@ Due to the split circle of progress-left and progress right, we must use the ani
             }
             .email-link{
                 margin-bottom: 5px;
+            }
+        }
+    }
+    .group-section-content{
+        .section-content{
+            .inner-content{
+                .main-content{
+                    .accordion-wrapper{
+                        .accordion{
+                            .card{
+                                .card-header{
+                                    .card-header-item{
+                                        .icon-card-header{
+                                            flex: 0 0 80px;
+                                        }
+                                        .title-card-header{
+                                            color: #fff;
+                                        }
+                                    }
+                                }
+                                .collapse, .collapsing{
+                                    .card-body{
+                                        &:after{
+                                            left: 50%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }

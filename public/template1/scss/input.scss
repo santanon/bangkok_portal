@@ -48,6 +48,7 @@
 }
 
 .input-custom{
+    //margin-bottom: 30px;
     .select-wrapper{
         width: 200px;
         &.width-full{
@@ -144,10 +145,11 @@
         width: 100%;
         resize: none;
         border: 1px solid #cfd1d4;
-        padding: 0 10px;
+        padding: 10px 10px;
         color: #525252;
         font-size: 16px;
         font-weight: $font-regular;
+        box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
         &:focus{
             outline: none;
         }
@@ -164,6 +166,11 @@
     }
 }
 
+.group-form-section{
+    .input-custom{
+        margin-bottom: 30px;
+    }
+}
 
 // upload File
 .box_upload{

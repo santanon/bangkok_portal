@@ -50,7 +50,7 @@
                         <div class="col-lg-6">
                             <div class="group-content-footer">
                                 <div class="icon-content">
-                                    <img src="{{ asset('template1/assets/images/icons/icon-tel.png')}}" alt="icon">
+                                    <img src="{{ asset('template1/assets/images/icons/icon-tel.svg')}}" alt="icon">
                                 </div>
                                 <div class="text-content">
                                     โทรศัพท์กลาง
@@ -61,7 +61,7 @@
                         <div class="col-lg-6">
                             <div class="group-content-footer">
                                 <div class="icon-content">
-                                    <img src="{{ asset('template1/assets/images/icons/icon-fax.png')}}" alt="icon">
+                                    <img src="{{ asset('template1/assets/images/icons/icon-fax.svg')}}" alt="icon">
                                 </div>
                                 <div class="text-content">
                                     โทรสาร

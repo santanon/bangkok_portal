@@ -28,24 +28,17 @@
                             </div>
                         </div>
                         <div class="main-content">
-                            <div class="gallery-template">
-                                <div class="row">
-                                    <div class="col-lg-3 col-md-4 col-sm-6">
-                                        <div class="group-mange-section no-mg right-0">
-                                            <div class="manage-tools">
-                                                <ul>
-                                                    <li class="order-list">จัดการ</li>
-                                                    <li class="order-list">ลบ</li>
-                                                    <li class="order-list">ซ่อน</li>
-                                                    <li class="order-list order-close">ปิด</li>
-                                                </ul>
-                                            </div> 
-                                            <div class="manage-edit">
-                                                <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
-                                            </div>
-                                        </div>
+                            <div class="action-slide dis-flex justify-end">
+                                <div class="slide-wrapper" id="action-slide_3">
+                                    <div class="slide-arrow slide-prev"></div>
+                                    <div class="slide-arrow slide-next"></div>
+                                </div>
+                            </div>
+                            <div class="group-slide">
+                                <ul id="slide_3" class="list-item">
+                                    <li>
                                         <div class="item -album">
-                                            <div class="cover-album" style="background-image: url('../../template1/assets/images/img-album-demo1.png');">
+                                            <div class="cover-album" style="background-image: url('../../template1/assets/images/img-album-demo2.jpg');">
                                                 <a id="dynamic1" href="javascript:void(0)" >
                                                     <div class="bg-layer">
                                                         <div class="icon-search-hover">
@@ -57,28 +50,29 @@
                                                     <div class="source">
                                                         <span>PR BKK</span>
                                                     </div>
+                                                    <!-- <div class="social-wrapper">
+                                                        <ul>
+                                                            <li>
+                                                                <a href="" title="facebook">
+                                                                    <i class="fab fa-facebook-f"></i>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="" title="twitter">
+                                                                    <i class="fab fa-twitter"></i>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div> -->
                                                 </div>
                                                 <div class="caption-album">
-                                                    <span>กทม. ร่วมเป็นเกียรติในพิธีลงนามสร้างสวนป่า</span>
+                                                    <span>กทม. ร่วมเป็นเกียรติในพิธีลงนาม</span>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-4 col-sm-6">
-                                        <div class="group-mange-section no-mg right-0">
-                                            <div class="manage-tools">
-                                                <ul>
-                                                    <li class="order-list">จัดการ</li>
-                                                    <li class="order-list">ลบ</li>
-                                                    <li class="order-list">ซ่อน</li>
-                                                    <li class="order-list order-close">ปิด</li>
-                                                </ul>
-                                            </div> 
-                                            <div class="manage-edit">
-                                                <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
-                                            </div>
-                                        </div>
-                                        <div class="item -album" id="dynamic2">
+                                    </li>
+                                    <li>
+                                        <div class="item -album">
                                             <div class="cover-album" style="background-image: url('../../template1/assets/images/img-album-demo2.jpg');">
                                                 <a id="dynamic2" href="javascript:void(0)" >
                                                     <div class="bg-layer">
@@ -91,30 +85,31 @@
                                                     <div class="source">
                                                         <span>PR BKK</span>
                                                     </div>
+                                                    <!-- <div class="social-wrapper">
+                                                        <ul>
+                                                            <li>
+                                                                <a href="" title="facebook">
+                                                                    <i class="fab fa-facebook-f"></i>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="" title="twitter">
+                                                                    <i class="fab fa-twitter"></i>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div> -->
                                                 </div>
                                                 <div class="caption-album">
-                                                    <span>กทม. ร่วมเป็นเกียรติในพิธีลงนามสร้างสวนป่า</span>
+                                                    <span>กทม. ร่วมเป็นเกียรติในพิธีลงนาม MOU สร้างสวนป่า “เบญจกิติ" ระยะที่ 2-3</span>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-4 col-sm-6">
-                                        <div class="group-mange-section no-mg right-0">
-                                            <div class="manage-tools">
-                                                <ul>
-                                                    <li class="order-list">จัดการ</li>
-                                                    <li class="order-list">ลบ</li>
-                                                    <li class="order-list">ซ่อน</li>
-                                                    <li class="order-list order-close">ปิด</li>
-                                                </ul>
-                                            </div> 
-                                            <div class="manage-edit">
-                                                <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
-                                            </div>
-                                        </div>
-                                        <div class="item -album" id="dynamic1">
+                                    </li>
+                                    <li>
+                                        <div class="item -album">
                                             <div class="cover-album" style="background-image: url('../../template1/assets/images/img-album-demo3.jpg');">
-                                                <a id="dynamic1" href="javascript:void(0)" >
+                                                <a href="#">
                                                     <div class="bg-layer">
                                                         <div class="icon-search-hover">
                                                             <img src="{{ asset('template1/assets/images/icons/icon-search-large.png')}}" alt="banner">
@@ -123,32 +118,33 @@
                                                 </a>
                                                 <div class="top-album">
                                                     <div class="source">
-                                                        <span>PR BKK</span>
+                                                        <span>The Bangkok Metropolitan Council Secretariat</span>
                                                     </div>
+                                                    <!-- <div class="social-wrapper">
+                                                        <ul>
+                                                            <li>
+                                                                <a href="" title="facebook">
+                                                                    <i class="fab fa-facebook-f"></i>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="" title="twitter">
+                                                                    <i class="fab fa-twitter"></i>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div> -->
                                                 </div>
                                                 <div class="caption-album">
-                                                    <span>กทม. ร่วมเป็นเกียรติในพิธีลงนามสร้างสวนป่า</span>
+                                                    <span>กทม. ร่วมเป็นเกียรติในพิธีลงนาม MOU สร้างสวนป่า “เบญจกิติ" ระยะที่ 2-3</span>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-4 col-sm-6">
-                                        <div class="group-mange-section no-mg right-0">
-                                            <div class="manage-tools">
-                                                <ul>
-                                                    <li class="order-list">จัดการ</li>
-                                                    <li class="order-list">ลบ</li>
-                                                    <li class="order-list">ซ่อน</li>
-                                                    <li class="order-list order-close">ปิด</li>
-                                                </ul>
-                                            </div> 
-                                            <div class="manage-edit">
-                                                <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
-                                            </div>
-                                        </div>
-                                        <div class="item -album" id="dynamic2">
+                                    </li>
+                                    <li>
+                                        <div class="item -album">
                                             <div class="cover-album" style="background-image: url('../../template1/assets/images/img-album-demo4.jpg');">
-                                                <a id="dynamic2" href="javascript:void(0)" >
+                                                <a href="#">
                                                     <div class="bg-layer">
                                                         <div class="icon-search-hover">
                                                             <img src="{{ asset('template1/assets/images/icons/icon-search-large.png')}}" alt="banner">
@@ -159,14 +155,28 @@
                                                     <div class="source">
                                                         <span>PR BKK</span>
                                                     </div>
+                                                    <!-- <div class="social-wrapper">
+                                                        <ul>
+                                                            <li>
+                                                                <a href="" title="facebook">
+                                                                    <i class="fab fa-facebook-f"></i>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="" title="twitter">
+                                                                    <i class="fab fa-twitter"></i>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div> -->
                                                 </div>
                                                 <div class="caption-album">
-                                                    <span>กทม. ร่วมเป็นเกียรติในพิธีลงนามสร้างสวนป่า</span>
+                                                    <span>กทม. ร่วมเป็นเกียรติในพิธีลงนาม MOU สร้างสวนป่า “เบญจกิติ" ระยะที่ 2-3</span>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>

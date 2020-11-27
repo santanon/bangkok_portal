@@ -226,8 +226,7 @@
 </style>
 <script type="text/javascript">
     $(document).ready(function(){
-        $('#slide_7').lightGallery({
-            selector: '.slick-slide:not(.slick-cloned) .lightgallery',
+        $('#video-gallery').lightGallery({
         });
     });
 </script>

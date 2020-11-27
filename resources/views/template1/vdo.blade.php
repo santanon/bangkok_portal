@@ -28,87 +28,159 @@
                 </div>
             </div>
             <div class="main-content">
-                <div class="action-slide dis-flex justify-end">
-                    <div class="slide-wrapper" id="action-slide_7">
-                        <div class="slide-arrow slide-prev"></div>
-                        <div class="slide-arrow slide-next"></div>
+                <div class="gallery-template">
+                    <div class="row" id="video-gallery">
+                    <div class="col-lg-3 col-md-4 col-sm-6" data-src="https://youtu.be/YD_gvR234qg" data-sub-html="video caption1">                           
+                            <div class="item video">
+                                <div class="cover" style="background-image: url('../../template1/assets/images/img-album-demo1.png');">
+                                    <a href="https://youtu.be/YD_gvR234qg">
+                                        <img class="exthumb" src="template1/assets/images/img-album-demo1.png">
+                                        <div class="bg-layer">
+                                            <div class="icon-search-hover">
+                                                <img src="{{ asset('template1/assets/images/icons/icon-play.png')}}" alt="banner">
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="title">
+                                        <div class="source">
+                                            <span>PR BKK</span>
+                                        </div>
+                                    </div>
+                                    <div class="caption">
+                                        <span>กทม. ร่วมเป็นเกียรติในพิธีลงนามสร้างสวนป่า</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="group-mange-section no-mg right-0">
+                                <div class="manage-tools">
+                                    <ul>
+                                        <li class="order-list">จัดการ</li>
+                                        <li class="order-list">ลบ</li>
+                                        <li class="order-list">ซ่อน</li>
+                                        <li class="order-list order-close">ปิด</li>
+                                    </ul>
+                                </div> 
+                                <div class="manage-edit">
+                                    <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6" data-sub-html="video caption1" data-html="#video1">
+                            <div class="item video">
+                                <div class="cover" style="background-image: url('../../template1/assets/images/img-album-demo2.jpg');">
+                                    <a href="javascript:void(0)" >
+                                        <img class="exthumb" src="template1/assets/images/img-album-demo2.jpg">
+                                        <div class="bg-layer">
+                                            <div class="icon-search-hover">
+                                                <img src="{{ asset('template1/assets/images/icons/icon-play.png')}}" alt="banner">
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="title">
+                                        <div class="source">
+                                            <span>PR BKK</span>
+                                        </div>
+                                    </div>
+                                    <div class="caption">
+                                        <span>กทม. ร่วมเป็นเกียรติในพิธีลงนามสร้างสวนป่า</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="group-mange-section no-mg right-0">
+                                <div class="manage-tools">
+                                    <ul>
+                                        <li class="order-list">จัดการ</li>
+                                        <li class="order-list">ลบ</li>
+                                        <li class="order-list">ซ่อน</li>
+                                        <li class="order-list order-close">ปิด</li>
+                                    </ul>
+                                </div> 
+                                <div class="manage-edit">
+                                    <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6" data-src="https://youtu.be/YD_gvR234qg" data-sub-html="video caption1">                           
+                            <div class="item video">
+                                <div class="cover" style="background-image: url('../../template1/assets/images/img-album-demo3.jpg');">
+                                    <a href="https://youtu.be/YD_gvR234qg">
+                                        <img class="exthumb" src="template1/assets/images/img-album-demo3.jpg">
+                                        <div class="bg-layer">
+                                            <div class="icon-search-hover">
+                                                <img src="{{ asset('template1/assets/images/icons/icon-play.png')}}" alt="banner">
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="title">
+                                        <div class="source">
+                                            <span>PR BKK</span>
+                                        </div>
+                                    </div>
+                                    <div class="caption">
+                                        <span>กทม. ร่วมเป็นเกียรติในพิธีลงนามสร้างสวนป่า</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="group-mange-section no-mg right-0">
+                                <div class="manage-tools">
+                                    <ul>
+                                        <li class="order-list">จัดการ</li>
+                                        <li class="order-list">ลบ</li>
+                                        <li class="order-list">ซ่อน</li>
+                                        <li class="order-list order-close">ปิด</li>
+                                    </ul>
+                                </div> 
+                                <div class="manage-edit">
+                                    <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6" data-sub-html="video caption1" data-html="#video1">
+                            <div class="item video">
+                                <div class="cover" style="background-image: url('../../template1/assets/images/img-album-demo4.jpg');">
+                                    <a href="javascript:void(0)" >
+                                        <img class="exthumb" src="template1/assets/images/img-album-demo4.jpg">
+                                        <div class="bg-layer">
+                                            <div class="icon-search-hover">
+                                                <img src="{{ asset('template1/assets/images/icons/icon-play.png')}}" alt="banner">
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="title">
+                                        <div class="source">
+                                            <span>PR BKK</span>
+                                        </div>
+                                    </div>
+                                    <div class="caption">
+                                        <span>กทม. ร่วมเป็นเกียรติในพิธีลงนามสร้างสวนป่า</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="group-mange-section no-mg right-0">
+                                <div class="manage-tools">
+                                    <ul>
+                                        <li class="order-list">จัดการ</li>
+                                        <li class="order-list">ลบ</li>
+                                        <li class="order-list">ซ่อน</li>
+                                        <li class="order-list order-close">ปิด</li>
+                                    </ul>
+                                </div> 
+                                <div class="manage-edit">
+                                    <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="group-slide">
-                    <ul id="slide_7" class="list-item">
-                        <li data-src="https://youtu.be/YD_gvR234qg" data-sub-html="video caption1" class="lightgallery">
-                            <div class="item -album">
-                                <div class="cover-album" style="background-image: url('../../template1/assets/images/img-album-demo2.jpg');">
-                                    <a href="#">
-                                        <img class="exthumb" src="template1/assets/images/img-album-demo1.png">
-                                        <div class="bg-layer"></div>
-                                    </a>
-                                    <div class="icon-play"></div>
-                                    <div class="top-album">
-                                        <div class="source">
-                                            <span>PR BKK</span>
-                                        </div>
-                                    </div>
-                                    <div class="caption-album show text-left">
-                                        <span>กทม. ร่วมเป็นเกียรติในพิธีลงนาม</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li data-sub-html="video caption1" data-html="#video1" class="lightgallery">
-                            <div class="item -album">
-                                <div class="cover-album" style="background-image: url('../../template1/assets/images/img-album-demo2.jpg');">
-                                    <a href="#">
-                                        <img class="exthumb" src="template1/assets/images/img-album-demo1.png">
-                                        <div class="bg-layer"></div>
-                                    </a>
-                                    <div class="icon-play"></div>
-                                    <div class="top-album">
-                                        <div class="source">
-                                            <span>PR BKK</span>
-                                        </div>
-                                    </div>
-                                    <div class="caption-album show text-left">
-                                        <span>กทม. ร่วมเป็นเกียรติในพิธีลงนาม MOU สร้างสวนป่า “เบญจกิติ" ระยะที่ 2-3</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item -album">
-                                <div class="cover-album" style="background-image: url('../../template1/assets/images/img-album-demo3.jpg');">
-                                    <a href="#"><div class="bg-layer"></div></a>
-                                    <div class="icon-play"></div>
-                                    <div class="top-album">
-                                        <div class="source">
-                                            <span>The Bangkok Metropolitan Council Secretariat</span>
-                                        </div>
-                                    </div>
-                                    <div class="caption-album show text-left">
-                                        <span>กทม. ร่วมเป็นเกียรติในพิธีลงนาม MOU สร้างสวนป่า “เบญจกิติ" ระยะที่ 2-3</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item -album">
-                                <div class="cover-album" style="background-image: url('../../template1/assets/images/img-album-demo4.jpg');">
-                                    <a href="#"><div class="bg-layer"></div></a>
-                                    <div class="icon-play"></div>
-                                    <div class="top-album">
-                                        <div class="source">
-                                            <span>PR BKK</span>
-                                        </div>
-                                    </div>
-                                    <div class="caption-album show text-left">
-                                        <span>กทม. ร่วมเป็นเกียรติในพิธีลงนาม MOU สร้างสวนป่า “เบญจกิติ" ระยะที่ 2-3</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>
     </div>
+</div>
+
+<!-- Hidden video div -->
+<div style="display:none;" id="video1">
+    <video class="lg-video-object lg-html5" controls preload="none">
+        <source src="https://sachinchoolur.github.io/lightGallery/static/videos/video1.mp4" type="video/mp4">
+         Your browser does not support HTML5 video.
+    </video>
 </div>

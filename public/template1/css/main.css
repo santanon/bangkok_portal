@@ -11911,6 +11911,11 @@ template {
   .color-green .group-section-content .section-content .inner-content .post-content .source-post span {
     background-color: #53954e; }
 
+.color-green .group-section-content .section-content .inner-content .group-inner .date {
+  background-color: #006600; }
+  .color-green .group-section-content .section-content .inner-content .group-inner .date .text-onbottom {
+    background-color: #53954e; }
+
 .color-green .group-section-content .section-content .inner-content .main-content .main-news .content-news-main .date span {
   color: #53954e; }
 
@@ -11922,6 +11927,9 @@ template {
 
 .color-green .group-section-content .section-content .inner-content .main-content .sub-news .img-news .read-news-outer a {
   background-color: rgba(0, 102, 0, 0.8); }
+
+.color-green .group-section-content .section-content .inner-content .main-content .sub-news .img-news .pin i {
+  color: #006600; }
 
 .color-green .group-section-content .section-content .inner-content .main-content .sub-news .content .date span {
   color: #006600; }
@@ -11961,6 +11969,9 @@ template {
 .color-green .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item.-download .box-full {
   background-color: #006600; }
 
+.color-green .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item.-question .right .page-detail .title {
+  color: #006600; }
+
 .color-green .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item:hover .right .text-content a {
   color: #53954e; }
 
@@ -11996,6 +12007,47 @@ template {
 
 .color-green .group-section-content .section-content .inner-content .main-content .group-social-share .views-like .like-count span {
   color: #53954e; }
+
+.color-green .group-section-content .section-content .inner-content .main-content .clendar-warpper .head-calendar .title-calendar .month-title {
+  color: #006600; }
+
+.color-green .group-section-content .section-content .inner-content .main-content .clendar-warpper .head-calendar .title-calendar .year-title {
+  color: #006600; }
+
+.color-green .group-section-content .section-content .inner-content .main-content .clendar-warpper #calendar .fc-daygrid-day.fc-day-today {
+  border: 1px solid #006600; }
+
+.color-green .group-section-content .section-content .inner-content .main-content .clendar-warpper #calendar .fc-daygrid-day-events .fc-daygrid-event-harness .fc-h-event {
+  background-color: #53954e;
+  border: 1px solid #53954e; }
+
+.color-green .group-section-content .section-content .inner-content .main-content .clendar-warpper #calendar .fc-daygrid-day-events .fc-daygrid-day-bottom .fc-daygrid-more-link {
+  color: #53954e; }
+
+.color-green .group-section-content .section-content .inner-content .main-content .clendar-warpper #calendar .fc-col-header tbody tr .fc-col-header-cell {
+  background-color: #53954e;
+  border: 1px solid #53954e; }
+
+.color-green .group-section-content .section-content .inner-content .main-content .clendar-warpper #calendar .fc-popover .fc-popover-body .fc-daygrid-event-harness .fc-h-event {
+  background-color: #53954e;
+  border: 1px solid #53954e; }
+
+.color-green .group-section-content .section-content .inner-content .main-content .page-list-item-wrapper .topic-category {
+  background-color: #006600; }
+
+.color-green .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .card-header {
+  cursor: pointer; }
+  .color-green .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .card-header .card-header-item .icon-card-header {
+    background-color: #006600; }
+  @media only screen and (max-width: 767px) {
+    .color-green .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .card-header .card-header-item {
+      background-color: #006600; } }
+
+.color-green .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .collapse .card-body .show-view, .color-green .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .collapsing .card-body .show-view {
+  color: #53954e; }
+
+.color-green .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .collapse .card-body:after, .color-green .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .collapsing .card-body:after {
+  border-color: #006600 transparent transparent transparent; }
 
 .color-green .group-section-content .section-content .inner-content .vote-comment-content .content .box-title .title-head {
   color: #006600; }
@@ -12274,10 +12326,12 @@ template {
   width: 100%;
   resize: none;
   border: 1px solid #cfd1d4;
-  padding: 0 10px;
+  padding: 10px 10px;
   color: #525252;
   font-size: 16px;
-  font-weight: 400; }
+  font-weight: 400;
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2); }
   .input-custom .text-area:focus {
     outline: none; }
 
@@ -12286,6 +12340,9 @@ template {
 
 .input-custom .text-inline {
   color: #53954e; }
+
+.group-form-section .input-custom {
+  margin-bottom: 30px; }
 
 .box_upload {
   margin-top: 50px;
@@ -13780,8 +13837,7 @@ template {
       height: 150px;
       -webkit-box-flex: 0;
       -ms-flex: 0 0 140px;
-      flex: 0 0 140px;
-      background-color: #006600; }
+      flex: 0 0 140px; }
       .group-section-content .section-content .inner-content .group-inner .date .text-content {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -13803,8 +13859,7 @@ template {
         color: #fff;
         text-align: center;
         font-size: 20px;
-        font-weight: 400;
-        background-color: #53954e; }
+        font-weight: 400; }
     .group-section-content .section-content .inner-content .group-inner .content {
       padding-left: 20px; }
       .group-section-content .section-content .inner-content .group-inner .content .top-content .group-text .title {
@@ -13916,8 +13971,7 @@ template {
         top: 10px;
         right: 10px; }
         .group-section-content .section-content .inner-content .main-content .sub-news .img-news .pin i {
-          font-size: 20px;
-          color: #006600; }
+          font-size: 20px; }
       .group-section-content .section-content .inner-content .main-content .sub-news .img-news .read-news-outer {
         position: absolute;
         width: 145px;
@@ -14401,7 +14455,6 @@ template {
             font-size: 36px;
             line-height: 36px;
             font-weight: 500;
-            color: #006600;
             margin-bottom: 30px; }
           .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item.-question .right .page-detail p {
             font-size: 20px;
@@ -14457,16 +14510,6 @@ template {
           text-overflow: ellipsis; }
         .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item.-download .box-full a:hover {
           text-decoration: none; }
-  .group-section-content .section-content .inner-content .main-content .group-slide .page-list .item .right .text-ontop {
-    position: absolute;
-    top: 10px; }
-  .group-section-content .section-content .inner-content .main-content .group-slide .page-list .item.-question .right {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center; }
   .group-section-content .section-content .inner-content .main-content .group-vote .score-wrapper {
     padding: 20px; }
     .group-section-content .section-content .inner-content .main-content .group-vote .score-wrapper .text-score .num-vote {
@@ -14837,12 +14880,10 @@ template {
       .group-section-content .section-content .inner-content .main-content .clendar-warpper .head-calendar .title-calendar .month-title {
         font-size: 26px;
         font-weight: 400;
-        color: #006600;
         margin-right: 10px; }
       .group-section-content .section-content .inner-content .main-content .clendar-warpper .head-calendar .title-calendar .year-title {
         font-size: 26px;
-        font-weight: 400;
-        color: #006600; }
+        font-weight: 400; }
     .group-section-content .section-content .inner-content .main-content .clendar-warpper .head-calendar .calendar-wrapper-btn {
       text-align: right; }
       .group-section-content .section-content .inner-content .main-content .clendar-warpper .head-calendar .calendar-wrapper-btn #prev {
@@ -14884,45 +14925,12 @@ template {
     .group-section-content .section-content .inner-content .main-content .clendar-warpper #calendar .fc-daygrid-day-top a {
       font-weight: 400;
       color: #525252; }
-  .group-section-content .section-content .inner-content .main-content .clendar-warpper #calendar .fc-daygrid-day-events .fc-daygrid-event-harness .fc-h-event {
-    background-color: #53954e;
-    border: 1px solid #53954e; }
-  .group-section-content .section-content .inner-content .main-content .clendar-warpper #calendar .fc-daygrid-day-events .fc-daygrid-day-bottom .fc-daygrid-more-link {
-    color: #53954e; }
-  .group-section-content .section-content .inner-content .main-content .clendar-warpper #calendar .fc-col-header tbody tr .fc-col-header-cell {
-    background-color: #53954e;
-    border: 1px solid #53954e; }
-    .group-section-content .section-content .inner-content .main-content .clendar-warpper #calendar .fc-col-header tbody tr .fc-col-header-cell .fc-scrollgrid-sync-inner .fc-col-header-cell-cushion {
-      padding: 4px;
-      color: #fff;
-      font-weight: 400; }
-  .group-section-content .section-content .inner-content .main-content .clendar-warpper #calendar .fc-daygrid-day.fc-day-today {
-    border: 1px solid #006600;
-    background-color: #fff; }
-  .group-section-content .section-content .inner-content .main-content .clendar-warpper #calendar .fc-popover .fc-popover-body .fc-daygrid-event-harness .fc-h-event {
-    background-color: #53954e;
-    border: 1px solid #53954e; }
-  .group-section-content .section-content .inner-content .main-content .download-file-wrapper .topic-category {
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 25px;
+  .group-section-content .section-content .inner-content .main-content .clendar-warpper #calendar .fc-col-header tbody tr .fc-col-header-cell .fc-scrollgrid-sync-inner .fc-col-header-cell-cushion {
+    padding: 4px;
     color: #fff;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    background-color: #006600;
-    padding: 8px 15px;
-    margin-bottom: 20px; }
-    .group-section-content .section-content .inner-content .main-content .download-file-wrapper .topic-category svg {
-      fill: none;
-      stroke: #fff;
-      stroke-width: 2;
-      stroke-miterlimit: 10;
-      vertical-align: bottom;
-      margin-right: 5px; }
+    font-weight: 400; }
+  .group-section-content .section-content .inner-content .main-content .clendar-warpper #calendar .fc-daygrid-day.fc-day-today {
+    background-color: #fff; }
   .group-section-content .section-content .inner-content .main-content .page-list-item-wrapper .topic-category {
     font-size: 20px;
     font-weight: 400;
@@ -14934,7 +14942,6 @@ template {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    background-color: #006600;
     padding: 8px 15px;
     margin-bottom: 20px; }
     .group-section-content .section-content .inner-content .main-content .page-list-item-wrapper .topic-category svg {
@@ -14950,8 +14957,133 @@ template {
     .group-section-content .section-content .inner-content .main-content .page-list-item-wrapper .group-list-item ul li {
       list-style: none;
       margin-bottom: 30px; }
+      .group-section-content .section-content .inner-content .main-content .page-list-item-wrapper .group-list-item ul li .page-list .item .right .text-ontop {
+        position: absolute;
+        top: 10px; }
       .group-section-content .section-content .inner-content .main-content .page-list-item-wrapper .group-list-item ul li .page-list .item .right .text-onbottom .social-wrapper ul li {
         margin-bottom: 0; }
+      .group-section-content .section-content .inner-content .main-content .page-list-item-wrapper .group-list-item ul li .page-list .item.-question .right {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center; }
+  .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card {
+    border-radius: 0;
+    border: none;
+    margin-bottom: 30px; }
+    .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .card-header {
+      padding: 0;
+      border: none;
+      background-color: #fff;
+      cursor: pointer; }
+      .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .card-header .card-header-item .icon-card-header {
+        position: relative;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 120px;
+        flex: 0 0 120px;
+        padding: 15px 20px;
+        min-height: 80px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center; }
+        .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .card-header .card-header-item .icon-card-header .icon-content {
+          height: 100%; }
+          .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .card-header .card-header-item .icon-card-header .icon-content svg {
+            width: 32px;
+            height: 32px;
+            fill: none;
+            stroke: #fff;
+            stroke-width: 2;
+            stroke-miterlimit: 10;
+            vertical-align: bottom; }
+      .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .card-header .card-header-item .title-card-header {
+        font-size: 20px;
+        line-height: 25px;
+        font-weight: 400;
+        color: #525252;
+        padding: 15px 20px; }
+    .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .collapse .card-body, .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .collapsing .card-body {
+      position: relative;
+      padding: 20px; }
+      .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .collapse .card-body .show-view, .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .collapsing .card-body .show-view {
+        position: relative;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25px;
+        margin-bottom: 10px; }
+      .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .collapse .card-body .content, .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .collapsing .card-body .content {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25px;
+        color: #525252; }
+      .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .collapse .card-body:after, .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .collapsing .card-body:after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 16px 15.5px 0 15.5px;
+        position: absolute;
+        top: 0;
+        left: 4%; }
+  .group-section-content .section-content .inner-content .main-content.-contact .contact-tel img {
+    margin-right: 5px; }
+  .group-section-content .section-content .inner-content .main-content.-contact .contact-tel a {
+    font-size: 18px;
+    font-weight: 400;
+    color: #525252; }
+  .group-section-content .section-content .inner-content .main-content.-contact .iframe-map {
+    margin: 20px 0; }
+    .group-section-content .section-content .inner-content .main-content.-contact .iframe-map iframe {
+      width: 100%;
+      height: 400px; }
+  .group-section-content .section-content .inner-content .main-content.-contact .list-item-gov {
+    margin-bottom: 30px; }
+    .group-section-content .section-content .inner-content .main-content.-contact .list-item-gov .title-gov {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 25px;
+      color: #525252;
+      text-align: center;
+      padding: 8px 15px;
+      -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+      box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2); }
+    .group-section-content .section-content .inner-content .main-content.-contact .list-item-gov .contact-gov .tel-gov {
+      background-color: #53954e;
+      padding: 5px 10px;
+      width: 50%; }
+      .group-section-content .section-content .inner-content .main-content.-contact .list-item-gov .contact-gov .tel-gov .on {
+        width: 14px;
+        height: 18px; }
+        .group-section-content .section-content .inner-content .main-content.-contact .list-item-gov .contact-gov .tel-gov .on img {
+          width: 100%;
+          display: block; }
+      .group-section-content .section-content .inner-content .main-content.-contact .list-item-gov .contact-gov .tel-gov .number {
+        font-size: 18px;
+        line-height: 25px;
+        font-weight: 400;
+        color: #fff; }
+    .group-section-content .section-content .inner-content .main-content.-contact .list-item-gov .contact-gov .tel-internal {
+      background-color: #006600;
+      padding: 5px 10px;
+      width: 50%;
+      text-align: right; }
+      .group-section-content .section-content .inner-content .main-content.-contact .list-item-gov .contact-gov .tel-internal .on {
+        font-size: 12px;
+        font-weight: 400;
+        color: #fff; }
+      .group-section-content .section-content .inner-content .main-content.-contact .list-item-gov .contact-gov .tel-internal .number {
+        font-size: 18px;
+        line-height: 25px;
+        font-weight: 400;
+        color: #fff; }
   .group-section-content .section-content .inner-content .vote-comment-content {
     margin-top: 30px; }
     .group-section-content .section-content .inner-content .vote-comment-content .content .box-title .title-head {
@@ -17287,7 +17419,15 @@ Due to the split circle of progress-left and progress right, we must use the ani
       margin-bottom: 10px;
       border-right: none !important; }
     .group-social-share .shared-email .email-link {
-      margin-bottom: 5px; } }
+      margin-bottom: 5px; }
+  .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .card-header .card-header-item .icon-card-header {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 80px;
+    flex: 0 0 80px; }
+  .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .card-header .card-header-item .title-card-header {
+    color: #fff; }
+  .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .collapse .card-body:after, .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .collapsing .card-body:after {
+    left: 50%; } }
 
 @media only screen and (max-width: 480px) {
   .group-section-content .section-content .inner-content .group-inner {

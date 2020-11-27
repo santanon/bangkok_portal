@@ -75,3 +75,15 @@ Route::get('/questionnaire-detail', function () {
 Route::get('/download', function () {
     return view('download-main');
 });
+
+Route::get('/faq', function () {
+    return view('faq-main');
+});
+
+Route::get('/about', function () {
+    return view('about-detail');
+});
+
+Route::get('/contact', function () {
+    return view('contact-main');
+});

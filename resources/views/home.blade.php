@@ -210,10 +210,82 @@
             //     alert("Position: " + i + " ID: " + order[i]);
             // }
         });
-
-
-
     });
 </script>
+<!-- Gallery -->
+<link rel="stylesheet" href="{{ asset('gallery/lightgallery.css')}}">
+<script type="text/javascript" src="{{ asset('gallery/lightgallery.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('gallery/lg-thumbnail.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('gallery/lg-zoom.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('gallery/lg-fullscreen.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('gallery/lg-video.min.js') }}"></script>
+<style type="text/css">
+    #lg-zoom-in, #lg-zoom-out{
+        display: none;
+    }
+</style>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#slide_7').lightGallery({
+            selector: '.slick-slide:not(.slick-cloned) .lightgallery',
+        });
+    });
+</script>
+<script>
+    $(document).ready(function() {
+        let $document = $(this);
+
+        $document.on('onCloseAfter.lg', function(event) {
+            $document.data('lightGallery').destroy(true);
+        });
+
+        $('#dynamic1').on('click', function(e) {
+            $(document).lightGallery({
+                dynamic: true,
+                dynamicEl: [{
+                    src: 'https://sachinchoolur.github.io/lightGallery/static/img/1.jpg',
+                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-1.jpg'
+                },{
+                    src: 'https://www.youtube.com/watch?v=meBbDqAXago',
+                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-v-y-1.jpg',
+                    poster: 'https://sachinchoolur.github.io/lightGallery/static/img/videos/y-video1-cover.jpg'
+                },{
+                    html: '#video2',
+                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/videos/y-video1-cover.jpg',
+                    poster: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-v-y-1.jpg'
+                },{
+                    src: 'https://sachinchoolur.github.io/lightGallery/static/img/4.jpg',
+                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-4.jpg'
+                }],
+                slideEndAnimatoin: false,
+                loop: false,
+                hideControlOnEnd: true,
+                download: false,
+            });
+        });
+
+        $('#dynamic2').on('click', function(e) {
+            $(document).lightGallery({
+                dynamic: true,
+                dynamicEl: [{
+                    src: 'https://sachinchoolur.github.io/lightGallery/static/img/1.jpg',
+                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-1.jpg'
+                },{
+                    src: 'https://www.youtube.com/watch?v=meBbDqAXago',
+                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-v-y-1.jpg',
+                    poster: 'https://sachinchoolur.github.io/lightGallery/static/img/videos/y-video1-cover.jpg'
+                },{
+                    src: 'https://sachinchoolur.github.io/lightGallery/static/img/4.jpg',
+                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-4.jpg'
+                }],
+                slideEndAnimatoin: false,
+                loop: false,
+                hideControlOnEnd: true,
+                download: false,
+            });
+        });
+    });
+</script>
+
 @endsection
 

@@ -24,7 +24,7 @@
                                 <p class="desc">The Bangkok Metropolitan Council Secretariat </p>
                             </div>
                             <div class="group-gotoall">
-                                <a href="">อัลบั้มภาพทั้งหมด</a>
+                                <a href="/album">อัลบั้มภาพทั้งหมด</a>
                             </div>
                         </div>
                         <div class="main-content">
@@ -39,7 +39,7 @@
                                     <li>
                                         <div class="item -album">
                                             <div class="cover-album" style="background-image: url('../../template1/assets/images/img-album-demo2.jpg');">
-                                                <a href="#">
+                                                <a id="dynamic1" href="javascript:void(0)" >
                                                     <div class="bg-layer">
                                                         <div class="icon-search-hover">
                                                             <img src="{{ asset('template1/assets/images/icons/icon-search-large.png')}}" alt="banner">
@@ -74,7 +74,7 @@
                                     <li>
                                         <div class="item -album">
                                             <div class="cover-album" style="background-image: url('../../template1/assets/images/img-album-demo2.jpg');">
-                                                <a href="#">
+                                                <a id="dynamic2" href="javascript:void(0)" >
                                                     <div class="bg-layer">
                                                         <div class="icon-search-hover">
                                                             <img src="{{ asset('template1/assets/images/icons/icon-search-large.png')}}" alt="banner">

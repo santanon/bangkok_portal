@@ -14087,6 +14087,8 @@ template {
       flex-direction: row;
       -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
+      .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item .exthumb {
+        display: none; }
       .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item > div {
         -webkit-box-flex: 1;
         -ms-flex: 1 0 50%;

@@ -815,6 +815,9 @@ $howManySteps: 100; //this needs to be even.
                             flex-direction: row;
                             flex-wrap: wrap;
                             //justify-content: center;
+                            .exthumb{
+                                display: none;
+                            }
                             >div{
                                 flex: 1 0 50%;
                             }

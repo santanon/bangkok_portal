@@ -34,7 +34,6 @@ Route::get('panel/templatestep3', function(){
 
 
 
-
 /* Front */
 Route::get('/', function () {
     return view('home');
@@ -51,6 +50,14 @@ Route::get('/news-detail', function () {
     return view('news-detail');
 });
 
+Route::get('/album', function () {
+    return view('gallery-main');
+});
+
+Route::get('/video', function () {
+    return view('video-main');
+});
+
 Route::get('/calendar', function () {
     return view('calendar-main');
 });
@@ -63,4 +70,20 @@ Route::get('/questionnaire', function () {
 });
 Route::get('/questionnaire-detail', function () {
     return view('questionnaire-detail');
+});
+
+Route::get('/download', function () {
+    return view('download-main');
+});
+
+Route::get('/faq', function () {
+    return view('faq-main');
+});
+
+Route::get('/about', function () {
+    return view('about-detail');
+});
+
+Route::get('/contact', function () {
+    return view('contact-main');
 });

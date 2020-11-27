@@ -1,4 +1,4 @@
-@section('title', 'ดาวน์โหลดไฟล์เอกสาร')
+@section('title', 'คำถามที่พบบ่อย')
 @section('tagkeyword', '')
 @section('tagdescription', '')
 
@@ -65,7 +65,7 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">หน้าแรก</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">ดาวน์โหลดไฟล์เอกสาร</li>
+                        <li class="breadcrumb-item active" aria-current="page">คำถามที่พบบ่อย</li>
                     </ol>
                 </nav>
             </div>
@@ -73,7 +73,7 @@
         </div> 
 
         <div class="group-section-content">
-            @include('template1/download.list')
+            @include('template1/faq.list')
         </div>
 
     </div>
@@ -132,10 +132,6 @@
 
 
 @include('template1/include.css_scripts')
-<!-- navgoco -->
-<link rel="stylesheet" href="{{ asset('template1/css/daterangepicker.css')}}">
-<script type="text/javascript" src="{{ asset('template1/js/moment.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('template1/js/daterangepicker.js') }}"></script>
 
 
 <script type="text/javascript">
@@ -143,20 +139,6 @@
         
         //$('#exampleModal').modal('show')
 
-        $('input[name="datefilter"]').daterangepicker({
-            autoUpdateInput: false,
-            locale: {
-                cancelLabel: 'Clear'
-            }
-        });
-
-        $('input[name="datefilter"]').on('apply.daterangepicker', function(ev, picker) {
-            $(this).val(picker.startDate.format('DD/MM/YYYY') + ' - ' + picker.endDate.format('DD/MM/YYYY'));
-        });
-
-        $('input[name="datefilter"]').on('cancel.daterangepicker', function(ev, picker) {
-            $(this).val('');
-        });
     });
 </script>
 @endsection

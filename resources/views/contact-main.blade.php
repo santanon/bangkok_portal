@@ -1,4 +1,4 @@
-@section('title', 'ดาวน์โหลดไฟล์เอกสาร')
+@section('title', 'ติดต่อสอบถาม')
 @section('tagkeyword', '')
 @section('tagdescription', '')
 
@@ -73,7 +73,7 @@
         </div> 
 
         <div class="group-section-content">
-            @include('template1/download.list')
+            @include('template1/contact.main')
         </div>
 
     </div>
@@ -132,32 +132,10 @@
 
 
 @include('template1/include.css_scripts')
-<!-- navgoco -->
-<link rel="stylesheet" href="{{ asset('template1/css/daterangepicker.css')}}">
-<script type="text/javascript" src="{{ asset('template1/js/moment.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('template1/js/daterangepicker.js') }}"></script>
 
 
 <script type="text/javascript">
-    $(document).ready(function () {
-        
-        //$('#exampleModal').modal('show')
-
-        $('input[name="datefilter"]').daterangepicker({
-            autoUpdateInput: false,
-            locale: {
-                cancelLabel: 'Clear'
-            }
-        });
-
-        $('input[name="datefilter"]').on('apply.daterangepicker', function(ev, picker) {
-            $(this).val(picker.startDate.format('DD/MM/YYYY') + ' - ' + picker.endDate.format('DD/MM/YYYY'));
-        });
-
-        $('input[name="datefilter"]').on('cancel.daterangepicker', function(ev, picker) {
-            $(this).val('');
-        });
-    });
+    
 </script>
 @endsection
 

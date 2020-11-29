@@ -6,7 +6,7 @@
 @section('contentpage')
 
 <div class="main-wrapper bg-post-login">
-    <header class="panel-header">
+    <header class="panel-header -admin">
         <div class="header-top">
             @include('panel/include.head-top')
         </div>
@@ -16,7 +16,7 @@
                 <div class="row">
                     <div class="col-md-3">
                         <div class="logo">
-                            <img src="{{ asset('assets/images/logo-panel.png')}}" alt="icon">
+                            <img src="{{ asset('panel/assets/images/logo-panel.png')}}" alt="icon">
                         </div>
                     </div>
                     <div class="col-md-9">
@@ -70,7 +70,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="item-template" data-aos="zoom-in">
                         <div class="img-template">
-                            <img src="{{ asset('assets/images/template/template01.png')}}" alt="icon" title="Template01">
+                            <img src="{{ asset('panel/assets/images/template/template01.png')}}" alt="icon" title="Template01">
                             <div class="name-template">
                                 Template 01
                             </div>
@@ -99,7 +99,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="item-template" data-aos="zoom-in">
                         <div class="img-template">
-                            <img src="{{ asset('assets/images/template/template02.png')}}" alt="icon" title="Template02">
+                            <img src="{{ asset('panel/assets/images/template/template02.png')}}" alt="icon" title="Template02">
                             <div class="name-template">
                                 Template 02
                             </div>
@@ -127,7 +127,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="item-template" data-aos="zoom-in">
                         <div class="img-template">
-                            <img src="{{ asset('assets/images/template/template03.png')}}" alt="icon" title="Template03">
+                            <img src="{{ asset('panel/assets/images/template/template03.png')}}" alt="icon" title="Template03">
                             <div class="name-template">
                                 Template 03
                             </div>
@@ -156,7 +156,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="item-template" data-aos="zoom-in">
                         <div class="img-template">
-                            <img src="{{ asset('assets/images/template/template01.png')}}" alt="icon" title="Template04">
+                            <img src="{{ asset('panel/assets/images/template/template01.png')}}" alt="icon" title="Template04">
                             <div class="name-template">
                                 Template 04
                             </div>
@@ -185,7 +185,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="item-template" data-aos="zoom-in">
                         <div class="img-template">
-                            <img src="{{ asset('assets/images/template/template02.png')}}" alt="icon" title="Template05">
+                            <img src="{{ asset('panel/assets/images/template/template02.png')}}" alt="icon" title="Template05">
                             <div class="name-template">
                                 Template 05
                             </div>
@@ -213,7 +213,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="item-template" data-aos="zoom-in">
                         <div class="img-template">
-                            <img src="{{ asset('assets/images/template/template02.png')}}" alt="icon" title="Template05">
+                            <img src="{{ asset('panel/assets/images/template/template02.png')}}" alt="icon" title="Template05">
                             <div class="name-template">
                                 Template 06
                             </div>
@@ -242,7 +242,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="item-template" data-aos="zoom-in">
                         <div class="img-template">
-                            <img src="{{ asset('assets/images/template/template01.png')}}" alt="icon" title="Template04">
+                            <img src="{{ asset('panel/assets/images/template/template01.png')}}" alt="icon" title="Template04">
                             <div class="name-template">
                                 Template 07
                             </div>
@@ -271,7 +271,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="item-template" data-aos="zoom-in">
                         <div class="img-template">
-                            <img src="{{ asset('assets/images/template/template02.png')}}" alt="icon" title="Template05">
+                            <img src="{{ asset('panel/assets/images/template/template02.png')}}" alt="icon" title="Template05">
                             <div class="name-template">
                                 Template 08
                             </div>
@@ -299,7 +299,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="item-template" data-aos="zoom-in">
                         <div class="img-template">
-                            <img src="{{ asset('assets/images/template/template02.png')}}" alt="icon" title="Template05">
+                            <img src="{{ asset('panel/assets/images/template/template02.png')}}" alt="icon" title="Template05">
                             <div class="name-template">
                                 Template 09
                             </div>

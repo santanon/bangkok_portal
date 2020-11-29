@@ -14,19 +14,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 /* CMS */
-Route::get('panel', function () {
+Route::get('panel-admin', function () {
     return view('panel.login');
 });
-Route::get('panel/login', function () {
+Route::get('panel-admin/login', function () {
     return view('panel.login');
 });
-Route::get('panel/templatestep1', function(){
+Route::get('panel-admin/templatestep1', function(){
     return View::make('panel.templatestep1');
 });
-Route::get('panel/templatestep2', function(){
+Route::get('panel-admin/templatestep2', function(){
     return View::make('panel.templatestep2');
 });
-Route::get('panel/templatestep3', function(){
+Route::get('panel-admin/templatestep3', function(){
     return View::make('panel.templatestep3');
 });
 

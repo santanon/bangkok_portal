@@ -20,11 +20,11 @@
                     <div class="inner-content">
                         <div class="top-content">
                             <div class="group-text">
-                                <h3 class="title">คำถามที่พบบ่อย</h3>
-                                <p class="desc">The Bangkok Metropolitan Council Secretariat </p>
+                                <h3 class="title color-primary">คำถามที่พบบ่อย</h3>
+                                <p class="desc color-secondary">The Bangkok Metropolitan Council Secretariat </p>
                             </div>
                             <div class="group-gotoall">
-                                <a href="">คำถามทั้งหมด</a>
+                                <a href="/faq" class="btn btn-outline-dark">คำถามทั้งหมด</a>
                             </div>
                         </div>
                         <div class="main-content">

@@ -3,8 +3,8 @@
                     <div class="inner-content">
                         <div class="top-content">
                             <div class="group-text">
-                                <h3 class="title">ภารกิจหน้าที่</h3>
-                                <p class="desc">The Bangkok Metropolitan Council Secretariat </p>
+                                <h3 class="title color-primary">ภารกิจหน้าที่</h3>
+                                <p class="desc color-secondary">The Bangkok Metropolitan Council Secretariat </p>
                             </div>
                         </div>
                         <div class="main-content border-bottom">

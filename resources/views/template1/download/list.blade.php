@@ -3,8 +3,8 @@
                     <div class="inner-content">
                         <div class="top-content">
                             <div class="group-text">
-                                <h3 class="title">ดาวน์โหลดไฟล์เอกสาร</h3>
-                                <p class="desc">The Bangkok Metropolitan Council Secretariat </p>
+                                <h3 class="title color-primary">ดาวน์โหลดไฟล์เอกสาร</h3>
+                                <p class="desc color-secondary">The Bangkok Metropolitan Council Secretariat </p>
                             </div>
                         </div>
                         <div class="search-content">
@@ -53,7 +53,7 @@
                         </div>
                         <div class="main-content border-bottom">
                             <div class="page-list-item-wrapper">
-                                <div class="topic-category">
+                                <div class="topic-category bg-color-primary">
                                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                         width="42.2px" height="42.2px" viewBox="0 0 42.2 42.2" style="enable-background:new 0 0 42.2 42.2;" xml:space="preserve">                                                 
                                         <g>
@@ -71,7 +71,7 @@
                                                 <div class="list-item page-list">
                                                     <div class="item">
                                                         <div class="left">
-                                                            <div class="icon-content -download-Doc">
+                                                            <div class="icon-content -download-Doc bg-color-primary">
                                                                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                                     width="40px" height="40px" viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
                                                                     <g>
@@ -82,7 +82,7 @@
                                                                     </g>
                                                                 </svg>
                                                             </div>
-                                                            <div class="text-onbottom">Download</div>
+                                                            <div class="text-onbottom bg-color-secondary">Download</div>
                                                         </div>
                                                         <div class="right">
                                                             <div class="text-ontop">
@@ -103,7 +103,7 @@
                                                 <div class="list-item page-list">
                                                     <div class="item">
                                                         <div class="left">
-                                                            <div class="icon-content -download-Doc">
+                                                            <div class="icon-content -download-Doc bg-color-primary">
                                                                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                                     width="40px" height="40px" viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
                                                                     <g>
@@ -114,7 +114,7 @@
                                                                     </g>
                                                                 </svg>
                                                             </div>
-                                                            <div class="text-onbottom">Download</div>
+                                                            <div class="text-onbottom bg-color-secondary">Download</div>
                                                         </div>
                                                         <div class="right">
                                                             <div class="text-ontop">
@@ -135,7 +135,7 @@
                                                 <div class="list-item page-list">
                                                     <div class="item">
                                                         <div class="left">
-                                                            <div class="icon-content -download-Doc">
+                                                            <div class="icon-content -download-Doc bg-color-primary">
                                                                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                                     width="40px" height="40px" viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
                                                                     <g>
@@ -146,7 +146,7 @@
                                                                     </g>
                                                                 </svg>
                                                             </div>
-                                                            <div class="text-onbottom">Download</div>
+                                                            <div class="text-onbottom bg-color-secondary">Download</div>
                                                         </div>
                                                         <div class="right">
                                                             <div class="text-ontop">
@@ -167,7 +167,7 @@
                                                 <div class="list-item page-list">
                                                     <div class="item">
                                                         <div class="left">
-                                                            <div class="icon-content -download-Doc">
+                                                            <div class="icon-content -download-Doc bg-color-primary">
                                                                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                                     width="40px" height="40px" viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
                                                                     <g>
@@ -178,7 +178,7 @@
                                                                     </g>
                                                                 </svg>
                                                             </div>
-                                                            <div class="text-onbottom">Download</div>
+                                                            <div class="text-onbottom bg-color-secondary">Download</div>
                                                         </div>
                                                         <div class="right">
                                                             <div class="text-ontop">
@@ -199,7 +199,7 @@
                                                 <div class="list-item page-list">
                                                     <div class="item">
                                                         <div class="left">
-                                                            <div class="icon-content -download-Doc">
+                                                            <div class="icon-content -download-Doc bg-color-primary">
                                                                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                                     width="40px" height="40px" viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
                                                                     <g>
@@ -210,7 +210,7 @@
                                                                     </g>
                                                                 </svg>
                                                             </div>
-                                                            <div class="text-onbottom">Download</div>
+                                                            <div class="text-onbottom bg-color-secondary">Download</div>
                                                         </div>
                                                         <div class="right">
                                                             <div class="text-ontop">

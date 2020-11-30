@@ -3,14 +3,14 @@
                     <div class="inner-content">
                         <div class="group-inner d-flex">
                             <div class="date">
-                                <div class="text-content">2</div>
-                                <div class="text-onbottom">พ.ย.</div>
+                                <div class="text-content bg-color-primary">2</div>
+                                <div class="text-onbottom bg-color-secondary">พ.ย.</div>
                             </div>
                             <div class="content">
                                 <div class="top-content">
                                     <div class="group-text">
-                                        <h3 class="title">บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือ หนุนเด็กรักการอ่าน</h3>
-                                        <p class="desc">
+                                        <h3 class="title color-primary">บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือ หนุนเด็กรักการอ่าน</h3>
+                                        <p class="desc color-secondary">
                                             กล่าวว่า เขตบึงกุ่มได้จัดทำโครงการ ครอบครัวรักการอ่านขึ้นเพื่อส่งเสริมให้เด็กและเยาวชนในพื้นที่เขตบึงกุ่ม
                                             รักการอ่าน รู้จักใช้เวลาว่างให้เป็นประโยชน์ ตลอดจนเป็นการสร้างจิตสำนึกในการเรียนรู้ โดยให้ผู้เรียนเป็นศูนย์กลาง
                                         </p>

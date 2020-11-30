@@ -20,11 +20,11 @@
                     <div class="inner-content">
                         <div class="top-content">
                             <div class="group-text">
-                                <h3 class="title">VOTE</h3>
-                                <p class="desc">The Bangkok Metropolitan Council Secretariat </p>
+                                <h3 class="title color-primary">VOTE</h3>
+                                <p class="desc color-secondary">The Bangkok Metropolitan Council Secretariat </p>
                             </div>
                             <div class="group-gotoall">
-                                <a href="">หัวข้อโหวตทั้งหมด</a>
+                                <a href="/vote" class="btn btn-outline-dark">หัวข้อโหวตทั้งหมด</a>
                             </div>
                         </div>
                         <div class="main-content">
@@ -113,7 +113,7 @@
                                                     </ul>
                                                     <div class="btn-custom bg-primary mg-left-auto">
                                                         <div class="input-custom">
-                                                            <input type="submit" value="VOTE">
+                                                            <input type="submit" value="VOTE" class="btn btn-primary">
                                                         </div>
                                                     </div>
                                                 </div>

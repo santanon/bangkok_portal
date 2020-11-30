@@ -246,6 +246,9 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="load-more text-right">
+                            <a href="" class="btn btn-outline-dark">โหลดเพิ่มเติม</a>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -76,6 +76,10 @@ Route::get('/download', function () {
     return view('download-main');
 });
 
+Route::get('/sitemap', function () {
+    return view('sitemap');
+});
+
 Route::get('/faq', function () {
     return view('faq-main');
 });

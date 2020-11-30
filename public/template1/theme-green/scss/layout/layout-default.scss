@@ -360,21 +360,6 @@ $howManySteps: 100; //this needs to be even.
                         margin: 0;
                     }
                 }
-                .group-gotoall{
-                    // a{
-                    //     border: 1px solid #b1b1b1;
-                    //     padding: 10px 15px;
-                    //     font-size: 16px;
-                    //     font-weight: $font-regular;
-                    //     color: #b1b1b1;
-                    //     display: block;
-                    //     transition: all 0.3s ease;
-                    //     &:hover{
-                    //         text-decoration: none;
-                    //         color: #fff;
-                    //     }
-                    // }
-                }
                 @media only screen and (max-width: 768px) {
                     flex-wrap: wrap;
                     .group-text{
@@ -2457,8 +2442,6 @@ $howManySteps: 100; //this needs to be even.
                         align-items: center;
                         justify-content: center;
                         height: 100%;
-
-                        img{}
                     }
                 }
 
@@ -2732,7 +2715,7 @@ $howManySteps: 100; //this needs to be even.
     .text-social{
         font-size: 16px;
         font-weight: $font-regular;
-        color: #fff;
+        //color: #fff;
         //opacity: 0.7;
         margin-right: 10px;
     }
@@ -2991,7 +2974,7 @@ Due to the split circle of progress-left and progress right, we must use the ani
                                 .collapse, .collapsing{
                                     .card-body{
                                         &:after{
-                                            left: 50%;
+                                            left: 45%;
                                         }
                                     }
                                 }

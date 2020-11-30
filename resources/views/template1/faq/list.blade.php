@@ -51,7 +51,7 @@
                                     <div class="card">
                                         <div class="card-header" id="faq_1">
                                             <div class="card-header-item d-flex align-items-center" data-toggle="collapse" data-target="#collapse_1" aria-expanded="true" aria-controls="collapse_1">
-                                                <div class="icon-card-header">
+                                                <div class="icon-card-header bg-color-primary">
                                                     <div class="icon-content">
                                                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="42.2px" height="42.2px" viewBox="0 0 42.2 42.2" style="enable-background:new 0 0 42.2 42.2;" xml:space="preserve">
                                                         <path class="st0" d="M5.1,21c0,8.6,6.9,15.5,15.4,16c5.7,0.4,11.4-1.3,16.5-3.9c-2.8-2.8-2.1-6.8-1.3-9.6c1.1-3.3,1.1-7-0.5-10.1
@@ -65,7 +65,7 @@
 
                                         <div id="collapse_1" class="collapse show" aria-labelledby="faq_1" data-parent="#accordionExample">
                                             <div class="card-body">
-                                                <div class="show-view">View : 1.5K</div>
+                                                <div class="show-view color-secondary">View : 1.5K</div>
                                                 <div class="content">
                                                     Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                                                 </div>
@@ -75,7 +75,7 @@
                                     <div class="card">
                                         <div class="card-header" id="faq_2">
                                             <div class="card-header-item d-flex align-items-center" data-toggle="collapse" data-target="#collapse_2" aria-expanded="false" aria-controls="collapse_2">
-                                                <div class="icon-card-header">
+                                                <div class="icon-card-header bg-color-primary">
                                                     <div class="icon-content">
                                                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="42.2px" height="42.2px" viewBox="0 0 42.2 42.2" style="enable-background:new 0 0 42.2 42.2;" xml:space="preserve">
                                                         <path class="st0" d="M5.1,21c0,8.6,6.9,15.5,15.4,16c5.7,0.4,11.4-1.3,16.5-3.9c-2.8-2.8-2.1-6.8-1.3-9.6c1.1-3.3,1.1-7-0.5-10.1
@@ -88,7 +88,7 @@
                                         </div>
                                         <div id="collapse_2" class="collapse" aria-labelledby="faq_2" data-parent="#accordionExample">
                                             <div class="card-body">
-                                                <div class="show-view">View : 1.5K</div>
+                                                <div class="show-view color-secondary">View : 1.5K</div>
                                                 <div class="content">
                                                     Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                                                 </div>
@@ -98,7 +98,7 @@
                                     <div class="card">
                                         <div class="card-header" id="faq_3">
                                             <div class="card-header-item d-flex align-items-center" data-toggle="collapse" data-target="#collapse_3" aria-expanded="false" aria-controls="collapse_3">
-                                                <div class="icon-card-header">
+                                                <div class="icon-card-header bg-color-primary">
                                                     <div class="icon-content">
                                                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="42.2px" height="42.2px" viewBox="0 0 42.2 42.2" style="enable-background:new 0 0 42.2 42.2;" xml:space="preserve">
                                                         <path class="st0" d="M5.1,21c0,8.6,6.9,15.5,15.4,16c5.7,0.4,11.4-1.3,16.5-3.9c-2.8-2.8-2.1-6.8-1.3-9.6c1.1-3.3,1.1-7-0.5-10.1
@@ -111,7 +111,7 @@
                                         </div>
                                         <div id="collapse_3" class="collapse" aria-labelledby="faq_3" data-parent="#accordionExample">
                                             <div class="card-body">
-                                                <div class="show-view">View : 1.5K</div>
+                                                <div class="show-view color-secondary">View : 1.5K</div>
                                                 <div class="content">
                                                     Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                                                 </div>
@@ -136,16 +136,16 @@
                             <div class="group-social-share d-flex align-items-center justify-content-between">
                                 <div class="shared-email d-flex align-items-center">
                                     <div class="social-wrapper d-flex align-items-center">
-                                        <div class="text-social">Share</div>
+                                        <div class="text-social color-secondary">Share</div>
                                         <ul class="d-flex align-items-center">
                                             <li class="facebook d-flex align-items-center not-hover">
-                                                <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"><span>5</span> 
+                                                <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"><span class="color-secondary">5</span> 
                                             </li>
                                             <li class="twitter d-flex align-items-center not-hover">
-                                                <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon">  5
+                                                <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon"> <span class="color-secondary">5</span> 
                                             </li>
                                             <li class="line d-flex align-items-center not-hover">
-                                                <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon">   5
+                                                <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"> <span class="color-secondary">5</span> 
                                             </li>
                                         </ul>
                                     </div>
@@ -171,14 +171,14 @@
                                     </div>
                                 </div>
                                 <div class="views-like d-flex align-items-center">
-                                    <div class="view-count">
-                                        View : <span>1.5K</span>
+                                    <div class="view-count color-secondary">
+                                        View : <span class="color-secondary">1.5K</span>
                                     </div>
                                     <div class="like-count d-flex align-items-center">
                                         <div class="icon-like">
                                             <img src="{{ asset('template1/assets/images/icons/icon-like.png')}}" alt="icon">
                                         </div>
-                                        <span>1.2K</span>
+                                        <span class="color-secondary">1.2K</span>
                                     </div>
                                 </div>
                             </div>

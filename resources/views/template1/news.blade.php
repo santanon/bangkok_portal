@@ -46,13 +46,13 @@
                                             <div class="social-wrapper">
                                                 <ul class="d-flex align-items-center">
                                                     <li class="facebook d-flex align-items-center not-hover">
-                                                        <img src="{{ asset('../../assets/images/icons/icon-social-facebook.svg')}}" alt="icon"><span>5</span> 
+                                                        <img src="{{ asset('../../assets/images/icons/icon-social-facebook.svg')}}" alt="icon"><span class="color-secondary">5</span> 
                                                     </li>
                                                     <li class="twitter d-flex align-items-center not-hover">
-                                                        <img src="{{ asset('../../assets/images/icons/icon-social-twitter.svg')}}" alt="icon">  5
+                                                        <img src="{{ asset('../../assets/images/icons/icon-social-twitter.svg')}}" alt="icon"> <span class="color-secondary">5</span> 
                                                     </li>
                                                     <li class="line d-flex align-items-center not-hover">
-                                                        <img src="{{ asset('../../assets/images/icons/icon-social-googleplus.svg')}}" alt="icon">   5
+                                                        <img src="{{ asset('../../assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"> <span class="color-secondary">5</span> 
                                                     </li>
                                                 </ul>
                                             </div>
@@ -91,13 +91,13 @@
                                                             <div class="social-wrapper">
                                                                 <ul class="d-flex align-items-center">
                                                                     <li class="facebook d-flex align-items-center not-hover">
-                                                                        <img src="{{ asset('../../assets/images/icons/icon-social-facebook.svg')}}" alt="icon"> 5
+                                                                        <img src="{{ asset('../../assets/images/icons/icon-social-facebook.svg')}}" alt="icon"><span class="color-secondary">5</span> 
                                                                     </li>
                                                                     <li class="twitter d-flex align-items-center not-hover">
-                                                                        <img src="{{ asset('../../assets/images/icons/icon-social-twitter.svg')}}" alt="icon">  5
+                                                                        <img src="{{ asset('../../assets/images/icons/icon-social-twitter.svg')}}" alt="icon"><span class="color-secondary">5</span> 
                                                                     </li>
                                                                     <li class="line d-flex align-items-center not-hover">
-                                                                        <img src="{{ asset('../../assets/images/icons/icon-social-googleplus.svg')}}" alt="icon">   5
+                                                                        <img src="{{ asset('../../assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"><span class="color-secondary">5</span> 
                                                                     </li>
                                                                 </ul>
                                                             </div>
@@ -131,13 +131,13 @@
                                                             <div class="social-wrapper">
                                                                 <ul class="d-flex align-items-center">
                                                                     <li class="facebook d-flex align-items-center not-hover">
-                                                                        <img src="{{ asset('../../assets/images/icons/icon-social-facebook.svg')}}" alt="icon"> 5
+                                                                        <img src="{{ asset('../../assets/images/icons/icon-social-facebook.svg')}}" alt="icon"><span class="color-secondary">5</span> 
                                                                     </li>
                                                                     <li class="twitter d-flex align-items-center not-hover">
-                                                                        <img src="{{ asset('../../assets/images/icons/icon-social-twitter.svg')}}" alt="icon">  5
+                                                                        <img src="{{ asset('../../assets/images/icons/icon-social-twitter.svg')}}" alt="icon"><span class="color-secondary">5</span> 
                                                                     </li>
                                                                     <li class="line d-flex align-items-center not-hover">
-                                                                        <img src="{{ asset('../../assets/images/icons/icon-social-googleplus.svg')}}" alt="icon">   5
+                                                                        <img src="{{ asset('../../assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"><span class="color-secondary">5</span> 
                                                                     </li>
                                                                 </ul>
                                                             </div>

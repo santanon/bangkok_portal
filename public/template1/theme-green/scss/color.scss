@@ -146,17 +146,6 @@
 .group-section-content{
     .section-content{
         .inner-content{
-            .top-content{
-
-            }
-            .post-content{
-                .source-post{
-                    color: $color-secondary;
-                    span{
-                        background-color: $color-secondary;
-                    }
-                }
-            }
             .group-inner{
                 .date{
                     background-color: $color-primary;
@@ -209,13 +198,6 @@
                             }
                         }
                     }
-                    .content{
-                        .date{
-                            span{
-                                color: $color-primary;
-                            }
-                        }
-                    }
                     &:hover{
                         .content{
                             .desc-news{
@@ -233,9 +215,6 @@
                             
                             &:hover{
                                 .item{
-                                    .left{
-                                        //background-color: $color-secondary;
-                                    }
                                     .right{
                                         .text-content{
                                             a{
@@ -253,22 +232,6 @@
                         }
                         .item{
                             .left{
-                                background-color: $color-primary;
-                                .text-content{
-                                    //color: $color-primary;
-                                }
-                                .text-onbottom{
-                                    background-color: $color-secondary;
-                                }
-                                .icon-content{
-                                    // svg {
-                                    //     stroke: $color-primary;
-                                    // }
-                                }
-                                &.active{
-                                    background-color: $color-primary;
-                                }
-
                                 .progress-content{
                                     .progress {
                                         &:after {
@@ -281,9 +244,6 @@
                                 }
                             }
                             .right{
-                                .text-ontop{
-                                    color: $color-secondary;
-                                }
                                 .text-onbottom{
                                     &.-link{
                                         a{
@@ -305,25 +265,7 @@
                                     }
                                 }
                             }
-                            &.-download{
-                                .box-full{
-                                    background-color: $color-primary;
-                                }
-                            }
-                            &.-question{
-                                .right{
-                                    .page-detail{
-                                        .title{
-                                            color: $color-primary;
-                                        }
-                                    }
-                                    
-                                }
-                            }
                             &:hover{
-                                .left{
-                                    //background-color: $color-secondary;
-                                }
                                 .right{
                                     .text-content{
                                         a{
@@ -354,20 +296,6 @@
                         }
                     }
                 }
-                .group-vote{
-                    .score-wrapper{
-                        background-color: $color-primary;
-                        .percent-voter{
-                            .progress{
-                                .progress-bar{
-                                    background-color: $color-secondary;
-                                }
-                            }
-
-                        }
-                    }
-                }
-
                 .group-editor{
                     a{
                         color: $color-secondary;
@@ -378,12 +306,6 @@
                 }
                 .group-list-downloadfile{
                     .item{
-                        .left{
-                            background-color: $color-primary;
-                            .text-onbottom{
-                                background-color: $color-secondary;
-                            }
-                        }
                         &:hover{
                             .right{
                                 .text-content{
@@ -395,25 +317,6 @@
                         }
                     }
                     
-                }
-                .group-social-share{
-                    .shared-email{
-                        .social-wrapper{
-                            .text-social{
-                                color: $color-secondary;
-                            }
-                        }
-                    }
-                    .views-like{
-                        .view-count{
-                            color: $color-secondary;
-                        }
-                        .like-count{
-                            span{
-                                color: $color-secondary;
-                            }
-                        }
-                    }
                 }
 
                 .clendar-warpper{
@@ -477,9 +380,6 @@
                             .card-header{
                                 cursor: pointer;
                                 .card-header-item{
-                                    .icon-card-header{
-                                        background-color: $color-primary;
-                                    }
                                     @media only screen and (max-width: 767px) {
                                         background-color: $color-primary;
                                     }
@@ -487,9 +387,6 @@
                             }
                             .collapse, .collapsing{
                                 .card-body{
-                                    .show-view{
-                                        color: $color-secondary;
-                                    }
                                     &:after{
                                         border-color: $color-primary transparent transparent transparent;
                                     }
@@ -498,50 +395,6 @@
                             // &:last-of-type{
                             //     margin-bottom: 30px;
                             // }
-                        }
-                    }
-                }
-            }
-
-            .vote-comment-content{
-                .content{
-                    .box-title{
-                        .title-head{
-                            color: $color-primary;
-                        }
-                        .order-all{
-                            color: $color-secondary;
-                        }
-                    }
-                    &.-vote{
-                        .list-choice-vote{
-                            ul{
-                                li{
-                                    .total-vote{
-                                        color: $color-secondary;
-                                    }
-                                }
-                            }
-                        }
-                        .btn-choice-vote{
-                            .btn{
-                                &.bg-color-primary{
-                                    background-color: $color-primary;
-                                }
-                            }
-                        }
-                    }
-                }
-                .user-comment-wrapper{
-                    ul{
-                        li{
-                            .list-comment{
-                                .post-user{
-                                    .name{
-                                        color: $color-secondary;
-                                    }
-                                }
-                            }
                         }
                     }
                 }
@@ -567,9 +420,6 @@
                 &:hover{
                     background-color: $color-primary;
                 }
-            }
-            &.not-hover{
-                color: $color-secondary;
             }
         }
     }

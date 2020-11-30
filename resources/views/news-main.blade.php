@@ -132,8 +132,8 @@
 
 
 @include('template1/include.css_scripts')
-<!-- navgoco -->
-<link rel="stylesheet" href="{{ asset('template1/css/daterangepicker.css')}}">
+<!-- daterangepicker -->
+<link rel="stylesheet" href="{{ asset('template1/theme-green/css/daterangepicker.css')}}">
 <script type="text/javascript" src="{{ asset('template1/js/moment.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('template1/js/daterangepicker.js') }}"></script>
 

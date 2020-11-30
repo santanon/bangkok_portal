@@ -2104,17 +2104,17 @@ $howManySteps: 100; //this needs to be even.
 
 .gallery-template{
     .item{
+        position: relative;
         display: flex;
         align-items: center;
         flex-direction: row;
         flex-wrap: wrap;
-        //justify-content: center;
         margin-bottom: 30px;
+        overflow: hidden;
         >div{
             flex: 1 0 50%;
         }
         .left{
-            //background-color: #cfd1d4;
             position: relative;
             height: 150px;
             flex: 0 0 140px;

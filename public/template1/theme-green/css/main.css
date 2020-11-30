@@ -15135,6 +15135,7 @@ template {
   display: none; }
 
 .gallery-template .item {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15147,7 +15148,8 @@ template {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  overflow: hidden; }
   .gallery-template .item > div {
     -webkit-box-flex: 1;
     -ms-flex: 1 0 50%;

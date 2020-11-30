@@ -151,22 +151,13 @@
                             View : <span>1.5K</span>
                         </div>
                         <div class="like-count d-flex align-items-center">
-                            <div class="icon-like">
+                            <a href="#" title="Love it" data-count="0" class="icon-like">
                                 <img src="{{ asset('template1/assets/images/icons/icon-like.png')}}" alt="icon">
-                            </div>
-                            <span>1.2K</span>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-
-<!-- Hidden video div -->
-<div style="display:none;" id="video1">
-    <video class="lg-video-object lg-html5" controls preload="none">
-        <source src="https://sachinchoolur.github.io/lightGallery/static/videos/video1.mp4" type="video/mp4">
-         Your browser does not support HTML5 video.
-    </video>
 </div>

@@ -3,7 +3,7 @@
                     <div class="inner-content">
                         <div class="top-content">
                             <div class="group-text">
-                                <h3 class="title">การดำเนินงานด้านความปลอดภัย อาชีวอนามัย และสภาพแวดล้อมในการทำงานของสำนักงานเลขานุการสภากรุงเทพมหานคร </h3>
+                                <h3 class="title color-primary">การดำเนินงานด้านความปลอดภัย อาชีวอนามัย และสภาพแวดล้อมในการทำงานของสำนักงานเลขานุการสภากรุงเทพมหานคร </h3>
                             </div>
                         </div>
                         <div class="post-content d-flex justify-content-between align-items-center">
@@ -241,7 +241,7 @@
                             <div class="group-activity-location">
                                 <div class="top-content">
                                     <div class="group-text">
-                                        <h3 class="title">สถานที่กิจกรรม</h3>
+                                        <h3 class="title color-primary">สถานที่กิจกรรม</h3>
                                     </div>
                                 </div>
                                 <div class="location">
@@ -309,7 +309,7 @@
                                 <div class="col-lg-6">
                                     <div class="content -vote">
                                         <div class="box-title">
-                                            <div class="title-head">คุณเห็นด้วยกับข่าวนี้หรือไม่</div>
+                                            <div class="title-head color-primary">คุณเห็นด้วยกับข่าวนี้หรือไม่</div>
                                         </div>
                                         <form action="">
                                             <div class="list-choice-vote">
@@ -345,10 +345,10 @@
                                             </div>
                                             <div class="btn-choice-vote -login">
                                                 <div class="show-login">
-                                                    <button class="btn bg-color-primary icon" type="button"><i class="fas fa-lock"></i> Sign in</button>
+                                                    <button class="btn btn-primary icon" type="button"><i class="fas fa-lock"></i> Sign in</button>
                                                     <a href="">Register</a>
                                                 </div>
-                                                <button class="btn bg-color-primary" type="button">VOTE</button>
+                                                <button class="btn btn-primary" type="button">VOTE</button>
                                             </div>
                                         </form>
                                     </div>
@@ -356,7 +356,7 @@
                                 <div class="col-lg-6">
                                     <div class="content -comment">
                                         <div class="box-title d-flex justify-content-between align-items-center">
-                                            <div class="title-head">ความคิดเห็น</div>
+                                            <div class="title-head color-primary">ความคิดเห็น</div>
                                             <div class="order-all">5 รายการ</div>
                                         </div>
                                         <div class="sort-order d-flex justify-content-end align-items-center">
@@ -376,7 +376,7 @@
                                             <textarea class="text-area" name="" id="" rows="3"></textarea>
                                         </div>
                                         <div class="btn-custom width-full d-flex justify-content-end">
-                                            <button class="btn bg-color-primary" type="button">SEND</button>
+                                            <button class="btn btn-primary" type="button">SEND</button>
                                         </div>
                                     </div>
                                     <div class="user-comment-wrapper">
@@ -387,7 +387,7 @@
                                                         <img src="{{ asset('template1/assets/images/icons/icon-user-post.png')}}" alt="icon">
                                                     </div>
                                                     <div class="post-user">
-                                                        <span class="name">Attapon :</span> Excellent, I like this 
+                                                        <span class="name color-secondary">Attapon :</span> Excellent, I like this 
                                                     </div>
                                                 </div>
                                             </li>
@@ -397,7 +397,7 @@
                                                         <img src="{{ asset('template1/assets/images/icons/icon-user-post.png')}}" alt="icon">
                                                     </div>
                                                     <div class="post-user">
-                                                        <span class="name">Santanon :</span> เนื้อหาจำลองแบบเรียบๆ ที่ใช้กันในธุรกิจงานพิมพ์หรืองานเรียงพิมพ์ 
+                                                        <span class="name color-secondary">Santanon :</span> เนื้อหาจำลองแบบเรียบๆ ที่ใช้กันในธุรกิจงานพิมพ์หรืองานเรียงพิมพ์ 
                                                         มันได้กลายมาเป็นเนื้อหาจำลองมาตรฐานของธุรกิจดังกล่าวมาตั้งแต่ศตวรรษที่ 16 
                                                         เมื่อเครื่องพิมพ์โนเนมเครื่องหนึ่งนำรางตัวพิมพ์มาสลับสับตำแหน่งตัวอักษรเพื่อทำหนังสือตัวอย่าง
                                                     </div>
@@ -409,13 +409,13 @@
                                                         <img src="{{ asset('template1/assets/images/icons/icon-user-post.png')}}" alt="icon">
                                                     </div>
                                                     <div class="post-user">
-                                                        <span class="name">Sittichok :</span> Excellent, I like this 
+                                                        <span class="name color-secondary">Sittichok :</span> Excellent, I like this 
                                                     </div>
                                                 </div>
                                             </li>
                                         </ul>
                                         <div class="load-more">
-                                            <a href="">โหลดเพิ่มเติม</a>
+                                            <a href="" class="btn btn-outline-dark">โหลดเพิ่มเติม</a>
                                         </div>
                                     </div>
                                 </div>

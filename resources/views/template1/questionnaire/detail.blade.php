@@ -7,7 +7,7 @@
                         <div class="group-slide">
                             <div class="list-item">
                                 <div class="item -question">
-                                    <div class="left active">
+                                    <div class="left bg-color-primary active">
                                         <div class="progress-content">
                                             <!-- Progress bar 1 -->
                                             <div class="progress" data-percentage="50">
@@ -24,7 +24,7 @@
                                             <!-- END -->
                                             <div class="total-people">150 <span>คน</span></div>
                                         </div>
-                                        <div class="text-onbottom">ผู้ตอบคำถาม</div>
+                                        <div class="text-onbottom bg-color-secondary">ผู้ตอบคำถาม</div>
                                     </div>
                                     <div class="right">                                          
                                         <div class="text-content page-detail">
@@ -45,8 +45,8 @@
                 <div class="group-form-section">
                     <div class="top-content">
                         <div class="group-text">
-                            <h3 class="title">แบบสอบถามข้อมูล</h3>
-                            <p class="desc">กรุณากรอกข้อมูลของท่าน</p>
+                            <h3 class="title color-primary">แบบสอบถามข้อมูล</h3>
+                            <p class="desc color-secondary">กรุณากรอกข้อมูลของท่าน</p>
                         </div>
                     </div>
                     <div class="row">
@@ -220,12 +220,12 @@
                         </div>
 
                         <div class="btn-custom width-full d-flex justify-content-center">
-                            <button class="btn bg-color-primary" type="button" style="width: ">SEND</button>
+                            <button class="btn btn-primary" type="button">SEND</button>
                         </div>
                     </div>
                 </div>
                 <div class="group-back">
-                    <a href="/calendar">ย้อนกลับ</a>
+                    <a href="/questionnaire">ย้อนกลับ</a>
                 </div>
 
                 <div class="group-social-share d-flex align-items-center justify-content-between">
@@ -303,7 +303,7 @@
                                 <textarea class="text-area" name="" id="" rows="3"></textarea>
                             </div>
                             <div class="btn-custom width-full d-flex justify-content-end">
-                                <button class="btn bg-color-primary" type="button">SEND</button>
+                                <button class="btn btn-primary" type="button">SEND</button>
                             </div>
                         </div>
                         <div class="user-comment-wrapper">
@@ -314,7 +314,7 @@
                                             <img src="{{ asset('template1/assets/images/icons/icon-user-post.png')}}" alt="icon">
                                         </div>
                                         <div class="post-user">
-                                            <span class="name">Attapon :</span> Excellent, I like this 
+                                            <span class="name color-secondary">Attapon :</span> Excellent, I like this 
                                         </div>
                                     </div>
                                 </li>
@@ -324,7 +324,7 @@
                                             <img src="{{ asset('template1/assets/images/icons/icon-user-post.png')}}" alt="icon">
                                         </div>
                                         <div class="post-user">
-                                            <span class="name">Santanon :</span> เนื้อหาจำลองแบบเรียบๆ ที่ใช้กันในธุรกิจงานพิมพ์หรืองานเรียงพิมพ์ 
+                                            <span class="name color-secondary">Santanon :</span> เนื้อหาจำลองแบบเรียบๆ ที่ใช้กันในธุรกิจงานพิมพ์หรืองานเรียงพิมพ์ 
                                             มันได้กลายมาเป็นเนื้อหาจำลองมาตรฐานของธุรกิจดังกล่าวมาตั้งแต่ศตวรรษที่ 16 
                                             เมื่อเครื่องพิมพ์โนเนมเครื่องหนึ่งนำรางตัวพิมพ์มาสลับสับตำแหน่งตัวอักษรเพื่อทำหนังสือตัวอย่าง
                                         </div>
@@ -336,13 +336,13 @@
                                             <img src="{{ asset('template1/assets/images/icons/icon-user-post.png')}}" alt="icon">
                                         </div>
                                         <div class="post-user">
-                                            <span class="name">Sittichok :</span> Excellent, I like this 
+                                            <span class="name color-secondary">Sittichok :</span> Excellent, I like this 
                                         </div>
                                     </div>
                                 </li>
                             </ul>
                             <div class="load-more">
-                                <a href="">โหลดเพิ่มเติม</a>
+                                <a href="" class="btn btn-outline-dark">โหลดเพิ่มเติม</a>
                             </div>
                         </div>
                     </div>

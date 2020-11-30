@@ -20,11 +20,11 @@
                     <div class="inner-content">
                         <div class="top-content">
                             <div class="group-text">
-                                <h3 class="title">QUESTIONNAIRE</h3>
-                                <p class="desc">ผู้ใช้บริการสามารถร้องเรียน และเสนอแนะการให้บริการ</p>
+                                <h3 class="title color-primary">QUESTIONNAIRE</h3>
+                                <p class="desc color-secondary">ผู้ใช้บริการสามารถร้องเรียน และเสนอแนะการให้บริการ</p>
                             </div>
                             <div class="group-gotoall">
-                                <a href="">คำถามทั้งหมด</a>
+                                <a href="/questionnaire" class="btn btn-outline-dark">คำถามทั้งหมด</a>
                             </div>
                         </div>
                         <div class="main-content">

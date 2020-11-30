@@ -15,7 +15,7 @@
 
 <link rel="canonical" href=""/>
 <link rel="icon" href="{{ asset('assets/images/favicon.ico')}}" type="image/x-icon">
-<link rel="stylesheet" href="{{ asset('template1/css/main.css')}}">
+<link rel="stylesheet" href="{{ asset('template1/theme-green/css/main.css')}}">
 
 <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,500;1,300&display=swap" rel="stylesheet">
 

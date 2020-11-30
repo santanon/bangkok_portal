@@ -20,11 +20,12 @@
         <div class="inner-content">
             <div class="top-content">
                 <div class="group-text">
-                    <h3 class="title">สถานี VDO</h3>
-                    <p class="desc">The Bangkok Metropolitan Council Secretariat </p>
+                    <h3 class="title color-primary">สถานี VDO</h3>
+                    <p class="desc color-secondary">The Bangkok Metropolitan Council Secretariat </p>
                 </div>
                 <div class="group-gotoall">
-                    <a href="">วิดีโอทั้งหมด</a>
+                    <a href="/video" class="btn btn-outline-dark">วิดีโอทั้งหมด</a>
+                    
                 </div>
             </div>
             <div class="main-content">

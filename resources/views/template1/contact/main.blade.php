@@ -5,8 +5,8 @@
                             <div class="inner-content">
                                 <div class="top-content">
                                     <div class="group-text">
-                                        <h3 class="title">ติดต่อสอบถาม</h3>
-                                        <p class="desc">กรุณากรอกข้อมูลของท่าน</p>
+                                        <h3 class="title color-primary">ติดต่อสอบถาม</h3>
+                                        <p class="desc color-secondary">กรุณากรอกข้อมูลของท่าน</p>
                                     </div>
                                 </div>
                                 <div class="main-content">
@@ -59,7 +59,7 @@
                                             </div>
                                         </div>
                                         <div class="btn-custom width-full d-flex justify-content-center">
-                                            <button class="btn bg-color-primary" type="submit">ส่งข้อความ</button>
+                                            <button class="btn btn-primary" type="submit">ส่งข้อความ</button>
                                         </div>
                                     </form>
                                 </div>
@@ -69,8 +69,8 @@
                             <div class="inner-content">
                                 <div class="top-content">
                                     <div class="group-text">
-                                        <h3 class="title">สำนักงานเลขานุการสภากรุงเทพฯ</h3>
-                                        <p class="desc">ชั้น 3 ศาลาว่าการกรุงเทพมหานคร 173 ถนนดินสอ เขตพระนคร กรุงเทพมหานคร 10200</p>
+                                        <h3 class="title color-primary">สำนักงานเลขานุการสภากรุงเทพฯ</h3>
+                                        <p class="desc color-secondary">ชั้น 3 ศาลาว่าการกรุงเทพมหานคร 173 ถนนดินสอ เขตพระนคร กรุงเทพมหานคร 10200</p>
                                     </div>
                                 </div>
                                 <div class="main-content -contact">
@@ -110,8 +110,8 @@
                 <div class="inner-content">
                     <div class="top-content">
                         <div class="group-text">
-                            <h3 class="title">ติดต่อส่วนราชการ</h3>
-                            <p class="desc">สำนักงานเลขานุการสภากรุงเทพมหานคร</p>
+                            <h3 class="title color-primary">ติดต่อส่วนราชการ</h3>
+                            <p class="desc color-secondary">สำนักงานเลขานุการสภากรุงเทพมหานคร</p>
                         </div>
                     </div>
                     <div class="main-content -contact">
@@ -120,13 +120,13 @@
                                 <div class="list-item-gov">
                                     <div class="title-gov">เลขานุการสภากรุงเทพฯ</div>
                                     <div class="contact-gov d-flex">
-                                        <div class="tel-gov">
+                                        <div class="tel-gov bg-color-secondary">
                                             <div class="on">
                                                 <img src="{{ asset('template1/assets/images/icons/icon-tel.svg')}}" alt="icon">
                                             </div>
                                             <div class="number">0-2222-5349</div>
                                         </div>
-                                        <div class="tel-internal">
+                                        <div class="tel-internal bg-color-primary">
                                             <div class="on">ภายใน</div>
                                             <div class="number">1120</div>
                                         </div>
@@ -137,13 +137,13 @@
                                 <div class="list-item-gov">
                                     <div class="title-gov">ผู้ช่วยเลขานุการสภากรุงเทพฯ (1)</div>
                                     <div class="contact-gov d-flex">
-                                        <div class="tel-gov">
+                                        <div class="tel-gov bg-color-secondary">
                                             <div class="on">
                                                 <img src="{{ asset('template1/assets/images/icons/icon-tel.svg')}}" alt="icon">
                                             </div>
                                             <div class="number">0-2226-2759</div>
                                         </div>
-                                        <div class="tel-internal">
+                                        <div class="tel-internal bg-color-primary">
                                             <div class="on">ภายใน</div>
                                             <div class="number">1121</div>
                                         </div>
@@ -154,13 +154,13 @@
                                 <div class="list-item-gov">
                                     <div class="title-gov">ผู้ช่วยเลขานุการสภากรุงเทพฯ (2)</div>
                                     <div class="contact-gov d-flex">
-                                        <div class="tel-gov">
+                                        <div class="tel-gov bg-color-secondary">
                                             <div class="on">
                                                 <img src="{{ asset('template1/assets/images/icons/icon-tel.svg')}}" alt="icon">
                                             </div>
                                             <div class="number">0-2225-7093</div>
                                         </div>
-                                        <div class="tel-internal">
+                                        <div class="tel-internal bg-color-primary">
                                             <div class="on">ภายใน</div>
                                             <div class="number">1124</div>
                                         </div>
@@ -171,13 +171,13 @@
                                 <div class="list-item-gov">
                                     <div class="title-gov">หน้าห้องประธานสภากรุงเทพฯ (1)</div>
                                     <div class="contact-gov d-flex">
-                                        <div class="tel-gov">
+                                        <div class="tel-gov bg-color-secondary">
                                             <div class="on">
                                                 <img src="{{ asset('template1/assets/images/icons/icon-tel.svg')}}" alt="icon">
                                             </div>
                                             <div class="number">0-2222-5349</div>
                                         </div>
-                                        <div class="tel-internal">
+                                        <div class="tel-internal bg-color-primary">
                                             <div class="on">ภายใน</div>
                                             <div class="number">1100 - 1101</div>
                                         </div>
@@ -188,13 +188,13 @@
                                 <div class="list-item-gov">
                                     <div class="title-gov">กลุ่มงานเลขานุการ (1)</div>
                                     <div class="contact-gov d-flex">
-                                        <div class="tel-gov">
+                                        <div class="tel-gov bg-color-secondary">
                                             <div class="on">
                                                 <img src="{{ asset('template1/assets/images/icons/icon-tel.svg')}}" alt="icon">
                                             </div>
                                             <div class="number">0-2224-3006</div>
                                         </div>
-                                        <div class="tel-internal">
+                                        <div class="tel-internal bg-color-primary">
                                             <div class="on">ภายใน</div>
                                             <div class="number">1100 - 3</div>
                                         </div>
@@ -205,13 +205,13 @@
                                 <div class="list-item-gov">
                                     <div class="title-gov">กลุ่มงานเลขานุการ (2)</div>
                                     <div class="contact-gov d-flex">
-                                        <div class="tel-gov">
+                                        <div class="tel-gov bg-color-secondary">
                                             <div class="on">
                                                 <img src="{{ asset('template1/assets/images/icons/icon-tel.svg')}}" alt="icon">
                                             </div>
                                             <div class="number">0-2224-3006</div>
                                         </div>
-                                        <div class="tel-internal">
+                                        <div class="tel-internal bg-color-primary">
                                             <div class="on">ภายใน</div>
                                             <div class="number">1100 - 3</div>
                                         </div>

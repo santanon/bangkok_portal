@@ -20,8 +20,8 @@
                     <div class="inner-content">
                         <div class="top-content">
                             <div class="group-text">
-                                <h3 class="title">BANNER</h3>
-                                <p class="desc">The Bangkok Metropolitan Council Secretariat </p>
+                                <h3 class="title color-primary">BANNER</h3>
+                                <p class="desc color-secondary">The Bangkok Metropolitan Council Secretariat </p>
                             </div>
                         </div>
                         <div class="main-content">

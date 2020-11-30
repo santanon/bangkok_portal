@@ -20,11 +20,11 @@
                     <div class="inner-content">
                         <div class="top-content">
                             <div class="group-text">
-                                <h3 class="title">DOWNLOAD</h3>
-                                <p class="desc">ข้อมูลเอกสารราชการที่ผู้ใช้บริการสามารถดาวน์โหลดได้</p>
+                                <h3 class="title color-primary">DOWNLOAD</h3>
+                                <p class="desc color-secondary">ข้อมูลเอกสารราชการที่ผู้ใช้บริการสามารถดาวน์โหลดได้</p>
                             </div>
                             <div class="group-gotoall">
-                                <a href="">เอกสารทั้งหมด</a>
+                                <a href="/download" class="btn btn-outline-dark">เอกสารทั้งหมด</a>
                             </div>
                         </div>
                         <div class="main-content">

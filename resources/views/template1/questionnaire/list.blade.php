@@ -3,8 +3,8 @@
                     <div class="inner-content">
                         <div class="top-content">
                             <div class="group-text">
-                                <h3 class="title">QUESTIONNAIRE</h3>
-                                <p class="desc">The Bangkok Metropolitan Council Secretariat</p>
+                                <h3 class="title color-primary">QUESTIONNAIRE</h3>
+                                <p class="desc color-secondary">The Bangkok Metropolitan Council Secretariat</p>
                             </div>
                         </div>
                         <div class="search-content">
@@ -46,7 +46,7 @@
                                             <div class="group-slide">
                                                 <div class="list-item page-list">
                                                     <div class="item -question">
-                                                        <div class="left active">
+                                                        <div class="left bg-color-primary active">
                                                             <div class="progress-content">
                                                                 <!-- Progress bar 1 -->
                                                                 <div class="progress" data-percentage="74">
@@ -63,7 +63,7 @@
                                                                 <!-- END -->
                                                                 <div class="total-people">155 <span>คน</span></div>
                                                             </div>
-                                                            <div class="text-onbottom">ผู้ตอบคำถาม</div>
+                                                            <div class="text-onbottom bg-color-secondary">ผู้ตอบคำถาม</div>
                                                         </div>
                                                         <div class="right">       
                                                             <div class="text-ontop">
@@ -116,7 +116,7 @@
                                                                 <!-- END -->
                                                                 <div class="total-people">155 <span>คน</span></div>
                                                             </div>
-                                                            <div class="text-onbottom">ผู้ตอบคำถาม</div>
+                                                            <div class="text-onbottom bg-color-secondary">ผู้ตอบคำถาม</div>
                                                         </div>
                                                         <div class="right">       
                                                             <div class="text-ontop">
@@ -169,7 +169,7 @@
                                                                 <!-- END -->
                                                                 <div class="total-people">155 <span>คน</span></div>
                                                             </div>
-                                                            <div class="text-onbottom">ผู้ตอบคำถาม</div>
+                                                            <div class="text-onbottom bg-color-secondary">ผู้ตอบคำถาม</div>
                                                         </div>
                                                         <div class="right">       
                                                             <div class="text-ontop">
@@ -222,7 +222,7 @@
                                                                 <!-- END -->
                                                                 <div class="total-people">155 <span>คน</span></div>
                                                             </div>
-                                                            <div class="text-onbottom">ผู้ตอบคำถาม</div>
+                                                            <div class="text-onbottom bg-color-secondary">ผู้ตอบคำถาม</div>
                                                         </div>
                                                         <div class="right">       
                                                             <div class="text-ontop">

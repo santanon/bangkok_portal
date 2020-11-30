@@ -11,7 +11,7 @@
         <div class="panel-header">
             <div class="header">
                 <div class="logo-login">
-                    <img src="{{ asset('assets/images/logo-panel.png')}}" alt="icon">
+                    <img src="{{ asset('panel/assets/images/logo-panel.png')}}" alt="icon">
                 </div>
                 <div class="lang">
                     <ul>
@@ -99,7 +99,6 @@
 
 @include('panel/include.css_scripts')
 
-<link rel="stylesheet" href="{{ asset('css/page-login.css')}}">
 
 <script type="text/javascript">
 </script>

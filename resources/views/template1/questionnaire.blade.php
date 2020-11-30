@@ -39,7 +39,7 @@
                                 <ul id="slide_6" class="list-item">
                                     <li>
                                         <div class="item -question">
-                                            <div class="left active">
+                                            <div class="left bg-color-primary active">
                                                 <div class="progress-content">
                                                     <!-- Progress bar 1 -->
                                                     <div class="progress" data-percentage="74">
@@ -88,7 +88,7 @@
                                     </li>
                                     <li>
                                         <div class="item -question">
-                                            <div class="left active">
+                                            <div class="left bg-color-primary active">
                                                 <div class="progress-content">
                                                     <!-- Progress bar 2 -->
                                                     <div class="progress" data-percentage="50">

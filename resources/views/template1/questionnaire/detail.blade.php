@@ -28,7 +28,7 @@
                                     </div>
                                     <div class="right">                                          
                                         <div class="text-content page-detail">
-                                            <div class="title">
+                                            <div class="title color-primary">
                                                 ร่วมส่งแรงใจให้เยาวชนนักเตะรุ่นใหม่ชิงชัยเอกสารที่ต้องใช้ 1. สูติบัตร พร้อมสำเนา 2. ทะเบียนบ้าน พร้อมสำเนา
                                             </div>
                                             <p>
@@ -81,7 +81,7 @@
                                                 <input type="radio" class="custom-control-input" id="custom_1_1" name="Q_1">
                                                 <label class="custom-control-label" for="custom_1_1">60 ขึ้นไป</label>
                                             </div>
-                                            <span class="text-inline margin-left-auto">(6%)</span>
+                                            <span class="text-inline margin-left-auto color-secondary">(6%)</span>
                                         </div>
                                     </div>
                                 </div>
@@ -92,7 +92,7 @@
                                                 <input type="radio" class="custom-control-input" id="custom_1_2" name="Q_1">
                                                 <label class="custom-control-label" for="custom_1_2">40-50</label>
                                             </div>
-                                            <span class="text-inline margin-left-auto">(6%)</span>
+                                            <span class="text-inline margin-left-auto color-secondary">(6%)</span>
                                         </div>
                                     </div>
                                 </div>
@@ -103,7 +103,7 @@
                                                 <input type="radio" class="custom-control-input" id="custom_1_3" name="Q_1">
                                                 <label class="custom-control-label" for="custom_1_3">25-39</label>
                                             </div>
-                                            <span class="text-inline margin-left-auto">(6%)</span>
+                                            <span class="text-inline margin-left-auto color-secondary">(6%)</span>
                                         </div>
                                     </div>
                                 </div>
@@ -114,7 +114,7 @@
                                                 <input type="radio" class="custom-control-input" id="custom_1_4" name="Q_1">
                                                 <label class="custom-control-label" for="custom_1_4">25-39</label>
                                             </div>
-                                            <span class="text-inline margin-left-auto">(0%)</span>
+                                            <span class="text-inline margin-left-auto color-secondary">(0%)</span>
                                         </div>
                                     </div>
                                 </div>
@@ -130,7 +130,7 @@
                                                 <input type="radio" class="custom-control-input" id="Q_2_1" name="Q_2">
                                                 <label class="custom-control-label" for="Q_2_1">1 ปี/ครั้ง</label>
                                             </div>
-                                            <span class="text-inline margin-left-auto">(6%)</span>
+                                            <span class="text-inline margin-left-auto color-secondary">(6%)</span>
                                         </div>
                                     </div>
                                 </div>
@@ -141,7 +141,7 @@
                                                 <input type="radio" class="custom-control-input" id="Q_2_2" name="Q_2">
                                                 <label class="custom-control-label" for="Q_2_2">6 เดือน/ครั้ง</label>
                                             </div>
-                                            <span class="text-inline margin-left-auto">(6%)</span>
+                                            <span class="text-inline margin-left-auto color-secondary">(6%)</span>
                                         </div>
                                     </div>
                                 </div>
@@ -152,7 +152,7 @@
                                                 <input type="radio" class="custom-control-input" id="Q_2_3" name="Q_2">
                                                 <label class="custom-control-label" for="Q_2_3">3 เดือน/ครั้ง</label>
                                             </div>
-                                            <span class="text-inline margin-left-auto">(6%)</span>
+                                            <span class="text-inline margin-left-auto color-secondary">(6%)</span>
                                         </div>
                                     </div>
                                 </div>
@@ -163,7 +163,7 @@
                                                 <input type="radio" class="custom-control-input" id="Q_2_4" name="Q_2">
                                                 <label class="custom-control-label" for="Q_2_4">1 เดือน/ครั้ง</label>
                                             </div>
-                                            <span class="text-inline margin-left-auto">(0%)</span>
+                                            <span class="text-inline margin-left-auto color-secondary">(0%)</span>
                                         </div>
                                     </div>
                                 </div>
@@ -179,7 +179,7 @@
                                                 <input type="radio" class="custom-control-input" id="Q_3_1" name="Q_3">
                                                 <label class="custom-control-label" for="Q_3_1">เว็บไซต์</label>
                                             </div>
-                                            <span class="text-inline margin-left-auto">(6%)</span>
+                                            <span class="text-inline margin-left-auto color-secondary">(6%)</span>
                                         </div>
                                     </div>
                                 </div>
@@ -190,7 +190,7 @@
                                                 <input type="radio" class="custom-control-input" id="Q_3_2" name="Q_3">
                                                 <label class="custom-control-label" for="Q_3_2">สื่อออนไลน์</label>
                                             </div>
-                                            <span class="text-inline margin-left-auto">(6%)</span>
+                                            <span class="text-inline margin-left-auto color-secondary">(6%)</span>
                                         </div>
                                     </div>
                                 </div>
@@ -201,7 +201,7 @@
                                                 <input type="radio" class="custom-control-input" id="Q_3_3" name="Q_3">
                                                 <label class="custom-control-label" for="Q_3_3">เพื่อน</label>
                                             </div>
-                                            <span class="text-inline margin-left-auto">(6%)</span>
+                                            <span class="text-inline margin-left-auto color-secondary">(6%)</span>
                                         </div>
                                     </div>
                                 </div>
@@ -231,16 +231,16 @@
                 <div class="group-social-share d-flex align-items-center justify-content-between">
                     <div class="shared-email d-flex align-items-center">
                         <div class="social-wrapper d-flex align-items-center">
-                            <div class="text-social">Share</div>
+                            <div class="text-social color-secondary">Share</div>
                             <ul class="d-flex align-items-center">
                                 <li class="facebook d-flex align-items-center not-hover">
-                                    <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"><span>5</span> 
+                                    <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"><span class="color-secondary">5</span> 
                                 </li>
                                 <li class="twitter d-flex align-items-center not-hover">
-                                    <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon">  5
+                                    <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon"> <span class="color-secondary">5</span> 
                                 </li>
                                 <li class="line d-flex align-items-center not-hover">
-                                    <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon">   5
+                                    <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"> <span class="color-secondary">5</span> 
                                 </li>
                             </ul>
                         </div>
@@ -266,14 +266,14 @@
                         </div>
                     </div>
                     <div class="views-like d-flex align-items-center">
-                        <div class="view-count">
-                            View : <span>1.5K</span>
+                        <div class="view-count color-secondary">
+                            View : <span class="color-secondary">1.5K</span>
                         </div>
                         <div class="like-count d-flex align-items-center">
                             <div class="icon-like">
                                 <img src="{{ asset('template1/assets/images/icons/icon-like.png')}}" alt="icon">
                             </div>
-                            <span>1.2K</span>
+                            <span class="color-secondary">1.2K</span>
                         </div>
                     </div>
                 </div>
@@ -283,8 +283,8 @@
                     <div class="col-lg-12">
                         <div class="content -comment">
                             <div class="box-title d-flex justify-content-between align-items-center">
-                                <div class="title-head">ความคิดเห็น</div>
-                                <div class="order-all">5 รายการ</div>
+                                <div class="title-head color-primary">ความคิดเห็น</div>
+                                <div class="order-all color-secondary">5 รายการ</div>
                             </div>
                             <div class="sort-order d-flex justify-content-end align-items-center">
                                 <div class="text-order">เรียงลำดับตาม</div>

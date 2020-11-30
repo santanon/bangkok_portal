@@ -85,7 +85,7 @@
                                                             <div class="text-onbottom bg-color-secondary">Download</div>
                                                         </div>
                                                         <div class="right">
-                                                            <div class="text-ontop">
+                                                            <div class="text-ontop color-secondary">
                                                                 25 พ.ย. 2563
                                                             </div>
                                                             <div class="text-content">
@@ -117,7 +117,7 @@
                                                             <div class="text-onbottom bg-color-secondary">Download</div>
                                                         </div>
                                                         <div class="right">
-                                                            <div class="text-ontop">
+                                                            <div class="text-ontop color-secondary">
                                                                 25 พ.ย. 2563
                                                             </div>
                                                             <div class="text-content">
@@ -149,7 +149,7 @@
                                                             <div class="text-onbottom bg-color-secondary">Download</div>
                                                         </div>
                                                         <div class="right">
-                                                            <div class="text-ontop">
+                                                            <div class="text-ontop color-secondary">
                                                                 25 พ.ย. 2563
                                                             </div>
                                                             <div class="text-content">
@@ -181,7 +181,7 @@
                                                             <div class="text-onbottom bg-color-secondary">Download</div>
                                                         </div>
                                                         <div class="right">
-                                                            <div class="text-ontop">
+                                                            <div class="text-ontop color-secondary">
                                                                 25 พ.ย. 2563
                                                             </div>
                                                             <div class="text-content">
@@ -213,7 +213,7 @@
                                                             <div class="text-onbottom bg-color-secondary">Download</div>
                                                         </div>
                                                         <div class="right">
-                                                            <div class="text-ontop">
+                                                            <div class="text-ontop color-secondary">
                                                                 25 พ.ย. 2563
                                                             </div>
                                                             <div class="text-content">
@@ -247,16 +247,16 @@
                             <div class="group-social-share d-flex align-items-center justify-content-between">
                                 <div class="shared-email d-flex align-items-center">
                                     <div class="social-wrapper d-flex align-items-center">
-                                        <div class="text-social">Share</div>
+                                        <div class="text-social color-secondary">Share</div>
                                         <ul class="d-flex align-items-center">
                                             <li class="facebook d-flex align-items-center not-hover">
-                                                <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"><span>5</span> 
+                                                <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"><span class="color-secondary">5</span> 
                                             </li>
                                             <li class="twitter d-flex align-items-center not-hover">
-                                                <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon">  5
+                                                <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon"> <span class="color-secondary">5</span> 
                                             </li>
                                             <li class="line d-flex align-items-center not-hover">
-                                                <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon">   5
+                                                <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"> <span class="color-secondary">5</span> 
                                             </li>
                                         </ul>
                                     </div>
@@ -282,14 +282,14 @@
                                     </div>
                                 </div>
                                 <div class="views-like d-flex align-items-center">
-                                    <div class="view-count">
-                                        View : <span>1.5K</span>
+                                    <div class="view-count color-secondary">
+                                        View : <span class="color-secondary">1.5K</span>
                                     </div>
                                     <div class="like-count d-flex align-items-center">
                                         <div class="icon-like">
                                             <img src="{{ asset('template1/assets/images/icons/icon-like.png')}}" alt="icon">
                                         </div>
-                                        <span>1.2K</span>
+                                        <span class="color-secondary">1.2K</span>
                                     </div>
                                 </div>
                             </div>

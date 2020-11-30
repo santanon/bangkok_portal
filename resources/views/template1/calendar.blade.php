@@ -61,8 +61,8 @@
                                     <li>
                                         <div class="item">
                                             <div class="left">
-                                                <div class="text-content">2</div>
-                                                <div class="text-onbottom">พ.ย.</div>
+                                                <div class="text-content bg-color-primary">2</div>
+                                                <div class="text-onbottom bg-color-secondary">พ.ย.</div>
                                             </div>
                                             <div class="right">
                                                 <div class="text-content">
@@ -77,8 +77,8 @@
                                     <li>
                                         <div class="item">
                                             <div class="left">
-                                                <div class="text-content">3</div>
-                                                <div class="text-onbottom">พ.ย.</div>
+                                                <div class="text-content bg-color-primary">3</div>
+                                                <div class="text-onbottom bg-color-secondary">พ.ย.</div>
                                             </div>
                                             <div class="right">
                                                 <div class="text-content">
@@ -93,8 +93,8 @@
                                     <li>
                                         <div class="item">
                                             <div class="left">
-                                                <div class="text-content">2</div>
-                                                <div class="text-onbottom">พ.ย.</div>
+                                                <div class="text-content bg-color-primary">2</div>
+                                                <div class="text-onbottom bg-color-secondary">พ.ย.</div>
                                             </div>
                                             <div class="right">
                                                 <div class="text-content">
@@ -109,8 +109,8 @@
                                     <li>
                                         <div class="item">
                                             <div class="left">
-                                                <div class="text-content">3</div>
-                                                <div class="text-onbottom">พ.ย.</div>
+                                                <div class="text-content bg-color-primary">3</div>
+                                                <div class="text-onbottom bg-color-secondary">พ.ย.</div>
                                             </div>
                                             <div class="right">
                                                 <div class="text-content">

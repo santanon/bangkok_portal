@@ -29,7 +29,7 @@
                         </div>
                         <div class="main-content">
                             <div class="group-vote">
-                                <div class="score-wrapper">
+                                <div class="score-wrapper bg-color-primary">
                                     <div class="row">
                                         <div class="col-lg-2 col-md-4 col-4">
                                             <div class="text-score text-center">
@@ -40,7 +40,7 @@
                                         <div class="col-lg-6 col-md-8 col-8">
                                             <div class="percent-voter">
                                                 <div class="progress">
-                                                    <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">(75%)<br/><span>ผู้โหวต</span></div>
+                                                    <div class="progress-bar bg-color-secondary" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">(75%)<br/><span>ผู้โหวต</span></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -111,10 +111,8 @@
                                                             </div>
                                                         </li>
                                                     </ul>
-                                                    <div class="btn-custom bg-primary mg-left-auto">
-                                                        <div class="input-custom">
-                                                            <input type="submit" value="VOTE" class="btn btn-primary">
-                                                        </div>
+                                                    <div class="btn-custom width-full d-flex justify-content-end">
+                                                        <button class="btn btn-primary" type="button">VOTE</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -123,13 +121,13 @@
                                     <div class="social-wrapper">
                                         <ul class="d-flex align-items-center">
                                             <li class="facebook d-flex align-items-center not-hover">
-                                                <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"> 5
+                                                <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"><span class="color-secondary">5</span> 
                                             </li>
                                             <li class="twitter d-flex align-items-center not-hover">
-                                                <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon">  5
+                                                <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon"><span class="color-secondary">5</span> 
                                             </li>
                                             <li class="line d-flex align-items-center not-hover">
-                                                <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon">   5
+                                                <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"><span class="color-secondary">5</span> 
                                             </li>
                                         </ul>
                                     </div>

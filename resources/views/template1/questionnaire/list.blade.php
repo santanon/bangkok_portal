@@ -66,7 +66,7 @@
                                                             <div class="text-onbottom bg-color-secondary">ผู้ตอบคำถาม</div>
                                                         </div>
                                                         <div class="right">       
-                                                            <div class="text-ontop">
+                                                            <div class="text-ontop color-secondary">
                                                                 View : 340
                                                             </div>                                         
                                                             <div class="text-content">
@@ -79,13 +79,13 @@
                                                                 <div class="social-wrapper">
                                                                     <ul class="d-flex align-items-center">
                                                                         <li class="facebook d-flex align-items-center not-hover">
-                                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"> 5
+                                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"> <span class="color-secondary">5</span> 
                                                                         </li>
                                                                         <li class="twitter d-flex align-items-center not-hover">
-                                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon">  5
+                                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon">  <span class="color-secondary">5</span>
                                                                         </li>
                                                                         <li class="line d-flex align-items-center not-hover">
-                                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon">   5
+                                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon">   <span class="color-secondary">5</span>
                                                                         </li>
                                                                     </ul>
                                                                 </div>
@@ -99,7 +99,7 @@
                                             <div class="group-slide">
                                                 <div class="list-item page-list">
                                                     <div class="item -question">
-                                                        <div class="left active">
+                                                        <div class="left bg-color-primary active">
                                                             <div class="progress-content">
                                                                 <!-- Progress bar 1 -->
                                                                 <div class="progress" data-percentage="74">
@@ -119,7 +119,7 @@
                                                             <div class="text-onbottom bg-color-secondary">ผู้ตอบคำถาม</div>
                                                         </div>
                                                         <div class="right">       
-                                                            <div class="text-ontop">
+                                                            <div class="text-ontop color-secondary">
                                                                 View : 340
                                                             </div>                                         
                                                             <div class="text-content">
@@ -132,13 +132,13 @@
                                                                 <div class="social-wrapper">
                                                                     <ul class="d-flex align-items-center">
                                                                         <li class="facebook d-flex align-items-center not-hover">
-                                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"> 5
+                                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"> <span class="color-secondary">5</span> 
                                                                         </li>
                                                                         <li class="twitter d-flex align-items-center not-hover">
-                                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon">  5
+                                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon">  <span class="color-secondary">5</span>
                                                                         </li>
                                                                         <li class="line d-flex align-items-center not-hover">
-                                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon">   5
+                                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon">   <span class="color-secondary">5</span>
                                                                         </li>
                                                                     </ul>
                                                                 </div>
@@ -152,7 +152,7 @@
                                             <div class="group-slide">
                                                 <div class="list-item page-list">
                                                     <div class="item -question">
-                                                        <div class="left active">
+                                                        <div class="left bg-color-primary active">
                                                             <div class="progress-content">
                                                                 <!-- Progress bar 1 -->
                                                                 <div class="progress" data-percentage="74">
@@ -172,7 +172,7 @@
                                                             <div class="text-onbottom bg-color-secondary">ผู้ตอบคำถาม</div>
                                                         </div>
                                                         <div class="right">       
-                                                            <div class="text-ontop">
+                                                            <div class="text-ontop color-secondary">
                                                                 View : 340
                                                             </div>                                         
                                                             <div class="text-content">
@@ -185,13 +185,13 @@
                                                                 <div class="social-wrapper">
                                                                     <ul class="d-flex align-items-center">
                                                                         <li class="facebook d-flex align-items-center not-hover">
-                                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"> 5
+                                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"> <span class="color-secondary">5</span> 
                                                                         </li>
                                                                         <li class="twitter d-flex align-items-center not-hover">
-                                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon">  5
+                                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon">  <span class="color-secondary">5</span>
                                                                         </li>
                                                                         <li class="line d-flex align-items-center not-hover">
-                                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon">   5
+                                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon">   <span class="color-secondary">5</span>
                                                                         </li>
                                                                     </ul>
                                                                 </div>
@@ -205,7 +205,7 @@
                                             <div class="group-slide">
                                                 <div class="list-item page-list">
                                                     <div class="item -question">
-                                                        <div class="left active">
+                                                        <div class="left bg-color-primary active">
                                                             <div class="progress-content">
                                                                 <!-- Progress bar 1 -->
                                                                 <div class="progress" data-percentage="74">
@@ -225,7 +225,7 @@
                                                             <div class="text-onbottom bg-color-secondary">ผู้ตอบคำถาม</div>
                                                         </div>
                                                         <div class="right">       
-                                                            <div class="text-ontop">
+                                                            <div class="text-ontop color-secondary">
                                                                 View : 340
                                                             </div>                                         
                                                             <div class="text-content">
@@ -238,13 +238,13 @@
                                                                 <div class="social-wrapper">
                                                                     <ul class="d-flex align-items-center">
                                                                         <li class="facebook d-flex align-items-center not-hover">
-                                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"> 5
+                                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"> <span class="color-secondary">5</span> 
                                                                         </li>
                                                                         <li class="twitter d-flex align-items-center not-hover">
-                                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon">  5
+                                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon">  <span class="color-secondary">5</span>
                                                                         </li>
                                                                         <li class="line d-flex align-items-center not-hover">
-                                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon">   5
+                                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon">   <span class="color-secondary">5</span>
                                                                         </li>
                                                                     </ul>
                                                                 </div>

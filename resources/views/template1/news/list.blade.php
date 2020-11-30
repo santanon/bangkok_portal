@@ -82,7 +82,7 @@
                                             <div class="col-lg-6">
                                                 <div class="content">
                                                     <div class="date">
-                                                        <span>ข่าววันที่ : 5 พ.ย.</span> <img src="{{ asset('template1/assets/images/icons/icon-new.png')}}" alt="icon">
+                                                        <span class="color-primary">ข่าววันที่ : 5 พ.ย.</span> <img src="{{ asset('template1/assets/images/icons/icon-new.png')}}" alt="icon">
                                                     </div>
                                                     <div class="desc-news">
                                                         <a href="/news-detail">
@@ -135,7 +135,7 @@
                                             <div class="col-lg-6">
                                                 <div class="content">
                                                     <div class="date">
-                                                        <span>ข่าววันที่ : 5 พ.ย.</span>
+                                                        <span class="color-primary">ข่าววันที่ : 5 พ.ย.</span>
                                                     </div>
                                                     <div class="desc-news">
                                                         <a href="/news-detail">
@@ -188,7 +188,7 @@
                                             <div class="col-lg-6">
                                                 <div class="content">
                                                     <div class="date">
-                                                        <span>ข่าววันที่ : 5 พ.ย.</span>
+                                                        <span class="color-primary">ข่าววันที่ : 5 พ.ย.</span>
                                                     </div>
                                                     <div class="desc-news">
                                                         <a href="/news-detail">
@@ -241,7 +241,7 @@
                                             <div class="col-lg-6">
                                                 <div class="content">
                                                     <div class="date">
-                                                        <span>ข่าววันที่ : 5 พ.ย.</span>
+                                                        <span class="color-primary">ข่าววันที่ : 5 พ.ย.</span>
                                                     </div>
                                                     <div class="desc-news">
                                                         <a href="/news-detail">
@@ -294,7 +294,7 @@
                                             <div class="col-lg-6">
                                                 <div class="content">
                                                     <div class="date">
-                                                        <span>ข่าววันที่ : 5 พ.ย.</span>
+                                                        <span class="color-primary">ข่าววันที่ : 5 พ.ย.</span>
                                                     </div>
                                                     <div class="desc-news">
                                                         <a href="/news-detail">
@@ -347,7 +347,7 @@
                                             <div class="col-lg-6">
                                                 <div class="content">
                                                     <div class="date">
-                                                        <span>ข่าววันที่ : 5 พ.ย.</span>
+                                                        <span class="color-primary">ข่าววันที่ : 5 พ.ย.</span>
                                                     </div>
                                                     <div class="desc-news">
                                                         <a href="/news-detail">
@@ -400,7 +400,7 @@
                                             <div class="col-lg-6">
                                                 <div class="content">
                                                     <div class="date">
-                                                        <span>ข่าววันที่ : 5 พ.ย.</span>
+                                                        <span class="color-primary">ข่าววันที่ : 5 พ.ย.</span>
                                                     </div>
                                                     <div class="desc-news">
                                                         <a href="/news-detail">

@@ -11907,11 +11907,6 @@ template {
 .banner-wrapper .slick-dots li.slick-active {
   background-color: #006600; }
 
-.group-section-content .section-content .inner-content .post-content .source-post {
-  color: #53954e; }
-  .group-section-content .section-content .inner-content .post-content .source-post span {
-    background-color: #53954e; }
-
 .group-section-content .section-content .inner-content .group-inner .date {
   background-color: #006600; }
   .group-section-content .section-content .inner-content .group-inner .date .text-onbottom {
@@ -11932,9 +11927,6 @@ template {
 .group-section-content .section-content .inner-content .main-content .sub-news .img-news .pin i {
   color: #006600; }
 
-.group-section-content .section-content .inner-content .main-content .sub-news .content .date span {
-  color: #006600; }
-
 .group-section-content .section-content .inner-content .main-content .sub-news:hover .content .desc-news a {
   color: #53954e; }
 
@@ -11944,19 +11936,11 @@ template {
 .group-section-content .section-content .inner-content .main-content .group-slide .list-item li:hover .item.-download .box-full {
   background-color: #53954e; }
 
-.group-section-content .section-content .inner-content .main-content .group-slide .list-item .item .left {
-  background-color: #006600; }
-  .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item .left .text-onbottom {
-    background-color: #53954e; }
-  .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item .left.active {
-    background-color: #006600; }
-  .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item .left .progress-content .progress:after {
-    border: 7px solid #006600; }
-  .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item .left .progress-content .progress .progress-bar {
-    border-color: #53954e; }
+.group-section-content .section-content .inner-content .main-content .group-slide .list-item .item .left .progress-content .progress:after {
+  border: 7px solid #006600; }
 
-.group-section-content .section-content .inner-content .main-content .group-slide .list-item .item .right .text-ontop {
-  color: #53954e; }
+.group-section-content .section-content .inner-content .main-content .group-slide .list-item .item .left .progress-content .progress .progress-bar {
+  border-color: #53954e; }
 
 .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item .right .text-onbottom.-link a {
   background-color: #006600; }
@@ -11967,12 +11951,6 @@ template {
 .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item.-album .cover-album .top-album .source {
   background-color: rgba(0, 102, 0, 0.8); }
 
-.group-section-content .section-content .inner-content .main-content .group-slide .list-item .item.-download .box-full {
-  background-color: #006600; }
-
-.group-section-content .section-content .inner-content .main-content .group-slide .list-item .item.-question .right .page-detail .title {
-  color: #006600; }
-
 .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item:hover .right .text-content a {
   color: #53954e; }
 
@@ -11982,31 +11960,12 @@ template {
 .group-section-content .section-content .inner-content .main-content .group-gallery .thumbnail-slider .slides li:hover .bg-layer {
   background-color: rgba(83, 149, 78, 0.5); }
 
-.group-section-content .section-content .inner-content .main-content .group-vote .score-wrapper {
-  background-color: #006600; }
-  .group-section-content .section-content .inner-content .main-content .group-vote .score-wrapper .percent-voter .progress .progress-bar {
-    background-color: #53954e; }
-
 .group-section-content .section-content .inner-content .main-content .group-editor a {
   color: #53954e; }
   .group-section-content .section-content .inner-content .main-content .group-editor a:hover {
     color: #006600; }
 
-.group-section-content .section-content .inner-content .main-content .group-list-downloadfile .item .left {
-  background-color: #006600; }
-  .group-section-content .section-content .inner-content .main-content .group-list-downloadfile .item .left .text-onbottom {
-    background-color: #53954e; }
-
 .group-section-content .section-content .inner-content .main-content .group-list-downloadfile .item:hover .right .text-content a {
-  color: #53954e; }
-
-.group-section-content .section-content .inner-content .main-content .group-social-share .shared-email .social-wrapper .text-social {
-  color: #53954e; }
-
-.group-section-content .section-content .inner-content .main-content .group-social-share .views-like .view-count {
-  color: #53954e; }
-
-.group-section-content .section-content .inner-content .main-content .group-social-share .views-like .like-count span {
   color: #53954e; }
 
 .group-section-content .section-content .inner-content .main-content .clendar-warpper .head-calendar .title-calendar .month-title {
@@ -12038,41 +11997,18 @@ template {
 
 .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .card-header {
   cursor: pointer; }
-  .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .card-header .card-header-item .icon-card-header {
-    background-color: #006600; }
   @media only screen and (max-width: 767px) {
     .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .card-header .card-header-item {
       background-color: #006600; } }
 
-.group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .collapse .card-body .show-view, .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .collapsing .card-body .show-view {
-  color: #53954e; }
-
 .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .collapse .card-body:after, .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .collapsing .card-body:after {
   border-color: #006600 transparent transparent transparent; }
-
-.group-section-content .section-content .inner-content .vote-comment-content .content .box-title .title-head {
-  color: #006600; }
-
-.group-section-content .section-content .inner-content .vote-comment-content .content .box-title .order-all {
-  color: #53954e; }
-
-.group-section-content .section-content .inner-content .vote-comment-content .content.-vote .list-choice-vote ul li .total-vote {
-  color: #53954e; }
-
-.group-section-content .section-content .inner-content .vote-comment-content .content.-vote .btn-choice-vote .btn.bg-color-primary {
-  background-color: #006600; }
-
-.group-section-content .section-content .inner-content .vote-comment-content .user-comment-wrapper ul li .list-comment .post-user .name {
-  color: #53954e; }
 
 .group-link-mainbkk a .text-bkk label {
   color: #006600; }
 
 .social-wrapper ul li a:hover {
   background-color: #006600; }
-
-.social-wrapper ul li.not-hover {
-  color: #53954e; }
 
 .input-custom.inp-calendar .icon-calendar i {
   color: #53954e; }
@@ -12360,9 +12296,6 @@ template {
 
 .input-custom .input-box:first-of-type {
   margin-top: 0; }
-
-.input-custom .text-inline {
-  color: #53954e; }
 
 .group-form-section .input-custom {
   margin-bottom: 30px; }
@@ -15717,7 +15650,6 @@ template {
 .social-wrapper .text-social {
   font-size: 16px;
   font-weight: 400;
-  color: #fff;
   margin-right: 10px; }
 
 .social-wrapper ul {
@@ -17475,7 +17407,7 @@ Due to the split circle of progress-left and progress right, we must use the ani
   .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .card-header .card-header-item .title-card-header {
     color: #fff; }
   .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .collapse .card-body:after, .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .collapsing .card-body:after {
-    left: 50%; } }
+    left: 45%; } }
 
 @media only screen and (max-width: 480px) {
   .group-section-content .section-content .inner-content .group-inner {

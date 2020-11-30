@@ -10,8 +10,8 @@
                             <div class="public-post">
                                 <i class="far fa-calendar"></i> 2 กรกฎาคม 2556
                             </div>
-                            <div class="source-post">
-                                แหล่งที่มา <span>PR BKK</span>
+                            <div class="source-post color-secondary">
+                                แหล่งที่มา <span class="bg-color-secondary">PR BKK</span>
                             </div>
                         </div>
                         <div class="main-content border-bottom">
@@ -190,7 +190,7 @@
                                     <div class="col-lg-6">
                                         <div class="item">
                                             <div class="left">
-                                                <div class="icon-content">
+                                                <div class="icon-content bg-color-primary">
                                                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                         width="42.2px" height="42.2px" viewBox="0 0 42.2 42.2" style="enable-background:new 0 0 42.2 42.2;" xml:space="preserve">                                                 
                                                         <g>
@@ -200,7 +200,7 @@
                                                         </g>
                                                     </svg>
                                                 </div>
-                                                <div class="text-onbottom">Download</div>
+                                                <div class="text-onbottom bg-color-secondary">Download</div>
                                             </div>
                                             <div class="right">
                                                 <div class="text-content">
@@ -214,7 +214,7 @@
                                     <div class="col-lg-6">
                                         <div class="item">
                                             <div class="left">
-                                                <div class="icon-content">
+                                                <div class="icon-content bg-color-primary">
                                                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                         width="42.2px" height="42.2px" viewBox="0 0 42.2 42.2" style="enable-background:new 0 0 42.2 42.2;" xml:space="preserve">                                                 
                                                         <g>
@@ -224,7 +224,7 @@
                                                         </g>
                                                     </svg>
                                                 </div>
-                                                <div class="text-onbottom">Download</div>
+                                                <div class="text-onbottom bg-color-secondary">Download</div>
                                             </div>
                                             <div class="right">
                                                 <div class="text-content">
@@ -256,16 +256,16 @@
                             <div class="group-social-share d-flex align-items-center justify-content-between">
                                 <div class="shared-email d-flex align-items-center">
                                     <div class="social-wrapper d-flex align-items-center">
-                                        <div class="text-social">Share</div>
+                                        <div class="text-social color-secondary">Share</div>
                                         <ul class="d-flex align-items-center">
                                             <li class="facebook d-flex align-items-center not-hover">
-                                                <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"><span>5</span> 
+                                                <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"><span class="color-secondary">5</span> 
                                             </li>
                                             <li class="twitter d-flex align-items-center not-hover">
-                                                <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon">  5
+                                                <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon"> <span class="color-secondary">5</span> 
                                             </li>
                                             <li class="line d-flex align-items-center not-hover">
-                                                <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon">   5
+                                                <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"> <span class="color-secondary">5</span> 
                                             </li>
                                         </ul>
                                     </div>
@@ -291,14 +291,14 @@
                                     </div>
                                 </div>
                                 <div class="views-like d-flex align-items-center">
-                                    <div class="view-count">
-                                        View : <span>1.5K</span>
+                                    <div class="view-count color-secondary">
+                                        View : <span class="color-secondary">1.5K</span>
                                     </div>
                                     <div class="like-count d-flex align-items-center">
                                         <div class="icon-like">
                                             <img src="{{ asset('template1/assets/images/icons/icon-like.png')}}" alt="icon">
                                         </div>
-                                        <span>1.2K</span>
+                                        <span class="color-secondary">1.2K</span>
                                     </div>
                                 </div>
                             </div>
@@ -321,7 +321,7 @@
                                                                 <label class="custom-control-label" for="customSwitch1">เห็นด้วยมาก</label>
                                                             </div>
                                                         </div>
-                                                        <div class="total-vote">(26%)</div>
+                                                        <div class="total-vote color-secondary">(26%)</div>
                                                     </li>
                                                     <li class="d-flex justify-content-between align-items-center">
                                                         <div class="input-custom">
@@ -330,7 +330,7 @@
                                                                 <label class="custom-control-label" for="customSwitch2">ปานกลาง</label>
                                                             </div>
                                                         </div>
-                                                        <div class="total-vote">(24%)</div>
+                                                        <div class="total-vote color-secondary">(24%)</div>
                                                     </li>
                                                     <li class="d-flex justify-content-between align-items-center">
                                                         <div class="input-custom">
@@ -339,7 +339,7 @@
                                                                 <label class="custom-control-label" for="customSwitch3">ไม่เห็นด้วย</label>
                                                             </div>
                                                         </div>
-                                                        <div class="total-vote">(0%)</div>
+                                                        <div class="total-vote color-secondary">(0%)</div>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -357,7 +357,7 @@
                                     <div class="content -comment">
                                         <div class="box-title d-flex justify-content-between align-items-center">
                                             <div class="title-head color-primary">ความคิดเห็น</div>
-                                            <div class="order-all">5 รายการ</div>
+                                            <div class="order-all color-secondary">5 รายการ</div>
                                         </div>
                                         <div class="sort-order d-flex justify-content-end align-items-center">
                                             <div class="text-order">เรียงลำดับตาม</div>

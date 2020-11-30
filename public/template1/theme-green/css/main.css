@@ -12173,7 +12173,8 @@ template {
 
 .btn-custom {
   width: 200px;
-  margin-top: 20px; }
+  margin-top: 20px;
+  text-align: right; }
   .btn-custom.width-full {
     width: 100%; }
   .btn-custom.mg-left-auto {

@@ -111,7 +111,7 @@
                                                             </div>
                                                         </li>
                                                     </ul>
-                                                    <div class="btn-custom bg-primary mg-left-auto">
+                                                    <div class="btn-custom mg-left-auto">
                                                         <div class="input-custom">
                                                             <input type="submit" value="VOTE" class="btn btn-primary">
                                                         </div>

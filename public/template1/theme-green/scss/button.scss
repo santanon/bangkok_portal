@@ -51,9 +51,12 @@
 .btn-custom{
     width: 200px;
     margin-top: 20px;
+    text-align: right;
+
     &.width-full{
         width: 100%;
     }
+    
     &.mg-left-auto{
         margin-left: auto;
     }

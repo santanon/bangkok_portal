@@ -131,6 +131,15 @@
                                             <div class="number">1120</div>
                                         </div>
                                     </div>
+                                    <div class="social-wrapper d-flex align-items-center">
+                                        <ul>
+                                            <li class="facebook">
+                                                <a href="" title="facebook">
+                                                    <img src="http://127.0.0.1:8000/template1/assets/images/icons/icon-social-facebook.svg" alt="icon">
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-4">
@@ -199,6 +208,15 @@
                                             <div class="number">1100 - 3</div>
                                         </div>
                                     </div>
+                                    <div class="social-wrapper d-flex align-items-center">
+                                        <ul>
+                                            <li class="facebook">
+                                                <a href="" title="facebook">
+                                                    <img src="http://127.0.0.1:8000/template1/assets/images/icons/icon-social-facebook.svg" alt="icon">
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-4">
@@ -215,6 +233,15 @@
                                             <div class="on">ภายใน</div>
                                             <div class="number">1100 - 3</div>
                                         </div>
+                                    </div>
+                                    <div class="social-wrapper d-flex align-items-center">
+                                        <ul>
+                                            <li class="facebook">
+                                                <a href="" title="facebook">
+                                                    <img src="http://127.0.0.1:8000/template1/assets/images/icons/icon-social-facebook.svg" alt="icon">
+                                                </a>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>

@@ -12212,8 +12212,8 @@ template {
     background-color: #006600;
     color: white; }
     .btn.btn-primary:hover, .btn.btn-primary:focus, .btn.btn-primary:active {
-      border-color: #53954e;
-      background-color: #53954e; }
+      border-color: #53954e !important;
+      background-color: #53954e !important; }
   .btn.btn-outline-dark {
     border: 1px solid #b1b1b1;
     color: #b1b1b1; }
@@ -15094,6 +15094,8 @@ template {
         line-height: 25px;
         font-weight: 400;
         color: #fff; }
+    .group-section-content .section-content .inner-content .main-content.-contact .list-item-gov .social-wrapper {
+      margin-top: 5px; }
   .group-section-content .section-content .inner-content .vote-comment-content {
     margin-top: 30px; }
     .group-section-content .section-content .inner-content .vote-comment-content .content .box-title .title-head {

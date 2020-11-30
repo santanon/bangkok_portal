@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PanelController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,12 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 /* CMS */
-Route::get('panel-admin', function () {
-    return view('panel.login');
-});
-Route::get('panel-admin/login', function () {
-    return view('panel.login');
-});
+Route::get('/', [PanelController::class,'login']);
+Route::get('panel-admin/login', [PanelController::class,'login']);
+ 
 Route::get('panel-admin/templatestep1', function(){
     return View::make('panel.templatestep1');
 });
@@ -35,7 +33,7 @@ Route::get('panel-admin/templatestep3', function(){
 
 
 /* Front */
-Route::get('/', function () {
+Route::get('/home', function () {
     return view('home');
 });
 Route::get('/coverpage', function () {

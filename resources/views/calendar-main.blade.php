@@ -133,8 +133,8 @@
 
 @include('template1/include.css_scripts')
 
-<link rel="stylesheet" href="{{ asset('template1/css/calendar/main.min.css')}}">
-<script type="text/javascript" src="{{ asset('template1/js/calendar/main.min.js') }}"></script>
+<link rel="stylesheet" href="{{ asset('template1/theme-green/css/calendar/main.min.css')}}">
+<script type="text/javascript" src="{{ asset('template1/theme-green/js/calendar/main.min.js') }}"></script>
 
 <script type="text/javascript">
     $(document).ready(function () {

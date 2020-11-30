@@ -118,8 +118,8 @@
         color: white;
 
         &:hover, &:focus, &:active{
-            border-color: $color-secondary;
-            background-color: $color-secondary;
+            border-color: $color-secondary !important;
+            background-color: $color-secondary !important;
         }
     }
 

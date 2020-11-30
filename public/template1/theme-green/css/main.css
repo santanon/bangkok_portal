@@ -12109,12 +12109,13 @@ template {
 
 .btn-custom {
   width: 200px;
-  margin-top: 20px;
-  text-align: right; }
+  margin-top: 20px; }
   .btn-custom.width-full {
     width: 100%; }
   .btn-custom.mg-left-auto {
     margin-left: auto; }
+  .btn-custom .input-custom {
+    text-align: right; }
 
 .btn-search {
   cursor: pointer; }

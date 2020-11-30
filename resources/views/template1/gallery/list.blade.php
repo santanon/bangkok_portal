@@ -58,7 +58,7 @@
                                         </div>
                                     </a>
                                     <div class="top-album">
-                                        <div class="source">
+                                        <div class="source bg-color-primary">
                                             <span>PR BKK</span>
                                         </div>
                                     </div>
@@ -92,7 +92,7 @@
                                         </div>
                                     </a>
                                     <div class="top-album">
-                                        <div class="source">
+                                        <div class="source bg-color-primary">
                                             <span>PR BKK</span>
                                         </div>
                                     </div>
@@ -126,7 +126,7 @@
                                         </div>
                                     </a>
                                     <div class="top-album">
-                                        <div class="source">
+                                        <div class="source bg-color-primary">
                                             <span>PR BKK</span>
                                         </div>
                                     </div>
@@ -160,7 +160,7 @@
                                         </div>
                                     </a>
                                     <div class="top-album">
-                                        <div class="source">
+                                        <div class="source bg-color-primary">
                                             <span>PR BKK</span>
                                         </div>
                                     </div>
@@ -195,7 +195,7 @@
                                         </div>
                                     </a>
                                     <div class="top-album">
-                                        <div class="source">
+                                        <div class="source bg-color-primary">
                                             <span>PR BKK</span>
                                         </div>
                                     </div>
@@ -229,7 +229,7 @@
                                         </div>
                                     </a>
                                     <div class="top-album">
-                                        <div class="source">
+                                        <div class="source bg-color-primary">
                                             <span>PR BKK</span>
                                         </div>
                                     </div>
@@ -263,7 +263,7 @@
                                         </div>
                                     </a>
                                     <div class="top-album">
-                                        <div class="source">
+                                        <div class="source bg-color-primary">
                                             <span>PR BKK</span>
                                         </div>
                                     </div>
@@ -297,7 +297,7 @@
                                         </div>
                                     </a>
                                     <div class="top-album">
-                                        <div class="source">
+                                        <div class="source bg-color-primary">
                                             <span>PR BKK</span>
                                         </div>
                                     </div>
@@ -332,7 +332,7 @@
                                         </div>
                                     </a>
                                     <div class="top-album">
-                                        <div class="source">
+                                        <div class="source bg-color-primary">
                                             <span>PR BKK</span>
                                         </div>
                                     </div>
@@ -366,7 +366,7 @@
                                         </div>
                                     </a>
                                     <div class="top-album">
-                                        <div class="source">
+                                        <div class="source bg-color-primary">
                                             <span>PR BKK</span>
                                         </div>
                                     </div>
@@ -400,7 +400,7 @@
                                         </div>
                                     </a>
                                     <div class="top-album">
-                                        <div class="source">
+                                        <div class="source bg-color-primary">
                                             <span>PR BKK</span>
                                         </div>
                                     </div>
@@ -434,7 +434,7 @@
                                         </div>
                                     </a>
                                     <div class="top-album">
-                                        <div class="source">
+                                        <div class="source bg-color-primary">
                                             <span>PR BKK</span>
                                         </div>
                                     </div>
@@ -469,7 +469,7 @@
                                         </div>
                                     </a>
                                     <div class="top-album">
-                                        <div class="source">
+                                        <div class="source bg-color-primary">
                                             <span>PR BKK</span>
                                         </div>
                                     </div>
@@ -503,7 +503,7 @@
                                         </div>
                                     </a>
                                     <div class="top-album">
-                                        <div class="source">
+                                        <div class="source bg-color-primary">
                                             <span>PR BKK</span>
                                         </div>
                                     </div>
@@ -537,7 +537,7 @@
                                         </div>
                                     </a>
                                     <div class="top-album">
-                                        <div class="source">
+                                        <div class="source bg-color-primary">
                                             <span>PR BKK</span>
                                         </div>
                                     </div>
@@ -571,7 +571,7 @@
                                         </div>
                                     </a>
                                     <div class="top-album">
-                                        <div class="source">
+                                        <div class="source bg-color-primary">
                                             <span>PR BKK</span>
                                         </div>
                                     </div>

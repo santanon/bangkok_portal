@@ -12112,12 +12112,13 @@ template {
 
 .btn-custom {
   width: 200px;
-  margin-top: 20px;
-  text-align: right; }
+  margin-top: 20px; }
   .btn-custom.width-full {
     width: 100%; }
   .btn-custom.mg-left-auto {
     margin-left: auto; }
+  .btn-custom .input-custom {
+    text-align: right; }
 
 .btn-search {
   cursor: pointer; }
@@ -12168,7 +12169,7 @@ template {
     width: 100%;
     padding: 10px;
     color: #333;
-    font-size: 16px;
+    font-size: 1.6rem;
     margin-bottom: 30px;
     border: none;
     border-bottom: 1px solid #999;
@@ -12198,7 +12199,7 @@ template {
     left: 0;
     padding: 10px;
     color: #333;
-    font-size: 16px;
+    font-size: 1.6rem;
     pointer-events: none;
     -webkit-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -12226,7 +12227,7 @@ template {
     box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
     background-repeat: no-repeat;
     background-position: right 3% center;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 400;
     color: #525252;
     padding-right: 55px;
@@ -12239,7 +12240,7 @@ template {
       font-weight: 400; }
 
 .input-custom .custom-control .custom-control-label {
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 400;
   color: #b5b5b5;
   cursor: pointer; }
@@ -12258,9 +12259,26 @@ template {
   -webkit-box-shadow: none;
   box-shadow: none; }
 
+.input-custom .custom-control.custom-switch {
+  padding-left: 3.5rem; }
+  .input-custom .custom-control.custom-switch .custom-control-label:before {
+    left: -3.5rem;
+    width: 3rem;
+    height: 2rem;
+    border-radius: 2.25rem; }
+  .input-custom .custom-control.custom-switch .custom-control-label:after {
+    left: calc(-3.5rem + 2px);
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%; }
+  .input-custom .custom-control.custom-switch .custom-control-input:checked ~ .custom-control-label:after {
+    -webkit-transform: translateX(1rem);
+    -ms-transform: translateX(1rem);
+    transform: translateX(1rem); }
+
 .input-custom .title-field {
-  font-size: 18px;
-  line-height: 25px;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
   font-weight: 400;
   color: #525252; }
 
@@ -12268,7 +12286,7 @@ template {
   position: relative;
   width: 100%;
   height: 40px;
-  font-size: 16px;
+  font-size: 1.6rem;
   border: none;
   background-color: #fff;
   padding: 0 10px;
@@ -12291,7 +12309,7 @@ template {
   border: 1px solid #cfd1d4;
   padding: 10px 10px;
   color: #525252;
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 400;
   -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2); }
@@ -12345,7 +12363,7 @@ template {
   border-radius: 0px;
   background-color: #333;
   color: #f5f5f5;
-  font-size: 16px;
+  font-size: 1.6rem;
   width: 155px; }
 
 .manage-upload .btn-save {
@@ -12440,11 +12458,11 @@ template {
         vertical-align: middle;
         padding: 0 10px;
         color: #fff;
-        font-size: 14px;
+        font-size: 1.4rem;
         font-weight: 300; }
         .panel-header .header-top .head-top-wrapper .left ul li a {
           color: #fff;
-          font-size: 14px;
+          font-size: 1.4rem;
           font-weight: 300; }
           .panel-header .header-top .head-top-wrapper .left ul li a:hover {
             text-decoration: none; }
@@ -12453,7 +12471,7 @@ template {
           -o-transition: none;
           transition: none; }
           .panel-header .header-top .head-top-wrapper .left ul li.sign-out a i {
-            font-size: 12px;
+            font-size: 12rem;
             margin-right: 3px;
             -webkit-transition: none;
             -o-transition: none;
@@ -12471,13 +12489,13 @@ template {
         .panel-header .header-top .head-top-wrapper .right ul li a {
           color: #fff;
           text-transform: uppercase;
-          font-size: 14px;
+          font-size: 1.4rem;
           font-weight: 300;
           -webkit-transition: none;
           -o-transition: none;
           transition: none; }
           .panel-header .header-top .head-top-wrapper .right ul li a i {
-            font-size: 12px;
+            font-size: 12rem;
             margin-right: 3px;
             -webkit-transition: none;
             -o-transition: none;
@@ -12531,8 +12549,8 @@ template {
           font-size: 18px;
           font-weight: 300; }
           .panel-header .header-main .step-template ul li .step .text-step span {
-            font-size: 14px;
-            line-height: 14px;
+            font-size: 1.4rem;
+            line-height: 1.4rem;
             font-weight: 200;
             display: block; }
   @media only screen and (max-width: 767px) {
@@ -12572,7 +12590,7 @@ template {
         min-height: 34px; }
         #header-wrapper .header-lg .account-wrapper ul li a {
           color: #fff;
-          font-size: 16px;
+          font-size: 1.6rem;
           font-weight: 300;
           opacity: 0.7;
           -webkit-transition: all 0.3s ease;
@@ -12722,11 +12740,11 @@ template {
           cursor: pointer; }
           #header-wrapper .header-lg .tools-web ul .lang-site span {
             color: #fff;
-            font-size: 16px;
+            font-size: 1.6rem;
             font-weight: 300; }
           #header-wrapper .header-lg .tools-web ul .lang-site i {
             color: #fff;
-            font-size: 14px;
+            font-size: 1.4rem;
             position: relative;
             right: -5px;
             top: -2px;
@@ -12757,7 +12775,7 @@ template {
               align-items: center; }
               #header-wrapper .header-lg .tools-web ul .lang-site .multi-lang li a {
                 color: #fff;
-                font-size: 16px;
+                font-size: 1.6rem;
                 font-weight: 300;
                 width: 100%;
                 display: block;
@@ -12790,9 +12808,9 @@ template {
             -webkit-transition: all 0.3s ease;
             -o-transition: all 0.3s ease;
             transition: all 0.3s ease;
-            font-size: 16px;
+            font-size: 1.6rem;
             font-weight: 400;
-            line-height: 20px; }
+            line-height: 2rem; }
             #header-wrapper .header-lg .menu-top-wrapper ul li a:hover {
               text-decoration: none;
               opacity: 1; }
@@ -12807,7 +12825,7 @@ template {
           #header-wrapper .header-lg .menu-main-wrapper .sub-menu-main li a {
             display: block;
             color: #fff;
-            font-size: 20px;
+            font-size: 2.0rem;
             font-weight: 400;
             padding: 10px 15px; }
             #header-wrapper .header-lg .menu-main-wrapper .sub-menu-main li a:hover {
@@ -12835,16 +12853,16 @@ template {
             min-width: 100px;
             margin: 0;
             list-style: none;
-            font-size: 15px;
+            font-size: 1.5rem;
             text-align: left;
             background-clip: padding-box;
             z-index: 1000;
             padding: 15px;
             background-color: #f8f8f8; }
             #header-wrapper .header-lg .menu-main-wrapper .sub-menu-main li .sub-menu-lv2 .list-menu-lv2 a {
-              font-size: 20px;
+              font-size: 2.0rem;
               font-weight: 400;
-              line-height: 25px;
+              line-height: 2.5rem;
               color: #525252;
               padding: 15px; }
               #header-wrapper .header-lg .menu-main-wrapper .sub-menu-main li .sub-menu-lv2 .list-menu-lv2 a:hover {
@@ -12860,9 +12878,9 @@ template {
               background-color: #e5e5e5;
               padding: 8px 0; }
               #header-wrapper .header-lg .menu-main-wrapper .sub-menu-main li .sub-menu-lv2 .list-menu-lv2 .sub-menu-lv3 .list-menu-lv3 a {
-                font-size: 16px;
+                font-size: 1.6rem;
                 font-weight: 400;
-                line-height: 18px;
+                line-height: 1.8rem;
                 color: #525252;
                 padding: 8px 10px; }
                 #header-wrapper .header-lg .menu-main-wrapper .sub-menu-main li .sub-menu-lv2 .list-menu-lv2 .sub-menu-lv3 .list-menu-lv3 a:hover {
@@ -12928,12 +12946,12 @@ template {
               height: 60px; }
               #header-wrapper .header-lg .section-search-wrapper .group-search .input-custom .input-box input:focus ~ label {
                 top: -20px;
-                font-size: 16px; }
+                font-size: 1.6rem; }
               #header-wrapper .header-lg .section-search-wrapper .group-search .input-custom .input-box input:valid ~ label {
                 top: -20px;
-                font-size: 16px; }
+                font-size: 1.6rem; }
             #header-wrapper .header-lg .section-search-wrapper .group-search .input-custom .input-box label {
-              font-size: 20px;
+              font-size: 2.0rem;
               top: 9px; }
           #header-wrapper .header-lg .section-search-wrapper .group-search .input-custom .btn-search {
             width: 40px;
@@ -13020,7 +13038,7 @@ template {
         background-color: #53954e;
         padding: 8px 10px; }
         #header-wrapper .header-sm .logo-mobile .menu-sizefonts-wrapper .bar-menu .icon-menu i {
-          font-size: 30px;
+          font-size: 3rem;
           color: #fff; }
       #header-wrapper .header-sm .logo-mobile .menu-sizefonts-wrapper .tools-sizefonts {
         padding-right: 10px; }
@@ -13111,11 +13129,11 @@ template {
       justify-content: flex-end;
       margin-bottom: 10px; }
       .canvas-menu-wrapper .canvas-menu .canvas-header .close-menu {
-        font-size: 18px;
+        font-size: 1.8rem;
         font-weight: 400;
         color: #525252; }
         .canvas-menu-wrapper .canvas-menu .canvas-header .close-menu i {
-          font-size: 16px;
+          font-size: 1.6rem;
           color: #525252;
           margin-left: 5px; }
     .canvas-menu-wrapper .canvas-menu .canvas-lang {
@@ -13137,9 +13155,9 @@ template {
           list-style: none;
           border-right: 1px solid #eaeaea; }
           .canvas-menu-wrapper .canvas-menu .canvas-lang ul li a {
-            font-size: 18px;
+            font-size: 1.8rem;
             font-weight: 400;
-            line-height: 25px;
+            line-height: 2.5rem;
             color: #525252;
             padding: 5px 8px;
             display: block; }
@@ -13180,10 +13198,10 @@ template {
                 display: block;
                 width: 100%; }
             .canvas-menu-wrapper .canvas-menu .canvas-top ul li .group-canvas-top a .text-top {
-              font-size: 18px;
+              font-size: 1.8rem;
               font-weight: 400;
               color: #525252;
-              line-height: 20px; }
+              line-height: 2rem; }
     .canvas-menu-wrapper .canvas-menu .canvas-list-menu .nav-menu-MB {
       margin: 0;
       padding: 0;
@@ -13191,8 +13209,8 @@ template {
       .canvas-menu-wrapper .canvas-menu .canvas-list-menu .nav-menu-MB li {
         list-style: none; }
         .canvas-menu-wrapper .canvas-menu .canvas-list-menu .nav-menu-MB li a {
-          font-size: 18px;
-          line-height: 25px;
+          font-size: 1.8rem;
+          line-height: 2.5rem;
           font-weight: 400;
           color: #fff;
           display: block;
@@ -13260,7 +13278,7 @@ template {
               background-color: #e6e6e6; }
               .canvas-menu-wrapper .canvas-menu .canvas-list-menu .nav-menu-MB li.open .menu-lv2 li.open .menu-lv3 li a {
                 background-color: #e6e6e6;
-                font-size: 16px;
+                font-size: 1.6rem;
                 font-weight: 400;
                 color: #525252; }
               .canvas-menu-wrapper .canvas-menu .canvas-list-menu .nav-menu-MB li.open .menu-lv2 li.open .menu-lv3 li:first-child {
@@ -13293,7 +13311,7 @@ template {
   bottom: 0;
   background-color: #F7F7F7;
   padding: 5px 15px;
-  font-size: 14px;
+  font-size: 1.4rem;
   z-index: 9; }
 
 #footer-wrapper {
@@ -13302,12 +13320,12 @@ template {
   #footer-wrapper .group-footer {
     padding: 20px 0; }
     #footer-wrapper .group-footer .title-footer .title {
-      font-size: 36px;
+      font-size: 3.6rem;
       font-weight: 500;
       margin-bottom: 0;
       color: #fff; }
     #footer-wrapper .group-footer .title-footer .desc {
-      font-size: 16px;
+      font-size: 1.6rem;
       font-weight: 400;
       color: #fff; }
     #footer-wrapper .group-footer .group-content-footer {
@@ -13320,13 +13338,13 @@ template {
       #footer-wrapper .group-footer .group-content-footer .icon-content {
         margin-right: 10px; }
       #footer-wrapper .group-footer .group-content-footer .text-content {
-        font-size: 20px;
+        font-size: 2rem;
         font-weight: 400;
-        line-height: 25px;
+        line-height: 2.4rem;
         color: #fff; }
         #footer-wrapper .group-footer .group-content-footer .text-content a.link-tel {
           display: block;
-          font-size: 32px;
+          font-size: 3.2rem;
           font-weight: 500;
           color: #fff;
           margin-top: 10px;
@@ -13359,7 +13377,7 @@ template {
           #footer-wrapper .group-footer .footer-bottom .sitemap ul li:last-child {
             padding-right: 0; }
           #footer-wrapper .group-footer .footer-bottom .sitemap ul li a {
-            font-size: 16px;
+            font-size: 1.6rem;
             font-weight: 400;
             color: #fff;
             opacity: 0.7;
@@ -13370,7 +13388,7 @@ template {
               opacity: 1;
               text-decoration: none; }
       #footer-wrapper .group-footer .footer-bottom .copyright {
-        font-size: 16px;
+        font-size: 1.6rem;
         font-weight: 400;
         color: #fff; }
 
@@ -13396,14 +13414,14 @@ template {
 
 @media only screen and (max-width: 992px) {
   #footer-wrapper .group-footer .title-footer .title {
-    font-size: 28px; }
+    font-size: 2.8rem; }
   #footer-wrapper .group-footer .group-content-footer {
     margin-bottom: 15px; }
     #footer-wrapper .group-footer .group-content-footer .text-content {
-      font-size: 16px;
-      line-height: 20px; }
+      font-size: 1.6rem;
+      line-height: 2rem; }
       #footer-wrapper .group-footer .group-content-footer .text-content a.link-tel {
-        font-size: 24px;
+        font-size: 2.4rem;
         margin-bottom: 0; }
   #footer-wrapper .group-footer .footer-bottom {
     -ms-flex-wrap: wrap;
@@ -13552,7 +13570,7 @@ template {
           padding: 8px 15px;
           margin-right: 10px; }
           .modal .modal-dialog .modal-content .modal-body .group-modal .section-btn ul li a {
-            font-size: 14px;
+            font-size: 1.4rem;
             font-weight: 400;
             color: #fff; }
             .modal .modal-dialog .modal-content .modal-body .group-modal .section-btn ul li a:hover {
@@ -13562,12 +13580,12 @@ template {
     .modal .modal-dialog .modal-content .modal-body .group-modal .text-modal {
       background-color: #fff;
       padding: 15px;
-      font-size: 16px;
+      font-size: 1.6rem;
       font-weight: 400;
-      line-height: 25px;
+      line-height: 2.4rem;
       color: #525252; }
       .modal .modal-dialog .modal-content .modal-body .group-modal .text-modal.text-alert-system {
-        font-size: 20px; }
+        font-size: 2rem; }
         .modal .modal-dialog .modal-content .modal-body .group-modal .text-modal.text-alert-system i {
           font-size: 50px;
           margin-right: 10px; }
@@ -13701,7 +13719,7 @@ template {
     -ms-flex-align: center;
     align-items: center; }
     .group-section-breadcrumb nav ol li a {
-      font-size: 16px;
+      font-size: 1.6rem;
       font-weight: 400;
       color: #525252;
       opacity: 0.7; }
@@ -13709,12 +13727,12 @@ template {
       color: #525252; }
   .group-section-breadcrumb nav ol .breadcrumb-item + .breadcrumb-item:before {
     font-family: 'Font Awesome 5 Free';
-    font-size: 12px;
+    font-size: 1.2rem;
     font-weight: 900;
     content: '\f061'; }
   .group-section-breadcrumb nav ol .breadcrumb-item:last-child:after {
     font-family: 'Font Awesome 5 Free';
-    font-size: 12px;
+    font-size: 1.2rem;
     font-weight: 900;
     content: '\f061';
     -webkit-transform: rotate(45deg);
@@ -13739,14 +13757,15 @@ template {
     justify-content: space-between;
     margin-bottom: 20px; }
     .group-section-content .section-content .inner-content .top-content .group-text .title {
-      font-size: 36px;
-      line-height: 36px;
-      font-weight: 500;
-      margin: 0; }
+      margin: 0 0 5px;
+      font-size: 3.6rem;
+      line-height: 4rem;
+      font-weight: 500; }
     .group-section-content .section-content .inner-content .top-content .group-text .desc {
-      font-size: 16px;
-      font-weight: 400;
-      margin: 0; }
+      margin: 0;
+      font-size: 1.6rem;
+      line-height: 2rem;
+      font-weight: 400; }
     @media only screen and (max-width: 768px) {
       .group-section-content .section-content .inner-content .top-content {
         -ms-flex-wrap: wrap;
@@ -13759,14 +13778,14 @@ template {
   .group-section-content .section-content .inner-content .post-content {
     margin-bottom: 40px; }
     .group-section-content .section-content .inner-content .post-content .public-post {
-      font-size: 18px;
+      font-size: 1.8rem;
       font-weight: 400;
       color: #525252; }
       .group-section-content .section-content .inner-content .post-content .public-post i {
-        font-size: 14px;
+        font-size: 1.4rem;
         color: #525252; }
     .group-section-content .section-content .inner-content .post-content .source-post {
-      font-size: 18px;
+      font-size: 1.8rem;
       font-weight: 400; }
       .group-section-content .section-content .inner-content .post-content .source-post span {
         color: #fff;
@@ -13795,7 +13814,7 @@ template {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
-        font-size: 30px;
+        font-size: 3rem;
         font-weight: 500;
         height: 100%;
         color: #fff; }
@@ -13805,7 +13824,7 @@ template {
         width: 100%;
         color: #fff;
         text-align: center;
-        font-size: 20px;
+        font-size: 2rem;
         font-weight: 400; }
     .group-section-content .section-content .inner-content .group-inner .content {
       padding-left: 20px; }
@@ -13822,7 +13841,7 @@ template {
     .group-section-content .section-content .inner-content .main-content .group-back a {
       border: 1px solid #b1b1b1;
       padding: 10px 15px;
-      font-size: 16px;
+      font-size: 1.6rem;
       font-weight: 400;
       color: #b1b1b1;
       display: block;
@@ -13849,7 +13868,7 @@ template {
       .group-section-content .section-content .inner-content .main-content .main-news .content-news-main .date {
         margin-bottom: 10px; }
         .group-section-content .section-content .inner-content .main-content .main-news .content-news-main .date span {
-          font-size: 14px;
+          font-size: 1.4rem;
           font-weight: 400; }
       .group-section-content .section-content .inner-content .main-content .main-news .content-news-main .desc-news {
         display: -webkit-box;
@@ -13861,9 +13880,9 @@ template {
         text-overflow: ellipsis;
         margin-bottom: 15px; }
         .group-section-content .section-content .inner-content .main-content .main-news .content-news-main .desc-news a {
-          font-size: 20px;
+          font-size: 2rem;
           font-weight: 400;
-          line-height: 25px;
+          line-height: 2.4rem;
           color: #525252;
           -webkit-transition: all 0.3s ease;
           -o-transition: all 0.3s ease;
@@ -13885,7 +13904,7 @@ template {
         display: block;
         text-align: center;
         color: #fff;
-        font-size: 16px;
+        font-size: 1.6rem;
         font-weight: 400;
         padding: 10px 15px; }
         .group-section-content .section-content .inner-content .main-content .main-news .read-news-outer a:hover {
@@ -13918,7 +13937,7 @@ template {
         top: 10px;
         right: 10px; }
         .group-section-content .section-content .inner-content .main-content .sub-news .img-news .pin i {
-          font-size: 20px; }
+          font-size: 2rem; }
       .group-section-content .section-content .inner-content .main-content .sub-news .img-news .read-news-outer {
         position: absolute;
         width: 145px;
@@ -13937,7 +13956,7 @@ template {
           display: block;
           text-align: center;
           color: #fff;
-          font-size: 16px;
+          font-size: 1.6rem;
           font-weight: 400;
           padding: 10px 15px; }
           .group-section-content .section-content .inner-content .main-content .sub-news .img-news .read-news-outer a:hover {
@@ -13947,7 +13966,7 @@ template {
       .group-section-content .section-content .inner-content .main-content .sub-news .content .date {
         margin-bottom: 10px; }
         .group-section-content .section-content .inner-content .main-content .sub-news .content .date span {
-          font-size: 14px;
+          font-size: 1.4rem;
           font-weight: 400; }
       .group-section-content .section-content .inner-content .main-content .sub-news .content .desc-news {
         display: -webkit-box;
@@ -13959,9 +13978,9 @@ template {
         text-overflow: ellipsis;
         margin-bottom: 15px; }
         .group-section-content .section-content .inner-content .main-content .sub-news .content .desc-news a {
-          font-size: 20px;
+          font-size: 2rem;
           font-weight: 400;
-          line-height: 25px;
+          line-height: 2.4rem;
           color: #525252;
           -webkit-transition: all 0.3s ease;
           -o-transition: all 0.3s ease;
@@ -14101,7 +14120,7 @@ template {
         -ms-flex: 0 0 140px;
         flex: 0 0 140px; }
         .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item .left .text-content {
-          font-size: 30px;
+          font-size: 3rem;
           font-weight: 500;
           display: -webkit-box;
           display: -ms-flexbox;
@@ -14120,7 +14139,7 @@ template {
           width: 100%;
           color: #fff;
           text-align: center;
-          font-size: 20px;
+          font-size: 2rem;
           font-weight: 400; }
         .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item .left .icon-content {
           display: -webkit-box;
@@ -14203,9 +14222,9 @@ template {
             display: -ms-flexbox;
             display: flex;
             border-radius: 50%;
-            font-size: 1rem;
+            font-size: 2rem;
+            line-height: 2rem;
             text-align: center;
-            line-height: 20px;
             -webkit-box-align: center;
             -ms-flex-align: center;
             align-items: center;
@@ -14217,12 +14236,13 @@ template {
             color: #fff;
             font-weight: 400; }
             .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item .left .progress-content .progress .progress-value span {
-              font-size: 12px;
+              font-size: 1.2rem;
               text-transform: uppercase; }
         .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item .left .progress-content .total-people {
           position: absolute;
           width: 100%;
-          font-size: 14px;
+          font-size: 1.8rem;
+          line-height: 2rem;
           font-weight: 400;
           color: #fff;
           text-align: center;
@@ -14242,7 +14262,7 @@ template {
         align-items: center; }
         .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item .right .text-ontop {
           display: block;
-          font-size: 14px;
+          font-size: 1.4rem;
           font-weight: 400;
           margin-bottom: 5px; }
         .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item .right .text-content {
@@ -14253,9 +14273,9 @@ template {
           -o-text-overflow: ellipsis;
           text-overflow: ellipsis; }
           .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item .right .text-content a {
-            font-size: 20px;
+            font-size: 2rem;
             font-weight: 400;
-            line-height: 25px;
+            line-height: 2.4rem;
             color: #525252;
             -webkit-transition: all 0.3s ease;
             -o-transition: all 0.3s ease;
@@ -14267,14 +14287,14 @@ template {
           bottom: 0;
           width: 100%;
           color: #525252;
-          font-size: 16px;
+          font-size: 1.6rem;
           font-weight: 400; }
           .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item .right .text-onbottom i {
-            font-size: 14px;
+            font-size: 1.4rem;
             margin-right: 5px; }
           .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item .right .text-onbottom.-link a {
             color: #fff;
-            font-size: 16px;
+            font-size: 1.6rem;
             padding: 3px 10px;
             display: inline-block; }
             .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item .right .text-onbottom.-link a:hover {
@@ -14340,8 +14360,8 @@ template {
               transition: all 0.5s ease-in-out; }
               .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item.-album .cover-album .top-album .source span {
                 display: block;
-                font-size: 16px;
-                line-height: 20px;
+                font-size: 1.6rem;
+                line-height: 2rem;
                 font-weight: 400;
                 color: #fff;
                 display: -webkit-box;
@@ -14359,8 +14379,8 @@ template {
             padding: 5px 15px;
             width: 100%;
             text-align: center;
-            min-height: 10px;
-            height: 28px;
+            min-height: 1rem;
+            height: 2.8rem;
             left: 0;
             bottom: -100%;
             -webkit-transition: all 0.5s ease;
@@ -14372,8 +14392,8 @@ template {
               position: relative;
               top: -3px; }
             .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item.-album .cover-album .caption-album span {
-              font-size: 16px;
-              line-height: 18px;
+              font-size: 1.6rem;
+              line-height: 1.8rem;
               font-weight: 400;
               color: #fff;
               display: -webkit-box;
@@ -14399,14 +14419,14 @@ template {
         .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item.-question .right .page-detail {
           display: block; }
           .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item.-question .right .page-detail .title {
-            font-size: 36px;
-            line-height: 36px;
+            font-size: 3.6rem;
+            line-height: 3.6rem;
             font-weight: 500;
             margin-bottom: 30px; }
           .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item.-question .right .page-detail p {
-            font-size: 20px;
+            font-size: 2rem;
             font-weight: 400;
-            line-height: 25px;
+            line-height: 2.4rem;
             color: #525252; }
       .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item.-download .box-full {
         text-align: center;
@@ -14441,9 +14461,9 @@ template {
             stroke-width: 2;
             stroke-miterlimit: 10; }
         .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item.-download .box-full a .text-content {
-          font-size: 20px;
+          font-size: 2rem;
           font-weight: 400;
-          line-height: 25px;
+          line-height: 2.4rem;
           color: #fff;
           -webkit-transition: all 0.3s ease;
           -o-transition: all 0.3s ease;
@@ -14461,11 +14481,11 @@ template {
     padding: 20px; }
     .group-section-content .section-content .inner-content .main-content .group-vote .score-wrapper .text-score .num-vote {
       color: #fff;
-      font-size: 36px;
+      font-size: 3.6rem;
       font-weight: 500; }
     .group-section-content .section-content .inner-content .main-content .group-vote .score-wrapper .text-score .text-vote {
       color: #fff;
-      font-size: 20px;
+      font-size: 2rem;
       font-weight: 400; }
     .group-section-content .section-content .inner-content .main-content .group-vote .score-wrapper .percent-voter {
       background-color: #fff;
@@ -14474,21 +14494,21 @@ template {
       .group-section-content .section-content .inner-content .main-content .group-vote .score-wrapper .percent-voter .progress {
         height: 100%;
         border-radius: 0;
-        line-height: 25px; }
+        line-height: 2.4rem; }
         .group-section-content .section-content .inner-content .main-content .group-vote .score-wrapper .percent-voter .progress .progress-bar {
           color: #fff;
-          font-size: 20px;
+          font-size: 2rem;
           font-weight: 400; }
           .group-section-content .section-content .inner-content .main-content .group-vote .score-wrapper .percent-voter .progress .progress-bar span {
-            font-size: 14px;
+            font-size: 1.4rem;
             font-weight: 400; }
   .group-section-content .section-content .inner-content .main-content .group-vote .question-choice {
     background-color: #fff;
     padding: 20px;
     position: relative; }
     .group-section-content .section-content .inner-content .main-content .group-vote .question-choice .text-question {
-      font-size: 20px;
-      line-height: 25px;
+      font-size: 2rem;
+      line-height: 2.4rem;
       font-weight: 400;
       color: #525252; }
     .group-section-content .section-content .inner-content .main-content .group-vote .question-choice .choice-question ul {
@@ -14624,9 +14644,9 @@ template {
         .group-section-content .section-content .inner-content .main-content .group-vdo .content-vdo video:focus, .group-section-content .section-content .inner-content .main-content .group-vdo .content-vdo iframe:focus {
           outline: none; }
   .group-section-content .section-content .inner-content .main-content .group-editor {
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 400;
-    line-height: 25px;
+    line-height: 2.4rem;
     color: #525252;
     margin-bottom: 30px; }
     .group-section-content .section-content .inner-content .main-content .group-editor table {
@@ -14657,7 +14677,7 @@ template {
         -ms-flex: 0 0 140px;
         flex: 0 0 140px; }
         .group-section-content .section-content .inner-content .main-content .group-list-downloadfile .item .left .text-content {
-          font-size: 30px;
+          font-size: 3rem;
           font-weight: 500;
           display: -webkit-box;
           display: -ms-flexbox;
@@ -14676,7 +14696,7 @@ template {
           width: 100%;
           color: #fff;
           text-align: center;
-          font-size: 20px;
+          font-size: 2rem;
           font-weight: 400; }
         .group-section-content .section-content .inner-content .main-content .group-list-downloadfile .item .left .icon-content {
           display: -webkit-box;
@@ -14710,7 +14730,7 @@ template {
         align-items: center; }
         .group-section-content .section-content .inner-content .main-content .group-list-downloadfile .item .right .text-ontop {
           display: block;
-          font-size: 14px;
+          font-size: 1.4rem;
           font-weight: 400;
           margin-bottom: 5px; }
         .group-section-content .section-content .inner-content .main-content .group-list-downloadfile .item .right .text-content {
@@ -14721,9 +14741,9 @@ template {
           -o-text-overflow: ellipsis;
           text-overflow: ellipsis; }
           .group-section-content .section-content .inner-content .main-content .group-list-downloadfile .item .right .text-content a {
-            font-size: 20px;
+            font-size: 2rem;
             font-weight: 400;
-            line-height: 25px;
+            line-height: 2.4rem;
             color: #525252;
             -webkit-transition: all 0.3s ease;
             -o-transition: all 0.3s ease;
@@ -14773,12 +14793,12 @@ template {
     .group-section-content .section-content .inner-content .main-content .group-social-share .shared-email .email-link .item .text-email-link {
       float: left;
       color: #525252;
-      font-size: 18px;
+      font-size: 1.8rem;
       font-weight: 400; }
   .group-section-content .section-content .inner-content .main-content .group-social-share .views-like .view-count {
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 400;
-    line-height: 25px;
+    line-height: 2.4rem;
     margin-right: 15px; }
   .group-section-content .section-content .inner-content .main-content .group-social-share .views-like .like-count .icon-like {
     position: relative;
@@ -14799,7 +14819,7 @@ template {
       background-color: #006600; }
     .group-section-content .section-content .inner-content .main-content .group-social-share .views-like .like-count .icon-like:after {
       width: 35px;
-      font-size: 18px;
+      font-size: 1.8rem;
       font-weight: 400;
       line-height: 35px;
       color: #53954e;
@@ -14809,9 +14829,9 @@ template {
       left: 100%;
       top: 0; }
   .group-section-content .section-content .inner-content .main-content .group-social-share .views-like .like-count span {
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 400;
-    line-height: 25px; }
+    line-height: 2.4rem; }
   .group-section-content .section-content .inner-content .main-content .group-form-section {
     margin-top: 30px; }
     .group-section-content .section-content .inner-content .main-content .group-form-section .topic-form {
@@ -14820,7 +14840,7 @@ template {
       .group-section-content .section-content .inner-content .main-content .group-form-section .topic-form .order-topic {
         margin-bottom: 20px; }
         .group-section-content .section-content .inner-content .main-content .group-form-section .topic-form .order-topic .title-article {
-          font-size: 18px;
+          font-size: 1.8rem;
           font-weight: 400;
           color: #525252;
           padding-bottom: 5px;
@@ -14839,11 +14859,11 @@ template {
       -ms-flex-align: center;
       align-items: center; }
       .group-section-content .section-content .inner-content .main-content .clendar-warpper .head-calendar .title-calendar .month-title {
-        font-size: 26px;
+        font-size: 2.6rem;
         font-weight: 400;
         margin-right: 10px; }
       .group-section-content .section-content .inner-content .main-content .clendar-warpper .head-calendar .title-calendar .year-title {
-        font-size: 26px;
+        font-size: 2.6rem;
         font-weight: 400; }
     .group-section-content .section-content .inner-content .main-content .clendar-warpper .head-calendar .calendar-wrapper-btn {
       text-align: right; }
@@ -14893,9 +14913,9 @@ template {
   .group-section-content .section-content .inner-content .main-content .clendar-warpper #calendar .fc-daygrid-day.fc-day-today {
     background-color: #fff; }
   .group-section-content .section-content .inner-content .main-content .page-list-item-wrapper .topic-category {
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 400;
-    line-height: 25px;
+    line-height: 2.4rem;
     color: #fff;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -14966,8 +14986,8 @@ template {
             stroke-miterlimit: 10;
             vertical-align: bottom; }
       .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .card-header .card-header-item .title-card-header {
-        font-size: 20px;
-        line-height: 25px;
+        font-size: 2rem;
+        line-height: 2.4rem;
         font-weight: 400;
         color: #525252;
         padding: 15px 20px; }
@@ -14976,14 +14996,14 @@ template {
       padding: 20px; }
       .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .collapse .card-body .show-view, .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .collapsing .card-body .show-view {
         position: relative;
-        font-size: 18px;
+        font-size: 1.8rem;
         font-weight: 400;
-        line-height: 25px;
+        line-height: 2.4rem;
         margin-bottom: 10px; }
       .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .collapse .card-body .content, .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .collapsing .card-body .content {
-        font-size: 18px;
+        font-size: 1.8rem;
         font-weight: 400;
-        line-height: 25px;
+        line-height: 2.4rem;
         color: #525252; }
       .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .collapse .card-body:after, .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .collapsing .card-body:after {
         content: '';
@@ -14997,7 +15017,7 @@ template {
   .group-section-content .section-content .inner-content .main-content.-contact .contact-tel img {
     margin-right: 5px; }
   .group-section-content .section-content .inner-content .main-content.-contact .contact-tel a {
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 400;
     color: #525252; }
   .group-section-content .section-content .inner-content .main-content.-contact .iframe-map {
@@ -15008,9 +15028,9 @@ template {
   .group-section-content .section-content .inner-content .main-content.-contact .list-item-gov {
     margin-bottom: 30px; }
     .group-section-content .section-content .inner-content .main-content.-contact .list-item-gov .title-gov {
-      font-size: 18px;
+      font-size: 1.8rem;
       font-weight: 400;
-      line-height: 25px;
+      line-height: 2.4rem;
       color: #525252;
       text-align: center;
       padding: 8px 15px;
@@ -15027,8 +15047,8 @@ template {
           width: 100%;
           display: block; }
       .group-section-content .section-content .inner-content .main-content.-contact .list-item-gov .contact-gov .tel-gov .number {
-        font-size: 18px;
-        line-height: 25px;
+        font-size: 1.8rem;
+        line-height: 2.4rem;
         font-weight: 400;
         color: #fff; }
     .group-section-content .section-content .inner-content .main-content.-contact .list-item-gov .contact-gov .tel-internal {
@@ -15037,86 +15057,92 @@ template {
       width: 50%;
       text-align: right; }
       .group-section-content .section-content .inner-content .main-content.-contact .list-item-gov .contact-gov .tel-internal .on {
-        font-size: 12px;
+        font-size: 1.2rem;
         font-weight: 400;
         color: #fff; }
       .group-section-content .section-content .inner-content .main-content.-contact .list-item-gov .contact-gov .tel-internal .number {
-        font-size: 18px;
-        line-height: 25px;
+        font-size: 1.8rem;
+        line-height: 2.4rem;
         font-weight: 400;
         color: #fff; }
     .group-section-content .section-content .inner-content .main-content.-contact .list-item-gov .social-wrapper {
       margin-top: 5px; }
   .group-section-content .section-content .inner-content .vote-comment-content {
-    margin-top: 30px; }
-    .group-section-content .section-content .inner-content .vote-comment-content .content .box-title .title-head {
-      font-size: 36px;
-      line-height: 36px;
-      font-weight: 500;
-      margin: 0 0 20px; }
-    .group-section-content .section-content .inner-content .vote-comment-content .content .sort-order {
-      margin-bottom: 10px; }
-      .group-section-content .section-content .inner-content .vote-comment-content .content .sort-order .text-order {
-        margin-right: 10px;
-        font-size: 16px;
-        font-weight: 400;
-        color: #525252; }
-    .group-section-content .section-content .inner-content .vote-comment-content .content.-vote .list-choice-vote {
-      margin-bottom: 25px; }
-      .group-section-content .section-content .inner-content .vote-comment-content .content.-vote .list-choice-vote ul {
-        margin: 0;
-        padding: 0; }
-        .group-section-content .section-content .inner-content .vote-comment-content .content.-vote .list-choice-vote ul li {
-          list-style: none;
-          margin-bottom: 15px; }
-          .group-section-content .section-content .inner-content .vote-comment-content .content.-vote .list-choice-vote ul li .total-vote {
-            font-size: 16px;
-            font-weight: 400; }
-    .group-section-content .section-content .inner-content .vote-comment-content .content.-vote .btn-choice-vote {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      -webkit-box-pack: end;
-      -ms-flex-pack: end;
-      justify-content: flex-end; }
-      .group-section-content .section-content .inner-content .vote-comment-content .content.-vote .btn-choice-vote .btn {
-        border: none;
-        font-size: 18px;
-        font-weight: 400;
-        color: #fff;
-        border-radius: 0; }
-        .group-section-content .section-content .inner-content .vote-comment-content .content.-vote .btn-choice-vote .btn.icon i {
-          font-size: 14px;
-          margin-right: 10px; }
-      .group-section-content .section-content .inner-content .vote-comment-content .content.-vote .btn-choice-vote.-login {
+    position: relative; }
+    .group-section-content .section-content .inner-content .vote-comment-content .content {
+      margin-top: 30px; }
+      .group-section-content .section-content .inner-content .vote-comment-content .content .box-title .title-head {
+        font-size: 3.6rem;
+        line-height: 3.6rem;
+        font-weight: 500;
+        margin: 0 0 20px; }
+      .group-section-content .section-content .inner-content .vote-comment-content .content .box-title .order-all {
+        font-size: 1.6rem;
+        line-height: 3.6rem;
+        margin: 0 0 20px; }
+      .group-section-content .section-content .inner-content .vote-comment-content .content .sort-order {
+        margin-bottom: 10px; }
+        .group-section-content .section-content .inner-content .vote-comment-content .content .sort-order .text-order {
+          margin-right: 10px;
+          font-size: 1.6rem;
+          font-weight: 400;
+          color: #525252; }
+      .group-section-content .section-content .inner-content .vote-comment-content .content.-vote .list-choice-vote {
+        margin-bottom: 25px; }
+        .group-section-content .section-content .inner-content .vote-comment-content .content.-vote .list-choice-vote ul {
+          margin: 0;
+          padding: 0; }
+          .group-section-content .section-content .inner-content .vote-comment-content .content.-vote .list-choice-vote ul li {
+            list-style: none;
+            margin-bottom: 15px; }
+            .group-section-content .section-content .inner-content .vote-comment-content .content.-vote .list-choice-vote ul li .total-vote {
+              font-size: 1.6rem;
+              font-weight: 400; }
+      .group-section-content .section-content .inner-content .vote-comment-content .content.-vote .btn-choice-vote {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        -webkit-box-align: start;
-        -ms-flex-align: start;
-        align-items: flex-start;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between; }
-        .group-section-content .section-content .inner-content .vote-comment-content .content.-vote .btn-choice-vote.-login .show-login a {
-          font-size: 14px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end; }
+        .group-section-content .section-content .inner-content .vote-comment-content .content.-vote .btn-choice-vote .btn {
+          border: none;
+          font-size: 1.8rem;
           font-weight: 400;
-          color: #525252;
-          opacity: 0.5;
-          display: block;
-          -webkit-transition: all 0.5s ease;
-          -o-transition: all 0.5s ease;
-          transition: all 0.5s ease;
-          margin-top: 5px; }
-          .group-section-content .section-content .inner-content .vote-comment-content .content.-vote .btn-choice-vote.-login .show-login a:hover {
-            opacity: 1; }
-    .group-section-content .section-content .inner-content .vote-comment-content .content.-comment {
-      padding-bottom: 20px;
-      border-bottom: 1px solid #cfd1d4;
-      margin-bottom: 20px; }
+          color: #fff;
+          border-radius: 0; }
+          .group-section-content .section-content .inner-content .vote-comment-content .content.-vote .btn-choice-vote .btn.icon i {
+            font-size: 1.4rem;
+            margin-right: 10px; }
+        .group-section-content .section-content .inner-content .vote-comment-content .content.-vote .btn-choice-vote.-login {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: start;
+          -ms-flex-align: start;
+          align-items: flex-start;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+          justify-content: space-between; }
+          .group-section-content .section-content .inner-content .vote-comment-content .content.-vote .btn-choice-vote.-login .show-login a {
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: #525252;
+            opacity: 0.5;
+            display: block;
+            -webkit-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+            margin-top: 5px; }
+            .group-section-content .section-content .inner-content .vote-comment-content .content.-vote .btn-choice-vote.-login .show-login a:hover {
+              opacity: 1; }
+      .group-section-content .section-content .inner-content .vote-comment-content .content.-comment {
+        padding-bottom: 20px;
+        border-bottom: 1px solid #cfd1d4;
+        margin-bottom: 20px; }
     .group-section-content .section-content .inner-content .vote-comment-content .user-comment-wrapper ul {
       margin: 0;
       padding: 0; }
@@ -15128,7 +15154,7 @@ template {
           height: 50px;
           margin-right: 10px; }
         .group-section-content .section-content .inner-content .vote-comment-content .user-comment-wrapper ul li .list-comment .post-user {
-          font-size: 16px;
+          font-size: 1.6rem;
           font-weight: 400;
           color: #525252; }
     .group-section-content .section-content .inner-content .vote-comment-content .user-comment-wrapper .load-more {
@@ -15164,7 +15190,7 @@ template {
     -ms-flex: 0 0 140px;
     flex: 0 0 140px; }
     .gallery-template .item .left .text-content {
-      font-size: 30px;
+      font-size: 3rem;
       font-weight: 500;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -15183,7 +15209,7 @@ template {
       width: 100%;
       color: #fff;
       text-align: center;
-      font-size: 20px;
+      font-size: 2rem;
       font-weight: 400; }
     .gallery-template .item .left .icon-content {
       display: -webkit-box;
@@ -15266,9 +15292,9 @@ template {
         display: -ms-flexbox;
         display: flex;
         border-radius: 50%;
-        font-size: 1rem;
+        font-size: 2rem;
+        line-height: 2rem;
         text-align: center;
-        line-height: 20px;
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
@@ -15280,12 +15306,13 @@ template {
         color: #fff;
         font-weight: 400; }
         .gallery-template .item .left .progress-content .progress .progress-value span {
-          font-size: 12px;
+          font-size: 1.2rem;
           text-transform: uppercase; }
     .gallery-template .item .left .progress-content .total-people {
       position: absolute;
       width: 100%;
-      font-size: 14px;
+      font-size: 1.8rem;
+      line-height: 2rem;
       font-weight: 400;
       color: #fff;
       text-align: center;
@@ -15305,7 +15332,7 @@ template {
     align-items: center; }
     .gallery-template .item .right .text-ontop {
       display: block;
-      font-size: 14px;
+      font-size: 1.4rem;
       font-weight: 400;
       margin-bottom: 5px; }
     .gallery-template .item .right .text-content {
@@ -15316,9 +15343,9 @@ template {
       -o-text-overflow: ellipsis;
       text-overflow: ellipsis; }
       .gallery-template .item .right .text-content a {
-        font-size: 20px;
+        font-size: 2rem;
         font-weight: 400;
-        line-height: 25px;
+        line-height: 2.4rem;
         color: #525252;
         -webkit-transition: all 0.3s ease;
         -o-transition: all 0.3s ease;
@@ -15330,14 +15357,14 @@ template {
       bottom: 0;
       width: 100%;
       color: #525252;
-      font-size: 16px;
+      font-size: 1.6rem;
       font-weight: 400; }
       .gallery-template .item .right .text-onbottom i {
-        font-size: 14px;
+        font-size: 1.4rem;
         margin-right: 5px; }
       .gallery-template .item .right .text-onbottom.-link a {
         color: #fff;
-        font-size: 16px;
+        font-size: 1.6rem;
         padding: 3px 10px;
         display: inline-block; }
         .gallery-template .item .right .text-onbottom.-link a:hover {
@@ -15403,8 +15430,8 @@ template {
           transition: all 0.5s ease-in-out; }
           .gallery-template .item.-album .cover-album .top-album .source span {
             display: block;
-            font-size: 16px;
-            line-height: 20px;
+            font-size: 1.6rem;
+            line-height: 2rem;
             font-weight: 400;
             color: #fff;
             display: -webkit-box;
@@ -15435,8 +15462,8 @@ template {
           position: relative;
           top: -3px; }
         .gallery-template .item.-album .cover-album .caption-album span {
-          font-size: 16px;
-          line-height: 18px;
+          font-size: 1.6rem;
+          line-height: 1.8rem;
           font-weight: 400;
           color: #fff;
           display: -webkit-box;
@@ -15498,8 +15525,8 @@ template {
           transition: all 0.5s ease-in-out; }
           .gallery-template .item.video .cover .title .source span {
             display: block;
-            font-size: 16px;
-            line-height: 20px;
+            font-size: 1.6rem;
+            line-height: 2rem;
             font-weight: 400;
             color: #fff;
             display: -webkit-box;
@@ -15529,8 +15556,8 @@ template {
           position: relative;
           top: -3px; }
         .gallery-template .item.video .cover .caption span {
-          font-size: 16px;
-          line-height: 18px;
+          font-size: 1.6rem;
+          line-height: 1.8rem;
           font-weight: 400;
           color: #fff;
           display: -webkit-box;
@@ -15578,14 +15605,14 @@ template {
   position: relative;
   margin: 0 0 125px 0; }
   .sitemap-container .level-01 {
-    font-size: 36px;
-    line-height: 50px; }
+    font-size: 3.6rem;
+    line-height: 5rem; }
   .sitemap-container .level-02 {
-    font-size: 26px;
-    line-height: 30px; }
+    font-size: 2.6rem;
+    line-height: 3rem; }
   .sitemap-container .level-03 {
-    font-size: 22px;
-    line-height: 30px; }
+    font-size: 2.2rem;
+    line-height: 3rem; }
   .sitemap-container .sitemap {
     list-style: none;
     padding: 0;
@@ -15649,12 +15676,12 @@ template {
       .group-link-mainbkk a .icon-bkk img {
         width: 100%; }
     .group-link-mainbkk a .text-bkk {
-      font-size: 14px;
+      font-size: 1.4rem;
       font-weight: 400;
       color: #525252;
-      line-height: 15px; }
+      line-height: 1.5rem; }
       .group-link-mainbkk a .text-bkk label {
-        font-size: 16px;
+        font-size: 1.6rem;
         font-weight: 400;
         display: block;
         margin-bottom: 0; }
@@ -15668,7 +15695,7 @@ template {
   display: none; }
 
 .social-wrapper .text-social {
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 400;
   margin-right: 10px; }
 
@@ -15702,7 +15729,7 @@ template {
       transition: all 0.3s ease; }
       .social-wrapper ul li a i {
         color: #fff;
-        font-size: 16px; }
+        font-size: 1.6rem; }
       .social-wrapper ul li a:hover {
         text-decoration: none;
         border-radius: 50% 10%; }
@@ -15738,12 +15765,12 @@ template {
         stroke-linejoin: round;
         stroke-miterlimit: 10; }
     .online-wrapper .group-online .text-online {
-      font-size: 20px;
-      line-height: 25px;
+      font-size: 2rem;
+      line-height: 2.4rem;
       font-weight: 400;
       color: #525252; }
   .online-wrapper .num-online {
-    font-size: 36px;
+    font-size: 3.6rem;
     font-weight: 500;
     line-height: 40px;
     margin: 0; }
@@ -15751,7 +15778,7 @@ template {
 .pagination-custom {
   margin-bottom: 30px; }
   .pagination-custom .all-page {
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 400;
     color: #525252; }
     .pagination-custom .all-page span {
@@ -17476,11 +17503,11 @@ Due to the split circle of progress-left and progress right, we must use the ani
             vertical-align: middle; }
             .banner-wrapper .list-banner li .item-Onbanner-outer .item-Onbanner-inner .list .title-banner {
               color: #fff;
-              font-size: 36px;
+              font-size: 3.6rem;
               font-weight: 500; }
             .banner-wrapper .list-banner li .item-Onbanner-outer .item-Onbanner-inner .list .desc-banner {
               color: #fff;
-              font-size: 22px;
+              font-size: 2.2rem;
               font-weight: 400;
               margin-bottom: 50px; }
             .banner-wrapper .list-banner li .item-Onbanner-outer .item-Onbanner-inner .list .action-link {
@@ -17569,11 +17596,11 @@ Due to the split circle of progress-left and progress right, we must use the ani
             vertical-align: middle; }
             .banner-wrapper.onlyOne ul li .item-Onbanner-outer .item-Onbanner-inner .list .title-banner {
               color: #fff;
-              font-size: 36px;
+              font-size: 3.6rem;
               font-weight: 500; }
             .banner-wrapper.onlyOne ul li .item-Onbanner-outer .item-Onbanner-inner .list .desc-banner {
               color: #fff;
-              font-size: 22px;
+              font-size: 2.2rem;
               font-weight: 400;
               margin-bottom: 50px; }
 
@@ -17663,7 +17690,7 @@ Due to the split circle of progress-left and progress right, we must use the ani
         margin-bottom: 20px; }
         .bg-wrapper .section-formlogin .right .forgot-password a {
           color: #999;
-          font-size: 14px;
+          font-size: 1.4rem;
           -webkit-transition: all 0.5s ease;
           -o-transition: all 0.5s ease;
           transition: all 0.5s ease; }
@@ -17672,7 +17699,7 @@ Due to the split circle of progress-left and progress right, we must use the ani
             font-family: "Font Awesome 5 Free";
             font-weight: 900;
             color: #999;
-            font-size: 12px;
+            font-size: 1.2rem;
             margin-right: 5px; }
           .bg-wrapper .section-formlogin .right .forgot-password a:hover {
             text-decoration: none;
@@ -17846,8 +17873,13 @@ Due to the split circle of progress-left and progress right, we must use the ani
   width: 100%;
   margin: auto; }
 
+html {
+  font-size: 62.5%; }
+
 body {
   font-family: 'Kanit', sans-serif;
+  font-size: 1.4rem;
+  /* 14px */
   background-color: #f8f8f8; }
 
 .clearboth {

@@ -56,7 +56,7 @@
                                                     <!-- END -->
                                                     <div class="total-people">155 <span>คน</span></div>
                                                 </div>
-                                                <div class="text-onbottom">ผู้ตอบคำถาม</div>
+                                                <div class="text-onbottom bg-color-secondary">ผู้ตอบคำถาม</div>
                                             </div>
                                             <div class="right">       
                                                 <div class="text-ontop color-secondary">
@@ -105,7 +105,7 @@
                                                     <!-- END -->
                                                     <div class="total-people">155 <span>คน</span></div>
                                                 </div>
-                                                <div class="text-onbottom">ผู้ตอบคำถาม</div>
+                                                <div class="text-onbottom bg-color-secondary">ผู้ตอบคำถาม</div>
                                             </div>
                                             <div class="right">       
                                                 <div class="text-ontop color-secondary">

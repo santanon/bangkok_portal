@@ -67,6 +67,9 @@
                             background-color: $color-primary;
                         }
                     }
+                    &.active{
+                        background-color: $color-primary;
+                    }
                     .sub-menu-lv2{
                         .list-menu-lv2{
                             .sub-menu-lv3{

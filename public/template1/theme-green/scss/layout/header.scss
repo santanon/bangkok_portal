@@ -127,7 +127,7 @@
                             margin-top: 35px;
                             span{
                                 font-size: 1.4rem;
-                                line-height: 14px;
+                                line-height: 1.4rem;
                                 font-weight: 200;
                                 display: block;
                             }
@@ -421,7 +421,7 @@
                         transition: all 0.3s ease;
                         font-size:1.6rem;
                         font-weight: $font-regular;
-                        line-height: 20px;
+                        line-height: 2rem;
                         &:hover{
                             text-decoration: none;
                             opacity: 1;
@@ -487,7 +487,7 @@
                             a{
                                 font-size: 2.0rem;
                                 font-weight: $font-regular;
-                                line-height: 25px;
+                                line-height: 2.5rem;
                                 color: #525252;
                                 padding: 15px;
                                 &:hover{
@@ -514,7 +514,7 @@
                                     a{
                                         font-size:1.6rem;
                                         font-weight: $font-regular;
-                                        line-height: 18px;
+                                        line-height: 1.8rem;
                                         color: #525252;
                                         padding: 8px 10px;
                                         &:hover{

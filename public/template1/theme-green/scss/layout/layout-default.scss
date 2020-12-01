@@ -142,7 +142,7 @@
                                 padding: 8px 15px;
                                 margin-right: 10px;
                                 a{
-                                    font-size: 14px;
+                                    font-size: 1.4rem;
                                     font-weight: $font-regular;
                                     color: #fff;
                                     
@@ -159,12 +159,12 @@
                     .text-modal{
                         background-color: #fff;
                         padding: 15px;
-                        font-size: 16px;
+                        font-size: 1.6rem;
                         font-weight: $font-regular;
-                        line-height: 25px;
+                        line-height: 2.4rem;
                         color: #525252;
                         &.text-alert-system{
-                            font-size: 20px;
+                            font-size: 2rem;
                             i{
                                 font-size: 50px;
                                 margin-right: 10px;
@@ -302,7 +302,7 @@ $howManySteps: 100; //this needs to be even.
                 display: flex;
                 align-items: center;
                 a{
-                    font-size: 16px;
+                    font-size: 1.6rem;
                     font-weight: $font-regular;
                     color: #525252;
                     opacity: 0.7;
@@ -314,7 +314,7 @@ $howManySteps: 100; //this needs to be even.
             .breadcrumb-item + .breadcrumb-item{
                 &:before{
                     font-family: 'Font Awesome 5 Free';
-                    font-size: 12px;
+                    font-size: 1.2rem;
                     font-weight: 900;
                     content: '\f061';
                 }
@@ -323,7 +323,7 @@ $howManySteps: 100; //this needs to be even.
                 &:last-child{
                     &:after{
                         font-family: 'Font Awesome 5 Free';
-                        font-size: 12px;
+                        font-size: 1.2rem;
                         font-weight: 900;
                         content: '\f061';
                         transform: rotate(45deg);
@@ -349,15 +349,17 @@ $howManySteps: 100; //this needs to be even.
                 margin-bottom: 20px;
                 .group-text{
                     .title{
-                        font-size: 36px;
-                        line-height: 36px;
+                        margin: 0 0 5px;
+                        font-size: 3.6rem;
+                        line-height: 4rem;
                         font-weight: $font-medium;
-                        margin: 0;
+                        
                     }
                     .desc{
-                        font-size: 16px;
-                        font-weight: $font-regular;
                         margin: 0;
+                        font-size: 1.6rem;
+                        line-height: 2rem;
+                        font-weight: $font-regular;
                     }
                 }
                 @media only screen and (max-width: 768px) {
@@ -374,16 +376,16 @@ $howManySteps: 100; //this needs to be even.
             .post-content{
                 margin-bottom: 40px;
                 .public-post{
-                    font-size: 18px;
+                    font-size: 1.8rem;
                     font-weight: $font-regular;
                     color: #525252;
                     i{
-                        font-size: 14px;
+                        font-size: 1.4rem;
                         color: #525252;
                     }
                 }
                 .source-post{
-                    font-size: 18px;
+                    font-size: 1.8rem;
                     font-weight: $font-regular;
                     span{
                         color: #fff;
@@ -412,7 +414,7 @@ $howManySteps: 100; //this needs to be even.
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        font-size: 30px;
+                        font-size: 3rem;
                         font-weight: $font-medium;
                         height: 100%;
                         color: #fff;
@@ -423,7 +425,7 @@ $howManySteps: 100; //this needs to be even.
                         width: 100%;
                         color: #fff;
                         text-align: center;
-                        font-size: 20px;
+                        font-size: 2rem;
                         font-weight: 400;
                     }
                 }
@@ -452,7 +454,7 @@ $howManySteps: 100; //this needs to be even.
                     a{
                         border: 1px solid #b1b1b1;
                         padding: 10px 15px;
-                        font-size: 16px;
+                        font-size: 1.6rem;
                         font-weight: $font-regular;
                         color: #b1b1b1;
                         display: block;
@@ -483,7 +485,7 @@ $howManySteps: 100; //this needs to be even.
                         .date{
                             margin-bottom: 10px;
                             span{
-                                font-size: 14px;
+                                font-size: 1.4rem;
                                 font-weight: $font-regular;
                             }
                         }
@@ -496,9 +498,9 @@ $howManySteps: 100; //this needs to be even.
                             text-overflow: ellipsis;
                             margin-bottom: 15px;
                             a{
-                                font-size: 20px;
+                                font-size: 2rem;
                                 font-weight: $font-regular;
-                                line-height: 25px;
+                                line-height: 2.4rem;
                                 color: #525252;
                                 transition: all 0.3s ease;
                                 //opacity: 0.7;
@@ -521,7 +523,7 @@ $howManySteps: 100; //this needs to be even.
                             display: block;
                             text-align: center;
                             color: #fff;
-                            font-size: 16px;
+                            font-size: 1.6rem;
                             font-weight: $font-regular;
                             padding: 10px 15px;
                             &:hover{
@@ -561,7 +563,7 @@ $howManySteps: 100; //this needs to be even.
                             top: 10px;
                             right: 10px;
                             i{
-                                font-size: 20px;
+                                font-size: 2rem;
                             }
                         }
                         .read-news-outer{
@@ -578,7 +580,7 @@ $howManySteps: 100; //this needs to be even.
                                 display: block;
                                 text-align: center;
                                 color: #fff;
-                                font-size: 16px;
+                                font-size: 1.6rem;
                                 font-weight: $font-regular;
                                 padding: 10px 15px;
                                 &:hover{
@@ -592,7 +594,7 @@ $howManySteps: 100; //this needs to be even.
                         .date{
                             margin-bottom: 10px;
                             span{
-                                font-size: 14px;
+                                font-size: 1.4rem;
                                 font-weight: $font-regular;
                             }
                         }
@@ -605,9 +607,9 @@ $howManySteps: 100; //this needs to be even.
                             text-overflow: ellipsis;
                             margin-bottom: 15px;
                             a{
-                                font-size: 20px;
+                                font-size: 2rem;
                                 font-weight: $font-regular;
-                                line-height: 25px;
+                                line-height: 2.4rem;
                                 color: #525252;
                                 transition: all 0.3s ease;
                                 //opacity: 0.7;
@@ -809,7 +811,7 @@ $howManySteps: 100; //this needs to be even.
                                 height: 150px;
                                 flex: 0 0 140px;
                                 .text-content{
-                                    font-size: 30px;
+                                    font-size: 3rem;
                                     font-weight: $font-medium;
                                     display: flex;
                                     align-items: center;
@@ -823,7 +825,7 @@ $howManySteps: 100; //this needs to be even.
                                     width: 100%;
                                     color: #fff;
                                     text-align: center;
-                                    font-size: 20px;
+                                    font-size: 2rem;
                                     font-weight: $font-regular;
                                 }
 
@@ -910,9 +912,9 @@ $howManySteps: 100; //this needs to be even.
                                         .progress-value {
                                             display: flex;
                                             border-radius: 50%;
-                                            font-size: 1rem;
+                                            font-size: 2rem;
+                                            line-height: 2rem;
                                             text-align: center;
-                                            line-height: 20px;
                                             align-items: center;
                                             justify-content: center;
                                             height: 100%;
@@ -920,7 +922,7 @@ $howManySteps: 100; //this needs to be even.
                                             color: #fff;
                                             font-weight: $font-regular;
                                             span {
-                                                font-size: 12px;
+                                                font-size: 1.2rem;
                                                 text-transform: uppercase;
                                             }
                                         }
@@ -928,7 +930,8 @@ $howManySteps: 100; //this needs to be even.
                                     .total-people{
                                         position: absolute;
                                         width: 100%;
-                                        font-size: 14px;
+                                        font-size: 1.8rem;
+                                        line-height: 2rem;
                                         font-weight: $font-regular;
                                         color: #fff;
                                         text-align: center;
@@ -951,7 +954,7 @@ $howManySteps: 100; //this needs to be even.
                                 align-items: center;
                                 .text-ontop{
                                     display: block;
-                                    font-size: 14px;
+                                    font-size: 1.4rem;
                                     font-weight: $font-regular;
                                     margin-bottom: 5px;
                                 }
@@ -962,9 +965,9 @@ $howManySteps: 100; //this needs to be even.
                                     overflow: hidden;
                                     text-overflow: ellipsis;
                                     a{
-                                        font-size: 20px;
+                                        font-size: 2rem;
                                         font-weight: $font-regular;
-                                        line-height: 25px;
+                                        line-height: 2.4rem;
                                         color: #525252;
                                         //opacity: 0.7;
                                         transition: all 0.3s ease;
@@ -978,17 +981,17 @@ $howManySteps: 100; //this needs to be even.
                                     bottom: 0;
                                     width: 100%;
                                     color: #525252;
-                                    font-size: 16px;
+                                    font-size: 1.6rem;
                                     font-weight: $font-regular;
                                     i{
-                                        font-size: 14px;
+                                        font-size: 1.4rem;
                                         margin-right: 5px;
                                     }
 
                                     &.-link{
                                         a{
                                             color: #fff;
-                                            font-size: 16px;
+                                            font-size: 1.6rem;
                                             padding: 3px 10px;
                                             display: inline-block;
                                             &:hover{
@@ -1050,8 +1053,8 @@ $howManySteps: 100; //this needs to be even.
                                             span{
                                                 display: block;
                                                 //padding-right: 10px;
-                                                font-size: 16px;
-                                                line-height: 20px;
+                                                font-size: 1.6rem;
+                                                line-height: 2rem;
                                                 font-weight: $font-regular;
                                                 color: #fff;
                                                 //text-transform: uppercase;
@@ -1075,8 +1078,8 @@ $howManySteps: 100; //this needs to be even.
                                         padding: 5px 15px;
                                         width: 100%;
                                         text-align: center;
-                                        min-height: 10px;
-                                        height: 28px;
+                                        min-height: 1rem;
+                                        height: 2.8rem;
                                         left: 0;
                                         bottom: -100%;
                                         transition: all 0.5s ease;
@@ -1087,8 +1090,8 @@ $howManySteps: 100; //this needs to be even.
                                             top: -3px;
                                         }
                                         span{
-                                            font-size: 16px;
-                                            line-height: 18px;
+                                            font-size: 1.6rem;
+                                            line-height: 1.8rem;
                                             font-weight: $font-regular;
                                             color: #fff;
                                             display: -webkit-box;
@@ -1116,15 +1119,15 @@ $howManySteps: 100; //this needs to be even.
                                     .page-detail{
                                         display: block;
                                         .title{
-                                            font-size: 36px;
-                                            line-height: 36px;
+                                            font-size: 3.6rem;
+                                            line-height: 3.6rem;
                                             font-weight: $font-medium;
                                             margin-bottom: 30px;
                                         }
                                         p{
-                                            font-size: 20px;
+                                            font-size: 2rem;
                                             font-weight: $font-regular;
-                                            line-height: 25px;
+                                            line-height: 2.4rem;
                                             color: #525252;
                                         }
                                     }
@@ -1173,9 +1176,9 @@ $howManySteps: 100; //this needs to be even.
                                             }
                                         }
                                         .text-content{
-                                            font-size: 20px;
+                                            font-size: 2rem;
                                             font-weight: $font-regular;
-                                            line-height: 25px;
+                                            line-height: 2.4rem;
                                             color: #fff;
                                             transition: all 0.3s ease;
                                             min-height: 50px;
@@ -1202,12 +1205,12 @@ $howManySteps: 100; //this needs to be even.
                         .text-score{
                             .num-vote{
                                 color: #fff;
-                                font-size: 36px;
+                                font-size: 3.6rem;
                                 font-weight: $font-medium;
                             }
                             .text-vote{
                                 color: #fff;
-                                font-size: 20px;
+                                font-size: 2rem;
                                 font-weight: $font-regular;
                             }
                         }
@@ -1218,13 +1221,13 @@ $howManySteps: 100; //this needs to be even.
                             .progress{
                                 height: 100%;
                                 border-radius: 0;
-                                line-height: 25px;
+                                line-height: 2.4rem;
                                 .progress-bar{
                                     color: #fff;
-                                    font-size: 20px;
+                                    font-size: 2rem;
                                     font-weight: $font-regular;
                                     span{
-                                        font-size: 14px;
+                                        font-size: 1.4rem;
                                         font-weight: $font-regular;
                                     }
                                 }
@@ -1237,8 +1240,8 @@ $howManySteps: 100; //this needs to be even.
                         padding: 20px;
                         position: relative;
                         .text-question{
-                            font-size: 20px;
-                            line-height: 25px;
+                            font-size: 2rem;
+                            line-height: 2.4rem;
                             font-weight: $font-regular;
                             color: #525252;
                         }
@@ -1435,9 +1438,9 @@ $howManySteps: 100; //this needs to be even.
                     }
                 }
                 .group-editor{
-                    font-size: 18px;
+                    font-size: 1.8rem;
                     font-weight: $font-regular;
-                    line-height: 25px;
+                    line-height: 2.4rem;
                     color: #525252;
                     margin-bottom: 30px;
                     table{
@@ -1460,7 +1463,7 @@ $howManySteps: 100; //this needs to be even.
                             height: 150px;
                             flex: 0 0 140px;
                             .text-content{
-                                font-size: 30px;
+                                font-size: 3rem;
                                 font-weight: $font-medium;
                                 display: flex;
                                 align-items: center;
@@ -1474,7 +1477,7 @@ $howManySteps: 100; //this needs to be even.
                                 width: 100%;
                                 color: #fff;
                                 text-align: center;
-                                font-size: 20px;
+                                font-size: 2rem;
                                 font-weight: $font-regular;
                             }
 
@@ -1503,7 +1506,7 @@ $howManySteps: 100; //this needs to be even.
                             align-items: center;
                             .text-ontop{
                                 display: block;
-                                font-size: 14px;
+                                font-size: 1.4rem;
                                 font-weight: $font-regular;
                                 margin-bottom: 5px;
                             }
@@ -1514,9 +1517,9 @@ $howManySteps: 100; //this needs to be even.
                                 overflow: hidden;
                                 text-overflow: ellipsis;
                                 a{
-                                    font-size: 20px;
+                                    font-size: 2rem;
                                     font-weight: $font-regular;
-                                    line-height: 25px;
+                                    line-height: 2.4rem;
                                     color: #525252;
                                     //opacity: 0.7;
                                     transition: all 0.3s ease;
@@ -1593,7 +1596,7 @@ $howManySteps: 100; //this needs to be even.
                                 .text-email-link{
                                     float: left;
                                     color: #525252;
-                                    font-size: 18px;
+                                    font-size: 1.8rem;
                                     font-weight: $font-regular;
                                 }
                             }
@@ -1601,9 +1604,9 @@ $howManySteps: 100; //this needs to be even.
                     }
                     .views-like{
                         .view-count{
-                            font-size: 18px;
+                            font-size: 1.8rem;
                             font-weight: $font-regular;
-                            line-height: 25px;
+                            line-height: 2.4rem;
                             margin-right: 15px;
                         }
                         .like-count{
@@ -1623,7 +1626,7 @@ $howManySteps: 100; //this needs to be even.
 
                                 &:after{
                                     width: 35px;
-                                    font-size: 18px;
+                                    font-size: 1.8rem;
                                     font-weight: $font-regular;
                                     line-height: 35px;
                                     color: $color-secondary;
@@ -1636,9 +1639,9 @@ $howManySteps: 100; //this needs to be even.
                                 }
                             }
                             span{
-                                font-size: 18px;
+                                font-size: 1.8rem;
                                 font-weight: $font-regular;
-                                line-height: 25px;
+                                line-height: 2.4rem;
                             }
                         }
                     }
@@ -1652,7 +1655,7 @@ $howManySteps: 100; //this needs to be even.
                         .order-topic{
                             margin-bottom: 20px;
                             .title-article{
-                                font-size: 18px;
+                                font-size: 1.8rem;
                                 font-weight: $font-regular;
                                 color: #525252;
                                 padding-bottom: 5px;
@@ -1674,12 +1677,12 @@ $howManySteps: 100; //this needs to be even.
                             display: flex;
                             align-items: center;
                             .month-title{
-                                font-size: 26px;
+                                font-size: 2.6rem;
                                 font-weight: $font-regular;
                                 margin-right: 10px;
                             }
                             .year-title{
-                                font-size: 26px;
+                                font-size: 2.6rem;
                                 font-weight: $font-regular;
                             }
                         }
@@ -1762,9 +1765,9 @@ $howManySteps: 100; //this needs to be even.
 
                 .page-list-item-wrapper{
                     .topic-category{
-                        font-size: 20px;
+                        font-size: 2rem;
                         font-weight: $font-regular;
-                        line-height: 25px;
+                        line-height: 2.4rem;
                         color: #fff;
                         display: flex;
                         align-items: center;
@@ -1850,8 +1853,8 @@ $howManySteps: 100; //this needs to be even.
                                         }
                                     }
                                     .title-card-header{
-                                        font-size: 20px;
-                                        line-height: 25px;
+                                        font-size: 2rem;
+                                        line-height: 2.4rem;
                                         font-weight: $font-regular;
                                         color: #525252;
                                         padding: 15px 20px;
@@ -1865,15 +1868,15 @@ $howManySteps: 100; //this needs to be even.
                                     .show-view{
                                         position: relative;
                                         //text-align: right;
-                                        font-size: 18px;
+                                        font-size: 1.8rem;
                                         font-weight: $font-regular;
-                                        line-height: 25px;
+                                        line-height: 2.4rem;
                                         margin-bottom: 10px;
                                     }
                                     .content{
-                                        font-size: 18px;
+                                        font-size: 1.8rem;
                                         font-weight: $font-regular;
-                                        line-height: 25px;
+                                        line-height: 2.4rem;
                                         color: #525252;
                                     }
                                     &:after{
@@ -1901,7 +1904,7 @@ $howManySteps: 100; //this needs to be even.
                             margin-right: 5px;
                         }
                         a{
-                            font-size: 18px;
+                            font-size: 1.8rem;
                             font-weight: $font-regular;
                             color: #525252;
                         }
@@ -1916,9 +1919,9 @@ $howManySteps: 100; //this needs to be even.
                     .list-item-gov{
                         margin-bottom: 30px;
                         .title-gov{
-                            font-size: 18px;
+                            font-size: 1.8rem;
                             font-weight: $font-regular;
-                            line-height: 25px;
+                            line-height: 2.4rem;
                             color: #525252;
                             text-align: center;
                             padding: 8px 15px;
@@ -1938,8 +1941,8 @@ $howManySteps: 100; //this needs to be even.
                                     }
                                 }
                                 .number{
-                                    font-size: 18px;
-                                    line-height: 25px;
+                                    font-size: 1.8rem;
+                                    line-height: 2.4rem;
                                     font-weight: $font-regular;
                                     color: #fff;
                                 }
@@ -1950,13 +1953,13 @@ $howManySteps: 100; //this needs to be even.
                                 width: 50%;
                                 text-align: right;
                                 .on{
-                                    font-size: 12px;
+                                    font-size: 1.2rem;
                                     font-weight: $font-regular;
                                     color: #fff;
                                 }
                                 .number{
-                                    font-size: 18px;
-                                    line-height: 25px;
+                                    font-size: 1.8rem;
+                                    line-height: 2.4rem;
                                     font-weight: $font-regular;
                                     color: #fff;
                                 }
@@ -1976,15 +1979,15 @@ $howManySteps: 100; //this needs to be even.
 
                     .box-title{
                         .title-head{
-                            font-size: 36px;
-                            line-height: 36px;
+                            font-size: 3.6rem;
+                            line-height: 3.6rem;
                             font-weight: $font-medium;
                             margin: 0 0 20px;
                         }
 
                         .order-all {
-                            font-size: 16px;
-                            line-height: 36px;
+                            font-size: 1.6rem;
+                            line-height: 3.6rem;
                             margin: 0 0 20px;
                         }
                     }
@@ -1993,7 +1996,7 @@ $howManySteps: 100; //this needs to be even.
                         margin-bottom: 10px;
                         .text-order{
                             margin-right: 10px;
-                            font-size: 16px;
+                            font-size: 1.6rem;
                             font-weight: $font-regular;
                             color: #525252;
                         }
@@ -2009,7 +2012,7 @@ $howManySteps: 100; //this needs to be even.
                                     list-style: none;
                                     margin-bottom: 15px;
                                     .total-vote{
-                                        font-size: 16px;
+                                        font-size: 1.6rem;
                                         font-weight: $font-regular;
                                     }
                                 }
@@ -2021,13 +2024,13 @@ $howManySteps: 100; //this needs to be even.
                             justify-content: flex-end;
                             .btn{
                                 border: none;
-                                font-size: 18px;
+                                font-size: 1.8rem;
                                 font-weight: $font-regular;
                                 color: #fff;
                                 border-radius: 0;
                                 &.icon{
                                     i{
-                                        font-size: 14px;
+                                        font-size: 1.4rem;
                                         margin-right: 10px;
                                     }
                                 }
@@ -2039,7 +2042,7 @@ $howManySteps: 100; //this needs to be even.
                                 justify-content: space-between;
                                 .show-login{
                                     a{
-                                        font-size: 14px;
+                                        font-size: 1.4rem;
                                         font-weight: $font-regular;
                                         color: #525252;
                                         opacity: 0.5;
@@ -2075,7 +2078,7 @@ $howManySteps: 100; //this needs to be even.
                                     margin-right: 10px;
                                 }
                                 .post-user{
-                                    font-size: 16px;
+                                    font-size: 1.6rem;
                                     font-weight: $font-regular;
                                     color: #525252;
                                 }
@@ -2087,7 +2090,7 @@ $howManySteps: 100; //this needs to be even.
                         // a{
                         //     width: 100%;
                         //     display: block;
-                        //     font-size: 16px;
+                        //     font-size: 1.6rem;
                         //     font-weight: $font-regular;
                         //     color: #b1b1b1;
                         //     padding: 5px 8px;
@@ -2129,7 +2132,7 @@ $howManySteps: 100; //this needs to be even.
             height: 150px;
             flex: 0 0 140px;
             .text-content{
-                font-size: 30px;
+                font-size: 3rem;
                 font-weight: $font-medium;
                 display: flex;
                 align-items: center;
@@ -2143,7 +2146,7 @@ $howManySteps: 100; //this needs to be even.
                 width: 100%;
                 color: #fff;
                 text-align: center;
-                font-size: 20px;
+                font-size: 2rem;
                 font-weight: $font-regular;
             }
 
@@ -2230,9 +2233,9 @@ $howManySteps: 100; //this needs to be even.
                     .progress-value {
                         display: flex;
                         border-radius: 50%;
-                        font-size: 1rem;
+                        font-size: 2rem;
+                        line-height: 2rem;
                         text-align: center;
-                        line-height: 20px;
                         align-items: center;
                         justify-content: center;
                         height: 100%;
@@ -2240,7 +2243,7 @@ $howManySteps: 100; //this needs to be even.
                         color: #fff;
                         font-weight: $font-regular;
                         span {
-                            font-size: 12px;
+                            font-size: 1.2rem;
                             text-transform: uppercase;
                         }
                     }
@@ -2248,7 +2251,8 @@ $howManySteps: 100; //this needs to be even.
                 .total-people{
                     position: absolute;
                     width: 100%;
-                    font-size: 14px;
+                    font-size: 1.8rem;
+                    line-height: 2rem;
                     font-weight: $font-regular;
                     color: #fff;
                     text-align: center;
@@ -2271,7 +2275,7 @@ $howManySteps: 100; //this needs to be even.
             align-items: center;
             .text-ontop{
                 display: block;
-                font-size: 14px;
+                font-size: 1.4rem;
                 font-weight: $font-regular;
                 margin-bottom: 5px;
             }
@@ -2282,9 +2286,9 @@ $howManySteps: 100; //this needs to be even.
                 overflow: hidden;
                 text-overflow: ellipsis;
                 a{
-                    font-size: 20px;
+                    font-size: 2rem;
                     font-weight: $font-regular;
-                    line-height: 25px;
+                    line-height: 2.4rem;
                     color: #525252;
                     //opacity: 0.7;
                     transition: all 0.3s ease;
@@ -2298,17 +2302,17 @@ $howManySteps: 100; //this needs to be even.
                 bottom: 0;
                 width: 100%;
                 color: #525252;
-                font-size: 16px;
+                font-size: 1.6rem;
                 font-weight: $font-regular;
                 i{
-                    font-size: 14px;
+                    font-size: 1.4rem;
                     margin-right: 5px;
                 }
 
                 &.-link{
                     a{
                         color: #fff;
-                        font-size: 16px;
+                        font-size: 1.6rem;
                         padding: 3px 10px;
                         display: inline-block;
                         &:hover{
@@ -2370,8 +2374,8 @@ $howManySteps: 100; //this needs to be even.
                         span{
                             display: block;
                             //padding-right: 10px;
-                            font-size: 16px;
-                            line-height: 20px;
+                            font-size: 1.6rem;
+                            line-height: 2rem;
                             font-weight: $font-regular;
                             color: #fff;
                             //text-transform: uppercase;
@@ -2407,8 +2411,8 @@ $howManySteps: 100; //this needs to be even.
                         top: -3px;
                     }
                     span{
-                        font-size: 16px;
-                        line-height: 18px;
+                        font-size: 1.6rem;
+                        line-height: 1.8rem;
                         font-weight: $font-regular;
                         color: #fff;
                         display: -webkit-box;
@@ -2469,8 +2473,8 @@ $howManySteps: 100; //this needs to be even.
                         span{
                             display: block;
                             //padding-right: 10px;
-                            font-size: 16px;
-                            line-height: 20px;
+                            font-size: 1.6rem;
+                            line-height: 2rem;
                             font-weight: $font-regular;
                             color: #fff;
                             //text-transform: uppercase;
@@ -2506,8 +2510,8 @@ $howManySteps: 100; //this needs to be even.
                         top: -3px;
                     }
                     span{
-                        font-size: 16px;
-                        line-height: 18px;
+                        font-size: 1.6rem;
+                        line-height: 1.8rem;
                         font-weight: $font-regular;
                         color: #fff;
                         display: -webkit-box;
@@ -2595,18 +2599,18 @@ $howManySteps: 100; //this needs to be even.
     margin: 0 0 125px 0;
 
     .level-01{
-        font-size: 36px;
-        line-height: 50px;
+        font-size: 3.6rem;
+        line-height: 5rem;
     }
 
     .level-02{
-        font-size: 26px;
-        line-height: 30px;
+        font-size: 2.6rem;
+        line-height: 3rem;
     }
 
     .level-03{
-        font-size: 22px;
-        line-height: 30px;
+        font-size: 2.2rem;
+        line-height: 3rem;
     }
 
     .sitemap{
@@ -2663,12 +2667,12 @@ $howManySteps: 100; //this needs to be even.
         // }
     
         // .level-02{
-        //     font-size: 20px;
+        //     font-size: 2rem;
         //     line-height: 24px;
         // }
     
         // .level-03{
-        //     font-size: 18px;
+        //     font-size: 1.8rem;
         //     line-height: 24px;
         // }
     }
@@ -2696,16 +2700,17 @@ $howManySteps: 100; //this needs to be even.
             }
         }
         .text-bkk{
+            font-size: 1.4rem;
+            font-weight: $font-regular;
+            color: #525252;
+            line-height: 1.5rem;
+
             label{
-                font-size: 16px;
+                font-size: 1.6rem;
                 font-weight: $font-regular;
                 display: block;
                 margin-bottom: 0;
             }
-            font-size: 14px;
-            font-weight: $font-regular;
-            color: #525252;
-            line-height: 15px;
         }
         &:hover{
             text-decoration: none;
@@ -2723,7 +2728,7 @@ $howManySteps: 100; //this needs to be even.
 // Social
 .social-wrapper{
     .text-social{
-        font-size: 16px;
+        font-size: 1.6rem;
         font-weight: $font-regular;
         //color: #fff;
         //opacity: 0.7;
@@ -2751,7 +2756,7 @@ $howManySteps: 100; //this needs to be even.
                 transition: all 0.3s ease;
                 i{
                     color: #fff;
-                    font-size: 16px;
+                    font-size: 1.6rem;
                 }
                 &:hover{
                     text-decoration: none;
@@ -2799,14 +2804,14 @@ $howManySteps: 100; //this needs to be even.
             }
         }
         .text-online{
-            font-size: 20px;
-            line-height: 25px;
+            font-size: 2rem;
+            line-height: 2.4rem;
             font-weight: $font-regular;
             color: #525252;
         }
     }
     .num-online{
-        font-size: 36px;
+        font-size: 3.6rem;
         font-weight: $font-medium;
         line-height: 40px;
         margin: 0;
@@ -2818,7 +2823,7 @@ $howManySteps: 100; //this needs to be even.
 .pagination-custom{
     margin-bottom: 30px;
     .all-page{
-        font-size: 18px;
+        font-size: 1.8rem;
         font-weight: $font-regular;
         color: #525252;
         span{

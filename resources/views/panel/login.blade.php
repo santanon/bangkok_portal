@@ -42,13 +42,14 @@
             <div class="right" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="5000">
                 <h3>Login</h3>
                 <h6>Please insert your Username & Password </h6>
-                <form action="">
+                <form action="{{url('panel-admin/login_check')}}" method="post">
+                    @csrf
                     <div class="input-box">
-                        <input type="text" name="" required="">
+                        <input type="text" name="u" required="">
                         <label for="">Username</label>
                     </div>
                     <div class="input-box">
-                        <input type="password" name="" required="">
+                        <input type="password" name="p" required="">
                         <label for="">Password</label>
                     </div>
                     <div class="forgot-password" data-toggle="modal" data-target="#exampleModal">

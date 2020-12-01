@@ -6,12 +6,13 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Http; 
  
 class PanelController extends Controller
-{ 
-    public function login()
+{  
+	public function login()
     {        
-        if(isset($_SESSION['portal_login']) && $_SESSION['portal_login'] == 1)
+        if(isset($_SESSION['panel_login']) && $_SESSION['panel_login'] == 1)
         {
-            return view('panel.login');
+			?><script>window.location = '/';</script><?php
+            exit;
         }
         else
         {
@@ -21,7 +22,13 @@ class PanelController extends Controller
 
     public function login_check(Request $request)
     {   
-        $CustomHelper = new \App\CustomHelper;
+		if(isset($_SESSION['panel_login']) && $_SESSION['panel_login'] == 1)
+        {
+			?><script>window.location = '/';</script><?php
+            exit;
+        }
+		
+		$CustomHelper = new \App\CustomHelper;
         
         $new_login_pass = false;
 		$new_login_type = "";
@@ -31,9 +38,9 @@ class PanelController extends Controller
         $u = $request->input('u');
         $p = $request->input('p');
         
-        $q = "SELECT * FROM tbl_portal_website WHERE username = ? AND password = ?"; 
+        $q = "SELECT * FROM tbl_portal_website WHERE username = ? AND password = ?";
         $v = $u."|".md5($p);
-        $res = $CustomHelper->API_CALL($CustomHelper->API_URL('api_login_check'),$q,$v); 
+        $res = $CustomHelper->API_CALL($CustomHelper->API_URL('api_login_check'),$q,$v);
 		 
         if(trim($res) == '[]')
         {
@@ -71,7 +78,7 @@ class PanelController extends Controller
 			$_SESSION['panel_session_id'] = $obj_portal_website[0]->session_id;
 			  
 			//$this->Portal_website_log_model->add_log('Login Success ( ' . $_SESSION['panel_username'] . ' )',$_SESSION['panel_username'],$_SESSION['panel_id'],'LOGIN_PASS');
-		  
+			 
 			/*
 			$d = new stdClass(); 
 			$d->last_login = date('U'); 
@@ -79,7 +86,12 @@ class PanelController extends Controller
 			$d->session_id = session_id(); 
 			$this->Portal_website_model->update_data($d,$_SESSION['panel_id'],'id');    
 			*/
-			 
+
+			$q = "SELECT * FROM tbl_portal_website_style WHERE web_id = ?";
+			$v = $_SESSION['panel_id'];
+			$res = $CustomHelper->API_CALL($CustomHelper->API_URL('api_website_style'),$q,$v);
+			$obj_portal_website_style = json_decode($res);
+
 			/*
 			$this->load->model('Portal_website_style_model'); 
 			$d = new stdClass();  
@@ -87,53 +99,55 @@ class PanelController extends Controller
 			$q = $this->Portal_website_style_model->select_data($d);  
 			 
 			$row = $q->result(); 
+			*/
+
+			$_SESSION['panel_style_logo_type'] = $obj_portal_website_style[0]->logo_type;
+			$_SESSION['panel_style_logo_img1'] = $obj_portal_website_style[0]->logo_img1;
+			$_SESSION['panel_style_logo_url'] = $obj_portal_website_style[0]->logo_url;
+			$_SESSION['panel_style_logo_lastupdate'] = $obj_portal_website_style[0]->logo_lastupdate;
+			$_SESSION['panel_style_template_id'] = $obj_portal_website_style[0]->template_id;
+			$_SESSION['panel_style_template_lastupdate'] = $obj_portal_website_style[0]->template_lastupdate;
+			$_SESSION['panel_style_info_title'] = $obj_portal_website_style[0]->info_title;
+			$_SESSION['panel_style_info_keyword'] = $obj_portal_website_style[0]->info_keyword;
+			$_SESSION['panel_style_info_description'] = $obj_portal_website_style[0]->info_description;
+			$_SESSION['panel_style_info_lastupdate'] = $obj_portal_website_style[0]->info_lastupdate;
+			$_SESSION['panel_style_search_option'] = $obj_portal_website_style[0]->search_option;
+			$_SESSION['panel_style_search_id'] = $obj_portal_website_style[0]->search_id;
+			$_SESSION['panel_style_search_layout'] = $obj_portal_website_style[0]->search_layout; 
+			$_SESSION['panel_style_lang_option'] = $obj_portal_website_style[0]->lang_option;
+			$_SESSION['panel_style_lang_id'] = $obj_portal_website_style[0]->lang_id;
+			$_SESSION['panel_style_lang_layout'] = $obj_portal_website_style[0]->lang_layout; 
+			$_SESSION['panel_style_social_option'] = $obj_portal_website_style[0]->social_option;
+			$_SESSION['panel_style_social_id'] = $obj_portal_website_style[0]->social_id;
+			$_SESSION['panel_style_social_layout'] = $obj_portal_website_style[0]->social_layout; 
+			$_SESSION['panel_style_social_fb'] = $obj_portal_website_style[0]->social_fb;
+			$_SESSION['panel_style_social_tw'] = $obj_portal_website_style[0]->social_tw;
+			$_SESSION['panel_style_social_ins'] = $obj_portal_website_style[0]->social_ins;
+			$_SESSION['panel_style_social_yt'] = $obj_portal_website_style[0]->social_yt; 
+			$_SESSION['panel_style_copyright_option'] = $obj_portal_website_style[0]->copyright_option;
+			$_SESSION['panel_style_copyright_info'] = $obj_portal_website_style[0]->copyright_info;  
+			$_SESSION['panel_style_copyright_info_en'] = $obj_portal_website_style[0]->copyright_info_en;  
+			$_SESSION['panel_style_lang_start'] = $obj_portal_website_style[0]->lang_start;
+			$_SESSION['panel_style_block_ip'] = $obj_portal_website_style[0]->block_ip;
+			$_SESSION['panel_style_close_status'] = $obj_portal_website_style[0]->close_status;
+			$_SESSION['panel_style_close_type'] = $obj_portal_website_style[0]->close_type;
+			$_SESSION['panel_style_close_info'] = $obj_portal_website_style[0]->close_info;
+			$_SESSION['panel_style_close_redirect'] = $obj_portal_website_style[0]->close_redirect;
+			$_SESSION['panel_style_css_info'] = $obj_portal_website_style[0]->css_info;
+			$_SESSION['panel_style_html_head_info'] = $obj_portal_website_style[0]->html_head_info;
+			$_SESSION['panel_style_html_body_info'] = $obj_portal_website_style[0]->html_body_info;
+			$_SESSION['panel_style_html_foot_info'] = $obj_portal_website_style[0]->html_foot_info;  
+			$_SESSION['panel_style_call_center_info'] = $obj_portal_website_style[0]->call_center_info; 
+			$_SESSION['panel_style_slogan_1'] = $obj_portal_website_style[0]->slogan_1; 
+			$_SESSION['panel_style_slogan_2'] = $obj_portal_website_style[0]->slogan_2;  
+			$_SESSION['panel_style_slogan_1_en'] = $obj_portal_website_style[0]->slogan_1_en; 
+			$_SESSION['panel_style_slogan_2_en'] = $obj_portal_website_style[0]->slogan_2_en;  
+			$_SESSION['panel_style_contact_text_1'] = $obj_portal_website_style[0]->contact_text_1; 
+			$_SESSION['panel_style_contact_text_2'] = $obj_portal_website_style[0]->contact_text_2; 
+			$_SESSION['panel_style_contact_text_3'] = $obj_portal_website_style[0]->contact_text_3; 
+			$_SESSION['panel_style_contact_text_4'] = $obj_portal_website_style[0]->contact_text_4; 
 			  
-			$_SESSION['panel_style_logo_type'] = $row[0]->logo_type;
-			$_SESSION['panel_style_logo_img1'] = $row[0]->logo_img1;
-			$_SESSION['panel_style_logo_url'] = $row[0]->logo_url;
-			$_SESSION['panel_style_logo_lastupdate'] = $row[0]->logo_lastupdate;
-			$_SESSION['panel_style_template_id'] = $row[0]->template_id;
-			$_SESSION['panel_style_template_lastupdate'] = $row[0]->template_lastupdate;
-			$_SESSION['panel_style_info_title'] = $row[0]->info_title;
-			$_SESSION['panel_style_info_keyword'] = $row[0]->info_keyword;
-			$_SESSION['panel_style_info_description'] = $row[0]->info_description;
-			$_SESSION['panel_style_info_lastupdate'] = $row[0]->info_lastupdate;
-			$_SESSION['panel_style_search_option'] = $row[0]->search_option;
-			$_SESSION['panel_style_search_id'] = $row[0]->search_id;
-			$_SESSION['panel_style_search_layout'] = $row[0]->search_layout; 
-			$_SESSION['panel_style_lang_option'] = $row[0]->lang_option;
-			$_SESSION['panel_style_lang_id'] = $row[0]->lang_id;
-			$_SESSION['panel_style_lang_layout'] = $row[0]->lang_layout; 
-			$_SESSION['panel_style_social_option'] = $row[0]->social_option;
-			$_SESSION['panel_style_social_id'] = $row[0]->social_id;
-			$_SESSION['panel_style_social_layout'] = $row[0]->social_layout; 
-			$_SESSION['panel_style_social_fb'] = $row[0]->social_fb;
-			$_SESSION['panel_style_social_tw'] = $row[0]->social_tw;
-			$_SESSION['panel_style_social_ins'] = $row[0]->social_ins;
-			$_SESSION['panel_style_social_yt'] = $row[0]->social_yt; 
-			$_SESSION['panel_style_copyright_option'] = $row[0]->copyright_option;
-			$_SESSION['panel_style_copyright_info'] = $row[0]->copyright_info;  
-			$_SESSION['panel_style_copyright_info_en'] = $row[0]->copyright_info_en;  
-			$_SESSION['panel_style_lang_start'] = $row[0]->lang_start;
-			$_SESSION['panel_style_block_ip'] = $row[0]->block_ip;
-			$_SESSION['panel_style_close_status'] = $row[0]->close_status;
-			$_SESSION['panel_style_close_type'] = $row[0]->close_type;
-			$_SESSION['panel_style_close_info'] = $row[0]->close_info;
-			$_SESSION['panel_style_close_redirect'] = $row[0]->close_redirect;
-			$_SESSION['panel_style_css_info'] = $row[0]->css_info;
-			$_SESSION['panel_style_html_head_info'] = $row[0]->html_head_info;
-			$_SESSION['panel_style_html_body_info'] = $row[0]->html_body_info;
-			$_SESSION['panel_style_html_foot_info'] = $row[0]->html_foot_info;  
-			$_SESSION['panel_style_call_center_info'] = $row[0]->call_center_info; 
-			$_SESSION['panel_style_slogan_1'] = $row[0]->slogan_1; 
-			$_SESSION['panel_style_slogan_2'] = $row[0]->slogan_2;  
-			$_SESSION['panel_style_slogan_1_en'] = $row[0]->slogan_1_en; 
-			$_SESSION['panel_style_slogan_2_en'] = $row[0]->slogan_2_en;  
-			$_SESSION['panel_style_contact_text_1'] = $row[0]->contact_text_1; 
-			$_SESSION['panel_style_contact_text_2'] = $row[0]->contact_text_2; 
-			$_SESSION['panel_style_contact_text_3'] = $row[0]->contact_text_3; 
-			$_SESSION['panel_style_contact_text_4'] = $row[0]->contact_text_4; 
-			   
+			/*
 			$this->load->model('Portal_website_all_bg_model'); 
 			$d = new stdClass();  
 			$d->where = array('web_id' => $_SESSION['panel_id']);   
@@ -143,10 +157,26 @@ class PanelController extends Controller
 			?><meta http-equiv="refresh" content="0;URL=http://localhost/bangkok.go.th.portal/panel/login" /><?
 			*/
 
-			return view('panel.login');
+			?><script>window.location = '/';</script><?php
+        	exit;
 		}
 		
 
+        exit;
+	}
+	
+	public function logout()
+    {        
+		if(isset($_SESSION['panel_login']) && $_SESSION['panel_login'] == 1)
+        {   
+			/*
+			$this->load->model('Portal_website_log_model'); 
+			$this->Portal_website_log_model->add_log('Logout ( ' . $_SESSION['panel_username'] . ' )',$_SESSION['panel_username'],$_SESSION['panel_id'],'LOGOUT');
+			*/ 
+        } 
+
+		session_destroy(); 
+		?><script>window.location = '/';</script><?php
         exit;
     }
 }

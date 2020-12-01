@@ -2,17 +2,17 @@
     <div class="left">
         <ul>
             <li class="sign-out">
-                <a href="/login"><i class="fas fa-times"></i> Sign Out</a>
+                <a href="/panel-admin/logout"><i class="fas fa-times"></i> Sign Out</a>
             </li>
             <li>
-                Welcome : <span>Siame</span>
+                Welcome : <span><?php echo $_SESSION['panel_web_name'] ?></span>
             </li>
         </ul>
     </div>
     <div class="right">
         <ul>
-            <li class="account">
-                <a href="">
+            <li class="account"> 
+                <a href="#" data-toggle="modal" data-target="#modal_myaccount">
                     <i class="fas fa-user"></i> my account
                 </a>
             </li>

@@ -12438,11 +12438,11 @@ template {
         vertical-align: middle;
         padding: 0 10px;
         color: #fff;
-        font-size: 14px;
+        font-size: 1.4rem;
         font-weight: 300; }
         .panel-header .header-top .head-top-wrapper .left ul li a {
           color: #fff;
-          font-size: 14px;
+          font-size: 1.4rem;
           font-weight: 300; }
           .panel-header .header-top .head-top-wrapper .left ul li a:hover {
             text-decoration: none; }
@@ -12451,7 +12451,7 @@ template {
           -o-transition: none;
           transition: none; }
           .panel-header .header-top .head-top-wrapper .left ul li.sign-out a i {
-            font-size: 12px;
+            font-size: 12rem;
             margin-right: 3px;
             -webkit-transition: none;
             -o-transition: none;
@@ -12469,13 +12469,13 @@ template {
         .panel-header .header-top .head-top-wrapper .right ul li a {
           color: #fff;
           text-transform: uppercase;
-          font-size: 14px;
+          font-size: 1.4rem;
           font-weight: 300;
           -webkit-transition: none;
           -o-transition: none;
           transition: none; }
           .panel-header .header-top .head-top-wrapper .right ul li a i {
-            font-size: 12px;
+            font-size: 12rem;
             margin-right: 3px;
             -webkit-transition: none;
             -o-transition: none;
@@ -12529,7 +12529,7 @@ template {
           font-size: 18px;
           font-weight: 300; }
           .panel-header .header-main .step-template ul li .step .text-step span {
-            font-size: 14px;
+            font-size: 1.4rem;
             line-height: 14px;
             font-weight: 200;
             display: block; }
@@ -12570,7 +12570,7 @@ template {
         min-height: 34px; }
         #header-wrapper .header-lg .account-wrapper ul li a {
           color: #fff;
-          font-size: 16px;
+          font-size: 1.6rem;
           font-weight: 300;
           opacity: 0.7;
           -webkit-transition: all 0.3s ease;
@@ -12720,11 +12720,11 @@ template {
           cursor: pointer; }
           #header-wrapper .header-lg .tools-web ul .lang-site span {
             color: #fff;
-            font-size: 16px;
+            font-size: 1.6rem;
             font-weight: 300; }
           #header-wrapper .header-lg .tools-web ul .lang-site i {
             color: #fff;
-            font-size: 14px;
+            font-size: 1.4rem;
             position: relative;
             right: -5px;
             top: -2px;
@@ -12755,7 +12755,7 @@ template {
               align-items: center; }
               #header-wrapper .header-lg .tools-web ul .lang-site .multi-lang li a {
                 color: #fff;
-                font-size: 16px;
+                font-size: 1.6rem;
                 font-weight: 300;
                 width: 100%;
                 display: block;
@@ -12788,7 +12788,7 @@ template {
             -webkit-transition: all 0.3s ease;
             -o-transition: all 0.3s ease;
             transition: all 0.3s ease;
-            font-size: 16px;
+            font-size: 1.6rem;
             font-weight: 400;
             line-height: 20px; }
             #header-wrapper .header-lg .menu-top-wrapper ul li a:hover {
@@ -12805,7 +12805,7 @@ template {
           #header-wrapper .header-lg .menu-main-wrapper .sub-menu-main li a {
             display: block;
             color: #fff;
-            font-size: 20px;
+            font-size: 2.0rem;
             font-weight: 400;
             padding: 10px 15px; }
             #header-wrapper .header-lg .menu-main-wrapper .sub-menu-main li a:hover {
@@ -12833,14 +12833,14 @@ template {
             min-width: 100px;
             margin: 0;
             list-style: none;
-            font-size: 15px;
+            font-size: 1.5rem;
             text-align: left;
             background-clip: padding-box;
             z-index: 1000;
             padding: 15px;
             background-color: #f8f8f8; }
             #header-wrapper .header-lg .menu-main-wrapper .sub-menu-main li .sub-menu-lv2 .list-menu-lv2 a {
-              font-size: 20px;
+              font-size: 2.0rem;
               font-weight: 400;
               line-height: 25px;
               color: #525252;
@@ -12858,7 +12858,7 @@ template {
               background-color: #e5e5e5;
               padding: 8px 0; }
               #header-wrapper .header-lg .menu-main-wrapper .sub-menu-main li .sub-menu-lv2 .list-menu-lv2 .sub-menu-lv3 .list-menu-lv3 a {
-                font-size: 16px;
+                font-size: 1.6rem;
                 font-weight: 400;
                 line-height: 18px;
                 color: #525252;
@@ -12926,12 +12926,12 @@ template {
               height: 60px; }
               #header-wrapper .header-lg .section-search-wrapper .group-search .input-custom .input-box input:focus ~ label {
                 top: -20px;
-                font-size: 16px; }
+                font-size: 1.6rem; }
               #header-wrapper .header-lg .section-search-wrapper .group-search .input-custom .input-box input:valid ~ label {
                 top: -20px;
-                font-size: 16px; }
+                font-size: 1.6rem; }
             #header-wrapper .header-lg .section-search-wrapper .group-search .input-custom .input-box label {
-              font-size: 20px;
+              font-size: 2.0rem;
               top: 9px; }
           #header-wrapper .header-lg .section-search-wrapper .group-search .input-custom .btn-search {
             width: 40px;
@@ -15046,75 +15046,81 @@ template {
     .group-section-content .section-content .inner-content .main-content.-contact .list-item-gov .social-wrapper {
       margin-top: 5px; }
   .group-section-content .section-content .inner-content .vote-comment-content {
-    margin-top: 30px; }
-    .group-section-content .section-content .inner-content .vote-comment-content .content .box-title .title-head {
-      font-size: 36px;
-      line-height: 36px;
-      font-weight: 500;
-      margin: 0 0 20px; }
-    .group-section-content .section-content .inner-content .vote-comment-content .content .sort-order {
-      margin-bottom: 10px; }
-      .group-section-content .section-content .inner-content .vote-comment-content .content .sort-order .text-order {
-        margin-right: 10px;
+    position: relative; }
+    .group-section-content .section-content .inner-content .vote-comment-content .content {
+      margin-top: 30px; }
+      .group-section-content .section-content .inner-content .vote-comment-content .content .box-title .title-head {
+        font-size: 36px;
+        line-height: 36px;
+        font-weight: 500;
+        margin: 0 0 20px; }
+      .group-section-content .section-content .inner-content .vote-comment-content .content .box-title .order-all {
         font-size: 16px;
-        font-weight: 400;
-        color: #525252; }
-    .group-section-content .section-content .inner-content .vote-comment-content .content.-vote .list-choice-vote {
-      margin-bottom: 25px; }
-      .group-section-content .section-content .inner-content .vote-comment-content .content.-vote .list-choice-vote ul {
-        margin: 0;
-        padding: 0; }
-        .group-section-content .section-content .inner-content .vote-comment-content .content.-vote .list-choice-vote ul li {
-          list-style: none;
-          margin-bottom: 15px; }
-          .group-section-content .section-content .inner-content .vote-comment-content .content.-vote .list-choice-vote ul li .total-vote {
-            font-size: 16px;
-            font-weight: 400; }
-    .group-section-content .section-content .inner-content .vote-comment-content .content.-vote .btn-choice-vote {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      -webkit-box-pack: end;
-      -ms-flex-pack: end;
-      justify-content: flex-end; }
-      .group-section-content .section-content .inner-content .vote-comment-content .content.-vote .btn-choice-vote .btn {
-        border: none;
-        font-size: 18px;
-        font-weight: 400;
-        color: #fff;
-        border-radius: 0; }
-        .group-section-content .section-content .inner-content .vote-comment-content .content.-vote .btn-choice-vote .btn.icon i {
-          font-size: 14px;
-          margin-right: 10px; }
-      .group-section-content .section-content .inner-content .vote-comment-content .content.-vote .btn-choice-vote.-login {
+        line-height: 36px;
+        margin: 0 0 20px; }
+      .group-section-content .section-content .inner-content .vote-comment-content .content .sort-order {
+        margin-bottom: 10px; }
+        .group-section-content .section-content .inner-content .vote-comment-content .content .sort-order .text-order {
+          margin-right: 10px;
+          font-size: 16px;
+          font-weight: 400;
+          color: #525252; }
+      .group-section-content .section-content .inner-content .vote-comment-content .content.-vote .list-choice-vote {
+        margin-bottom: 25px; }
+        .group-section-content .section-content .inner-content .vote-comment-content .content.-vote .list-choice-vote ul {
+          margin: 0;
+          padding: 0; }
+          .group-section-content .section-content .inner-content .vote-comment-content .content.-vote .list-choice-vote ul li {
+            list-style: none;
+            margin-bottom: 15px; }
+            .group-section-content .section-content .inner-content .vote-comment-content .content.-vote .list-choice-vote ul li .total-vote {
+              font-size: 16px;
+              font-weight: 400; }
+      .group-section-content .section-content .inner-content .vote-comment-content .content.-vote .btn-choice-vote {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        -webkit-box-align: start;
-        -ms-flex-align: start;
-        align-items: flex-start;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between; }
-        .group-section-content .section-content .inner-content .vote-comment-content .content.-vote .btn-choice-vote.-login .show-login a {
-          font-size: 14px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end; }
+        .group-section-content .section-content .inner-content .vote-comment-content .content.-vote .btn-choice-vote .btn {
+          border: none;
+          font-size: 18px;
           font-weight: 400;
-          color: #525252;
-          opacity: 0.5;
-          display: block;
-          -webkit-transition: all 0.5s ease;
-          -o-transition: all 0.5s ease;
-          transition: all 0.5s ease;
-          margin-top: 5px; }
-          .group-section-content .section-content .inner-content .vote-comment-content .content.-vote .btn-choice-vote.-login .show-login a:hover {
-            opacity: 1; }
-    .group-section-content .section-content .inner-content .vote-comment-content .content.-comment {
-      padding-bottom: 20px;
-      border-bottom: 1px solid #cfd1d4;
-      margin-bottom: 20px; }
+          color: #fff;
+          border-radius: 0; }
+          .group-section-content .section-content .inner-content .vote-comment-content .content.-vote .btn-choice-vote .btn.icon i {
+            font-size: 14px;
+            margin-right: 10px; }
+        .group-section-content .section-content .inner-content .vote-comment-content .content.-vote .btn-choice-vote.-login {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: start;
+          -ms-flex-align: start;
+          align-items: flex-start;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+          justify-content: space-between; }
+          .group-section-content .section-content .inner-content .vote-comment-content .content.-vote .btn-choice-vote.-login .show-login a {
+            font-size: 14px;
+            font-weight: 400;
+            color: #525252;
+            opacity: 0.5;
+            display: block;
+            -webkit-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+            margin-top: 5px; }
+            .group-section-content .section-content .inner-content .vote-comment-content .content.-vote .btn-choice-vote.-login .show-login a:hover {
+              opacity: 1; }
+      .group-section-content .section-content .inner-content .vote-comment-content .content.-comment {
+        padding-bottom: 20px;
+        border-bottom: 1px solid #cfd1d4;
+        margin-bottom: 20px; }
     .group-section-content .section-content .inner-content .vote-comment-content .user-comment-wrapper ul {
       margin: 0;
       padding: 0; }
@@ -17474,11 +17480,11 @@ Due to the split circle of progress-left and progress right, we must use the ani
             vertical-align: middle; }
             .banner-wrapper .list-banner li .item-Onbanner-outer .item-Onbanner-inner .list .title-banner {
               color: #fff;
-              font-size: 36px;
+              font-size: 3.6rem;
               font-weight: 500; }
             .banner-wrapper .list-banner li .item-Onbanner-outer .item-Onbanner-inner .list .desc-banner {
               color: #fff;
-              font-size: 22px;
+              font-size: 2.2rem;
               font-weight: 400;
               margin-bottom: 50px; }
             .banner-wrapper .list-banner li .item-Onbanner-outer .item-Onbanner-inner .list .action-link {
@@ -17567,11 +17573,11 @@ Due to the split circle of progress-left and progress right, we must use the ani
             vertical-align: middle; }
             .banner-wrapper.onlyOne ul li .item-Onbanner-outer .item-Onbanner-inner .list .title-banner {
               color: #fff;
-              font-size: 36px;
+              font-size: 3.6rem;
               font-weight: 500; }
             .banner-wrapper.onlyOne ul li .item-Onbanner-outer .item-Onbanner-inner .list .desc-banner {
               color: #fff;
-              font-size: 22px;
+              font-size: 2.2rem;
               font-weight: 400;
               margin-bottom: 50px; }
 
@@ -17844,8 +17850,13 @@ Due to the split circle of progress-left and progress right, we must use the ani
   width: 100%;
   margin: auto; }
 
+html {
+  font-size: 62.5%; }
+
 body {
   font-family: 'Kanit', sans-serif;
+  font-size: 1.4rem;
+  /* 14px */
   background-color: #f8f8f8; }
 
 .clearboth {

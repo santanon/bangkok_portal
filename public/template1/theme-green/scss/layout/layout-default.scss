@@ -1970,8 +1970,10 @@ $howManySteps: 100; //this needs to be even.
             }
 
             .vote-comment-content{
-                margin-top: 30px;
+                position: relative;
                 .content{
+                    margin-top: 30px;
+
                     .box-title{
                         .title-head{
                             font-size: 36px;
@@ -1979,7 +1981,14 @@ $howManySteps: 100; //this needs to be even.
                             font-weight: $font-medium;
                             margin: 0 0 20px;
                         }
+
+                        .order-all {
+                            font-size: 16px;
+                            line-height: 36px;
+                            margin: 0 0 20px;
+                        }
                     }
+
                     .sort-order{
                         margin-bottom: 10px;
                         .text-order{
@@ -1989,6 +1998,7 @@ $howManySteps: 100; //this needs to be even.
                             color: #525252;
                         }
                     }
+
                     &.-vote{
                         .list-choice-vote{
                             margin-bottom: 25px;

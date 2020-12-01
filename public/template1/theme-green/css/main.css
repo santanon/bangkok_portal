@@ -11887,6 +11887,9 @@ template {
 #header-wrapper .header-lg .menu-main-wrapper .sub-menu-main li.list:hover {
   background-color: #006600; }
 
+#header-wrapper .header-lg .menu-main-wrapper .sub-menu-main li.active {
+  background-color: #006600; }
+
 #header-wrapper .header-lg .menu-main-wrapper .sub-menu-main li .sub-menu-lv2 .list-menu-lv2 .sub-menu-lv3 .list-menu-lv3 a:hover {
   color: #53954e; }
 

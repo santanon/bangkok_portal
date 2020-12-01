@@ -15,16 +15,17 @@ use App\Http\Controllers\PanelController;
 */
 
 /* CMS */
-Route::get('/', [PanelController::class,'login']);
-Route::get('panel-admin/login', [PanelController::class,'login']);
+//Route::any('/', [PanelController::class,'login']);
+Route::any('panel-admin/login', [PanelController::class,'login']);
+Route::any('panel-admin/login_check', [PanelController::class,'login_check']);
  
-Route::get('panel-admin/templatestep1', function(){
+Route::any('panel-admin/templatestep1', function(){
     return View::make('panel.templatestep1');
 });
-Route::get('panel-admin/templatestep2', function(){
+Route::any('panel-admin/templatestep2', function(){
     return View::make('panel.templatestep2');
 });
-Route::get('panel-admin/templatestep3', function(){
+Route::any('panel-admin/templatestep3', function(){
     return View::make('panel.templatestep3');
 });
 
@@ -33,59 +34,59 @@ Route::get('panel-admin/templatestep3', function(){
 
 
 /* Front */
-Route::get('/home', function () {
+Route::any('/', function () {
     return view('home');
 });
-Route::get('/coverpage', function () {
+Route::any('/coverpage', function () {
     return view('coverpage');
 });
 
 
-Route::get('/news', function () {
+Route::any('/news', function () {
     return view('news-main');
 });
-Route::get('/news-detail', function () {
+Route::any('/news-detail', function () {
     return view('news-detail');
 });
 
-Route::get('/album', function () {
+Route::any('/album', function () {
     return view('gallery-main');
 });
 
-Route::get('/video', function () {
+Route::any('/video', function () {
     return view('video-main');
 });
 
-Route::get('/calendar', function () {
+Route::any('/calendar', function () {
     return view('calendar-main');
 });
-Route::get('/calendar-detail', function () {
+Route::any('/calendar-detail', function () {
     return view('calendar-detail');
 });
 
-Route::get('/questionnaire', function () {
+Route::any('/questionnaire', function () {
     return view('questionnaire-main');
 });
-Route::get('/questionnaire-detail', function () {
+Route::any('/questionnaire-detail', function () {
     return view('questionnaire-detail');
 });
 
-Route::get('/download', function () {
+Route::any('/download', function () {
     return view('download-main');
 });
 
-Route::get('/sitemap', function () {
+Route::any('/sitemap', function () {
     return view('sitemap');
 });
 
-Route::get('/faq', function () {
+Route::any('/faq', function () {
     return view('faq-main');
 });
 
-Route::get('/about', function () {
+Route::any('/about', function () {
     return view('about-detail');
 });
 
-Route::get('/contact', function () {
+Route::any('/contact', function () {
     return view('contact-main');
 });

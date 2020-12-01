@@ -21,7 +21,6 @@
 
     
 </head>
- 
 <body class="color-green<?php if(isset($_SESSION['panel_login']) && $_SESSION['panel_login'] == '1'){ ?> manage<?php }?>">
 
     <!-- Script Loading -->

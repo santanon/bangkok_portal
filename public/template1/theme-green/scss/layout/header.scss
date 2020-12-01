@@ -22,11 +22,11 @@
                         vertical-align: middle;
                         padding: 0 10px;
                         color: #fff;
-                        font-size: 14px;
+                        font-size: 1.4rem;
                         font-weight: 300;
                         a{
                             color: #fff;
-                            font-size: 14px;
+                            font-size: 1.4rem;
                             font-weight: 300;
                             &:hover{
                                 text-decoration: none;
@@ -36,7 +36,7 @@
                             a{
                                 transition: none;
                                 i{
-                                    font-size: 12px;
+                                    font-size: 12rem;
                                     margin-right: 3px;
                                     transition: none;
                                 }
@@ -60,11 +60,11 @@
                         a{
                             color: #fff;
                             text-transform: uppercase;
-                            font-size: 14px;
+                            font-size: 1.4rem;
                             font-weight: 300;
                             transition: none;
                             i{
-                                font-size: 12px;
+                                font-size: 12rem;
                                 margin-right: 3px;
                                 transition: none;
                             }
@@ -126,8 +126,8 @@
                             text-align: center;
                             margin-top: 35px;
                             span{
-                                font-size: 14px;
-                                line-height: 14px;
+                                font-size: 1.4rem;
+                                line-height: 1.4rem;
                                 font-weight: 200;
                                 display: block;
                             }
@@ -186,7 +186,7 @@
                     min-height: 34px;
                     a{
                         color: #fff;
-                        font-size: 16px;
+                        font-size: 1.6rem;
                         font-weight: $font-light;
                         opacity: 0.7;
                         transition: all 0.3s ease;
@@ -346,12 +346,12 @@
                     cursor: pointer;
                     span{
                         color: #fff;
-                        font-size: 16px;
+                        font-size: 1.6rem;
                         font-weight: $font-light;
                     }
                     i{
                         color: #fff;
-                        font-size: 14px;
+                        font-size: 1.4rem;
                         position: relative;
                         right: -5px;
                         top: -2px;
@@ -376,7 +376,7 @@
                             align-items: center;
                             a{
                                 color: #fff;
-                                font-size: 16px;
+                                font-size:1.6rem;
                                 font-weight: $font-light;
                                 width: 100%;
                                 display: block;
@@ -419,9 +419,9 @@
                         color: #525252;
                         opacity: 0.7;
                         transition: all 0.3s ease;
-                        font-size: 16px;
+                        font-size:1.6rem;
                         font-weight: $font-regular;
-                        line-height: 20px;
+                        line-height: 2rem;
                         &:hover{
                             text-decoration: none;
                             opacity: 1;
@@ -445,7 +445,7 @@
                     a{
                         display: block;
                         color: #fff;
-                        font-size: 20px;
+                        font-size: 2.0rem;
                         font-weight: $font-regular;
                         padding: 10px 15px;
                         &:hover{
@@ -476,7 +476,7 @@
                         min-width: 100px;
                         margin: 0;
                         list-style: none;
-                        font-size: 15px;
+                        font-size: 1.5rem;
                         text-align: left;
                         background-clip: padding-box;
                         z-index: 1000;
@@ -484,9 +484,9 @@
                         background-color: #f8f8f8;
                         .list-menu-lv2{
                             a{
-                                font-size: 20px;
+                                font-size: 2.0rem;
                                 font-weight: $font-regular;
-                                line-height: 25px;
+                                line-height: 2.5rem;
                                 color: #525252;
                                 padding: 15px;
                                 &:hover{
@@ -511,9 +511,9 @@
                                 padding: 8px 0;
                                 .list-menu-lv3{
                                     a{
-                                        font-size: 16px;
+                                        font-size:1.6rem;
                                         font-weight: $font-regular;
-                                        line-height: 18px;
+                                        line-height: 1.8rem;
                                         color: #525252;
                                         padding: 8px 10px;
                                         &:hover{
@@ -585,15 +585,15 @@
                             height: 60px;
                             &:focus ~ label{
                                 top: -20px;
-                                font-size: 16px;
+                                font-size:1.6rem;
                             }
                             &:valid ~ label{
                                 top: -20px;
-                                font-size: 16px;
+                                font-size:1.6rem;
                             }
                         }
                         label{
-                            font-size: 20px;
+                            font-size: 2.0rem;
                             top: 9px;
                         }
                     }

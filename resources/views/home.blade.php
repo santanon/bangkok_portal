@@ -5,6 +5,8 @@
 @extends('template1/include/start')
 @section('contentpage')
 
+<!--<?php print_r($_SESSION) ?>-->
+ 
 <div class="main-wrapper">
     <div class="panel-header">
         <div class="header-top">
@@ -29,7 +31,7 @@
                 </div>
             </a>
         </div>
-
+ 
         <div class="banner-wrapper">
             @include('template1/main-slide')
         </div>
@@ -181,6 +183,22 @@
     </div>
   </div>
 </div>
+ 
+<div class="modal fade" id="modal_myaccount" tabindex="-1" role="dialog" aria-labelledby="modalpanelLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content no-border">
+          <div class="modal-close" data-dismiss="modal" aria-label="Close">
+              <div class="icon-close"></div>
+          </div>
+          <div class="modal-header">
+              <h5 class="modal-title" id="alertModalLabel">ระบบหลังบ้าน</h5>
+          </div>
+          <div class="modal-body">
+              <iframe src="/user/dashboard" height="600px" frameborder="0" allowtransparency="true"></iframe>  
+          </div>
+      </div>
+    </div>
+  </div>
 
 
 @include('template1/include.css_scripts')

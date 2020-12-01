@@ -18,7 +18,7 @@ use App\Http\Controllers\PanelController;
 //Route::any('/', [PanelController::class,'login']);
 Route::any('panel-admin/login', [PanelController::class,'login']);
 Route::any('panel-admin/login_check', [PanelController::class,'login_check']);
- 
+Route::any('panel-admin/logout', [PanelController::class,'logout']);
 Route::any('panel-admin/templatestep1', function(){
     return View::make('panel.templatestep1');
 });
@@ -40,7 +40,6 @@ Route::any('/', function () {
 Route::any('/coverpage', function () {
     return view('coverpage');
 });
-
 
 Route::any('/news', function () {
     return view('news-main');

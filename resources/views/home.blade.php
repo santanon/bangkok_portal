@@ -5,8 +5,12 @@
 @extends('template1/include/start')
 @section('contentpage')
 
+<?php 
+/*
 <!--<?php print_r($_SESSION) ?>-->
- 
+*/
+?>
+
 <div class="main-wrapper">
     <div class="panel-header">
         <div class="header-top">

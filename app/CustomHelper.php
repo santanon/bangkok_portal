@@ -25,7 +25,7 @@ class CustomHelper
         curl_setopt($ch,CURLOPT_SSL_VERIFYHOST, false); 
         $output = curl_exec($ch); 
         $connect_count = 1;
-        while($output == FALSE && $connect_count <= 3)
+        while($output == FALSE && $connect_count <= 1)
         {
             $output = curl_exec($ch); 
             sleep(3);

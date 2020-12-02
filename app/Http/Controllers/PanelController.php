@@ -40,7 +40,13 @@ class PanelController extends Controller
         
         $q = "SELECT * FROM tbl_portal_website WHERE username = ? AND password = ?";
         $v = $u."|".md5($p);
-        $res = $CustomHelper->API_CALL($CustomHelper->API_URL('api_login_check'),$q,$v);
+		$res = $CustomHelper->API_CALL($CustomHelper->API_URL('api_login_check'),$q,$v);
+		
+		if(trim($res) == '')
+        {  
+            ?><script>alert('ไม่สามารถเชื่อมต่อ Service : Login ได้ \n\n<?php echo $CustomHelper->API_URL('api_login_check') ?>');window.history.back();</script><?php
+            exit;
+        }
 		 
         if(trim($res) == '[]')
         {

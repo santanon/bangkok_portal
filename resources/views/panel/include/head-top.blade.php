@@ -5,7 +5,7 @@
                 <a href="/panel-admin/logout"><i class="fas fa-times"></i> Sign Out</a>
             </li>
             <li>
-                Welcome : <span><?php echo $_SESSION['panel_web_name'] ?></span>
+                Welcome : <span><?php echo @$_SESSION['panel_web_name'] ?></span>
             </li>
         </ul>
     </div>

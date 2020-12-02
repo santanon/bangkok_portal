@@ -12471,7 +12471,7 @@ template {
           -o-transition: none;
           transition: none; }
           .panel-header .header-top .head-top-wrapper .left ul li.sign-out a i {
-            font-size: 12rem;
+            font-size: 1.2rem;
             margin-right: 3px;
             -webkit-transition: none;
             -o-transition: none;
@@ -12495,7 +12495,7 @@ template {
           -o-transition: none;
           transition: none; }
           .panel-header .header-top .head-top-wrapper .right ul li a i {
-            font-size: 12rem;
+            font-size: 1.2rem;
             margin-right: 3px;
             -webkit-transition: none;
             -o-transition: none;
@@ -13590,21 +13590,28 @@ template {
           font-size: 50px;
           margin-right: 10px; }
 
-#modalpanel {
+.modal.modal-custom .modal-dialog.modal-xl {
+  max-width: 100%;
+  height: 96%;
   padding-left: 17px; }
-  #modalpanel .modal-dialog {
-    max-width: 100%; }
-  #modalpanel .modal-content {
+
+.modal.modal-custom .modal-header {
+  min-height: 60px;
+  padding: 10px; }
+
+.modal.modal-custom .modal-content {
+  height: 100%;
+  border-radius: 0; }
+  .modal.modal-custom .modal-content .modal-title {
+    line-height: 4rem; }
+  .modal.modal-custom .modal-content .modal-close {
+    position: absolute !important;
+    right: 10px;
+    top: 10px; }
+  .modal.modal-custom .modal-content .modal-body iframe {
+    width: 100%;
     height: 100%;
-    border-radius: 0; }
-    #modalpanel .modal-content .modal-close {
-      position: absolute;
-      right: 10px;
-      top: 10px; }
-    #modalpanel .modal-content .modal-body iframe {
-      width: 100%;
-      height: 600px;
-      overflow-y: auto; }
+    overflow-y: auto; }
 
 .loading {
   background-color: #1e6eaf;

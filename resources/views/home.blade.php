@@ -172,14 +172,14 @@
 </div>
 
 <!-- Modal Full screen -->
-<div class="modal fade" id="modalpanel" tabindex="-1" role="dialog" aria-labelledby="modalpanelLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+<div class="modal fade modal-custom" id="modalpanel" tabindex="-1" role="dialog" aria-labelledby="modalpanelLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl" role="document">
     <div class="modal-content no-border">
-        <div class="modal-close" data-dismiss="modal" aria-label="Close">
-            <div class="icon-close"></div>
-        </div>
         <div class="modal-header">
-            <h5 class="modal-title" id="alertModalLabel">ระบบหลังบ้าน</h5>
+            <h3 class="modal-title" id="alertModalLabel">ระบบหลังบ้าน</h3>
+            <div class="modal-close" data-dismiss="modal" aria-label="Close">
+                <div class="icon-close"></div>
+            </div>
         </div>
         <div class="modal-body">
             <iframe src="/user/dashboard" height="600px" frameborder="0" allowtransparency="true"></iframe>  
@@ -188,19 +188,19 @@
   </div>
 </div>
  
-<div class="modal fade" id="modal_myaccount" tabindex="-1" role="dialog" aria-labelledby="modalpanelLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content no-border">
-          <div class="modal-close" data-dismiss="modal" aria-label="Close">
-              <div class="icon-close"></div>
-          </div>
-          <div class="modal-header">
-              <h5 class="modal-title" id="alertModalLabel">ระบบหลังบ้าน</h5>
-          </div>
-          <div class="modal-body">
-              <iframe src="/user/dashboard" height="600px" frameborder="0" allowtransparency="true"></iframe>  
-          </div>
-      </div>
+<div class="modal fade modal-custom" id="modal_myaccount" tabindex="-1" role="dialog" aria-labelledby="modalpanelLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content no-border">
+            <div class="modal-header">
+                <h3 class="modal-title" id="alertModalLabel">ระบบหลังบ้าน</h3>
+                <div class="modal-close" data-dismiss="modal" aria-label="Close">
+                    <div class="icon-close"></div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <iframe src="/user/dashboard" height="600px" frameborder="0" allowtransparency="true"></iframe>  
+            </div>
+        </div>
     </div>
   </div>
 

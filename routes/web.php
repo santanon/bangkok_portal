@@ -32,6 +32,9 @@ Route::any('panel-admin/templatestep3', function(){
 
 /* Management */
 Route::any('manage-admin/list', [ManageController::class,'list']);
+Route::any('manage-admin/add', [ManageController::class,'add']);
+Route::any('manage-admin/edit', [ManageController::class,'edit']);
+Route::any('manage-admin/delete', [ManageController::class,'delete']);
 
 
 

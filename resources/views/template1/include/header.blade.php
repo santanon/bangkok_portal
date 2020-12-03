@@ -152,9 +152,9 @@
                                     </li>
                                     <li>
                                         <div class="sizefonts-wrapper">
-                                            <div class="reduce"></div>
-                                            <div class="normal active"></div>
-                                            <div class="increase"></div>
+                                            <div class="reduce" id="reduce-size"></div>
+                                            <div class="normal active" id="normal-size"></div>
+                                            <div class="increase" id="increase-size"></div>
                                         </div>
                                     </li>
                                     <li>

@@ -25,3 +25,17 @@
 <script>
    AOS.init();
 </script>
+
+<script>
+$(document).ready(function() {
+    $("#increase-size").on("click",function(){
+        $("html").css("font-size",'72.5' + "%");
+    });
+    $("#normal-size").on("click",function(){
+        $("html").css("font-size",'62.5' + "%");
+    });
+    $("#reduce-size").on("click",function(){
+        $("html").css("font-size",'52.5'+ "%");
+    });
+});
+</script>

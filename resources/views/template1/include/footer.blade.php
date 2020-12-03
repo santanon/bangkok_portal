@@ -104,7 +104,7 @@
                 <div class="sitemap">
                     <ul>
                         <li>
-                            <a href="">แผนผังเว็บไซต์</a>
+                            <a href="/sitemap">แผนผังเว็บไซต์</a>
                         </li>
                         <li>
                             <a href="">ข้อตกลงการใช้ระบบ</a>

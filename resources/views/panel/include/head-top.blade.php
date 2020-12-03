@@ -12,7 +12,7 @@
     <div class="right">
         <ul>
             <li class="account"> 
-                <a href="#" data-toggle="modal" data-target="#modal_myaccount">
+                <a href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('MY ACCOUNT','manage-admin/edit?m=portal_website');">
                     <i class="fas fa-user"></i> my account
                 </a>
             </li>
@@ -22,7 +22,7 @@
                 </a>
             </li> -->
             <li class="setting">
-                <a href="">
+                <a href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('SETTING','manage-admin/edit?m=portal_website_style');">
                     <i class="fas fa-cog"></i> setting
                 </a>
             </li>

@@ -3,7 +3,7 @@
         <div class="inner-content">
             <div class="top-content">
                 <div class="group-text">
-                    <h3 class="title color-primary">อัลบั้มภาพ</h3>
+                    <h3 class="title color-primary">ภาพกิจกรรม</h3>
                     <p class="desc color-secondary">The Bangkok Metropolitan Council Secretariat </p>
                 </div>
             </div>

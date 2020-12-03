@@ -1,15 +1,17 @@
 <div class="group-mange-section no-mg right-0">
-    <div class="manage-tools">
+    <!--<div class="manage-tools">
         <ul>
             <li class="order-list">จัดการ</li>
             <li class="order-list">ลบ</li>
             <li class="order-list">ซ่อน</li>
             <li class="order-list order-close">ปิด</li>
         </ul>
-    </div> 
-    <div class="manage-edit">
-        <img src="{{ asset('template2/assets/images/icons/icon-edit.svg')}}" alt="icon">
-    </div>
+    </div> -->
+    <a href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('IMAGE SLIDE','manage-admin/list?m=portal_website_bg');">
+        <div class="manage-edit">
+            <img src="{{ asset('template2/assets/images/icons/icon-edit.svg')}}" alt="icon">
+        </div>
+    </a>
 </div>
 <ul class="list-banner">
     <li>

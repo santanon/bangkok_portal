@@ -6,13 +6,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,500;1,300&display=swap" rel="stylesheet">
 <script src="https://use.fontawesome.com/8b2844b117.js"></script>
 <style type="text/css">
-  body{
-    font-family: 'Kanit';
-  }
+  
 
   .container-fluid{
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   .table-list{
@@ -58,11 +56,11 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-10">
-        <h2>Local Datasource</h2> 
-        <p>Javascript array as data source</p>
+        <h2>จัดการข้อมูล / แสดงรายการ</h2> 
+        <p>( พบข้อมูลทั้งหมด 5 รายการ )</p>
       </div>
       <div class="col-1">
-        <button type="button" class="btn btn-block btn-primary"><i class="fa fa-plus-square-o" aria-hidden="true"></i> Add</button>
+        <a href="/manage-admin/add?m=portal_website_news"><button type="button" class="btn btn-block btn-primary"><i class="fa fa-plus-square-o" aria-hidden="true"></i> Add</button></a>
       </div>
       <div class="col-1">
         <button type="button" class="btn btn-block btn-info"><i class="fa fa-sort-amount-desc" aria-hidden="true"></i> Sort</button>
@@ -98,7 +96,7 @@
     <div class="row">
       <div class="col">
         <table class="table-list" cellpadding="5" cellspacing="1">
-          <tr style="background-color:#FFF; font-weight:bold;!important">
+          <tr style=" font-weight:bold;!important">
             <td><input type="checkbox" /></td>
             <td>เลขที่</td>
             <td>หัวข้อ</td>
@@ -109,7 +107,7 @@
             <td>สถานะ</td>
             <td>ลบ</td>
           </tr>
-          <tr style="background-color:#FFF;">
+          <tr style="">
             <td><input type="checkbox" /></td>
             <td>#00001</td>
             <td>ข่าวเด่นประเด็นร้อน</td>
@@ -120,7 +118,7 @@
             <td><div class="status-icon active"><i class="fa fa-circle" aria-hidden="true"></i> Active</div></td>
             <td><a href="javascript: void(0)" class="delete-icon"><i class="fa fa-trash-o" aria-hidden="true"></i></a> </td>
           </tr>
-          <tr style="background-color:#FFF;">
+          <tr style="">
             <td><input type="checkbox" /></td>
             <td>#00001</td>
             <td>ข่าวเด่นประเด็นร้อน</td>
@@ -131,7 +129,73 @@
             <td><div class="status-icon offline"><i class="fa fa-circle" aria-hidden="true"></i> Offline</div></td>
             <td><a href="javascript: void(0)" class="delete-icon"><i class="fa fa-trash-o" aria-hidden="true"></i></a> </td>
           </tr>
-          <tr style="background-color:#FFF;">
+          <tr style="">
+            <td><input type="checkbox" /></td>
+            <td>#00001</td>
+            <td>ข่าวเด่นประเด็นร้อน</td>
+            <td>ข่าว</td> 
+            <td>5 วันที่แล้ว</td>
+            <td><input onclick="this.select();" type="text" name="sort[]"value="1" style="width:50px; text-align:center" maxlength="4"></td>
+            <td><a href="javascript: void(0)" class="edit-icon"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+            <td><div class="status-icon active"><i class="fa fa-circle" aria-hidden="true"></i> Active</div></td>
+            <td><a href="javascript: void(0)" class="delete-icon"><i class="fa fa-trash-o" aria-hidden="true"></i></a> </td>
+          </tr>
+          <tr style="">
+            <td><input type="checkbox" /></td>
+            <td>#00001</td>
+            <td>ข่าวเด่นประเด็นร้อน</td>
+            <td>ข่าว</td> 
+            <td>5 วันที่แล้ว</td>
+            <td><input onclick="this.select();" type="text" name="sort[]"value="1" style="width:50px; text-align:center" maxlength="4"></td>
+            <td><a href="javascript: void(0)" class="edit-icon"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+            <td><div class="status-icon active"><i class="fa fa-circle" aria-hidden="true"></i> Active</div></td>
+            <td><a href="javascript: void(0)" class="delete-icon"><i class="fa fa-trash-o" aria-hidden="true"></i></a> </td>
+          </tr>
+          <tr style="">
+            <td><input type="checkbox" /></td>
+            <td>#00001</td>
+            <td>ข่าวเด่นประเด็นร้อน</td>
+            <td>ข่าว</td> 
+            <td>5 วันที่แล้ว</td>
+            <td><input onclick="this.select();" type="text" name="sort[]"value="1" style="width:50px; text-align:center" maxlength="4"></td>
+            <td><a href="javascript: void(0)" class="edit-icon"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+            <td><div class="status-icon offline"><i class="fa fa-circle" aria-hidden="true"></i> Offline</div></td>
+            <td><a href="javascript: void(0)" class="delete-icon"><i class="fa fa-trash-o" aria-hidden="true"></i></a> </td>
+          </tr>
+          <tr style="">
+            <td><input type="checkbox" /></td>
+            <td>#00001</td>
+            <td>ข่าวเด่นประเด็นร้อน</td>
+            <td>ข่าว</td> 
+            <td>5 วันที่แล้ว</td>
+            <td><input onclick="this.select();" type="text" name="sort[]"value="1" style="width:50px; text-align:center" maxlength="4"></td>
+            <td><a href="javascript: void(0)" class="edit-icon"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+            <td><div class="status-icon active"><i class="fa fa-circle" aria-hidden="true"></i> Active</div></td>
+            <td><a href="javascript: void(0)" class="delete-icon"><i class="fa fa-trash-o" aria-hidden="true"></i></a> </td>
+          </tr>
+          <tr style="">
+            <td><input type="checkbox" /></td>
+            <td>#00001</td>
+            <td>ข่าวเด่นประเด็นร้อน</td>
+            <td>ข่าว</td> 
+            <td>5 วันที่แล้ว</td>
+            <td><input onclick="this.select();" type="text" name="sort[]"value="1" style="width:50px; text-align:center" maxlength="4"></td>
+            <td><a href="javascript: void(0)" class="edit-icon"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+            <td><div class="status-icon active"><i class="fa fa-circle" aria-hidden="true"></i> Active</div></td>
+            <td><a href="javascript: void(0)" class="delete-icon"><i class="fa fa-trash-o" aria-hidden="true"></i></a> </td>
+          </tr>
+          <tr style="">
+            <td><input type="checkbox" /></td>
+            <td>#00001</td>
+            <td>ข่าวเด่นประเด็นร้อน</td>
+            <td>ข่าว</td> 
+            <td>5 วันที่แล้ว</td>
+            <td><input onclick="this.select();" type="text" name="sort[]"value="1" style="width:50px; text-align:center" maxlength="4"></td>
+            <td><a href="javascript: void(0)" class="edit-icon"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+            <td><div class="status-icon offline"><i class="fa fa-circle" aria-hidden="true"></i> Offline</div></td>
+            <td><a href="javascript: void(0)" class="delete-icon"><i class="fa fa-trash-o" aria-hidden="true"></i></a> </td>
+          </tr>
+          <tr style="">
             <td><input type="checkbox" /></td>
             <td>#00001</td>
             <td>ข่าวเด่นประเด็นร้อน</td>
@@ -151,7 +215,7 @@
     <div class="row">
       <div class="col">
         <table class="table-list" cellspacing="0" cellpadding="0">
-          <tr>
+          <tr style="border-bottom: solid 1px #FFFFFF;">
             <td align="left">หน้า : 
               <select>
                 <option>1</option>
@@ -161,7 +225,7 @@
             <td align="right">แสดง : 
               <select>
                 <option>100</option>
-              </select> จากทั้งหมด 1000
+              </select> จาก 1000
             </td>
           </tr>
         </table>

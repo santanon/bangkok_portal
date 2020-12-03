@@ -163,7 +163,7 @@ class PanelController extends Controller
 			?><meta http-equiv="refresh" content="0;URL=http://localhost/bangkok.go.th.portal/panel/login" /><?
 			*/
 
-			?><script>window.location = '/';</script><?php
+			?><script>window.location = '/panel-admin/templatestep1';</script><?php
         	exit;
 		}
 		

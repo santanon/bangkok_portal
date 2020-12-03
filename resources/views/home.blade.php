@@ -4,13 +4,19 @@
 
 @extends('template1/include/start')
 @section('contentpage')
-
-<?php 
-/*
+ 
 <!--<?php print_r($_SESSION) ?>-->
-*/
-?>
 
+<script>
+var main_iframe_url = '';
+function sfi(title,url)
+{
+    document.getElementById('iframe_full').src = '';
+    document.getElementById('modal_full_span').innerHTML = title;
+    main_iframe_url = url;
+}
+</script>
+ 
 <div class="main-wrapper">
     <div class="panel-header">
         <div class="header-top">
@@ -59,15 +65,12 @@
 
             @include('template1/vote')
         </div>
-
-        <!-- Check Sort DragDrop -->
-        <button type="button" class="getOrder_ele">Get Order of Elements</button>
-
-        <!-- Check Alert -->
-        <button type="button" data-toggle="modal" data-target="#modal_Alert">Modal Alert System</button>
-
-        <!-- Ckeck Modal Full Screen -->
+        
+        <!--
+        <button type="button" class="getOrder_ele">Get Order of Elements</button> 
+        <button type="button" data-toggle="modal" data-target="#modal_Alert">Modal Alert System</button> 
         <button class="" data-toggle="modal" data-target="#modalpanel">Modal Full Screen</button>
+        -->
 
     </div>
 
@@ -187,24 +190,65 @@
     </div>
   </div>
 </div>
- 
-<div class="modal fade modal-custom" id="modal_myaccount" tabindex="-1" role="dialog" aria-labelledby="modalpanelLabel" aria-hidden="true">
+
+<div class="modal fade modal-custom" id="modal_full" tabindex="-1" role="dialog" aria-labelledby="modalpanelLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl" role="document">
         <div class="modal-content no-border">
             <div class="modal-header">
-                <h3 class="modal-title" id="alertModalLabel">MY ACCOUNT</h3>
+                <h3 class="modal-title" id="alertModalLabel"><span id="modal_full_span">INFORMATION</span></h3>
                 <div class="modal-close" data-dismiss="modal" aria-label="Close">
                     <div class="icon-close"></div>
                 </div>
             </div>
             <div class="modal-body">
-                <iframe src="manage-admin/list" height="600px" frameborder="0" allowtransparency="true"></iframe>  
+                <iframe id="iframe_full" height="600px" frameborder="0" allowtransparency="true"></iframe>  
             </div>
         </div>
     </div>
+</div>
+
+<div class="modal fade" id="modal_Alert_delete" tabindex="-1" role="dialog" aria-labelledby="alertModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content no-border">
+      <div class="modal-header">
+        <h5 class="modal-title" id="alertModalLabel">แจ้งเตือน</h5>
+      </div>
+      <div class="modal-body">
+        <div class="group-modal">
+            <div class="text-modal text-alert-system d-flex align-items-center">
+                <i class="fas fa-exclamation-circle" style="color: red;"></i> ยืนยันการลบ?
+            </div>
+        </div>
+      </div>
+      <div class="modal-footer"> 
+        <button type="button" class="btn btn-primary" style="background-color:red;">ลบข้อมูล</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">ยกเลิก</button>
+      </div>
+    </div>
   </div>
+</div>
 
-
+<div class="modal fade" id="modal_Alert_hide" tabindex="-1" role="dialog" aria-labelledby="alertModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content no-border">
+        <div class="modal-header">
+          <h5 class="modal-title" id="alertModalLabel">แจ้งเตือน</h5>
+        </div>
+        <div class="modal-body">
+          <div class="group-modal">
+              <div class="text-modal text-alert-system d-flex align-items-center">
+                  <i class="fas fa-exclamation-circle"></i> ต้องการซ่อนหรือไม่?
+              </div>
+          </div>
+        </div>
+        <div class="modal-footer"> 
+          <button type="button" class="btn btn-primary">ซ่อนข้อมูล</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">ยกเลิก</button>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
 @include('template1/include.css_scripts')
 
 
@@ -305,7 +349,11 @@
                 download: false,
             });
         });
-    });
+
+        $('#modal_full').on('shown.bs.modal',function(){
+            $(this).find('iframe').attr('src',main_iframe_url); 
+            })
+        });
 </script>
 
 @endsection

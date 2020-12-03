@@ -20,7 +20,7 @@
                     <div class="inner-content">
                         <div class="top-content">
                             <div class="group-text">
-                                <h3 class="title color-primary">DOWNLOAD</h3>
+                                <h3 class="title color-primary">ดาวน์โหลดคู่มือ</h3>
                                 <p class="desc color-secondary">ข้อมูลเอกสารราชการที่ผู้ใช้บริการสามารถดาวน์โหลดได้</p>
                             </div>
                             <div class="group-gotoall">

@@ -55,4 +55,17 @@ class CustomHelper
     {
         return Storage::disk('local')->get($file.'.php'); 
     } 
+
+    function module_setting($mod_name)
+    { 
+        $config_file = parse_ini_string(Storage::disk('local')->get('conf_'.$mod_name.'.php')); 
+         
+        ${'data_'.$mod_name}['text_header']             = $config_file['text_header'];
+        ${'data_'.$mod_name}['text_header_description'] = $config_file['text_header_description'];
+        ${'data_'.$mod_name}['col_list']                = $config_file['col_list'];
+        ${'data_'.$mod_name}['table_name']              = $config_file['table_name'];
+        ${'data_'.$mod_name}['api_name']                = $config_file['api_name'];
+
+        return ${'data_'.$mod_name};
+    }
 }

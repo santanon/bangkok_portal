@@ -20,7 +20,7 @@
         <div class="inner-content">
             <div class="top-content">
                 <div class="group-text">
-                    <h3 class="title color-primary">สถานี VDO</h3>
+                    <h3 class="title color-primary">วิดิทัศน์</h3>
                     <p class="desc color-secondary">The Bangkok Metropolitan Council Secretariat </p>
                 </div>
                 <div class="group-gotoall">

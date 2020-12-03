@@ -14,16 +14,80 @@ class ManageController extends Controller
 
     public function add()
     {        
-        return view('manage.add');
+        $CustomHelper = new \App\CustomHelper;
+         
+        $m = $CustomHelper->module_setting($_GET['m']);
+ 
+        $data['mode']                       = 'add';
+        $data['text_header']                = $m['text_header'].' : เพิ่ม';
+        $data['text_header_description']    = $m['text_header_description'];
+        $data['col_list']                   = explode(',',$m['col_list']);
+ 
+        return view('manage.form',$data);
     } 
 
     public function edit()
     {        
-        return view('manage.edit');
+        $CustomHelper = new \App\CustomHelper;
+         
+        $m = $CustomHelper->module_setting($_GET['m']);
+        
+        $data['mode']                       = 'edit';
+        $data['text_header']                = $m['text_header'].' : แก้ไข';
+        $data['text_header_description']    = $m['text_header_description'];
+        $data['col_list']                   = explode(',',$m['col_list']);
+ 
+        $q = "SELECT * FROM tbl_".$m['table_name']." WHERE id = ?";
+        $v = $_SESSION['panel_id'];
+        $res = $CustomHelper->API_CALL($CustomHelper->API_URL('api_'.$m['api_name']),$q,$v);
+ 
+        if($res != '')
+        {
+            $data['rows'] = json_decode($res);
+        }
+        else
+        {
+            ?>
+            ไม่พบข้อมูล...
+            <?php
+            exit;
+        }
+         
+        return view('manage.form',$data);
     } 
 
-    public function delete()
+    public function edit_logo()
     {        
-        return view('manage.delete');
+        $CustomHelper = new \App\CustomHelper;
+         
+        $m = $CustomHelper->module_setting($_GET['m']);
+        
+        $data['mode']                       = 'edit';
+        $data['text_header']                = $m['text_header'].' : แก้ไข';
+        $data['text_header_description']    = $m['text_header_description'];
+        $data['col_list']                   = explode(',',$m['col_list']);
+ 
+        $q = "SELECT * FROM tbl_".$m['table_name']." WHERE id = ?";
+        $v = $_SESSION['panel_id'];
+        $res = $CustomHelper->API_CALL($CustomHelper->API_URL('api_'.$m['api_name']),$q,$v);
+ 
+        if($res != '')
+        {
+            $data['rows'] = json_decode($res);
+        }
+        else
+        {
+            ?>
+            ไม่พบข้อมูล...
+            <?php
+            exit;
+        }
+         
+        return view('manage.form_logo',$data);
+    } 
+
+    public function action()
+    {        
+        return view('manage.action');
     } 
 }

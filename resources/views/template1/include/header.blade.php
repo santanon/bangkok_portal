@@ -88,17 +88,19 @@
         <div class="row">
             <div class="col-lg-3">
                 <div class="group-mange-section no-mg right-0">
-                    <div class="manage-tools">
+                    <!--<div class="manage-tools">
                         <ul>
-                            <li class="order-list">จัดการ</li>
+                            <li class="order-list">บริหารจัดการ</li>
                             <li class="order-list">ลบ</li>
                             <li class="order-list">ซ่อน</li>
                             <li class="order-list order-close">ปิด</li>
                         </ul>
-                    </div>
-                    <div class="manage-edit">
-                        <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
-                    </div>
+                    </div>-->
+                    <a href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('LOGO','manage-admin/edit_logo?m=portal_website');">
+                        <div class="manage-edit">
+                            <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
+                        </div>
+                    </a>
                 </div>
                 <div class="logo">
                     <a href="/">
@@ -175,17 +177,20 @@
                 <div class="row bg-color-menutop">
                     <div class="col-lg-12">
                         <div class="group-mange-section no-mg right-0">
-                            <div class="manage-tools">
+                            <!--<div class="manage-tools">
                                 <ul>
-                                    <li class="order-list">จัดการ</li>
-                                    <li class="order-list">ลบ</li>
+                                    <li class="order-list">เพิ่ม</li>
+                                    <li class="order-list">บริหารจัดการ</li>
                                     <li class="order-list">ซ่อน</li>
+                                    <li class="order-list">ลบ</li>
                                     <li class="order-list order-close">ปิด</li>
                                 </ul>
-                            </div>  
-                            <div class="manage-edit">
-                                <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
-                            </div>
+                            </div>-->
+                            <a href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('TOP MENU','manage-admin/list?m=portal_website_top_menu_page');">
+                                <div class="manage-edit">
+                                    <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
+                                </div>
+                            </a>
                         </div>
                         <div class="menu-top-wrapper">
                             <ul>
@@ -232,17 +237,19 @@
         <div class="row bg-color-secondary">
             <div class="col-lg-12 p-0">
                 <div class="group-mange-section no-mg right-0">
-                    <div class="manage-tools">
+                    <!--<div class="manage-tools">
                         <ul>
                             <li class="order-list">จัดการ</li>
                             <li class="order-list">ลบ</li>
                             <li class="order-list">ซ่อน</li>
                             <li class="order-list order-close">ปิด</li>
                         </ul>
-                    </div>  
-                    <div class="manage-edit">
-                        <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
-                    </div>
+                    </div> --> 
+                    <a href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('TOP MENU','manage-admin/list?m=portal_website_main_menu_page');">
+                        <div class="manage-edit">
+                            <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
+                        </div>
+                    </a>
                 </div>
                 <div class="menu-main-wrapper">
                     <ul class="sub-menu-main">
@@ -341,32 +348,32 @@
                             </div>
                         </li>
                         <li class="list">
-                            <a href="" title="เกี่ยวกับหน่วยงาน">เกี่ยวกับหน่วยงาน</a>
+                            <a href="about" title="เกี่ยวกับหน่วยงาน">เกี่ยวกับหน่วยงาน</a>
                         </li>
                         <li class="list">
-                            <a href="" title="ข่าวสาร">ข่าวสาร</a>
+                            <a href="news" title="ข่าวสาร">ข่าวสาร</a>
                         </li>
                         <li class="list">
-                            <a href="" title="การให้บริการ">การให้บริการ</a>
+                            <a href="album" title="ภาพกิจกรรม">ภาพกิจกรรม</a>
+                        </li> 
+                        <li class="list">
+                            <a href="video" title="วิดิทัศน์">วิดิทัศน์</a>
+                        </li> 
+                        <li class="list">
+                            <a href="download" title="ดาวน์โหลดคู่มือ">ดาวน์โหลดคู่มือ</a>
                         </li>
                         <li class="list">
-                            <a href="" title="ปฏิทินกิจกรรม">ปฏิทินกิจกรรม</a>
+                            <a href="calendar" title="ปฏิทินกิจกรรม">ปฏิทินกิจกรรม</a>
                         </li>
                         <li class="list">
-                            <a href="" title="การรับฟังปัญหา/ข้อคิดเห็น">การรับฟังปัญหา/ข้อคิดเห็น</a>
-                        </li>
-                        <!-- <li class="list">
-                            <a href="" title="ปฏิทินกิจกรรม">ปฏิทินกิจกรรม</a>
-                        </li>
+                            <a href="questionnaire" title="การรับฟังปัญหา/ข้อคิดเห็น">การรับฟังปัญหา/ข้อคิดเห็น</a>
+                        </li> 
                         <li class="list">
-                            <a href="" title="การรับฟังปัญหา/ข้อคิดเห็น">การรับฟังปัญหา/ข้อคิดเห็น</a>
-                        </li>
+                            <a href="faq" title="คำถามที่พบบ่อย">คำถามที่พบบ่อย</a>
+                        </li> 
                         <li class="list">
-                            <a href="" title="ปฏิทินกิจกรรม">ปฏิทินกิจกรรม</a>
-                        </li>
-                        <li class="list">
-                            <a href="" title="การรับฟังปัญหา/ข้อคิดเห็น">การรับฟังปัญหา/ข้อคิดเห็น</a>
-                        </li> -->
+                            <a href="contact" title="ติดต่อสอบถาม">ติดต่อสอบถาม</a>
+                        </li> 
                         <div class="clearboth"></div>
                     </ul>
                 </div>

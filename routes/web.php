@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PanelController;
+use App\Http\Controllers\ManageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +15,7 @@ use App\Http\Controllers\PanelController;
 |
 */
 
-/* CMS */
+/* Panel */
 //Route::any('/', [PanelController::class,'login']);
 Route::any('panel-admin/login', [PanelController::class,'login']);
 Route::any('panel-admin/login_check', [PanelController::class,'login_check']);
@@ -29,7 +30,8 @@ Route::any('panel-admin/templatestep3', function(){
     return View::make('panel.templatestep3');
 });
 
-
+/* Management */
+Route::any('manage-admin/list', [ManageController::class,'list']);
 
 
 

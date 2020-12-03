@@ -11,4 +11,19 @@ class ManageController extends Controller
     {        
         return view('manage.list');
     } 
+
+    public function add()
+    {        
+        return view('manage.add');
+    } 
+
+    public function edit()
+    {        
+        return view('manage.edit');
+    } 
+
+    public function delete()
+    {        
+        return view('manage.delete');
+    } 
 }

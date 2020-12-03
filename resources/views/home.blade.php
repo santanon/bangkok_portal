@@ -192,13 +192,13 @@
     <div class="modal-dialog modal-xl" role="document">
         <div class="modal-content no-border">
             <div class="modal-header">
-                <h3 class="modal-title" id="alertModalLabel">ระบบหลังบ้าน</h3>
+                <h3 class="modal-title" id="alertModalLabel">MY ACCOUNT</h3>
                 <div class="modal-close" data-dismiss="modal" aria-label="Close">
                     <div class="icon-close"></div>
                 </div>
             </div>
             <div class="modal-body">
-                <iframe src="/user/dashboard" height="600px" frameborder="0" allowtransparency="true"></iframe>  
+                <iframe src="manage-admin/list" height="600px" frameborder="0" allowtransparency="true"></iframe>  
             </div>
         </div>
     </div>

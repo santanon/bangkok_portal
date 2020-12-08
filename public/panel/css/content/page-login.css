@@ -1,0 +1,117 @@
+.bg-wrapper {
+  background-image: url("../../panel/assets/images/banner/bg-login.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  height: 100vh;
+  position: relative;
+  padding: 15px 0 0; }
+  .bg-wrapper .header {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: top;
+    -ms-flex-align: top;
+    align-items: top;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    .bg-wrapper .header .logo-login {
+      width: 182px;
+      height: 125px; }
+      .bg-wrapper .header .logo-login img {
+        width: 100%; }
+      @media only screen and (max-width: 767px) {
+        .bg-wrapper .header .logo-login img {
+          width: 70%; } }
+    .bg-wrapper .header .lang ul {
+      margin: 0;
+      padding: 0; }
+      .bg-wrapper .header .lang ul li {
+        list-style: none;
+        border: 1px solid #fff;
+        padding: 5px 8px;
+        display: inline-block;
+        cursor: pointer;
+        -webkit-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease; }
+        .bg-wrapper .header .lang ul li a {
+          color: #fff; }
+        .bg-wrapper .header .lang ul li.active {
+          background-color: #1e6eaf; }
+        .bg-wrapper .header .lang ul li:hover {
+          background-color: #1e6eaf; }
+          .bg-wrapper .header .lang ul li:hover a {
+            text-decoration: none; }
+  .bg-wrapper .section-formlogin {
+    margin-top: 150px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
+    .bg-wrapper .section-formlogin .left {
+      position: relative; }
+      .bg-wrapper .section-formlogin .left .group-text {
+        position: relative;
+        z-index: 100;
+        width: 295px; }
+        .bg-wrapper .section-formlogin .left .group-text h1, .bg-wrapper .section-formlogin .left .group-text h5, .bg-wrapper .section-formlogin .left .group-text h6 {
+          color: #fff;
+          margin: 0; }
+      .bg-wrapper .section-formlogin .left .bglayer {
+        background-image: url("../../panel/assets/images/bglayer-group-text.png");
+        display: inline-block;
+        position: absolute;
+        top: -135px;
+        left: -15px;
+        width: 195px;
+        height: 213px;
+        z-index: 1; }
+    .bg-wrapper .section-formlogin .right {
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 10px;
+      padding-bottom: 30px;
+      border-bottom: 5px solid #1e6eaf; }
+      .bg-wrapper .section-formlogin .right h3, .bg-wrapper .section-formlogin .right h6 {
+        color: #333; }
+      .bg-wrapper .section-formlogin .right .forgot-password {
+        margin-bottom: 20px; }
+        .bg-wrapper .section-formlogin .right .forgot-password a {
+          color: #999;
+          font-size: 14px;
+          -webkit-transition: all 0.5s ease;
+          -o-transition: all 0.5s ease;
+          transition: all 0.5s ease; }
+          .bg-wrapper .section-formlogin .right .forgot-password a:before {
+            content: "\f054";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color: #999;
+            font-size: 12px;
+            margin-right: 5px; }
+          .bg-wrapper .section-formlogin .right .forgot-password a:hover {
+            text-decoration: none;
+            color: #333; }
+            .bg-wrapper .section-formlogin .right .forgot-password a:hover:before {
+              color: #333; }
+  @media only screen and (max-width: 767px) {
+    .bg-wrapper {
+      height: 100%; }
+      .bg-wrapper .section-formlogin {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-top: 30px;
+        margin-bottom: 50px; }
+        .bg-wrapper .section-formlogin .left .group-text {
+          width: auto;
+          margin-bottom: 20px; }
+        .bg-wrapper .section-formlogin .left .bglayer {
+          display: none; }
+        .bg-wrapper .section-formlogin .right {
+          width: 100%; } }

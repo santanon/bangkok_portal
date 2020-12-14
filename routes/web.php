@@ -95,3 +95,11 @@ Route::any('/about', function () {
 Route::any('/contact', function () {
     return view('contact-main');
 });
+
+Route::any('/vote', function () {
+    return view('vote-main');
+});
+
+Route::any('/vote-detail', function () {
+    return view('vote-detail');
+});

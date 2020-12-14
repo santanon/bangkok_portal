@@ -65,7 +65,7 @@
                                 </div>
                                 <div class="text-content">
                                     โทรสาร
-                                    <a class="link-tel" href="tel:022243038">0-2224-3038</a>
+                                    <a class="link-tel" href="javascript: void(0)">0-2224-3038</a>
                                 </div>
                             </div>
                         </div>

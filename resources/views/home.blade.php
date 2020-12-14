@@ -350,6 +350,36 @@ function sfi(title,url)
             });
         });
 
+        $('#dynamic3').on('click', function(e) {
+            $(document).lightGallery({
+                dynamic: true,
+                dynamicEl: [{
+                    src: 'https://youtu.be/YD_gvR234qg',
+                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-1.jpg'
+                }],
+                slideEndAnimatoin: false,
+                loop: false,
+                hideControlOnEnd: true,
+                download: false,
+            });
+        });
+
+
+        $('#dynamic4').on('click', function(e) {
+            $(document).lightGallery({
+                dynamic: true,
+                dynamicEl: [{
+                    src: 'https://www.youtube.com/watch?v=meBbDqAXago',
+                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-v-y-1.jpg',
+                    poster: 'https://sachinchoolur.github.io/lightGallery/static/img/videos/y-video1-cover.jpg'
+                }],
+                slideEndAnimatoin: false,
+                loop: false,
+                hideControlOnEnd: true,
+                download: false,
+            });
+        });
+
         $('#modal_full').on('shown.bs.modal',function(){
             $(this).find('iframe').attr('src',main_iframe_url); 
             })

@@ -39,227 +39,281 @@
                         </div>
                         <div class="main-content">
 
-                            <div class="page-list-item-wrapper">
-                                <div class="group-list-item">
-                                    <ul>
-                                        <li>
-                                            <div class="group-slide">
-                                                <div class="list-item page-list">
-                                                    <div class="item -question">
-                                                        <div class="left bg-color-primary active">
-                                                            <div class="progress-content">
-                                                                <!-- Progress bar 1 -->
-                                                                <div class="progress" data-percentage="74">
-                                                                    <span class="progress-left">
-                                                                        <span class="progress-bar"></span>
-                                                                    </span>
-                                                                    <span class="progress-right">
-                                                                        <span class="progress-bar"></span>
-                                                                    </span>
-                                                                    <div class="progress-value">
-                                                                        <div>74%</div>
-                                                                    </div>
-                                                                </div>
-                                                                <!-- END -->
-                                                                <div class="total-people">155 <span>คน</span></div>
+                            <div class="group-slide group-list">
+                                <div class="list-item">
+                                    <div class="item -question">
+                                        <div class="row">
+                                            <div class="col-lg-3 col-md-3 col-sm-4">
+                                                <div class="left bg-color-primary active">
+                                                    <div class="progress-content">
+                                                        <!-- Progress bar 1 -->
+                                                        <div class="progress" data-percentage="74">
+                                                            <span class="progress-left">
+                                                                <span class="progress-bar"></span>
+                                                            </span>
+                                                            <span class="progress-right">
+                                                                <span class="progress-bar"></span>
+                                                            </span>
+                                                            <div class="progress-value">
+                                                                <div>74%</div>
                                                             </div>
-                                                            <div class="text-onbottom bg-color-secondary">ผู้ตอบคำถาม</div>
                                                         </div>
-                                                        <div class="right">       
-                                                            <div class="text-ontop color-secondary">
-                                                                View : 340
-                                                            </div>                                         
-                                                            <div class="text-content">
-                                                                <a href="##">
-                                                                    ร่วมส่งแรงใจให้เยาวชนนักเตะรุ่นใหม่ชิงชัยเอกสารที่ต้องใช้ 1. สูติบัตร พร้อมสำเนา 2. ทะเบียนบ้าน พร้อมสำเนา
-                                                                </a>
-                                                            </div>
+                                                        <!-- END -->
+                                                        <div class="total-people">155 <span>คน</span></div>
+                                                    </div>
+                                                    <div class="text-onbottom bg-color-secondary">ผู้ตอบคำถาม</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-9 col-md-9 col-sm-8">
+                                                <div class="right">       
+                                                    <div class="text-ontop color-secondary">
+                                                        View : 340
+                                                    </div>                                         
+                                                    <div class="text-content">
+                                                        <a href="##">
+                                                            ร่วมส่งแรงใจให้เยาวชนนักเตะรุ่นใหม่ชิงชัยเอกสารที่ต้องใช้ 1. สูติบัตร พร้อมสำเนา 2. ทะเบียนบ้าน พร้อมสำเนา
+                                                        </a>
+                                                    </div>
 
-                                                            <div class="text-onbottom">
-                                                                <div class="social-wrapper">
-                                                                    <ul class="d-flex align-items-center">
-                                                                        <li class="facebook d-flex align-items-center not-hover">
-                                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"> <span class="color-secondary">5</span> 
-                                                                        </li>
-                                                                        <li class="twitter d-flex align-items-center not-hover">
-                                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon">  <span class="color-secondary">5</span>
-                                                                        </li>
-                                                                        <li class="line d-flex align-items-center not-hover">
-                                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon">   <span class="color-secondary">5</span>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
+                                                    <div class="text-onbottom">
+                                                        <div class="social-wrapper">
+                                                            <ul class="d-flex align-items-center">
+                                                                <li class="facebook d-flex align-items-center not-hover">
+                                                                <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"> <span class="color-secondary">5</span>
+                                                                </li>
+                                                                <li class="twitter d-flex align-items-center not-hover">
+                                                                    <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon"><span class="color-secondary">5</span>
+                                                                </li>
+                                                                <li class="line d-flex align-items-center not-hover">
+                                                                    <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"><span class="color-secondary">5</span>
+                                                                </li>
+                                                            </ul>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </li>
-                                        <li>
-                                            <div class="group-slide">
-                                                <div class="list-item page-list">
-                                                    <div class="item -question">
-                                                        <div class="left bg-color-primary active">
-                                                            <div class="progress-content">
-                                                                <!-- Progress bar 1 -->
-                                                                <div class="progress" data-percentage="74">
-                                                                    <span class="progress-left">
-                                                                        <span class="progress-bar"></span>
-                                                                    </span>
-                                                                    <span class="progress-right">
-                                                                        <span class="progress-bar"></span>
-                                                                    </span>
-                                                                    <div class="progress-value">
-                                                                        <div>74%</div>
-                                                                    </div>
-                                                                </div>
-                                                                <!-- END -->
-                                                                <div class="total-people">155 <span>คน</span></div>
-                                                            </div>
-                                                            <div class="text-onbottom bg-color-secondary">ผู้ตอบคำถาม</div>
-                                                        </div>
-                                                        <div class="right">       
-                                                            <div class="text-ontop color-secondary">
-                                                                View : 340
-                                                            </div>                                         
-                                                            <div class="text-content">
-                                                                <a href="##">
-                                                                    ร่วมส่งแรงใจให้เยาวชนนักเตะรุ่นใหม่ชิงชัยเอกสารที่ต้องใช้ 1. สูติบัตร พร้อมสำเนา 2. ทะเบียนบ้าน พร้อมสำเนา
-                                                                </a>
-                                                            </div>
+                                        </div>
+                                    </div>
 
-                                                            <div class="text-onbottom">
-                                                                <div class="social-wrapper">
-                                                                    <ul class="d-flex align-items-center">
-                                                                        <li class="facebook d-flex align-items-center not-hover">
-                                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"> <span class="color-secondary">5</span> 
-                                                                        </li>
-                                                                        <li class="twitter d-flex align-items-center not-hover">
-                                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon">  <span class="color-secondary">5</span>
-                                                                        </li>
-                                                                        <li class="line d-flex align-items-center not-hover">
-                                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon">   <span class="color-secondary">5</span>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
+                                    <div class="item -question">
+                                        <div class="row">
+                                            <div class="col-lg-3 col-md-3 col-sm-4">
+                                                <div class="left bg-color-primary active">
+                                                    <div class="progress-content">
+                                                        <!-- Progress bar 1 -->
+                                                        <div class="progress" data-percentage="74">
+                                                            <span class="progress-left">
+                                                                <span class="progress-bar"></span>
+                                                            </span>
+                                                            <span class="progress-right">
+                                                                <span class="progress-bar"></span>
+                                                            </span>
+                                                            <div class="progress-value">
+                                                                <div>74%</div>
                                                             </div>
+                                                        </div>
+                                                        <!-- END -->
+                                                        <div class="total-people">155 <span>คน</span></div>
+                                                    </div>
+                                                    <div class="text-onbottom bg-color-secondary">ผู้ตอบคำถาม</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-9 col-md-9 col-sm-8">
+                                                <div class="right">       
+                                                    <div class="text-ontop color-secondary">
+                                                        View : 340
+                                                    </div>                                         
+                                                    <div class="text-content">
+                                                        <a href="##">
+                                                            ร่วมส่งแรงใจให้เยาวชนนักเตะรุ่นใหม่ชิงชัยเอกสารที่ต้องใช้ 1. สูติบัตร พร้อมสำเนา 2. ทะเบียนบ้าน พร้อมสำเนา
+                                                        </a>
+                                                    </div>
+
+                                                    <div class="text-onbottom">
+                                                        <div class="social-wrapper">
+                                                            <ul class="d-flex align-items-center">
+                                                                <li class="facebook d-flex align-items-center not-hover">
+                                                                <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"> <span class="color-secondary">5</span>
+                                                                </li>
+                                                                <li class="twitter d-flex align-items-center not-hover">
+                                                                    <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon"><span class="color-secondary">5</span>
+                                                                </li>
+                                                                <li class="line d-flex align-items-center not-hover">
+                                                                    <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"><span class="color-secondary">5</span>
+                                                                </li>
+                                                            </ul>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </li>
-                                        <li>
-                                            <div class="group-slide">
-                                                <div class="list-item page-list">
-                                                    <div class="item -question">
-                                                        <div class="left bg-color-primary active">
-                                                            <div class="progress-content">
-                                                                <!-- Progress bar 1 -->
-                                                                <div class="progress" data-percentage="74">
-                                                                    <span class="progress-left">
-                                                                        <span class="progress-bar"></span>
-                                                                    </span>
-                                                                    <span class="progress-right">
-                                                                        <span class="progress-bar"></span>
-                                                                    </span>
-                                                                    <div class="progress-value">
-                                                                        <div>74%</div>
-                                                                    </div>
-                                                                </div>
-                                                                <!-- END -->
-                                                                <div class="total-people">155 <span>คน</span></div>
-                                                            </div>
-                                                            <div class="text-onbottom bg-color-secondary">ผู้ตอบคำถาม</div>
-                                                        </div>
-                                                        <div class="right">       
-                                                            <div class="text-ontop color-secondary">
-                                                                View : 340
-                                                            </div>                                         
-                                                            <div class="text-content">
-                                                                <a href="##">
-                                                                    ร่วมส่งแรงใจให้เยาวชนนักเตะรุ่นใหม่ชิงชัยเอกสารที่ต้องใช้ 1. สูติบัตร พร้อมสำเนา 2. ทะเบียนบ้าน พร้อมสำเนา
-                                                                </a>
-                                                            </div>
+                                        </div>
+                                    </div>
 
-                                                            <div class="text-onbottom">
-                                                                <div class="social-wrapper">
-                                                                    <ul class="d-flex align-items-center">
-                                                                        <li class="facebook d-flex align-items-center not-hover">
-                                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"> <span class="color-secondary">5</span> 
-                                                                        </li>
-                                                                        <li class="twitter d-flex align-items-center not-hover">
-                                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon">  <span class="color-secondary">5</span>
-                                                                        </li>
-                                                                        <li class="line d-flex align-items-center not-hover">
-                                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon">   <span class="color-secondary">5</span>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
+                                    <div class="item -question">
+                                        <div class="row">
+                                            <div class="col-lg-3 col-md-3 col-sm-4">
+                                                <div class="left bg-color-primary active">
+                                                    <div class="progress-content">
+                                                        <!-- Progress bar 1 -->
+                                                        <div class="progress" data-percentage="74">
+                                                            <span class="progress-left">
+                                                                <span class="progress-bar"></span>
+                                                            </span>
+                                                            <span class="progress-right">
+                                                                <span class="progress-bar"></span>
+                                                            </span>
+                                                            <div class="progress-value">
+                                                                <div>74%</div>
                                                             </div>
+                                                        </div>
+                                                        <!-- END -->
+                                                        <div class="total-people">155 <span>คน</span></div>
+                                                    </div>
+                                                    <div class="text-onbottom bg-color-secondary">ผู้ตอบคำถาม</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-9 col-md-9 col-sm-8">
+                                                <div class="right">       
+                                                    <div class="text-ontop color-secondary">
+                                                        View : 340
+                                                    </div>                                         
+                                                    <div class="text-content">
+                                                        <a href="##">
+                                                            ร่วมส่งแรงใจให้เยาวชนนักเตะรุ่นใหม่ชิงชัยเอกสารที่ต้องใช้ 1. สูติบัตร พร้อมสำเนา 2. ทะเบียนบ้าน พร้อมสำเนา
+                                                        </a>
+                                                    </div>
+
+                                                    <div class="text-onbottom">
+                                                        <div class="social-wrapper">
+                                                            <ul class="d-flex align-items-center">
+                                                                <li class="facebook d-flex align-items-center not-hover">
+                                                                <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"> <span class="color-secondary">5</span>
+                                                                </li>
+                                                                <li class="twitter d-flex align-items-center not-hover">
+                                                                    <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon"><span class="color-secondary">5</span>
+                                                                </li>
+                                                                <li class="line d-flex align-items-center not-hover">
+                                                                    <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"><span class="color-secondary">5</span>
+                                                                </li>
+                                                            </ul>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </li>
-                                        <li>
-                                            <div class="group-slide">
-                                                <div class="list-item page-list">
-                                                    <div class="item -question">
-                                                        <div class="left bg-color-primary active">
-                                                            <div class="progress-content">
-                                                                <!-- Progress bar 1 -->
-                                                                <div class="progress" data-percentage="74">
-                                                                    <span class="progress-left">
-                                                                        <span class="progress-bar"></span>
-                                                                    </span>
-                                                                    <span class="progress-right">
-                                                                        <span class="progress-bar"></span>
-                                                                    </span>
-                                                                    <div class="progress-value">
-                                                                        <div>74%</div>
-                                                                    </div>
-                                                                </div>
-                                                                <!-- END -->
-                                                                <div class="total-people">155 <span>คน</span></div>
-                                                            </div>
-                                                            <div class="text-onbottom bg-color-secondary">ผู้ตอบคำถาม</div>
-                                                        </div>
-                                                        <div class="right">       
-                                                            <div class="text-ontop color-secondary">
-                                                                View : 340
-                                                            </div>                                         
-                                                            <div class="text-content">
-                                                                <a href="##">
-                                                                    ร่วมส่งแรงใจให้เยาวชนนักเตะรุ่นใหม่ชิงชัยเอกสารที่ต้องใช้ 1. สูติบัตร พร้อมสำเนา 2. ทะเบียนบ้าน พร้อมสำเนา
-                                                                </a>
-                                                            </div>
+                                        </div>
+                                    </div>
 
-                                                            <div class="text-onbottom">
-                                                                <div class="social-wrapper">
-                                                                    <ul class="d-flex align-items-center">
-                                                                        <li class="facebook d-flex align-items-center not-hover">
-                                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"> <span class="color-secondary">5</span> 
-                                                                        </li>
-                                                                        <li class="twitter d-flex align-items-center not-hover">
-                                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon">  <span class="color-secondary">5</span>
-                                                                        </li>
-                                                                        <li class="line d-flex align-items-center not-hover">
-                                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon">   <span class="color-secondary">5</span>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
+                                    <div class="item -question">
+                                        <div class="row">
+                                            <div class="col-lg-3 col-md-3 col-sm-4">
+                                                <div class="left bg-color-primary active">
+                                                    <div class="progress-content">
+                                                        <!-- Progress bar 1 -->
+                                                        <div class="progress" data-percentage="74">
+                                                            <span class="progress-left">
+                                                                <span class="progress-bar"></span>
+                                                            </span>
+                                                            <span class="progress-right">
+                                                                <span class="progress-bar"></span>
+                                                            </span>
+                                                            <div class="progress-value">
+                                                                <div>74%</div>
                                                             </div>
+                                                        </div>
+                                                        <!-- END -->
+                                                        <div class="total-people">155 <span>คน</span></div>
+                                                    </div>
+                                                    <div class="text-onbottom bg-color-secondary">ผู้ตอบคำถาม</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-9 col-md-9 col-sm-8">
+                                                <div class="right">       
+                                                    <div class="text-ontop color-secondary">
+                                                        View : 340
+                                                    </div>                                         
+                                                    <div class="text-content">
+                                                        <a href="##">
+                                                            ร่วมส่งแรงใจให้เยาวชนนักเตะรุ่นใหม่ชิงชัยเอกสารที่ต้องใช้ 1. สูติบัตร พร้อมสำเนา 2. ทะเบียนบ้าน พร้อมสำเนา
+                                                        </a>
+                                                    </div>
+
+                                                    <div class="text-onbottom">
+                                                        <div class="social-wrapper">
+                                                            <ul class="d-flex align-items-center">
+                                                                <li class="facebook d-flex align-items-center not-hover">
+                                                                <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"> <span class="color-secondary">5</span>
+                                                                </li>
+                                                                <li class="twitter d-flex align-items-center not-hover">
+                                                                    <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon"><span class="color-secondary">5</span>
+                                                                </li>
+                                                                <li class="line d-flex align-items-center not-hover">
+                                                                    <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"><span class="color-secondary">5</span>
+                                                                </li>
+                                                            </ul>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </li>
-                                    </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="item -question">
+                                        <div class="row">
+                                            <div class="col-lg-3 col-md-3 col-sm-4">
+                                                <div class="left bg-color-primary active">
+                                                    <div class="progress-content">
+                                                        <!-- Progress bar 1 -->
+                                                        <div class="progress" data-percentage="74">
+                                                            <span class="progress-left">
+                                                                <span class="progress-bar"></span>
+                                                            </span>
+                                                            <span class="progress-right">
+                                                                <span class="progress-bar"></span>
+                                                            </span>
+                                                            <div class="progress-value">
+                                                                <div>74%</div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- END -->
+                                                        <div class="total-people">155 <span>คน</span></div>
+                                                    </div>
+                                                    <div class="text-onbottom bg-color-secondary">ผู้ตอบคำถาม</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-9 col-md-9 col-sm-8">
+                                                <div class="right">       
+                                                    <div class="text-ontop color-secondary">
+                                                        View : 340
+                                                    </div>                                         
+                                                    <div class="text-content">
+                                                        <a href="##">
+                                                            ร่วมส่งแรงใจให้เยาวชนนักเตะรุ่นใหม่ชิงชัยเอกสารที่ต้องใช้ 1. สูติบัตร พร้อมสำเนา 2. ทะเบียนบ้าน พร้อมสำเนา
+                                                        </a>
+                                                    </div>
+
+                                                    <div class="text-onbottom">
+                                                        <div class="social-wrapper">
+                                                            <ul class="d-flex align-items-center">
+                                                                <li class="facebook d-flex align-items-center not-hover">
+                                                                <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"> <span class="color-secondary">5</span>
+                                                                </li>
+                                                                <li class="twitter d-flex align-items-center not-hover">
+                                                                    <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon"><span class="color-secondary">5</span>
+                                                                </li>
+                                                                <li class="line d-flex align-items-center not-hover">
+                                                                    <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"><span class="color-secondary">5</span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+
+                                
                             </div>
-
-
-
 
                             <div class="pagination-custom d-flex justify-content-end align-items-center">
                                 <div class="all-page">

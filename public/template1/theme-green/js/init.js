@@ -97,7 +97,7 @@ $(function () {
 
 
     // ปฏิทินกิจกรรม
-    const check_list_1 = $('#slide_1').children('li').length;
+    const check_list_1 = $('#slide_1').children('.item').length;
     $('#slide_1').on('init', function (event, slick, direction) {
         if (check_list_1 < 3) {
             $('#action-slide_1').parents('.action-slide .slide-wrapper').css('display','none');
@@ -128,7 +128,7 @@ $(function () {
 
 
     // คำถามที่พบบ่อย
-    const check_list_2 = $('#slide_2').children('li').length;
+    const check_list_2 = $('#slide_2').children('.item').length;
     $('#slide_2').on('init', function (event, slick, direction) {
         if (check_list_2 < 3) {
             $('#action-slide_2').parents('.action-slide').css('display','none');
@@ -290,7 +290,7 @@ $(function () {
     });
 
     // QUESTIONNAIRE
-    const check_list_6 = $('#slide_6').children('li').length;
+    const check_list_6 = $('#slide_6').children('.item').length;
     $('#slide_6').on('init', function (event, slick, direction) {
         if (check_list_6 < 3) {
             $('#action-slide_6').parents('.action-slide').css('display','none');

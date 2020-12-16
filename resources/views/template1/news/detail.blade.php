@@ -189,48 +189,60 @@
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="item">
-                                            <div class="left">
-                                                <div class="icon-content bg-color-primary">
-                                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                        width="42.2px" height="42.2px" viewBox="0 0 42.2 42.2" style="enable-background:new 0 0 42.2 42.2;" xml:space="preserve">                                                 
-                                                        <g>
-                                                            <path class="st0" d="M34.6,15.7L22.9,4.1H11.8C9.5,4.1,7.6,6,7.6,8.3v25.6c0,2.3,1.9,4.2,4.2,4.2h4.5h14c2.3,0,4.2-1.9,4.2-4.2
-                                                                V15.7z"/>
-                                                            <path class="st1" d="M34.6,15.7h-7.6c-2.2,0-4-1.8-4-4V4.1"/>
-                                                        </g>
-                                                    </svg>
+                                            <div class="row no-gutters">
+                                                <div class="col-lg-4 col-md-4 col-sm-4">
+                                                    <div class="left">
+                                                        <div class="icon-content bg-color-primary">
+                                                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                                width="42.2px" height="42.2px" viewBox="0 0 42.2 42.2" style="enable-background:new 0 0 42.2 42.2;" xml:space="preserve">                                                 
+                                                                <g>
+                                                                    <path class="st0" d="M34.6,15.7L22.9,4.1H11.8C9.5,4.1,7.6,6,7.6,8.3v25.6c0,2.3,1.9,4.2,4.2,4.2h4.5h14c2.3,0,4.2-1.9,4.2-4.2
+                                                                        V15.7z"/>
+                                                                    <path class="st1" d="M34.6,15.7h-7.6c-2.2,0-4-1.8-4-4V4.1"/>
+                                                                </g>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="text-onbottom bg-color-secondary">Download</div>
+                                                    </div>
                                                 </div>
-                                                <div class="text-onbottom bg-color-secondary">Download</div>
-                                            </div>
-                                            <div class="right">
-                                                <div class="text-content">
-                                                    <a href="">
-                                                        เด็กอายุกี่ขวบต้องแจ้งการเข้าเรียนตามกฎหมาย และใช้เอกสารอะไรบ้าง?
-                                                    </a>
+                                                <div class="col-lg-8 col-md-8 col-sm-8">
+                                                    <div class="right">
+                                                        <div class="text-content">
+                                                            <a href="">
+                                                                เด็กอายุกี่ขวบต้องแจ้งการเข้าเรียนตามกฎหมาย และใช้เอกสารอะไรบ้าง?
+                                                            </a>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="item">
-                                            <div class="left">
-                                                <div class="icon-content bg-color-primary">
-                                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                        width="42.2px" height="42.2px" viewBox="0 0 42.2 42.2" style="enable-background:new 0 0 42.2 42.2;" xml:space="preserve">                                                 
-                                                        <g>
-                                                            <path class="st0" d="M34.6,15.7L22.9,4.1H11.8C9.5,4.1,7.6,6,7.6,8.3v25.6c0,2.3,1.9,4.2,4.2,4.2h4.5h14c2.3,0,4.2-1.9,4.2-4.2
-                                                                V15.7z"/>
-                                                            <path class="st1" d="M34.6,15.7h-7.6c-2.2,0-4-1.8-4-4V4.1"/>
-                                                        </g>
-                                                    </svg>
+                                            <div class="row no-gutters">
+                                                <div class="col-lg-4 col-md-4 col-sm-4">
+                                                    <div class="left">
+                                                        <div class="icon-content bg-color-primary">
+                                                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                                width="42.2px" height="42.2px" viewBox="0 0 42.2 42.2" style="enable-background:new 0 0 42.2 42.2;" xml:space="preserve">                                                 
+                                                                <g>
+                                                                    <path class="st0" d="M34.6,15.7L22.9,4.1H11.8C9.5,4.1,7.6,6,7.6,8.3v25.6c0,2.3,1.9,4.2,4.2,4.2h4.5h14c2.3,0,4.2-1.9,4.2-4.2
+                                                                        V15.7z"/>
+                                                                    <path class="st1" d="M34.6,15.7h-7.6c-2.2,0-4-1.8-4-4V4.1"/>
+                                                                </g>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="text-onbottom bg-color-secondary">Download</div>
+                                                    </div>
                                                 </div>
-                                                <div class="text-onbottom bg-color-secondary">Download</div>
-                                            </div>
-                                            <div class="right">
-                                                <div class="text-content">
-                                                    <a href="">
-                                                        เด็กอายุกี่ขวบต้องแจ้งการเข้าเรียนตามกฎหมาย และใช้เอกสารอะไรบ้าง?
-                                                    </a>
+                                                <div class="col-lg-8 col-md-8 col-sm-8">
+                                                    <div class="right">
+                                                        <div class="text-content">
+                                                            <a href="">
+                                                                เด็กอายุกี่ขวบต้องแจ้งการเข้าเรียนตามกฎหมาย และใช้เอกสารอะไรบ้าง?
+                                                            </a>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

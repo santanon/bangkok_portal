@@ -65,11 +65,11 @@
                                     <span>แบบฟอร์มสำหรับติดต่อ</span>
                                 </div>
                                 <div class="group-list-item">
-                                    <ul>
-                                        <li>
-                                            <div class="group-slide">
-                                                <div class="list-item page-list">
-                                                    <div class="item">
+                                    <div class="group-slide group-list">
+                                        <div class="list-item">
+                                            <div class="item">
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-3 col-sm-4">
                                                         <div class="left">
                                                             <div class="icon-content -download-Doc bg-color-primary">
                                                                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -84,6 +84,8 @@
                                                             </div>
                                                             <div class="text-onbottom bg-color-secondary">Download</div>
                                                         </div>
+                                                    </div>
+                                                    <div class="col-lg-9 col-md-9 col-sm-8">
                                                         <div class="right">
                                                             <div class="text-ontop color-secondary">
                                                                 25 พ.ย. 2563
@@ -97,136 +99,8 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </li>
-                                        <li>
-                                            <div class="group-slide">
-                                                <div class="list-item page-list">
-                                                    <div class="item">
-                                                        <div class="left">
-                                                            <div class="icon-content -download-Doc bg-color-primary">
-                                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                                    width="40px" height="40px" viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
-                                                                    <g>
-                                                                        <line class="st0" x1="24.8" y1="24.8" x2="24.8" y2="35.8"/>
-                                                                        <polyline class="st0" points="30.6,32.2 24.8,37.8 19,32.2 	"/>
-                                                                        <path class="st1" d="M15.3,36.9h-4.5c-2.4,0-4.2-1.8-4.2-4.2V7c0-2.4,1.8-4.2,4.2-4.2h11.1l11.6,11.6V24"/>
-                                                                        <path class="st2" d="M33.5,14.5h-7.6c-2.2,0-4-1.8-4-4V2.9"/>
-                                                                    </g>
-                                                                </svg>
-                                                            </div>
-                                                            <div class="text-onbottom bg-color-secondary">Download</div>
-                                                        </div>
-                                                        <div class="right">
-                                                            <div class="text-ontop color-secondary">
-                                                                25 พ.ย. 2563
-                                                            </div>
-                                                            <div class="text-content">
-                                                                <a href="">
-                                                                    เด็กอายุกี่ขวบต้องแจ้งการเข้าเรียนตามกฎหมาย และใช้เอกสารอะไรบ้าง? (.doc)
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="group-slide">
-                                                <div class="list-item page-list">
-                                                    <div class="item">
-                                                        <div class="left">
-                                                            <div class="icon-content -download-Doc bg-color-primary">
-                                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                                    width="40px" height="40px" viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
-                                                                    <g>
-                                                                        <line class="st0" x1="24.8" y1="24.8" x2="24.8" y2="35.8"/>
-                                                                        <polyline class="st0" points="30.6,32.2 24.8,37.8 19,32.2 	"/>
-                                                                        <path class="st1" d="M15.3,36.9h-4.5c-2.4,0-4.2-1.8-4.2-4.2V7c0-2.4,1.8-4.2,4.2-4.2h11.1l11.6,11.6V24"/>
-                                                                        <path class="st2" d="M33.5,14.5h-7.6c-2.2,0-4-1.8-4-4V2.9"/>
-                                                                    </g>
-                                                                </svg>
-                                                            </div>
-                                                            <div class="text-onbottom bg-color-secondary">Download</div>
-                                                        </div>
-                                                        <div class="right">
-                                                            <div class="text-ontop color-secondary">
-                                                                25 พ.ย. 2563
-                                                            </div>
-                                                            <div class="text-content">
-                                                                <a href="">
-                                                                    เด็กอายุกี่ขวบต้องแจ้งการเข้าเรียนตามกฎหมาย และใช้เอกสารอะไรบ้าง? (.docx)
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="group-slide">
-                                                <div class="list-item page-list">
-                                                    <div class="item">
-                                                        <div class="left">
-                                                            <div class="icon-content -download-Doc bg-color-primary">
-                                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                                    width="40px" height="40px" viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
-                                                                    <g>
-                                                                        <line class="st0" x1="24.8" y1="24.8" x2="24.8" y2="35.8"/>
-                                                                        <polyline class="st0" points="30.6,32.2 24.8,37.8 19,32.2 	"/>
-                                                                        <path class="st1" d="M15.3,36.9h-4.5c-2.4,0-4.2-1.8-4.2-4.2V7c0-2.4,1.8-4.2,4.2-4.2h11.1l11.6,11.6V24"/>
-                                                                        <path class="st2" d="M33.5,14.5h-7.6c-2.2,0-4-1.8-4-4V2.9"/>
-                                                                    </g>
-                                                                </svg>
-                                                            </div>
-                                                            <div class="text-onbottom bg-color-secondary">Download</div>
-                                                        </div>
-                                                        <div class="right">
-                                                            <div class="text-ontop color-secondary">
-                                                                25 พ.ย. 2563
-                                                            </div>
-                                                            <div class="text-content">
-                                                                <a href="">
-                                                                    เด็กอายุกี่ขวบต้องแจ้งการเข้าเรียนตามกฎหมาย และใช้เอกสารอะไรบ้าง? (.doc)
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="group-slide">
-                                                <div class="list-item page-list">
-                                                    <div class="item">
-                                                        <div class="left">
-                                                            <div class="icon-content -download-Doc bg-color-primary">
-                                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                                    width="40px" height="40px" viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
-                                                                    <g>
-                                                                        <line class="st0" x1="24.8" y1="24.8" x2="24.8" y2="35.8"/>
-                                                                        <polyline class="st0" points="30.6,32.2 24.8,37.8 19,32.2 	"/>
-                                                                        <path class="st1" d="M15.3,36.9h-4.5c-2.4,0-4.2-1.8-4.2-4.2V7c0-2.4,1.8-4.2,4.2-4.2h11.1l11.6,11.6V24"/>
-                                                                        <path class="st2" d="M33.5,14.5h-7.6c-2.2,0-4-1.8-4-4V2.9"/>
-                                                                    </g>
-                                                                </svg>
-                                                            </div>
-                                                            <div class="text-onbottom bg-color-secondary">Download</div>
-                                                        </div>
-                                                        <div class="right">
-                                                            <div class="text-ontop color-secondary">
-                                                                25 พ.ย. 2563
-                                                            </div>
-                                                            <div class="text-content">
-                                                                <a href="">
-                                                                    เด็กอายุกี่ขวบต้องแจ้งการเข้าเรียนตามกฎหมาย และใช้เอกสารอะไรบ้าง? (.docx)
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 

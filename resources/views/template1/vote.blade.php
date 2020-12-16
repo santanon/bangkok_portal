@@ -132,6 +132,46 @@
                             </ul>
                         </div>
                     </div>
+                    <div class="top-content">
+                        <div class="group-text">
+                            <h3 class="title color-primary">ผลโหวต</h3>
+                        </div>
+                    </div>
+
+                    <div class="score-choice">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="text-score">
+                                    <div class="num-vote color-primary">545</div>
+                                    <div class="text-vote">พอใจมากที่สุด</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="text-score">
+                                    <div class="num-vote color-primary">224</div>
+                                    <div class="text-vote">พอใจมาก</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="text-score">
+                                    <div class="num-vote color-primary">105</div>
+                                    <div class="text-vote">ปานกลาง</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="text-score">
+                                    <div class="num-vote color-primary">105</div>
+                                    <div class="text-vote">เฉยๆ</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="text-score">
+                                    <div class="num-vote color-primary">0</div>
+                                    <div class="text-vote">ไม่น่าพอใจ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

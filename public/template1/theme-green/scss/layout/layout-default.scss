@@ -722,6 +722,7 @@ $howManySteps: 100; //this needs to be even.
                 }
 
                 .group-slide{
+                    position: relative;
                     .list-item{
                         margin: 0;
                         padding: 0;
@@ -733,88 +734,89 @@ $howManySteps: 100; //this needs to be even.
                             margin: 0 20px;
                         }
                         // space li
-                        li{
-                            list-style: none;
-                            outline: none;
-                            cursor: pointer;
-                            &:focus{
-                                outline: none;
-                            }
+                        // li{
+                        //     list-style: none;
+                        //     outline: none;
+                        //     cursor: pointer;
+                        //     &:focus{
+                        //         outline: none;
+                        //     }
                             
-                            &:hover{
-                                .item{
-                                    .left{
-                                        transition: all 0.3s ease;
-                                        .text-content{
-                                            transition: all 0.3s ease;
-                                        }
-                                        .icon-content{
-                                            svg{
-                                                transition: all 0.3s ease;
-                                            }
-                                        }
-                                    }
-                                    .right{
-                                        .text-content{
-                                            a{
-                                                opacity: 1;
-                                            }
-                                        }
-                                    }
+                        //     &:hover{
+                        //         .item{
+                        //             .left{
+                        //                 transition: all 0.3s ease;
+                        //                 .text-content{
+                        //                     transition: all 0.3s ease;
+                        //                 }
+                        //                 .icon-content{
+                        //                     svg{
+                        //                         transition: all 0.3s ease;
+                        //                     }
+                        //                 }
+                        //             }
+                        //             .right{
+                        //                 .text-content{
+                        //                     a{
+                        //                         opacity: 1;
+                        //                     }
+                        //                 }
+                        //             }
 
-                                    &.-album{
-                                        .cover-album{
-                                            .bg-layer{
-                                                opacity: 1;
+                        //             &.-album{
+                        //                 .cover-album{
+                        //                     .bg-layer{
+                        //                         opacity: 1;
                                                 
-                                            }
-                                            .top-album{
-                                                .source{
-                                                    background-color: inherit;
-                                                }
-                                            }
-                                            .caption-album{
-                                                bottom: 0;
-                                                &.bg-color-primary-opacity{
-                                                    background-color: inherit;
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                            @media only screen and (max-width: 992px) {
-                                .item{
-                                    .left{
-                                        flex: 0 0 100%;
-                                    }
-                                    .right{
-                                        display: block;
-                                        height: auto;
-                                        padding: 10px 20px;
-                                        .text-content{
-                                            margin-bottom: 15px;
-                                        }
-                                        .text-onbottom{
-                                            position: relative;
-                                        }
-                                    }
-                                    &.-album{
-                                        .cover-album{
-                                            .caption-album{
-                                                bottom: 0;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
+                        //                     }
+                        //                     .top-album{
+                        //                         .source{
+                        //                             background-color: inherit;
+                        //                         }
+                        //                     }
+                        //                     .caption-album{
+                        //                         bottom: 0;
+                        //                         &.bg-color-primary-opacity{
+                        //                             background-color: inherit;
+                        //                         }
+                        //                     }
+                        //                 }
+                        //             }
+                        //         }
+                        //     }
+                        //     @media only screen and (max-width: 992px) {
+                        //         .item{
+                        //             .left{
+                        //                 flex: 0 0 100%;
+                        //             }
+                        //             .right{
+                        //                 display: block;
+                        //                 height: auto;
+                        //                 padding: 10px 20px;
+                        //                 .text-content{
+                        //                     margin-bottom: 15px;
+                        //                 }
+                        //                 .text-onbottom{
+                        //                     position: relative;
+                        //                 }
+                        //             }
+                        //             &.-album{
+                        //                 .cover-album{
+                        //                     .caption-album{
+                        //                         bottom: 0;
+                        //                     }
+                        //                 }
+                        //             }
+                        //         }
+                        //     }
+                        // }
                         .item{
                             display: flex;
                             align-items: center;
                             flex-direction: row;
                             flex-wrap: wrap;
-                            //justify-content: center;
+                            background-color: white;
+
                             .exthumb{
                                 display: none;
                             }
@@ -965,7 +967,7 @@ $howManySteps: 100; //this needs to be even.
                                 background-color: #fff;
                                 position: relative;
                                 height: 150px;
-                                padding: 0 20px;
+                                padding: 0;
                                 display: flex;
                                 align-items: center;
                                 .text-ontop{
@@ -989,6 +991,7 @@ $howManySteps: 100; //this needs to be even.
                                         transition: all 0.3s ease;
                                         &:hover{
                                             text-decoration: none;
+                                            color: $color-primary;
                                         }
                                     }
                                 }
@@ -1213,6 +1216,14 @@ $howManySteps: 100; //this needs to be even.
                             }
                         }
                     }
+
+                    &.group-list{
+                        .list-item{
+                            .item{
+                                margin-bottom: 30px;
+                            }
+                        }
+                    }
                 }
 
                 .group-vote{
@@ -1278,6 +1289,65 @@ $howManySteps: 100; //this needs to be even.
                         .social-wrapper{
                             position: absolute;
                             bottom: 20px;
+                        }
+                    }
+                    .score-choice{
+                        .text-score{
+                            padding: 20px;
+                            margin-bottom: 30px;
+                            border: 1px solid #cfd1d4;
+        
+                            .num-vote{
+                                font-size: 3.6rem;
+                                font-weight: 500;
+                            }
+        
+                            .text-vote{
+                                font-size: 1.8rem;
+                                font-weight: 400;
+                            }
+                        }
+                    }
+
+                    &.detail-page{
+                        .question-choice{
+                            background-color: transparent !important;
+                            margin-bottom: 25px;
+            
+                            .choice-question{
+                                ul{
+                                    columns: 3 !important;
+                                    -webkit-columns: 3 !important;
+                                    -moz-columns: 3 !important;
+            
+                                    li{
+                                        margin-bottom: 35px !important;
+                                    }
+                                }
+                            }
+                        }
+            
+                        .score-wrapper{
+                            margin-bottom: 30px;
+                            border: 1px solid #cfd1d4;
+            
+                            .text-score{
+                                .text-vote{
+                                    color: $color-text !important;
+                                }
+                            }
+                        }
+            
+                        @media only screen and (max-width: 992px) {
+                            .question-choice{
+                                .choice-question{
+                                    ul{
+                                        columns: 1 !important;
+                                        -webkit-columns: 1 !important;
+                                        -moz-columns: 1 !important;
+                                    }
+                                }
+                            }
                         }
                     }
                     @media only screen and (max-width: 992px) {
@@ -2669,6 +2739,7 @@ $howManySteps: 100; //this needs to be even.
                         transition: all 0.3s ease;
                         &:hover{
                             text-decoration: none;
+                            color: $color-primary;
                         }
                     }
                 }
@@ -2699,70 +2770,6 @@ $howManySteps: 100; //this needs to be even.
             }
             .bottom{
                 margin-top: 10px;
-            }
-        }
-    }
-
-    .vote-detail-wrapper{
-        position: relative;
-
-        .group-vote{
-            .question-choice{
-                background-color: transparent !important;
-                margin-bottom: 25px;
-
-                .choice-question{
-                    ul{
-                        columns: 3 !important;
-                        -webkit-columns: 3 !important;
-                        -moz-columns: 3 !important;
-
-                        li{
-                            margin-bottom: 35px !important;
-                        }
-                    }
-                }
-            }
-
-            .score-wrapper{
-                margin-bottom: 30px;
-                border: 1px solid #cfd1d4;
-
-                .text-score{
-                    .text-vote{
-                        color: $color-text !important;
-                    }
-                }
-            }
-
-            .score-choice{
-                .text-score{
-                    padding: 20px;
-                    margin-bottom: 30px;
-                    border: 1px solid #cfd1d4;
-
-                    .num-vote{
-                        font-size: 3.6rem;
-                        font-weight: 500;
-                    }
-
-                    .text-vote{
-                        font-size: 1.8rem;
-                        font-weight: 400;
-                    }
-                }
-            }
-
-            @media only screen and (max-width: 992px) {
-                .question-choice{
-                    .choice-question{
-                        ul{
-                            columns: 1 !important;
-                            -webkit-columns: 1 !important;
-                            -moz-columns: 1 !important;
-                        }
-                    }
-                }
             }
         }
     }

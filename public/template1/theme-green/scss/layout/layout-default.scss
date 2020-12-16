@@ -967,9 +967,7 @@ $howManySteps: 100; //this needs to be even.
                                 background-color: #fff;
                                 position: relative;
                                 height: 150px;
-                                padding: 0;
-                                display: flex;
-                                align-items: center;
+                                padding: 15px 0 35px 0;
                                 .text-ontop{
                                     display: block;
                                     font-size: 1.4rem;
@@ -1002,6 +1000,7 @@ $howManySteps: 100; //this needs to be even.
                                     color: #525252;
                                     font-size: 1.6rem;
                                     font-weight: $font-regular;
+
                                     i{
                                         font-size: 1.4rem;
                                         margin-right: 5px;
@@ -1128,15 +1127,13 @@ $howManySteps: 100; //this needs to be even.
                             &.-question{
                                 .left{
                                     height: 180px;
-                                    flex: 0 0 250px;
                                 }
                                 .right{
                                     display: block;
                                     height: 180px;
-                                    align-items: normal;
-                                    padding-top: 10px;
                                     .page-detail{
                                         display: block;
+                                        
                                         .title{
                                             font-size: 3.6rem;
                                             line-height: 3.6rem;

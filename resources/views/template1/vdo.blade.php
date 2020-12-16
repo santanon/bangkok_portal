@@ -50,20 +50,21 @@
                                         <span>กทม. ร่วมเป็นเกียรติในพิธีลงนามสร้างสวนป่า</span>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="group-mange-section no-mg right-0">
-                                <div class="manage-tools">
-                                    <ul>
-                                        <li class="order-list">จัดการ</li>
-                                        <li class="order-list">ลบ</li>
-                                        <li class="order-list">ซ่อน</li>
-                                        <li class="order-list order-close">ปิด</li>
-                                    </ul>
-                                </div> 
-                                <div class="manage-edit">
-                                    <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
+                                <div class="group-mange-section">
+                                    <div class="manage-tools">
+                                        <ul>
+                                            <li class="order-list">จัดการ</li>
+                                            <li class="order-list">ลบ</li>
+                                            <li class="order-list">ซ่อน</li>
+                                            <li class="order-list order-close">ปิด</li>
+                                        </ul>
+                                    </div> 
+                                    <div class="manage-edit">
+                                        <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
+                                    </div>
                                 </div>
                             </div>
+                            
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="item video">
@@ -84,20 +85,21 @@
                                         <span>กทม. ร่วมเป็นเกียรติในพิธีลงนามสร้างสวนป่า</span>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="group-mange-section no-mg right-0">
-                                <div class="manage-tools">
-                                    <ul>
-                                        <li class="order-list">จัดการ</li>
-                                        <li class="order-list">ลบ</li>
-                                        <li class="order-list">ซ่อน</li>
-                                        <li class="order-list order-close">ปิด</li>
-                                    </ul>
-                                </div> 
-                                <div class="manage-edit">
-                                    <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
+                                <div class="group-mange-section">
+                                    <div class="manage-tools">
+                                        <ul>
+                                            <li class="order-list">จัดการ</li>
+                                            <li class="order-list">ลบ</li>
+                                            <li class="order-list">ซ่อน</li>
+                                            <li class="order-list order-close">ปิด</li>
+                                        </ul>
+                                    </div> 
+                                    <div class="manage-edit">
+                                        <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
+                                    </div>
                                 </div>
                             </div>
+                            
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6">                           
                             <div class="item video">
@@ -118,20 +120,21 @@
                                         <span>กทม. ร่วมเป็นเกียรติในพิธีลงนามสร้างสวนป่า</span>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="group-mange-section no-mg right-0">
-                                <div class="manage-tools">
-                                    <ul>
-                                        <li class="order-list">จัดการ</li>
-                                        <li class="order-list">ลบ</li>
-                                        <li class="order-list">ซ่อน</li>
-                                        <li class="order-list order-close">ปิด</li>
-                                    </ul>
-                                </div> 
-                                <div class="manage-edit">
-                                    <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
+                                <div class="group-mange-section">
+                                    <div class="manage-tools">
+                                        <ul>
+                                            <li class="order-list">จัดการ</li>
+                                            <li class="order-list">ลบ</li>
+                                            <li class="order-list">ซ่อน</li>
+                                            <li class="order-list order-close">ปิด</li>
+                                        </ul>
+                                    </div> 
+                                    <div class="manage-edit">
+                                        <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
+                                    </div>
                                 </div>
                             </div>
+                            
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="item video">
@@ -152,20 +155,21 @@
                                         <span>กทม. ร่วมเป็นเกียรติในพิธีลงนามสร้างสวนป่า</span>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="group-mange-section no-mg right-0">
-                                <div class="manage-tools">
-                                    <ul>
-                                        <li class="order-list">จัดการ</li>
-                                        <li class="order-list">ลบ</li>
-                                        <li class="order-list">ซ่อน</li>
-                                        <li class="order-list order-close">ปิด</li>
-                                    </ul>
-                                </div> 
-                                <div class="manage-edit">
-                                    <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
+                                <div class="group-mange-section">
+                                    <div class="manage-tools">
+                                        <ul>
+                                            <li class="order-list">จัดการ</li>
+                                            <li class="order-list">ลบ</li>
+                                            <li class="order-list">ซ่อน</li>
+                                            <li class="order-list order-close">ปิด</li>
+                                        </ul>
+                                    </div> 
+                                    <div class="manage-edit">
+                                        <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
+                                    </div>
                                 </div>
                             </div>
+                            
                         </div>
                     </div>
                 </div>

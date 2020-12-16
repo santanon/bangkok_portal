@@ -76,9 +76,12 @@
         display: block;
         position: absolute;
         top: 0;
+        left: 0;
         width: 100%;
-        margin: 0 -20px;
+        //margin: 0 -20px;
+        margin: 0;
         z-index: 101;
+        
         .manage-dragdrop{
             position: absolute;
             right: 0;
@@ -110,7 +113,7 @@
             margin: 0;
         }
         &.right-0{
-            right: 15px;
+            right: 0;
         }
     
         .manage-tools{

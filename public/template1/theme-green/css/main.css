@@ -17898,8 +17898,9 @@ Due to the split circle of progress-left and progress right, we must use the ani
   display: block;
   position: absolute;
   top: 0;
+  left: 0;
   width: 100%;
-  margin: 0 -20px;
+  margin: 0;
   z-index: 101; }
   .manage .group-mange-section .manage-dragdrop {
     position: absolute;
@@ -17930,7 +17931,7 @@ Due to the split circle of progress-left and progress right, we must use the ani
   .manage .group-mange-section.no-mg {
     margin: 0; }
   .manage .group-mange-section.right-0 {
-    right: 15px; }
+    right: 0; }
   .manage .group-mange-section .manage-tools {
     visibility: hidden;
     opacity: 0;

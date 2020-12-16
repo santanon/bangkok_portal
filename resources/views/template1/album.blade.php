@@ -31,20 +31,21 @@
                 <div class="gallery-template">
                     <div class="row">
                         <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="group-mange-section no-mg right-0">
-                                <div class="manage-tools">
-                                    <ul>
-                                        <li class="order-list">จัดการ</li>
-                                        <li class="order-list">ลบ</li>
-                                        <li class="order-list">ซ่อน</li>
-                                        <li class="order-list order-close">ปิด</li>
-                                    </ul>
-                                </div> 
-                                <div class="manage-edit">
-                                    <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
-                                </div>
-                            </div>
+                            
                             <div class="item -album">
+                                <div class="group-mange-section">
+                                    <div class="manage-tools">
+                                        <ul>
+                                            <li class="order-list">จัดการ</li>
+                                            <li class="order-list">ลบ</li>
+                                            <li class="order-list">ซ่อน</li>
+                                            <li class="order-list order-close">ปิด</li>
+                                        </ul>
+                                    </div> 
+                                    <div class="manage-edit">
+                                        <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
+                                    </div>
+                                </div>
                                 <div class="cover-album" style="background-image: url('../../template1/assets/images/img-album-demo1.png');">
                                     <a id="dynamic1" href="javascript:void(0)" >
                                         <div class="bg-layer">
@@ -65,20 +66,21 @@
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="group-mange-section no-mg right-0">
-                                <div class="manage-tools">
-                                    <ul>
-                                        <li class="order-list">จัดการ</li>
-                                        <li class="order-list">ลบ</li>
-                                        <li class="order-list">ซ่อน</li>
-                                        <li class="order-list order-close">ปิด</li>
-                                    </ul>
-                                </div> 
-                                <div class="manage-edit">
-                                    <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
+                            
+                            <div class="item -album" >
+                                <div class="group-mange-section">
+                                    <div class="manage-tools">
+                                        <ul>
+                                            <li class="order-list">จัดการ</li>
+                                            <li class="order-list">ลบ</li>
+                                            <li class="order-list">ซ่อน</li>
+                                            <li class="order-list order-close">ปิด</li>
+                                        </ul>
+                                    </div> 
+                                    <div class="manage-edit">
+                                        <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="item -album" id="dynamic2">
                                 <div class="cover-album" style="background-image: url('../../template1/assets/images/img-album-demo2.jpg');">
                                     <a id="dynamic2" href="javascript:void(0)" >
                                         <div class="bg-layer">
@@ -99,20 +101,21 @@
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="group-mange-section no-mg right-0">
-                                <div class="manage-tools">
-                                    <ul>
-                                        <li class="order-list">จัดการ</li>
-                                        <li class="order-list">ลบ</li>
-                                        <li class="order-list">ซ่อน</li>
-                                        <li class="order-list order-close">ปิด</li>
-                                    </ul>
-                                </div> 
-                                <div class="manage-edit">
-                                    <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
+                            
+                            <div class="item -album">
+                                <div class="group-mange-section">
+                                    <div class="manage-tools">
+                                        <ul>
+                                            <li class="order-list">จัดการ</li>
+                                            <li class="order-list">ลบ</li>
+                                            <li class="order-list">ซ่อน</li>
+                                            <li class="order-list order-close">ปิด</li>
+                                        </ul>
+                                    </div> 
+                                    <div class="manage-edit">
+                                        <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="item -album" id="dynamic1">
                                 <div class="cover-album" style="background-image: url('../../template1/assets/images/img-album-demo3.jpg');">
                                     <a id="dynamic1" href="javascript:void(0)" >
                                         <div class="bg-layer">
@@ -133,20 +136,21 @@
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="group-mange-section no-mg right-0">
-                                <div class="manage-tools">
-                                    <ul>
-                                        <li class="order-list">จัดการ</li>
-                                        <li class="order-list">ลบ</li>
-                                        <li class="order-list">ซ่อน</li>
-                                        <li class="order-list order-close">ปิด</li>
-                                    </ul>
-                                </div> 
-                                <div class="manage-edit">
-                                    <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
+                            
+                            <div class="item -album">
+                                <div class="group-mange-section">
+                                    <div class="manage-tools">
+                                        <ul>
+                                            <li class="order-list">จัดการ</li>
+                                            <li class="order-list">ลบ</li>
+                                            <li class="order-list">ซ่อน</li>
+                                            <li class="order-list order-close">ปิด</li>
+                                        </ul>
+                                    </div> 
+                                    <div class="manage-edit">
+                                        <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="item -album" id="dynamic2">
                                 <div class="cover-album" style="background-image: url('../../template1/assets/images/img-album-demo4.jpg');">
                                     <a id="dynamic2" href="javascript:void(0)" >
                                         <div class="bg-layer">

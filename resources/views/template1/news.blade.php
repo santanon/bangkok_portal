@@ -32,20 +32,21 @@
                         <div class="main-content">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <div class="group-mange-section">
-                                        <div class="manage-tools">
-                                            <ul>
-                                                <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('NEWS','manage-admin/edit?m=portal_website_news');">แก้ไข</a></li> 
-                                                <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_hide">ซ่อน</a></li>
-                                                <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_delete">ลบ</a></li> 
-                                                <li class="order-list order-close">ปิด</li>
-                                            </ul>
-                                        </div>
-                                        <div class="manage-edit">
-                                            <img src="{{ asset('../../assets/images/icons/icon-edit.svg')}}" alt="icon">
-                                        </div> 
-                                    </div>
+                                    
                                     <div class="main-news">
+                                        <div class="group-mange-section">
+                                            <div class="manage-tools">
+                                                <ul>
+                                                    <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('NEWS','manage-admin/edit?m=portal_website_news');">แก้ไข</a></li> 
+                                                    <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_hide">ซ่อน</a></li>
+                                                    <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_delete">ลบ</a></li> 
+                                                    <li class="order-list order-close">ปิด</li>
+                                                </ul>
+                                            </div>
+                                            <div class="manage-edit">
+                                                <img src="{{ asset('../../assets/images/icons/icon-edit.svg')}}" alt="icon">
+                                            </div> 
+                                        </div>
                                         <a href="/">
                                             <div class="img-news" style="background-image: url('../../assets/images/img-news-demo1.png');"></div>
                                         </a>
@@ -82,20 +83,21 @@
                                 <div class="col-lg-6">
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <div class="group-mange-section">
-                                                <div class="manage-tools">
-                                                    <ul>
-                                                        <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('NEWS','manage-admin/edit?m=portal_website_news');">แก้ไข</a></li> 
-                                                        <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_hide">ซ่อน</a></li>
-                                                        <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_delete">ลบ</a></li>
-                                                        <li class="order-list order-close">ปิด</li>
-                                                    </ul>
-                                                </div>
-                                                <div class="manage-edit">
-                                                    <img src="{{ asset('../../assets/images/icons/icon-edit.svg')}}" alt="icon">
-                                                </div> 
-                                            </div>
+                                            
                                             <div class="sub-news">
+                                                <div class="group-mange-section">
+                                                    <div class="manage-tools">
+                                                        <ul>
+                                                            <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('NEWS','manage-admin/edit?m=portal_website_news');">แก้ไข</a></li> 
+                                                            <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_hide">ซ่อน</a></li>
+                                                            <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_delete">ลบ</a></li>
+                                                            <li class="order-list order-close">ปิด</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="manage-edit">
+                                                        <img src="{{ asset('../../assets/images/icons/icon-edit.svg')}}" alt="icon">
+                                                    </div> 
+                                                </div>
                                                 <div class="row no-gutters">
                                                     <div class="col-lg-6">
                                                         <div class="img-news" style="background-image: url('../../assets/images/img-news-demo2.png');">
@@ -135,20 +137,21 @@
                                             </div>
                                         </div>
                                         <div class="col-lg-12">
-                                            <div class="group-mange-section">
-                                                <div class="manage-tools">
-                                                    <ul>
-                                                        <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('NEWS','manage-admin/edit?m=portal_website_news');">แก้ไข</a></li> 
-                                                        <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_hide">ซ่อน</a></li>
-                                                        <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_delete">ลบ</a></li>
-                                                        <li class="order-list order-close">ปิด</li>
-                                                    </ul>
-                                                </div>
-                                                <div class="manage-edit">
-                                                    <img src="{{ asset('../../assets/images/icons/icon-edit.svg')}}" alt="icon">
-                                                </div> 
-                                            </div>
+                                            
                                             <div class="sub-news">
+                                                <div class="group-mange-section">
+                                                    <div class="manage-tools">
+                                                        <ul>
+                                                            <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('NEWS','manage-admin/edit?m=portal_website_news');">แก้ไข</a></li> 
+                                                            <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_hide">ซ่อน</a></li>
+                                                            <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_delete">ลบ</a></li>
+                                                            <li class="order-list order-close">ปิด</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="manage-edit">
+                                                        <img src="{{ asset('../../assets/images/icons/icon-edit.svg')}}" alt="icon">
+                                                    </div> 
+                                                </div>
                                                 <div class="row no-gutters">
                                                     <div class="col-lg-6">
                                                         <div class="img-news" style="background-image: url('../../assets/images/img-news-demo3.png');">

@@ -14220,13 +14220,7 @@ template {
           background-color: #fff;
           position: relative;
           height: 150px;
-          padding: 0;
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-align: center;
-          -ms-flex-align: center;
-          align-items: center; }
+          padding: 15px 0 35px 0; }
           .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item .right .text-ontop {
             display: block;
             font-size: 1.4rem;
@@ -14373,17 +14367,10 @@ template {
               .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item.-album .cover-album .caption-album.show {
                 bottom: 0; }
         .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item.-question .left {
-          height: 180px;
-          -webkit-box-flex: 0;
-          -ms-flex: 0 0 250px;
-          flex: 0 0 250px; }
+          height: 180px; }
         .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item.-question .right {
           display: block;
-          height: 180px;
-          -webkit-box-align: normal;
-          -ms-flex-align: normal;
-          align-items: normal;
-          padding-top: 10px; }
+          height: 180px; }
           .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item.-question .right .page-detail {
             display: block; }
             .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item.-question .right .page-detail .title {

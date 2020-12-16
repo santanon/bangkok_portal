@@ -311,8 +311,6 @@
                                         </div>
                                     </div>
                                 </div>
-
-                                
                             </div>
 
                             <div class="pagination-custom d-flex justify-content-end align-items-center">

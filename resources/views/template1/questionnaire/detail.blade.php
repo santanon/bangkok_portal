@@ -7,34 +7,40 @@
                         <div class="group-slide">
                             <div class="list-item">
                                 <div class="item -question">
-                                    <div class="left bg-color-primary active">
-                                        <div class="progress-content">
-                                            <!-- Progress bar 1 -->
-                                            <div class="progress" data-percentage="50">
-                                                <span class="progress-left">
-                                                    <span class="progress-bar"></span>
-                                                </span>
-                                                <span class="progress-right">
-                                                    <span class="progress-bar"></span>
-                                                </span>
-                                                <div class="progress-value">
-                                                    <div>50%</div>
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-3 col-sm-4">
+                                            <div class="left bg-color-primary active">
+                                                <div class="progress-content">
+                                                    <!-- Progress bar 1 -->
+                                                    <div class="progress" data-percentage="50">
+                                                        <span class="progress-left">
+                                                            <span class="progress-bar"></span>
+                                                        </span>
+                                                        <span class="progress-right">
+                                                            <span class="progress-bar"></span>
+                                                        </span>
+                                                        <div class="progress-value">
+                                                            <div>50%</div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- END -->
+                                                    <div class="total-people">150 <span>คน</span></div>
+                                                </div>
+                                                <div class="text-onbottom bg-color-secondary">ผู้ตอบคำถาม</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-9 col-md-9 col-sm-8">
+                                            <div class="right">                                          
+                                                <div class="text-content page-detail">
+                                                    <div class="title color-primary">
+                                                        ร่วมส่งแรงใจให้เยาวชนนักเตะรุ่นใหม่ชิงชัยเอกสารที่ต้องใช้ 1. สูติบัตร พร้อมสำเนา 2. ทะเบียนบ้าน พร้อมสำเนา
+                                                    </div>
+                                                    <p>
+                                                        ระหว่างวันที่ 30 ต.ค. - 5 ธ.ค. 2563 ณ สนามศูนย์เยาวชนกรุงเทพมหานคร (ไทย-ญี่ปุ่น) ดินแดง ชิงถ้วยเกียรติยศ
+                                                        พร้อมทุนการศึกษารวม 250,000 บาท
+                                                    </p>
                                                 </div>
                                             </div>
-                                            <!-- END -->
-                                            <div class="total-people">150 <span>คน</span></div>
-                                        </div>
-                                        <div class="text-onbottom bg-color-secondary">ผู้ตอบคำถาม</div>
-                                    </div>
-                                    <div class="right">                                          
-                                        <div class="text-content page-detail">
-                                            <div class="title color-primary">
-                                                ร่วมส่งแรงใจให้เยาวชนนักเตะรุ่นใหม่ชิงชัยเอกสารที่ต้องใช้ 1. สูติบัตร พร้อมสำเนา 2. ทะเบียนบ้าน พร้อมสำเนา
-                                            </div>
-                                            <p>
-                                                ระหว่างวันที่ 30 ต.ค. - 5 ธ.ค. 2563 ณ สนามศูนย์เยาวชนกรุงเทพมหานคร (ไทย-ญี่ปุ่น) ดินแดง ชิงถ้วยเกียรติยศ
-                                                พร้อมทุนการศึกษารวม 250,000 บาท
-                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -266,14 +272,13 @@
                         </div>
                     </div>
                     <div class="views-like d-flex align-items-center">
-                        <div class="view-count color-secondary">
-                            View : <span class="color-secondary">1.5K</span>
+                        <div class="view-count">
+                            View : <span>1.5K</span>
                         </div>
                         <div class="like-count d-flex align-items-center">
-                            <div class="icon-like">
+                            <a href="#" title="Love it" data-count="0" class="icon-like">
                                 <img src="{{ asset('template1/assets/images/icons/icon-like.png')}}" alt="icon">
-                            </div>
-                            <span class="color-secondary">1.2K</span>
+                            </a>
                         </div>
                     </div>
                 </div>

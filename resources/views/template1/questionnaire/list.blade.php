@@ -43,7 +43,7 @@
                                 <div class="list-item">
                                     <div class="item -question">
                                         <div class="row">
-                                            <div class="col-lg-3 col-md-3 col-sm-4">
+                                            <div class="col-sm-4 col-lg-3 col-xl-3">
                                                 <div class="left bg-color-primary active">
                                                     <div class="progress-content">
                                                         <!-- Progress bar 1 -->
@@ -64,7 +64,7 @@
                                                     <div class="text-onbottom bg-color-secondary">ผู้ตอบคำถาม</div>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-9 col-md-9 col-sm-8">
+                                            <div class="col-sm-8 col-lg-9 col-xl-9">
                                                 <div class="right">       
                                                     <div class="text-ontop color-secondary">
                                                         View : 340
@@ -97,7 +97,7 @@
 
                                     <div class="item -question">
                                         <div class="row">
-                                            <div class="col-lg-3 col-md-3 col-sm-4">
+                                            <div class="col-sm-4 col-lg-3 col-xl-3">
                                                 <div class="left bg-color-primary active">
                                                     <div class="progress-content">
                                                         <!-- Progress bar 1 -->
@@ -118,7 +118,7 @@
                                                     <div class="text-onbottom bg-color-secondary">ผู้ตอบคำถาม</div>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-9 col-md-9 col-sm-8">
+                                            <div class="col-sm-8 col-lg-9 col-xl-9">
                                                 <div class="right">       
                                                     <div class="text-ontop color-secondary">
                                                         View : 340
@@ -151,7 +151,7 @@
 
                                     <div class="item -question">
                                         <div class="row">
-                                            <div class="col-lg-3 col-md-3 col-sm-4">
+                                            <div class="col-sm-4 col-lg-3 col-xl-3">
                                                 <div class="left bg-color-primary active">
                                                     <div class="progress-content">
                                                         <!-- Progress bar 1 -->
@@ -172,7 +172,7 @@
                                                     <div class="text-onbottom bg-color-secondary">ผู้ตอบคำถาม</div>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-9 col-md-9 col-sm-8">
+                                            <div class="col-sm-8 col-lg-9 col-xl-9">
                                                 <div class="right">       
                                                     <div class="text-ontop color-secondary">
                                                         View : 340
@@ -205,7 +205,7 @@
 
                                     <div class="item -question">
                                         <div class="row">
-                                            <div class="col-lg-3 col-md-3 col-sm-4">
+                                            <div class="col-sm-4 col-lg-3 col-xl-3">
                                                 <div class="left bg-color-primary active">
                                                     <div class="progress-content">
                                                         <!-- Progress bar 1 -->
@@ -226,7 +226,7 @@
                                                     <div class="text-onbottom bg-color-secondary">ผู้ตอบคำถาม</div>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-9 col-md-9 col-sm-8">
+                                            <div class="col-sm-8 col-lg-9 col-xl-9">
                                                 <div class="right">       
                                                     <div class="text-ontop color-secondary">
                                                         View : 340
@@ -259,7 +259,7 @@
 
                                     <div class="item -question">
                                         <div class="row">
-                                            <div class="col-lg-3 col-md-3 col-sm-4">
+                                            <div class="col-sm-4 col-lg-3 col-xl-3">
                                                 <div class="left bg-color-primary active">
                                                     <div class="progress-content">
                                                         <!-- Progress bar 1 -->
@@ -280,7 +280,7 @@
                                                     <div class="text-onbottom bg-color-secondary">ผู้ตอบคำถาม</div>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-9 col-md-9 col-sm-8">
+                                            <div class="col-sm-8 col-lg-9 col-xl-9">
                                                 <div class="right">       
                                                     <div class="text-ontop color-secondary">
                                                         View : 340

@@ -31,7 +31,7 @@
             <div class="main-content">
                 <div class="gallery-template">
                     <div class="row">
-                        <div class="col-lg-3 col-md-4 col-sm-6">                           
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">                           
                             <div class="item video">
                                 <div class="cover" style="background-image: url('../../template1/assets/images/img-album-demo1.png');">
                                     <a id="dynamic3" href="javascript:void(0)" >
@@ -66,7 +66,7 @@
                             </div>
                             
                         </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
                             <div class="item video">
                                 <div class="cover" style="background-image: url('../../template1/assets/images/img-album-demo2.jpg');">
                                     <a id="dynamic4" href="javascript:void(0)" >
@@ -101,7 +101,7 @@
                             </div>
                             
                         </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">                           
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">                           
                             <div class="item video">
                                 <div class="cover" style="background-image: url('../../template1/assets/images/img-album-demo3.jpg');">
                                     <a href="javascript:void(0)">
@@ -136,7 +136,7 @@
                             </div>
                             
                         </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
                             <div class="item video">
                                 <div class="cover" style="background-image: url('../../template1/assets/images/img-album-demo4.jpg');">
                                     <a href="javascript:void(0)">

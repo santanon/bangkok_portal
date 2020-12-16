@@ -32,19 +32,19 @@
                 </form>
             </div>
             <div class="main-content">
-                <div class="vote-template">
-                    <div class="vote-list-wrapper">
-                        <div class="item">
-                            <div class="row no-gutters">
-                                <div class="col-lg-2 col-md-3 col-sm-3">
+                <div class="group-slide group-list">
+                    <div class="list-item">
+                        <div class="item -vote">
+                            <div class="row">
+                                <div class="col-sm-4 col-md-3 col-lg-3 col-xl-2">
                                     <div class="left bg-color-primary">
-                                        <div class="text-score text-center">
+                                        <div class="d-flex flex-column text-score text-center">
                                             <div class="num-vote">1.6K</div>
                                             <div class="text-vote">ผู้โหวต</div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-10 col-md-9 col-sm-9">
+                                <div class="col-sm-8 col-md-9 col-lg-9 col-xl-10">
                                     <div class="right">       
                                         <div class="text-ontop color-secondary">
                                             View : 340
@@ -74,17 +74,17 @@
                             </div>
                         </div>
 
-                        <div class="item">
-                            <div class="row no-gutters">
-                                <div class="col-lg-2 col-md-3 col-sm-3">
+                        <div class="item -vote">
+                            <div class="row">
+                                <div class="col-sm-4 col-md-3 col-lg-3 col-xl-2">
                                     <div class="left bg-color-primary">
-                                        <div class="text-score text-center">
+                                        <div class="d-flex flex-column text-score text-center">
                                             <div class="num-vote">1.6K</div>
                                             <div class="text-vote">ผู้โหวต</div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-10 col-md-9 col-sm-9">
+                                <div class="col-sm-8 col-md-9 col-lg-9 col-xl-10">
                                     <div class="right">       
                                         <div class="text-ontop color-secondary">
                                             View : 340
@@ -114,17 +114,17 @@
                             </div>
                         </div>
 
-                        <div class="item">
-                            <div class="row no-gutters">
-                                <div class="col-lg-2 col-md-3 col-sm-3">
+                        <div class="item -vote">
+                            <div class="row">
+                                <div class="col-sm-4 col-md-3 col-lg-3 col-xl-2">
                                     <div class="left bg-color-primary">
-                                        <div class="text-score text-center">
+                                        <div class="d-flex flex-column text-score text-center">
                                             <div class="num-vote">1.6K</div>
                                             <div class="text-vote">ผู้โหวต</div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-10 col-md-9 col-sm-9">
+                                <div class="col-sm-8 col-md-9 col-lg-9 col-xl-10">
                                     <div class="right">       
                                         <div class="text-ontop color-secondary">
                                             View : 340
@@ -154,17 +154,17 @@
                             </div>
                         </div>
 
-                        <div class="item">
-                            <div class="row no-gutters">
-                                <div class="col-lg-2 col-md-3 col-sm-3">
+                        <div class="item -vote">
+                            <div class="row">
+                                <div class="col-sm-4 col-md-3 col-lg-3 col-xl-2">
                                     <div class="left bg-color-primary">
-                                        <div class="text-score text-center">
+                                        <div class="d-flex flex-column text-score text-center">
                                             <div class="num-vote">1.6K</div>
                                             <div class="text-vote">ผู้โหวต</div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-10 col-md-9 col-sm-9">
+                                <div class="col-sm-8 col-md-9 col-lg-9 col-xl-10">
                                     <div class="right">       
                                         <div class="text-ontop color-secondary">
                                             View : 340
@@ -194,17 +194,17 @@
                             </div>
                         </div>
 
-                        <div class="item">
-                            <div class="row no-gutters">
-                                <div class="col-lg-2 col-md-3 col-sm-3">
+                        <div class="item -vote">
+                            <div class="row">
+                                <div class="col-sm-4 col-md-3 col-lg-3 col-xl-2">
                                     <div class="left bg-color-primary">
-                                        <div class="text-score text-center">
+                                        <div class="d-flex flex-column text-score text-center">
                                             <div class="num-vote">1.6K</div>
                                             <div class="text-vote">ผู้โหวต</div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-10 col-md-9 col-sm-9">
+                                <div class="col-sm-8 col-md-9 col-lg-9 col-xl-10">
                                     <div class="right">       
                                         <div class="text-ontop color-secondary">
                                             View : 340

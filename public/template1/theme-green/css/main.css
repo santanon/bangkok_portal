@@ -14214,6 +14214,22 @@ template {
             color: #fff;
             text-align: center;
             bottom: 40px; }
+          .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item .left .text-score {
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            height: 100%; }
+            .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item .left .text-score .num-vote {
+              color: #fff;
+              font-size: 3.6rem;
+              font-weight: 500; }
+            .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item .left .text-score .text-vote {
+              color: #fff;
+              font-size: 2rem;
+              font-weight: 400; }
           .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item .left.active .text-content {
             color: #fff; }
         .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item .right {
@@ -14432,6 +14448,10 @@ template {
             text-overflow: ellipsis; }
           .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item.-download .box-full a:hover {
             text-decoration: none; }
+        .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item.-vote .left {
+          height: 200px; }
+        .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item.-vote .right {
+          height: 200px; }
     .group-section-content .section-content .inner-content .main-content .group-slide.group-list .list-item .item {
       margin-bottom: 30px; }
   .group-section-content .section-content .inner-content .main-content .group-vote .score-wrapper {
@@ -14658,10 +14678,7 @@ template {
         flex: 1 0 50%; }
       .group-section-content .section-content .inner-content .main-content .group-list-downloadfile .item .left {
         position: relative;
-        height: 150px;
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 140px;
-        flex: 0 0 140px; }
+        height: 150px; }
         .group-section-content .section-content .inner-content .main-content .group-list-downloadfile .item .left .text-content {
           font-size: 3rem;
           font-weight: 500;

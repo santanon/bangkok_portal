@@ -68,7 +68,7 @@
                                     <div class="list-item">
                                         <div class="item">
                                             <div class="row">
-                                                <div class="col-lg-3 col-md-3 col-sm-4">
+                                                <div class="col-sm-4 col-md-3 col-lg-3 col-xl-2">
                                                     <div class="left">
                                                         <div class="icon-content -download-Doc bg-color-primary">
                                                             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -84,7 +84,7 @@
                                                         <div class="text-onbottom bg-color-secondary">Download</div>
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-9 col-md-9 col-sm-8">
+                                                <div class="col-sm-8 col-md-9 col-lg-9 col-xl-10">
                                                     <div class="right">
                                                         <div class="text-ontop color-secondary">
                                                             25 พ.ย. 2563
@@ -101,7 +101,7 @@
                                         
                                         <div class="item">
                                             <div class="row">
-                                                <div class="col-lg-3 col-md-3 col-sm-4">
+                                                <div class="col-sm-4 col-md-3 col-lg-3 col-xl-2">
                                                     <div class="left">
                                                         <div class="icon-content -download-Doc bg-color-primary">
                                                             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -117,7 +117,7 @@
                                                         <div class="text-onbottom bg-color-secondary">Download</div>
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-9 col-md-9 col-sm-8">
+                                                <div class="col-sm-8 col-md-9 col-lg-9 col-xl-10">
                                                     <div class="right">
                                                         <div class="text-ontop color-secondary">
                                                             25 พ.ย. 2563
@@ -134,7 +134,7 @@
 
                                         <div class="item">
                                             <div class="row">
-                                                <div class="col-lg-3 col-md-3 col-sm-4">
+                                                <div class="col-sm-4 col-md-3 col-lg-3 col-xl-2">
                                                     <div class="left">
                                                         <div class="icon-content -download-Doc bg-color-primary">
                                                             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -150,7 +150,7 @@
                                                         <div class="text-onbottom bg-color-secondary">Download</div>
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-9 col-md-9 col-sm-8">
+                                                <div class="col-sm-8 col-md-9 col-lg-9 col-xl-10">
                                                     <div class="right">
                                                         <div class="text-ontop color-secondary">
                                                             25 พ.ย. 2563
@@ -167,7 +167,7 @@
 
                                         <div class="item">
                                             <div class="row">
-                                                <div class="col-lg-3 col-md-3 col-sm-4">
+                                                <div class="col-sm-4 col-md-3 col-lg-3 col-xl-2">
                                                     <div class="left">
                                                         <div class="icon-content -download-Doc bg-color-primary">
                                                             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -183,7 +183,7 @@
                                                         <div class="text-onbottom bg-color-secondary">Download</div>
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-9 col-md-9 col-sm-8">
+                                                <div class="col-sm-8 col-md-9 col-lg-9 col-xl-10">
                                                     <div class="right">
                                                         <div class="text-ontop color-secondary">
                                                             25 พ.ย. 2563
@@ -200,7 +200,7 @@
 
                                         <div class="item">
                                             <div class="row">
-                                                <div class="col-lg-3 col-md-3 col-sm-4">
+                                                <div class="col-sm-4 col-md-3 col-lg-3 col-xl-2">
                                                     <div class="left">
                                                         <div class="icon-content -download-Doc bg-color-primary">
                                                             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -216,7 +216,7 @@
                                                         <div class="text-onbottom bg-color-secondary">Download</div>
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-9 col-md-9 col-sm-8">
+                                                <div class="col-sm-8 col-md-9 col-lg-9 col-xl-10">
                                                     <div class="right">
                                                         <div class="text-ontop color-secondary">
                                                             25 พ.ย. 2563

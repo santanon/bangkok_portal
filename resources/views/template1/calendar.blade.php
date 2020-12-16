@@ -60,13 +60,13 @@
                                 <div class="list-item" id="slide_1">
                                     <div class="item">
                                         <div class="row">
-                                            <div class="col-lg-4 col-md-4 col-sm--4">
+                                            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
                                                 <div class="left">
                                                     <div class="text-content bg-color-primary">2</div>
                                                     <div class="text-onbottom bg-color-secondary">พ.ย.</div>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-8 col-md-8 col-sm-8">
+                                            <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
                                                 <div class="right">
                                                     <div class="text-content">
                                                         <a href="">
@@ -80,13 +80,13 @@
                                     </div>
                                     <div class="item">
                                         <div class="row">
-                                            <div class="col-lg-4 col-md-4 col-sm--4">
+                                            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
                                                 <div class="left">
                                                     <div class="text-content bg-color-primary">3</div>
                                                     <div class="text-onbottom bg-color-secondary">พ.ย.</div>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-8 col-md-8 col-sm-8">
+                                            <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
                                                 <div class="right">
                                                     <div class="text-content">
                                                         <a href="">
@@ -100,13 +100,13 @@
                                     </div>
                                     <div class="item">
                                         <div class="row">
-                                            <div class="col-lg-4 col-md-4 col-sm--4">
+                                            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
                                                 <div class="left">
                                                     <div class="text-content bg-color-primary">2</div>
                                                     <div class="text-onbottom bg-color-secondary">พ.ย.</div>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-8 col-md-8 col-sm-8">
+                                            <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
                                                 <div class="right">
                                                     <div class="text-content">
                                                         <a href="">
@@ -120,13 +120,13 @@
                                     </div>
                                     <div class="item">
                                         <div class="row">
-                                            <div class="col-lg-4 col-md-4 col-sm--4">
+                                            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
                                                 <div class="left">
                                                     <div class="text-content bg-color-primary">3</div>
                                                     <div class="text-onbottom bg-color-secondary">พ.ย.</div>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-8 col-md-8 col-sm-8">
+                                            <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
                                                 <div class="right">
                                                     <div class="text-content">
                                                         <a href="">

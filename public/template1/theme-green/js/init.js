@@ -310,7 +310,7 @@ $(function () {
         nextArrow: $('#action-slide_6 .slide-next'),
         responsive: [
             {
-              breakpoint: 481,
+              breakpoint: 769,
               settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1

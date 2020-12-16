@@ -828,6 +828,7 @@ $howManySteps: 100; //this needs to be even.
                                 position: relative;
                                 height: 150px;
                                 flex: 0 0 140px;
+
                                 .text-content{
                                     font-size: 3rem;
                                     font-weight: $font-medium;
@@ -837,6 +838,7 @@ $howManySteps: 100; //this needs to be even.
                                     height: 100%;
                                     color: #fff;
                                 }
+
                                 .text-onbottom{
                                     position: absolute;
                                     bottom: 0;
@@ -957,6 +959,23 @@ $howManySteps: 100; //this needs to be even.
                                     }
                                 }
 
+                                .text-score{
+                                    align-items: center;
+                                    justify-content: center;
+                                    height: 100%;
+
+                                    .num-vote{
+                                        color: #fff;
+                                        font-size: 3.6rem;
+                                        font-weight: $font-medium;
+                                    }
+                                    .text-vote{
+                                        color: #fff;
+                                        font-size: 2rem;
+                                        font-weight: $font-regular;
+                                    }
+                                }
+
                                 &.active{
                                     .text-content{
                                         color: #fff;
@@ -1019,6 +1038,7 @@ $howManySteps: 100; //this needs to be even.
                                     }
                                 }
                             }
+
                             .bottom{
                                 margin-top: 10px;
                             }
@@ -1209,6 +1229,14 @@ $howManySteps: 100; //this needs to be even.
                                             text-decoration: none;
                                         }
                                     }
+                                }
+                            }
+                            &.-vote{
+                                .left{
+                                    height: 200px;
+                                }
+                                .right{
+                                    height: 200px;
                                 }
                             }
                         }
@@ -1544,7 +1572,8 @@ $howManySteps: 100; //this needs to be even.
                         .left{
                             position: relative;
                             height: 150px;
-                            flex: 0 0 140px;
+                            // flex: 0 0 140px;
+                            
                             .text-content{
                                 font-size: 3rem;
                                 font-weight: $font-medium;

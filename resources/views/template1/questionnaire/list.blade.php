@@ -10,9 +10,15 @@
                         <div class="search-content">
                             <form action="">
                                 <div class="row">
-                                    <div class="col-lg-3">
+                                    <div class="col-lg-2">
                                         <div class="input-custom inp-calendar">
-                                            <input class="style-input" type="text" name="datefilter" placeholder="จากวันที่ - ถึงวันที่" />
+                                            <input id="start_date" class="style-input" type="text" name="datefilter" placeholder="จากวันที่" autocomplete="off" data-provide="datepicker" data-date-language="th-th" />
+                                            <div class="icon-calendar"><i class="far fa-calendar"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <div class="input-custom inp-calendar">
+                                            <input id="end_date" class="style-input" type="text" name="datefilter" placeholder="ถึงวันที่" autocomplete="off" data-provide="datepicker" data-date-language="th-th" />
                                             <div class="icon-calendar"><i class="far fa-calendar"></i></div>
                                         </div>
                                     </div>
@@ -70,7 +76,7 @@
                                                         View : 340
                                                     </div>                                         
                                                     <div class="text-content">
-                                                        <a href="##">
+                                                        <a href="/questionnaire-detail">
                                                             ร่วมส่งแรงใจให้เยาวชนนักเตะรุ่นใหม่ชิงชัยเอกสารที่ต้องใช้ 1. สูติบัตร พร้อมสำเนา 2. ทะเบียนบ้าน พร้อมสำเนา
                                                         </a>
                                                     </div>
@@ -124,7 +130,7 @@
                                                         View : 340
                                                     </div>                                         
                                                     <div class="text-content">
-                                                        <a href="##">
+                                                        <a href="/questionnaire-detail">
                                                             ร่วมส่งแรงใจให้เยาวชนนักเตะรุ่นใหม่ชิงชัยเอกสารที่ต้องใช้ 1. สูติบัตร พร้อมสำเนา 2. ทะเบียนบ้าน พร้อมสำเนา
                                                         </a>
                                                     </div>
@@ -178,7 +184,7 @@
                                                         View : 340
                                                     </div>                                         
                                                     <div class="text-content">
-                                                        <a href="##">
+                                                        <a href="/questionnaire-detail">
                                                             ร่วมส่งแรงใจให้เยาวชนนักเตะรุ่นใหม่ชิงชัยเอกสารที่ต้องใช้ 1. สูติบัตร พร้อมสำเนา 2. ทะเบียนบ้าน พร้อมสำเนา
                                                         </a>
                                                     </div>
@@ -232,7 +238,7 @@
                                                         View : 340
                                                     </div>                                         
                                                     <div class="text-content">
-                                                        <a href="##">
+                                                        <a href="/questionnaire-detail">
                                                             ร่วมส่งแรงใจให้เยาวชนนักเตะรุ่นใหม่ชิงชัยเอกสารที่ต้องใช้ 1. สูติบัตร พร้อมสำเนา 2. ทะเบียนบ้าน พร้อมสำเนา
                                                         </a>
                                                     </div>
@@ -286,7 +292,7 @@
                                                         View : 340
                                                     </div>                                         
                                                     <div class="text-content">
-                                                        <a href="##">
+                                                        <a href="/questionnaire-detail">
                                                             ร่วมส่งแรงใจให้เยาวชนนักเตะรุ่นใหม่ชิงชัยเอกสารที่ต้องใช้ 1. สูติบัตร พร้อมสำเนา 2. ทะเบียนบ้าน พร้อมสำเนา
                                                         </a>
                                                     </div>

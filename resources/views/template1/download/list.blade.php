@@ -10,7 +10,7 @@
                         <div class="search-content">
                             <form action="">
                                 <div class="row">
-                                    <div class="col-lg-4">
+                                    <div class="col-lg-3">
                                         <div class="input-custom inp-categories">
                                             <div class="select-wrapper width-full">
                                                 <select name="month" class="slc">
@@ -24,9 +24,15 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-3">
+                                    <div class="col-lg-2">
                                         <div class="input-custom inp-calendar">
-                                            <input class="style-input" type="text" name="datefilter" placeholder="จากวันที่ - ถึงวันที่" />
+                                            <input id="start_date" class="style-input" type="text" name="datefilter" placeholder="จากวันที่" autocomplete="off" data-provide="datepicker" data-date-language="th-th" />
+                                            <div class="icon-calendar"><i class="far fa-calendar"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <div class="input-custom inp-calendar">
+                                            <input id="end_date" class="style-input" type="text" name="datefilter" placeholder="ถึงวันที่" autocomplete="off" data-provide="datepicker" data-date-language="th-th" />
                                             <div class="icon-calendar"><i class="far fa-calendar"></i></div>
                                         </div>
                                     </div>
@@ -286,7 +292,7 @@
                                     </div>
                                 </div>
                                 <div class="views-like d-flex align-items-center">
-                                    <div class="view-count">
+                                    <div class="view-count color-secondary">
                                         View : <span>1.5K</span>
                                     </div>
                                     <div class="like-count d-flex align-items-center">

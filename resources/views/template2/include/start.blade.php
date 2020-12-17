@@ -15,14 +15,13 @@
 
 <link rel="canonical" href=""/>
 <link rel="icon" href="{{ asset('assets/images/favicon.ico')}}" type="image/x-icon">
-<link rel="stylesheet" href="{{ asset('template2/css/main.css')}}">
-<link rel="stylesheet" href="{{ asset('template2/theme-orange/style.css')}}">
+<link rel="stylesheet" href="{{ asset('template2/theme-orange/css/main.css')}}">
 
 <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,500;1,300&display=swap" rel="stylesheet">
-   
-</head>
 
-<body class="color-orange">
+    
+</head>
+<body class="color-green<?php if(isset($_SESSION['panel_login']) && $_SESSION['panel_login'] == '1'){ ?> manage<?php }?>">
 
     <!-- Script Loading -->
     <div class="se-pre-con loading">

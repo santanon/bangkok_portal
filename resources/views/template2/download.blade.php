@@ -20,11 +20,11 @@
                     <div class="inner-content">
                         <div class="top-content">
                             <div class="group-text">
-                                <h3 class="title">DOWNLOAD</h3>
-                                <p class="desc">ข้อมูลเอกสารราชการที่ผู้ใช้บริการสามารถดาวน์โหลดได้</p>
+                                <h3 class="title color-primary">ดาวน์โหลดคู่มือ</h3>
+                                <p class="desc color-secondary">ข้อมูลเอกสารราชการที่ผู้ใช้บริการสามารถดาวน์โหลดได้</p>
                             </div>
                             <div class="group-gotoall">
-                                <a href="">เอกสารทั้งหมด</a>
+                                <a href="/download" class="btn btn-outline-dark">เอกสารทั้งหมด</a>
                             </div>
                         </div>
                         <div class="main-content">
@@ -39,7 +39,7 @@
                                 <ul id="slide_4" class="list-item">
                                     <li>
                                         <div class="item -download">
-                                            <div class="box-full">
+                                            <div class="box-full bg-color-primary">
                                                 <a href="/">
                                                     <div class="icon-content">
                                                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -60,7 +60,7 @@
                                     </li>
                                     <li>
                                         <div class="item -download">
-                                            <div class="box-full">
+                                            <div class="box-full bg-color-primary">
                                                 <a href="/">
                                                     <div class="icon-content">
                                                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -81,7 +81,7 @@
                                     </li>
                                     <li>
                                         <div class="item -download">
-                                            <div class="box-full">
+                                            <div class="box-full bg-color-primary">
                                                 <a href="/">
                                                     <div class="icon-content">
                                                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -102,7 +102,7 @@
                                     </li>
                                     <li>
                                         <div class="item -download">
-                                            <div class="box-full">
+                                            <div class="box-full bg-color-primary">
                                                 <a href="/">
                                                     <div class="icon-content">
                                                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"

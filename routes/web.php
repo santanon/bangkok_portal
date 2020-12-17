@@ -43,6 +43,9 @@ Route::any('manage-admin/action', [ManageController::class,'action']);
 Route::any('/', function () {
     return view('home');
 });
+Route::any('/home-2', function () {
+    return view('home-2');
+});
 Route::any('/coverpage', function () {
     return view('coverpage');
 });

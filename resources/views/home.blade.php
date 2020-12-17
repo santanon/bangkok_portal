@@ -29,19 +29,6 @@ function sfi(title,url)
     </header>
     
     <div id="site-content">
-
-        <div class="group-link-mainbkk">
-            <a href="">
-                <div class="icon-bkk">
-                    <img src="{{ asset('template1/assets/images/icons/icon-bkk.png')}}" alt="icon">
-                </div>
-                <div class="text-bkk">
-                    <label>กรุงเทพมหานคร</label>
-                    Bangkok.go.th
-                </div>
-            </a>
-        </div>
- 
         <div class="banner-wrapper">
             @include('template1/main-slide')
         </div>

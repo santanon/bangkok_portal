@@ -50,7 +50,7 @@
                         <div class="col-lg-6">
                             <div class="group-content-footer">
                                 <div class="icon-content">
-                                    <img src="{{ asset('template1/assets/images/icons/icon-tel.png')}}" alt="icon">
+                                    <img src="{{ asset('template1/assets/images/icons/icon-tel.svg')}}" alt="icon">
                                 </div>
                                 <div class="text-content">
                                     โทรศัพท์กลาง
@@ -61,11 +61,11 @@
                         <div class="col-lg-6">
                             <div class="group-content-footer">
                                 <div class="icon-content">
-                                    <img src="{{ asset('template1/assets/images/icons/icon-fax.png')}}" alt="icon">
+                                    <img src="{{ asset('template1/assets/images/icons/icon-fax.svg')}}" alt="icon">
                                 </div>
                                 <div class="text-content">
                                     โทรสาร
-                                    <a class="link-tel" href="tel:022243038">0-2224-3038</a>
+                                    <a class="link-tel" href="javascript: void(0)">0-2224-3038</a>
                                 </div>
                             </div>
                         </div>
@@ -104,7 +104,7 @@
                 <div class="sitemap">
                     <ul>
                         <li>
-                            <a href="">แผนผังเว็บไซต์</a>
+                            <a href="/sitemap">แผนผังเว็บไซต์</a>
                         </li>
                         <li>
                             <a href="">ข้อตกลงการใช้ระบบ</a>

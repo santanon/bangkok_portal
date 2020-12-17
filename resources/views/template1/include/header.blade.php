@@ -86,7 +86,7 @@
 <div class="header-lg">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-3">
+            <div class="logo-wrapper">
                 <div class="group-mange-section no-mg right-0">
                     <!--<div class="manage-tools">
                         <ul>
@@ -108,8 +108,8 @@
                     </a>
                 </div>
             </div>
-            <div class="col-lg-9">
-                <div class="row bg-color-primary">
+            <div class="menu-right-top">
+                <div class="bg-color-primary">
                     <div class="col-lg-12">
                         <div class="d-flex justify-content-between">
                             <div class="account-wrapper">
@@ -174,7 +174,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row bg-color-menutop">
+                <div class="bg-color-menutop">
                     <div class="col-lg-12">
                         <div class="group-mange-section no-mg right-0">
                             <!--<div class="manage-tools">

@@ -1,3 +1,11 @@
+// header
+$(function(){
+  var w = $('.logo').outerWidth();
+  //console.log(w);
+  $('.menu-right-top').css({ 'width': 'calc(100% - ' + w + 'px)' });
+});
+
+
 // Menu
 $(function () {
     // const get_Height = $('.menu-main-wrapper').height();
@@ -97,7 +105,7 @@ $(function () {
 
 
     // ปฏิทินกิจกรรม
-    const check_list_1 = $('#slide_1').children('li').length;
+    const check_list_1 = $('#slide_1').children('.item').length;
     $('#slide_1').on('init', function (event, slick, direction) {
         if (check_list_1 < 3) {
             $('#action-slide_1').parents('.action-slide .slide-wrapper').css('display','none');
@@ -290,7 +298,7 @@ $(function () {
     });
 
     // QUESTIONNAIRE
-    const check_list_6 = $('#slide_6').children('li').length;
+    const check_list_6 = $('#slide_6').children('.item').length;
     $('#slide_6').on('init', function (event, slick, direction) {
         if (check_list_6 < 3) {
             $('#action-slide_6').parents('.action-slide').css('display','none');
@@ -310,7 +318,7 @@ $(function () {
         nextArrow: $('#action-slide_6 .slide-next'),
         responsive: [
             {
-              breakpoint: 481,
+              breakpoint: 769,
               settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1

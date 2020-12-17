@@ -132,31 +132,51 @@
 
 
 @include('template1/include.css_scripts')
-<!-- navgoco -->
-<link rel="stylesheet" href="{{ asset('template1/theme-green/css/daterangepicker.css')}}">
-<script type="text/javascript" src="{{ asset('template1/js/moment.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('template1/js/daterangepicker.js') }}"></script>
-
 
 <script type="text/javascript">
+
+// TH
+$.datepicker.regional['th'] ={
+        dateFormat: 'dd/mm/yy',
+        changeMonth: true,
+        changeYear: true,
+        dayNamesMin: ['อา', 'จ', 'อ', 'พ', 'พฤ', 'ศ', 'ส'],
+        monthNamesShort: ['มกราคม', 'กุมภาพันธ์', 'มีนาคม', 'เมษายน', 'พฤษภาคม', 'มิถุนายน', 'กรกฎาคม', 'สิงหาคม', 'กันยายน', 'ตุลาคม', 'พฤศจิกายน', 'ธันวาคม'],
+        constrainInput: true,
+        yearOffSet : 543,
+        yearRange: '-40:+0',
+    };
+    $.datepicker.setDefaults($.datepicker.regional['th']);
+
+    // EN
+    $.datepicker.regional['en'] ={
+        dateFormat: 'dd/mm/yy',
+        changeMonth: true,
+        changeYear: true,
+        constrainInput: true,
+        yearOffSet : 0,
+        yearRange: '-40:+0',
+    };
+    //$.datepicker.setDefaults($.datepicker.regional['en']);
+
     $(document).ready(function () {
+
         
-        //$('#exampleModal').modal('show')
-
-        $('input[name="datefilter"]').daterangepicker({
-            autoUpdateInput: false,
-            locale: {
-                cancelLabel: 'Clear'
-            }
+        $("#start_date").datepicker({
+            maxDate: 0,
+            onSelect: function(){
+                $('#end_date').val('');
+                var dt2 = $('#end_date');
+                var startDate = $(this).datepicker('getDate');
+                var minDate = $(this).datepicker('getDate');
+                dt2.datepicker('option', 'minDate', startDate);
+            },
         });
-
-        $('input[name="datefilter"]').on('apply.daterangepicker', function(ev, picker) {
-            $(this).val(picker.startDate.format('DD/MM/YYYY') + ' - ' + picker.endDate.format('DD/MM/YYYY'));
+        $("#start_date").datepicker( "setDate", new Date());
+        $( "#end_date" ).datepicker({
+            maxDate: 0,
         });
-
-        $('input[name="datefilter"]').on('cancel.daterangepicker', function(ev, picker) {
-            $(this).val('');
-        });
+        $("#end_date").datepicker( "setDate", new Date());
     });
 </script>
 @endsection

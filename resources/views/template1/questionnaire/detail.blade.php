@@ -272,7 +272,7 @@
                         </div>
                     </div>
                     <div class="views-like d-flex align-items-center">
-                        <div class="view-count">
+                        <div class="view-count color-secondary">
                             View : <span>1.5K</span>
                         </div>
                         <div class="like-count d-flex align-items-center">

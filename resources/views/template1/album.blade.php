@@ -30,7 +30,7 @@
             <div class="main-content">
                 <div class="gallery-template">
                     <div class="row">
-                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                        <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3">
                             
                             <div class="item -album">
                                 <div class="group-mange-section">
@@ -65,7 +65,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                        <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3">
                             
                             <div class="item -album" >
                                 <div class="group-mange-section">
@@ -100,7 +100,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                        <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3">
                             
                             <div class="item -album">
                                 <div class="group-mange-section">
@@ -135,7 +135,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                        <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3">
                             
                             <div class="item -album">
                                 <div class="group-mange-section">

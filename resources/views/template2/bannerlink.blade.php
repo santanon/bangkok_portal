@@ -1,5 +1,5 @@
 <!-- BANNER -->
-<div id="banner" data-id="banner" class="section-content bg-color-white">
+<div id="banner" data-id="banner" class="section-content">
                 <div class="group-mange-section">
                     <div class="manage-tools">
                         <ul>

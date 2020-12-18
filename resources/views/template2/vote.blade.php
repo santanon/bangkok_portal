@@ -1,5 +1,5 @@
 <!-- VOTE -->
-<div id="vote" data-id="vote" class="section-content bg-color-white">
+<div id="vote" data-id="vote" class="section-content">
     <div class="group-mange-section">
         <div class="manage-tools">
             <ul>

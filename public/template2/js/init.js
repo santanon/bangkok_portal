@@ -371,6 +371,14 @@ $(function () {
     });
 });
 
+
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+  $(function () {
+    var slick_dots = $('.slick-dots li').size();
+    var calculate_dots =  100 / slick_dots;
+    $('.slick-dots li').css('width', calculate_dots + '%');
+  });
+}
 //Gototop
 function scrollToTop() {
     verticalOffset = typeof (verticalOffset) != 'undefined' ? verticalOffset : 0;

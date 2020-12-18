@@ -1,3 +1,28 @@
+<div class="online-wrapper">
+    <div class="group-online">
+        <div class="icon-online">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                width="24px" height="24px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+                <g>
+                    <polyline class="st0" points="21.1,13.2 21.1,15.6 1.5,15.6 1.5,2.3 10,2.3 	"/>
+                    <line class="st0" x1="5.9" y1="21.2" x2="16.1" y2="21.2"/>
+                    <circle class="st1" cx="22.1" cy="21.2" r="1.5"/>
+                    <g>
+                        <path class="st1" d="M14.4,1.3c-0.2,0-0.4,0-0.7,0c-0.5,0-0.9,0.5-0.9,1s0.5,0.9,1,0.9h0.5c3.2,0,5.7,2.6,5.7,5.7
+                            c0,0.2,0,0.3,0,0.5c0,0.5,0.3,1,0.9,1h0.1c0.5,0,0.9-0.4,1-0.9c0-0.2,0-0.4,0-0.7C22.1,4.8,18.6,1.3,14.4,1.3z"/>
+                        <path class="st1" d="M15.6,9.7c0,0.5,0.4,1,1,1c0.5,0,1-0.4,1-1c0-2.1-1.7-3.8-3.8-3.8c-0.5,0-1,0.4-1,1s0.4,1,1,1
+                            C14.8,7.8,15.6,8.6,15.6,9.7z"/>
+                    </g>
+                    <line class="st0" x1="11.3" y1="21.2" x2="11.3" y2="15.6"/>
+                </g>
+            </svg>
+        </div>
+        <div class="text-online">Online</div>
+    </div>
+    <div class="num-online">1.6K</div>
+</div>
+
+
 <div class="container-fluid bg-color-secondary">
     <div class="container">
         <div class="group-footer">

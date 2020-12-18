@@ -161,9 +161,9 @@
                 .main-news{
                     .content-news-main{
                         .date{
-                            span{
-                                color: $color-secondary;
-                            }
+                            // span{
+                            //     color: $color-secondary;
+                            // }
                         }
                     }
                     .read-news-outer{
@@ -178,9 +178,9 @@
                     &:hover{
                         .content-news-main{
                             .desc-news{
-                                a{
-                                    color: $color-secondary;
-                                }
+                                // a{
+                                //     color: $color-secondary;
+                                // }
                             }
                         }
                     }
@@ -204,9 +204,9 @@
                     &:hover{
                         .content{
                             .desc-news{
-                                a{
-                                    color: $color-secondary;
-                                }
+                                // a{
+                                //     color: $color-secondary;
+                                // }
                             }
                         }
                     }
@@ -325,51 +325,51 @@
                 .clendar-warpper{
                     .head-calendar{
                         .title-calendar{
-                            .month-title{
-                                color: $color-primary;
-                            }
-                            .year-title{
-                                color: $color-primary;
-                            }
+                            // .month-title{
+                            //     color: $color-primary;
+                            // }
+                            // .year-title{
+                            //     color: $color-primary;
+                            // }
                         }
                     }
                     #calendar{
-                        .fc-daygrid-day.fc-day-today{
-                            border: 1px solid $color-primary;
-                        }
-                        .fc-daygrid-day-events{
-                            .fc-daygrid-event-harness{
-                                .fc-h-event{
-                                    background-color: $color-secondary;
-                                    border: 1px solid $color-secondary;
-                                }
-                            }
-                            .fc-daygrid-day-bottom{
-                                .fc-daygrid-more-link{
-                                    color: $color-secondary;
-                                }
-                            }
-                        }
-                        .fc-col-header {
-                            tbody{
-                                tr{
-                                    .fc-col-header-cell{
-                                        background-color: $color-secondary;
-                                        border: 1px solid $color-secondary;
-                                    }
-                                }
-                            }
-                        }
-                        .fc-popover{
-                            .fc-popover-body {
-                                .fc-daygrid-event-harness{
-                                    .fc-h-event{
-                                        background-color: $color-secondary;
-                                        border: 1px solid $color-secondary;
-                                    }
-                                }
-                            }
-                        }
+                        // .fc-daygrid-day.fc-day-today{
+                        //     border: 1px solid $color-primary;
+                        // }
+                        // .fc-daygrid-day-events{
+                        //     .fc-daygrid-event-harness{
+                        //         .fc-h-event{
+                        //             background-color: $color-secondary;
+                        //             border: 1px solid $color-secondary;
+                        //         }
+                        //     }
+                        //     .fc-daygrid-day-bottom{
+                        //         .fc-daygrid-more-link{
+                        //             color: $color-secondary;
+                        //         }
+                        //     }
+                        // }
+                        // .fc-col-header {
+                        //     tbody{
+                        //         tr{
+                        //             .fc-col-header-cell{
+                        //                 background-color: $color-secondary;
+                        //                 border: 1px solid $color-secondary;
+                        //             }
+                        //         }
+                        //     }
+                        // }
+                        // .fc-popover{
+                        //     .fc-popover-body {
+                        //         .fc-daygrid-event-harness{
+                        //             .fc-h-event{
+                        //                 background-color: $color-secondary;
+                        //                 border: 1px solid $color-secondary;
+                        //             }
+                        //         }
+                        //     }
+                        // }
                     }
                 }
                 .page-list-item-wrapper{

@@ -24,7 +24,7 @@
                     <p class="desc color-secondary">The Bangkok Metropolitan Council Secretariat </p>
                 </div>
                 <div class="group-gotoall">
-                    <a href="/video" class="btn btn-outline-dark">วิดีโอทั้งหมด</a>
+                    <a href="/video" class="btn btn-outline-dark">วิดิทัศน์ทั้งหมด</a>
                     
                 </div>
             </div>

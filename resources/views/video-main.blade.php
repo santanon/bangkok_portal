@@ -1,4 +1,4 @@
-@section('title', 'รายการข่าว:สถานี VDO')
+@section('title', 'วิดิทัศน์')
 @section('tagkeyword', '')
 @section('tagdescription', '')
 
@@ -141,8 +141,44 @@
 <script type="text/javascript" src="{{ asset('gallery/lg-video.min.js') }}"></script>
 <script type="text/javascript">
     $(document).ready(function(){
-        $('#lightgallery').lightGallery({
-            thumbnail:true
+        let $document = $(this);
+
+        $document.on('onCloseAfter.lg', function(event) {
+            $document.data('lightGallery').destroy(true);
+        });
+
+        $('#dynamic3').on('click', function(e) {
+            $(document).lightGallery({
+                dynamic: true,
+                dynamicEl: [{
+                    src: 'https://www.youtube.com/watch?v=rJaQrQmCqvw',
+                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-v-y-1.jpg',
+                },{
+                    src: 'https://www.youtube.com/watch?v=COz95PuG5vQ',
+                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-v-y-1.jpg',
+                }],
+                slideEndAnimatoin: false,
+                loop: false,
+                hideControlOnEnd: true,
+                download: false,
+            });
+        });
+
+        $('#dynamic4').on('click', function(e) {
+            $(document).lightGallery({
+                dynamic: true,
+                dynamicEl: [{
+                    src: 'https://www.youtube.com/watch?v=hE4dFMdaMhQ',
+                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-v-y-1.jpg',
+                },{
+                    src: 'https://www.youtube.com/watch?v=dTRtpvawXpo',
+                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-v-y-1.jpg',
+                }],
+                slideEndAnimatoin: false,
+                loop: false,
+                hideControlOnEnd: true,
+                download: false,
+            });
         });
     });
 </script>

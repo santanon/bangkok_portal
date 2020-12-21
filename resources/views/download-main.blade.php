@@ -1,4 +1,4 @@
-@section('title', 'ดาวน์โหลดไฟล์เอกสาร')
+@section('title', 'ดาวน์โหลดคู่มือ')
 @section('tagkeyword', '')
 @section('tagdescription', '')
 

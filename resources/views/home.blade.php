@@ -350,6 +350,9 @@ function sfi(title,url)
                 dynamicEl: [{
                     src: 'https://youtu.be/YD_gvR234qg',
                     thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-1.jpg'
+                },{
+                    src: 'https://youtu.be/YD_gvR234qg',
+                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-1.jpg'
                 }],
                 slideEndAnimatoin: false,
                 loop: false,

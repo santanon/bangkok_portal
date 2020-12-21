@@ -1,4 +1,4 @@
-@section('title', 'การรับฟังปัญหา/ข้อคิดเห็น')
+@section('title', 'โหวต')
 @section('tagkeyword', '')
 @section('tagdescription', '')
 

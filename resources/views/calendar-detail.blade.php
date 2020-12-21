@@ -1,4 +1,4 @@
-@section('title', 'ปฎิทินกิจกรรม')
+@section('title', 'รายละเอียดปฎิทินกิจกรรม')
 @section('tagkeyword', '')
 @section('tagdescription', '')
 

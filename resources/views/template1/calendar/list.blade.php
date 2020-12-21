@@ -17,20 +17,20 @@
                                                     <div class="col-lg-4">
                                                         <div class="input-custom inp-categories">
                                                             <div class="select-wrapper width-full">
-                                                                <select name="month" class="slc">
+                                                                <select id="month_fullcalendar" name="month" class="slc">
                                                                     <optgroup label="เดือน">
-                                                                        <option value="">มกราคม</option>
-                                                                        <option value="">กุมภาพันธ์</option>
-                                                                        <option value="">มีนาคม</option>
-                                                                        <option value="">เมษายน</option>
-                                                                        <option value="">พฤษภาคม</option>
-                                                                        <option value="">มิถุนายน</option>
-                                                                        <option value="">กรกฎาคม</option>
-                                                                        <option value="">สิงหาคม</option>
-                                                                        <option value="">กันยายน</option>
-                                                                        <option value="">ตุลาคม</option>
-                                                                        <option value="">พฤศจิกายน</option>
-                                                                        <option value="">ธันวาคม</option>
+                                                                        <option value="มกราคม">มกราคม</option>
+                                                                        <option value="กุมภาพันธ์">กุมภาพันธ์</option>
+                                                                        <option value="มีนาคม">มีนาคม</option>
+                                                                        <option value="เมษายน">เมษายน</option>
+                                                                        <option value="พฤษภาคม">พฤษภาคม</option>
+                                                                        <option value="มิถุนายน">มิถุนายน</option>
+                                                                        <option value="กรกฎาคม">กรกฎาคม</option>
+                                                                        <option value="สิงหาคม">สิงหาคม</option>
+                                                                        <option value="กันยายน">กันยายน</option>
+                                                                        <option value="ตุลาคม">ตุลาคม</option>
+                                                                        <option value="พฤศจิกายน">พฤศจิกายน</option>
+                                                                        <option value="ธันวาคม">ธันวาคม</option>
                                                                     </optgroup>
                                                                 </select>
                                                             </div>
@@ -39,12 +39,12 @@
                                                     <div class="col-lg-3">
                                                         <div class="input-custom inp-categories">
                                                             <div class="select-wrapper width-full">
-                                                                <select name="month" class="slc">
+                                                                <select id="year_fullcalendar" name="month" class="slc">
                                                                     <optgroup label="ปี">
-                                                                        <option value="">2562</option>
-                                                                        <option value="">2563</option>
-                                                                        <option value="">2564</option>
-                                                                        <option value="">2565</option>
+                                                                        <option value="2562">2562</option>
+                                                                        <option value="2563">2563</option>
+                                                                        <option value="2564">2564</option>
+                                                                        <option value="2565">2565</option>
                                                                     </optgroup>
                                                                 </select>
                                                             </div>

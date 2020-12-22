@@ -122,3 +122,19 @@ Route::any('/news-2', function () {
 Route::any('/news-detail-2', function () {
     return view('news-detail-2');
 });
+
+Route::any('/album-2', function () {
+    return view('gallery-main-2');
+});
+
+Route::any('/video-2', function () {
+    return view('video-main-2');
+});
+
+Route::any('/download-2', function () {
+    return view('download-main-2');
+});
+
+Route::any('/faq-2', function () {
+    return view('faq-main-2');
+});

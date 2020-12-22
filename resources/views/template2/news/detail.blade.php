@@ -186,15 +186,10 @@
 
                 <!-- list file download -->
                 <div class="group-list-downloadfile">
-                    <div class="item">
+                    <a href="" class="item">
                         <div class="icon-content">
                             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                 width="24px" height="24px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
-                            <style type="text/css">
-                                .st0{fill:none;stroke:#F08220;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-                                .st1{fill:none;stroke:#F08220;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
-                                .st2{fill:none;stroke:#F08220;stroke-width:2;stroke-miterlimit:10;}
-                            </style>
                             <g>
                                 <line class="st0" x1="15.2" y1="14.1" x2="15.2" y2="20.3"/>
                                 <polyline class="st0" points="18.4,18.3 15.2,21.4 12,18.3 	"/>
@@ -204,14 +199,14 @@
                             </svg>
                         </div>
                         <div class="text-content flex-grow-1">
-                            <a href="">
+                            <p>
                                 สื่อประชาสัมพันธ์สื่อองค์ความรู้ที่เกี่ยวข้องกับการป้องกันโรคติดเชื้อไวรัสโคโรนา
-                            </a>
+                            </p>
                         </div>
                         <div class="text-onbottom">
-                            <a href="" title="Download">Download</a>
+                            <p>Download</p>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <!-- location -->
                 <div class="group-activity-location">

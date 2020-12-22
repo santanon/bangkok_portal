@@ -31,7 +31,7 @@
                 <div class="gallery-template">
                     <div class="row">
                         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                            <div class="item -album hilight">
+                            <div class="item album hilight">
                                 <div class="group-mange-section">
                                     <div class="manage-tools">
                                         <ul>
@@ -58,7 +58,11 @@
                                     <div class="col-lg-6 col-md-6">
                                         <div class="caption-album">
                                             <div class="icon-search-hover">
-                                                <img src="{{ asset('template1/assets/images/icons/icon-search-large.png')}}" alt="banner">
+                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                    width="24px" height="24px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+                                                <path class="st0" d="M21.7,20.3L18,16.6c3.1-3.9,2.5-9.5-1.4-12.7S7.1,1.5,4,5.3S1.5,14.9,5.3,18c3.3,2.6,8,2.6,11.3,0l3.7,3.7
+                                                    c0.4,0.4,1,0.4,1.4,0c0,0,0,0,0,0C22.1,21.3,22.1,20.7,21.7,20.3z M11,18c-3.9,0-7-3.1-7-7s3.1-7,7-7s7,3.1,7,7S14.9,18,11,18z"/>
+                                                </svg>
                                             </div>
                                             <span>กทม. ร่วมเป็นเกียรติในพิธีลงนามสร้างสวนป่า</span>
                                         </div>
@@ -67,7 +71,7 @@
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3">
-                            <div class="item -album" >
+                            <div class="item album" >
                                 <div class="group-mange-section">
                                     <div class="manage-tools">
                                         <ul>
@@ -89,7 +93,11 @@
                                     </div>
                                     <div class="caption-album">
                                         <div class="icon-search-hover">
-                                            <img src="{{ asset('template1/assets/images/icons/icon-search-large.png')}}" alt="banner">
+                                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                    width="24px" height="24px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+                                                <path class="st0" d="M21.7,20.3L18,16.6c3.1-3.9,2.5-9.5-1.4-12.7S7.1,1.5,4,5.3S1.5,14.9,5.3,18c3.3,2.6,8,2.6,11.3,0l3.7,3.7
+                                                    c0.4,0.4,1,0.4,1.4,0c0,0,0,0,0,0C22.1,21.3,22.1,20.7,21.7,20.3z M11,18c-3.9,0-7-3.1-7-7s3.1-7,7-7s7,3.1,7,7S14.9,18,11,18z"/>
+                                                </svg>
                                         </div>
                                         <span>กทม. ร่วมเป็นเกียรติในพิธีลงนามสร้างสวนป่า</span>
                                     </div>
@@ -97,7 +105,7 @@
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3">
-                            <div class="item -album" >
+                            <div class="item album" >
                                 <div class="group-mange-section">
                                     <div class="manage-tools">
                                         <ul>
@@ -119,7 +127,11 @@
                                     </div>
                                     <div class="caption-album">
                                         <div class="icon-search-hover">
-                                            <img src="{{ asset('template1/assets/images/icons/icon-search-large.png')}}" alt="banner">
+                                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                    width="24px" height="24px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+                                                <path class="st0" d="M21.7,20.3L18,16.6c3.1-3.9,2.5-9.5-1.4-12.7S7.1,1.5,4,5.3S1.5,14.9,5.3,18c3.3,2.6,8,2.6,11.3,0l3.7,3.7
+                                                    c0.4,0.4,1,0.4,1.4,0c0,0,0,0,0,0C22.1,21.3,22.1,20.7,21.7,20.3z M11,18c-3.9,0-7-3.1-7-7s3.1-7,7-7s7,3.1,7,7S14.9,18,11,18z"/>
+                                                </svg>
                                         </div>
                                         <span>กทม. ร่วมเป็นเกียรติในพิธีลงนามสร้างสวนป่า</span>
                                     </div>

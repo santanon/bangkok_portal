@@ -389,7 +389,6 @@ $howManySteps: 100; //this needs to be even.
                             padding: 0;
                             font-size: 3rem;
                             line-height: 3rem;
-                            // font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f105";
                             content: '';
                             background-image: url('../../theme-orange/assets/images/icons/arrow-right.svg');
                             background-size: 30px 30px;
@@ -397,6 +396,7 @@ $howManySteps: 100; //this needs to be even.
                             background-repeat: no-repeat;
                         }
                     }
+
                     .desc{
                         margin: 0 0 20px;
                         font-size: 1.6rem;
@@ -425,7 +425,7 @@ $howManySteps: 100; //this needs to be even.
                         .title{
                             position: relative;
                             padding: 5px 0;
-                            margin: 0 0 10px;
+                            margin: 0 0 20px;
                             font-size: 3.6rem;
                             line-height: 4rem;
                             font-weight: $font-medium;
@@ -435,7 +435,7 @@ $howManySteps: 100; //this needs to be even.
                             z-index: 1;
                         }
                         .desc{
-                            margin: 0 0 25px;
+                            margin: 0 0 20px;
                             font-size: 1.6rem;
                             line-height: 2rem;
                             font-weight: $font-regular;
@@ -535,8 +535,8 @@ $howManySteps: 100; //this needs to be even.
             }
             .main-content{
                 &.border-bottom{
+                    padding-bottom: 15px;
                     border-bottom: 1px solid #cfd1d4;
-                    padding-bottom: 10px;
                 }
                 .group-back{
                     display: inline-block;
@@ -1870,8 +1870,9 @@ $howManySteps: 100; //this needs to be even.
                             justify-content: center;
                             width: 94px;
                             height: 100%;
-                            border: solid 1px $color-primary;
+                            border: solid 1px transparent;
                             border-radius: 50%;
+                            transition: all 0.5s ease;
                             svg {
                                 width: 32px;
                                 height: 32px;
@@ -1880,6 +1881,10 @@ $howManySteps: 100; //this needs to be even.
                                 stroke-width:2;
                                 stroke-miterlimit:10;
                                 vertical-align: bottom;
+
+                                .st0{fill:none;stroke:$color-text;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+                                .st1{fill:none;stroke:$color-text;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+                                .st2{fill:none;stroke:$color-text;stroke-width:2;stroke-miterlimit:10;}
                             }
                         }
 
@@ -1887,33 +1892,26 @@ $howManySteps: 100; //this needs to be even.
                             padding: 0 20px 0 5px;
                             margin-left: 20px;
                             height: 100%;
+                            color: $color-text;
                             border-bottom: solid 1px #cfd1d4;
-                            a{
+                            transition: all 0.5s ease;
+                            p{
                                 display: flex;
                                 align-items: center;
                                 height: 100%;
-                                // display: -webkit-box;
-                                // -webkit-line-clamp: 3;
-                                // -webkit-box-orient: vertical;
-                                // overflow: hidden;
-                                // text-overflow: ellipsis;
                                 font-size: 2rem;
                                 font-weight: $font-regular;
                                 line-height: 2.4rem;
-                                color: $color-text;
-                                transition: all 0.3s ease;
-                                &:hover{
-                                    text-decoration: none;
-                                    color: $color-secondary;
-                                }
                             }
                         }
 
                         .text-onbottom{
                             padding: 0 20px;
                             height: 100%;
+                            color: $color-primary;
                             border-bottom: solid 1px #cfd1d4;
-                            a{
+                            transition: all 0.5s ease;
+                            p{
                                 display: flex;
                                 align-items: center;
                                 height: 100%;
@@ -1921,122 +1919,26 @@ $howManySteps: 100; //this needs to be even.
                                 font-size: 2rem;
                                 font-weight: $font-regular;
                                 line-height: 2.4rem;
-                                color: $color-primary;
-                                &:hover{
-                                    text-decoration: none;
-                                    color: $color-secondary;
-                                }
+                                
                             }
                         }
 
-                        .left{
-                            position: relative;
-                            // height: 94px;
-                            padding: 0 20px;
-
+                        &:hover{
                             .icon-content{
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                width: 94px;
-                                height: 94px;
-                                border: solid 1px $color-primary;
-                                border-radius: 50%;
+                                border-color: $color-secondary;
                                 svg {
-                                    width: 32px;
-                                    height: 32px;
-                                    fill:none;
-                                    stroke: #fff;
-                                    stroke-width:2;
-                                    stroke-miterlimit:10;
-                                    vertical-align: bottom;
+                                    .st0{fill:none;stroke:$color-secondary;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+                                    .st1{fill:none;stroke:$color-secondary;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+                                    .st2{fill:none;stroke:$color-secondary;stroke-width:2;stroke-miterlimit:10;}
                                 }
+                            }
+    
+                            .text-content{
+                                color: $color-secondary;
                             }
                             
-                            // .text-content{
-                            //     font-size: 3rem;
-                            //     font-weight: $font-medium;
-                            //     display: flex;
-                            //     align-items: center;
-                            //     justify-content: center;
-                            //     height: 100%;
-                            //     color: #fff;
-                            // }
-
-                            // .text-onbottom{
-                            //     display: flex;
-                            //     align-items: center;
-                            //     justify-content: center;
-                            //     width: 100%;
-                            //     color: $color-text;
-                            //     text-align: center;
-                            //     font-size: 2rem;
-                            //     font-weight: $font-regular;
-                            //     line-height: 2.4rem;
-                            //     color: $color-primary;
-                            // }
-                        }
-
-                        .right{
-                            position: relative;
-                            // height: 94px;
-                            padding: 0 20px;
-                            border-bottom: solid 2px #cfd1d4;
-
-                            .text-ontop{
-                                display: block;
-                                font-size: 1.4rem;
-                                font-weight: $font-regular;
-                                margin-bottom: 5px;
-                            }
-                            .text-content{
-                                display: -webkit-box;
-                                -webkit-line-clamp: 3;
-                                -webkit-box-orient: vertical;
-                                overflow: hidden;
-                                text-overflow: ellipsis;
-                                a{
-                                    font-size: 2rem;
-                                    font-weight: $font-regular;
-                                    line-height: 2.4rem;
-                                    color: $color-text;
-                                    //opacity: 0.7;
-                                    transition: all 0.3s ease;
-                                    &:hover{
-                                        text-decoration: none;
-                                    }
-                                }
-                            }
                             .text-onbottom{
-                                width: 100%;
-                                color: $color-text;
-                                text-align: center;
-                                font-size: 2rem;
-                                font-weight: $font-regular;
-                                line-height: 2.4rem;
-                                color: $color-primary;
-                            }
-                        }
-                    }
-                    &:hover{
-                        .item{
-                            .left{
-                                transition: all 0.3s ease;
-                                .text-content{
-                                    transition: all 0.3s ease;
-                                }
-                                .icon-content{
-                                    svg{
-                                        transition: all 0.3s ease;
-                                    }
-                                }
-                            }
-                            .right{
-                                .text-content{
-                                    a{
-                                        opacity: 1;
-                                    }
-                                }
+                                color: $color-secondary;
                             }
                         }
                     }
@@ -2288,15 +2190,18 @@ $howManySteps: 100; //this needs to be even.
                 }
 
                 .page-list-item-wrapper{
+                    position: relative;
                     .topic-category{
                         font-size: 2rem;
                         font-weight: $font-regular;
                         line-height: 2.4rem;
-                        color: #fff;
-                        display: flex;
-                        align-items: center;
-                        padding: 8px 15px;
+                        color: $color-primary;
+                        // display: flex;
+                        // align-items: center;
+                        text-align: center;
+                        padding: 8px 15px 20px 15px;
                         margin-bottom: 20px;
+                        border-bottom: solid 2px $color-text;
                         svg {
                             fill: none;
                             stroke: #fff;
@@ -2356,14 +2261,13 @@ $howManySteps: 100; //this needs to be even.
                                 .card-header-item{
                                     .icon-card-header{
                                         position: relative;
-                                        flex: 0 0 120px;
-                                        padding: 15px 20px;
+                                        flex: 0 0 80px;
+                                        padding: 0;
                                         min-height: 80px;
                                         display: flex;
                                         align-items: center;
                                         justify-content: center;
                                         .icon-content{
-                                            
                                             height: 100%;
                                             svg {
                                                 width: 32px;
@@ -2373,15 +2277,67 @@ $howManySteps: 100; //this needs to be even.
                                                 stroke-width:2;
                                                 stroke-miterlimit:10;
                                                 vertical-align: bottom;
+
+                                                .st0{
+                                                    stroke: $color-secondary;
+                                                }
                                             }
                                         }
                                     }
                                     .title-card-header{
+                                        position: relative;
                                         font-size: 2rem;
                                         line-height: 2.4rem;
                                         font-weight: $font-regular;
                                         color: $color-text;
-                                        padding: 15px 20px;
+                                        padding: 15px 45px 15px 0;
+
+                                        .icon-content{
+                                            position: absolute;
+                                            top: 50%;
+                                            transform: translateY(-50%);
+                                            right: 5px;
+                                            width: 30px;
+                                            height: 30px;
+                                            svg {
+                                                width: 30px;
+                                                height: 30px;
+                                                fill:none;
+                                                stroke: #fff;
+                                                stroke-width:2;
+                                                stroke-miterlimit:10;
+                                                vertical-align: bottom;
+                                                transition: all 0.3s ease;
+
+                                                .st0{fill:none;stroke:$color-primary;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+
+                                                // .st0{
+                                                //     fill: $color-primary;
+                                                // }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .card-header-item[aria-expanded="true"]{
+                                    background-color: $color-primary;
+                                    .icon-card-header{
+                                        .icon-content{
+                                            svg {
+                                                .st0{
+                                                    stroke: white;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .title-card-header{
+                                        color: white;
+                                        .icon-content{
+                                            svg {
+                                                transform: rotate(180deg);
+                                                .st0{fill:none;stroke:white;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+                                            }
+                                        }
                                     }
                                 }
                             }
@@ -2403,21 +2359,8 @@ $howManySteps: 100; //this needs to be even.
                                         line-height: 2.4rem;
                                         color: $color-text;
                                     }
-                                    &:after{
-                                        content: '';
-                                        width: 0;
-                                        height: 0;
-                                        border-style: solid;
-                                        border-width: 16px 15.5px 0 15.5px;
-                                        position: absolute;
-                                        top: 0;
-                                        left: 4%;
-                                    }
                                 }
                             }
-                            // &:last-of-type{
-                            //     margin-bottom: 30px;
-                            // }
                         }
                     }
                 }
@@ -2565,14 +2508,14 @@ $howManySteps: 100; //this needs to be even.
                     .box-title{
                         .title-head{
                             font-size: 3.6rem;
-                            line-height: 3.6rem;
+                            line-height: 4rem;
                             font-weight: $font-medium;
                             margin: 0 0 20px;
                         }
 
                         .order-all {
                             font-size: 1.6rem;
-                            line-height: 3.6rem;
+                            line-height: 4rem;
                             margin: 0 0 20px;
                         }
                     }
@@ -2742,220 +2685,213 @@ $howManySteps: 100; //this needs to be even.
     position: relative;
     .item{
         position: relative;
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-        flex-wrap: wrap;
         margin-bottom: 30px;
         overflow: hidden;
-        >div{
-            flex: 1 0 50%;
-        }
-        .left{
-            position: relative;
-            height: 150px;
-            flex: 0 0 140px;
-            .text-content{
-                font-size: 3rem;
-                font-weight: $font-medium;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                height: 100%;
-                color: #fff;
-            }
-            .text-onbottom{
-                position: absolute;
-                bottom: 0;
-                width: 100%;
-                color: #fff;
-                text-align: center;
-                font-size: 2rem;
-                font-weight: $font-regular;
-            }
+        // .left{
+        //     position: relative;
+        //     height: 150px;
+        //     flex: 0 0 140px;
+        //     .text-content{
+        //         font-size: 3rem;
+        //         font-weight: $font-medium;
+        //         display: flex;
+        //         align-items: center;
+        //         justify-content: center;
+        //         height: 100%;
+        //         color: #fff;
+        //     }
+        //     .text-onbottom{
+        //         position: absolute;
+        //         bottom: 0;
+        //         width: 100%;
+        //         color: #fff;
+        //         text-align: center;
+        //         font-size: 2rem;
+        //         font-weight: $font-regular;
+        //     }
 
-            .icon-content{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                height: 100%;
-                svg {
-                    width: 32px;
-                    height: 32px;
-                    fill:none;
-                    stroke: #fff;
-                    stroke-width:2;
-                    stroke-miterlimit:10;
-                    vertical-align: bottom;
-                }
-            }
+        //     .icon-content{
+        //         display: flex;
+        //         align-items: center;
+        //         justify-content: center;
+        //         height: 100%;
+        //         svg {
+        //             width: 32px;
+        //             height: 32px;
+        //             fill:none;
+        //             stroke: #fff;
+        //             stroke-width:2;
+        //             stroke-miterlimit:10;
+        //             vertical-align: bottom;
+        //         }
+        //     }
 
-            .progress-content{
-                position: relative;
-                background-image: url('../../assets/images/bg-circle.png');
-                background-position: 0 0;
-                background-repeat: no-repeat;
+        //     .progress-content{
+        //         position: relative;
+        //         background-image: url('../../assets/images/bg-circle.png');
+        //         background-position: 0 0;
+        //         background-repeat: no-repeat;
 
-                .progress {
-                    width: $size;
-                    height: $size;
-                    line-height: $size;
-                    background: none;
-                    margin: 0 auto;
-                    box-shadow: none;
-                    position: absolute;
-                    top: -55px;
-                    bottom: 0;
-                    margin: auto;
-                    left: 0;
-                    right: 0;
-                    &:after {
-                        content: "";
-                        width: 100%;
-                        height: 100%;
-                        border-radius: 50%;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                    }
-                    > span {
-                        width: 50%;
-                        height: 100%;
-                        overflow: hidden;
-                        position: absolute;
-                        top: 0;
-                        z-index: 1;
-                    }
-                    .progress-left {
-                        left: 0;
-                    }
-                    .progress-bar {
-                        width: 100%;
-                        height: 100%;
-                        background: none;
-                        border-width: 7px;
-                        border-style: solid;
-                        position: absolute;
-                        top: 0;
-                    }
-                    .progress-left .progress-bar {
-                        left: 100%;
-                        border-top-right-radius: ($size/2);;
-                        border-bottom-right-radius: ($size/2);;
-                        border-left: 0;
-                        -webkit-transform-origin: center left;
-                        transform-origin: center left;
-                        //animation: loading-2 1.5s linear forwards 1.8s;
-                    }
-                    .progress-right {
-                      right: 0;
-                        .progress-bar {
-                            left: -100%;
-                            border-top-left-radius: ($size/2);;
-                            border-bottom-left-radius: ($size/2);;
-                            border-right: 0;
-                            -webkit-transform-origin: center right;
-                            transform-origin: center right;
-                            //animation: loading-1 1.8s linear forwards;
-                        }
-                    }
-                    .progress-value {
-                        display: flex;
-                        border-radius: 50%;
-                        font-size: 2rem;
-                        line-height: 2rem;
-                        text-align: center;
-                        align-items: center;
-                        justify-content: center;
-                        height: 100%;
-                        width: 100%;
-                        color: #fff;
-                        font-weight: $font-regular;
-                        span {
-                            font-size: 1.2rem;
-                            text-transform: uppercase;
-                        }
-                    }
-                }
-                .total-people{
-                    position: absolute;
-                    width: 100%;
-                    font-size: 1.8rem;
-                    line-height: 2rem;
-                    font-weight: $font-regular;
-                    color: #fff;
-                    text-align: center;
-                    bottom: 40px;
-                }
-            }
+        //         .progress {
+        //             width: $size;
+        //             height: $size;
+        //             line-height: $size;
+        //             background: none;
+        //             margin: 0 auto;
+        //             box-shadow: none;
+        //             position: absolute;
+        //             top: -55px;
+        //             bottom: 0;
+        //             margin: auto;
+        //             left: 0;
+        //             right: 0;
+        //             &:after {
+        //                 content: "";
+        //                 width: 100%;
+        //                 height: 100%;
+        //                 border-radius: 50%;
+        //                 position: absolute;
+        //                 top: 0;
+        //                 left: 0;
+        //             }
+        //             > span {
+        //                 width: 50%;
+        //                 height: 100%;
+        //                 overflow: hidden;
+        //                 position: absolute;
+        //                 top: 0;
+        //                 z-index: 1;
+        //             }
+        //             .progress-left {
+        //                 left: 0;
+        //             }
+        //             .progress-bar {
+        //                 width: 100%;
+        //                 height: 100%;
+        //                 background: none;
+        //                 border-width: 7px;
+        //                 border-style: solid;
+        //                 position: absolute;
+        //                 top: 0;
+        //             }
+        //             .progress-left .progress-bar {
+        //                 left: 100%;
+        //                 border-top-right-radius: ($size/2);;
+        //                 border-bottom-right-radius: ($size/2);;
+        //                 border-left: 0;
+        //                 -webkit-transform-origin: center left;
+        //                 transform-origin: center left;
+        //                 //animation: loading-2 1.5s linear forwards 1.8s;
+        //             }
+        //             .progress-right {
+        //               right: 0;
+        //                 .progress-bar {
+        //                     left: -100%;
+        //                     border-top-left-radius: ($size/2);;
+        //                     border-bottom-left-radius: ($size/2);;
+        //                     border-right: 0;
+        //                     -webkit-transform-origin: center right;
+        //                     transform-origin: center right;
+        //                     //animation: loading-1 1.8s linear forwards;
+        //                 }
+        //             }
+        //             .progress-value {
+        //                 display: flex;
+        //                 border-radius: 50%;
+        //                 font-size: 2rem;
+        //                 line-height: 2rem;
+        //                 text-align: center;
+        //                 align-items: center;
+        //                 justify-content: center;
+        //                 height: 100%;
+        //                 width: 100%;
+        //                 color: #fff;
+        //                 font-weight: $font-regular;
+        //                 span {
+        //                     font-size: 1.2rem;
+        //                     text-transform: uppercase;
+        //                 }
+        //             }
+        //         }
+        //         .total-people{
+        //             position: absolute;
+        //             width: 100%;
+        //             font-size: 1.8rem;
+        //             line-height: 2rem;
+        //             font-weight: $font-regular;
+        //             color: #fff;
+        //             text-align: center;
+        //             bottom: 40px;
+        //         }
+        //     }
 
-            &.active{
-                .text-content{
-                    color: #fff;
-                }
-            }
-        }
-        .right{
-            background-color: #fff;
-            position: relative;
-            height: 150px;
-            padding: 0 20px;
-            display: flex;
-            align-items: center;
-            .text-ontop{
-                display: block;
-                font-size: 1.4rem;
-                font-weight: $font-regular;
-                margin-bottom: 5px;
-            }
-            .text-content{
-                display: -webkit-box;
-                -webkit-line-clamp: 3;
-                -webkit-box-orient: vertical;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                a{
-                    font-size: 2rem;
-                    font-weight: $font-regular;
-                    line-height: 2.4rem;
-                    color: $color-text;
-                    //opacity: 0.7;
-                    transition: all 0.3s ease;
-                    &:hover{
-                        text-decoration: none;
-                    }
-                }
-            }
-            .text-onbottom{
-                position: absolute;
-                bottom: 0;
-                width: 100%;
-                color: $color-text;
-                font-size: 1.6rem;
-                font-weight: $font-regular;
-                i{
-                    font-size: 1.4rem;
-                    margin-right: 5px;
-                }
+        //     &.active{
+        //         .text-content{
+        //             color: #fff;
+        //         }
+        //     }
+        // }
+        // .right{
+        //     background-color: #fff;
+        //     position: relative;
+        //     height: 150px;
+        //     padding: 0 20px;
+        //     display: flex;
+        //     align-items: center;
+        //     .text-ontop{
+        //         display: block;
+        //         font-size: 1.4rem;
+        //         font-weight: $font-regular;
+        //         margin-bottom: 5px;
+        //     }
+        //     .text-content{
+        //         display: -webkit-box;
+        //         -webkit-line-clamp: 3;
+        //         -webkit-box-orient: vertical;
+        //         overflow: hidden;
+        //         text-overflow: ellipsis;
+        //         a{
+        //             font-size: 2rem;
+        //             font-weight: $font-regular;
+        //             line-height: 2.4rem;
+        //             color: $color-text;
+        //             //opacity: 0.7;
+        //             transition: all 0.3s ease;
+        //             &:hover{
+        //                 text-decoration: none;
+        //             }
+        //         }
+        //     }
+        //     .text-onbottom{
+        //         position: absolute;
+        //         bottom: 0;
+        //         width: 100%;
+        //         color: $color-text;
+        //         font-size: 1.6rem;
+        //         font-weight: $font-regular;
+        //         i{
+        //             font-size: 1.4rem;
+        //             margin-right: 5px;
+        //         }
 
-                &.-link{
-                    a{
-                        color: #fff;
-                        font-size: 1.6rem;
-                        padding: 3px 10px;
-                        display: inline-block;
-                        &:hover{
-                            text-decoration: none;
-                        }
-                    }
-                }
-            }
-        }
-        .bottom{
-            margin-top: 10px;
-        }
+        //         &.-link{
+        //             a{
+        //                 color: #fff;
+        //                 font-size: 1.6rem;
+        //                 padding: 3px 10px;
+        //                 display: inline-block;
+        //                 &:hover{
+        //                     text-decoration: none;
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
+        // .bottom{
+        //     margin-top: 10px;
+        // }
 
-        &.-album{
+        &.album{
             position: relative;
             .cover-album{
                 position: relative;
@@ -3030,6 +2966,13 @@ $howManySteps: 100; //this needs to be even.
                 z-index: 7;
                 .icon-search-hover{
                     margin-bottom: 15px;
+                    .st0{
+                        fill: none;
+                        stroke: $color-primary;
+                        stroke-width: 2;
+                        stroke-linecap: round;
+                        stroke-miterlimit: 10;
+                    }
                 }
                 .icon-now-moving{
                     float: left;
@@ -3048,9 +2991,6 @@ $howManySteps: 100; //this needs to be even.
                     overflow: hidden;
                     text-overflow: ellipsis;
                 }
-                &.show{
-                    bottom: 0;
-                }
             }
 
             &.hilight{
@@ -3064,20 +3004,34 @@ $howManySteps: 100; //this needs to be even.
                     left: auto;
                     bottom: auto;
                     transition: all 0.5s ease;
-                    background-color: $color-primary;
+                    background-color: white;
                     span{
                         font-size: 1.6rem;
                         line-height: 1.8rem;
                         font-weight: $font-regular;
-                        color: white;
+                        color:  $color-primary;
                         display: -webkit-box;
                         -webkit-line-clamp: 3;
                         -webkit-box-orient: vertical;
                         overflow: hidden;
                         text-overflow: ellipsis;
                     }
-                    &.show{
-                        bottom: 0;
+                    
+                }
+            }
+
+            &:hover{
+                .caption-album{
+                    color: white !important;
+
+                    .icon-search-hover{
+                        .st0{
+                            stroke: white !important;
+                        }
+                    }
+
+                    span{
+                        color: white !important;
                     }
                 }
             }
@@ -3086,10 +3040,16 @@ $howManySteps: 100; //this needs to be even.
         &.video{
             position: relative;
 
+            &.hilight{
+                .cover{
+                    height: 440px;
+                }
+            }
+
             .cover{
                 position: relative;
                 width: 100%;
-                height: 186px;
+                height: 205px;
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: center center;
@@ -3194,26 +3154,26 @@ $howManySteps: 100; //this needs to be even.
         }
 
         &:hover{
-            .left{
-                transition: all 0.3s ease;
-                .text-content{
-                    transition: all 0.3s ease;
-                }
-                .icon-content{
-                    svg{
-                        transition: all 0.3s ease;
-                    }
-                }
-            }
-            .right{
-                .text-content{
-                    a{
-                        opacity: 1;
-                    }
-                }
-            }
+            // .left{
+            //     transition: all 0.3s ease;
+            //     .text-content{
+            //         transition: all 0.3s ease;
+            //     }
+            //     .icon-content{
+            //         svg{
+            //             transition: all 0.3s ease;
+            //         }
+            //     }
+            // }
+            // .right{
+            //     .text-content{
+            //         a{
+            //             opacity: 1;
+            //         }
+            //     }
+            // }
 
-            &.-album{
+            &.album{
                 .cover-album{
                     .bg-layer{
                         background-color: rgba($color: $color-primary, $alpha: 0.5);

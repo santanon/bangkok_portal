@@ -159,7 +159,7 @@
                             <form>
                                 <div class="input-custom">
                                     <div class="input-box">
-                                        <input type="text" name="" required="" placeholder="KEYWORD">
+                                        <input type="text" name="KEYWORD" required="" placeholder="KEYWORD">
                                         <!-- <label for="">KEYWORD</label> -->
                                     </div>
                                     <div class="btn-search">
@@ -198,7 +198,7 @@
                             <a href="" title="หน้าหลัก">
                                 <!-- <img src="{{ asset('template2/assets/images/icons/icon-home-menu.png')}}" alt="icon home"> -->
                                     <!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                         width="24px" height="24px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
                                     <style type="text/css">
                                         .st0{fill:none;stroke:#E16500;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
@@ -323,8 +323,8 @@
                         <li class="list">
                             <a href="contact" title="ติดต่อสอบถาม">ติดต่อสอบถาม</a>
                         </li> 
-                        <div class="clearboth"></div>
                     </ul>
+                    <div class="clearboth"></div>
                 </div>
             </div>
         </div>
@@ -455,7 +455,7 @@
                                 <img src="{{ asset('template2/assets/images/icons/icon-bkk.png')}}" alt="icon">
                             </div>
                             <div class="text-bkk">
-                                <label>กรุงเทพมหานคร</label>
+                                <strong>กรุงเทพมหานคร</strong>
                                 Bangkok.go.th
                             </div>
                         </a>

@@ -13,7 +13,7 @@
 <meta name="twitter:site" content="@thailife" />
 <meta name="twitter:creator" content="@thailife" />
 
-<link rel="canonical" href=""/>
+<link rel="canonical" href="#"/>
 <link rel="icon" href="{{ asset('assets/images/favicon.ico')}}" type="image/x-icon">
 <link rel="stylesheet" href="{{ asset('template2/theme-orange/css/main.css')}}">
 

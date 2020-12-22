@@ -106,20 +106,21 @@ $(function () {
     // ปฏิทินกิจกรรม
     const check_list_1 = $('#slide_1').children('.item').length;
     $('#slide_1').on('init', function (event, slick, direction) {
-        if (check_list_1 < 3) {
+        if (check_list_1 < 1) {
             $('#action-slide_1').parents('.action-slide .slide-wrapper').css('display','none');
         }else{
             $('#action-slide_1').parents('.action-slide .slide-wrapper').show();
         }
     });
+
     $('#slide_1').slick({
         autoplay: false,
         autoplaySpeed: 6000,
         infinite: false,
         dots: false,
         arrows: true,
-        slidesToShow: 2,
-        slidesToScroll: 2,
+        slidesToShow: 1,
+        slidesToScroll: 1,
         prevArrow: $('#action-slide_1 .slide-prev'),
         nextArrow: $('#action-slide_1 .slide-next'),
         responsive: [
@@ -255,7 +256,7 @@ $(function () {
     // BANNER
     const check_list_5 = $('#slide_5').children('li').length;
     $('#slide_5').on('init', function (event, slick, direction) {
-        if (check_list_4 < 5) {
+        if (check_list_5 < 4) {
             $('#action-slide_5').parents('.action-slide').css('display','none');
         }else{
             $('#action-slide_5').parents('.action-slide').show();
@@ -267,8 +268,8 @@ $(function () {
         infinite: false,
         dots: false,
         arrows: true,
-        slidesToShow: 4,
-        slidesToScroll: 4,
+        slidesToShow: 3,
+        slidesToScroll: 3,
         prevArrow: $('#action-slide_5 .slide-prev'),
         nextArrow: $('#action-slide_5 .slide-next'),
         responsive: [

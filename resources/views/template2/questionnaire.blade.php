@@ -20,8 +20,8 @@
                     <div class="inner-content">
                         <div class="top-content">
                             <div class="group-text">
-                                <h3 class="title color-primary">QUESTIONNAIRE</h3>
-                                <p class="desc color-secondary">ผู้ใช้บริการสามารถร้องเรียน และเสนอแนะการให้บริการ</p>
+                                <a href="/questionnaire" class="title">QUESTIONNAIRE</a>
+                                <p class="desc">The Bangkok Metropolitan Council Secretariat</p>
                             </div>
                             <div class="group-gotoall">
                                 <a href="/questionnaire" class="btn btn-outline-dark">คำถามทั้งหมด</a>
@@ -40,37 +40,23 @@
                                     <div class="item -question">
                                         <div class="row">
                                             <div class="col-lg-4 col-md-4 col-sm-4">
-                                                <div class="left bg-color-primary active">
+                                                <div class="left active">
                                                     <div class="progress-content">
-                                                        <!-- Progress bar 1 -->
-                                                        <div class="progress" data-percentage="74">
-                                                            <span class="progress-left">
-                                                                <span class="progress-bar"></span>
-                                                            </span>
-                                                            <span class="progress-right">
-                                                                <span class="progress-bar"></span>
-                                                            </span>
-                                                            <div class="progress-value">
-                                                                <div>74%</div>
-                                                            </div>
-                                                        </div>
-                                                        <!-- END -->
-                                                        <div class="total-people">155 <span>คน</span></div>
+                                                        <div class="total-people">155</div>
                                                     </div>
-                                                    <div class="text-onbottom bg-color-secondary">ผู้ตอบคำถาม</div>
+                                                    <div class="text-onbottom">ผู้ตอบคำถาม</div>
                                                 </div>
                                             </div>
                                             <div class="col-lg-8 col-md-8 col-sm-8">
-                                                <div class="right">       
-                                                    <div class="text-ontop color-secondary">
-                                                        View : 340
-                                                    </div>                                         
+                                                <div class="right">                                                
                                                     <div class="text-content">
-                                                        <a href="##">
+                                                        <a href="#">
                                                             ร่วมส่งแรงใจให้เยาวชนนักเตะรุ่นใหม่ชิงชัยเอกสารที่ต้องใช้ 1. สูติบัตร พร้อมสำเนา 2. ทะเบียนบ้าน พร้อมสำเนา
                                                         </a>
                                                     </div>
-
+                                                    <div class="text-view">
+                                                        View : 1.5K
+                                                    </div>
                                                     <div class="text-onbottom">
                                                         <div class="social-wrapper">
                                                             <ul class="d-flex align-items-center">
@@ -90,41 +76,26 @@
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="item -question">
                                         <div class="row">
                                             <div class="col-lg-4 col-md-4 col-sm-4">
-                                                <div class="left bg-color-primary active">
+                                                <div class="left active">
                                                     <div class="progress-content">
-                                                        <!-- Progress bar 1 -->
-                                                        <div class="progress" data-percentage="74">
-                                                            <span class="progress-left">
-                                                                <span class="progress-bar"></span>
-                                                            </span>
-                                                            <span class="progress-right">
-                                                                <span class="progress-bar"></span>
-                                                            </span>
-                                                            <div class="progress-value">
-                                                                <div>74%</div>
-                                                            </div>
-                                                        </div>
-                                                        <!-- END -->
-                                                        <div class="total-people">155 <span>คน</span></div>
+                                                        <div class="total-people">155</div>
                                                     </div>
-                                                    <div class="text-onbottom bg-color-secondary">ผู้ตอบคำถาม</div>
+                                                    <div class="text-onbottom">ผู้ตอบคำถาม</div>
                                                 </div>
                                             </div>
                                             <div class="col-lg-8 col-md-8 col-sm-8">
-                                                <div class="right">       
-                                                    <div class="text-ontop color-secondary">
-                                                        View : 340
-                                                    </div>                                         
+                                                <div class="right">                                           
                                                     <div class="text-content">
-                                                        <a href="##">
+                                                        <a href="#">
                                                             ร่วมส่งแรงใจให้เยาวชนนักเตะรุ่นใหม่ชิงชัยเอกสารที่ต้องใช้ 1. สูติบัตร พร้อมสำเนา 2. ทะเบียนบ้าน พร้อมสำเนา
                                                         </a>
                                                     </div>
-
+                                                    <div class="text-view">
+                                                        View : 340
+                                                    </div>    
                                                     <div class="text-onbottom">
                                                         <div class="social-wrapper">
                                                             <ul class="d-flex align-items-center">

@@ -43,9 +43,7 @@ Route::any('manage-admin/action', [ManageController::class,'action']);
 Route::any('/', function () {
     return view('home');
 });
-Route::any('/home-2', function () {
-    return view('home-2');
-});
+
 Route::any('/coverpage', function () {
     return view('coverpage');
 });
@@ -53,6 +51,7 @@ Route::any('/coverpage', function () {
 Route::any('/news', function () {
     return view('news-main');
 });
+
 Route::any('/news-detail', function () {
     return view('news-detail');
 });
@@ -105,4 +104,21 @@ Route::any('/vote', function () {
 
 Route::any('/vote-detail', function () {
     return view('vote-detail');
+});
+
+//template2
+Route::any('/home-2', function () {
+    return view('home-2');
+});
+
+Route::any('/about-2', function () {
+    return view('about-detail-2');
+});
+
+Route::any('/news-2', function () {
+    return view('news-main-2');
+});
+
+Route::any('/news-detail-2', function () {
+    return view('news-detail-2');
 });

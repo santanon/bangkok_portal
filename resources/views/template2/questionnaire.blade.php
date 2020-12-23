@@ -38,79 +38,67 @@
                             <div class="group-slide">
                                 <div class="list-item" id="slide_6">
                                     <div class="item -question">
-                                        <div class="row">
-                                            <div class="col-lg-4 col-md-4 col-sm-4">
-                                                <div class="left active">
-                                                    <div class="progress-content">
-                                                        <div class="total-people">155</div>
-                                                    </div>
-                                                    <div class="text-onbottom">ผู้ตอบคำถาม</div>
-                                                </div>
+                                        <div class="left active">
+                                            <div class="progress-content">
+                                                <div class="total-people">155</div>
                                             </div>
-                                            <div class="col-lg-8 col-md-8 col-sm-8">
-                                                <div class="right">                                                
-                                                    <div class="text-content">
-                                                        <a href="#">
-                                                            ร่วมส่งแรงใจให้เยาวชนนักเตะรุ่นใหม่ชิงชัยเอกสารที่ต้องใช้ 1. สูติบัตร พร้อมสำเนา 2. ทะเบียนบ้าน พร้อมสำเนา
-                                                        </a>
-                                                    </div>
-                                                    <div class="text-view">
-                                                        View : 1.5K
-                                                    </div>
-                                                    <div class="text-onbottom">
-                                                        <div class="social-wrapper">
-                                                            <ul class="d-flex align-items-center">
-                                                                <li class="facebook d-flex align-items-center not-hover">
-                                                                <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"> <span class="color-secondary">5</span>
-                                                                </li>
-                                                                <li class="twitter d-flex align-items-center not-hover">
-                                                                    <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon"><span class="color-secondary">5</span>
-                                                                </li>
-                                                                <li class="line d-flex align-items-center not-hover">
-                                                                    <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"><span class="color-secondary">5</span>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
+                                            <div class="text-onbottom">ผู้ตอบคำถาม</div>
+                                        </div>
+                                        <div class="right">                                                
+                                            <div class="text-content">
+                                                <a href="#">
+                                                    ร่วมส่งแรงใจให้เยาวชนนักเตะรุ่นใหม่ชิงชัยเอกสารที่ต้องใช้ 1. สูติบัตร พร้อมสำเนา 2. ทะเบียนบ้าน พร้อมสำเนา
+                                                </a>
+                                            </div>
+                                            <div class="text-view">
+                                                View : 1.5K
+                                            </div>
+                                            <div class="text-onbottom">
+                                                <div class="social-wrapper">
+                                                    <ul class="d-flex align-items-center">
+                                                        <li class="facebook d-flex align-items-center not-hover">
+                                                        <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"> <span class="color-secondary">5</span>
+                                                        </li>
+                                                        <li class="twitter d-flex align-items-center not-hover">
+                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon"><span class="color-secondary">5</span>
+                                                        </li>
+                                                        <li class="line d-flex align-items-center not-hover">
+                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"><span class="color-secondary">5</span>
+                                                        </li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="item -question">
-                                        <div class="row">
-                                            <div class="col-lg-4 col-md-4 col-sm-4">
-                                                <div class="left active">
-                                                    <div class="progress-content">
-                                                        <div class="total-people">155</div>
-                                                    </div>
-                                                    <div class="text-onbottom">ผู้ตอบคำถาม</div>
-                                                </div>
+                                        <div class="left active">
+                                            <div class="progress-content">
+                                                <div class="total-people">155</div>
                                             </div>
-                                            <div class="col-lg-8 col-md-8 col-sm-8">
-                                                <div class="right">                                           
-                                                    <div class="text-content">
-                                                        <a href="#">
-                                                            ร่วมส่งแรงใจให้เยาวชนนักเตะรุ่นใหม่ชิงชัยเอกสารที่ต้องใช้ 1. สูติบัตร พร้อมสำเนา 2. ทะเบียนบ้าน พร้อมสำเนา
-                                                        </a>
-                                                    </div>
-                                                    <div class="text-view">
-                                                        View : 340
-                                                    </div>    
-                                                    <div class="text-onbottom">
-                                                        <div class="social-wrapper">
-                                                            <ul class="d-flex align-items-center">
-                                                                <li class="facebook d-flex align-items-center not-hover">
-                                                                <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"> <span class="color-secondary">5</span>
-                                                                </li>
-                                                                <li class="twitter d-flex align-items-center not-hover">
-                                                                    <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon"><span class="color-secondary">5</span>
-                                                                </li>
-                                                                <li class="line d-flex align-items-center not-hover">
-                                                                    <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"><span class="color-secondary">5</span>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
+                                            <div class="text-onbottom">ผู้ตอบคำถาม</div>
+                                        </div>
+                                        <div class="right">                                                
+                                            <div class="text-content">
+                                                <a href="#">
+                                                    ร่วมส่งแรงใจให้เยาวชนนักเตะรุ่นใหม่ชิงชัยเอกสารที่ต้องใช้ 1. สูติบัตร พร้อมสำเนา 2. ทะเบียนบ้าน พร้อมสำเนา
+                                                </a>
+                                            </div>
+                                            <div class="text-view">
+                                                View : 1.5K
+                                            </div>
+                                            <div class="text-onbottom">
+                                                <div class="social-wrapper">
+                                                    <ul class="d-flex align-items-center">
+                                                        <li class="facebook d-flex align-items-center not-hover">
+                                                        <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"> <span class="color-secondary">5</span>
+                                                        </li>
+                                                        <li class="twitter d-flex align-items-center not-hover">
+                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon"><span class="color-secondary">5</span>
+                                                        </li>
+                                                        <li class="line d-flex align-items-center not-hover">
+                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"><span class="color-secondary">5</span>
+                                                        </li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                         </div>

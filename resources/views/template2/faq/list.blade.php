@@ -75,10 +75,10 @@
 
                                                 <div id="collapse_1" class="collapse" aria-labelledby="faq_1" data-parent="#accordionExample">
                                                     <div class="card-body">
-                                                        <div class="show-view color-secondary">View : 1.5K</div>
                                                         <div class="content">
                                                             Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                                                         </div>
+                                                        <div class="show-view">View : 1.5K</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -108,10 +108,143 @@
                                                 </div>
                                                 <div id="collapse_2" class="collapse" aria-labelledby="faq_2" data-parent="#accordionExample">
                                                     <div class="card-body">
-                                                        <div class="show-view color-secondary">View : 1.5K</div>
                                                         <div class="content">
                                                             Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                                                         </div>
+                                                        <div class="show-view">View : 1.5K</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="card">
+                                                <div class="card-header" id="faq_3">
+                                                    <div class="card-header-item d-flex align-items-center" data-toggle="collapse" data-target="#collapse_3" aria-expanded="false" aria-controls="collapse_3">
+                                                        <div class="icon-card-header">
+                                                            <div class="icon-content">
+                                                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="42.2px" height="42.2px" viewBox="0 0 42.2 42.2" style="enable-background:new 0 0 42.2 42.2;" xml:space="preserve">
+                                                                <path class="st0" d="M5.1,21c0,8.6,6.9,15.5,15.4,16c5.7,0.4,11.4-1.3,16.5-3.9c-2.8-2.8-2.1-6.8-1.3-9.6c1.1-3.3,1.1-7-0.5-10.1
+                                                                    c-1.1-2.1-2.7-4-4.6-5.4c-0.7-0.6-2.4-1.4-2.4-1.4c-2.1-1-4.5-1.6-7-1.6c-9,0-16.2,7.3-16.2,16.2V21z"></path>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                        <div class="title-card-header flex-grow-1">
+                                                            การถอนค้ำประกันสัญญาต้องใช้เอกสารอะไรบ้าง
+                                                            <div class="icon-content">
+                                                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                                    width="24px" height="24px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+                                                                <polyline class="st0" points="4.9,8.5 12,15.5 19.1,8.5 "/>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="collapse_3" class="collapse" aria-labelledby="faq_3" data-parent="#accordionExample">
+                                                    <div class="card-body">
+                                                        <div class="content">
+                                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                                        </div>
+                                                        <div class="show-view">View : 1.5K</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="card">
+                                                <div class="card-header" id="faq_4">
+                                                    <div class="card-header-item d-flex align-items-center" data-toggle="collapse" data-target="#collapse_4" aria-expanded="false" aria-controls="collapse_4">
+                                                        <div class="icon-card-header">
+                                                            <div class="icon-content">
+                                                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="42.2px" height="42.2px" viewBox="0 0 42.2 42.2" style="enable-background:new 0 0 42.2 42.2;" xml:space="preserve">
+                                                                <path class="st0" d="M5.1,21c0,8.6,6.9,15.5,15.4,16c5.7,0.4,11.4-1.3,16.5-3.9c-2.8-2.8-2.1-6.8-1.3-9.6c1.1-3.3,1.1-7-0.5-10.1
+                                                                    c-1.1-2.1-2.7-4-4.6-5.4c-0.7-0.6-2.4-1.4-2.4-1.4c-2.1-1-4.5-1.6-7-1.6c-9,0-16.2,7.3-16.2,16.2V21z"></path>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                        <div class="title-card-header flex-grow-1">
+                                                            การถอนค้ำประกันสัญญาต้องใช้เอกสารอะไรบ้าง
+                                                            <div class="icon-content">
+                                                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                                    width="24px" height="24px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+                                                                <polyline class="st0" points="4.9,8.5 12,15.5 19.1,8.5 "/>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="collapse_4" class="collapse" aria-labelledby="faq_4" data-parent="#accordionExample">
+                                                    <div class="card-body">
+                                                        <div class="content">
+                                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                                        </div>
+                                                        <div class="show-view">View : 1.5K</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="card">
+                                                <div class="card-header" id="faq_5">
+                                                    <div class="card-header-item d-flex align-items-center" data-toggle="collapse" data-target="#collapse_5" aria-expanded="false" aria-controls="collapse_5">
+                                                        <div class="icon-card-header">
+                                                            <div class="icon-content">
+                                                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="42.2px" height="42.2px" viewBox="0 0 42.2 42.2" style="enable-background:new 0 0 42.2 42.2;" xml:space="preserve">
+                                                                <path class="st0" d="M5.1,21c0,8.6,6.9,15.5,15.4,16c5.7,0.4,11.4-1.3,16.5-3.9c-2.8-2.8-2.1-6.8-1.3-9.6c1.1-3.3,1.1-7-0.5-10.1
+                                                                    c-1.1-2.1-2.7-4-4.6-5.4c-0.7-0.6-2.4-1.4-2.4-1.4c-2.1-1-4.5-1.6-7-1.6c-9,0-16.2,7.3-16.2,16.2V21z"></path>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                        <div class="title-card-header flex-grow-1">
+                                                            การถอนค้ำประกันสัญญาต้องใช้เอกสารอะไรบ้าง
+                                                            <div class="icon-content">
+                                                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                                    width="24px" height="24px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+                                                                <polyline class="st0" points="4.9,8.5 12,15.5 19.1,8.5 "/>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="collapse_5" class="collapse" aria-labelledby="faq_5" data-parent="#accordionExample">
+                                                    <div class="card-body">
+                                                        <div class="content">
+                                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                                        </div>
+                                                        <div class="show-view">View : 1.5K</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="card">
+                                                <div class="card-header" id="faq_6">
+                                                    <div class="card-header-item d-flex align-items-center" data-toggle="collapse" data-target="#collapse_6" aria-expanded="false" aria-controls="collapse_6">
+                                                        <div class="icon-card-header">
+                                                            <div class="icon-content">
+                                                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="42.2px" height="42.2px" viewBox="0 0 42.2 42.2" style="enable-background:new 0 0 42.2 42.2;" xml:space="preserve">
+                                                                <path class="st0" d="M5.1,21c0,8.6,6.9,15.5,15.4,16c5.7,0.4,11.4-1.3,16.5-3.9c-2.8-2.8-2.1-6.8-1.3-9.6c1.1-3.3,1.1-7-0.5-10.1
+                                                                    c-1.1-2.1-2.7-4-4.6-5.4c-0.7-0.6-2.4-1.4-2.4-1.4c-2.1-1-4.5-1.6-7-1.6c-9,0-16.2,7.3-16.2,16.2V21z"></path>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                        <div class="title-card-header flex-grow-1">
+                                                            เด็กอายุกี่ขวบต้องแจ้งการเข้าเรียนตามกฎหมาย และใช้เอกสารอะไรบ้าง?
+                                                            <div class="icon-content">
+                                                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                                    width="24px" height="24px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+                                                                <polyline class="st0" points="4.9,8.5 12,15.5 19.1,8.5 "/>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div id="collapse_6" class="collapse" aria-labelledby="faq_6" data-parent="#accordionExample">
+                                                    <div class="card-body">
+                                                        <div class="content">
+                                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                                        </div>
+                                                        <div class="show-view">View : 1.5K</div>
                                                     </div>
                                                 </div>
                                             </div>

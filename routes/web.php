@@ -106,6 +106,9 @@ Route::any('/vote-detail', function () {
     return view('vote-detail');
 });
 
+
+
+
 //template2
 Route::any('/home-2', function () {
     return view('home-2');
@@ -137,4 +140,12 @@ Route::any('/download-2', function () {
 
 Route::any('/faq-2', function () {
     return view('faq-main-2');
+});
+
+Route::any('/questionnaire-2', function () {
+    return view('questionnaire-main-2');
+});
+
+Route::any('/questionnaire-detail-2', function () {
+    return view('questionnaire-detail-2');
 });

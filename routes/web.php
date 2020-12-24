@@ -149,3 +149,23 @@ Route::any('/questionnaire-2', function () {
 Route::any('/questionnaire-detail-2', function () {
     return view('questionnaire-detail-2');
 });
+
+Route::any('/vote-2', function () {
+    return view('vote-main-2');
+});
+
+Route::any('/calendar-2', function () {
+    return view('calendar-main-2');
+});
+
+Route::any('/calendar-detail-2', function () {
+    return view('calendar-detail-2');
+});
+
+Route::any('/contact-2', function () {
+    return view('contact-main-2');
+});
+
+Route::any('/sitemap-2', function () {
+    return view('sitemap-2');
+});

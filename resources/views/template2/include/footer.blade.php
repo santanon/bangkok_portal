@@ -1,4 +1,4 @@
-<div class="container-fluid bg-color-secondary">
+<div class="bg-color-secondary">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-6">
@@ -7,9 +7,9 @@
                         <h2 class="title">
                             สำนักงานเลขานุการสภากรุงเทพมหานคร 
                         </h2>
-                        <p class="desc">
+                        <!-- <p class="desc">
                             The Bangkok Metropolitan Council Secretariat
-                        </p>
+                        </p> -->
                     </div>
                     <div class="group-content-footer">
                         <div class="icon-content">

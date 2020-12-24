@@ -2,9 +2,9 @@
     <div class="container">
         <div class="inner-content">
             <div class="top-content">
-                <div class="group-text">
-                    <h3 class="title color-primary">โหวต</h3>
-                    <p class="desc color-secondary">The Bangkok Metropolitan Council Secretariat </p>
+                <div class="group-text__no-styled txt-center">
+                    <h3 class="title">โหวต</h3>
+                    <p class="desc">The Bangkok Metropolitan Council Secretariat </p>
                 </div>
             </div>
             <div class="search-content">
@@ -35,200 +35,170 @@
                 <div class="group-slide group-list">
                     <div class="list-item">
                         <div class="item -vote">
-                            <div class="row">
-                                <div class="col-sm-4 col-md-3 col-lg-3 col-xl-2">
-                                    <div class="left bg-color-primary">
-                                        <div class="d-flex flex-column text-score text-center">
-                                            <div class="num-vote">1.6K</div>
-                                            <div class="text-vote">ผู้โหวต</div>
-                                        </div>
-                                    </div>
+                            <div class="left">
+                                <div class="text-score">
+                                    <div class="num-vote">1.6K</div>
+                                    <div class="text-vote">ผู้โหวต</div>
                                 </div>
-                                <div class="col-sm-8 col-md-9 col-lg-9 col-xl-10">
-                                    <div class="right">       
-                                        <div class="text-ontop color-secondary">
-                                            View : 340
-                                        </div>                                         
-                                        <div class="text-content">
-                                            <a href="/vote-detail">
-                                                กรุงเทพฯ เป็นเมืองน่าท่องเที่ยวที่สุดในโลก และเป็นเมืองจุดหมายปลายทางที่ได้รับความนิยมมากที่สุดในโลก
-                                            </a>
-                                        </div>
-                                        <div class="text-onbottom">
-                                            <div class="social-wrapper">
-                                                <ul class="d-flex align-items-center">
-                                                    <li class="facebook d-flex align-items-center not-hover">
-                                                        <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"><span class="color-secondary">5</span>
-                                                    </li>
-                                                    <li class="twitter d-flex align-items-center not-hover">
-                                                        <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon"><span class="color-secondary">5</span>
-                                                    </li>
-                                                    <li class="line d-flex align-items-center not-hover">
-                                                        <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"><span class="color-secondary">5</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
+                            </div>
+                            <div class="right">       
+                                <div class="text-view">
+                                    View : 340
+                                </div>                                         
+                                <div class="text-content">
+                                    <a href="/vote-detail">
+                                        กรุงเทพฯ เป็นเมืองน่าท่องเที่ยวที่สุดในโลก และเป็นเมืองจุดหมายปลายทางที่ได้รับความนิยมมากที่สุดในโลก
+                                    </a>
+                                </div>
+                                <div class="text-onbottom">
+                                    <div class="social-wrapper">
+                                        <ul class="d-flex align-items-center">
+                                            <li class="facebook d-flex align-items-center not-hover">
+                                                <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"><span class="color-secondary">5</span>
+                                            </li>
+                                            <li class="twitter d-flex align-items-center not-hover">
+                                                <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon"><span class="color-secondary">5</span>
+                                            </li>
+                                            <li class="line d-flex align-items-center not-hover">
+                                                <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"><span class="color-secondary">5</span>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="item -vote">
-                            <div class="row">
-                                <div class="col-sm-4 col-md-3 col-lg-3 col-xl-2">
-                                    <div class="left bg-color-primary">
-                                        <div class="d-flex flex-column text-score text-center">
-                                            <div class="num-vote">1.6K</div>
-                                            <div class="text-vote">ผู้โหวต</div>
-                                        </div>
-                                    </div>
+                            <div class="left">
+                                <div class="text-score">
+                                    <div class="num-vote">1.6K</div>
+                                    <div class="text-vote">ผู้โหวต</div>
                                 </div>
-                                <div class="col-sm-8 col-md-9 col-lg-9 col-xl-10">
-                                    <div class="right">       
-                                        <div class="text-ontop color-secondary">
-                                            View : 340
-                                        </div>                                         
-                                        <div class="text-content">
-                                            <a href="/vote-detail">
-                                                กรุงเทพฯ เป็นเมืองน่าท่องเที่ยวที่สุดในโลก และเป็นเมืองจุดหมายปลายทางที่ได้รับความนิยมมากที่สุดในโลก
-                                            </a>
-                                        </div>
-                                        <div class="text-onbottom">
-                                            <div class="social-wrapper">
-                                                <ul class="d-flex align-items-center">
-                                                    <li class="facebook d-flex align-items-center not-hover">
-                                                        <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"><span class="color-secondary">5</span>
-                                                    </li>
-                                                    <li class="twitter d-flex align-items-center not-hover">
-                                                        <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon"><span class="color-secondary">5</span>
-                                                    </li>
-                                                    <li class="line d-flex align-items-center not-hover">
-                                                        <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"><span class="color-secondary">5</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
+                            </div>
+                            <div class="right">       
+                                <div class="text-view">
+                                    View : 340
+                                </div>                                         
+                                <div class="text-content">
+                                    <a href="/vote-detail">
+                                        กรุงเทพฯ เป็นเมืองน่าท่องเที่ยวที่สุดในโลก และเป็นเมืองจุดหมายปลายทางที่ได้รับความนิยมมากที่สุดในโลก
+                                    </a>
+                                </div>
+                                <div class="text-onbottom">
+                                    <div class="social-wrapper">
+                                        <ul class="d-flex align-items-center">
+                                            <li class="facebook d-flex align-items-center not-hover">
+                                                <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"><span class="color-secondary">5</span>
+                                            </li>
+                                            <li class="twitter d-flex align-items-center not-hover">
+                                                <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon"><span class="color-secondary">5</span>
+                                            </li>
+                                            <li class="line d-flex align-items-center not-hover">
+                                                <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"><span class="color-secondary">5</span>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="item -vote">
-                            <div class="row">
-                                <div class="col-sm-4 col-md-3 col-lg-3 col-xl-2">
-                                    <div class="left bg-color-primary">
-                                        <div class="d-flex flex-column text-score text-center">
-                                            <div class="num-vote">1.6K</div>
-                                            <div class="text-vote">ผู้โหวต</div>
-                                        </div>
-                                    </div>
+                            <div class="left">
+                                <div class="text-score">
+                                    <div class="num-vote">1.6K</div>
+                                    <div class="text-vote">ผู้โหวต</div>
                                 </div>
-                                <div class="col-sm-8 col-md-9 col-lg-9 col-xl-10">
-                                    <div class="right">       
-                                        <div class="text-ontop color-secondary">
-                                            View : 340
-                                        </div>                                         
-                                        <div class="text-content">
-                                            <a href="/vote-detail">
-                                                กรุงเทพฯ เป็นเมืองน่าท่องเที่ยวที่สุดในโลก และเป็นเมืองจุดหมายปลายทางที่ได้รับความนิยมมากที่สุดในโลก
-                                            </a>
-                                        </div>
-                                        <div class="text-onbottom">
-                                            <div class="social-wrapper">
-                                                <ul class="d-flex align-items-center">
-                                                    <li class="facebook d-flex align-items-center not-hover">
-                                                        <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"><span class="color-secondary">5</span>
-                                                    </li>
-                                                    <li class="twitter d-flex align-items-center not-hover">
-                                                        <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon"><span class="color-secondary">5</span>
-                                                    </li>
-                                                    <li class="line d-flex align-items-center not-hover">
-                                                        <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"><span class="color-secondary">5</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
+                            </div>
+                            <div class="right">       
+                                <div class="text-view">
+                                    View : 340
+                                </div>                                         
+                                <div class="text-content">
+                                    <a href="/vote-detail">
+                                        กรุงเทพฯ เป็นเมืองน่าท่องเที่ยวที่สุดในโลก และเป็นเมืองจุดหมายปลายทางที่ได้รับความนิยมมากที่สุดในโลก
+                                    </a>
+                                </div>
+                                <div class="text-onbottom">
+                                    <div class="social-wrapper">
+                                        <ul class="d-flex align-items-center">
+                                            <li class="facebook d-flex align-items-center not-hover">
+                                                <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"><span class="color-secondary">5</span>
+                                            </li>
+                                            <li class="twitter d-flex align-items-center not-hover">
+                                                <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon"><span class="color-secondary">5</span>
+                                            </li>
+                                            <li class="line d-flex align-items-center not-hover">
+                                                <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"><span class="color-secondary">5</span>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="item -vote">
-                            <div class="row">
-                                <div class="col-sm-4 col-md-3 col-lg-3 col-xl-2">
-                                    <div class="left bg-color-primary">
-                                        <div class="d-flex flex-column text-score text-center">
-                                            <div class="num-vote">1.6K</div>
-                                            <div class="text-vote">ผู้โหวต</div>
-                                        </div>
-                                    </div>
+                            <div class="left">
+                                <div class="text-score">
+                                    <div class="num-vote">1.6K</div>
+                                    <div class="text-vote">ผู้โหวต</div>
                                 </div>
-                                <div class="col-sm-8 col-md-9 col-lg-9 col-xl-10">
-                                    <div class="right">       
-                                        <div class="text-ontop color-secondary">
-                                            View : 340
-                                        </div>                                         
-                                        <div class="text-content">
-                                            <a href="/vote-detail">
-                                                กรุงเทพฯ เป็นเมืองน่าท่องเที่ยวที่สุดในโลก และเป็นเมืองจุดหมายปลายทางที่ได้รับความนิยมมากที่สุดในโลก
-                                            </a>
-                                        </div>
-                                        <div class="text-onbottom">
-                                            <div class="social-wrapper">
-                                                <ul class="d-flex align-items-center">
-                                                    <li class="facebook d-flex align-items-center not-hover">
-                                                        <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"><span class="color-secondary">5</span>
-                                                    </li>
-                                                    <li class="twitter d-flex align-items-center not-hover">
-                                                        <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon"><span class="color-secondary">5</span>
-                                                    </li>
-                                                    <li class="line d-flex align-items-center not-hover">
-                                                        <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"><span class="color-secondary">5</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
+                            </div>
+                            <div class="right">       
+                                <div class="text-view">
+                                    View : 340
+                                </div>                                         
+                                <div class="text-content">
+                                    <a href="/vote-detail">
+                                        กรุงเทพฯ เป็นเมืองน่าท่องเที่ยวที่สุดในโลก และเป็นเมืองจุดหมายปลายทางที่ได้รับความนิยมมากที่สุดในโลก
+                                    </a>
+                                </div>
+                                <div class="text-onbottom">
+                                    <div class="social-wrapper">
+                                        <ul class="d-flex align-items-center">
+                                            <li class="facebook d-flex align-items-center not-hover">
+                                                <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"><span class="color-secondary">5</span>
+                                            </li>
+                                            <li class="twitter d-flex align-items-center not-hover">
+                                                <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon"><span class="color-secondary">5</span>
+                                            </li>
+                                            <li class="line d-flex align-items-center not-hover">
+                                                <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"><span class="color-secondary">5</span>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="item -vote">
-                            <div class="row">
-                                <div class="col-sm-4 col-md-3 col-lg-3 col-xl-2">
-                                    <div class="left bg-color-primary">
-                                        <div class="d-flex flex-column text-score text-center">
-                                            <div class="num-vote">1.6K</div>
-                                            <div class="text-vote">ผู้โหวต</div>
-                                        </div>
-                                    </div>
+                            <div class="left">
+                                <div class="text-score">
+                                    <div class="num-vote">1.6K</div>
+                                    <div class="text-vote">ผู้โหวต</div>
                                 </div>
-                                <div class="col-sm-8 col-md-9 col-lg-9 col-xl-10">
-                                    <div class="right">       
-                                        <div class="text-ontop color-secondary">
-                                            View : 340
-                                        </div>                                         
-                                        <div class="text-content">
-                                            <a href="/vote-detail">
-                                                กรุงเทพฯ เป็นเมืองน่าท่องเที่ยวที่สุดในโลก และเป็นเมืองจุดหมายปลายทางที่ได้รับความนิยมมากที่สุดในโลก
-                                            </a>
-                                        </div>
-                                        <div class="text-onbottom">
-                                            <div class="social-wrapper">
-                                                <ul class="d-flex align-items-center">
-                                                    <li class="facebook d-flex align-items-center not-hover">
-                                                        <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"><span class="color-secondary">5</span>
-                                                    </li>
-                                                    <li class="twitter d-flex align-items-center not-hover">
-                                                        <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon"><span class="color-secondary">5</span>
-                                                    </li>
-                                                    <li class="line d-flex align-items-center not-hover">
-                                                        <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"><span class="color-secondary">5</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
+                            </div>
+                            <div class="right">       
+                                <div class="text-view">
+                                    View : 340
+                                </div>                                         
+                                <div class="text-content">
+                                    <a href="/vote-detail">
+                                        กรุงเทพฯ เป็นเมืองน่าท่องเที่ยวที่สุดในโลก และเป็นเมืองจุดหมายปลายทางที่ได้รับความนิยมมากที่สุดในโลก
+                                    </a>
+                                </div>
+                                <div class="text-onbottom">
+                                    <div class="social-wrapper">
+                                        <ul class="d-flex align-items-center">
+                                            <li class="facebook d-flex align-items-center not-hover">
+                                                <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"><span class="color-secondary">5</span>
+                                            </li>
+                                            <li class="twitter d-flex align-items-center not-hover">
+                                                <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon"><span class="color-secondary">5</span>
+                                            </li>
+                                            <li class="line d-flex align-items-center not-hover">
+                                                <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"><span class="color-secondary">5</span>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>

@@ -468,11 +468,21 @@
                         font-weight: $font-regular;
                         padding: 10px 15px;
                         border-bottom: solid 5px transparent;
+
+                        .st0{
+                            fill: $color-primary;
+                            stroke: $color-primary;
+                        }
                         &:hover{
                             text-decoration: none;
                             color: $color-secondary;
                             border-color: $color-secondary;
                             background-color: white;
+
+                            .st0{
+                                fill: $color-secondary;
+                                stroke: $color-secondary;
+                            }
                         }
                     }
                     &.open{

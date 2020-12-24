@@ -96,13 +96,14 @@
     outline: none !important;
 
     &.btn-primary{
-        border: 1px solid $color-primary;
-        background-color: $color-primary;
-        color: white;
+        border: 1px solid $color-text;
+        background-color: transparent;
+        color: $color-primary;
 
         &:hover, &:focus, &:active{
-            border-color: $color-secondary !important;
-            background-color: $color-secondary !important;
+            color: white !important;
+            border-color: $color-primary !important;
+            background-color: $color-primary !important;
         }
     }
 

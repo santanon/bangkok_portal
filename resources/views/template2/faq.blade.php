@@ -39,7 +39,7 @@
                                 <div class="list-item">
                                     <div class="row">
                                         <div class="col-xl-6 col-lg-6 col-md-4 col-sm-4">
-                                            <a href="/faq" class="item">
+                                            <a href="/faq" class="item -faq">
                                                 <div class="row">
                                                     <div class="col-lg-12">
                                                         <div class="left">
@@ -63,7 +63,7 @@
                                             </a>
                                         </div>
                                         <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4">
-                                            <a href="/faq" class="item">
+                                            <a href="/faq" class="item -faq">
                                                 <div class="row">
                                                     <div class="col-lg-12">
                                                         <div class="left">
@@ -88,7 +88,7 @@
                                             
                                         </div>
                                         <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4">
-                                            <a href="/faq" class="item">
+                                            <a href="/faq" class="item -faq">
                                                 <div class="row">
                                                     <div class="col-lg-12">
                                                         <div class="left">

@@ -53,9 +53,9 @@
                 <li><a href="">ศูนย์ข้อมูลกรุงเทพมหานคร</a></li>
                 <li><a href="">หน่วยงานกรุงเทพมหานคร</a></li>
                 <li><a href="">ติดต่อสำนักงานเลขานุการสภา กทม.</a></li>
-                <li><a href="">หน้าหลัก</a></li>
+                <li><a href="home-2">หน้าหลัก</a></li>
                 <li><a href="">สภากรุงเทพมหานคร</a></li>
-                <li><a href="#">เกี่ยวกับหน่วยงาน</a>
+                <li><a href="about-2">เกี่ยวกับหน่วยงาน</a>
                     <ul class="menu-lv2">
                         <li><a href="#">วิสัยทัศน์</a></li>
                         <li><a href="#">ภารกิจหน้าที่</a></li>
@@ -73,9 +73,9 @@
                         <li><a href="">การบริหารเงินงบประมาณ</a></li>
                     </ul>
                 </li>
-                <li><a href="#">ข่าวสาร</a></li>
+                <li><a href="newss-2">ข่าวสาร</a></li>
                 <li><a href="#">การให้บริการ</a></li>
-                <li><a href="">ปฏิทินกิจกรรม</a></li>
+                <li><a href="calendar-2">ปฏิทินกิจกรรม</a></li>
                 <li><a href="">การรับฟังปัญหา/ข้อคิดเห็น</a></li>
             </ul>
         </div>
@@ -159,7 +159,7 @@
                             <form>
                                 <div class="input-custom">
                                     <div class="input-box">
-                                        <input type="text" name="" required="" placeholder="KEYWORD">
+                                        <input type="text" name="KEYWORD" required="" placeholder="KEYWORD">
                                         <!-- <label for="">KEYWORD</label> -->
                                     </div>
                                     <div class="btn-search">
@@ -195,16 +195,11 @@
                 <div class="menu-main-wrapper">
                     <ul class="sub-menu-main">
                         <li class="list">
-                            <a href="" title="หน้าหลัก">
-                                <!-- <img src="{{ asset('template2/assets/images/icons/icon-home-menu.png')}}" alt="icon home"> -->
-                                    <!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                        width="24px" height="24px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
-                                    <style type="text/css">
-                                        .st0{fill:none;stroke:#E16500;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
-                                    </style>
-                                    <path class="st0" d="M5.3,18.7v-7.2L12,5.3l6.7,6.3v7.2H5.3z"/>
-                                    </svg>
+                            <a href="home-2" title="หน้าหลัก">
+                                <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    width="24px" height="24px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+                                <path class="st0" d="M5.3,18.7v-7.2L12,5.3l6.7,6.3v7.2H5.3z"/>
+                                </svg>
                             </a>
                         </li>
                         <li class="list open">
@@ -297,34 +292,34 @@
                             </div>
                         </li>
                         <li class="list">
-                            <a href="about" title="เกี่ยวกับหน่วยงาน">เกี่ยวกับหน่วยงาน</a>
+                            <a href="about-2" title="เกี่ยวกับหน่วยงาน">เกี่ยวกับหน่วยงาน</a>
                         </li>
                         <li class="list">
-                            <a href="news" title="ข่าวสาร">ข่าวสาร</a>
+                            <a href="news-2" title="ข่าวสาร">ข่าวสาร</a>
                         </li>
                         <li class="list">
-                            <a href="album" title="ภาพกิจกรรม">ภาพกิจกรรม</a>
+                            <a href="album-2" title="ภาพกิจกรรม">ภาพกิจกรรม</a>
                         </li> 
                         <li class="list">
-                            <a href="video" title="วิดิทัศน์">วิดิทัศน์</a>
+                            <a href="video-2" title="วิดิทัศน์">วิดิทัศน์</a>
                         </li> 
                         <li class="list">
-                            <a href="download" title="ดาวน์โหลดคู่มือ">ดาวน์โหลดคู่มือ</a>
+                            <a href="download-2" title="ดาวน์โหลดคู่มือ">ดาวน์โหลดคู่มือ</a>
                         </li>
                         <li class="list">
-                            <a href="calendar" title="ปฏิทินกิจกรรม">ปฏิทินกิจกรรม</a>
+                            <a href="calendar-2" title="ปฏิทินกิจกรรม">ปฏิทินกิจกรรม</a>
                         </li>
                         <li class="list">
-                            <a href="questionnaire" title="การรับฟังปัญหา/ข้อคิดเห็น">การรับฟังปัญหา/ข้อคิดเห็น</a>
+                            <a href="questionnaire-2" title="การรับฟังปัญหา/ข้อคิดเห็น">การรับฟังปัญหา/ข้อคิดเห็น</a>
                         </li> 
                         <li class="list">
-                            <a href="faq" title="คำถามที่พบบ่อย">คำถามที่พบบ่อย</a>
+                            <a href="faq-2" title="คำถามที่พบบ่อย">คำถามที่พบบ่อย</a>
                         </li> 
                         <li class="list">
-                            <a href="contact" title="ติดต่อสอบถาม">ติดต่อสอบถาม</a>
+                            <a href="contact-2" title="ติดต่อสอบถาม">ติดต่อสอบถาม</a>
                         </li> 
-                        <div class="clearboth"></div>
                     </ul>
+                    <div class="clearboth"></div>
                 </div>
             </div>
         </div>
@@ -455,7 +450,7 @@
                                 <img src="{{ asset('template2/assets/images/icons/icon-bkk.png')}}" alt="icon">
                             </div>
                             <div class="text-bkk">
-                                <label>กรุงเทพมหานคร</label>
+                                <strong>กรุงเทพมหานคร</strong>
                                 Bangkok.go.th
                             </div>
                         </a>

@@ -1447,7 +1447,8 @@ $howManySteps: 100; //this needs to be even.
 
                 .group-vote{
                     .score-wrapper{
-                        padding: 20px;
+                        padding: 0;
+                        margin-bottom: 40px;
                         .text-score{
                             .num-vote{
                                 display: block;
@@ -1499,6 +1500,7 @@ $howManySteps: 100; //this needs to be even.
 
                         }
                     }
+
                     .question-choice{
                         background-image: url('../../assets/images/bg-vote.jpg');
                         background-position: 0 0;
@@ -1562,11 +1564,11 @@ $howManySteps: 100; //this needs to be even.
                             bottom: 20px;
                         }
                     }
+
                     .score-choice{
                         .text-score{
-                            padding: 20px;
-                            margin-bottom: 30px;
-                            border: 1px solid #cfd1d4;
+                            padding: 0;
+                            margin-bottom: 40px;
         
                             .num-vote{
                                 font-size: 3.6rem;
@@ -1576,16 +1578,34 @@ $howManySteps: 100; //this needs to be even.
                             .text-vote{
                                 font-size: 1.8rem;
                                 font-weight: 400;
+                                margin-bottom: 10px;
                             }
+                        }
+
+                        .percent-voter{
+                            padding: 6px 0;
+                        }
+
+                        .voter-label{
+                            font-size: 2.2rem;
+                            line-height: 2.2rem;
+                            color: #909090;
+                        }
+
+                        .percent-label{
+                            font-size: 2.2rem;
+                            line-height: 2.2rem;
+                            color: $color-primary;
                         }
                     }
 
                     &.detail-page{
                         .question-choice{
-                            background-color: transparent !important;
-                            margin-bottom: 25px;
+                            background-image: none !important;
             
                             .choice-question{
+                                padding-bottom: 30px;
+                                border-bottom: solid 2px #cfd1d4;
                                 ul{
                                     columns: 3 !important;
                                     -webkit-columns: 3 !important;
@@ -1599,9 +1619,6 @@ $howManySteps: 100; //this needs to be even.
                         }
             
                         .score-wrapper{
-                            margin-bottom: 30px;
-                            border: 1px solid #cfd1d4;
-            
                             .text-score{
                                 .text-vote{
                                     color: $color-text !important;

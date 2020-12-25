@@ -14655,7 +14655,8 @@ template {
       .group-section-content .section-content .inner-content .main-content .group-slide.group-list .list-item .item {
         margin-bottom: 30px; }
     .group-section-content .section-content .inner-content .main-content .group-vote .score-wrapper {
-      padding: 20px; }
+      padding: 0;
+      margin-bottom: 40px; }
       .group-section-content .section-content .inner-content .main-content .group-vote .score-wrapper .text-score .num-vote {
         display: block;
         width: 100%;
@@ -14740,29 +14741,38 @@ template {
         position: absolute;
         bottom: 20px; }
     .group-section-content .section-content .inner-content .main-content .group-vote .score-choice .text-score {
-      padding: 20px;
-      margin-bottom: 30px;
-      border: 1px solid #cfd1d4; }
+      padding: 0;
+      margin-bottom: 40px; }
       .group-section-content .section-content .inner-content .main-content .group-vote .score-choice .text-score .num-vote {
         font-size: 3.6rem;
         font-weight: 500; }
       .group-section-content .section-content .inner-content .main-content .group-vote .score-choice .text-score .text-vote {
         font-size: 1.8rem;
-        font-weight: 400; }
+        font-weight: 400;
+        margin-bottom: 10px; }
+    .group-section-content .section-content .inner-content .main-content .group-vote .score-choice .percent-voter {
+      padding: 6px 0; }
+    .group-section-content .section-content .inner-content .main-content .group-vote .score-choice .voter-label {
+      font-size: 2.2rem;
+      line-height: 2.2rem;
+      color: #909090; }
+    .group-section-content .section-content .inner-content .main-content .group-vote .score-choice .percent-label {
+      font-size: 2.2rem;
+      line-height: 2.2rem;
+      color: #f08220; }
     .group-section-content .section-content .inner-content .main-content .group-vote.detail-page .question-choice {
-      background-color: transparent !important;
-      margin-bottom: 25px; }
-      .group-section-content .section-content .inner-content .main-content .group-vote.detail-page .question-choice .choice-question ul {
-        columns: 3 !important;
-        -webkit-columns: 3 !important;
-        -moz-columns: 3 !important; }
-        .group-section-content .section-content .inner-content .main-content .group-vote.detail-page .question-choice .choice-question ul li {
-          margin-bottom: 35px !important; }
-    .group-section-content .section-content .inner-content .main-content .group-vote.detail-page .score-wrapper {
-      margin-bottom: 30px;
-      border: 1px solid #cfd1d4; }
-      .group-section-content .section-content .inner-content .main-content .group-vote.detail-page .score-wrapper .text-score .text-vote {
-        color: #525252 !important; }
+      background-image: none !important; }
+      .group-section-content .section-content .inner-content .main-content .group-vote.detail-page .question-choice .choice-question {
+        padding-bottom: 30px;
+        border-bottom: solid 2px #cfd1d4; }
+        .group-section-content .section-content .inner-content .main-content .group-vote.detail-page .question-choice .choice-question ul {
+          columns: 3 !important;
+          -webkit-columns: 3 !important;
+          -moz-columns: 3 !important; }
+          .group-section-content .section-content .inner-content .main-content .group-vote.detail-page .question-choice .choice-question ul li {
+            margin-bottom: 35px !important; }
+    .group-section-content .section-content .inner-content .main-content .group-vote.detail-page .score-wrapper .text-score .text-vote {
+      color: #525252 !important; }
     @media only screen and (max-width: 992px) {
       .group-section-content .section-content .inner-content .main-content .group-vote.detail-page .question-choice .choice-question ul {
         columns: 1 !important;

@@ -173,3 +173,10 @@ Route::any('/contact-2', function () {
 Route::any('/sitemap-2', function () {
     return view('sitemap-2');
 });
+
+
+
+//template4
+Route::any('/home-4', function () {
+    return view('home-4');
+});

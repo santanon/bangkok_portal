@@ -110,7 +110,7 @@
                                                     </div>
                                                     <div class="col-lg-6">
                                                         <div class="content">
-                                                            <div class="date">
+                                                            <div class="date color-secondary">
                                                                 <span>ข่าววันที่ : 5 พ.ย.</span>
                                                             </div>
                                                             <div class="desc-news">
@@ -164,7 +164,7 @@
                                                     </div>
                                                     <div class="col-lg-6">
                                                     <div class="content">
-                                                            <div class="date">
+                                                            <div class="date color-secondary">
                                                                 <span>ข่าววันที่ : 5 พ.ย.</span>
                                                             </div>
                                                             <div class="desc-news">

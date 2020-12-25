@@ -1075,6 +1075,13 @@ $howManySteps: 100; //this needs to be even.
                                 align-items: stretch;
                                 height: 186px;
                                 background-color: white;
+                                .left {
+                                    .icon-content {
+                                        svg{
+                                            stroke: $color-secondary;
+                                        }
+                                    }
+                                }
                                 .right{
                                     .text-content{
                                         padding: 15px 20px;
@@ -1452,9 +1459,10 @@ $howManySteps: 100; //this needs to be even.
                         .text-score{
                             .num-vote{
                                 display: block;
-                                width: 100%;
-                                height: auto;
+                                width: 160px;
+                                height: 140px;
                                 padding: 5rem 0;
+                                margin: 0 auto;
                                 font-size: 4rem;
                                 line-height: 4rem;
                                 font-weight: $font-medium;

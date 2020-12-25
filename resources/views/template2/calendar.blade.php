@@ -70,7 +70,7 @@
                                             <div class="item -calendar">
                                                 <div class="left">
                                                     <div class="text-content">2</div>
-                                                    <div class="text-onbottom">พ.ย.</div>
+                                                    <div class="text-onbottom">พฤศจิกายน</div>
                                                 </div>
                                                 <div class="right">
                                                     <div class="text-content">

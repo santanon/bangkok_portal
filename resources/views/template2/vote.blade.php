@@ -144,32 +144,122 @@
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-6 col-12">
                                 <div class="text-score">
-                                    <div class="num-vote color-primary">545</div>
                                     <div class="text-vote">พอใจมากที่สุด</div>
+                                    <div class="row">
+                                        <div class="col-sm-2">
+                                            <div class="voter-label">
+                                                524
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="percent-voter">
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-color-secondary" role="progressbar" style="width: 6%;" aria-valuenow="6" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <div class="percent-label">
+                                                6%
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6 col-12">
                                 <div class="text-score">
-                                    <div class="num-vote color-primary">224</div>
                                     <div class="text-vote">พอใจมาก</div>
+                                    <div class="row">
+                                        <div class="col-sm-2">
+                                            <div class="voter-label">
+                                                524
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="percent-voter">
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-color-secondary" role="progressbar" style="width: 6%;" aria-valuenow="6" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <div class="percent-label">
+                                                6%
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6 col-12">
                                 <div class="text-score">
-                                    <div class="num-vote color-primary">105</div>
                                     <div class="text-vote">ปานกลาง</div>
+                                    <div class="row">
+                                        <div class="col-sm-2">
+                                            <div class="voter-label">
+                                                213
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="percent-voter">
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-color-secondary" role="progressbar" style="width: 3%;" aria-valuenow="3" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <div class="percent-label">
+                                                3%
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6 col-12">
                                 <div class="text-score">
-                                    <div class="num-vote color-primary">105</div>
                                     <div class="text-vote">เฉยๆ</div>
+                                    <div class="row">
+                                        <div class="col-sm-2">
+                                            <div class="voter-label">
+                                                213
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="percent-voter">
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-color-secondary" role="progressbar" style="width: 3%;" aria-valuenow="3" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <div class="percent-label">
+                                                3%
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6 col-12">
                                 <div class="text-score">
-                                    <div class="num-vote color-primary">0</div>
                                     <div class="text-vote">ไม่น่าพอใจ</div>
+                                    <div class="row">
+                                        <div class="col-sm-2">
+                                            <div class="voter-label">
+                                                0
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="percent-voter">
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-color-secondary" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <div class="percent-label">
+                                                0%
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

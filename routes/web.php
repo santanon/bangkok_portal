@@ -154,6 +154,10 @@ Route::any('/vote-2', function () {
     return view('vote-main-2');
 });
 
+Route::any('/vote-detail-2', function () {
+    return view('vote-detail-2');
+});
+
 Route::any('/calendar-2', function () {
     return view('calendar-main-2');
 });

@@ -1,4 +1,4 @@
-<div class="bg-color-secondary">
+<div class="bg-color-primary">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-6">

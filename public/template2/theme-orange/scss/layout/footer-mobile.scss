@@ -1,9 +1,5 @@
 @include media-breakpoint-down(sm){
     #footer-wrapper{
-        &:before{
-            display: none;
-        }
-
         .group-footer{
             .title-footer{
                 .title{
@@ -15,12 +11,34 @@
                     margin-bottom: 1.5rem;
                 }
             }
+
+            &.left{
+                .group-content-footer{
+                    .icon-content{
+                        .icon-cover{
+                            background-color: $color-secondary;
+                        }
+                    }
+                    .text-content{
+                        margin-top: 1.5rem;
+                        a.link-tel{
+                            font-size: 2.8rem;
+                            line-height: 3.2rem;
+                            margin-top: 1.5rem;
+                            &:hover{
+                                text-decoration: none;
+                                color: $color-primary;
+                            }
+                        }
+                    }
+                }
+            }
     
             &.right{
                 .group-content-footer{
                     .icon-content{
                         .icon-cover{
-                            background-color: $color-primary;
+                            background-color: $color-secondary;
                         }
                     }
                     .text-content{

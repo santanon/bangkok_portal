@@ -12017,7 +12017,7 @@ template {
   color: #53954e; }
 
 .input-custom .select-wrapper .slc {
-  background-image: url("../assets/images/icons/icon-arrow-dropdown-green.svg"); }
+  background-image: url("../assets/images/icons/icon-arrow-dropdown.svg"); }
 
 .input-custom .custom-control .custom-control-input[type="radio"]:checked ~ .custom-control-label:before {
   border-color: #006600;
@@ -12941,7 +12941,7 @@ a.ui-button:active,
           -ms-flex-pack: center;
           justify-content: center; }
           #header-wrapper .header-lg .section-search-wrapper .group-search .close-search .icon-close {
-            background-image: url("../../assets/images/icons/icon-close.png");
+            background-image: url("../../../assets/images/icons/icon-close.png");
             width: 13px;
             height: 13px;
             background-repeat: no-repeat;

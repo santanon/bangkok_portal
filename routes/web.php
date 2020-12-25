@@ -46,6 +46,12 @@ Route::any('/', function () {
 Route::any('/home-2', function () {
     return view('home-2');
 });
+Route::any('/home-3', function () {
+    return view('home-3');
+});
+
+
+
 Route::any('/coverpage', function () {
     return view('coverpage');
 });

@@ -1,0 +1,190 @@
+.banner-wrapper{
+    position: relative;
+    margin-bottom: 30px;
+    .list-banner{
+        margin: 0;
+        padding: 0;
+        position: relative;
+        li{
+            list-style: none;
+            position: relative;
+            outline: none;
+            .bg-layer{
+                position: absolute;
+                background-image: url('../../assets/images/bg-layer-onbanner.png');
+                width: 100%;
+                height: 100%;
+                background-repeat: repeat;
+            }
+            .banner{
+                height: 550px;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .item-Onbanner-outer{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                z-index: 99;
+                top: 0;
+                .item-Onbanner-inner{
+                    display: table;
+                    width: 100%;
+                    height: 100%;
+                    padding: 0 10px;
+                    text-align: center;
+                    .list{
+                        display: table-cell;
+                        //vertical-align: middle;
+                        vertical-align: bottom;
+                        padding-bottom: 50px;
+                        .title-banner{
+                            color: #fff;
+                            font-size: 3.6rem;
+                            font-weight: $font-medium;
+                        }
+                        .desc-banner{
+                            color: #fff;
+                            font-size: 2.2rem;
+                            font-weight: $font-regular;
+                            margin-bottom: 50px;
+                        }
+                        .action-link{
+                            padding: 12px;
+                            display: inline-block;
+                            transition: all 0.3s ease;
+                            border: 2px solid #fff;
+                            border-radius: 100%;
+                            a{
+                                color: #fff;
+                                font-size: 16px;
+                                font-weight: $font-regular;
+                                
+                                &:hover{
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .slick-arrow{
+            position: absolute;
+            z-index: 8;
+            left: auto;
+            right: 30px;
+            top: 94%;
+            &.slick-prev{
+                text-indent: -9999px;
+                //left: auto;
+                //right: 0;
+                right: 110px;
+                //top: 40%;
+                //background-color: #585c5f;
+                //width: 50px;
+                //height: 70px;
+                background-image: url('../../assets/images/icons/icon-slide-prev.png');
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+            &.slick-next{
+                text-indent: -9999px;
+                //right: 0;
+                right: 30px;
+                //top: 54%;
+                //background-color: #585c5f;
+                //width: 50px;
+                ///height: 70px;
+                background-image: url('../../assets/images/icons/icon-slide-next.png');
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+            &.slick-disabled{
+                //background-color: #687074;
+                opacity: 0.5;
+                cursor: not-allowed;
+            }
+        }
+    }
+    .slick-dots{
+        bottom: 0;
+        li{
+            float: left;
+            //width: 50%;
+            height: 7px;
+            background-color: #d7d9db;
+            margin: 0;
+            transition: all 0.5s;
+            button{
+                display: none;
+            }
+        }
+        // li.slick-active Css infile color.scss
+    }
+
+    &.onlyOne{
+        ul{
+            margin: 0;
+            padding: 0;
+            position: relative;
+            li{
+                list-style: none;
+                position: relative;
+                outline: none;
+                .bg-layer{
+                    position: absolute;
+                    background-image: url('../../assets/images/bg-layer-onbanner.png');
+                    width: 100%;
+                    height: 100%;
+                    background-repeat: repeat;
+                }
+                .banner{
+                    height: 550px;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center center;
+                }
+                .item-Onbanner-outer{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 99;
+                    top: 0;
+                    .item-Onbanner-inner{
+                        display: table;
+                        width: 100%;
+                        height: 100%;
+                        padding: 0 10px;
+                        text-align: center;
+                        .list{
+                            display: table-cell;
+                            vertical-align: middle;
+                            .title-banner{
+                                color: #fff;
+                                font-size: 3.6rem;
+                                font-weight: $font-medium;
+                            }
+                            .desc-banner{
+                                color: #fff;
+                                font-size: 2.2rem;
+                                font-weight: $font-regular;
+                                margin-bottom: 50px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .slide-count-wrap{
+        position: absolute;
+        z-index: 8;
+        top: 92%;
+        left: auto;
+        right: 65px;
+        color: #fff;
+    }
+
+}

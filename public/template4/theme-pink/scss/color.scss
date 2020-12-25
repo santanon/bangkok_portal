@@ -1,0 +1,88 @@
+.bg-color-white{
+    background-color: #fff;
+}
+.bg-color-gray{
+    background-color: #525252;
+}
+
+.bg-color-primary{
+    background-color: $color-primary;
+    color: white;
+}
+
+.bg-color-primary-opacity{
+    background-color: rgba($color: $color-primary, $alpha: 0.8);
+}
+
+.bg-color-secondary{
+    background-color: $color-secondary;
+    color: white;
+}
+
+.bg-color-secondary-opacity{
+    background-color: rgba($color: $color-secondary, $alpha: 0.8);
+}
+
+.color-primary{
+    color: $color-primary !important;
+}
+
+.color-secondary{
+    color: $color-secondary !important;
+}
+
+.input-custom{
+    &.inp-calendar{
+        .icon-calendar{
+            i{
+                color: $color-secondary;
+            }
+        }
+    }
+    .select-wrapper{
+        .slc{
+            background-image: url('../assets/images/icons/icon-arrow-dropdown-green.svg');
+        }
+    }
+    .custom-control{
+        .custom-control-input[type="radio"]:checked ~ .custom-control-label{
+            &:before{
+                border-color: $color-primary;
+                background-color: $color-primary;
+            }
+        }
+        .custom-control-input[type="checkbox"]:checked ~ .custom-control-label{
+            &:before{
+                border-color: $color-primary;
+                background-color: $color-primary;
+            }
+        }
+    }
+    .btn-search{
+        .icon-search{
+            background-color: $color-primary;
+        }
+    }
+    .input-box{
+        input{
+            &:focus ~ label{
+                color: $color-primary;
+            }
+            &:valid ~ label{
+                color: $color-primary;
+            }
+        }
+    }
+}
+
+// Daterangpicker 
+.daterangepicker td.active, .daterangepicker td.active:hover{
+    background-color: $color-primary !important;
+}
+.daterangepicker td.active.end-date, .daterangepicker td.active.end-date:hover{
+    background-color: $color-primary !important;
+}
+.daterangepicker td.in-range{
+    background-color: $color-secondary !important;
+}
+

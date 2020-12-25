@@ -380,6 +380,10 @@ $howManySteps: 100; //this needs to be even.
                         background-color: #f8f8f8;
                         z-index: 1;
 
+                        &:hover{
+                            color: $color-primary;
+                        }
+
                         &:after{
                             position: absolute;
                             top: 11px;
@@ -433,6 +437,7 @@ $howManySteps: 100; //this needs to be even.
                             text-align: left;
                             background-color: #f8f8f8;
                             z-index: 1;
+                            
                         }
                         .desc{
                             margin: 0 0 20px;
@@ -625,6 +630,8 @@ $howManySteps: 100; //this needs to be even.
                             top: 50%;
                             transform: translate(-50%,-50%);
                             opacity: 0;
+                            background-color: rgba($color: $color-primary, $alpha: 0.8);
+
                             a{
                                 display: block;
                                 text-align: center;
@@ -749,6 +756,7 @@ $howManySteps: 100; //this needs to be even.
                             transform: translate(-50%,-50%);
                             transition: all 0.5s ease;
                             opacity: 0;
+                            background-color: rgba($color: $color-primary, $alpha: 0.8);
                             a{
                                 display: block;
                                 text-align: center;
@@ -1010,25 +1018,29 @@ $howManySteps: 100; //this needs to be even.
                                 .left{
                                     flex: 1 100%;
                                     height: 200px;
+
                                     .text-content{
                                         display: block;
-                                        height: 100%;
-                                        padding: 25px 20px 50px 20px;
-                                        font-size: 10rem;
-                                        line-height: 10rem;
+                                        height: 150px;
+                                        padding: 43px 20px;
+                                        font-size: 6rem;
+                                        line-height: 6.4rem;
+                                        font-weight: $font-medium;
+                                        color: white;
                                         text-align: left;
                                         background-color: $color-secondary;
                                     }
                                     .text-onbottom{
-                                        position: absolute;
+                                        position: relative;
                                         height: 50px;
-                                        padding: 5px 20px;
-                                        left: 0;
-                                        bottom: 0;
-                                        text-align: left;
-                                        font-size: 4rem;
-                                        line-height: 4.4rem;
+                                        padding: 1rem 20px;
+                                        left: auto;
+                                        bottom: auto;
+                                        font-size: 2.6rem;
+                                        line-height: 3rem;
+                                        font-weight: $font-light;
                                         color: white;
+                                        text-align: left;
                                         background-color: $color-primary;
                                     }
                                 }
@@ -2699,209 +2711,6 @@ $howManySteps: 100; //this needs to be even.
         position: relative;
         margin-bottom: 30px;
         overflow: hidden;
-        // .left{
-        //     position: relative;
-        //     height: 150px;
-        //     flex: 0 0 140px;
-        //     .text-content{
-        //         font-size: 3rem;
-        //         font-weight: $font-medium;
-        //         display: flex;
-        //         align-items: center;
-        //         justify-content: center;
-        //         height: 100%;
-        //         color: white;
-        //     }
-        //     .text-onbottom{
-        //         position: absolute;
-        //         bottom: 0;
-        //         width: 100%;
-        //         color: white;
-        //         text-align: center;
-        //         font-size: 2rem;
-        //         font-weight: $font-regular;
-        //     }
-
-        //     .icon-content{
-        //         display: flex;
-        //         align-items: center;
-        //         justify-content: center;
-        //         height: 100%;
-        //         svg {
-        //             width: 32px;
-        //             height: 32px;
-        //             fill:none;
-        //             stroke: #fff;
-        //             stroke-width:2;
-        //             stroke-miterlimit:10;
-        //             vertical-align: bottom;
-        //         }
-        //     }
-
-        //     .progress-content{
-        //         position: relative;
-        //         background-image: url('../../assets/images/bg-circle.png');
-        //         background-position: 0 0;
-        //         background-repeat: no-repeat;
-
-        //         .progress {
-        //             width: $size;
-        //             height: $size;
-        //             line-height: $size;
-        //             background: none;
-        //             margin: 0 auto;
-        //             box-shadow: none;
-        //             position: absolute;
-        //             top: -55px;
-        //             bottom: 0;
-        //             margin: auto;
-        //             left: 0;
-        //             right: 0;
-        //             &:after {
-        //                 content: "";
-        //                 width: 100%;
-        //                 height: 100%;
-        //                 border-radius: 50%;
-        //                 position: absolute;
-        //                 top: 0;
-        //                 left: 0;
-        //             }
-        //             > span {
-        //                 width: 50%;
-        //                 height: 100%;
-        //                 overflow: hidden;
-        //                 position: absolute;
-        //                 top: 0;
-        //                 z-index: 1;
-        //             }
-        //             .progress-left {
-        //                 left: 0;
-        //             }
-        //             .progress-bar {
-        //                 width: 100%;
-        //                 height: 100%;
-        //                 background: none;
-        //                 border-width: 7px;
-        //                 border-style: solid;
-        //                 position: absolute;
-        //                 top: 0;
-        //             }
-        //             .progress-left .progress-bar {
-        //                 left: 100%;
-        //                 border-top-right-radius: ($size/2);;
-        //                 border-bottom-right-radius: ($size/2);;
-        //                 border-left: 0;
-        //                 -webkit-transform-origin: center left;
-        //                 transform-origin: center left;
-        //                 //animation: loading-2 1.5s linear forwards 1.8s;
-        //             }
-        //             .progress-right {
-        //               right: 0;
-        //                 .progress-bar {
-        //                     left: -100%;
-        //                     border-top-left-radius: ($size/2);;
-        //                     border-bottom-left-radius: ($size/2);;
-        //                     border-right: 0;
-        //                     -webkit-transform-origin: center right;
-        //                     transform-origin: center right;
-        //                     //animation: loading-1 1.8s linear forwards;
-        //                 }
-        //             }
-        //             .progress-value {
-        //                 display: flex;
-        //                 border-radius: 50%;
-        //                 font-size: 2rem;
-        //                 line-height: 2rem;
-        //                 text-align: center;
-        //                 align-items: center;
-        //                 justify-content: center;
-        //                 height: 100%;
-        //                 width: 100%;
-        //                 color: white;
-        //                 font-weight: $font-regular;
-        //                 span {
-        //                     font-size: 1.2rem;
-        //                     text-transform: uppercase;
-        //                 }
-        //             }
-        //         }
-        //         .total-people{
-        //             position: absolute;
-        //             width: 100%;
-        //             font-size: 1.8rem;
-        //             line-height: 2rem;
-        //             font-weight: $font-regular;
-        //             color: white;
-        //             text-align: center;
-        //             bottom: 40px;
-        //         }
-        //     }
-
-        //     &.active{
-        //         .text-content{
-        //             color: white;
-        //         }
-        //     }
-        // }
-        // .right{
-        //     background-color: white;
-        //     position: relative;
-        //     height: 150px;
-        //     padding: 0 20px;
-        //     display: flex;
-        //     align-items: center;
-        //     .text-ontop{
-        //         display: block;
-        //         font-size: 1.4rem;
-        //         font-weight: $font-regular;
-        //         margin-bottom: 5px;
-        //     }
-        //     .text-content{
-        //         display: -webkit-box;
-        //         -webkit-line-clamp: 3;
-        //         -webkit-box-orient: vertical;
-        //         overflow: hidden;
-        //         text-overflow: ellipsis;
-        //         a{
-        //             font-size: 2rem;
-        //             font-weight: $font-regular;
-        //             line-height: 2.4rem;
-        //             color: $color-text;
-        //             //opacity: 0.7;
-        //             transition: all 0.3s ease;
-        //             &:hover{
-        //                 text-decoration: none;
-        //             }
-        //         }
-        //     }
-        //     .text-onbottom{
-        //         position: absolute;
-        //         bottom: 0;
-        //         width: 100%;
-        //         color: $color-text;
-        //         font-size: 1.6rem;
-        //         font-weight: $font-regular;
-        //         i{
-        //             font-size: 1.4rem;
-        //             margin-right: 5px;
-        //         }
-
-        //         &.-link{
-        //             a{
-        //                 color: white;
-        //                 font-size: 1.6rem;
-        //                 padding: 3px 10px;
-        //                 display: inline-block;
-        //                 &:hover{
-        //                     text-decoration: none;
-        //                 }
-        //             }
-        //         }
-        //     }
-        // }
-        // .bottom{
-        //     margin-top: 10px;
-        // }
 
         &.album{
             position: relative;

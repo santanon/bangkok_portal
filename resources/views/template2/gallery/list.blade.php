@@ -33,7 +33,7 @@
                 <div class="gallery-template">
                     <div class="row">
                         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                            <div class="item -album hilight">
+                            <div class="item album hilight">
                                 <div class="group-mange-section">
                                     <div class="manage-tools">
                                         <ul>
@@ -74,7 +74,7 @@
                         </div>
 
                         <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3">
-                            <div class="item -album" >
+                            <div class="item album" >
                                 <div class="group-mange-section">
                                     <div class="manage-tools">
                                         <ul>
@@ -109,7 +109,7 @@
                         </div>
 
                         <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3">
-                            <div class="item -album" >
+                            <div class="item album" >
                                 <div class="group-mange-section">
                                     <div class="manage-tools">
                                         <ul>
@@ -144,7 +144,7 @@
                         </div>
 
                         <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3">
-                            <div class="item -album" >
+                            <div class="item album" >
                                 <div class="group-mange-section">
                                     <div class="manage-tools">
                                         <ul>
@@ -179,7 +179,7 @@
                         </div>
 
                         <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3">
-                            <div class="item -album" >
+                            <div class="item album" >
                                 <div class="group-mange-section">
                                     <div class="manage-tools">
                                         <ul>
@@ -214,7 +214,7 @@
                         </div>
 
                         <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3">
-                            <div class="item -album" >
+                            <div class="item album" >
                                 <div class="group-mange-section">
                                     <div class="manage-tools">
                                         <ul>
@@ -249,7 +249,7 @@
                         </div>
                         
                         <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3">
-                            <div class="item -album" >
+                            <div class="item album" >
                                 <div class="group-mange-section">
                                     <div class="manage-tools">
                                         <ul>
@@ -284,7 +284,7 @@
                         </div>
 
                         <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3">
-                            <div class="item -album" >
+                            <div class="item album" >
                                 <div class="group-mange-section">
                                     <div class="manage-tools">
                                         <ul>
@@ -319,7 +319,7 @@
                         </div>
                         
                         <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3">
-                            <div class="item -album" >
+                            <div class="item album" >
                                 <div class="group-mange-section">
                                     <div class="manage-tools">
                                         <ul>
@@ -354,7 +354,7 @@
                         </div>
 
                         <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3">
-                            <div class="item -album" >
+                            <div class="item album" >
                                 <div class="group-mange-section">
                                     <div class="manage-tools">
                                         <ul>
@@ -389,7 +389,7 @@
                         </div>
                         
                         <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3">
-                            <div class="item -album" >
+                            <div class="item album" >
                                 <div class="group-mange-section">
                                     <div class="manage-tools">
                                         <ul>

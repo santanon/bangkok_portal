@@ -13288,14 +13288,19 @@ template {
 
 #footer-wrapper {
   position: relative; }
-  #footer-wrapper:before {
-    position: absolute;
-    width: 50%;
-    height: 100%;
-    right: 0;
-    top: 0;
-    content: '';
-    background-color: #f08220; }
+  #footer-wrapper .bg-color-primary {
+    position: relative; }
+    #footer-wrapper .bg-color-primary:before {
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      content: '';
+      background-color: #e16500; }
+    @media (max-width: 767.98px) {
+      #footer-wrapper .bg-color-primary:before {
+        display: none; } }
   #footer-wrapper .group-footer {
     padding: 20px 0; }
     #footer-wrapper .group-footer .title-footer .title {
@@ -13379,7 +13384,7 @@ template {
           transition: all 0.3s ease; }
           #footer-wrapper .group-footer.right .group-content-footer .text-content a.link-tel:hover {
             text-decoration: none;
-            color: #f08220; }
+            color: #e16500; }
     #footer-wrapper .group-footer .social-wrapper {
       margin-top: 30px; }
       #footer-wrapper .group-footer .social-wrapper ul li {
@@ -13413,6 +13418,7 @@ template {
             padding-right: 0; }
           #footer-wrapper .group-footer .footer-bottom .sitemap ul li a {
             font-size: 1.6rem;
+            line-height: 2rem;
             font-weight: 400;
             color: white;
             opacity: 0.7;
@@ -13424,6 +13430,7 @@ template {
               text-decoration: none; }
       #footer-wrapper .group-footer .footer-bottom .copyright {
         font-size: 1.6rem;
+        line-height: 2rem;
         font-weight: 400;
         color: white; }
 
@@ -13448,16 +13455,25 @@ template {
     opacity: 1.0; }
 
 @media (max-width: 767.98px) {
-  #footer-wrapper:before {
-    display: none; }
   #footer-wrapper .group-footer .title-footer .title {
     font-size: 2.8rem;
     line-height: 3.2rem;
     margin-bottom: 1.5rem; }
   #footer-wrapper .group-footer .title-footer .desc {
     margin-bottom: 1.5rem; }
+  #footer-wrapper .group-footer.left .group-content-footer .icon-content .icon-cover {
+    background-color: #e16500; }
+  #footer-wrapper .group-footer.left .group-content-footer .text-content {
+    margin-top: 1.5rem; }
+    #footer-wrapper .group-footer.left .group-content-footer .text-content a.link-tel {
+      font-size: 2.8rem;
+      line-height: 3.2rem;
+      margin-top: 1.5rem; }
+      #footer-wrapper .group-footer.left .group-content-footer .text-content a.link-tel:hover {
+        text-decoration: none;
+        color: #f08220; }
   #footer-wrapper .group-footer.right .group-content-footer .icon-content .icon-cover {
-    background-color: #f08220; }
+    background-color: #e16500; }
   #footer-wrapper .group-footer.right .group-content-footer .text-content {
     margin-top: 1.5rem; }
     #footer-wrapper .group-footer.right .group-content-footer .text-content a.link-tel {
@@ -13819,6 +13835,8 @@ template {
           text-align: center;
           background-color: #f8f8f8;
           z-index: 1; }
+          .group-section-content .section-content .inner-content .top-content .group-text .title:hover {
+            color: #f08220; }
           .group-section-content .section-content .inner-content .top-content .group-text .title:after {
             position: absolute;
             top: 11px;
@@ -14006,7 +14024,8 @@ template {
           -webkit-transform: translate(-50%, -50%);
           -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-          opacity: 0; }
+          opacity: 0;
+          background-color: rgba(240, 130, 32, 0.8); }
           .group-section-content .section-content .inner-content .main-content .main-news .img-news .read-news-outer a {
             display: block;
             text-align: center;
@@ -14111,7 +14130,8 @@ template {
           -webkit-transition: all 0.5s ease;
           -o-transition: all 0.5s ease;
           transition: all 0.5s ease;
-          opacity: 0; }
+          opacity: 0;
+          background-color: rgba(240, 130, 32, 0.8); }
           .group-section-content .section-content .inner-content .main-content .sub-news .img-news .read-news-outer a {
             display: block;
             text-align: center;
@@ -14327,22 +14347,25 @@ template {
               height: 200px; }
               .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item.-calendar .left .text-content {
                 display: block;
-                height: 100%;
-                padding: 25px 20px 50px 20px;
-                font-size: 10rem;
-                line-height: 10rem;
+                height: 150px;
+                padding: 43px 20px;
+                font-size: 6rem;
+                line-height: 6.4rem;
+                font-weight: 500;
+                color: white;
                 text-align: left;
                 background-color: #e16500; }
               .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item.-calendar .left .text-onbottom {
-                position: absolute;
+                position: relative;
                 height: 50px;
-                padding: 5px 20px;
-                left: 0;
-                bottom: 0;
-                text-align: left;
-                font-size: 4rem;
-                line-height: 4.4rem;
+                padding: 1rem 20px;
+                left: auto;
+                bottom: auto;
+                font-size: 2.6rem;
+                line-height: 3rem;
+                font-weight: 300;
                 color: white;
+                text-align: left;
                 background-color: #f08220; }
             .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item.-calendar .right {
               -webkit-box-flex: 1;
@@ -17797,7 +17820,7 @@ Due to the split circle of progress-left and progress right, we must use the ani
       .banner-wrapper .list-banner li .item-Onbanner-outer {
         position: absolute;
         width: 60%;
-        height: 25rem;
+        height: 30rem;
         z-index: 99;
         right: 0;
         bottom: 0;
@@ -17812,17 +17835,21 @@ Due to the split circle of progress-left and progress right, we must use the ani
             display: table-cell;
             vertical-align: middle; }
             .banner-wrapper .list-banner li .item-Onbanner-outer .item-Onbanner-inner .list .title-banner {
+              margin-bottom: 20px;
               color: #e16500;
               font-size: 3.6rem;
+              line-height: 4rem;
               font-weight: 500; }
             .banner-wrapper .list-banner li .item-Onbanner-outer .item-Onbanner-inner .list .desc-banner {
+              margin-bottom: 20px;
               color: #525252;
               font-size: 2.2rem;
-              font-weight: 400;
-              margin-bottom: 25px; }
+              line-height: 2.6rem;
+              font-weight: 400; }
             .banner-wrapper .list-banner li .item-Onbanner-outer .item-Onbanner-inner .list .action-link {
               padding: 10px 15px;
               display: inline-block;
+              background-color: #e16500;
               -webkit-transition: all 0.3s ease;
               -o-transition: all 0.3s ease;
               transition: all 0.3s ease; }
@@ -17896,6 +17923,8 @@ Due to the split circle of progress-left and progress right, we must use the ani
       transition: all 0.5s; }
       .banner-wrapper .slick-dots li button {
         display: none; }
+      .banner-wrapper .slick-dots li.slick-active {
+        background-color: #f08220; }
     @media (max-width: 991.98px) {
       .banner-wrapper .slick-dots {
         left: 0;

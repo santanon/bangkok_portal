@@ -29,10 +29,21 @@ function sfi(title,url)
     </header>
     
     <div id="site-content">
-        
-        <div class="banner-wrapper">
-            @include('template4/main-slide')
+        <div class="group-section-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-10">
+                        <div class="banner-wrapper">
+                            @include('template4/main-slide')
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        @include('template4/vdo')
+                    </div>
+                </div>
+            </div>
         </div>
+        
 
         <div class="group-section-content" id="manage_dragdrop">
             @include('template4/news')
@@ -42,8 +53,6 @@ function sfi(title,url)
             @include('template4/faq')
 
             @include('template4/album')
-
-            @include('template4/vdo')
 
             @include('template4/download')
 
@@ -351,6 +360,9 @@ function sfi(title,url)
                 dynamicEl: [{
                     src: 'https://youtu.be/YD_gvR234qg',
                     thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-1.jpg'
+                },{
+                    src: 'https://youtu.be/YD_gvR234qg',
+                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-1.jpg'
                 }],
                 slideEndAnimatoin: false,
                 loop: false,
@@ -381,87 +393,5 @@ function sfi(title,url)
         });
 </script>
 
-
-<link rel="stylesheet" href="{{ asset('template4/theme-pink/css/calendar/main.min.css')}}">
-<script type="text/javascript" src="{{ asset('template4/js/calendar/main.min.js') }}"></script>
-<script>
-    // Calendar
-    document.addEventListener('DOMContentLoaded', function() {
-        var calendarEl = document.getElementById('calendar');
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-            initialView: 'dayGridMonth',
-            headerToolbar: false,
-            locale: 'th',
-            dayMaxEventRows: true,
-            events: [
-                {
-                    "title": "All Day Event",
-                    "start": "2020-11-23",
-                    //"color": "#E76F0E",
-                    "url": "/calendar-detail"
-                },
-                {
-                    "title": "บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือasdalk k;lkdpa sk",
-                    "start": "2020-11-23",
-                    //"color": "#8CB81F",
-                    "url": "/calendar-detail"
-                },
-                {
-                    "title": "บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือ บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือ",
-                    "start": "2020-11-23",
-                    //"color": "#8CB81F",
-                    "url": "/calendar-detail"
-                },
-                {
-                    "title": "บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือasdalk k;lkdpa sk",
-                    "start": "2020-11-23",
-                    //"color": "#8CB81F",
-                    "url": "/calendar-detail"
-                },
-                {
-                    "title": "บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือasdalk k;lkdpa sk",
-                    "start": "2020-11-23",
-                    //"color": "#8CB81F",
-                    "url": "/calendar-detail"
-                },
-            ],
-
-        });
-        calendar.render();
-
-        document.getElementById('prev').addEventListener('click', function () {
-            calendar.prev(); // call method
-
-            var view = calendar.view;
-            var v_title = view.title;
-            //console.log(v_title);
-            var c_month = (view.title).split(' ');
-            var c_year = (view.title).split(' ');
-            $('.month-title').html(c_month[0]);
-            $('.year-title').html(c_year[1]);
-
-        });
-
-        document.getElementById('next').addEventListener('click', function () {
-            calendar.next(); // call method
-
-            var view = calendar.view;
-            var v_title = view.title;
-            //console.log(v_title);
-            var c_month = (view.title).split(' ');
-            var c_year = (view.title).split(' ');
-            $('.month-title').html(c_month[0]);
-            $('.year-title').html(c_year[1]);
-        });
-
-        // default
-        var view = calendar.view;
-        var v_title = view.title;
-        var c_month = (view.title).split(' ');
-        var c_year = (view.title).split(' ');
-        $('.month-title').html(c_month[0]);
-        $('.year-title').html(c_year[1]);
-    });
-</script>
 @endsection
 

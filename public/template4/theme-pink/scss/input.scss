@@ -185,15 +185,11 @@
             margin-top: 0;
         }
     }
-
-    .text-inline{
-        color: $color-secondary;
-    }
 }
 
 .group-form-section{
     .input-custom{
-        margin: 20px auto;
+        margin-bottom: 30px;
     }
 }
 
@@ -308,16 +304,45 @@
 }
 
 
-
-
-
-
-.daterangepicker td.start-date{
-    border-radius: 0 !important;
+.ui-datepicker{
+    z-index: 99 !important;
 }
-.daterangepicker td.end-date{
-    border-radius: 0 !important;
+.ui-widget button, .ui-widget input, .ui-widget select, .ui-widget textarea{
+    font-family: 'Kanit' !important;
 }
+.ui-datepicker-calendar{
+    thead{
+        tr{
+            th{
+                span{
+                    font-family: 'Kanit';
+                }
+            }
+        }
+    } 
+    tbody{
+        tr{
+            td{
+                a{
+                    font-family: 'Kanit';
+                }
+            }
+        }
+    }
+}
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover{
+    background-color: $color-primary !important;
+    border: 1px solid $color-primary !important;
+}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight{
+    color: #fff !important;
+}
+
 
 @media only screen and (max-width: 992px) {
     .input-custom{
@@ -326,3 +351,5 @@
         }
     }
 }
+
+

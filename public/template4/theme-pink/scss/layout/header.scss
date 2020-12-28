@@ -164,59 +164,238 @@
     // background-color: #fff;
     .header-lg{
         display: block;
+
+        .menu-left-top{
+            float: left;
+            background-color: #f8f8f8;
+        }
+
         .menu-right-top{
-            margin-bottom: 30px;
+            float: left;
+            background-color: #f8f8f8;
         }
-        .logo{
-            // max-width: 300px;
-            margin: auto;
-            // height: 100%;
-            // display: flex;
-            // align-items: center;
-            padding: 23px 15px;
-            background-color: white;
-            // img{
-            //     width: 100%;
-            // }
+
+        .menu-right-middle{
+            display: flex;
+            align-items: stretch;
+            justify-content: flex-end;
         }
-        .account-wrapper{
-            position: relative;
-            padding: 15px 0 25px 0;
-            ul{
-                margin: 0;
-                padding: 0;
-                li{
+        .logo-wrapper{
+            height: 110px;
+            .logo{
+                //max-width: 300px;
+                margin: auto;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                padding: 15px;
+                background-color: white;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        
+        .tools-web{
+            display: flex;
+            background-color: #f8f8f8;
+            .social-wrapper{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 25px;
+
+                div{
+                    width: 35px;
+                    height: 35px;
+                    margin: 0 10px;
+
+                    a{
+                        display: block;
+                        width: 35px;
+                        height: 35px;
+                        transition: all 0.3s ease;
+
+                        img{
+                            width: 25px;
+                            height: 25px;
+                            margin: 5px;
+                        }
+
+                        &:hover{
+                            background-color: $color-primary;
+                            text-decoration: none;
+                            border-radius: 50% 10%;
+                        }
+                    }
+                }
+            }
+
+            .sizefonts-wrapper{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 5px 25px;
+                .reduce{
+                    background-image: url('../../assets/images/icons/icon-reduce-sizefont.png');
+                    width: 22px;
+                    height: 13px;
+                    background-repeat: no-repeat;
+                    background-position: top center;
+                    cursor: pointer;
+                    transition: all 0.3s;
+                    &:hover{
+                        background-position: bottom center;
+                    }
+                    &.active{
+                        background-position: bottom center;
+                    }
+                }
+                .normal{
+                    padding-left: 23px;
+                    padding-right: 23px;
+                    background-image: url('../../assets/images/icons/icon-normal-sizefont.png');
+                    width: 22px;
+                    height: 13px;
+                    background-repeat: no-repeat;
+                    background-position: top center;
+                    cursor: pointer;
+                    transition: all 0.3s;
+                    &:hover{
+                        background-position: bottom center;
+                    }
+                    &.active{
+                        background-position: bottom center;
+                    }
+                }
+                .increase{
+                    background-image: url('../../assets/images/icons/icon-increase-sizefont.png');
+                    width: 22px;
+                    height: 13px;
+                    background-repeat: no-repeat;
+                    background-position: top center;
+                    cursor: pointer;
+                    transition: all 0.3s;
+                    &:hover{
+                        background-position: bottom center;
+                    }
+                    &.active{
+                        background-position: bottom center;
+                    }
+                }
+            }
+            
+            .lang-site{
+                position: relative;
+                display: flex;
+                align-items: center;
+                padding: 5px 23px;
+                cursor: pointer;
+                span{
+                    color: $color-text;
+                    font-size: 1.6rem;
+                    font-weight: $font-light;
+                }
+                i{
+                    color: $color-text;
+                    font-size: 1.4rem;
+                    position: relative;
+                    right: -5px;
+                    top: -2px;
+                    transform: rotate(180deg);
+                    -webkit-transform: rotate(180deg);
+                    transition: all 0.3s ease;
+                }
+                .multi-lang{
+                    display: none;
                     list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    position: absolute;
+                    left: 0;
+                    top: 100%;
+                    width: 100%;
+                    z-index: 9;
+                    background-color: $color-secondary;
+                    li{
+                        // border: none;
+                        // width: 100%;
+                        // display: flex;
+                        // align-items: center;
+                        display: block;
+                        width: 100%;
+                        height: auto;
+                        padding: 0;
+                        margin: 0 auto;
+                        a{
+                            display: block;
+                            padding: 10px;
+                            font-weight: $font-light;
+                            font-size: 1.6rem;
+                            line-height: 2rem;
+                            color: white;
+                            text-align: center;
+                            &:hover{
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+                &.active{
+                    i{
+                        transform: rotate(0deg);
+                        -webkit-transform: rotate(0deg);
+                    }
+                }
+            }
+
+            .bar-menu{
+                background-color: $color-secondary;
+                height: 70px;
+                padding: 20px 25px;
+                cursor: pointer;
+                .icon-menu{
+                    font-size: 2.2rem;
+                    line-height: 3rem;
+                    color: white;
+                    i{
+                        font-size: 2.2rem;
+                        line-height: 3rem;
+                    }
+                }
+                &:hover{
+                    background-color: $color-primary;
+                }
+            }
+        }
+
+        .account-wrapper{
+            display: flex;
+            align-items: center;
+            margin-right: 15px;
+            
+            ul{
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                
+                li{
+                    
                     display: inline-block;
                     vertical-align: middle;
-                    padding: 10px 8px;
-                    min-height: 35px;
+                    padding: 0;
+                    margin: 0 5px 0 0;
+                    min-height: 34px;
+
                     a{
+                        display: flex;
+                        align-items: center;
                         color: $color-text;
                         font-size: 1.6rem;
+                        line-height: 2rem;
                         font-weight: $font-light;
-                        opacity: 0.7;
                         transition: all 0.3s ease;
-                        .icon-register{
-                            display: inline-block;
-                            background-image: url('../assets/images/icons/icon-register.png');
-                            width: 16px;
-                            height: 17px;
-                            background-repeat: no-repeat;
-                            background-position: top center;
-                            transition: all 0.3s ease;
-                            margin-left: 5px;
-                        }
-                        .icon-signin{
-                            display: inline-block;
-                            background-image: url('../assets/images/icons/icon-signin.png');
-                            width: 16px;
-                            height: 17px;
-                            background-repeat: no-repeat;
-                            background-position: top center;
-                            transition: all 0.3s ease;
-                            margin-left: 5px;
-                        }
+                        
                         &:hover{
                             text-decoration: none;
                             opacity: 1;
@@ -228,6 +407,42 @@
                             }
                         }
                     }
+
+                    .link-wrap{
+                        margin: 0 10px 0 0;
+                    }
+
+                    .skew-wrap{
+                        display: flex;
+                        align-items: center;
+                        text-align: center;
+                        width: 55px;
+                        height: 45px;
+                        background-color: #cfd1d4;
+                        transform: skew(-14deg);
+
+                        .icon-register{
+                            // display: inline-block;
+                            background-image: url('../../assets/images/icons/icon-register.png');
+                            width: 100%;
+                            height: 16px;
+                            background-repeat: no-repeat;
+                            background-position: top center;
+                            transition: all 0.3s ease;
+                            transform: skew(14deg);
+                        }
+                        .icon-signin{
+                            // display: inline-block;
+                            background-image: url('../../assets/images/icons/icon-signin.png');
+                            width: 100%;
+                            height: 16px;
+                            background-repeat: no-repeat;
+                            background-position: top center;
+                            transition: all 0.3s ease;
+                            transform: skew(14deg);
+                        }
+                    }
+
                     &:first-child{
                         border-right: 1px solid #fff;
                         padding-left: 0;
@@ -235,179 +450,39 @@
                 }
             }
         }
-        .tools-web{
+
+        .search-site{
             display: flex;
-            padding: 15px 0 25px 0;
-            .social-wrapper{
-                ul{
-                    li{
-                        border: none;
-                        margin-right: 0;
-                        width: 35px;
-                        height: 35px;
-                        a{
-                            width: 35px;
-                            height: 35px;
-                        }
-                        &:first-child{
-                            border-left: none;
-                        }
-                    }
+            align-items: center;
+            margin: 0 15px 0 0;
+
+            .icon-wrap{
+                display: flex;
+                align-items: center;
+                width: 55px;
+                height: 45px;
+                padding: 10px;
+                background-color: #cfd1d4;
+                transform: skew(-14deg);
+                cursor: pointer;
+            }
+            .icon-search{
+                background-image: url('../../assets/images/icons/icon-search.png');
+                width: 100%;
+                height: 15px;
+                background-repeat: no-repeat;
+                background-position: top center;
+                transition: all 0.3s ease;
+                transform: skew(14deg);
+            }
+            &:hover{
+                .icon-search{
+                    background-position: bottom center;
                 }
             }
-            ul{
-                margin: 0;
-                padding: 0;
-                li{
-                    list-style: none;
-                    border-right: 1px solid #fff;
-                    float: left;
-                    display: flex;
-                    min-height: 35px;
-                    &:first-child{
-                        border-left: 1px solid #fff;
-                    }
-                    &:last-child{
-                        border-right: none;
-                    }
-                }
-                .search-site{
-                    cursor: pointer;
-                    display: flex;
-                    align-items: center;
-                    padding: 5px 23px;
-                    .icon-search{
-                        background-image: url('../../assets/images/icons/icon-search.png');
-                        width: 15px;
-                        height: 15px;
-                        background-repeat: no-repeat;
-                        background-position: top center;
-                        transition: all 0.3s ease;
-                    }
-                    &:hover{
-                        .icon-search{
-                            background-position: bottom center;
-                        }
-                    }
-                    &.active{
-                        .icon-search{
-                            background-position: bottom center;
-                        }
-                    }
-                }
-                .sizefonts-wrapper{
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    padding: 5px 23px;
-                    .reduce{
-                        background-image: url('../../assets/images/icons/icon-reduce-sizefont.png');
-                        width: 22px;
-                        height: 13px;
-                        background-repeat: no-repeat;
-                        background-position: top center;
-                        cursor: pointer;
-                        transition: all 0.3s;
-                        &:hover{
-                            background-position: bottom center;
-                        }
-                        &.active{
-                            background-position: bottom center;
-                        }
-                    }
-                    .normal{
-                        padding-left: 23px;
-                        padding-right: 23px;
-                        background-image: url('../../assets/images/icons/icon-normal-sizefont.png');
-                        width: 22px;
-                        height: 13px;
-                        background-repeat: no-repeat;
-                        background-position: top center;
-                        cursor: pointer;
-                        transition: all 0.3s;
-                        &:hover{
-                            background-position: bottom center;
-                        }
-                        &.active{
-                            background-position: bottom center;
-                        }
-                    }
-                    .increase{
-                        background-image: url('../../assets/images/icons/icon-increase-sizefont.png');
-                        width: 22px;
-                        height: 13px;
-                        background-repeat: no-repeat;
-                        background-position: top center;
-                        cursor: pointer;
-                        transition: all 0.3s;
-                        &:hover{
-                            background-position: bottom center;
-                        }
-                        &.active{
-                            background-position: bottom center;
-                        }
-                    }
-                }
-                .lang-site{
-                    // padding: 5px 23px;
-                    position: relative;
-                    min-width: 45px;
-                    height: auto;
-                    padding: 10.5px 10px;
-                    cursor: pointer;
-                    background-color: $color-primary;
-                    span{
-                        color: #fff;
-                        font-size: 1.6rem;
-                        font-weight: $font-light;
-                    }
-                    i{
-                        color: #fff;
-                        font-size: 1.4rem;
-                        position: relative;
-                        right: -5px;
-                        top: -2px;
-                        transform: rotate(180deg);
-                        -webkit-transform: rotate(180deg);
-                        transition: all 0.3s ease;
-                    }
-                    .multi-lang{
-                        display: none;
-                        margin: 0;
-                        padding: 0;
-                        position: absolute;
-                        left: 0;
-                        top: 100%;
-                        width: 100%;
-                        z-index: 9;
-                        li{
-                            list-style: none;
-                            border: none;
-                            width: 100%;
-                            display: flex;
-                            align-items: center;
-                            a{
-                                color: #fff;
-                                font-size:1.6rem;
-                                font-weight: $font-light;
-                                width: 100%;
-                                height: auto;
-                                padding: 10.5px 10px;
-                                display: block;
-                                text-align: center;
-                                &:hover{
-                                    text-decoration: none;
-                                    background-color: $color-secondary;
-                                }
-                            }
-                        }
-                    }
-                    &.active{
-                        i{
-                            transform: rotate(0deg);
-                            -webkit-transform: rotate(0deg);
-                        }
-                    }
+            &.active{
+                .icon-search{
+                    background-position: bottom center;
                 }
             }
         }
@@ -418,31 +493,26 @@
         }
         .menu-top-wrapper{
             position: relative;
-            padding: 0;
-            margin-bottom: 30px;
-            border-top: solid 1px #cfd1d4;
-            
             ul{
                 list-style: none;
                 margin: 0;
                 padding: 0;
                 li{
-                    width: 190px;
-                    padding: 18px 25px 8px 20px;
-                    // margin-right: 20px;
-                    // margin-bottom: 8px;
+                    width: auto;
+                    padding: 0;
+                    margin: 0;
                     display: inline-block;
-                    vertical-align: top;
-                    border-right: solid 1px #cfd1d4;
-
+                    vertical-align: middle;
                     a{
                         display: block;
+                        padding: 25px 15px;
                         color: #525252;
                         opacity: 0.7;
                         transition: all 0.3s ease;
-                        font-size: 1.6rem;
+                        font-size:1.6rem;
                         font-weight: $font-regular;
                         line-height: 2rem;
+
                         &:hover{
                             text-decoration: none;
                             opacity: 1;
@@ -456,33 +526,21 @@
         .menu-main-wrapper{
             position: relative;
             .sub-menu-main{
-                list-style: none;
                 margin: 0;
                 padding: 0;
                 li{
+                    list-style: none;
                     float: left;
+                    // display: inline-block;
+                    // vertical-align: middle;
                     a{
                         display: block;
-                        color: $color-primary;
+                        color: #fff;
                         font-size: 2.0rem;
                         font-weight: $font-regular;
                         padding: 10px 15px;
-                        border-bottom: solid 5px transparent;
-
-                        .st0{
-                            fill: $color-primary;
-                            stroke: $color-primary;
-                        }
                         &:hover{
                             text-decoration: none;
-                            color: $color-secondary;
-                            border-color: $color-secondary;
-                            background-color: white;
-
-                            .st0{
-                                fill: $color-secondary;
-                                stroke: $color-secondary;
-                            }
                         }
                     }
                     &.open{
@@ -514,7 +572,6 @@
                         background-clip: padding-box;
                         z-index: 1000;
                         padding: 15px;
-                        border-top: solid 2px $color-secondary;
                         background-color: #f8f8f8;
                         .list-menu-lv2{
                             a{
@@ -523,7 +580,6 @@
                                 line-height: 2.5rem;
                                 color: #525252;
                                 padding: 15px;
-                                border-bottom: 0;
                                 &:hover{
                                     text-decoration: none;
                                     background-color: #f8f8f8;
@@ -570,27 +626,23 @@
         }
 
         .section-search-wrapper{
-            // position: absolute;
-            // width: 100%;
-            // background-color: #cfd1d4;
-            // height: 280px;
-            // z-index: 100;
-            // margin: 0 -15px;
-            // display: none;
-            display: block;
-            text-align: right;
-
+            position: absolute;
+            width: 100%;
+            background-color: #cfd1d4;
+            height: 280px;
+            z-index: 100;
+            margin: 0 -15px;
+            display: none;
             .group-search{
-                display: inline-block;
-                width: 605px;
-                padding: 0;
-                height: 45px;
-                // position: absolute;
-                // left: 0;
-                // right: 0;
-                // top: 0;
-                // bottom: 0;
-                margin: 0;
+                max-width: 768px;
+                padding: 0 20px;
+                height: 123px;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
                 .close-search{
                     width: 40px;
                     height: 60px;
@@ -602,7 +654,7 @@
                     align-items: center;
                     justify-content: center;
                     .icon-close{
-                        background-image: url('../../assets/images/icons/icon-close.png');
+                        background-image: url('../../../assets/images/icons/icon-close.png');
                         width: 13px;
                         height: 13px;
                         background-repeat: no-repeat;
@@ -619,61 +671,48 @@
                     display: flex;
                     .input-box{
                         flex: 1;
-                        margin-right: 30px;
                         input{
                             margin-bottom: 0;
-                            height: 45px;
-                            border-color: $color-text;
-                            // &:focus ~ label{
-                            //     top: -15px;
-                            //     font-size:1.6rem;
-                            // }
-                            // &:valid ~ label{
-                            //     top: -15px;
-                            //     font-size:1.6rem;
-                            // }
+                            height: 60px;
+                            &:focus ~ label{
+                                top: -20px;
+                                font-size:1.6rem;
+                            }
+                            &:valid ~ label{
+                                top: -20px;
+                                font-size:1.6rem;
+                            }
                         }
-                        // label{
-                        //     font-size: 2.0rem;
-                        //     top: 9px;
-                        // }
+                        label{
+                            font-size: 2.0rem;
+                            top: 9px;
+                        }
                     }
                     
                     .btn-search{
-                        width: 160px;
-                        height: 45px;
+                        width: 40px;
+                        height: 60px;
                         cursor: pointer;
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        background-color: transparent;
-
                         .icon-search{
-                            width: 100%;
-                            height: 43px;
-                            font-size: 2.2rem;
-                            font-weight: 400;
-                            color: $color-primary;
-                            background-color: transparent;
-                            border: solid 1px $color-text;
+                            background-color: inherit;
+                            background-image: url('../../assets/images/icons/icon-search.png');
+                            width: 15px;
+                            height: 15px;
+                            background-repeat: no-repeat;
+                            background-position: top center;
+                            transition: all 0.3s ease;
+                            border: none;
+                            outline: none;
+                            text-indent: -9999px;
                         }
-                        // .icon-search{
-                        //     background-color: inherit;
-                        //     background-image: url('../../assets/images/icons/icon-search.png');
-                        //     width: 15px;
-                        //     height: 15px;
-                        //     background-repeat: no-repeat;
-                        //     background-position: top center;
-                        //     transition: all 0.3s ease;
-                        //     border: none;
-                        //     outline: none;
-                        //     text-indent: -9999px;
-                        // }
-                        // &:hover{
-                        //     .icon-search{
-                        //         background-position: bottom center;
-                        //     }
-                        // }
+                        &:hover{
+                            .icon-search{
+                                background-position: bottom center;
+                            }
+                        }
                     }
                 }
             }
@@ -682,165 +721,6 @@
 
     .header-sm{
         display: none;
-    }
-    .canvas-menu-wrapper{
-        display: none;
-    }
-}
-
-.fixed-wrapper{
-    .fixed-left-wrapper{
-        display: block;
-        position: fixed;
-        top: 190px;
-        left: 30px;
-        width: 50px;
-        min-height: 320px;
-        background-color: transparent;
-        z-index: 99;
-    }
-
-    .fixed-right-wrapper{
-        display: block;
-        position: fixed;
-        top: 190px;
-        right: 30px;
-        width: 45px;
-        min-height: 320px;
-        background-color: #cfd1d4;
-        z-index: 99;
-
-        .sizefonts-wrapper{
-            position: relative;
-            .reduce{
-                background-image: url('../../assets/images/icons/icon-reduce-sizefont.png');
-                width: 45px;
-                height: 45px;
-                background-repeat: no-repeat;
-                background-position: 0 -45px;
-                cursor: pointer;
-                transition: all 0.3s;
-                &:hover{
-                    background-position: 0 0;
-                }
-                &.active{
-                    background-position: 0 0;
-                }
-            }
-            .normal{
-                background-image: url('../../assets/images/icons/icon-normal-sizefont.png');
-                width: 45px;
-                height: 45px;
-                background-repeat: no-repeat;
-                background-position: 0 -45px;
-                cursor: pointer;
-                transition: all 0.3s;
-                &:hover{
-                    background-position: 0 0;
-                }
-                &.active{
-                    background-position: 0 0;
-                }
-            }
-            .increase{
-                background-image: url('../../assets/images/icons/icon-increase-sizefont.png');
-                width: 45px;
-                height: 45px;
-                background-repeat: no-repeat;
-                background-position: 0 -45px;
-                cursor: pointer;
-                transition: all 0.3s;
-                &:hover{
-                    background-position: 0 0;
-                }
-                &.active{
-                    background-position: 0 0;
-                }
-            }
-        }
-
-        .group-link-mainbkk{
-            border-top: solid 2px white;
-            padding: 10px 0 0 0;
-            a{
-
-                .icon-bkk{
-                    width: 32px;
-                    height: 32px;
-                    margin: 0 auto;
-                    img{
-                        width: 100%;
-                    }
-                }
-                .text-bkk{
-                    padding-left: 20px;
-                    font-size: 1.4rem;
-                    font-weight: $font-regular;
-                    color: #525252;
-                    line-height: 1.5rem;
-                    transform: rotate(90deg);
-        
-                    label{
-                        font-size: 1.6rem;
-                        font-weight: $font-regular;
-                        color: #006600;
-                        display: block;
-                    }
-                }
-                &:hover{
-                    text-decoration: none;
-                }
-            }
-        }
-    }
-
-    @include media-breakpoint-down(md) {
-        display: flex;
-        -webkit-box-pack: justify !important;
-        -ms-flex-pack: justify !important;
-        justify-content: space-between !important;
-        padding: 10px 0;
-
-        .fixed-left-wrapper{
-            position: relative;
-            top: auto;
-            left: auto;
-            width: auto;
-            min-height: 50px;
-            height: 50px;
-            display: flex;
-
-            .online-wrapper{
-                display: flex;
-            }
-        }
-
-        .fixed-right-wrapper{
-            position: relative;
-            top: auto;
-            left: auto;
-            right: 0;
-            width: auto;
-            min-height: 50px;
-            height: 50px;
-            display: flex;
-
-            .sizefonts-wrapper{
-                display: flex;
-                border-right: solid 2px white;
-            }
-
-            .group-link-mainbkk{
-                padding: 10px 10px 0 10px;
-                border-top: none;
-                a{
-                    display: flex;
-                    .text-bkk{
-                        transform: rotate(0);
-                    }
-                }
-            }
-        }
     }
 }
 

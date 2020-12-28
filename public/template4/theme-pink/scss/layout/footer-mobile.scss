@@ -1,63 +1,33 @@
-@include media-breakpoint-down(sm){
+@media only screen and (max-width: 992px) {
     #footer-wrapper{
         .group-footer{
             .title-footer{
                 .title{
                     font-size: 2.8rem;
-                    line-height: 3.2rem;
-                    margin-bottom: 1.5rem;
-                }
-                .desc{
-                    margin-bottom: 1.5rem;
                 }
             }
-
-            &.left{
-                .group-content-footer{
-                    .icon-content{
-                        .icon-cover{
-                            background-color: $color-secondary;
-                        }
-                    }
-                    .text-content{
-                        margin-top: 1.5rem;
-                        a.link-tel{
-                            font-size: 2.8rem;
-                            line-height: 3.2rem;
-                            margin-top: 1.5rem;
-                            &:hover{
-                                text-decoration: none;
-                                color: $color-primary;
-                            }
-                        }
-                    }
-                }
-            }
-    
-            &.right{
-                .group-content-footer{
-                    .icon-content{
-                        .icon-cover{
-                            background-color: $color-secondary;
-                        }
-                    }
-                    .text-content{
-                        margin-top: 1.5rem;
-                        a.link-tel{
-                            font-size: 2.8rem;
-                            line-height: 3.2rem;
-                            margin-top: 1.5rem;
-                            &:hover{
-                                text-decoration: none;
-                                color: $color-primary;
-                            }
-                        }
+            .group-content-footer{
+                margin-bottom: 15px;
+                .text-content{
+                    font-size: 1.6rem;
+                    line-height: 2rem;
+                    a.link-tel{
+                        font-size: 2.4rem;
+                        margin-bottom: 0;
                     }
                 }
             }
 
             .footer-bottom{
                 flex-wrap: wrap;
+                .sitemap{
+                    width: 100%;
+                    ul{
+                        li{
+                            display: block;
+                        }
+                    }
+                }
             }
         }
     }

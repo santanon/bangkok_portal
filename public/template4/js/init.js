@@ -1,9 +1,16 @@
-// Header
-$(function () {
-  var w_logo = $('.logo').outerWidth();
-  console.log(w_logo);
-  $('.menu-right-top').css({ 'width': 'calc(100% - ' + w_logo + 'px)' });
+// header
+$(function(){
+  var w1 = $('.menu-top-wrapper').outerWidth();
+  //console.log(w);
+  $('.menu-right-top').css({ 'width': 'calc(100% - ' + w1 + 'px)' });
 });
+
+$(function(){
+  var w2 = $('.logo').outerWidth();
+  //console.log(w);
+  $('.menu-right-middle').css({ 'width': 'calc(100% - ' + w2 + 'px)' });
+});
+
 
 // Menu
 $(function () {
@@ -106,21 +113,20 @@ $(function () {
     // ปฏิทินกิจกรรม
     const check_list_1 = $('#slide_1').children('.item').length;
     $('#slide_1').on('init', function (event, slick, direction) {
-        if (check_list_1 < 1) {
+        if (check_list_1 < 3) {
             $('#action-slide_1').parents('.action-slide .slide-wrapper').css('display','none');
         }else{
             $('#action-slide_1').parents('.action-slide .slide-wrapper').show();
         }
     });
-
     $('#slide_1').slick({
         autoplay: false,
         autoplaySpeed: 6000,
         infinite: false,
         dots: false,
         arrows: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
+        slidesToShow: 2,
+        slidesToScroll: 2,
         prevArrow: $('#action-slide_1 .slide-prev'),
         nextArrow: $('#action-slide_1 .slide-next'),
         responsive: [
@@ -256,7 +262,7 @@ $(function () {
     // BANNER
     const check_list_5 = $('#slide_5').children('li').length;
     $('#slide_5').on('init', function (event, slick, direction) {
-        if (check_list_5 < 4) {
+        if (check_list_4 < 5) {
             $('#action-slide_5').parents('.action-slide').css('display','none');
         }else{
             $('#action-slide_5').parents('.action-slide').show();
@@ -268,8 +274,8 @@ $(function () {
         infinite: false,
         dots: false,
         arrows: true,
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: 4,
+        slidesToScroll: 4,
         prevArrow: $('#action-slide_5 .slide-prev'),
         nextArrow: $('#action-slide_5 .slide-next'),
         responsive: [
@@ -372,14 +378,6 @@ $(function () {
     });
 });
 
-
-if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
-  $(function () {
-    var slick_dots = $('.slick-dots li').size();
-    var calculate_dots =  100 / slick_dots;
-    $('.slick-dots li').css('width', calculate_dots + '%');
-  });
-}
 //Gototop
 function scrollToTop() {
     verticalOffset = typeof (verticalOffset) != 'undefined' ? verticalOffset : 0;

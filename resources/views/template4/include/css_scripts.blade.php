@@ -23,6 +23,14 @@
 <link rel="stylesheet" href="{{ asset('template4/theme-pink/css/slick-theme.css')}}">
 <script type="text/javascript" src="{{ asset('template4/js/slick.min.js') }}"></script>
 
+<!--Match Height -->
+<script type="text/javascript" src="{{ asset('template4/js/jquery.matchHeight.js') }}"></script>
+
+<script>
+    $(function() {
+        $('.matchHeight').matchHeight();
+    });
+</script>
 <script>
    AOS.init();
 </script>

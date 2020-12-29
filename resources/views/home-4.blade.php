@@ -38,7 +38,78 @@ function sfi(title,url)
                         </div>
                     </div>
                     <div class="col-lg-2">
-                        @include('template4/vdo')
+                        <div class="gallery-template">
+                            <div class="item video">
+                                <div class="cover" style="background-image: url('../../template4/assets/images/img-album-demo1.png');">
+                                    <a id="dynamic3" href="javascript:void(0)" >
+                                        <div class="bg-layer">
+                                            <div class="icon-search-hover">
+                                                <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                    width="30px" height="30px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+                                                <path class="st0" d="M19.4,13.9L6.9,22c-1.4,0.9-3.4-0.2-3.4-1.8V3.9c0-1.8,2-2.9,3.4-1.8l12.5,8.1C20.9,11,20.9,13.1,19.4,13.9z"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="title">
+                                        <div class="source">
+                                            <span>PR BKK</span>
+                                        </div>
+                                    </div>
+                                    <div class="caption">
+                                        <span>กทม. ร่วมเป็นเกียรติในพิธีลงนามสร้างสวนป่า</span>
+                                    </div>
+                                </div>
+                                <div class="group-mange-section">
+                                    <div class="manage-tools">
+                                        <ul>
+                                            <li class="order-list">จัดการ</li>
+                                            <li class="order-list">ลบ</li>
+                                            <li class="order-list">ซ่อน</li>
+                                            <li class="order-list order-close">ปิด</li>
+                                        </ul>
+                                    </div> 
+                                    <div class="manage-edit">
+                                        <img src="{{ asset('template4/assets/images/icons/icon-edit.svg')}}" alt="icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item video">
+                                <div class="cover" style="background-image: url('../../template4/assets/images/img-album-demo2.jpg');">
+                                    <a id="dynamic4" href="javascript:void(0)" >
+                                        <div class="bg-layer">
+                                            <div class="icon-search-hover">
+                                                <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                    width="30px" height="30px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+                                                <path class="st0" d="M19.4,13.9L6.9,22c-1.4,0.9-3.4-0.2-3.4-1.8V3.9c0-1.8,2-2.9,3.4-1.8l12.5,8.1C20.9,11,20.9,13.1,19.4,13.9z"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="title">
+                                        <div class="source">
+                                            <span>PR BKK</span>
+                                        </div>
+                                    </div>
+                                    <div class="caption">
+                                        <span>กทม. ร่วมเป็นเกียรติในพิธีลงนามสร้างสวนป่า</span>
+                                    </div>
+                                </div>
+                                <div class="group-mange-section">
+                                    <div class="manage-tools">
+                                        <ul>
+                                            <li class="order-list">จัดการ</li>
+                                            <li class="order-list">ลบ</li>
+                                            <li class="order-list">ซ่อน</li>
+                                            <li class="order-list order-close">ปิด</li>
+                                        </ul>
+                                    </div> 
+                                    <div class="manage-edit">
+                                        <img src="{{ asset('template4/assets/images/icons/icon-edit.svg')}}" alt="icon">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -53,6 +124,8 @@ function sfi(title,url)
             @include('template4/faq')
 
             @include('template4/album')
+
+            @include('template4/vdo')
 
             @include('template4/download')
 
@@ -393,5 +466,86 @@ function sfi(title,url)
         });
 </script>
 
+<link rel="stylesheet" href="{{ asset('template4/theme-pink/css/calendar/main.min.css')}}">
+<script type="text/javascript" src="{{ asset('template4/js/calendar/main.min.js') }}"></script>
+<script>
+    // Calendar
+    document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',
+            headerToolbar: false,
+            locale: 'th',
+            dayMaxEventRows: true,
+            events: [
+                {
+                    "title": "All Day Event",
+                    "start": "2020-11-23",
+                    //"color": "#E76F0E",
+                    "url": "/calendar-detail"
+                },
+                {
+                    "title": "บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือasdalk k;lkdpa sk",
+                    "start": "2020-11-23",
+                    //"color": "#8CB81F",
+                    "url": "/calendar-detail"
+                },
+                {
+                    "title": "บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือ บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือ",
+                    "start": "2020-11-23",
+                    //"color": "#8CB81F",
+                    "url": "/calendar-detail"
+                },
+                {
+                    "title": "บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือasdalk k;lkdpa sk",
+                    "start": "2020-11-23",
+                    //"color": "#8CB81F",
+                    "url": "/calendar-detail"
+                },
+                {
+                    "title": "บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือasdalk k;lkdpa sk",
+                    "start": "2020-11-23",
+                    //"color": "#8CB81F",
+                    "url": "/calendar-detail"
+                },
+            ],
+
+        });
+        calendar.render();
+
+        document.getElementById('prev').addEventListener('click', function () {
+            calendar.prev(); // call method
+
+            var view = calendar.view;
+            var v_title = view.title;
+            //console.log(v_title);
+            var c_month = (view.title).split(' ');
+            var c_year = (view.title).split(' ');
+            $('.month-title').html(c_month[0]);
+            $('.year-title').html(c_year[1]);
+
+        });
+
+        document.getElementById('next').addEventListener('click', function () {
+            calendar.next(); // call method
+
+            var view = calendar.view;
+            var v_title = view.title;
+            //console.log(v_title);
+            var c_month = (view.title).split(' ');
+            var c_year = (view.title).split(' ');
+            $('.month-title').html(c_month[0]);
+            $('.year-title').html(c_year[1]);
+        });
+
+        // default
+        var view = calendar.view;
+        var v_title = view.title;
+        var c_month = (view.title).split(' ');
+        var c_year = (view.title).split(' ');
+        $('.month-title').html(c_month[0]);
+        $('.year-title').html(c_year[1]);
+    });
+</script>
 @endsection
 

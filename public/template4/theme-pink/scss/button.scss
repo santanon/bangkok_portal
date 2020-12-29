@@ -106,9 +106,20 @@
         }
     }
 
+    &.btn-outline-white{
+        border: 1px solid white;
+        color: white;
+
+        &:hover, &:focus, &:active{
+            color: $color-primary;
+            border-color: white !important;
+            background-color: white !important;
+        }
+    }
+
     &.btn-outline-dark{
-        border: 1px solid #b1b1b1;
-        color: #b1b1b1;
+        border: 1px solid $color-text;
+        color: $color-text;
 
         &:hover, &:focus, &:active{
             border-color: $color-primary;

@@ -19,11 +19,11 @@
         <div class="banner" style="background-image: url('../../template2/assets/images/banner/img-banner-demo.png');"></div>
         <div class="item-Onbanner-outer">
             <div class="item-Onbanner-inner">
-                <div class="list">
-                    <h2 class="title-banner">กรุงเทพมหานครเมืองหลวงของประเทศไทย</h2>
-                    <p class="desc-banner">มุ่งมั่นการทำงาน แหล่งค้นคว้าการประชุม เครือข่ายมหานครอาเซียน</p>
-                    <div class="action-link">
-                        <a href="#">เกี่ยวกับหน่วยงาน</a>
+                <div class="txt-position">
+                    <div class="list">
+                        <h2 class="title-banner">กรุงเทพมหานครเมืองหลวงของประเทศไทย</h2>
+                        <p class="desc-banner">มุ่งมั่นการทำงาน แหล่งค้นคว้าการประชุม เครือข่ายมหานครอาเซียน</p>
+                        <a href="#" class="btn btn-outline-white">เกี่ยวกับหน่วยงาน</a>
                     </div>
                 </div>
             </div>

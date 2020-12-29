@@ -119,14 +119,15 @@ $(function () {
             $('#action-slide_1').parents('.action-slide .slide-wrapper').show();
         }
     });
+
     $('#slide_1').slick({
         autoplay: false,
         autoplaySpeed: 6000,
         infinite: false,
         dots: false,
         arrows: true,
-        slidesToShow: 2,
-        slidesToScroll: 2,
+        slidesToShow: 1,
+        slidesToScroll: 1,
         prevArrow: $('#action-slide_1 .slide-prev'),
         nextArrow: $('#action-slide_1 .slide-next'),
         responsive: [
@@ -139,7 +140,6 @@ $(function () {
             }
         ]
     });
-
 
     // คำถามที่พบบ่อย
     const check_list_2 = $('#slide_2').children('.item').length;
@@ -154,7 +154,7 @@ $(function () {
         autoplay: false,
         autoplaySpeed: 6000,
         infinite: false,
-        dots: false,
+        dots: true,
         arrows: true,
         slidesToShow: 2,
         slidesToScroll: 2,

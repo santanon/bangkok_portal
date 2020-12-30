@@ -10,15 +10,15 @@
             </ul>
         </div> 
         <div class="manage-dragdrop">
-            <img src="{{ asset('template1/assets/images/icons/icon-dragdrop.svg')}}" alt="icon" title="Drag and Drop">
+            <img src="{{ asset('template3/assets/images/icons/icon-dragdrop.svg')}}" alt="icon" title="Drag and Drop">
         </div>
         <div class="manage-edit">
-            <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
+            <img src="{{ asset('template3/assets/images/icons/icon-edit.svg')}}" alt="icon">
         </div>
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-12">
                 <div class="inner-content">
                     <div class="top-content border-bottom">
                         <div class="group-text">
@@ -45,185 +45,185 @@
                 </div>
             </div>
             <div class="col-lg-12">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="main-content">
-                            <div class="gallery-template">
-                                <div class="row">
-                                    <div class="col-lg-6">                           
-                                        <div class="item video">
-                                            <div class="cover" style="background-image: url('../../template1/assets/images/img-album-demo1.png');">
-                                                <a id="dynamic3" href="javascript:void(0)" >
-                                                    <div class="bg-layer">
-                                                        <div class="icon-search-hover">
-                                                            <img src="{{ asset('template1/assets/images/icons/icon-play.png')}}" alt="banner">
+                <div class="inner-content">
+                    <div class="main-content">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="gallery-template">
+                                    <div class="row">
+                                        <div class="col-lg-6">                           
+                                            <div class="item video">
+                                                <div class="cover" style="background-image: url('../../template3/assets/images/img-album-demo1.png');">
+                                                    <a id="dynamic3" href="javascript:void(0)" >
+                                                        <div class="bg-layer">
+                                                            <div class="icon-search-hover">
+                                                                <img src="{{ asset('template3/assets/images/icons/icon-play.png')}}" alt="banner">
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <div class="title">
+                                                        <div class="source bg-color-secondary">
+                                                            <span>PR BKK</span>
                                                         </div>
                                                     </div>
-                                                </a>
-                                                <div class="title">
-                                                    <div class="source bg-color-secondary">
-                                                        <span>PR BKK</span>
+                                                    <div class="caption">
+                                                        <span>กทม. ร่วมเป็นเกียรติในพิธีลงนามสร้างสวนป่า</span>
                                                     </div>
                                                 </div>
-                                                <div class="caption">
-                                                    <span>กทม. ร่วมเป็นเกียรติในพิธีลงนามสร้างสวนป่า</span>
-                                                </div>
-                                            </div>
-                                            <div class="group-mange-section">
-                                                <div class="manage-tools">
-                                                    <ul>
-                                                        <li class="order-list">จัดการ</li>
-                                                        <li class="order-list">ลบ</li>
-                                                        <li class="order-list">ซ่อน</li>
-                                                        <li class="order-list order-close">ปิด</li>
-                                                    </ul>
-                                                </div> 
-                                                <div class="manage-edit">
-                                                    <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
+                                                <div class="group-mange-section">
+                                                    <div class="manage-tools">
+                                                        <ul>
+                                                            <li class="order-list">จัดการ</li>
+                                                            <li class="order-list">ลบ</li>
+                                                            <li class="order-list">ซ่อน</li>
+                                                            <li class="order-list order-close">ปิด</li>
+                                                        </ul>
+                                                    </div> 
+                                                    <div class="manage-edit">
+                                                        <img src="{{ asset('template3/assets/images/icons/icon-edit.svg')}}" alt="icon">
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="item video">
-                                            <div class="cover" style="background-image: url('../../template1/assets/images/img-album-demo2.jpg');">
-                                                <a id="dynamic4" href="javascript:void(0)" >
-                                                    <div class="bg-layer">
-                                                        <div class="icon-search-hover">
-                                                            <img src="{{ asset('template1/assets/images/icons/icon-play.png')}}" alt="banner">
+                                        <div class="col-lg-6">
+                                            <div class="item video">
+                                                <div class="cover" style="background-image: url('../../template3/assets/images/img-album-demo2.jpg');">
+                                                    <a id="dynamic4" href="javascript:void(0)" >
+                                                        <div class="bg-layer">
+                                                            <div class="icon-search-hover">
+                                                                <img src="{{ asset('template3/assets/images/icons/icon-play.png')}}" alt="banner">
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <div class="title">
+                                                        <div class="source bg-color-secondary">
+                                                            <span>PR BKK</span>
                                                         </div>
                                                     </div>
-                                                </a>
-                                                <div class="title">
-                                                    <div class="source bg-color-secondary">
-                                                        <span>PR BKK</span>
+                                                    <div class="caption">
+                                                        <span>กทม. ร่วมเป็นเกียรติในพิธีลงนามสร้างสวนป่า</span>
                                                     </div>
                                                 </div>
-                                                <div class="caption">
-                                                    <span>กทม. ร่วมเป็นเกียรติในพิธีลงนามสร้างสวนป่า</span>
-                                                </div>
-                                            </div>
-                                            <div class="group-mange-section">
-                                                <div class="manage-tools">
-                                                    <ul>
-                                                        <li class="order-list">จัดการ</li>
-                                                        <li class="order-list">ลบ</li>
-                                                        <li class="order-list">ซ่อน</li>
-                                                        <li class="order-list order-close">ปิด</li>
-                                                    </ul>
-                                                </div> 
-                                                <div class="manage-edit">
-                                                    <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
+                                                <div class="group-mange-section">
+                                                    <div class="manage-tools">
+                                                        <ul>
+                                                            <li class="order-list">จัดการ</li>
+                                                            <li class="order-list">ลบ</li>
+                                                            <li class="order-list">ซ่อน</li>
+                                                            <li class="order-list order-close">ปิด</li>
+                                                        </ul>
+                                                    </div> 
+                                                    <div class="manage-edit">
+                                                        <img src="{{ asset('template3/assets/images/icons/icon-edit.svg')}}" alt="icon">
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-6">                           
-                                        <div class="item video">
-                                            <div class="cover" style="background-image: url('../../template1/assets/images/img-album-demo1.png');">
-                                                <a id="" href="javascript:void(0)" >
-                                                    <div class="bg-layer">
-                                                        <div class="icon-search-hover">
-                                                            <img src="{{ asset('template1/assets/images/icons/icon-play.png')}}" alt="banner">
+                                        <div class="col-lg-6">                           
+                                            <div class="item video">
+                                                <div class="cover" style="background-image: url('../../template3/assets/images/img-album-demo1.png');">
+                                                    <a id="" href="javascript:void(0)" >
+                                                        <div class="bg-layer">
+                                                            <div class="icon-search-hover">
+                                                                <img src="{{ asset('template3/assets/images/icons/icon-play.png')}}" alt="banner">
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <div class="title">
+                                                        <div class="source bg-color-secondary">
+                                                            <span>PR BKK</span>
                                                         </div>
                                                     </div>
-                                                </a>
-                                                <div class="title">
-                                                    <div class="source bg-color-secondary">
-                                                        <span>PR BKK</span>
+                                                    <div class="caption">
+                                                        <span>กทม. ร่วมเป็นเกียรติในพิธีลงนามสร้างสวนป่า</span>
                                                     </div>
                                                 </div>
-                                                <div class="caption">
-                                                    <span>กทม. ร่วมเป็นเกียรติในพิธีลงนามสร้างสวนป่า</span>
-                                                </div>
-                                            </div>
-                                            <div class="group-mange-section">
-                                                <div class="manage-tools">
-                                                    <ul>
-                                                        <li class="order-list">จัดการ</li>
-                                                        <li class="order-list">ลบ</li>
-                                                        <li class="order-list">ซ่อน</li>
-                                                        <li class="order-list order-close">ปิด</li>
-                                                    </ul>
-                                                </div> 
-                                                <div class="manage-edit">
-                                                    <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
+                                                <div class="group-mange-section">
+                                                    <div class="manage-tools">
+                                                        <ul>
+                                                            <li class="order-list">จัดการ</li>
+                                                            <li class="order-list">ลบ</li>
+                                                            <li class="order-list">ซ่อน</li>
+                                                            <li class="order-list order-close">ปิด</li>
+                                                        </ul>
+                                                    </div> 
+                                                    <div class="manage-edit">
+                                                        <img src="{{ asset('template3/assets/images/icons/icon-edit.svg')}}" alt="icon">
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="item video">
-                                            <div class="cover" style="background-image: url('../../template1/assets/images/img-album-demo2.jpg');">
-                                                <a id="" href="javascript:void(0)" >
-                                                    <div class="bg-layer">
-                                                        <div class="icon-search-hover">
-                                                            <img src="{{ asset('template1/assets/images/icons/icon-play.png')}}" alt="banner">
+                                        <div class="col-lg-6">
+                                            <div class="item video">
+                                                <div class="cover" style="background-image: url('../../template3/assets/images/img-album-demo2.jpg');">
+                                                    <a id="" href="javascript:void(0)" >
+                                                        <div class="bg-layer">
+                                                            <div class="icon-search-hover">
+                                                                <img src="{{ asset('template3/assets/images/icons/icon-play.png')}}" alt="banner">
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <div class="title">
+                                                        <div class="source bg-color-secondary">
+                                                            <span>PR BKK</span>
                                                         </div>
                                                     </div>
-                                                </a>
-                                                <div class="title">
-                                                    <div class="source bg-color-secondary">
-                                                        <span>PR BKK</span>
+                                                    <div class="caption">
+                                                        <span>กทม. ร่วมเป็นเกียรติในพิธีลงนามสร้างสวนป่า</span>
                                                     </div>
                                                 </div>
-                                                <div class="caption">
-                                                    <span>กทม. ร่วมเป็นเกียรติในพิธีลงนามสร้างสวนป่า</span>
-                                                </div>
-                                            </div>
-                                            <div class="group-mange-section">
-                                                <div class="manage-tools">
-                                                    <ul>
-                                                        <li class="order-list">จัดการ</li>
-                                                        <li class="order-list">ลบ</li>
-                                                        <li class="order-list">ซ่อน</li>
-                                                        <li class="order-list order-close">ปิด</li>
-                                                    </ul>
-                                                </div> 
-                                                <div class="manage-edit">
-                                                    <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
+                                                <div class="group-mange-section">
+                                                    <div class="manage-tools">
+                                                        <ul>
+                                                            <li class="order-list">จัดการ</li>
+                                                            <li class="order-list">ลบ</li>
+                                                            <li class="order-list">ซ่อน</li>
+                                                            <li class="order-list order-close">ปิด</li>
+                                                        </ul>
+                                                    </div> 
+                                                    <div class="manage-edit">
+                                                        <img src="{{ asset('template3/assets/images/icons/icon-edit.svg')}}" alt="icon">
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="main-content">
-                            <div class="gallery-template">
-                                <div class="row">
-                                    <div class="col-lg-12">                           
-                                        <div class="item video -large">
-                                            <div class="cover" style="background-image: url('../../template1/assets/images/img-album-demo3.jpg');">
-                                                <a href="javascript:void(0)">
-                                                    <div class="bg-layer">
-                                                        <div class="icon-search-hover">
-                                                            <img src="{{ asset('template1/assets/images/icons/icon-play.png')}}" alt="banner">
+                            <div class="col-lg-6">
+                                <div class="gallery-template">
+                                    <div class="row">
+                                        <div class="col-lg-12">                           
+                                            <div class="item video -large">
+                                                <div class="cover" style="background-image: url('../../template3/assets/images/img-album-demo3.jpg');">
+                                                    <a href="javascript:void(0)">
+                                                        <div class="bg-layer">
+                                                            <div class="icon-search-hover">
+                                                                <img src="{{ asset('template3/assets/images/icons/icon-play.png')}}" alt="banner">
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <div class="title">
+                                                        <div class="source bg-color-secondary">
+                                                            <span>PR BKK</span>
                                                         </div>
                                                     </div>
-                                                </a>
-                                                <div class="title">
-                                                    <div class="source bg-color-secondary">
-                                                        <span>PR BKK</span>
+                                                    <div class="caption">
+                                                        <span>กทม. ร่วมเป็นเกียรติในพิธีลงนามสร้างสวนป่า</span>
                                                     </div>
                                                 </div>
-                                                <div class="caption">
-                                                    <span>กทม. ร่วมเป็นเกียรติในพิธีลงนามสร้างสวนป่า</span>
-                                                </div>
-                                            </div>
-                                            <div class="group-mange-section">
-                                                <div class="manage-tools">
-                                                    <ul>
-                                                        <li class="order-list">จัดการ</li>
-                                                        <li class="order-list">ลบ</li>
-                                                        <li class="order-list">ซ่อน</li>
-                                                        <li class="order-list order-close">ปิด</li>
-                                                    </ul>
-                                                </div> 
-                                                <div class="manage-edit">
-                                                    <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
+                                                <div class="group-mange-section">
+                                                    <div class="manage-tools">
+                                                        <ul>
+                                                            <li class="order-list">จัดการ</li>
+                                                            <li class="order-list">ลบ</li>
+                                                            <li class="order-list">ซ่อน</li>
+                                                            <li class="order-list order-close">ปิด</li>
+                                                        </ul>
+                                                    </div> 
+                                                    <div class="manage-edit">
+                                                        <img src="{{ asset('template3/assets/images/icons/icon-edit.svg')}}" alt="icon">
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

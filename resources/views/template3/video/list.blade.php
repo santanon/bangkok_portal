@@ -1,7 +1,7 @@
 <div class="section-content">
     <div class="container">
         <div class="inner-content">
-            <div class="top-content">
+            <div class="top-content border-bottom-secondary">
                 <div class="group-text">
                     <h3 class="title color-primary">วิดิทัศน์</h3>
                     <p class="desc color-secondary">The Bangkok Metropolitan Council Secretariat </p>
@@ -10,21 +10,41 @@
             <div class="search-content">
                 <form action="">
                     <div class="row">
-                        <div class="col-10 col-sm-6">
+                        <div class="col-lg-3">
+                            <div class="input-custom inp-categories">
+                                <div class="select-wrapper width-full">
+                                    <select name="month" class="slc">
+                                        <optgroup label="ประเภทข่าว">
+                                            <option value="">ประเภทข่าว 1</option>
+                                            <option value="">ประเภทข่าว 2</option>
+                                            <option value="">ประเภทข่าว 3</option>
+                                            <option value="">ประเภทข่าว 4</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="input-custom inp-calendar">
+                                <input id="start_date" class="style-input" type="text" name="datefilter" placeholder="จากวันที่" autocomplete="off" data-provide="datepicker" data-date-language="th-th" />
+                                <div class="icon-calendar"><i class="far fa-calendar"></i></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="input-custom inp-calendar">
+                                <input id="end_date" class="style-input" type="text" name="datefilter" placeholder="ถึงวันที่" autocomplete="off" data-provide="datepicker" data-date-language="th-th" />
+                                <div class="icon-calendar"><i class="far fa-calendar"></i></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
                             <div class="input-custom inp-search">
                                 <input class="style-input" type="text" name="" placeholder="คำค้นหา" />
                             </div>
                         </div>
-                        <div class="col-2 col-sm-1">
-                            <div class="btn-search ">
-                                <button type="submit" class="icon-search bg-color-primary">
-                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                        width="20px" height="20px" viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">
-                                    <g>
-                                        <circle class="st0" cx="9.3" cy="9.3" r="7.3"/>
-                                        <line class="st0" x1="14.9" y1="14.9" x2="18" y2="18"/>
-                                    </g>
-                                    </svg>
+                        <div class="col-lg-1">
+                            <div class="btn-search btn-stick-border">
+                                <button type="submit" class="icon-search bg-color-secondary">
+                                    ค้นหา
                                 </button>
                             </div>
                         </div>
@@ -45,7 +65,7 @@
                                         </div>
                                     </a>
                                     <div class="title">
-                                        <div class="source bg-color-primary">
+                                        <div class="source bg-color-secondary">
                                             <span>PR BKK</span>
                                         </div>
                                     </div>
@@ -80,7 +100,7 @@
                                         </div>
                                     </a>
                                     <div class="title">
-                                        <div class="source bg-color-primary">
+                                        <div class="source bg-color-secondary">
                                             <span>PR BKK</span>
                                         </div>
                                     </div>

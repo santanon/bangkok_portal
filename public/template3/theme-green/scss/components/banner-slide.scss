@@ -159,7 +159,8 @@
                         text-align: center;
                         .list{
                             display: table-cell;
-                            vertical-align: middle;
+                            vertical-align: bottom;
+                            padding-bottom: 50px;
                             .title-banner{
                                 color: #fff;
                                 font-size: 3.6rem;

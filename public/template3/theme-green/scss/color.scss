@@ -33,6 +33,9 @@
     color: $color-secondary !important;
 }
 
+.border-bottom-secondary{
+    border-bottom: 1px solid $color-secondary;
+}
 .border-bottom2x-secondary{
     border-bottom: 2px solid $color-secondary;
 }
@@ -215,10 +218,10 @@
                                 .progress-content{
                                     .progress {
                                         &:after {
-                                            border: 7px solid $color-primary;
+                                            border: 7px solid $color-secondary;
                                         }
                                         .progress-bar {
-                                            border-color: $color-secondary;
+                                            border-color: $color-primary;
                                         }
                                     }
                                 }
@@ -344,11 +347,6 @@
                         }
                     }
                 }
-                .page-list-item-wrapper{
-                    .topic-category{
-                        background-color: $color-primary;
-                    }
-                }
                 .accordion-wrapper{
                     .accordion{
                         .card{
@@ -357,13 +355,6 @@
                                 .card-header-item{
                                     @media only screen and (max-width: 767px) {
                                         background-color: $color-primary;
-                                    }
-                                }
-                            }
-                            .collapse, .collapsing{
-                                .card-body{
-                                    &:after{
-                                        border-color: $color-primary transparent transparent transparent;
                                     }
                                 }
                             }

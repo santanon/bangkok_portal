@@ -26,6 +26,7 @@ $(function () {
     });
 
 
+    $('.menu-bar').on('click', scrollToTop);
     $('.menu-bar').click(function(){
       $('.menu-main-fullpage').slideDown();
       $(document.body).addClass("menu-open");

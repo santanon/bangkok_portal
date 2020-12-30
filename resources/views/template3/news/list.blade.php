@@ -1,7 +1,7 @@
 <div class="section-content">
                 <div class="container">
                     <div class="inner-content">
-                        <div class="top-content">
+                        <div class="top-content border-bottom-secondary">
                             <div class="group-text">
                                 <h3 class="title color-primary">ข่าวประชาสัมพันธ์</h3>
                                 <p class="desc color-secondary">The Bangkok Metropolitan Council Secretariat </p>
@@ -42,15 +42,9 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-1">
-                                        <div class="btn-search ">
-                                            <button type="submit" class="icon-search bg-color-primary">
-                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                    width="20px" height="20px" viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">
-                                                <g>
-                                                    <circle class="st0" cx="9.3" cy="9.3" r="7.3"/>
-                                                    <line class="st0" x1="14.9" y1="14.9" x2="18" y2="18"/>
-                                                </g>
-                                                </svg>
+                                        <div class="btn-search btn-stick-border">
+                                            <button type="submit" class="icon-search bg-color-secondary">
+                                                ค้นหา
                                             </button>
                                         </div>
                                     </div>
@@ -59,7 +53,7 @@
                         </div>
                         <div class="main-content">
                             <div class="row">
-                                <div class="col-lg-6">
+                                <div class="col-lg-3">
                                     <div class="sub-news">
                                         <div class="group-mange-section no-mg right-0">
                                             <div class="manage-tools">
@@ -75,45 +69,46 @@
                                             </div>
                                         </div>
                                         <div class="row no-gutters">
-                                            <div class="col-lg-6">
-                                                <div class="img-news" style="background-image: url('../../template1/assets/images/img-news-demo2.png');">
-                                                    <div class="pin"><i class="fas fa-thumbtack"></i></div>
-                                                    <div class="read-news-outer">
-                                                        <a href="/news-detail">
-                                                            อ่านข่าวสาร
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6">
+                                            <div class="col-lg-12">
                                                 <div class="content">
                                                     <div class="date">
                                                         <span class="color-primary">ข่าววันที่ : 5 พ.ย.</span> <img src="{{ asset('template1/assets/images/icons/icon-new.png')}}" alt="icon">
                                                     </div>
                                                     <div class="desc-news">
-                                                        <a href="/news-detail">
+                                                        <a href="/news-detail-3">
                                                             หน่วยงานภาครัฐและภาคเอกชนประชุมกรรมการดำเนินงานด้านการป้องกัน...
                                                         </a>
                                                     </div>
-                                                    <div class="social-wrapper">
-                                                        <ul class="d-flex align-items-center">
-                                                            <li class="facebook d-flex align-items-center not-hover">
-                                                                <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"> <span class="color-secondary">5</span>
-                                                            </li>
-                                                            <li class="twitter d-flex align-items-center not-hover">
-                                                                <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon"> <span class="color-secondary">5</span>
-                                                            </li>
-                                                            <li class="line d-flex align-items-center not-hover">
-                                                                <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"> <span class="color-secondary">5</span>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
                                                 </div>
                                             </div>
+                                            <div class="col-lg-12">
+                                                <div class="img-news" style="background-image: url('../../template1/assets/images/img-news-demo2.png');">
+                                                    <div class="pin"><i class="fas fa-thumbtack"></i></div>
+                                                    <div class="read-news-outer">
+                                                        <a href="/news-detail-3">
+                                                            อ่านข่าวสาร
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="social-wrapper">
+                                                    <ul class="d-flex align-items-center">
+                                                        <li class="facebook d-flex align-items-center not-hover">
+                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"> <span class="color-secondary">5</span>
+                                                        </li>
+                                                        <li class="twitter d-flex align-items-center not-hover">
+                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon"> <span class="color-secondary">5</span>
+                                                        </li>
+                                                        <li class="line d-flex align-items-center not-hover">
+                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"> <span class="color-secondary">5</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-lg-3">
                                     <div class="sub-news">
                                         <div class="group-mange-section no-mg right-0">
                                             <div class="manage-tools">
@@ -129,44 +124,45 @@
                                             </div>
                                         </div>
                                         <div class="row no-gutters">
-                                            <div class="col-lg-6">
-                                                <div class="img-news" style="background-image: url('../../template1/assets/images/img-news-demo2.png');">
-                                                    <div class="read-news-outer">
-                                                        <a href="/news-detail">
-                                                            อ่านข่าวสาร
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6">
+                                            <div class="col-lg-12">
                                                 <div class="content">
                                                     <div class="date">
                                                         <span class="color-primary">ข่าววันที่ : 5 พ.ย.</span>
                                                     </div>
                                                     <div class="desc-news">
-                                                        <a href="/news-detail">
+                                                        <a href="/news-detail-3">
                                                             หน่วยงานภาครัฐและภาคเอกชนประชุมกรรมการดำเนินงานด้านการป้องกัน...
                                                         </a>
                                                     </div>
-                                                    <div class="social-wrapper">
-                                                        <ul class="d-flex align-items-center">
-                                                            <li class="facebook d-flex align-items-center not-hover">
-                                                                <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"> <span class="color-secondary">5</span>
-                                                            </li>
-                                                            <li class="twitter d-flex align-items-center not-hover">
-                                                                <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon"> <span class="color-secondary">5</span>
-                                                            </li>
-                                                            <li class="line d-flex align-items-center not-hover">
-                                                                <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"> <span class="color-secondary">5</span>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
                                                 </div>
                                             </div>
+                                            <div class="col-lg-12">
+                                                <div class="img-news" style="background-image: url('../../template1/assets/images/img-news-demo2.png');">
+                                                    <div class="read-news-outer">
+                                                        <a href="/news-detail-3">
+                                                            อ่านข่าวสาร
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="social-wrapper">
+                                                    <ul class="d-flex align-items-center">
+                                                        <li class="facebook d-flex align-items-center not-hover">
+                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"> <span class="color-secondary">5</span>
+                                                        </li>
+                                                        <li class="twitter d-flex align-items-center not-hover">
+                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon"> <span class="color-secondary">5</span>
+                                                        </li>
+                                                        <li class="line d-flex align-items-center not-hover">
+                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"> <span class="color-secondary">5</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-lg-3">
                                     <div class="sub-news">
                                         <div class="group-mange-section no-mg right-0">
                                             <div class="manage-tools">
@@ -182,44 +178,44 @@
                                             </div>
                                         </div>
                                         <div class="row no-gutters">
-                                            <div class="col-lg-6">
-                                                <div class="img-news" style="background-image: url('../../template1/assets/images/img-news-demo2.png');">
-                                                    <div class="read-news-outer">
-                                                        <a href="/news-detail">
-                                                            อ่านข่าวสาร
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6">
+                                            <div class="col-lg-12">
                                                 <div class="content">
                                                     <div class="date">
                                                         <span class="color-primary">ข่าววันที่ : 5 พ.ย.</span>
                                                     </div>
                                                     <div class="desc-news">
-                                                        <a href="/news-detail">
+                                                        <a href="/news-detail-3">
                                                             หน่วยงานภาครัฐและภาคเอกชนประชุมกรรมการดำเนินงานด้านการป้องกัน...
                                                         </a>
                                                     </div>
-                                                    <div class="social-wrapper">
-                                                        <ul class="d-flex align-items-center">
-                                                            <li class="facebook d-flex align-items-center not-hover">
-                                                                <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"> <span class="color-secondary">5</span>
-                                                            </li>
-                                                            <li class="twitter d-flex align-items-center not-hover">
-                                                                <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon"> <span class="color-secondary">5</span>
-                                                            </li>
-                                                            <li class="line d-flex align-items-center not-hover">
-                                                                <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"> <span class="color-secondary">5</span>
-                                                            </li>
-                                                        </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="img-news" style="background-image: url('../../template1/assets/images/img-news-demo2.png');">
+                                                    <div class="read-news-outer">
+                                                        <a href="/news-detail-3">
+                                                            อ่านข่าวสาร
+                                                        </a>
                                                     </div>
+                                                </div>
+                                                <div class="social-wrapper">
+                                                    <ul class="d-flex align-items-center">
+                                                        <li class="facebook d-flex align-items-center not-hover">
+                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"> <span class="color-secondary">5</span>
+                                                        </li>
+                                                        <li class="twitter d-flex align-items-center not-hover">
+                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon"> <span class="color-secondary">5</span>
+                                                        </li>
+                                                        <li class="line d-flex align-items-center not-hover">
+                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"> <span class="color-secondary">5</span>
+                                                        </li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-lg-3">
                                     <div class="sub-news">
                                         <div class="group-mange-section no-mg right-0">
                                             <div class="manage-tools">
@@ -235,44 +231,44 @@
                                             </div>
                                         </div>
                                         <div class="row no-gutters">
-                                            <div class="col-lg-6">
-                                                <div class="img-news" style="background-image: url('../../template1/assets/images/img-news-demo2.png');">
-                                                    <div class="read-news-outer">
-                                                        <a href="/news-detail">
-                                                            อ่านข่าวสาร
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6">
+                                            <div class="col-lg-12">
                                                 <div class="content">
                                                     <div class="date">
                                                         <span class="color-primary">ข่าววันที่ : 5 พ.ย.</span>
                                                     </div>
                                                     <div class="desc-news">
-                                                        <a href="/news-detail">
+                                                        <a href="/news-detail-3">
                                                             หน่วยงานภาครัฐและภาคเอกชนประชุมกรรมการดำเนินงานด้านการป้องกัน...
                                                         </a>
                                                     </div>
-                                                    <div class="social-wrapper">
-                                                        <ul class="d-flex align-items-center">
-                                                            <li class="facebook d-flex align-items-center not-hover">
-                                                                <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"> <span class="color-secondary">5</span>
-                                                            </li>
-                                                            <li class="twitter d-flex align-items-center not-hover">
-                                                                <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon"> <span class="color-secondary">5</span>
-                                                            </li>
-                                                            <li class="line d-flex align-items-center not-hover">
-                                                                <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"> <span class="color-secondary">5</span>
-                                                            </li>
-                                                        </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="img-news" style="background-image: url('../../template1/assets/images/img-news-demo2.png');">
+                                                    <div class="read-news-outer">
+                                                        <a href="/news-detail-3">
+                                                            อ่านข่าวสาร
+                                                        </a>
                                                     </div>
+                                                </div>
+                                                <div class="social-wrapper">
+                                                    <ul class="d-flex align-items-center">
+                                                        <li class="facebook d-flex align-items-center not-hover">
+                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"> <span class="color-secondary">5</span>
+                                                        </li>
+                                                        <li class="twitter d-flex align-items-center not-hover">
+                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon"> <span class="color-secondary">5</span>
+                                                        </li>
+                                                        <li class="line d-flex align-items-center not-hover">
+                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"> <span class="color-secondary">5</span>
+                                                        </li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-lg-3">
                                     <div class="sub-news">
                                         <div class="group-mange-section no-mg right-0">
                                             <div class="manage-tools">
@@ -288,44 +284,44 @@
                                             </div>
                                         </div>
                                         <div class="row no-gutters">
-                                            <div class="col-lg-6">
-                                                <div class="img-news" style="background-image: url('../../template1/assets/images/img-news-demo2.png');">
-                                                    <div class="read-news-outer">
-                                                        <a href="/news-detail">
-                                                            อ่านข่าวสาร
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6">
+                                            <div class="col-lg-12">
                                                 <div class="content">
                                                     <div class="date">
                                                         <span class="color-primary">ข่าววันที่ : 5 พ.ย.</span>
                                                     </div>
                                                     <div class="desc-news">
-                                                        <a href="/news-detail">
+                                                        <a href="/news-detail-3">
                                                             หน่วยงานภาครัฐและภาคเอกชนประชุมกรรมการดำเนินงานด้านการป้องกัน...
                                                         </a>
                                                     </div>
-                                                    <div class="social-wrapper">
-                                                        <ul class="d-flex align-items-center">
-                                                            <li class="facebook d-flex align-items-center not-hover">
-                                                                <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"> <span class="color-secondary">5</span>
-                                                            </li>
-                                                            <li class="twitter d-flex align-items-center not-hover">
-                                                                <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon"> <span class="color-secondary">5</span>
-                                                            </li>
-                                                            <li class="line d-flex align-items-center not-hover">
-                                                                <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"> <span class="color-secondary">5</span>
-                                                            </li>
-                                                        </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="img-news" style="background-image: url('../../template1/assets/images/img-news-demo2.png');">
+                                                    <div class="read-news-outer">
+                                                        <a href="/news-detail-3">
+                                                            อ่านข่าวสาร
+                                                        </a>
                                                     </div>
+                                                </div>
+                                                <div class="social-wrapper">
+                                                    <ul class="d-flex align-items-center">
+                                                        <li class="facebook d-flex align-items-center not-hover">
+                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"> <span class="color-secondary">5</span>
+                                                        </li>
+                                                        <li class="twitter d-flex align-items-center not-hover">
+                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon"> <span class="color-secondary">5</span>
+                                                        </li>
+                                                        <li class="line d-flex align-items-center not-hover">
+                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"> <span class="color-secondary">5</span>
+                                                        </li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-lg-3">
                                     <div class="sub-news">
                                         <div class="group-mange-section no-mg right-0">
                                             <div class="manage-tools">
@@ -341,44 +337,44 @@
                                             </div>
                                         </div>
                                         <div class="row no-gutters">
-                                            <div class="col-lg-6">
-                                                <div class="img-news" style="background-image: url('../../template1/assets/images/img-news-demo2.png');">
-                                                    <div class="read-news-outer">
-                                                        <a href="/news-detail">
-                                                            อ่านข่าวสาร
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6">
+                                            <div class="col-lg-12">
                                                 <div class="content">
                                                     <div class="date">
                                                         <span class="color-primary">ข่าววันที่ : 5 พ.ย.</span>
                                                     </div>
                                                     <div class="desc-news">
-                                                        <a href="/news-detail">
+                                                        <a href="/news-detail-3">
                                                             หน่วยงานภาครัฐและภาคเอกชนประชุมกรรมการดำเนินงานด้านการป้องกัน...
                                                         </a>
                                                     </div>
-                                                    <div class="social-wrapper">
-                                                        <ul class="d-flex align-items-center">
-                                                            <li class="facebook d-flex align-items-center not-hover">
-                                                                <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"> <span class="color-secondary">5</span>
-                                                            </li>
-                                                            <li class="twitter d-flex align-items-center not-hover">
-                                                                <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon"> <span class="color-secondary">5</span>
-                                                            </li>
-                                                            <li class="line d-flex align-items-center not-hover">
-                                                                <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"> <span class="color-secondary">5</span>
-                                                            </li>
-                                                        </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="img-news" style="background-image: url('../../template1/assets/images/img-news-demo2.png');">
+                                                    <div class="read-news-outer">
+                                                        <a href="/news-detail-3">
+                                                            อ่านข่าวสาร
+                                                        </a>
                                                     </div>
+                                                </div>
+                                                <div class="social-wrapper">
+                                                    <ul class="d-flex align-items-center">
+                                                        <li class="facebook d-flex align-items-center not-hover">
+                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"> <span class="color-secondary">5</span>
+                                                        </li>
+                                                        <li class="twitter d-flex align-items-center not-hover">
+                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon"> <span class="color-secondary">5</span>
+                                                        </li>
+                                                        <li class="line d-flex align-items-center not-hover">
+                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"> <span class="color-secondary">5</span>
+                                                        </li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-lg-3">
                                     <div class="sub-news">
                                         <div class="group-mange-section no-mg right-0">
                                             <div class="manage-tools">
@@ -394,38 +390,38 @@
                                             </div>
                                         </div>
                                         <div class="row no-gutters">
-                                            <div class="col-lg-6">
-                                                <div class="img-news" style="background-image: url('../../template1/assets/images/img-news-demo2.png');">
-                                                    <div class="read-news-outer">
-                                                        <a href="/news-detail">
-                                                            อ่านข่าวสาร
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6">
+                                            <div class="col-lg-12">
                                                 <div class="content">
                                                     <div class="date">
                                                         <span class="color-primary">ข่าววันที่ : 5 พ.ย.</span>
                                                     </div>
                                                     <div class="desc-news">
-                                                        <a href="/news-detail">
+                                                        <a href="/news-detail-3">
                                                             หน่วยงานภาครัฐและภาคเอกชนประชุมกรรมการดำเนินงานด้านการป้องกัน...
                                                         </a>
                                                     </div>
-                                                    <div class="social-wrapper">
-                                                        <ul class="d-flex align-items-center">
-                                                            <li class="facebook d-flex align-items-center not-hover">
-                                                                <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"> <span class="color-secondary">5</span>
-                                                            </li>
-                                                            <li class="twitter d-flex align-items-center not-hover">
-                                                                <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon"> <span class="color-secondary">5</span>
-                                                            </li>
-                                                            <li class="line d-flex align-items-center not-hover">
-                                                                <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"> <span class="color-secondary">5</span>
-                                                            </li>
-                                                        </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="img-news" style="background-image: url('../../template1/assets/images/img-news-demo2.png');">
+                                                    <div class="read-news-outer">
+                                                        <a href="/news-detail-3">
+                                                            อ่านข่าวสาร
+                                                        </a>
                                                     </div>
+                                                </div>
+                                                <div class="social-wrapper">
+                                                    <ul class="d-flex align-items-center">
+                                                        <li class="facebook d-flex align-items-center not-hover">
+                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"> <span class="color-secondary">5</span>
+                                                        </li>
+                                                        <li class="twitter d-flex align-items-center not-hover">
+                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon"> <span class="color-secondary">5</span>
+                                                        </li>
+                                                        <li class="line d-flex align-items-center not-hover">
+                                                            <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"> <span class="color-secondary">5</span>
+                                                        </li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                         </div>

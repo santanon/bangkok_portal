@@ -188,3 +188,15 @@ Route::any('/sitemap-2', function () {
 Route::any('/home-4', function () {
     return view('home-4');
 });
+
+Route::any('/about-4', function () {
+    return view('about-detail-4');
+});
+
+Route::any('/news-4', function () {
+    return view('news-main-4');
+});
+
+Route::any('/news-detail-4', function () {
+    return view('news-detail-4');
+});

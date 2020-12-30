@@ -44,14 +44,6 @@ Route::any('/', function () {
     return view('home');
 });
 
-Route::any('/home-2', function () {
-    return view('home-2');
-});
-Route::any('/home-3', function () {
-    return view('home-3');
-});
-
-
 Route::any('/coverpage', function () {
     return view('coverpage');
 });
@@ -181,6 +173,39 @@ Route::any('/contact-2', function () {
 Route::any('/sitemap-2', function () {
     return view('sitemap-2');
 });
+
+//Template3
+Route::any('/home-3', function () {
+    return view('home-3');
+});
+Route::any('/about-3', function () {
+    return view('about-detail-3');
+});
+Route::any('/news-3', function () {
+    return view('news-main-3');
+});
+Route::any('/news-detail-3', function () {
+    return view('news-detail-3');
+});
+Route::any('/album-3', function () {
+    return view('gallery-main-3');
+});
+Route::any('/video-3', function () {
+    return view('video-main-3');
+});
+Route::any('/download-3', function () {
+    return view('download-main-3');
+});
+Route::any('/faq-3', function () {
+    return view('faq-main-3');
+});
+Route::any('/questionnaire-3', function () {
+    return view('questionnaire-main-3');
+});
+Route::any('/questionnaire-detail-3', function () {
+    return view('questionnaire-detail-3');
+});
+
 
 
 

@@ -17,83 +17,65 @@
                     </div>
                 </div>
                 <div class="container">
-                    <div class="inner-content">
-                        <div class="top-content">
-                            <div class="group-text">
-                                <h3 class="title color-primary">BANNER</h3>
-                                <p class="desc color-secondary">The Bangkok Metropolitan Council Secretariat </p>
-                            </div>
-                        </div>
-                        <div class="main-content">
-                            <div class="action-slide dis-flex justify-end">
-                                <div class="slide-wrapper" id="action-slide_5">
-                                    <div class="slide-arrow slide-prev"></div>
-                                    <div class="slide-arrow slide-next"></div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="inner-content">
+                                <div class="top-content border-bottom">
+                                    <div class="group-text">
+                                        <h3 class="title color-primary">BANNER</h3>
+                                        <p class="desc color-secondary">The Bangkok Metropolitan Council Secretariat </p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="group-slide">
-                                <ul id="slide_5" class="list-item">
-                                    <li>
-                                        <div class="item -album">
-                                            <div class="cover-album" style="background-image: url('../../template1/assets/images/img-banner-demo1.png');">
-                                                <a href="#"><div class="bg-layer"></div></a>
-                                                <div class="top-album">
-                                                    <div class="source">
-                                                        <span>FACEBOOK</span>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="inner-content">
+                                <div class="main-content">
+                                    <div class="group-slide">
+                                        <ul id="slide_5" class="list-item">
+                                            <li>
+                                                <div class="item -album">
+                                                    <div class="cover-album" style="background-image: url('../../template1/assets/images/img-banner-demo1.png');">
+                                                        <a href="#"><div class="bg-layer"></div></a>
+                                                        <div class="caption-album show bg-color-secondary">
+                                                            <span>ผู้ว่าฯ อัศวิน</span>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="caption-album show bg-color-primary-opacity">
-                                                    <span>ผู้ว่าฯ อัศวิน</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="item -album">
-                                            <div class="cover-album" style="background-image: url('../../template1/assets/images/img-album-demo2.jpg');">
-                                                <a href="#"><div class="bg-layer"></div></a>
-                                                <div class="top-album">
-                                                    <div class="source">
-                                                        <span>TWITTER</span>
+                                            </li>
+                                            <li>
+                                                <div class="item -album">
+                                                    <div class="cover-album" style="background-image: url('../../template1/assets/images/img-album-demo2.jpg');">
+                                                        <a href="#"><div class="bg-layer"></div></a>
+                                                        <div class="caption-album show bg-color-secondary">
+                                                            <span>สำนักงานเลขานุการสภา</span>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="caption-album show bg-color-primary-opacity">
-                                                    <span>สำนักงานเลขานุการสภา</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="item -album">
-                                            <div class="cover-album" style="background-image: url('../../template1/assets/images/img-album-demo3.jpg');">
-                                                <a href="#"><div class="bg-layer"></div></a>
-                                                <div class="top-album">
-                                                    <div class="source">
-                                                        <span>FACEBOOK</span>
+                                            </li>
+                                            <li>
+                                                <div class="item -album">
+                                                    <div class="cover-album" style="background-image: url('../../template1/assets/images/img-album-demo3.jpg');">
+                                                        <a href="#"><div class="bg-layer"></div></a>
+                                                        <div class="caption-album show bg-color-secondary">
+                                                            <span>สำนักงานเลขานุการสภา</span>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="caption-album show bg-color-primary-opacity">
-                                                    <span>สำนักงานเลขานุการสภา</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="item -album">
-                                            <div class="cover-album" style="background-image: url('../../template1/assets/images/img-album-demo4.jpg');">
-                                                <a href="#"><div class="bg-layer"></div></a>
-                                                <div class="top-album">
-                                                    <div class="source">
-                                                        <span>สายด่วนเลขานุการสภา กทม.</span>
+                                            </li>
+                                            <li>
+                                                <div class="item -album">
+                                                    <div class="cover-album" style="background-image: url('../../template1/assets/images/img-album-demo4.jpg');">
+                                                        <a href="#"><div class="bg-layer"></div></a>
+                                                        <div class="caption-album show bg-color-secondary">
+                                                            <span>0-2222-5349</span>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="caption-album show bg-color-primary-opacity">
-                                                    <span>0-2222-5349</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

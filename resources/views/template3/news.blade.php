@@ -20,7 +20,7 @@
                 </div>
                 <div class="container">
                     <div class="row d-flex align-items-stretch">
-                        <div class="col-lg-6">
+                        <div class="col-lg-12">
                             <div class="inner-content">
                                 <div class="top-content border-bottom">
                                     <div class="group-text">

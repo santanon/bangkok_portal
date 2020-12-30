@@ -50,8 +50,7 @@
 
 .btn-custom{
     width: 200px;
-    margin-top: 20px;
-    
+    margin-top: 20px;   
 
     &.width-full{
         width: 100%;
@@ -60,6 +59,35 @@
     &.mg-left-auto{
         margin-left: auto;
     }
+
+    &.btn-custom-skew{
+        transform: skew(-14deg);
+        border: 1px solid $color-primary;
+        background-color: $color-primary;
+        color: white;
+
+        &:hover, &:focus, &:active{
+            border-color: $color-secondary !important;
+            background-color: $color-secondary !important;
+        }
+
+        .btn{
+            width: 100%;
+            text-align: center;
+            transform: skew(14deg);
+
+            &.btn-primary{
+                border: none;
+                background-color: transparent;
+
+                &:hover, &:focus, &:active{
+                    border-color: transparent !important;
+                    background-color: transparent !important;
+                }
+            }
+        }
+    }
+
     .input-custom{
         text-align: right;
     }
@@ -103,6 +131,18 @@
         &:hover, &:focus, &:active{
             border-color: $color-secondary !important;
             background-color: $color-secondary !important;
+        }
+    }
+
+    &.btn-outline-primary{
+        border: 1px solid $color-primary;
+        background-color: white;
+        color: $color-primary;
+
+        &:hover, &:focus, &:active{
+            color: white;
+            border-color: $color-primary !important;
+            background-color: $color-primary !important;
         }
     }
 

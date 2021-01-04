@@ -29,10 +29,92 @@ function sfi(title,url)
     </header>
     
     <div id="site-content">
-        
-        <div class="banner-wrapper">
-            @include('template4/main-slide')
+        <div class="group-section-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-10">
+                        <div class="banner-wrapper">
+                            @include('template4/main-slide')
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="gallery-template">
+                            <div class="item video">
+                                <div class="cover" style="background-image: url('../../template4/assets/images/img-album-demo1.png');">
+                                    <a id="dynamic3" href="javascript:void(0)" >
+                                        <div class="bg-layer">
+                                            <div class="icon-search-hover">
+                                                <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                    width="30px" height="30px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+                                                <path class="st0" d="M19.4,13.9L6.9,22c-1.4,0.9-3.4-0.2-3.4-1.8V3.9c0-1.8,2-2.9,3.4-1.8l12.5,8.1C20.9,11,20.9,13.1,19.4,13.9z"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="title">
+                                        <div class="source">
+                                            <span>PR BKK</span>
+                                        </div>
+                                    </div>
+                                    <div class="caption">
+                                        <span>กทม. ร่วมเป็นเกียรติในพิธีลงนามสร้างสวนป่า</span>
+                                    </div>
+                                </div>
+                                <div class="group-mange-section">
+                                    <div class="manage-tools">
+                                        <ul>
+                                            <li class="order-list">จัดการ</li>
+                                            <li class="order-list">ลบ</li>
+                                            <li class="order-list">ซ่อน</li>
+                                            <li class="order-list order-close">ปิด</li>
+                                        </ul>
+                                    </div> 
+                                    <div class="manage-edit">
+                                        <img src="{{ asset('template4/assets/images/icons/icon-edit.svg')}}" alt="icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item video">
+                                <div class="cover" style="background-image: url('../../template4/assets/images/img-album-demo2.jpg');">
+                                    <a id="dynamic4" href="javascript:void(0)" >
+                                        <div class="bg-layer">
+                                            <div class="icon-search-hover">
+                                                <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                    width="30px" height="30px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+                                                <path class="st0" d="M19.4,13.9L6.9,22c-1.4,0.9-3.4-0.2-3.4-1.8V3.9c0-1.8,2-2.9,3.4-1.8l12.5,8.1C20.9,11,20.9,13.1,19.4,13.9z"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="title">
+                                        <div class="source">
+                                            <span>PR BKK</span>
+                                        </div>
+                                    </div>
+                                    <div class="caption">
+                                        <span>กทม. ร่วมเป็นเกียรติในพิธีลงนามสร้างสวนป่า</span>
+                                    </div>
+                                </div>
+                                <div class="group-mange-section">
+                                    <div class="manage-tools">
+                                        <ul>
+                                            <li class="order-list">จัดการ</li>
+                                            <li class="order-list">ลบ</li>
+                                            <li class="order-list">ซ่อน</li>
+                                            <li class="order-list order-close">ปิด</li>
+                                        </ul>
+                                    </div> 
+                                    <div class="manage-edit">
+                                        <img src="{{ asset('template4/assets/images/icons/icon-edit.svg')}}" alt="icon">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        
 
         <div class="group-section-content" id="manage_dragdrop">
             @include('template4/news')
@@ -351,6 +433,9 @@ function sfi(title,url)
                 dynamicEl: [{
                     src: 'https://youtu.be/YD_gvR234qg',
                     thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-1.jpg'
+                },{
+                    src: 'https://youtu.be/YD_gvR234qg',
+                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-1.jpg'
                 }],
                 slideEndAnimatoin: false,
                 loop: false,
@@ -380,7 +465,6 @@ function sfi(title,url)
             })
         });
 </script>
-
 
 <link rel="stylesheet" href="{{ asset('template4/theme-pink/css/calendar/main.min.css')}}">
 <script type="text/javascript" src="{{ asset('template4/js/calendar/main.min.js') }}"></script>

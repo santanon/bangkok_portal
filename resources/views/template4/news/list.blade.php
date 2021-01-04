@@ -1,16 +1,25 @@
 <div class="section-content">
-                <div class="container">
-                    <div class="inner-content">
-                        <div class="top-content">
-                            <div class="group-text__no-styled txt-center">
+<div class="inner-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="top-content styled-row bg-color-secondary">
+                            <div class="group-text">
                                 <h3 class="title">ข่าวประชาสัมพันธ์</h3>
                                 <p class="desc">The Bangkok Metropolitan Council Secretariat </p>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
                         <div class="search-content">
                             <form action="">
                                 <div class="row">
-                                    <div class="col-lg-4">
+                                    <div class="col-lg-3">
                                         <div class="input-custom inp-categories">
                                             <div class="select-wrapper width-full">
                                                 <select name="month" class="slc">
@@ -24,9 +33,15 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-3">
+                                    <div class="col-lg-2">
                                         <div class="input-custom inp-calendar">
-                                            <input class="style-input" type="text" name="datefilter" placeholder="จากวันที่ - ถึงวันที่" />
+                                            <input id="start_date" class="style-input" type="text" name="datefilter" placeholder="จากวันที่" autocomplete="off" data-provide="datepicker" data-date-language="th-th" />
+                                            <div class="icon-calendar"><i class="far fa-calendar"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <div class="input-custom inp-calendar">
+                                            <input id="end_date" class="style-input" type="text" name="datefilter" placeholder="ถึงวันที่" autocomplete="off" data-provide="datepicker" data-date-language="th-th" />
                                             <div class="icon-calendar"><i class="far fa-calendar"></i></div>
                                         </div>
                                     </div>
@@ -51,17 +66,21 @@
                                 </div>
                             </form>
                         </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
                         <div class="main-content">
                             <div class="row">
-                            <div class="row">
-                                <div class="col-lg-9">
-                                    <div class="main-news">
+                                <div class="col-sm-6 col-md-4 col-lg-3">
+                                    <div class="sub-news">
                                         <div class="group-mange-section">
                                             <div class="manage-tools">
                                                 <ul>
                                                     <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('NEWS','manage-admin/edit?m=portal_website_news');">แก้ไข</a></li> 
                                                     <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_hide">ซ่อน</a></li>
-                                                    <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_delete">ลบ</a></li> 
+                                                    <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_delete">ลบ</a></li>
                                                     <li class="order-list order-close">ปิด</li>
                                                 </ul>
                                             </div>
@@ -70,82 +89,20 @@
                                             </div> 
                                         </div>
                                         <div class="row no-gutters">
-                                            <div class="col-sm-8">
-                                                <div class="img-news" style="background-image: url('../../assets/images/img-news-demo1.png');">
+                                            <div class="col-lg-12">
+                                                <div class="img-news" style="background-image: url('../../assets/images/img-news-demo2.png');">
                                                     <div class="pin"><i class="fas fa-thumbtack"></i></div>
                                                     <div class="read-news-outer">
-                                                        <a href="/news-detail">
+                                                        <a href="/">
                                                             อ่านข่าวสาร
                                                         </a>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <div class="content-news-main">
-                                                    <div class="date">
-                                                        <span>ข่าววันที่ : 25 พ.ย.</span> <img src="{{ asset('../../assets/images/icons/icon-new.png')}}" alt="icon">
-                                                    </div>
-                                                    <div class="desc-news">
-                                                        <a href="">
-                                                            หน่วยงานภาครัฐและภาคเอกชนประชุมกรรมการดำเนินงานด้านการป้องกัน
-                                                        </a>
-                                                    </div>
-                                                    <div class="desc-news-detail">
-                                                        <p>
-                                                            (27 ต.ค.63) เวลา 08.30 น.
-                                                            พล.ต.อ.อัศวิน ขวัญเมือง 
-                                                            ผู้ว่าราชการกรุงเทพมหานคร 
-                                                            เป็นประธานเปิดกิจกรรมฟื้นวิถีคลอง
-                                                            ส่องประวัติศาสตร์ “จากกรุงธนบุรีศรี
-                                                            มหาสมุทรสู่สุดทะเล บางขุนเทียน”
-                                                        </p>
-                                                    </div>
-                                                    <div class="social-wrapper">
-                                                        <ul class="d-flex align-items-center">
-                                                            <li class="facebook d-flex align-items-center not-hover">
-                                                                <img src="{{ asset('../../assets/images/icons/icon-social-facebook.svg')}}" alt="icon"><span class="color-secondary">5</span> 
-                                                            </li>
-                                                            <li class="twitter d-flex align-items-center not-hover">
-                                                                <img src="{{ asset('../../assets/images/icons/icon-social-twitter.svg')}}" alt="icon"> <span class="color-secondary">5</span> 
-                                                            </li>
-                                                            <li class="line d-flex align-items-center not-hover">
-                                                                <img src="{{ asset('../../assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"> <span class="color-secondary">5</span> 
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="sub-news">
-                                        <div class="group-mange-section">
-                                            <div class="manage-tools">
-                                                <ul>
-                                                    <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('NEWS','manage-admin/edit?m=portal_website_news');">แก้ไข</a></li> 
-                                                    <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_hide">ซ่อน</a></li>
-                                                    <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_delete">ลบ</a></li>
-                                                    <li class="order-list order-close">ปิด</li>
-                                                </ul>
-                                            </div>
-                                            <div class="manage-edit">
-                                                <img src="{{ asset('../../assets/images/icons/icon-edit.svg')}}" alt="icon">
-                                            </div> 
-                                        </div>
-                                        <div class="row no-gutters">
-                                            <div class="col-lg-12">
-                                                <div class="img-news" style="background-image: url('../../assets/images/img-news-demo2.png');">
-                                                    <div class="read-news-outer">
-                                                        <a href="/news-detail">
-                                                            อ่านข่าวสาร
-                                                        </a>
-                                                    </div>
+                                                    <div class="icon-status"></div>
                                                 </div>
                                             </div>
                                             <div class="col-lg-12">
                                                 <div class="content">
-                                                    <div class="date">
+                                                    <div class="date color-secondary">
                                                         <span>ข่าววันที่ : 5 พ.ย.</span>
                                                     </div>
                                                     <div class="desc-news">
@@ -171,7 +128,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3">
+
+                                <div class="col-sm-6 col-md-4 col-lg-3">
                                     <div class="sub-news">
                                         <div class="group-mange-section">
                                             <div class="manage-tools">
@@ -189,16 +147,18 @@
                                         <div class="row no-gutters">
                                             <div class="col-lg-12">
                                                 <div class="img-news" style="background-image: url('../../assets/images/img-news-demo2.png');">
+                                                    <!-- <div class="pin"><i class="fas fa-thumbtack"></i></div> -->
                                                     <div class="read-news-outer">
-                                                        <a href="/news-detail">
+                                                        <a href="/">
                                                             อ่านข่าวสาร
                                                         </a>
                                                     </div>
+                                                    <div class="icon-status"></div>
                                                 </div>
                                             </div>
                                             <div class="col-lg-12">
                                                 <div class="content">
-                                                    <div class="date">
+                                                    <div class="date color-secondary">
                                                         <span>ข่าววันที่ : 5 พ.ย.</span>
                                                     </div>
                                                     <div class="desc-news">
@@ -224,7 +184,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3">
+
+                                <div class="col-sm-6 col-md-4 col-lg-3">
                                     <div class="sub-news">
                                         <div class="group-mange-section">
                                             <div class="manage-tools">
@@ -242,16 +203,18 @@
                                         <div class="row no-gutters">
                                             <div class="col-lg-12">
                                                 <div class="img-news" style="background-image: url('../../assets/images/img-news-demo2.png');">
+                                                    <!-- <div class="pin"><i class="fas fa-thumbtack"></i></div> -->
                                                     <div class="read-news-outer">
-                                                        <a href="/news-detail">
+                                                        <a href="/">
                                                             อ่านข่าวสาร
                                                         </a>
                                                     </div>
+                                                    <!-- <div class="icon-status"></div> -->
                                                 </div>
                                             </div>
                                             <div class="col-lg-12">
                                                 <div class="content">
-                                                    <div class="date">
+                                                    <div class="date color-secondary">
                                                         <span>ข่าววันที่ : 5 พ.ย.</span>
                                                     </div>
                                                     <div class="desc-news">
@@ -277,7 +240,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3">
+
+                                <div class="col-sm-6 col-md-4 col-lg-3">
                                     <div class="sub-news">
                                         <div class="group-mange-section">
                                             <div class="manage-tools">
@@ -295,16 +259,18 @@
                                         <div class="row no-gutters">
                                             <div class="col-lg-12">
                                                 <div class="img-news" style="background-image: url('../../assets/images/img-news-demo2.png');">
+                                                    <!-- <div class="pin"><i class="fas fa-thumbtack"></i></div> -->
                                                     <div class="read-news-outer">
-                                                        <a href="/news-detail">
+                                                        <a href="/">
                                                             อ่านข่าวสาร
                                                         </a>
                                                     </div>
+                                                    <!-- <div class="icon-status"></div> -->
                                                 </div>
                                             </div>
                                             <div class="col-lg-12">
                                                 <div class="content">
-                                                    <div class="date">
+                                                    <div class="date color-secondary">
                                                         <span>ข่าววันที่ : 5 พ.ย.</span>
                                                     </div>
                                                     <div class="desc-news">
@@ -330,7 +296,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3">
+
+                                <div class="col-sm-6 col-md-4 col-lg-3">
                                     <div class="sub-news">
                                         <div class="group-mange-section">
                                             <div class="manage-tools">
@@ -348,16 +315,18 @@
                                         <div class="row no-gutters">
                                             <div class="col-lg-12">
                                                 <div class="img-news" style="background-image: url('../../assets/images/img-news-demo2.png');">
+                                                    <!-- <div class="pin"><i class="fas fa-thumbtack"></i></div> -->
                                                     <div class="read-news-outer">
-                                                        <a href="/news-detail">
+                                                        <a href="/">
                                                             อ่านข่าวสาร
                                                         </a>
                                                     </div>
+                                                    <!-- <div class="icon-status"></div> -->
                                                 </div>
                                             </div>
                                             <div class="col-lg-12">
                                                 <div class="content">
-                                                    <div class="date">
+                                                    <div class="date color-secondary">
                                                         <span>ข่าววันที่ : 5 พ.ย.</span>
                                                     </div>
                                                     <div class="desc-news">
@@ -383,7 +352,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3">
+
+                                <div class="col-sm-6 col-md-4 col-lg-3">
                                     <div class="sub-news">
                                         <div class="group-mange-section">
                                             <div class="manage-tools">
@@ -401,16 +371,18 @@
                                         <div class="row no-gutters">
                                             <div class="col-lg-12">
                                                 <div class="img-news" style="background-image: url('../../assets/images/img-news-demo2.png');">
+                                                    <!-- <div class="pin"><i class="fas fa-thumbtack"></i></div> -->
                                                     <div class="read-news-outer">
-                                                        <a href="/news-detail">
+                                                        <a href="/">
                                                             อ่านข่าวสาร
                                                         </a>
                                                     </div>
+                                                    <!-- <div class="icon-status"></div> -->
                                                 </div>
                                             </div>
                                             <div class="col-lg-12">
                                                 <div class="content">
-                                                    <div class="date">
+                                                    <div class="date color-secondary">
                                                         <span>ข่าววันที่ : 5 พ.ย.</span>
                                                     </div>
                                                     <div class="desc-news">
@@ -436,7 +408,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3">
+
+                                <div class="col-sm-6 col-md-4 col-lg-3">
                                     <div class="sub-news">
                                         <div class="group-mange-section">
                                             <div class="manage-tools">
@@ -454,16 +427,18 @@
                                         <div class="row no-gutters">
                                             <div class="col-lg-12">
                                                 <div class="img-news" style="background-image: url('../../assets/images/img-news-demo2.png');">
+                                                    <!-- <div class="pin"><i class="fas fa-thumbtack"></i></div> -->
                                                     <div class="read-news-outer">
-                                                        <a href="/news-detail">
+                                                        <a href="/">
                                                             อ่านข่าวสาร
                                                         </a>
                                                     </div>
+                                                    <!-- <div class="icon-status"></div> -->
                                                 </div>
                                             </div>
                                             <div class="col-lg-12">
                                                 <div class="content">
-                                                    <div class="date">
+                                                    <div class="date color-secondary">
                                                         <span>ข่าววันที่ : 5 พ.ย.</span>
                                                     </div>
                                                     <div class="desc-news">
@@ -489,7 +464,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3">
+
+                                <div class="col-sm-6 col-md-4 col-lg-3">
                                     <div class="sub-news">
                                         <div class="group-mange-section">
                                             <div class="manage-tools">
@@ -507,16 +483,18 @@
                                         <div class="row no-gutters">
                                             <div class="col-lg-12">
                                                 <div class="img-news" style="background-image: url('../../assets/images/img-news-demo2.png');">
+                                                    <!-- <div class="pin"><i class="fas fa-thumbtack"></i></div> -->
                                                     <div class="read-news-outer">
-                                                        <a href="/news-detail">
+                                                        <a href="/">
                                                             อ่านข่าวสาร
                                                         </a>
                                                     </div>
+                                                    <!-- <div class="icon-status"></div> -->
                                                 </div>
                                             </div>
                                             <div class="col-lg-12">
                                                 <div class="content">
-                                                    <div class="date">
+                                                    <div class="date color-secondary">
                                                         <span>ข่าววันที่ : 5 พ.ย.</span>
                                                     </div>
                                                     <div class="desc-news">
@@ -542,7 +520,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3">
+
+                                <div class="col-sm-6 col-md-4 col-lg-3">
                                     <div class="sub-news">
                                         <div class="group-mange-section">
                                             <div class="manage-tools">
@@ -560,16 +539,18 @@
                                         <div class="row no-gutters">
                                             <div class="col-lg-12">
                                                 <div class="img-news" style="background-image: url('../../assets/images/img-news-demo2.png');">
+                                                    <!-- <div class="pin"><i class="fas fa-thumbtack"></i></div> -->
                                                     <div class="read-news-outer">
-                                                        <a href="/news-detail">
+                                                        <a href="/">
                                                             อ่านข่าวสาร
                                                         </a>
                                                     </div>
+                                                    <!-- <div class="icon-status"></div> -->
                                                 </div>
                                             </div>
                                             <div class="col-lg-12">
                                                 <div class="content">
-                                                    <div class="date">
+                                                    <div class="date color-secondary">
                                                         <span>ข่าววันที่ : 5 พ.ย.</span>
                                                     </div>
                                                     <div class="desc-news">
@@ -595,12 +576,58 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                                <div class="col-lg-6">
-                                    <div class="row no-gutters">
-                                        <div class="col-lg-6">
-                                            <div class="add-news">
-                                                <i class="fas fa-plus"></i>
+
+                                <div class="col-sm-6 col-md-4 col-lg-3">
+                                    <div class="sub-news">
+                                        <div class="group-mange-section">
+                                            <div class="manage-tools">
+                                                <ul>
+                                                    <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('NEWS','manage-admin/edit?m=portal_website_news');">แก้ไข</a></li> 
+                                                    <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_hide">ซ่อน</a></li>
+                                                    <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_delete">ลบ</a></li>
+                                                    <li class="order-list order-close">ปิด</li>
+                                                </ul>
+                                            </div>
+                                            <div class="manage-edit">
+                                                <img src="{{ asset('../../assets/images/icons/icon-edit.svg')}}" alt="icon">
+                                            </div> 
+                                        </div>
+                                        <div class="row no-gutters">
+                                            <div class="col-lg-12">
+                                                <div class="img-news" style="background-image: url('../../assets/images/img-news-demo2.png');">
+                                                    <!-- <div class="pin"><i class="fas fa-thumbtack"></i></div> -->
+                                                    <div class="read-news-outer">
+                                                        <a href="/">
+                                                            อ่านข่าวสาร
+                                                        </a>
+                                                    </div>
+                                                    <!-- <div class="icon-status"></div> -->
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="content">
+                                                    <div class="date color-secondary">
+                                                        <span>ข่าววันที่ : 5 พ.ย.</span>
+                                                    </div>
+                                                    <div class="desc-news">
+                                                        <a href="">
+                                                            หน่วยงานภาครัฐและภาคเอกชนประชุมกรรมการดำเนินงานด้านการป้องกัน...
+                                                        </a>
+                                                    </div>
+                                                    <div class="social-wrapper">
+                                                        <ul class="d-flex align-items-center">
+                                                            <li class="facebook d-flex align-items-center not-hover">
+                                                                <img src="{{ asset('../../assets/images/icons/icon-social-facebook.svg')}}" alt="icon"><span class="color-secondary">5</span> 
+                                                            </li>
+                                                            <li class="twitter d-flex align-items-center not-hover">
+                                                                <img src="{{ asset('../../assets/images/icons/icon-social-twitter.svg')}}" alt="icon"><span class="color-secondary">5</span> 
+                                                            </li>
+                                                            <li class="line d-flex align-items-center not-hover">
+                                                                <img src="{{ asset('../../assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"><span class="color-secondary">5</span> 
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -623,3 +650,5 @@
                     </div>
                 </div>
             </div>
+        </div>
+</div>

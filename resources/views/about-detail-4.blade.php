@@ -1,8 +1,8 @@
-@section('title', 'รายละเอียดข่าว')
+@section('title', 'เกี่ยวกับหน่วยงาน')
 @section('tagkeyword', '')
 @section('tagdescription', '')
 
-@extends('template2/include/start')
+@extends('template4/include/start')
 @section('contentpage')
 
 <div class="main-wrapper">
@@ -13,12 +13,27 @@
     </div>
 
     <header id="header-wrapper">
-        @include('template2/include.header')
+        @include('template4/include.header')
     </header>
     
     <div id="site-content">
+        <div class="group-section-breadcrumb">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#">หน้าแรก</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">เกี่ยวกับหน่วยงาน</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div> 
+
         <div class="banner-wrapper onlyOne">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
                         <div class="group-mange-section no-mg right-0">
@@ -31,13 +46,13 @@
                                 </ul>
                             </div> 
                             <div class="manage-edit">
-                                <img src="{{ asset('template2/assets/images/icons/icon-edit.svg')}}" alt="icon">
+                                <img src="{{ asset('template4/assets/images/icons/icon-edit.svg')}}" alt="icon">
                             </div>
                         </div>
                         <ul>
                             <li>
                                 <div class="bg-layer"></div>
-                                <div class="banner" style="background-image: url('../../template2/assets/images/banner/img-banner-demo2.png');"></div>
+                                <div class="banner" style="background-image: url('../../template4/assets/images/banner/img-banner-demo2.png');"></div>
                                 <div class="item-Onbanner-outer">
                                     <div class="item-Onbanner-inner">
                                         <div class="list">
@@ -53,26 +68,13 @@
             </div>
         </div>
 
-        <div class="group-section-breadcrumb">
-            <div class="container">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">หน้าแรก</a></li>
-                        <li class="breadcrumb-item"><a href="/news">ข่าวสาร</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">รายละเอียด</li>
-                    </ol>
-                </nav>
-            </div>
-            
-        </div> 
-
         <div class="group-section-content">
-            @include('template2/news.detail')
+            @include('template4/about.detail')
         </div>
     </div>
 
     <footer id="footer-wrapper">
-        @include('template2/include.footer')
+        @include('template4/include.footer')
     </footer>
 
     <!-- Manage Save -->
@@ -123,38 +125,13 @@
 </div>
 
 
-@include('template2/include.css_scripts')
-<!-- FlexSlider -->
-<link rel="stylesheet" href="{{ asset('template2/theme-orange/css/flexslider.css')}}">
-<script type="text/javascript" src="{{ asset('template2/js/jquery.flexslider.js') }}"></script>
+@include('template4/include.css_scripts')
 
 <!-- CKeditor -->
 <script src="https://cdn.ckeditor.com/ckeditor5/23.1.0/inline/ckeditor.js"></script>
 
 
 <script type="text/javascript">
-    $(window).load(function(){
-        $('#carousel').flexslider({
-            animation: "slide",
-            controlNav: false,
-            animationLoop: false,
-            slideshow: false,
-            itemWidth: 260,
-            itemMargin: 30,
-            asNavFor: '#slider'
-        });
-
-        $('#slider').flexslider({
-            animation: "slide",
-            controlNav: false,
-            animationLoop: false,
-            slideshow: false,
-            sync: "#carousel",
-            start: function(slider){
-                $('body').removeClass('loading');
-            }
-        });
-    });
     $(document).ready(function () {
         
     });

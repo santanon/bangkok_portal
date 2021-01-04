@@ -49,9 +49,8 @@
 }
 
 .btn-custom{
-    width: 200px;
-    margin-top: 20px;
-    
+    display: inline-block;
+    padding: 0 45px;
 
     &.width-full{
         width: 100%;
@@ -60,6 +59,35 @@
     &.mg-left-auto{
         margin-left: auto;
     }
+
+    &.btn-custom-skew{
+        transform: skew(-14deg);
+        border: 1px solid $color-primary;
+        background-color: $color-primary;
+        color: white;
+
+        &:hover, &:focus, &:active{
+            border-color: $color-secondary !important;
+            background-color: $color-secondary !important;
+        }
+
+        .btn{
+            width: 100%;
+            text-align: center;
+            transform: skew(14deg);
+
+            &.btn-primary{
+                border: none;
+                background-color: transparent;
+
+                &:hover, &:focus, &:active{
+                    border-color: transparent !important;
+                    background-color: transparent !important;
+                }
+            }
+        }
+    }
+
     .input-custom{
         text-align: right;
     }
@@ -96,20 +124,42 @@
     outline: none !important;
 
     &.btn-primary{
-        border: 1px solid $color-text;
-        background-color: transparent;
+        border: 1px solid $color-primary;
+        background-color: $color-primary;
+        color: white;
+
+        &:hover, &:focus, &:active{
+            border-color: $color-secondary !important;
+            background-color: $color-secondary !important;
+        }
+    }
+
+    &.btn-outline-primary{
+        border: 1px solid $color-primary;
+        background-color: white;
         color: $color-primary;
 
         &:hover, &:focus, &:active{
-            color: white !important;
+            color: white;
             border-color: $color-primary !important;
             background-color: $color-primary !important;
         }
     }
 
+    &.btn-outline-white{
+        border: 1px solid white;
+        color: white;
+
+        &:hover, &:focus, &:active{
+            color: $color-primary;
+            border-color: white !important;
+            background-color: white !important;
+        }
+    }
+
     &.btn-outline-dark{
-        border: 1px solid #b1b1b1;
-        color: #b1b1b1;
+        border: 1px solid $color-text;
+        color: $color-text;
 
         &:hover, &:focus, &:active{
             border-color: $color-primary;

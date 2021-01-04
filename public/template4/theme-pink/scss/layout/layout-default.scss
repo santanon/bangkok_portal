@@ -37,19 +37,21 @@
                 position: absolute;
                 bottom: 0;
                 width: 100%;
-                color: white;
+                color: #fff;
                 padding: 5px;
                 text-align: center;
             }
         }
     }
 }
+
 .ui-sortable{
     transition: none;
     .section-template{
         transition: none;
     }
 }
+
 .drop-placeholder {
     background-color: lightgray;
     height: 3.5em;
@@ -57,8 +59,10 @@
     padding-bottom: 12px;
     line-height: 1.2em;
 }
+
 .group-section-breadcrumb{
-    margin-bottom: 30px;
+    position: relative;
+    margin: 15px 0 20px;
 }
 
 // Modal
@@ -98,7 +102,7 @@
                 z-index: 9;
                 width: 40px;
                 height: 40px;
-                background-color: $color-text;
+                background-color: #525252;
                 margin-left: auto;
                 cursor: pointer;
                 display: flex;
@@ -144,7 +148,7 @@
                                 a{
                                     font-size: 1.4rem;
                                     font-weight: $font-regular;
-                                    color: white;
+                                    color: #fff;
                                     
                                     &:hover{
                                         text-decoration: none;
@@ -157,12 +161,12 @@
                         }
                     }
                     .text-modal{
-                        background-color: white;
+                        background-color: #fff;
                         padding: 15px;
                         font-size: 1.6rem;
                         font-weight: $font-regular;
                         line-height: 2.4rem;
-                        color: $color-text;
+                        color: #525252;
                         &.text-alert-system{
                             font-size: 2rem;
                             i{
@@ -317,14 +321,15 @@ $howManySteps: 100; //this needs to be even.
             li{
                 display: flex;
                 align-items: center;
+                font-size: 1.6rem;
                 a{
                     font-size: 1.6rem;
                     font-weight: $font-regular;
-                    color: $color-text;
+                    color: #525252;
                     opacity: 0.7;
                 }
                 &.active{
-                    color: $color-text;
+                    color: #525252;
                 }
             }
             .breadcrumb-item + .breadcrumb-item{
@@ -351,140 +356,162 @@ $howManySteps: 100; //this needs to be even.
     }
 }
 .group-section-content{
-    overflow: hidden;
-    
     .section-content{
         position: relative;
-        padding: 30px 0;
+        padding: 40px 0;
         &:first-of-type{
             padding-top: 0;
         }
         .inner-content{
             .top-content{
-                position: relative;
-                // margin-bottom: 20px;
+                display: flex; 
+                flex-flow: wrap;
+                align-items: center;
+                padding: 0 20px 20px;
+                
                 .group-text{
-                    display: flex;
-                    align-items: center;
-                    flex-direction: column;
+                    margin: 0 auto;
+                    color: $color-text;
+                    text-align: center;
+                    word-break: break-word;
                     .title{
-                        position: relative;
-                        padding: 5px 50px;
                         margin: 0 0 20px;
                         font-size: 3.6rem;
                         line-height: 4rem;
                         font-weight: $font-medium;
-                        color: $color-secondary;
-                        border: solid 2px #cfd1d4;
-                        text-align: center;
-                        background-color: #f8f8f8;
-                        z-index: 1;
-
-                        &:hover{
-                            color: $color-primary;
-                        }
-
-                        &:after{
-                            position: absolute;
-                            top: 11px;
-                            right: 5px;
-                            width: 30px;
-                            height: 30px;
-                            padding: 0;
-                            font-size: 3rem;
-                            line-height: 3rem;
-                            content: '';
-                            background-image: url('../../theme-orange/assets/images/icons/arrow-right.svg');
-                            background-size: 30px 30px;
-                            background-position: 0 0;
-                            background-repeat: no-repeat;
-                        }
+                        
                     }
-
                     .desc{
-                        margin: 0 0 20px;
+                        margin: 0 0 40px;
                         font-size: 1.6rem;
                         line-height: 2rem;
                         font-weight: $font-regular;
-                        color: $color-text;
                     }
+                }
 
-                    &:after{
-                        position: absolute;
-                        // top: 50%;
-                        // transform: translateY(-50%);
-                        top: 27px;
-                        left: 0;
-                        width: 100%;
-                        height: 2px;
-                        content: '';
-                        border-bottom: solid 2px #cfd1d4;
-                        z-index: 0;
-                    }
+                &.styled-row{
+                    flex-flow: row;
+                    justify-content: space-between;
+                    padding: 10px 20px;
+                    margin-bottom: 35px;
 
-                    &__no-styled{
+                    .group-text{
                         display: flex;
-                        flex-direction: column;
+                        flex-flow: row;
+                        align-items: center;
+                        
+                        margin: 0;
+                        text-align: left;
 
                         .title{
-                            position: relative;
-                            padding: 5px 0;
-                            margin: 0 0 20px;
+                            margin-bottom: 0;
+                            padding: 0 20px 0 0;
+                        }
+
+                        .desc{
+                            margin: 0;
+                        }
+                    }
+                }
+
+                &.no-styled{
+                    background-color: transparent;
+                    .group-text{
+                        position: relative;
+                        padding: 0 75px;
+                        color: $color-text;
+
+                        .title{
+                            margin: 0 0 15px;
                             font-size: 3.6rem;
                             line-height: 4rem;
                             font-weight: $font-medium;
-                            color: $color-secondary;
-                            text-align: left;
-                            background-color: #f8f8f8;
-                            z-index: 1;
-                            
-                        }
-                        .desc{
-                            margin: 0 0 20px;
-                            font-size: 1.6rem;
-                            line-height: 2rem;
-                            font-weight: $font-regular;
                             color: $color-text;
-                        }
 
-                        &.txt-center{
-                            align-items: center;
+                            &:hover{
+                                color: $color-primary;
+                            }
                         }
                     }
                 }
 
-                .group-gotoall{
-                    display: none;
+                &.content-page{
+                    padding: 0;
+                    .group-text{
+                        position: relative;
+                        padding: 20px 0 25px 0;
+                        color: $color-text;
+                        text-align: left;
+
+                        .title{
+                            margin: 0 0 15px;
+                            font-size: 3.6rem;
+                            line-height: 4rem;
+                            font-weight: $font-medium;
+                            color: $color-text;
+
+                            &:hover{
+                                color: $color-primary;
+                            }
+                        }
+                    }
                 }
 
-                @media only screen and (max-width: 768px) {
-                    flex-wrap: wrap;
+                &.bg-color-secondary{
                     .group-text{
-                        width: 100%;
-                        margin-bottom: 10px;
+                        color: white;
+                    }
+                }
+
+                .slide-wrapper{
+                    // display: flex;
+                    .slide-arrow{
+                        position: absolute;
+                        top: 10px;
+                        width: 50px;
+                        height: 50px;
+                        background-color: $color-primary;
+                        margin: 0 5px;
+                        cursor: pointer;
+                        &.slick-disabled{
+                            background-color: #cfd1d4;
+                            opacity: 1;
+                            cursor: not-allowed;
+                        }
+                    }
+                    .slide-prev{
+                        left: 0;
+                        background-image: url('../../assets/images/icons/icon-slide-prev.png');
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                    }
+                    .slide-next{
+                        right: 0;
+                        background-image: url('../../assets/images/icons/icon-slide-next.png');
+                        background-repeat: no-repeat;
+                        background-position: center center;
                     }
                 }
             }
             .search-content{
                 margin-bottom: 30px;
             }
-
             .post-content{
                 margin-bottom: 40px;
                 .public-post{
                     font-size: 1.8rem;
                     font-weight: $font-regular;
-                    color: $color-text;
+                    color: #525252;
                     i{
                         font-size: 1.4rem;
-                        color: $color-text;
+                        color: #525252;
                     }
                 }
                 .source-post{
                     font-size: 1.8rem;
                     font-weight: $font-regular;
                     span{
-                        color: white;
+                        color: #fff;
                         padding: 5px 8px;
                         margin-left: 5px;
                         i{
@@ -494,7 +521,7 @@ $howManySteps: 100; //this needs to be even.
                     &.no-bg{
                         span{
                             background-color: inherit;
-                            color: $color-text;
+                            color: #525252;
                         }
                     }
                 }
@@ -504,84 +531,46 @@ $howManySteps: 100; //this needs to be even.
                 margin-bottom: 20px;
                 .date{
                     position: relative;
-                    padding: 20px;
-                    background-color: $color-primary;
-
+                    height: 150px;
+                    flex: 0 0 140px;
                     .text-content{
-                        font-size: 6rem;
-                        line-height: 6.4rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 3rem;
                         font-weight: $font-medium;
-                        color: white;
+                        height: 100%;
+                        color: #fff;
                     }
                     .text-onbottom{
-                        font-size: 2.6rem;
-                        line-height: 3rem;
-                        font-weight: $font-light;
-                        color: white;
+                        position: absolute;
+                        bottom: 0;
+                        width: 100%;
+                        color: #fff;
+                        text-align: center;
+                        font-size: 2rem;
+                        font-weight: 400;
                     }
                 }
                 .content{
+                    padding-left: 20px;
                     .top-content{
-                        padding: 20px;
-                        background-color: white;
                         .group-text{
                             .title{
-                                font-size: 3.6rem;
-                                line-height: 4rem;
-                                font-weight: $font-regular;
                                 margin-bottom: 10px;
-                                background-color: white;
-                            }
-
-                            .desc{
-                                font-size: 2.2rem;
-                                line-height: 2.6rem;
-                                font-weight: $font-light;
-                                margin-bottom: 10px;
-                            }
-
-                            &__no-styled{
-                                .title{
-                                    font-size: 3.6rem;
-                                    line-height: 4rem;
-                                    font-weight: $font-regular;
-                                    margin-bottom: 10px;
-                                    background-color: white;
-                                }
-    
-                                .desc{
-                                    font-size: 1.8rem;
-                                    line-height: 2.4rem;
-                                    font-weight: $font-light;
-                                    margin-bottom: 10px;
-                                }
                             }
                         }
                     }
                     .post-content{
-                        position: relative;
-                        padding: 20px;
-                        margin: 0;
-                        background-color: $color-secondary;
-
-                        .public-post{
-                            color: white;
-                            i{
-                                color: white;
-                            }
-                        }
-                        .source-post{
-                            span{
-                                color: white;
-                            }
-                        }
+                        margin-bottom: 0;
                     }
                 }
             }
             .main-content{
+                position: relative;
                 &.border-bottom{
-                    padding-bottom: 15px;
-                    border-bottom: 1px solid #cfd1d4;
+                    border-bottom: solid 2px $color-primary !important;
+                    padding-bottom: 10px;
                 }
                 .group-back{
                     display: inline-block;
@@ -596,81 +585,37 @@ $howManySteps: 100; //this needs to be even.
                         transition: all 0.3s ease;
                         &:hover{
                             text-decoration: none;
-                            color: white;
-                            background-color: $color-text;
+                            color: #fff;
+                            background-color: #525252;
                         }
                     }
                 }
              
                 .main-news{
                     position: relative;
-                    background-color: white;
                     .img-news{
                         background-repeat: no-repeat;
                         background-size: cover;
                         width: 100%;
-                        height: 440px;
-
-                        .pin{
-                            position: absolute;
-                            top: 10px;
-                            right: 10px;
-                            color: $color-primary;
-                            i{
-                                font-size: 2rem;
-                            }
-                        }
-
-                        .read-news-outer{
-                            position: absolute;
-                            width: 145px;
-                            height: 45px;
-                            z-index: 99;
-                            left: 50%;
-                            top: 50%;
-                            transform: translate(-50%,-50%);
-                            opacity: 0;
-                            background-color: rgba($color: $color-primary, $alpha: 0.8);
-
-                            a{
-                                display: block;
-                                text-align: center;
-                                color: white;
-                                font-size: 1.6rem;
-                                font-weight: $font-regular;
-                                padding: 10px 15px;
-                                &:hover{
-                                    text-decoration: none;
-                                }
-                            }
-                        }
-
-                        &:hover{
-                            .read-news-outer{
-                                opacity: 1;
-                                transition: all 0.5s ease;
-                            }
-                        }
+                        height: 412px;
                     }
                     .content-news-main{
-                        position: relative;
-                        width: 100%;
-                        height: 100%;
-                        padding: 15px 20px;
-                        padding-bottom: 50px;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        background-color: #fff;
+                        padding: 10px 20px;
 
                         .date{
                             margin-bottom: 10px;
-                            font-size: 1.6rem;
                             span{
-                                font-size: 1.6rem;
+                                font-size: 1.4rem;
                                 font-weight: $font-regular;
-                                color: $color-primary;
                             }
                         }
-
                         .desc-news{
                             display: -webkit-box;
+                            max-width: 300px;
                             -webkit-line-clamp: 3;
                             -webkit-box-orient: vertical;
                             overflow: hidden;
@@ -680,38 +625,43 @@ $howManySteps: 100; //this needs to be even.
                                 font-size: 2rem;
                                 font-weight: $font-regular;
                                 line-height: 2.4rem;
-                                color: $color-text;
+                                color: #525252;
                                 transition: all 0.3s ease;
                                 //opacity: 0.7;
                                 &:hover{
                                     text-decoration: none;
-                                    color: $color-secondary;
                                 }
                             }
                         }
-
-                        .desc-news-detail{
-                            display: -webkit-box;
-                            -webkit-line-clamp: 6;
-                            -webkit-box-orient: vertical;
-                            overflow: hidden;
-                            text-overflow: ellipsis;
-                            margin-bottom: 15px;
-                            p{
-                                font-size: 1.6rem;
-                                font-weight: $font-regular;
-                                line-height: 2rem;
-                                color: $color-text;
-                                transition: all 0.3s ease;
+                    }
+                    .read-news-outer{
+                        position: absolute;
+                        width: 145px;
+                        height: 45px;
+                        z-index: 99;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%,-50%);
+                        opacity: 0;
+                        a{
+                            display: block;
+                            text-align: center;
+                            color: #fff;
+                            font-size: 1.6rem;
+                            font-weight: $font-regular;
+                            padding: 10px 15px;
+                            &:hover{
+                                text-decoration: none;
                             }
                         }
-
-                        .social-wrapper{
-                            position: absolute;
-                            left: 20px;
-                            bottom: 0;
+                    }
+                    &:hover{
+                        .read-news-outer{
+                            opacity: 1;
+                            transition: all 0.5s ease;
+                            display: block;
                         }
-                    }                
+                    }
                     @media only screen and (max-width: 992px) {
                         margin-bottom: 30px;
                         .content-news-main{
@@ -722,11 +672,12 @@ $howManySteps: 100; //this needs to be even.
                         }
                     }
                 }
+
                 .sub-news{
                     position: relative;
                     width: 100%;
                     height: auto;
-                    margin-bottom: 30px;
+                    margin: 0 0 25px;
                     background-color: white;
                     cursor: pointer;
                     .img-news{
@@ -735,16 +686,27 @@ $howManySteps: 100; //this needs to be even.
                         width: 100%;
                         height: 212px;
 
-
                         .pin{
                             position: absolute;
                             top: 10px;
                             right: 10px;
+                            color: $color-primary;
                             i{
                                 font-size: 2rem;
+                                line-height: 2rem;
                             }
                         }
 
+                        .icon-status{
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            width: 46px;
+                            height: 15px;
+                            background-image: url('../../theme-pink/assets/images/icons/icon-new.png');
+                            background-position: left top;
+                            background-size: cover;
+                        }
 
                         .read-news-outer{
                             position: absolute;
@@ -778,8 +740,9 @@ $howManySteps: 100; //this needs to be even.
                     }
                     .content{
                         position: relative;
-                        padding: 15px 20px;
-                        height: 228px;
+                        height: 230px;
+                        padding: 15px 20px 35px 20px;
+                        border-top: solid 2px $color-primary;
                         .date{
                             margin-bottom: 10px;
                             font-size: 1.6rem;
@@ -828,6 +791,65 @@ $howManySteps: 100; //this needs to be even.
                 }
                 .add-news{
                     display: none;
+                }
+
+                .action-slide{
+                    margin: 20px 0 30px;
+                    //margin: 50px 0;
+                    &.dis-flex{
+                        display: flex;
+                        align-items: center;
+                    }
+                    &.justify-between{
+                        justify-content: space-between;
+                    }
+                    &.justify-end{
+                        justify-content: flex-end;
+                    }
+
+                    .input-box{
+                        &:first-of-type{
+                            margin-top: 0;
+                        }
+                    }
+                    .slide-wrapper{
+                        display: flex;
+                        .slide-arrow{
+                            width: 50px;
+                            height: 40px;
+                            background-color: #585c5f;
+                            margin: 0 5px;
+                            cursor: pointer;
+                            &.slick-disabled{
+                                opacity: 0.5;
+                                cursor: not-allowed;
+                            }
+                        }
+                        .slide-prev{
+                            background-image: url('../../assets/images/icons/icon-slide-prev.png');
+                            background-repeat: no-repeat;
+                            background-position: center center;
+                        }
+                        .slide-next{
+                            background-image: url('../../assets/images/icons/icon-slide-next.png');
+                            background-repeat: no-repeat;
+                            background-position: center center;
+                            margin-right: 0;
+                        }
+                    }
+
+                    @media only screen and (max-width: 992px) {
+                        .input-custom{
+                            .select-wrapper{
+                                width: 170px;
+                            }
+                        }
+                        .slide-wrapper{
+                            .slide-arrow{
+                                width: 40px;
+                            }
+                        }
+                    }
                 }
 
                 .group-slide{
@@ -896,18 +918,18 @@ $howManySteps: 100; //this needs to be even.
                                     padding: 10px;
 
                                     .total-people{
-                                        display: block;
-                                        width: 160px;
-                                        height: 140px;
-                                        padding: 5rem 0;
-                                        font-size: 4rem;
-                                        line-height: 4rem;
-                                        color: $color-primary;
-                                        text-align: center;
-                                        background-image: url('../../assets/images/bg-circle.png');
-                                        background-position: 0 0;
-                                        background-repeat: no-repeat;
-                                        background-size: 100% auto;
+                                        // display: block;
+                                        // width: 160px;
+                                        // height: 140px;
+                                        // padding: 5rem 0;
+                                        // font-size: 4rem;
+                                        // line-height: 4rem;
+                                        // color: $color-primary;
+                                        // text-align: center;
+                                        // background-image: url('../../assets/images/bg-circle.png');
+                                        // background-position: 0 0;
+                                        // background-repeat: no-repeat;
+                                        // background-size: 100% auto;
                                     }
 
                                     @include media-breakpoint-down(sm){
@@ -1012,23 +1034,165 @@ $howManySteps: 100; //this needs to be even.
                                 margin-top: 10px;
                             }
 
+                            &.faq{
+                                align-items: stretch;
+                                height: 215px;
+                                background-image: url('../../theme-pink/assets/images/bg-layer-skew-hover.png');
+                                background-position: center center;
+                                background-size: cover;
+                                background-repeat: no-repeat;
+                                .left {
+                                    .icon-content {
+                                        padding: 45px 0 15px;
+                                        text-align: center;
+                                        svg{
+                                            stroke: white;
+                                        }
+                                    }
+                                }
+                                .right{
+                                    .text-content{
+                                        padding: 15px 75px 30px;
+                                        text-align: center;
+
+                                        a{
+                                            color: white;
+                                        }
+                                    }
+                                }
+
+                                &:hover{
+                                    background-color: transparent;
+                                    background-image: url('../../theme-pink/assets/images/bg-layer-skew.png');
+                                }
+                            }
+
+                            &.banner{
+                                position: relative;
+                                border: solid 2px transparent;
+                                .cover{
+                                    position: relative;
+                                    width: 100%;
+                                    height: 213px;
+                                    background-repeat: no-repeat;
+                                    background-size: cover;
+                                    background-position: center center;
+                    
+                                    .bg-layer{
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        z-index: 19;;
+                                        width: 100%;
+                                        height: 100%;
+                                        background-repeat: repeat;
+                                        // opacity: 0;
+                                        transition: all 0.5s ease-in-out;
+                                        a{
+                                            display: block;
+                                            width: 100%;
+                                            height: 100%;
+                                        }
+                                    }
+
+                                    .title{
+                                        position: absolute;
+                                        width: 100%;
+                                        top: 0;
+                                        display: flex;
+                                        align-items: flex-start;
+                                        justify-content: space-between;
+                                        opacity: 0;
+                                        .source{
+                                            padding: 7px 15px;
+                                            transition: all 0.5s ease-in-out;
+                                            span{
+                                                display: block;
+                                                font-size: 1.6rem;
+                                                line-height: 2rem;
+                                                font-weight: $font-regular;
+                                                color: #fff;
+                                                display: -webkit-box;
+                                                -webkit-line-clamp: 1;
+                                                -webkit-box-orient: vertical;
+                                                overflow: hidden;
+                                                text-overflow: ellipsis;
+                    
+                                            }
+                                        }
+                                        .social-wrapper{
+                                            padding-right: 5px;
+                                            padding-top: 7px;
+                                        }
+                                    }
+
+                                    .caption{
+                                        position: absolute;
+                                        left: 0;
+                                        bottom: 0;
+                                        z-index: 9;
+                                        padding: 5px 15px;
+                                        width: 100%;
+                                        text-align: center;
+                                        min-height: 10px;
+                                        height: auto;
+                                        transition: all 0.5s ease;
+                                        background-color: rgba($color: white, $alpha: 0.8);
+
+                                        .caption-wrap{
+                                            display: flex;
+                                            flex: row;
+                                            align-items: center;
+                                            height: 70px;
+                                        }
+
+                                        .icon-content{
+                                            font-weight: $font-regular;
+                                            font-size: 2.6rem;
+                                            line-height: 3rem;
+                                        }
+    
+                                        .text-content{
+                                            padding: 0 0 0 10px;
+                                            font-weight: $font-regular;
+                                            font-size: 2.2rem;
+                                            line-height: 2.6rem;
+                                            color: $color-text;
+                                            text-align: left;
+                                            span{
+                                                font-weight: $font-regular;
+                                                font-size: 2.2rem;
+                                                line-height: 2.6rem;
+                                                color: $color-text;
+                                                display: -webkit-box;
+                                                -webkit-line-clamp: 2;
+                                                -webkit-box-orient: vertical;
+                                                overflow: hidden;
+                                                text-overflow: ellipsis;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
                             &.-calendar{
                                 align-items: stretch;
+                                background-color: white;
 
                                 .left{
                                     flex: 1 100%;
-                                    height: 200px;
+                                    height: 100px;
 
                                     .text-content{
                                         display: block;
-                                        height: 150px;
-                                        padding: 43px 20px;
-                                        font-size: 6rem;
-                                        line-height: 6.4rem;
-                                        font-weight: $font-medium;
-                                        color: white;
+                                        height: auto;
+                                        padding: 20px 20px 10px;
+                                        font-size: 2.6rem;
+                                        line-height: 3rem;
+                                        font-weight: $font-regular;
+                                        color: $color-primary;
                                         text-align: left;
-                                        background-color: $color-secondary;
+                                        background-color: transparent;
                                     }
                                     .text-onbottom{
                                         position: relative;
@@ -1046,14 +1210,13 @@ $howManySteps: 100; //this needs to be even.
                                 }
                                 .right{
                                     flex: 1 100%;
-                                    height: 200px;
+                                    height: 300px;
 
                                     .text-content{
                                         display: block;
                                         height: 100%;
-                                        padding: 25px 20px 50px 20px;
+                                        padding: 10px 20px 20px;
                                         text-align: left;
-                                        background-color: white;
                                     }
 
                                     .text-onbottom{
@@ -1071,76 +1234,60 @@ $howManySteps: 100; //this needs to be even.
                                 }
                             }
 
-                            &.-faq{
+                            &.download{
                                 align-items: stretch;
-                                height: 186px;
-                                background-color: white;
-                                .left {
-                                    .icon-content {
-                                        svg{
-                                            stroke: $color-secondary;
-                                        }
-                                    }
-                                }
-                                .right{
-                                    .text-content{
-                                        padding: 15px 20px;
-                                    }
-                                }
-                            }
-
-                            &.-download{
-                                align-items: stretch;
+                                margin: 0 0 10px 0;
                                 .box-full{
+                                    position: relative;
                                     display: block;
-                                    width: 215px;
-                                    height: 215px;
-                                    padding: 20px;
-                                    margin: auto;
-                                    text-align: center;
-                                    border: solid 1px $color-text;
-                                    border-radius: 50%;
-                                    transition: all 0.3s ease;
-
-                                    .caption-link{
+                                    width: 100%;
+                                    min-height: 60px;
+                                    
+                                    .download-wrap{
                                         display: flex;
+                                        flex: row;
                                         align-items: center;
-                                        justify-content: center;
-                                        width: 100%;
-                                        height: 100%;
+                                        justify-content: space-between;
+                                        padding: 12px 20px 10px;
+                                        margin: auto;
+                                        text-align: center;
+                                        border: solid 2px white;
+                                        border-top: solid 3px $color-primary;
+                                        background-color: white;
+                                        transition: all 0.3s ease;
+
+                                        .content-link{
+                                            display: flex;
+                                            flex: row;
+                                            align-items: center;
+                                        }
+
                                     }
 
-                                    a{
-                                        color: $color-text;
-                                        svg {
-                                            fill: none;
+                                    .icon-content{
+                                        font-weight: $font-regular;
+                                        font-size: 2.6rem;
+                                        line-height: 3rem;
+                                        .st0{
+                                            fill:none;
                                             stroke: $color-primary;
-                                            stroke-width: 2;
-                                            stroke-miterlimit: 10;
-                                            vertical-align: bottom;
-                                            margin-bottom: 15px;
-
-                                            .st0{
-                                                fill:none;
-                                                stroke: $color-primary;
-                                                stroke-width:2;
-                                                stroke-linecap:round;
-                                                stroke-linejoin:round;
-                                                stroke-miterlimit:10;
-                                            }
-                                            .st1{
-                                                fill:none;
-                                                stroke: $color-primary;
-                                                stroke-width:2;
-                                                stroke-linecap:round;
-                                                stroke-miterlimit:10;
-                                            }
-                                            .st2{
-                                                fill:none;
-                                                stroke: $color-primary;
-                                                stroke-width:2;
-                                                stroke-miterlimit:10;
-                                            }
+                                            stroke-width:2;
+                                            stroke-linecap:round;
+                                            stroke-linejoin:round;
+                                            stroke-miterlimit:10;
+                                        }
+                                        .st1{
+                                            fill:none;
+                                            stroke: $color-primary;
+                                            stroke-width:2;
+                                            stroke-linecap:round;
+                                            stroke-miterlimit:10;
+                                        }
+                                        .st2{
+                                            fill:none;
+                                            stroke: $color-primary;
+                                            stroke-width:2;
+                                            stroke-miterlimit:10;
                                         }
 
                                         p{
@@ -1157,9 +1304,20 @@ $howManySteps: 100; //this needs to be even.
                                             overflow: hidden;
                                             text-overflow: ellipsis;
                                         }
-                                        &:hover{
-                                            text-decoration: none;
-                                        }
+                                    }
+
+                                    .text-content{
+                                        font-weight: $font-regular;
+                                        font-size: 2.6rem;
+                                        line-height: 3rem;
+                                        color: $color-text;
+                                    }
+
+                                    .icon-angle{
+                                        font-weight: $font-regular;
+                                        font-size: 2.6rem;
+                                        line-height: 3rem;
+                                        color: $color-text;
                                     }
                                 }
 
@@ -1167,29 +1325,12 @@ $howManySteps: 100; //this needs to be even.
                                     background-color: transparent !important;
 
                                     .box-full{
-                                        border-color: $color-primary !important;
-                                        background-color: $color-primary !important;
-                                        
-                                        a{
-                                            color: white;
-
-                                            p{
-                                                color: white;
-                                            }
-
-                                            svg {
-                                                stroke: white;
+                                        .download-wrap{
+                                            border-color: $color-primary;
+                                        }
     
-                                                .st0{
-                                                    stroke: white;
-                                                }
-                                                .st1{
-                                                    stroke: white;
-                                                }
-                                                .st2{
-                                                    stroke: white;
-                                                }
-                                            }
+                                        .icon-angle{
+                                            color: $color-primary;
                                         }
                                     }
                                 }
@@ -1274,16 +1415,34 @@ $howManySteps: 100; //this needs to be even.
                                 }
                             }
 
-                            &.-question{
+                            &.question{
                                 align-items: stretch;
+                                border-top: solid 3px $color-primary;
                                 background-color: white;
                                 .left{
-                                    width: 180px;
-                                    // flex: 1 180px;
-                                    padding-bottom: 40px;
+                                    padding: 15px 15px 100px;
+
+                                    .text-ontop{
+                                        font-weight: $font-light;
+                                        font-size: 1.6rem;
+                                        line-height: 2rem;
+                                        color: #b5b5b5;
+                                        text-align: right;
+                                    }
 
                                     .progress-content{
-                                        padding: 15px;
+                                        padding: 10px 0;
+
+                                        .percent-voter{
+                                            margin-bottom: 10px;
+                                        }
+
+                                        .total-people{
+                                            font-weight: $font-light;
+                                            font-size: 1.6rem;
+                                            line-height: 2rem;
+                                            color: $color-secondary;
+                                        }
                                     }
 
                                     .text-onbottom{
@@ -1291,6 +1450,7 @@ $howManySteps: 100; //this needs to be even.
                                         left: 0;
                                         bottom: 10px;
                                         width: 100%;
+                                        padding: 0 15px;
                                         color: $color-text;
                                         text-align: center;
                                         font-size: 2rem;
@@ -1300,7 +1460,7 @@ $howManySteps: 100; //this needs to be even.
                                 }
                                 .right{
                                     flex: 1;
-                                    padding: 15px 15px 40px 15px;
+                                    padding: 30px 15px 40px 15px;
                                     height: auto;
                                     .text-content{
                                         margin: 0 0 10px 0;
@@ -1450,45 +1610,63 @@ $howManySteps: 100; //this needs to be even.
                             }
                         }
                     }
+
+                    .slick-dotted{
+                        &.slick-slider{
+                            margin-bottom: 0;
+                        }
+                    }
+                    .slick-dots{
+                        bottom: -50px;
+                        li{
+                            width: 80px;
+                            height: 7px;
+                            background-color: #d7d9db;
+                            margin: 0 5px 0 0;
+                            transition: all 0.5s;
+                            button{
+                                display: none;
+                            }
+                
+                            &.slick-active{
+                                background-color: $color-primary;
+                            }
+                        }
+                        // li.slick-active Css infile color.scss
+                        @include media-breakpoint-down(md){
+                            left: 0;
+                            bottom: 0;
+                            li{
+                                width: auto;
+                                margin: 0;
+                            }
+                        }
+                    }
                 }
 
                 .group-vote{
                     .score-wrapper{
                         padding: 0;
-                        margin-bottom: 40px;
                         .text-score{
+                            padding: 25px 15px;
+                            margin: 0 0 40px;
+                            border: solid 1px $color-primary;
+                            background-color: white;
                             .num-vote{
-                                display: block;
-                                width: 160px;
-                                height: 140px;
-                                padding: 5rem 0;
-                                margin: 0 auto;
-                                font-size: 4rem;
+                                color: $color-primary;
+                                font-size: 3.6rem;
                                 line-height: 4rem;
                                 font-weight: $font-medium;
-                                color: $color-primary;
-                                text-align: center;
-                                background-image: url('../../assets/images/bg-circle.png');
-                                background-position: 0 0;
-                                background-repeat: no-repeat;
-                                background-size: 100% auto;
                             }
                             .text-vote{
-                                color: $color-text;
-                                font-size: 2.6rem;
-                                line-height: 4rem;
+                                color:$color-text;
+                                font-size: 2rem;
+                                line-height: 2.4rem;
                                 font-weight: $font-regular;
-                            }
-
-                            @include media-breakpoint-down(sm){
-                                .num-vote{
-                                    background-image: none;
-                                }
-                                
                             }
                         }
                         .percent-voter{
-                            background-color: white;
+                            background-color: #fff;
                             width: 100%;
                             height: 100%;
                             .progress{
@@ -1496,7 +1674,7 @@ $howManySteps: 100; //this needs to be even.
                                 border-radius: 0;
                                 line-height: 2.4rem;
                                 .progress-bar{
-                                    color: white;
+                                    color: #fff;
                                     font-size: 2rem;
                                     font-weight: $font-regular;
                                     span{
@@ -1508,61 +1686,28 @@ $howManySteps: 100; //this needs to be even.
 
                         }
                     }
-
                     .question-choice{
-                        background-image: url('../../assets/images/bg-vote.jpg');
-                        background-position: 0 0;
-                        background-repeat: no-repeat;
-                        background-size: cover;
-                        padding: 0;
-                        margin-bottom: 40px;
+                        padding: 0 15px 20px;
                         position: relative;
-
-                        .cover-question{
-                            position: relative;
-                            width: 100%;
-                            min-height: 400px;
-                            padding: 40px 30px;
-                            background-color: rgba($color: white, $alpha: 0.8);
-
-                            .btn-custom{
-                                margin-top: 0;
-                                .btn-primary{
-                                    border-color: $color-text;
-                                    background-color: transparent;
-                                    color: $color-primary;
-
-                                    &:hover{
-                                        color: white;
-                                    }
-                                }
-                            }
-
-                            .social-wrapper{
-                                position: relative;
-                                bottom: auto;
-                            }
-                        }
                         .text-question{
+                            margin: 0 0 20px;
                             font-size: 2rem;
                             line-height: 2.4rem;
                             font-weight: $font-regular;
-                            color: $color-text;
-                            margin-bottom: 40px;
+                            color: #525252;
                         }
                         .choice-question{
-                            display: block;
-                            margin-bottom: 40px;
-
+                            position: relative;
+                            margin: 0 0 20px;
                             ul{
-                                margin: 0;
+                                list-style: none;
                                 padding: 0;
+                                margin: 0 0 20px;
                                 columns: 2;
                                 -webkit-columns: 2;
                                 -moz-columns: 2;
                                 li{
-                                    list-style: none;
-                                    margin-bottom: 10px;
+                                    margin-bottom: 20px;
                                 }
                             }
                         }
@@ -1572,48 +1717,34 @@ $howManySteps: 100; //this needs to be even.
                             bottom: 20px;
                         }
                     }
-
                     .score-choice{
+                        padding: 0;
                         .text-score{
-                            padding: 0;
-                            margin-bottom: 40px;
-        
+                            padding: 25px 15px;
+                            margin: 0 0 40px;
+                            border: solid 1px $color-primary;
+                            background-color: white;
                             .num-vote{
+                                color: $color-primary;
                                 font-size: 3.6rem;
-                                font-weight: 500;
+                                line-height: 4rem;
+                                font-weight: $font-medium;
                             }
-        
                             .text-vote{
-                                font-size: 1.8rem;
-                                font-weight: 400;
-                                margin-bottom: 10px;
+                                color:$color-text;
+                                font-size: 2rem;
+                                line-height: 2.4rem;
+                                font-weight: $font-regular;
                             }
-                        }
-
-                        .percent-voter{
-                            padding: 6px 0;
-                        }
-
-                        .voter-label{
-                            font-size: 2.2rem;
-                            line-height: 2.2rem;
-                            color: #909090;
-                        }
-
-                        .percent-label{
-                            font-size: 2.2rem;
-                            line-height: 2.2rem;
-                            color: $color-primary;
                         }
                     }
 
                     &.detail-page{
                         .question-choice{
-                            background-image: none !important;
+                            background-color: transparent !important;
+                            margin-bottom: 25px;
             
                             .choice-question{
-                                padding-bottom: 30px;
-                                border-bottom: solid 2px #cfd1d4;
                                 ul{
                                     columns: 3 !important;
                                     -webkit-columns: 3 !important;
@@ -1627,6 +1758,9 @@ $howManySteps: 100; //this needs to be even.
                         }
             
                         .score-wrapper{
+                            margin-bottom: 30px;
+                            border: 1px solid #cfd1d4;
+            
                             .text-score{
                                 .text-vote{
                                     color: $color-text !important;
@@ -1667,6 +1801,7 @@ $howManySteps: 100; //this needs to be even.
                     }
                 }
 
+
                 .group-oneimage{
                     text-align: center;
                     margin-bottom: 30px;
@@ -1676,7 +1811,6 @@ $howManySteps: 100; //this needs to be even.
                         margin: auto;
                     }
                 }
-
                 .group-gallery{
                     margin-bottom: 30px;
                     .flexslider{
@@ -1802,7 +1936,6 @@ $howManySteps: 100; //this needs to be even.
                         }
                     }
                 }
-
                 .group-vdo{
                     margin-bottom: 30px;
                     .content-vdo{
@@ -1820,108 +1953,123 @@ $howManySteps: 100; //this needs to be even.
                         }
                     }
                 }
-
                 .group-editor{
                     font-size: 1.8rem;
                     font-weight: $font-regular;
                     line-height: 2.4rem;
-                    color: $color-text;
+                    color: #525252;
                     margin-bottom: 30px;
                     table{
                         width: 100%;
                     }
                 }
-
                 .group-list-downloadfile{
                     margin-bottom: 30px;
                     .item{
-                        position: relative;
                         display: flex;
                         align-items: center;
-                        justify-content: center;
-                        width: 100%;
-                        height: 94px;
+                        flex-direction: row;
+                        flex-wrap: wrap;
 
-                        .icon-content{
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            width: 94px;
-                            height: 100%;
-                            border: solid 1px transparent;
-                            border-radius: 50%;
-                            transition: all 0.5s ease;
-                            svg {
-                                width: 32px;
-                                height: 32px;
-                                fill:none;
-                                stroke: #fff;
-                                stroke-width:2;
-                                stroke-miterlimit:10;
-                                vertical-align: bottom;
-
-                                .st0{fill:none;stroke:$color-text;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-                                .st1{fill:none;stroke:$color-text;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
-                                .st2{fill:none;stroke:$color-text;stroke-width:2;stroke-miterlimit:10;}
-                            }
-                        }
-
-                        .text-content{
-                            padding: 0 20px 0 5px;
-                            margin-left: 20px;
-                            height: 100%;
-                            color: $color-text;
-                            border-bottom: solid 1px #cfd1d4;
-                            transition: all 0.5s ease;
-                            p{
+                        .box-full{
+                            position: relative;
+                            display: block;
+                            width: 100%;
+                            min-height: 60px;
+                            
+                            .download-wrap{
                                 display: flex;
+                                flex: row;
                                 align-items: center;
-                                height: 100%;
-                                font-size: 2rem;
-                                font-weight: $font-regular;
-                                line-height: 2.4rem;
-                            }
-                        }
-
-                        .text-onbottom{
-                            padding: 0 20px;
-                            height: 100%;
-                            color: $color-primary;
-                            border-bottom: solid 1px #cfd1d4;
-                            transition: all 0.5s ease;
-                            p{
-                                display: flex;
-                                align-items: center;
-                                height: 100%;
+                                justify-content: space-between;
+                                padding: 12px 20px 10px;
+                                margin: auto;
                                 text-align: center;
-                                font-size: 2rem;
+                                border: solid 2px white;
+                                border-top: solid 3px $color-primary;
+                                background-color: white;
+                                transition: all 0.3s ease;
+
+                                .content-link{
+                                    display: flex;
+                                    flex: row;
+                                    align-items: center;
+                                }
+
+                            }
+
+                            .icon-content{
                                 font-weight: $font-regular;
-                                line-height: 2.4rem;
-                                
+                                font-size: 2.6rem;
+                                line-height: 3rem;
+                                .st0{
+                                    fill:none;
+                                    stroke: $color-primary;
+                                    stroke-width:2;
+                                    stroke-linecap:round;
+                                    stroke-linejoin:round;
+                                    stroke-miterlimit:10;
+                                }
+                                .st1{
+                                    fill:none;
+                                    stroke: $color-primary;
+                                    stroke-width:2;
+                                    stroke-linecap:round;
+                                    stroke-miterlimit:10;
+                                }
+                                .st2{
+                                    fill:none;
+                                    stroke: $color-primary;
+                                    stroke-width:2;
+                                    stroke-miterlimit:10;
+                                }
+
+                                p{
+                                    font-size: 2rem;
+                                    font-weight: $font-regular;
+                                    line-height: 2.4rem;
+                                    color: $color-text;
+                                    transition: all 0.3s ease;
+                                    min-height: 50px;
+
+                                    display: -webkit-box;
+                                    -webkit-line-clamp: 2;
+                                    -webkit-box-orient: vertical;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                }
+                            }
+
+                            .text-content{
+                                font-weight: $font-regular;
+                                font-size: 2.6rem;
+                                line-height: 3rem;
+                                color: $color-text;
+                            }
+
+                            .icon-angle{
+                                font-weight: $font-regular;
+                                font-size: 2.6rem;
+                                line-height: 3rem;
+                                color: $color-text;
                             }
                         }
 
                         &:hover{
-                            .icon-content{
-                                border-color: $color-secondary;
-                                svg {
-                                    .st0{fill:none;stroke:$color-secondary;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-                                    .st1{fill:none;stroke:$color-secondary;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
-                                    .st2{fill:none;stroke:$color-secondary;stroke-width:2;stroke-miterlimit:10;}
+                            background-color: transparent !important;
+
+                            .box-full{
+                                .download-wrap{
+                                    border-color: $color-primary;
                                 }
-                            }
-    
-                            .text-content{
-                                color: $color-secondary;
-                            }
-                            
-                            .text-onbottom{
-                                color: $color-secondary;
+
+                                .icon-angle{
+                                    color: $color-primary;
+                                }
                             }
                         }
                     }
                 }
-
                 .group-activity-location{
                     margin-bottom: 30px;
                     .location{
@@ -1964,7 +2112,7 @@ $howManySteps: 100; //this needs to be even.
                                 }
                                 .text-email-link{
                                     float: left;
-                                    color: $color-text;
+                                    color: #525252;
                                     font-size: 1.8rem;
                                     font-weight: $font-regular;
                                 }
@@ -1981,7 +2129,7 @@ $howManySteps: 100; //this needs to be even.
                         .like-count{
                             .icon-like{
                                 position: relative;
-                                background-color: rgba($color: $color-text, $alpha: 0.5);
+                                background-color: rgba($color: #525252, $alpha: 0.5);
                                 width: 40px;
                                 height: 35px;
                                 margin-right: 40px;
@@ -2026,7 +2174,7 @@ $howManySteps: 100; //this needs to be even.
                             .title-article{
                                 font-size: 1.8rem;
                                 font-weight: $font-regular;
-                                color: $color-text;
+                                color: #525252;
                                 padding-bottom: 5px;
                                 margin-bottom: 15px;
                                 &.border-bt{
@@ -2039,7 +2187,7 @@ $howManySteps: 100; //this needs to be even.
                         }
                     }
                 }
-
+                
                 .calendar-wrapper{
                     position: relative;
                     .head-calendar{
@@ -2170,18 +2318,15 @@ $howManySteps: 100; //this needs to be even.
                 }
 
                 .page-list-item-wrapper{
-                    position: relative;
                     .topic-category{
                         font-size: 2rem;
                         font-weight: $font-regular;
                         line-height: 2.4rem;
-                        color: $color-primary;
-                        // display: flex;
-                        // align-items: center;
-                        text-align: center;
-                        padding: 8px 15px 20px 15px;
+                        color: #fff;
+                        display: flex;
+                        align-items: center;
+                        padding: 8px 15px;
                         margin-bottom: 20px;
-                        border-bottom: solid 2px $color-text;
                         svg {
                             fill: none;
                             stroke: #fff;
@@ -2227,7 +2372,6 @@ $howManySteps: 100; //this needs to be even.
                         }
                     }
                 }
-                
                 .accordion-wrapper{
                     .accordion{
                         .card{
@@ -2237,18 +2381,19 @@ $howManySteps: 100; //this needs to be even.
                             .card-header{
                                 padding: 0;
                                 border: none;
-                                background-color: white;
+                                background-color: #fff;
                                 cursor: pointer;
                                 .card-header-item{
                                     .icon-card-header{
                                         position: relative;
-                                        flex: 0 0 80px;
-                                        padding: 0;
+                                        flex: 0 0 120px;
+                                        padding: 15px 20px;
                                         min-height: 80px;
                                         display: flex;
                                         align-items: center;
                                         justify-content: center;
                                         .icon-content{
+                                            
                                             height: 100%;
                                             svg {
                                                 width: 32px;
@@ -2258,67 +2403,15 @@ $howManySteps: 100; //this needs to be even.
                                                 stroke-width:2;
                                                 stroke-miterlimit:10;
                                                 vertical-align: bottom;
-
-                                                .st0{
-                                                    stroke: $color-secondary;
-                                                }
                                             }
                                         }
                                     }
                                     .title-card-header{
-                                        position: relative;
                                         font-size: 2rem;
                                         line-height: 2.4rem;
                                         font-weight: $font-regular;
-                                        color: $color-text;
-                                        padding: 15px 45px 15px 0;
-
-                                        .icon-content{
-                                            position: absolute;
-                                            top: 50%;
-                                            transform: translateY(-50%);
-                                            right: 5px;
-                                            width: 30px;
-                                            height: 30px;
-                                            svg {
-                                                width: 30px;
-                                                height: 30px;
-                                                fill:none;
-                                                stroke: #fff;
-                                                stroke-width:2;
-                                                stroke-miterlimit:10;
-                                                vertical-align: bottom;
-                                                transition: all 0.3s ease;
-
-                                                .st0{fill:none;stroke:$color-primary;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-
-                                                // .st0{
-                                                //     fill: $color-primary;
-                                                // }
-                                            }
-                                        }
-                                    }
-                                }
-
-                                .card-header-item[aria-expanded="true"]{
-                                    background-color: $color-primary;
-                                    .icon-card-header{
-                                        .icon-content{
-                                            svg {
-                                                .st0{
-                                                    stroke: white;
-                                                }
-                                            }
-                                        }
-                                    }
-                                    .title-card-header{
-                                        color: white;
-                                        .icon-content{
-                                            svg {
-                                                transform: rotate(180deg);
-                                                .st0{fill:none;stroke:white;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-                                            }
-                                        }
+                                        color: #525252;
+                                        padding: 15px 20px;
                                     }
                                 }
                             }
@@ -2328,222 +2421,106 @@ $howManySteps: 100; //this needs to be even.
                                     padding: 20px;
                                     .show-view{
                                         position: relative;
-                                        padding: 0 0 0 10px;
-                                        margin: 10px 0;
+                                        //text-align: right;
                                         font-size: 1.8rem;
-                                        font-weight: $font-light;
+                                        font-weight: $font-regular;
                                         line-height: 2.4rem;
-                                        color: $color-text;
-                                        border-left: solid 1px #e7e8e9;
+                                        margin-bottom: 10px;
                                     }
                                     .content{
                                         font-size: 1.8rem;
-                                        font-weight: $font-light;
+                                        font-weight: $font-regular;
                                         line-height: 2.4rem;
-                                        color: $color-text;
+                                        color: #525252;
+                                    }
+                                    &:after{
+                                        content: '';
+                                        width: 0;
+                                        height: 0;
+                                        border-style: solid;
+                                        border-width: 16px 15.5px 0 15.5px;
+                                        position: absolute;
+                                        top: 0;
+                                        left: 4%;
                                     }
                                 }
                             }
+                            // &:last-of-type{
+                            //     margin-bottom: 30px;
+                            // }
                         }
                     }
                 }
 
                 &.-contact{
-                    margin-top: 30px;
                     .contact-tel{
-                        text-align: center;
-                        .icon-tel{
-                            display: block;
-                            width: 45px;
-                            height: 45px;
-                            padding: 5px;
-                            margin: 0 auto 20px auto;
-                            background-color: $color-secondary;
-
-                            img{
-                                width: 100%;
-                                height: 100%;
-                            }
+                        img{
+                            margin-right: 5px;
                         }
                         a{
-                            display: block;
-                            margin: 0 auto 10px auto;
-                            font-size: 4rem;
-                            line-height: 4.4rem;
+                            font-size: 1.8rem;
                             font-weight: $font-regular;
-                            color: $color-text;
-
-                            &:hover{
-                                text-decoration: none;
-                                color: $color-secondary;
-                            }
-                        }
-                        p{
-                            font-size: 2.2rem;
-                            line-height: 2.6rem;
-                            font-weight: $font-light;
-                            color: $color-text;
+                            color: #525252;
                         }
                     }
-                    
                     .iframe-map{
                         margin: 20px 0;
                         iframe{
                             width: 100%;
-                            height: 240px;
+                            height: 400px;
                         }
                     }
-
                     .list-item-gov{
-                        display: flex;  
-                        flex-flow: wrap;
-                        align-items: stretch;
                         margin-bottom: 30px;
-
                         .title-gov{
-                            flex: 1 100%;
-                            padding: 10px 0;
-                            font-size: 2.6rem;
+                            font-size: 1.8rem;
                             font-weight: $font-regular;
-                            line-height: 3rem;
-                            color: $color-text;
-                            text-align: left;
+                            line-height: 2.4rem;
+                            color: #525252;
+                            text-align: center;
+                            padding: 8px 15px;
+                            box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
                         }
-
-                        .social-wrapper{
-                            flex: 1 100%;
-                            background-color: transparent;
-
-                            ul{
-                                li{
-                                    width: 100%;
-                                    height: 55px;
-                                    margin: 0;
-                                    a{
+                        .contact-gov{
+                            .tel-gov{
+                                background-color: $color-secondary;
+                                padding: 5px 10px;
+                                width: 50%;
+                                .on{
+                                    width: 14px;
+                                    height: 18px;
+                                    img{
                                         width: 100%;
-                                        height: 55px;
-                                        margin: 0;
-                                        background-color: transparent;
-                                        img{
-                                            width: 40px;
-                                            height: 40px;
-                                        }
+                                        display: block;
                                     }
                                 }
-                            }
-                        }
-
-                        .contact-gov{
-                            flex: 1 100%;
-
-                            .tel-gov{
-                                padding: 5px 15px;
-                                border-right: solid 1px white;
-
-                                .on{
-                                    display: block;
-                                }
-
                                 .number{
                                     font-size: 1.8rem;
                                     line-height: 2.4rem;
                                     font-weight: $font-regular;
-                                    color: white;
+                                    color: #fff;
+                                }
+                            }
+                            .tel-internal{
+                                background-color: $color-primary;
+                                padding: 5px 10px;
+                                width: 50%;
+                                text-align: right;
+                                .on{
+                                    font-size: 1.2rem;
+                                    font-weight: $font-regular;
+                                    color: #fff;
+                                }
+                                .number{
+                                    font-size: 1.8rem;
+                                    line-height: 2.4rem;
+                                    font-weight: $font-regular;
+                                    color: #fff;
                                 }
                             }
                         }
-
-                        @include media-breakpoint-up(md){
-                            flex-flow: row wrap;
-
-                            .title-gov{
-                                flex: 1 100%;
-                            }
-
-                            .social-wrapper{
-                                flex: 1 10%;
-                            }
-
-                            .contact-gov{
-                                flex: 1 45%;
-                            }
-                        }
-
-                        @include media-breakpoint-up(lg){
-                            flex-flow: row;
-
-                            .title-gov{
-                                flex: 1 55%;
-                            }
-
-                            .social-wrapper{
-                                flex: 1 5%;
-                            }
-
-                            .contact-gov{
-                                flex: 1 20%;
-                            }
-                        }
-                    }
-                }
-            }
-
-            //Style Arrow Slide
-            .action-slide{
-                margin: 20px 0 30px;
-                //margin: 50px 0;
-                &.dis-flex{
-                    display: flex;
-                    align-items: center;
-                }
-                &.justify-between{
-                    justify-content: space-between;
-                }
-                &.justify-end{
-                    justify-content: flex-end;
-                }
-
-                .input-box{
-                    &:first-of-type{
-                        margin-top: 0;
-                    }
-                }
-                .slide-wrapper{
-                    display: flex;
-                    .slide-arrow{
-                        width: 50px;
-                        height: 40px;
-                        background-color: $color-primary;
-                        margin: 0 5px;
-                        cursor: pointer;
-                        &.slick-disabled{
-                            opacity: 1.0;
-                            background-color: #cfd1d4;
-                            cursor: not-allowed;
-                        }
-                    }
-                    .slide-prev{
-                        background-image: url('../../assets/images/icons/icon-slide-prev.png');
-                        background-repeat: no-repeat;
-                        background-position: center center;
-                    }
-                    .slide-next{
-                        background-image: url('../../assets/images/icons/icon-slide-next.png');
-                        background-repeat: no-repeat;
-                        background-position: center center;
-                        margin-right: 0;
-                    }
-                }
-
-                @media only screen and (max-width: 992px) {
-                    .input-custom{
-                        .select-wrapper{
-                            width: 170px;
-                        }
-                    }
-                    .slide-wrapper{
-                        .slide-arrow{
-                            width: 40px;
+                        .social-wrapper{
+                            margin-top: 5px;
                         }
                     }
                 }
@@ -2557,14 +2534,14 @@ $howManySteps: 100; //this needs to be even.
                     .box-title{
                         .title-head{
                             font-size: 3.6rem;
-                            line-height: 4rem;
+                            line-height: 3.6rem;
                             font-weight: $font-medium;
                             margin: 0 0 20px;
                         }
 
                         .order-all {
                             font-size: 1.6rem;
-                            line-height: 4rem;
+                            line-height: 3.6rem;
                             margin: 0 0 20px;
                         }
                     }
@@ -2575,7 +2552,7 @@ $howManySteps: 100; //this needs to be even.
                             margin-right: 10px;
                             font-size: 1.6rem;
                             font-weight: $font-regular;
-                            color: $color-text;
+                            color: #525252;
                         }
                     }
 
@@ -2600,6 +2577,11 @@ $howManySteps: 100; //this needs to be even.
                             align-items: center;
                             justify-content: flex-end;
                             .btn{
+                                border: none;
+                                font-size: 1.8rem;
+                                font-weight: $font-regular;
+                                color: #fff;
+                                border-radius: 0;
                                 &.icon{
                                     i{
                                         font-size: 1.4rem;
@@ -2613,59 +2595,16 @@ $howManySteps: 100; //this needs to be even.
                                 align-items: flex-start;
                                 justify-content: space-between;
                                 .show-login{
-                                    position: relative;
-
-                                    ul{
-                                        list-style: none;
-                                        margin: 0;
-                                        padding: 0;
-
-                                        li{
-                                            display: inline-block;
-                                            vertical-align: middle;
-                                            padding: 10px 8px;
-                                            min-height: 35px;
-                                            a{
-                                                color: $color-text;
-                                                font-size: 1.6rem;
-                                                font-weight: $font-light;
-                                                opacity: 0.7;
-                                                transition: all 0.3s ease;
-                                                .icon-register{
-                                                    display: inline-block;
-                                                    background-image: url('../assets/images/icons/icon-register.png');
-                                                    width: 16px;
-                                                    height: 17px;
-                                                    background-repeat: no-repeat;
-                                                    background-position: top center;
-                                                    transition: all 0.3s ease;
-                                                    margin-left: 5px;
-                                                }
-                                                .icon-signin{
-                                                    display: inline-block;
-                                                    background-image: url('../assets/images/icons/icon-signin.png');
-                                                    width: 16px;
-                                                    height: 17px;
-                                                    background-repeat: no-repeat;
-                                                    background-position: top center;
-                                                    transition: all 0.3s ease;
-                                                    margin-left: 5px;
-                                                }
-                                                &:hover{
-                                                    text-decoration: none;
-                                                    opacity: 1;
-                                                    .icon-register{
-                                                        background-position: bottom center;
-                                                    }
-                                                    .icon-signin{
-                                                        background-position: bottom center;
-                                                    }
-                                                }
-                                            }
-                                            &:first-child{
-                                                border-right: 1px solid #fff;
-                                                padding-left: 0;
-                                            }
+                                    a{
+                                        font-size: 1.4rem;
+                                        font-weight: $font-regular;
+                                        color: #525252;
+                                        opacity: 0.5;
+                                        display: block;
+                                        transition: all 0.5s ease;
+                                        margin-top: 5px;
+                                        &:hover{
+                                            opacity: 1;
                                         }
                                     }
                                 }
@@ -2695,7 +2634,7 @@ $howManySteps: 100; //this needs to be even.
                                 .post-user{
                                     font-size: 1.6rem;
                                     font-weight: $font-regular;
-                                    color: $color-text;
+                                    color: #525252;
                                 }
                             }
                         }
@@ -2713,14 +2652,22 @@ $howManySteps: 100; //this needs to be even.
                         //     text-align: center;
                         //     transition: all 0.3s ease;
                         //     &:hover{
-                        //         color: white;
-                        //         background-color: $color-text;
-                        //         border: 1px solid $color-text;
+                        //         color: #fff;
+                        //         background-color: #525252;
+                        //         border: 1px solid #525252;
                         //     }
                         // }
                     }
                 }
             }
+        }
+
+        &.bg-faq{
+            padding: 45px 0 90px;
+            background-color: white;
+            background-image: url('../../theme-pink/assets/images/bg-index-faq.jpg');
+            background-repeat: no-repeat;
+            background-position: center center;
         }
     }
 
@@ -2734,26 +2681,245 @@ $howManySteps: 100; //this needs to be even.
     position: relative;
     .item{
         position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
         margin-bottom: 30px;
         overflow: hidden;
+        >div{
+            flex: 1 0 50%;
+        }
+        .left{
+            position: relative;
+            height: 150px;
+            flex: 0 0 140px;
+            .text-content{
+                font-size: 3rem;
+                font-weight: $font-medium;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                color: #fff;
+            }
+            .text-onbottom{
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                color: #fff;
+                text-align: center;
+                font-size: 2rem;
+                font-weight: $font-regular;
+            }
+
+            .icon-content{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                svg {
+                    width: 32px;
+                    height: 32px;
+                    fill:none;
+                    stroke: #fff;
+                    stroke-width:2;
+                    stroke-miterlimit:10;
+                    vertical-align: bottom;
+                }
+            }
+
+            .progress-content{
+                .progress {
+                    width: $size;
+                    height: $size;
+                    line-height: $size;
+                    background: none;
+                    margin: 0 auto;
+                    box-shadow: none;
+                    position: absolute;
+                    top: -55px;
+                    bottom: 0;
+                    margin: auto;
+                    left: 0;
+                    right: 0;
+                    &:after {
+                        content: "";
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+                    > span {
+                        width: 50%;
+                        height: 100%;
+                        overflow: hidden;
+                        position: absolute;
+                        top: 0;
+                        z-index: 1;
+                    }
+                    .progress-left {
+                        left: 0;
+                    }
+                    .progress-bar {
+                        width: 100%;
+                        height: 100%;
+                        background: none;
+                        border-width: 7px;
+                        border-style: solid;
+                        position: absolute;
+                        top: 0;
+                    }
+                    .progress-left .progress-bar {
+                        left: 100%;
+                        border-top-right-radius: ($size/2);;
+                        border-bottom-right-radius: ($size/2);;
+                        border-left: 0;
+                        -webkit-transform-origin: center left;
+                        transform-origin: center left;
+                        //animation: loading-2 1.5s linear forwards 1.8s;
+                    }
+                    .progress-right {
+                      right: 0;
+                        .progress-bar {
+                            left: -100%;
+                            border-top-left-radius: ($size/2);;
+                            border-bottom-left-radius: ($size/2);;
+                            border-right: 0;
+                            -webkit-transform-origin: center right;
+                            transform-origin: center right;
+                            //animation: loading-1 1.8s linear forwards;
+                        }
+                    }
+                    .progress-value {
+                        display: flex;
+                        border-radius: 50%;
+                        font-size: 2rem;
+                        line-height: 2rem;
+                        text-align: center;
+                        align-items: center;
+                        justify-content: center;
+                        height: 100%;
+                        width: 100%;
+                        color: #fff;
+                        font-weight: $font-regular;
+                        span {
+                            font-size: 1.2rem;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+                .total-people{
+                    position: absolute;
+                    width: 100%;
+                    font-size: 1.8rem;
+                    line-height: 2rem;
+                    font-weight: $font-regular;
+                    color: #fff;
+                    text-align: center;
+                    bottom: 40px;
+                }
+            }
+
+            &.active{
+                .text-content{
+                    color: #fff;
+                }
+            }
+        }
+        .right{
+            background-color: #fff;
+            position: relative;
+            height: 150px;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            .text-ontop{
+                display: block;
+                font-size: 1.4rem;
+                font-weight: $font-regular;
+                margin-bottom: 5px;
+            }
+            .text-content{
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                a{
+                    font-size: 2rem;
+                    font-weight: $font-regular;
+                    line-height: 2.4rem;
+                    color: #525252;
+                    //opacity: 0.7;
+                    transition: all 0.3s ease;
+                    &:hover{
+                        text-decoration: none;
+                    }
+                }
+            }
+            .text-onbottom{
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                color: #525252;
+                font-size: 1.6rem;
+                font-weight: $font-regular;
+                i{
+                    font-size: 1.4rem;
+                    margin-right: 5px;
+                }
+
+                &.-link{
+                    a{
+                        color: #fff;
+                        font-size: 1.6rem;
+                        padding: 3px 10px;
+                        display: inline-block;
+                        &:hover{
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+        .bottom{
+            margin-top: 10px;
+        }
 
         &.album{
             position: relative;
-            .cover-album{
+            border: solid 2px transparent;
+            .cover{
                 position: relative;
                 width: 100%;
-                height: 186px;
+                height: 213px;
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: center center;
-                cursor: pointer;
 
-                .caption-link{
-                    display: block;
-                    width: 100%;
-                    height: 100%;
+                .bg-layer{
+                    position: absolute;
+                    top: 30%;
+                    left: 50%;
+                    transform: translate(-50%);
+                    width: 60px;
+                    height: 60px;
+                    background-repeat: repeat;
+                    // opacity: 0;
+                    transition: all 0.5s ease-in-out;
+                    .icon-search-hover{
+                        display: block;
+                        padding: 15px;
+
+                        img{
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
                 }
-
                 .icon-play{
                     background-image: url('../../assets/images/icons/icon-play.png');
                     width: 40px;
@@ -2765,26 +2931,22 @@ $howManySteps: 100; //this needs to be even.
                     right: 0;
                     margin: auto;
                 }
-
-                .top-album{
+                .title{
                     position: absolute;
-                    width: auto;
-                    bottom: 0;
+                    width: 100%;
+                    top: 0;
                     display: flex;
                     align-items: flex-start;
                     justify-content: space-between;
-                    z-index: 9;
                     .source{
                         padding: 7px 15px;
-                        background-color: rgba($color: white, $alpha: 0.8);
                         transition: all 0.5s ease-in-out;
                         span{
                             display: block;
                             font-size: 1.6rem;
                             line-height: 2rem;
                             font-weight: $font-regular;
-                            color: $color-primary;
-
+                            color: #fff;
                             display: -webkit-box;
                             -webkit-line-clamp: 1;
                             -webkit-box-orient: vertical;
@@ -2798,86 +2960,35 @@ $howManySteps: 100; //this needs to be even.
                         padding-top: 7px;
                     }
                 }
-            }
-
-            .caption-album{
-                position: absolute;
-                left: 0;
-                bottom: -100%;
-                padding: 15px 20px;
-                width: 100%;
-                height: 100%;
-                text-align: left;
-                transition: all 0.5s ease;
-                z-index: 7;
-                .icon-search-hover{
-                    margin-bottom: 15px;
-                    .st0{
-                        fill: none;
-                        stroke: $color-primary;
-                        stroke-width: 2;
-                        stroke-linecap: round;
-                        stroke-miterlimit: 10;
-                    }
-                }
-                .icon-now-moving{
-                    float: left;
-                    margin-right: 5px;
-                    position: relative;
-                    top: -3px;
-                }
-                span{
-                    font-size: 1.6rem;
-                    line-height: 1.8rem;
-                    font-weight: $font-regular;
-                    color: white;
-                    display: -webkit-box;
-                    -webkit-line-clamp: 2;
-                    -webkit-box-orient: vertical;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                }
-            }
-
-            &.hilight{
-                .caption-album{
-                    position: relative;
-                    padding: 15px 20px;
+                .caption{
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    padding: 5px 15px;
                     width: 100%;
-                    text-align: left;
+                    text-align: center;
                     min-height: 10px;
-                    height: 186px;
-                    left: auto;
-                    bottom: auto;
+                    height: 56px;
                     transition: all 0.5s ease;
-                    background-color: white;
+                    .icon-now-moving{
+                        float: left;
+                        margin-right: 5px;
+                        position: relative;
+                        top: -3px;
+                    }
                     span{
                         font-size: 1.6rem;
                         line-height: 1.8rem;
                         font-weight: $font-regular;
-                        color:  $color-primary;
+                        color: #fff;
                         display: -webkit-box;
-                        -webkit-line-clamp: 3;
+                        -webkit-line-clamp: 2;
                         -webkit-box-orient: vertical;
                         overflow: hidden;
                         text-overflow: ellipsis;
                     }
-                    
-                }
-            }
-
-            &:hover{
-                .caption-album{
-                    color: white !important;
-
-                    .icon-search-hover{
-                        .st0{
-                            stroke: white !important;
-                        }
-                    }
-
-                    span{
-                        color: white !important;
+                    &.show{
+                        bottom: 0;
                     }
                 }
             }
@@ -2885,55 +2996,63 @@ $howManySteps: 100; //this needs to be even.
 
         &.video{
             position: relative;
-
-            &.hilight{
-                .cover{
-                    height: 440px;
-                }
-            }
+            border: solid 2px transparent;
 
             .cover{
                 position: relative;
                 width: 100%;
-                height: 205px;
+                height: 215px;
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: center center;
-                cursor: pointer;
 
                 img{
                     max-width: 100%;
                     max-height: 100%;
                 }
 
-                .bg-layer {
+                .bg-layer{
                     position: absolute;
-                    width: 100%;
-                    height: auto;
-                    padding: 15px 20px;
+                    top: 30%;
+                    left: 50%;
+                    transform: translate(-50%);
+                    width: 60px;
+                    height: 60px;
                     background-repeat: repeat;
+                    // opacity: 0;
                     transition: all 0.5s ease-in-out;
-                    z-index: 9;
+                    .icon-search-hover{
+                        display: block;
+                        padding: 15px;
+
+                        img{
+                            width: 30px;
+                            height: 30px;
+                        }
+
+                        .st0{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+                    }
                 }
 
                 .title{
                     position: absolute;
-                    width: auto;
-                    bottom: 0;
+                    width: 100%;
+                    top: 0;
                     display: flex;
                     align-items: flex-start;
                     justify-content: space-between;
-                    z-index: 9;
                     .source{
                         padding: 7px 15px;
-                        background-color: rgba($color: white, $alpha: 0.8);
+                        //max-width: 150px;
                         transition: all 0.5s ease-in-out;
                         span{
                             display: block;
+                            //padding-right: 10px;
                             font-size: 1.6rem;
                             line-height: 2rem;
                             font-weight: $font-regular;
-                            color: $color-primary;
+                            color: #fff;
+                            //text-transform: uppercase;
 
                             display: -webkit-box;
                             -webkit-line-clamp: 1;
@@ -2948,113 +3067,112 @@ $howManySteps: 100; //this needs to be even.
                         padding-top: 7px;
                     }
                 }
-                
+
+                .caption{
+                    position: absolute;
+                    bottom: 0;
+                    padding: 5px 15px;
+                    width: 100%;
+                    text-align: center;
+                    min-height: 10px;
+                    height: 56px;
+                    left: 0;
+                    // bottom: -100%;
+                    transition: all 0.5s ease;
+                    .icon-now-moving{
+                        float: left;
+                        margin-right: 5px;
+                        position: relative;
+                        top: -3px;
+                    }
+                    span{
+                        font-size: 1.6rem;
+                        line-height: 1.8rem;
+                        font-weight: $font-regular;
+                        color: #fff;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    &.show{
+                        bottom: 0;
+                    }
+                }
             }
 
-            .caption{
-                position: absolute;
-                left: 0;
-                bottom: -100%;
-                padding: 15px 20px;
-                width: 100%;
-                height: 100%;
-                text-align: left;
-                transition: all 0.5s ease;
-                z-index: 7;
-                .icon-search-hover{
-                    margin-bottom: 15px;
-                }
-                .icon-now-moving{
-                    float: left;
-                    margin-right: 5px;
-                    position: relative;
-                    top: -3px;
-                }
-
-                .caption-table{
-                    display: table;
-                    width: 100%;
-                    height: 100%;
-                }
-
-                .caption-cell{
-                    display: table-cell;
-                    vertical-align: middle;
-                }
-
-                span{
-                    font-size: 1.6rem;
-                    line-height: 1.8rem;
-                    font-weight: $font-regular;
-                    color: white;
-                    display: -webkit-box;
-                    -webkit-line-clamp: 2;
-                    -webkit-box-orient: vertical;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                }
-                &.show{
-                    bottom: 0;
-                }
+            .exthumb{
+                display: none;
+                opacity: 0;
             }
         }
 
         &:hover{
-            // .left{
-            //     transition: all 0.3s ease;
-            //     .text-content{
-            //         transition: all 0.3s ease;
-            //     }
-            //     .icon-content{
-            //         svg{
-            //             transition: all 0.3s ease;
-            //         }
-            //     }
-            // }
-            // .right{
-            //     .text-content{
-            //         a{
-            //             opacity: 1;
-            //         }
-            //     }
-            // }
-
-            &.album{
-                .cover-album{
-                    .bg-layer{
-                        background-color: rgba($color: $color-primary, $alpha: 0.5);
-                        opacity: 1;
-                    }
-                    .top-album{
-                        .source{
-                            background-color: inherit;
-                            span{
-                                color: white;
-                            }
-                        }
+            .left{
+                transition: all 0.3s ease;
+                .text-content{
+                    transition: all 0.3s ease;
+                }
+                .icon-content{
+                    svg{
+                        transition: all 0.3s ease;
                     }
                 }
+            }
+            .right{
+                .text-content{
+                    a{
+                        opacity: 1;
+                    }
+                }
+            }
 
-                .caption-album{
-                    bottom: 0;
-                    background-color: $color-primary;
+            &.album{
+                border-color: $color-primary;
+                .cover{
+                    .bg-layer{
+                        visibility: visible;
+                        opacity: 1;
+
+                        .icon-search-hover{
+                            background-color: rgba($color: $color-secondary, $alpha: 0.8);
+                            transition: all 0.3s ease;
+                        }
+                    }
+                    .title{
+                        visibility: hidden;
+                        opacity: 0;
+                    }
+
+                    .caption{
+                        visibility: hidden;
+                        opacity: 0;
+                    }
                 }
             }
 
             &.video{
+                border-color: $color-primary;
                 .cover{
-                    .title{
-                        .source{
-                            background-color: inherit;
-                            span{
-                                color: white;
-                            }
+                    .bg-layer{
+                        visibility: visible;
+                        opacity: 1;
+
+                        .icon-search-hover{
+                            background-color: rgba($color: $color-secondary, $alpha: 0.8);
+                            transition: all 0.3s ease;
                         }
                     }
-                }
-                .caption{
-                    bottom: 0;
-                    background-color: $color-primary;
+                    .title{
+                        visibility: hidden;
+                        opacity: 0;
+                    }
+
+                    .caption{
+                        visibility: hidden;
+                        opacity: 0;
+                    }
                 }
             }
         }
@@ -3081,19 +3199,19 @@ $howManySteps: 100; //this needs to be even.
                     text-align: center;
 
                     .num-vote{
-                        color: white;
+                        color: #fff;
                         font-size: 3.6rem;
                         font-weight: $font-medium;
                     }
                     .text-vote{
-                        color: white;
+                        color: #fff;
                         font-size: 2rem;
                         font-weight: $font-regular;
                     }
                 }
             }
             .right{
-                background-color: white;
+                background-color: #fff;
                 position: relative;
                 height: 200px;
                 padding: 15px 20px 0;
@@ -3114,7 +3232,7 @@ $howManySteps: 100; //this needs to be even.
                         font-size: 2rem;
                         font-weight: $font-regular;
                         line-height: 2.4rem;
-                        color: $color-text;
+                        color: #525252;
                         //opacity: 0.7;
                         transition: all 0.3s ease;
                         &:hover{
@@ -3127,7 +3245,7 @@ $howManySteps: 100; //this needs to be even.
                     position: absolute;
                     bottom: 5px;
                     width: 100%;
-                    color: $color-text;
+                    color: #525252;
                     font-size: 1.6rem;
                     font-weight: $font-regular;
                     i{
@@ -3137,7 +3255,7 @@ $howManySteps: 100; //this needs to be even.
 
                     &.-link{
                         a{
-                            color: white;
+                            color: #fff;
                             font-size: 1.6rem;
                             padding: 3px 10px;
                             display: inline-block;
@@ -3161,30 +3279,17 @@ $howManySteps: 100; //this needs to be even.
 
     .level-01{
         font-size: 3.6rem;
-        line-height: 4rem;
-        color: $color-secondary;
-
-        &:hover{
-            color: $color-primary;
-        }
+        line-height: 5rem;
     }
 
     .level-02{
         font-size: 2.6rem;
         line-height: 3rem;
-        color: $color-text;
-        &:hover{
-            color: $color-primary;
-        }
     }
 
     .level-03{
         font-size: 2.2rem;
-        line-height: 2.6rem;
-        color: $color-text;
-        &:hover{
-            color: $color-primary;
-        }
+        line-height: 3rem;
     }
 
     .sitemap{
@@ -3194,9 +3299,7 @@ $howManySteps: 100; //this needs to be even.
 
         .line-sub{
             display: block;
-            padding: 20px;
-            margin-bottom: 5px;
-            background-color: white;
+            margin-bottom: 40px;
         }
 
         .line-group{
@@ -3226,14 +3329,12 @@ $howManySteps: 100; //this needs to be even.
         }
 
         .link-group{
-            list-style: none;
-            padding: 20px 0;
-            margin: 0;
+            list-style-image: url('../../assets/images/icons/list-style-01.png');
+            padding-top: 20px;
+            padding-left: 17px;
 
             .link-item{
-                border-left: solid 2px $color-primary;
-                padding: 5px 10px;
-                margin: 0 0 5px 0;
+                margin-bottom: 20px;
             }
         }
     }
@@ -3256,6 +3357,49 @@ $howManySteps: 100; //this needs to be even.
     }
 }
 
+.group-link-mainbkk{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 225px;
+        height: 65px;
+        padding: 11px 10px 9px 10px;
+        // background-color: #cfd1d4;
+        background-image: url('../../assets/images/bg-mainbkk.png');
+        background-position: right top;
+        background-repeat: no-repeat;
+        .icon-bkk{
+            width: 45px;
+            height: 45px;
+            margin-right: 5px;
+            img{
+                width: 100%;
+            }
+        }
+        .text-bkk{
+            font-size: 1.4rem;
+            font-weight: $font-regular;
+            color: #525252;
+            line-height: 1.5rem;
+
+            label{
+                font-size: 1.6rem;
+                font-weight: $font-regular;
+                display: block;
+                margin-bottom: 0;
+            }
+        }
+        &:hover{
+            text-decoration: none;
+        }
+    }
+}
+
 .group-mange-section{
     display: none;
 }
@@ -3268,6 +3412,8 @@ $howManySteps: 100; //this needs to be even.
     .text-social{
         font-size: 1.6rem;
         font-weight: $font-regular;
+        //color: #fff;
+        //opacity: 0.7;
         margin-right: 10px;
     }
     ul{
@@ -3277,21 +3423,21 @@ $howManySteps: 100; //this needs to be even.
             list-style: none;
             display: inline-block;
             vertical-align: middle;
-            margin-bottom: 2px;
-            width: 50px;
-            height: 40px;
+            margin-right: 5px;
+            width: 35px;
+            height: 35px;
             a{
                 padding: 8px;
-                background-color: white;
+                background-color: #fff;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                width: 50px;
-                height: 40px;
+                width: 35px;
+                height: 35px;
                 text-align: center;
                 transition: all 0.3s ease;
                 i{
-                    color: white;
+                    color: #fff;
                     font-size: 1.6rem;
                 }
                 &:hover{
@@ -3318,77 +3464,41 @@ $howManySteps: 100; //this needs to be even.
             }
         }
     }
-
-    @include media-breakpoint-down(md){
-        ul{
-            li{
-                height: 50px;
-
-                a{
-                    height: 50px;
-                }
-            }
-        }
-    }
 }
 
-.online-wrapper{
-    // position: absolute;
-    // top: 20px;
-    // left: 20px;
-    .group-online{
-        padding: 10px 5px;
-        display: block;
-        text-align: center;
-        background-color: $color-primary;
-        .icon-online{
-            margin-bottom: 5px;
-            svg{
-
-                .st0{
-                    fill:none;
-                    stroke: white;
-                    stroke-width:2;
-                    stroke-linecap:round;
-                    stroke-linejoin:round;
-                    stroke-miterlimit:10;
-                }
-
-                .st1{
-                    fill:$color-secondary;
-                    stroke: white;
-                }
-            }
-        }
-        .text-online{
-            font-size: 1.2rem;
-            line-height: 1.6rem;
-            font-weight: $font-regular;
-            color: white;
-        }
-    }
-    .num-online{
-        padding: 5px;
-        display: block;
-        text-align: center;
-        background-color: $color-text;
-        font-size:  2rem;
-        font-weight: $font-medium;
-        line-height: 4rem;
-        margin: 0 0 2px 0;
-        color: white;
-    }
-
-    @include media-breakpoint-down(md){
-        .group-online{
-            padding: 5px 10px;
-        }
-        .num-online{
-            line-height: 5rem;
-            margin-bottom: 0;
-        }
-    }
-}
+// .online-wrapper{
+//     position: absolute;
+//     top: 20px;
+//     left: 20px;
+//     .group-online{
+//         display: flex;
+//         align-items: center;
+//         .icon-online{
+//             margin-right: 5px;
+//             svg{
+//                 .st0{
+//                     fill:none;
+//                     stroke-width:2;
+//                     stroke-linecap:round;
+//                     stroke-linejoin:round;
+//                     stroke-miterlimit:10;
+//                 }
+//             }
+//         }
+//         .text-online{
+//             font-size: 2rem;
+//             line-height: 2.4rem;
+//             font-weight: $font-regular;
+//             color: #525252;
+//         }
+//     }
+//     .num-online{
+//         font-size: 3.6rem;
+//         font-weight: $font-medium;
+//         line-height: 40px;
+//         margin: 0;
+//     }
+// }
 
 
 // Pagination
@@ -3397,7 +3507,7 @@ $howManySteps: 100; //this needs to be even.
     .all-page{
         font-size: 1.8rem;
         font-weight: $font-regular;
-        color: $color-text;
+        color: #525252;
         span{
             padding: 0 5px;
         }
@@ -3554,7 +3664,7 @@ Due to the split circle of progress-left and progress right, we must use the ani
                                             flex: 0 0 80px;
                                         }
                                         .title-card-header{
-                                            color: white;
+                                            color: #fff;
                                         }
                                     }
                                 }

@@ -1,8 +1,8 @@
 <div class="section-content">
     <div class="container">
         <div class="inner-content">
-            <div class="top-content">
-                <div class="group-text__no-styled">
+            <div class="top-content no-styled content-page">
+                <div class="group-text">
                     <h3 class="title">การดำเนินงานด้านความปลอดภัย อาชีวอนามัย และสภาพแวดล้อมในการทำงานของสำนักงานเลขานุการสภากรุงเทพมหานคร </h3>
                 </div>
             </div>
@@ -10,11 +10,49 @@
                 <div class="public-post">
                     <i class="far fa-calendar"></i> 2 กรกฎาคม 2556
                 </div>
-                <div class="source-post color-secondary">
-                    แหล่งที่มา <span class="bg-color-secondary">PR BKK</span>
+                <div class="source-post">
+                    แหล่งที่มา <span>PR BKK</span>
                 </div>
             </div>
             <div class="main-content border-bottom">
+                <!-- text editor -->
+                <div class="group-editor" id="editor">
+                    ได้จัดทำสื่อประชาสัมพันธ์สื่อองค์ความรู้ที่เกี่ยวข้องกับการป้องกันโรคติดเชื้อไวรัสโคโรนา 2109 (covid) 
+                    เพื่อสร้างความตระหนักรู้แก่กลุ่มแรงงาน ผู้ประกอบกิจการและประชาชนทั่วไปในการป้องกันตนเอง 
+                    และลดการเผยแพร่ของเชื้อดรคดังกล่าว
+                    ผ่านทางเว็บไซต์ <a href="http://www.tosh.or.th/">http://www.tosh.or.th/</a> แอพลิเคชั่น T-OSH Guide และผ่านทางช่องทาง QR Code ท้ายหนังสือนี้
+                </div>
+                
+                <!-- list file download -->
+                <div class="group-list-downloadfile">
+                    <div class="item download">
+                        <div class="box-full">
+                            <div class="download-wrap">
+                                <div class="content-link">
+                                    <div class="icon-content">
+                                        <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            width="42.2px" height="42.2px" viewBox="0 0 42.2 42.2" style="enable-background:new 0 0 42.2 42.2;" xml:space="preserve">                                                 
+                                            <g>
+                                                <path class="st0" d="M34.6,15.7L22.9,4.1H11.8C9.5,4.1,7.6,6,7.6,8.3v25.6c0,2.3,1.9,4.2,4.2,4.2h4.5h14c2.3,0,4.2-1.9,4.2-4.2
+                                                    V15.7z"/>
+                                                <path class="st1" d="M34.6,15.7h-7.6c-2.2,0-4-1.8-4-4V4.1"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <div class="text-content">
+                                        แบบฟอร์มสำหรับติดต่อ
+                                    </div>
+                                </div>
+                                <div class="btn-custom btn-custom-skew">
+                                    <a href="/" title="Download" class="btn btn-primary btn-skew">
+                                        Download
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- One image -->
                 <div class="group-oneimage">
                     <img src="{{ asset('template1/assets/images/img-album-demo3_2.jpg')}}" alt="image">
@@ -176,42 +214,10 @@
                     </div>
                 </div>
 
-                <!-- text editor -->
-                <div class="group-editor" id="editor">
-                    ได้จัดทำสื่อประชาสัมพันธ์สื่อองค์ความรู้ที่เกี่ยวข้องกับการป้องกันโรคติดเชื้อไวรัสโคโรนา 2109 (covid) 
-                    เพื่อสร้างความตระหนักรู้แก่กลุ่มแรงงาน ผู้ประกอบกิจการและประชาชนทั่วไปในการป้องกันตนเอง 
-                    และลดการเผยแพร่ของเชื้อดรคดังกล่าว
-                    ผ่านทางเว็บไซต์ <a href="http://www.tosh.or.th/">http://www.tosh.or.th/</a> แอพลิเคชั่น T-OSH Guide และผ่านทางช่องทาง QR Code ท้ายหนังสือนี้
-                </div>
-
-                <!-- list file download -->
-                <div class="group-list-downloadfile">
-                    <a href="" class="item">
-                        <div class="icon-content">
-                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                width="24px" height="24px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
-                            <g>
-                                <line class="st0" x1="15.2" y1="14.1" x2="15.2" y2="20.3"/>
-                                <polyline class="st0" points="18.4,18.3 15.2,21.4 12,18.3 	"/>
-                                <path class="st1" d="M9.4,21.4H6.9c-1.3,0-2.3-1-2.3-2.3V4.9c0-1.3,1-2.3,2.3-2.3H13l6.4,6.4v5.3"/>
-                                <path class="st2" d="M19.4,9h-4.2C14,9,13,8,13,6.8V2.6"/>
-                            </g>
-                            </svg>
-                        </div>
-                        <div class="text-content flex-grow-1">
-                            <p>
-                                สื่อประชาสัมพันธ์สื่อองค์ความรู้ที่เกี่ยวข้องกับการป้องกันโรคติดเชื้อไวรัสโคโรนา
-                            </p>
-                        </div>
-                        <div class="text-onbottom">
-                            <p>Download</p>
-                        </div>
-                    </a>
-                </div>
                 <!-- location -->
                 <div class="group-activity-location">
                     <div class="top-content">
-                        <div class="group-text__no-styled">
+                        <div class="group-text">
                             <h3 class="title color-primary">สถานที่กิจกรรม</h3>
                         </div>
                     </div>
@@ -262,7 +268,7 @@
                         </div>
                     </div>
                     <div class="views-like d-flex align-items-center">
-                        <div class="view-count">
+                        <div class="view-count color-secondary">
                             View : <span>1.5K</span>
                         </div>
                         <div class="like-count d-flex align-items-center">
@@ -315,18 +321,8 @@
                                 </div>
                                 <div class="btn-choice-vote -login">
                                     <div class="show-login">
-                                        <ul>
-                                            <li>
-                                                <a href="">
-                                                    Register<span class="icon-register"></span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="">
-                                                    Sign in<span class="icon-signin"></span>
-                                                </a>
-                                            </li>
-                                        </ul>
+                                        <button class="btn btn-primary icon" type="button"><i class="fas fa-lock"></i> Sign in</button>
+                                        <a href="">Register</a>
                                     </div>
                                     <button class="btn btn-primary" type="button">VOTE</button>
                                 </div>

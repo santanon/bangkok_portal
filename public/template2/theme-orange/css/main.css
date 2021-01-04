@@ -14186,7 +14186,8 @@ template {
     .group-section-content .section-content .inner-content .main-content .add-news {
       display: none; }
     .group-section-content .section-content .inner-content .main-content .group-slide {
-      position: relative; }
+      position: relative;
+      background-color: white; }
       .group-section-content .section-content .inner-content .main-content .group-slide .list-item {
         margin: 0;
         padding: 0; }

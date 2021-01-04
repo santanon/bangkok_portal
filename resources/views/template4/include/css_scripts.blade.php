@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="{{ asset('fontawesome/fontawesome.min.css')}}">
 <link rel="stylesheet" href="{{ asset('fontawesome/all.min.css')}}">
 
+<link rel="stylesheet" href="{{ asset('template4/theme-pink/css/jquery-ui.css')}}">
 <script type="text/javascript" rel="preload" src="{{ asset('template4/js/jquery-1.12.3.js') }}"></script>
 <script type="text/javascript" rel="preload" src="{{ asset('template4/js/bootstrap.min.js') }}"></script>
 <script type="text/javascript" rel="preload" src="{{ asset('template4/js/jquery-ui-1.11.4.custom.js') }}"></script>
@@ -22,6 +23,14 @@
 <link rel="stylesheet" href="{{ asset('template4/theme-pink/css/slick-theme.css')}}">
 <script type="text/javascript" src="{{ asset('template4/js/slick.min.js') }}"></script>
 
+<!--Match Height -->
+<script type="text/javascript" src="{{ asset('template4/js/jquery.matchHeight.js') }}"></script>
+
+<script>
+    $(function() {
+        $('.matchHeight').matchHeight();
+    });
+</script>
 <script>
    AOS.init();
 </script>

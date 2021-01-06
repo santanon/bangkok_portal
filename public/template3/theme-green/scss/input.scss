@@ -136,7 +136,8 @@
     }
     .title-field{
         font-size: 1.8rem;
-        line-height: 2.4rem;
+        //line-height: 2.4rem;
+        line-height: 4rem;
         font-weight: $font-regular;
         color: #525252;
     }
@@ -177,6 +178,10 @@
         box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
         &:focus{
             outline: none;
+        }
+
+        &.-contact{
+            height: 156px;
         }
     }
 

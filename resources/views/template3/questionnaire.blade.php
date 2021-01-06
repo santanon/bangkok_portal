@@ -24,7 +24,7 @@
                                 <p class="desc color-secondary">ผู้ใช้บริการสามารถร้องเรียน และเสนอแนะการให้บริการ</p>
                             </div>
                             <div class="group-gotoall">
-                                <a href="/questionnaire">
+                                <a href="/questionnaire-3">
                                     MORE 
                                     <div class="icon-more">
                                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -44,7 +44,7 @@
                             <div class="group-slide">
                                 <div class="list-item" id="slide_6">
                                     <div class="item -question">
-                                        <div class="row">
+                                        <div class="row no-gutters">
                                             <div class="col-lg-4 col-md-4 col-sm-4">
                                                 <div class="left bg-color-secondary active">
                                                     <div class="progress-content">
@@ -67,12 +67,11 @@
                                                         <span>155 คน</span>
                                                     </div>
                                                 </div>
-                                                <div class="text-view color-secondary">View : 340</div>
                                             </div>
                                             <div class="col-lg-8 col-md-8 col-sm-8">
                                                 <div class="right">                                        
                                                     <div class="text-content">
-                                                        <a href="##">
+                                                        <a href="/questionnaire-detail-3">
                                                             ร่วมส่งแรงใจให้เยาวชนนักเตะรุ่นใหม่ชิงชัยเอกสารที่ต้องใช้ 1. สูติบัตร พร้อมสำเนา 2. ทะเบียนบ้าน พร้อมสำเนา
                                                         </a>
                                                     </div>
@@ -93,11 +92,14 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                                <div class="text-view color-secondary">View : 340</div>
+                                            </div>
                                         </div>
                                     </div>
 
                                     <div class="item -question">
-                                        <div class="row">
+                                        <div class="row no-gutters">
                                             <div class="col-lg-4 col-md-4 col-sm-4">
                                                 <div class="left bg-color-secondary active">
                                                     <div class="progress-content">
@@ -114,18 +116,17 @@
                                                             </div>
                                                         </div>
                                                         <!-- END -->
-                                                        <div class="text-onbottom bg-color-secondary">
-                                                            ผู้ตอบคำถาม<br>
-                                                            <span>155 คน</span>
-                                                        </div>
+                                                    </div>
+                                                    <div class="text-onbottom bg-color-secondary">
+                                                        ผู้ตอบคำถาม<br>
+                                                        <span>155 คน</span>
                                                     </div>
                                                 </div>
-                                                <div class="text-view color-secondary">View : 340</div>
                                             </div>
                                             <div class="col-lg-8 col-md-8 col-sm-8">
-                                                <div class="right">                                    
+                                                <div class="right">                                        
                                                     <div class="text-content">
-                                                        <a href="##">
+                                                        <a href="/questionnaire-detail-3">
                                                             ร่วมส่งแรงใจให้เยาวชนนักเตะรุ่นใหม่ชิงชัยเอกสารที่ต้องใช้ 1. สูติบัตร พร้อมสำเนา 2. ทะเบียนบ้าน พร้อมสำเนา
                                                         </a>
                                                     </div>
@@ -145,6 +146,9 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                            </div>
+                                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                                <div class="text-view color-secondary">View : 340</div>
                                             </div>
                                         </div>
                                     </div>

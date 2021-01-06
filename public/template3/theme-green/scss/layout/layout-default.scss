@@ -366,20 +366,20 @@ $howManySteps: 100; //this needs to be even.
                 //align-items: center;
                 justify-content: space-between;
                 //margin-bottom: 20px;
-                padding-bottom: 10px;
+                padding-bottom: 20px;
                 .group-text{
                     .title{
                         margin: 0 0 5px;
                         font-size: 3.6rem;
                         line-height: 4rem;
                         font-weight: $font-medium;
-                        
                     }
                     .desc{
                         margin: 0;
                         font-size: 1.6rem;
                         line-height: 2rem;
                         font-weight: $font-regular;
+                        color: #525252;
                     }
                 }
                 .group-gotoall{
@@ -419,6 +419,10 @@ $howManySteps: 100; //this needs to be even.
                             }
                         }
                     }
+                }
+
+                &.-question{
+                    margin-top: 19px;
                 }
                 @media only screen and (max-width: 768px) {
                     flex-wrap: wrap;
@@ -643,7 +647,7 @@ $howManySteps: 100; //this needs to be even.
                         }
                     }
                     @media only screen and (max-width: 992px) {
-                        margin-bottom: 30px;
+                        //margin-bottom: 30px;
                         .content-news-main{
                             position: relative;
                             .desc-news{
@@ -1097,6 +1101,14 @@ $howManySteps: 100; //this needs to be even.
                                     -webkit-box-orient: vertical;
                                     overflow: hidden;
                                     text-overflow: ellipsis;
+                                    font-size: 2rem;
+                                    font-weight: $font-regular;
+                                    line-height: 2.4rem;
+                                    color: #525252;
+                                    transition: all 0.3s ease;
+                                    &:hover{
+                                        color: $color-primary;
+                                    }
                                     a{
                                         font-size: 2rem;
                                         font-weight: $font-regular;
@@ -1254,7 +1266,8 @@ $howManySteps: 100; //this needs to be even.
                                 .right{
                                     display: block;
                                     height: 180px;
-                                    background-color: inherit;
+                                    background-color: #e5e5e5;
+                                    padding: 10px 15px;
                                     .page-detail{
                                         display: block;
                                         
@@ -1275,6 +1288,11 @@ $howManySteps: 100; //this needs to be even.
                                         -webkit-line-clamp: 4;
                                     }
                                     
+                                }
+                                &.-inside{
+                                    .right{
+                                        height: auto;
+                                    }
                                 }
                             }
                             &.-download{
@@ -1380,6 +1398,9 @@ $howManySteps: 100; //this needs to be even.
                                         }
                                         .st1{
                                             fill:$color-primary;
+                                        }
+                                        @media only screen and (max-width: 992px){
+                                            height: 100%;
                                         }
                                     }
                                     .content{
@@ -1993,8 +2014,120 @@ $howManySteps: 100; //this needs to be even.
                                 }
                             }
                             .list-choice{
-                                margin-bottom: 15px;
+                                margin-bottom: 25px;
+                                padding: 15px;
+                                border-left: 1px solid #cfd1d4;
                             }
+                        }
+                    }
+
+                    .left{
+                        height: 180px;
+                        position: relative;
+                        .progress-content{
+                            .progress {
+                                width: $size;
+                                height: $size;
+                                line-height: $size;
+                                background: none;
+                                margin: 0 auto;
+                                box-shadow: none;
+                                position: absolute;
+                                top: -55px;
+                                bottom: 0;
+                                margin: auto;
+                                left: 0;
+                                right: 0;
+                                &:after {
+                                    content: "";
+                                    width: 100%;
+                                    height: 100%;
+                                    border-radius: 50%;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    border: 7px solid $color-secondary;
+                                }
+                                > span {
+                                    width: 50%;
+                                    height: 100%;
+                                    overflow: hidden;
+                                    position: absolute;
+                                    top: 0;
+                                    z-index: 1;
+                                }
+                                .progress-left {
+                                    left: 0;
+                                }
+                                .progress-bar {
+                                    width: 100%;
+                                    height: 100%;
+                                    background: none;
+                                    border-width: 7px;
+                                    border-style: solid;
+                                    position: absolute;
+                                    top: 0;
+                                    border-color: $color-primary;
+                                }
+                                .progress-left .progress-bar {
+                                    left: 100%;
+                                    border-top-right-radius: ($size/2);;
+                                    border-bottom-right-radius: ($size/2);;
+                                    border-left: 0;
+                                    -webkit-transform-origin: center left;
+                                    transform-origin: center left;
+                                    //animation: loading-2 1.5s linear forwards 1.8s;
+                                }
+                                .progress-right {
+                                  right: 0;
+                                    .progress-bar {
+                                        left: -100%;
+                                        border-top-left-radius: ($size/2);;
+                                        border-bottom-left-radius: ($size/2);;
+                                        border-right: 0;
+                                        -webkit-transform-origin: center right;
+                                        transform-origin: center right;
+                                        //animation: loading-1 1.8s linear forwards;
+                                    }
+                                }
+                                .progress-value {
+                                    display: flex;
+                                    border-radius: 50%;
+                                    font-size: 2rem;
+                                    line-height: 2rem;
+                                    text-align: center;
+                                    align-items: center;
+                                    justify-content: center;
+                                    height: 100%;
+                                    width: 100%;
+                                    color: #fff;
+                                    font-weight: $font-regular;
+                                    span {
+                                        font-size: 1.2rem;
+                                        text-transform: uppercase;
+                                    }
+                                }
+                            }
+                            .total-people{
+                                position: absolute;
+                                width: 100%;
+                                font-size: 1.8rem;
+                                line-height: 2rem;
+                                font-weight: $font-regular;
+                                color: #fff;
+                                text-align: center;
+                                bottom: 40px;
+                            }
+                        }
+                        .text-onbottom{
+                            position: absolute;
+                            bottom: 10px;
+                            width: 100%;
+                            color: #fff;
+                            text-align: center;
+                            font-size: 2rem;
+                            line-height: 2.2rem;
+                            font-weight: $font-regular;
                         }
                     }
                 }
@@ -2183,7 +2316,7 @@ $howManySteps: 100; //this needs to be even.
                         .card{
                             border-radius: 0;
                             border: 1px solid $color-secondary;
-                            margin-bottom: 30px;
+                            margin-bottom: 20px;
                             .card-header{
                                 padding: 0;
                                 background-color: #fff;
@@ -2276,6 +2409,7 @@ $howManySteps: 100; //this needs to be even.
 
                 &.-contact{
                     .contact-tel{
+                        margin-bottom: 15px;
                         img{
                             margin-right: 5px;
                         }
@@ -2286,7 +2420,7 @@ $howManySteps: 100; //this needs to be even.
                         }
                     }
                     .iframe-map{
-                        margin: 20px 0;
+                        //margin: 20px 0;
                         iframe{
                             width: 100%;
                             height: 400px;
@@ -2294,55 +2428,70 @@ $howManySteps: 100; //this needs to be even.
                     }
                     .list-item-gov{
                         margin-bottom: 30px;
+                        display: flex;
+                        flex-flow: row;
+                        border: 1px solid #cfd1d4;
+                        background-color: #efefef;
                         .title-gov{
                             font-size: 1.8rem;
                             font-weight: $font-regular;
                             line-height: 2.4rem;
                             color: #525252;
-                            text-align: center;
                             padding: 8px 15px;
-                            box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
+                            flex: 1 55%;
                         }
                         .contact-gov{
+                            flex: 1 20%;
+                            background-color: #f8f8f8;
                             .tel-gov{
-                                background-color: $color-green-secondary;
                                 padding: 5px 10px;
-                                width: 50%;
-                                .on{
-                                    width: 14px;
-                                    height: 18px;
-                                    img{
-                                        width: 100%;
-                                        display: block;
+                                height: 100%;
+                                .number{
+                                    span{
+                                        font-size: 1.8rem;
+                                        line-height: 2.4rem;
+                                        font-weight: $font-regular;
+                                        color: #525252;
+                                        a{
+                                            color: #525252;
+                                            &:hover{
+                                                color: $color-primary;
+                                            }
+                                        }
+                                        >svg{
+                                            .st0{
+                                                fill:$color-primary;
+                                            }
+                                        }
+                                        &.text-tel{
+                                            padding: 5px 10px;
+                                        }
                                     }
                                 }
-                                .number{
-                                    font-size: 1.8rem;
-                                    line-height: 2.4rem;
-                                    font-weight: $font-regular;
-                                    color: #fff;
-                                }
                             }
-                            .tel-internal{
-                                background-color: $color-green-primary;
-                                padding: 5px 10px;
-                                width: 50%;
-                                text-align: right;
-                                .on{
-                                    font-size: 1.2rem;
-                                    font-weight: $font-regular;
-                                    color: #fff;
-                                }
-                                .number{
-                                    font-size: 1.8rem;
-                                    line-height: 2.4rem;
-                                    font-weight: $font-regular;
-                                    color: #fff;
-                                }
+                            &.internal{
+                                background-color: #efefef;
                             }
                         }
                         .social-wrapper{
-                            margin-top: 5px;
+                            flex: 1 5%;
+                            ul{
+                                li{
+                                    width: 100%;
+                                    height: 55px;
+                                    margin: 0;
+                                    a{
+                                        width: 100%;
+                                        height: 55px;
+                                        margin: 0;
+                                        background-color: transparent;
+                                        img{
+                                            width: 40px;
+                                            height: 40px;
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -2525,6 +2674,9 @@ $howManySteps: 100; //this needs to be even.
                         color: #fff;
                         padding: 5px 10px
                     }
+                }
+                @media only screen and (max-width: 992px){
+                    position: relative;
                 }
             }
 
@@ -2934,6 +3086,11 @@ $howManySteps: 100; //this needs to be even.
                 .cover-album{
                     height: 398px;
                 }
+                @media only screen and (max-width: 992px){
+                    .cover-album{
+                        height: 186px;
+                    }
+                }
             }
         }
 
@@ -3043,6 +3200,11 @@ $howManySteps: 100; //this needs to be even.
             &.-large{
                 .cover{
                     height: 398px;
+                }
+                @media only screen and (max-width: 992px){
+                    .cover{
+                        height: 186px;
+                    }
                 }
             }
         }
@@ -3192,7 +3354,7 @@ $howManySteps: 100; //this needs to be even.
 
 .sitemap-container{
     position: relative;
-    margin: 0 0 125px 0;
+    margin: 0 0 50px 0;
 
     .level-01{
         font-size: 3.6rem;
@@ -3200,12 +3362,12 @@ $howManySteps: 100; //this needs to be even.
     }
 
     .level-02{
-        font-size: 2.6rem;
+        font-size: 2.2rem;
         line-height: 3rem;
     }
 
     .level-03{
-        font-size: 2.2rem;
+        font-size: 2.0rem;
         line-height: 3rem;
     }
 
@@ -3216,17 +3378,29 @@ $howManySteps: 100; //this needs to be even.
 
         .line-sub{
             display: block;
-            margin-bottom: 40px;
+            margin-bottom: 10px;
+            background-color: #efefef;
+            a{
+                padding: 10px 15px;
+                display: block;
+            }
         }
 
         .line-group{
             list-style: none;
-            padding: 0;
-            padding-top: 30px;
+            padding: 20px 0;
             margin: 0;
             display: grid;
             grid-template-columns: auto auto auto auto;
-            grid-gap: 30px;
+            grid-gap: 15px;
+            background-color: #f8f8f8;
+
+            li{
+                a{
+                    border-left: 2px solid $color-secondary;
+                    color: $color-secondary;
+                }
+            }
 
             .line-item{
                 height: auto;
@@ -3246,12 +3420,16 @@ $howManySteps: 100; //this needs to be even.
         }
 
         .link-group{
-            list-style-image: url('../../assets/images/icons/list-style-01.png');
-            padding-top: 20px;
-            padding-left: 17px;
+            //list-style-image: url('../../assets/images/icons/list-style-01.png');
+            list-style: none;
+            padding: 0;
 
             .link-item{
                 margin-bottom: 20px;
+                a{
+                    border-left: none ;
+                    color: #525252;
+                }
             }
         }
     }

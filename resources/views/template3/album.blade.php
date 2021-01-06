@@ -26,7 +26,7 @@
                             <p class="desc color-secondary">The Bangkok Metropolitan Council Secretariat </p>
                         </div>
                         <div class="group-gotoall">
-                            <a href="/news">
+                            <a href="/album-3">
                                 MORE 
                                 <div class="icon-more">
                                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -49,7 +49,7 @@
                     <div class="main-content">
                         <div class="gallery-template">
                             <div class="row">
-                                <div class="col-xl-3">
+                                <div class="col-xl-3 col-lg-3">
                                     <div class="item -album">
                                         <div class="group-mange-section">
                                             <div class="manage-tools">
@@ -115,7 +115,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-6">
+                                <div class="col-xl-6 col-lg-6">
                                     <div class="item -album -large">
                                         <div class="group-mange-section">
                                             <div class="manage-tools">
@@ -149,7 +149,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-3">
+                                <div class="col-xl-3 col-lg-3">
                                     <div class="item -album">
                                         <div class="group-mange-section">
                                             <div class="manage-tools">
@@ -215,9 +215,7 @@
                                         </div>
                                     </div>
                                 </div>
-
-
-
+                                
                             </div>
                         </div>
                     </div>

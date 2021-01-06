@@ -1,4 +1,4 @@
-@section('title', 'QUESTIONNAIRE')
+@section('title', 'รายละเอียดโหวต')
 @section('tagkeyword', '')
 @section('tagdescription', '')
 
@@ -11,13 +11,12 @@
             @include('panel/include.head-top')
         </div>
     </div>
+
     <header id="header-wrapper">
         @include('template3/include.header')
     </header>
-
-
+    
     <div id="site-content">
-
         <div class="banner-wrapper onlyOne">
             <div class="group-mange-section no-mg right-0">
                 <div class="manage-tools">
@@ -35,7 +34,7 @@
             <ul>
                 <li>
                     <div class="bg-layer"></div>
-                    <div class="banner" style="background-image: url('../../template3/assets/images/banner/img-banner-demo.png');"></div>
+                    <div class="banner" style="background-image: url('../../template3/assets/images/banner/img-banner-vote.png');"></div>
                     <div class="item-Onbanner-outer">
                         <div class="item-Onbanner-inner">
                             <div class="list">
@@ -53,31 +52,32 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">หน้าแรก</a></li>
-                        <li class="breadcrumb-item"><a href="#">QUESTIONNAIRE</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">DETAIL</li>
+                        <li class="breadcrumb-item"><a href="#">การรับฟังปัญหา/ข้อคิดเห็น</a></li>
+                        <li class="breadcrumb-item"><a href="#">Vote</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Detail</li>
                     </ol>
                 </nav>
             </div>
-        </div>
+            
+        </div> 
 
         <div class="group-section-content">
-            @include('template3/questionnaire.detail')
+            @include('template3/vote.detail')
         </div>
 
-
     </div>
-
 
     <footer id="footer-wrapper">
         @include('template3/include.footer')
     </footer>
 
+
     <!-- Manage Save -->
     <!-- <div class="manage-save">
         <i class="fas fa-save"></i> SAVED
     </div> -->
-</div>
 
+</div>
 
 
 <!-- Modal alert -->
@@ -121,11 +121,18 @@
 
 
 @include('template3/include.css_scripts')
-
-
+<!-- Gallery -->
+<link rel="stylesheet" href="{{ asset('gallery/lightgallery.css')}}">
+<script type="text/javascript" src="{{ asset('gallery/lightgallery.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('gallery/lg-thumbnail.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('gallery/lg-fullscreen.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('gallery/lg-video.min.js') }}"></script>
 <script type="text/javascript">
-    $(document).ready(function () {
-        
+    $(document).ready(function(){
+        $('#lightgallery').lightGallery({
+            thumbnail:true
+        });
     });
 </script>
 @endsection
+

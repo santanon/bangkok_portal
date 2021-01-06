@@ -24,7 +24,7 @@
                     <p class="desc color-secondary">The Bangkok Metropolitan Council Secretariat</p>
                 </div>
                 <div class="group-gotoall">
-                    <a href="/vote">
+                    <a href="/vote-3">
                         MORE 
                         <div class="icon-more">
                             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"

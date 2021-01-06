@@ -36,7 +36,7 @@ function sfi(title,url)
         <div class="group-section-content" id="manage_dragdrop">
             @include('template3/news')
 
-            @include('template3/calendar')
+            <!-- include ('template3/calendar') -->
 
             @include('template3/faq')
 

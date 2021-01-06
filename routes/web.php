@@ -205,7 +205,18 @@ Route::any('/questionnaire-3', function () {
 Route::any('/questionnaire-detail-3', function () {
     return view('questionnaire-detail-3');
 });
-
+Route::any('/vote-3', function () {
+    return view('vote-main-3');
+});
+Route::any('/vote-detail-3', function () {
+    return view('vote-detail-3');
+});
+Route::any('/contact-3', function () {
+    return view('contact-main-3');
+});
+Route::any('/sitemap-3', function () {
+    return view('sitemap-3');
+});
 
 
 

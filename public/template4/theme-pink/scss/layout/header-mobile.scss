@@ -1,4 +1,4 @@
-@media only screen and (max-width: 1024px) {
+@include media-breakpoint-down(lg) {
     .manage{
         .main-wrapper{
             #header-wrapper{
@@ -16,9 +16,8 @@
         }
     }
 
-
     #header-wrapper{
-        // display: none;
+
         .header-lg{
             display: none;
         }
@@ -142,7 +141,6 @@ body.nav-expanded {
     display: block;
     .canvas-menu{
         display: block;
-        // background-color: rgba($color: #fff, $alpha: 1.0);
         background-color: white;
         height: 100%;
         width: 640px;
@@ -349,6 +347,7 @@ body.nav-expanded {
             display: flex;
             align-items: center;
             justify-content: flex-start;
+
             // &.sticky{
             //     position: fixed;
             //     top: 0;
@@ -416,7 +415,7 @@ body.nav-expanded {
     }
 }
 
-@media only screen and (max-width: 767px) {
+@include media-breakpoint-down(sm){
     .manage{
         .main-wrapper{
             #header-wrapper{

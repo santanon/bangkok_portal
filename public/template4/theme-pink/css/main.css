@@ -13010,7 +13010,7 @@ a.ui-button:active,
 .manage .main-wrapper #header-wrapper {
   padding-top: 36.2px; }
 
-@media only screen and (max-width: 1024px) {
+@media (max-width: 1199.98px) {
   .manage .main-wrapper #header-wrapper {
     padding-top: 36.2px; }
     .manage .main-wrapper #header-wrapper .header-sm .logo-mobile .menu-sizefonts-wrapper.sticky {
@@ -13375,7 +13375,7 @@ body.nav-expanded {
             .canvas-menu-wrapper .canvas-menu .menu-sizefonts-wrapper .tools-sizefonts .sizefonts-wrapper .increase.active {
               background-position: bottom center; }
 
-@media only screen and (max-width: 767px) {
+@media (max-width: 767.98px) {
   .manage .main-wrapper #header-wrapper {
     padding-top: 61px; }
     .manage .main-wrapper #header-wrapper .header-sm .logo-mobile .menu-sizefonts-wrapper.sticky {

@@ -60,11 +60,6 @@
     line-height: 1.2em;
 }
 
-.group-section-breadcrumb{
-    position: relative;
-    margin: 15px 0 20px;
-}
-
 // Modal
 .modal-open .modal.modal-center {
     display: flex!important;
@@ -300,30 +295,29 @@
 $size: 100px;
 $howManySteps: 100; //this needs to be even. 
 
-
 // Front
 .site-content{
     position: relative;
 }
-// .content-onbanner{
-//     background-color: rgba($color: #fff, $alpha: 0.8);
-//     position: relative;
-//     z-index: 100;
-//     margin-top: -197px;
-// }
+
 .group-section-breadcrumb{
+    position: relative;
+
     nav{
-        ol{
+        margin: 20px 0;
+        .breadcrumb{
             background-color: inherit;
-            padding-left: 0;
-            padding-right: 0;
-            margin-bottom: 0;
+            padding: 0;
+            margin: 0;
+
             li{
                 display: flex;
                 align-items: center;
                 font-size: 1.6rem;
+                line-height: 1.6rem;
                 a{
                     font-size: 1.6rem;
+                    line-height: 1.6rem;
                     font-weight: $font-regular;
                     color: $color-text;
                     opacity: 0.7;
@@ -336,6 +330,7 @@ $howManySteps: 100; //this needs to be even.
                 &:before{
                     font-family: 'Font Awesome 5 Free';
                     font-size: 1.2rem;
+                    line-height: 1.6rem;
                     font-weight: 900;
                     content: '\f061';
                 }
@@ -345,6 +340,7 @@ $howManySteps: 100; //this needs to be even.
                     &:after{
                         font-family: 'Font Awesome 5 Free';
                         font-size: 1.2rem;
+                        line-height: 1.6rem;
                         font-weight: 900;
                         content: '\f061';
                         transform: rotate(45deg);

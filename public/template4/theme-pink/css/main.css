@@ -13840,10 +13840,6 @@ body.nav-expanded {
   padding-bottom: 12px;
   line-height: 1.2em; }
 
-.group-section-breadcrumb {
-  position: relative;
-  margin: 15px 0 20px; }
-
 .modal-open .modal.modal-center {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
@@ -14062,40 +14058,47 @@ body.nav-expanded {
 .site-content {
   position: relative; }
 
-.group-section-breadcrumb nav ol {
-  background-color: inherit;
-  padding-left: 0;
-  padding-right: 0;
-  margin-bottom: 0; }
-  .group-section-breadcrumb nav ol li {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    font-size: 1.6rem; }
-    .group-section-breadcrumb nav ol li a {
-      font-size: 1.6rem;
-      font-weight: 400;
-      color: #525252;
-      opacity: 0.7; }
-    .group-section-breadcrumb nav ol li.active {
-      color: #525252; }
-  .group-section-breadcrumb nav ol .breadcrumb-item + .breadcrumb-item:before {
-    font-family: 'Font Awesome 5 Free';
-    font-size: 1.2rem;
-    font-weight: 900;
-    content: '\f061'; }
-  .group-section-breadcrumb nav ol .breadcrumb-item:last-child:after {
-    font-family: 'Font Awesome 5 Free';
-    font-size: 1.2rem;
-    font-weight: 900;
-    content: '\f061';
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-    padding-left: 0.5rem; }
+.group-section-breadcrumb {
+  position: relative; }
+  .group-section-breadcrumb nav {
+    margin: 20px 0; }
+    .group-section-breadcrumb nav .breadcrumb {
+      background-color: inherit;
+      padding: 0;
+      margin: 0; }
+      .group-section-breadcrumb nav .breadcrumb li {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        font-size: 1.6rem;
+        line-height: 1.6rem; }
+        .group-section-breadcrumb nav .breadcrumb li a {
+          font-size: 1.6rem;
+          line-height: 1.6rem;
+          font-weight: 400;
+          color: #525252;
+          opacity: 0.7; }
+        .group-section-breadcrumb nav .breadcrumb li.active {
+          color: #525252; }
+      .group-section-breadcrumb nav .breadcrumb .breadcrumb-item + .breadcrumb-item:before {
+        font-family: 'Font Awesome 5 Free';
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        font-weight: 900;
+        content: '\f061'; }
+      .group-section-breadcrumb nav .breadcrumb .breadcrumb-item:last-child:after {
+        font-family: 'Font Awesome 5 Free';
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        font-weight: 900;
+        content: '\f061';
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+        padding-left: 0.5rem; }
 
 .group-section-content .section-content {
   position: relative;

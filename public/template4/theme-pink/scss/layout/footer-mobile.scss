@@ -1,34 +1,141 @@
-@media only screen and (max-width: 992px) {
+@include media-breakpoint-down(md){
     #footer-wrapper{
+        // display: none;
+        .group-content{
+            padding: 15px;
+        }
+
         .group-footer{
-            .title-footer{
-                .title{
-                    font-size: 2.8rem;
-                }
-            }
+            padding: 15px;
+        }
+
+        .group-footer-contact{
+            flex-flow: wrap;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding: 15px;
+    
             .group-content-footer{
-                margin-bottom: 15px;
-                .text-content{
-                    font-size: 1.6rem;
-                    line-height: 2rem;
-                    a.link-tel{
-                        font-size: 2.4rem;
-                        margin-bottom: 0;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                width: 50%;
+                margin-bottom: 20px;
+                .icon-content{
+                    margin-right: 15px;
+                    padding: 10px 20px;
+                    transform: skew(-14deg);
+                    border: 1px solid $color-primary;
+                    background-color: $color-primary;
+    
+                    img{
+                        transform: skew(14deg);
                     }
                 }
-            }
-
-            .footer-bottom{
-                flex-wrap: wrap;
-                .sitemap{
-                    width: 100%;
-                    ul{
-                        li{
-                            display: block;
+                .text-content{
+                    font-weight: $font-regular;
+                    font-size: 2.2rem;
+                    line-height: 2.6rem;
+                    color: #666;
+                    a.link-tel{
+                        display: block;
+                        font-size: 3.2rem;
+                        font-weight: $font-medium;
+                        color: $color-text;
+                        margin-top: 0;
+                        transition: all 0.3s ease;
+                        &:hover{
+                            text-decoration: none;
+                            color: $color-primary;
                         }
                     }
                 }
             }
+    
+            .copyright{
+                width: 100%;
+                margin-bottom: 20px;
+                font-size: 1.8rem;
+                line-height: 2.2rem;
+                font-weight: $font-regular;
+                color: $color-text;
+                transition: all 0.3s ease;
+            }
         }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    #footer-wrapper{
+        .group-content{
+            display: flex;
+            flex-flow: column;
+            align-items: stretch;
+            justify-content: flex-start;
+            background-color: white;
+    
+            .group-content-left{
+                display: flex;
+                flex-flow: row;
+                align-items: center;
+            }
+    
+            .group-content-right{
+                display: flex;
+                flex-flow: row;
+                align-items: center;
+            }
+    
+            .group-link-mainbkk{
+                margin-right: 15px;
+                margin-bottom: 15px;
+                a{
+                    width: auto;
+                    height: auto;
+                    padding: 5px;
+                    background-image: none;
+                    &:hover{
+                        text-decoration: none;
+                    }
+                }
+            }
+    
+            .online-wrapper{
+                display: flex;
+                flex-flow: row;
+                align-items: center;
+                .group-online{
+                    padding: 10px 20px;
+                    transform: skew(-14deg);
+                    border: 1px solid $color-primary;
+                    background-color: $color-primary;
+                    .text-online{
+                        transform: skew(14deg);
+                        font-size: 2rem;
+                        line-height: 2.4rem;
+                        font-weight: $font-regular;
+                        color: white;
+                    }
+                }
+                .num-online{
+                    margin: 0 0 0 15px;
+                    font-size: 3.6rem;
+                    line-height: 4rem;
+                    font-weight: $font-medium;
+                    color: $color-secondary;
+                }
+            }
+        }
+
+        .group-footer-contact{
+            .group-content-footer{
+                width: 100%;
+            }
+        }
+    }
+
+    .gototop{
+        right: 15px;
+        bottom: 15px;
     }
 }

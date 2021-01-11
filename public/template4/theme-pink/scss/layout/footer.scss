@@ -21,7 +21,6 @@
 
 //front
 #footer-wrapper{
-    // padding-top: 100px;
     position: relative;
 
     .group-content{
@@ -100,14 +99,10 @@
                 color: white;
             }
         }
+
         .group-content-footer{
-            // display: flex;
-            // justify-content: flex-start;
             display: block;
             text-align: center;
-            // .icon-content{
-            //     margin-right: 10px;
-            // }
             .text-content{
                 margin-top: 15px;
                 font-weight: $font-regular;
@@ -128,13 +123,12 @@
                 }
             }
         }
+
         .social-wrapper{
             margin-top: 30px;
         }
+        
         .footer-bottom{
-            // display: flex;
-            // align-items: center;
-            // justify-content: space-between;
             .sitemap{
                 display: block;
                 margin-top: 50px;

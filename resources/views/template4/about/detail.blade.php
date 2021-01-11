@@ -3,7 +3,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
-                    <div class="top-content styled-row bg-color-secondary">
+                    <div class="top-content flex-row bg-color-secondary">
                         <div class="group-text">
                             <h3 class="title">ภารกิจหน้าที่</h3>
                             <p class="desc">The Bangkok Metropolitan Council Secretariat </p>

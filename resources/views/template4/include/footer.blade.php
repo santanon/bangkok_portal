@@ -99,7 +99,6 @@
     </div>     
 </div>
 
-
 <div class="gototop">
     <div class="icon-gototop">
         <img src="{{ asset('template1/assets/images/icons/icon-gototop.png')}}" alt="icon">

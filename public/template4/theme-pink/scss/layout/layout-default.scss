@@ -60,11 +60,6 @@
     line-height: 1.2em;
 }
 
-.group-section-breadcrumb{
-    position: relative;
-    margin: 15px 0 20px;
-}
-
 // Modal
 .modal-open .modal.modal-center {
     display: flex!important;
@@ -102,7 +97,7 @@
                 z-index: 9;
                 width: 40px;
                 height: 40px;
-                background-color: #525252;
+                background-color: $color-text;
                 margin-left: auto;
                 cursor: pointer;
                 display: flex;
@@ -166,7 +161,7 @@
                         font-size: 1.6rem;
                         font-weight: $font-regular;
                         line-height: 2.4rem;
-                        color: #525252;
+                        color: $color-text;
                         &.text-alert-system{
                             font-size: 2rem;
                             i{
@@ -300,42 +295,42 @@
 $size: 100px;
 $howManySteps: 100; //this needs to be even. 
 
-
 // Front
 .site-content{
     position: relative;
 }
-// .content-onbanner{
-//     background-color: rgba($color: #fff, $alpha: 0.8);
-//     position: relative;
-//     z-index: 100;
-//     margin-top: -197px;
-// }
+
 .group-section-breadcrumb{
+    position: relative;
+
     nav{
-        ol{
+        margin: 20px 0;
+        .breadcrumb{
             background-color: inherit;
-            padding-left: 0;
-            padding-right: 0;
-            margin-bottom: 0;
+            padding: 0;
+            margin: 0;
+
             li{
                 display: flex;
                 align-items: center;
                 font-size: 1.6rem;
+                line-height: 1.6rem;
                 a{
                     font-size: 1.6rem;
+                    line-height: 1.6rem;
                     font-weight: $font-regular;
-                    color: #525252;
+                    color: $color-text;
                     opacity: 0.7;
                 }
                 &.active{
-                    color: #525252;
+                    color: $color-text;
                 }
             }
             .breadcrumb-item + .breadcrumb-item{
                 &:before{
                     font-family: 'Font Awesome 5 Free';
                     font-size: 1.2rem;
+                    line-height: 1.6rem;
                     font-weight: 900;
                     content: '\f061';
                 }
@@ -345,6 +340,7 @@ $howManySteps: 100; //this needs to be even.
                     &:after{
                         font-family: 'Font Awesome 5 Free';
                         font-size: 1.2rem;
+                        line-height: 1.6rem;
                         font-weight: 900;
                         content: '\f061';
                         transform: rotate(45deg);
@@ -363,49 +359,75 @@ $howManySteps: 100; //this needs to be even.
             padding-top: 0;
         }
         .inner-content{
+            position: relative;
+
             .top-content{
                 display: flex; 
-                flex-flow: wrap;
-                align-items: center;
-                padding: 0 20px 20px;
-                
+                padding: 20px;
+
                 .group-text{
-                    margin: 0 auto;
                     color: $color-text;
-                    text-align: center;
-                    word-break: break-word;
+
                     .title{
-                        margin: 0 0 20px;
-                        font-size: 3.6rem;
-                        line-height: 4rem;
+                        font-size: 3rem;
+                        line-height: 3.4rem;
                         font-weight: $font-medium;
-                        
                     }
+
                     .desc{
-                        margin: 0 0 40px;
                         font-size: 1.6rem;
                         line-height: 2rem;
                         font-weight: $font-regular;
                     }
                 }
 
-                &.styled-row{
+                &.flex-wrap{
+                    flex-flow: wrap;
+                    align-items: center;
+
+                    .group-text{
+                        margin: 0 auto;
+                        text-align: center;
+                        word-break: break-word;
+                        .title{
+                            margin: 0 0 20px;
+                        }
+                        .desc{
+                            margin: 0 0 40px;
+                        }
+                    }
+
+                    &.detail-page{
+                        margin-bottom: 30px;
+                        .group-text{
+                            margin: 0;
+                            text-align: left;
+                            .title{
+                                margin: 0 0 10px;
+                            }
+                            .desc{
+                                margin: 0
+                            }
+                        }
+                    }
+                }
+
+                &.flex-row{
                     flex-flow: row;
+                    align-items: center;
                     justify-content: space-between;
-                    padding: 10px 20px;
-                    margin-bottom: 35px;
+                    margin-bottom: 30px;
 
                     .group-text{
                         display: flex;
                         flex-flow: row;
                         align-items: center;
-                        
                         margin: 0;
                         text-align: left;
 
                         .title{
-                            margin-bottom: 0;
                             padding: 0 20px 0 0;
+                            margin: 0;
                         }
 
                         .desc{
@@ -414,44 +436,63 @@ $howManySteps: 100; //this needs to be even.
                     }
                 }
 
-                &.no-styled{
-                    background-color: transparent;
+                &.flex-row-arrow{
+                    flex-flow: row;
+                    align-items: center;
+                    margin: 0 0 30px;
+
                     .group-text{
                         position: relative;
                         padding: 0 75px;
+                        margin: 0 auto;
                         color: $color-text;
-
+                        text-align: center;
+                        word-break: break-word;
                         .title{
-                            margin: 0 0 15px;
-                            font-size: 3.6rem;
-                            line-height: 4rem;
-                            font-weight: $font-medium;
+                            margin: 0;
+                        }
+                        .desc{
+                            margin: 0;
+                        }
+
+                        a.title{
+                            display: block;
                             color: $color-text;
 
                             &:hover{
-                                color: $color-primary;
+                                color: $color-secondary;
                             }
                         }
                     }
                 }
 
-                &.content-page{
-                    padding: 0;
+                &.flex-detail{
+                    flex-flow: wrap;
+                    align-items: center;
+                    padding: 20px 0;
+
                     .group-text{
-                        position: relative;
-                        padding: 20px 0 25px 0;
-                        color: $color-text;
+                        margin: 0;
                         text-align: left;
-
+                        word-break: break-word;
                         .title{
-                            margin: 0 0 15px;
-                            font-size: 3.6rem;
-                            line-height: 4rem;
-                            font-weight: $font-medium;
-                            color: $color-text;
+                            margin: 0 0 20px;
+                        }
+                        .desc{
+                            margin: 0 0 20px;
+                        }
+                    }
 
-                            &:hover{
-                                color: $color-primary;
+                    &.detail-page{
+                        margin-bottom: 30px;
+                        .group-text{
+                            margin: 0;
+                            text-align: left;
+                            .title{
+                                margin: 0 0 10px;
+                            }
+                            .desc{
+                                margin: 0
                             }
                         }
                     }
@@ -501,19 +542,20 @@ $howManySteps: 100; //this needs to be even.
                 .public-post{
                     font-size: 1.8rem;
                     font-weight: $font-regular;
-                    color: #525252;
+                    color: $color-text;
                     i{
                         font-size: 1.4rem;
-                        color: #525252;
+                        color: $color-text;
                     }
                 }
                 .source-post{
+                    padding-left: 15px;
                     font-size: 1.8rem;
                     font-weight: $font-regular;
+                    color: #b4b4b4;
+                    border-left: solid 1px #b4b4b4;
                     span{
-                        color: #fff;
-                        padding: 5px 8px;
-                        margin-left: 5px;
+                        color: $color-text;
                         i{
                             margin-right: 5px;
                         }
@@ -521,7 +563,7 @@ $howManySteps: 100; //this needs to be even.
                     &.no-bg{
                         span{
                             background-color: inherit;
-                            color: #525252;
+                            color: $color-text;
                         }
                     }
                 }
@@ -569,9 +611,13 @@ $howManySteps: 100; //this needs to be even.
             .main-content{
                 position: relative;
                 &.border-bottom{
-                    border-bottom: solid 2px $color-primary !important;
-                    padding-bottom: 10px;
+                    border-bottom: none !important;
+                    .group-social-share{
+                        border-bottom: solid 2px $color-primary !important;
+                        padding-bottom: 10px;
+                    }
                 }
+
                 .group-back{
                     display: inline-block;
                     margin: 0 0 30px;
@@ -586,7 +632,7 @@ $howManySteps: 100; //this needs to be even.
                         &:hover{
                             text-decoration: none;
                             color: #fff;
-                            background-color: #525252;
+                            background-color: $color-text;
                         }
                     }
                 }
@@ -625,7 +671,7 @@ $howManySteps: 100; //this needs to be even.
                                 font-size: 2rem;
                                 font-weight: $font-regular;
                                 line-height: 2.4rem;
-                                color: #525252;
+                                color: $color-text;
                                 transition: all 0.3s ease;
                                 //opacity: 0.7;
                                 &:hover{
@@ -789,6 +835,7 @@ $howManySteps: 100; //this needs to be even.
                         }
                     }
                 }
+
                 .add-news{
                     display: none;
                 }
@@ -917,20 +964,20 @@ $howManySteps: 100; //this needs to be even.
                                     height: auto;
                                     padding: 10px;
 
-                                    .total-people{
-                                        // display: block;
-                                        // width: 160px;
-                                        // height: 140px;
-                                        // padding: 5rem 0;
-                                        // font-size: 4rem;
-                                        // line-height: 4rem;
-                                        // color: $color-primary;
-                                        // text-align: center;
-                                        // background-image: url('../../assets/images/bg-circle.png');
-                                        // background-position: 0 0;
-                                        // background-repeat: no-repeat;
-                                        // background-size: 100% auto;
-                                    }
+                                    // .total-people{
+                                    //     display: block;
+                                    //     width: 160px;
+                                    //     height: 140px;
+                                    //     padding: 5rem 0;
+                                    //     font-size: 4rem;
+                                    //     line-height: 4rem;
+                                    //     color: $color-primary;
+                                    //     text-align: center;
+                                    //     background-image: url('../../assets/images/bg-circle.png');
+                                    //     background-position: 0 0;
+                                    //     background-repeat: no-repeat;
+                                    //     background-size: 100% auto;
+                                    // }
 
                                     @include media-breakpoint-down(sm){
                                         .total-people{
@@ -1251,7 +1298,7 @@ $howManySteps: 100; //this needs to be even.
                                         padding: 12px 20px 10px;
                                         margin: auto;
                                         text-align: center;
-                                        border: solid 2px white;
+                                        // border: solid 2px white;
                                         border-top: solid 3px $color-primary;
                                         background-color: white;
                                         transition: all 0.3s ease;
@@ -1325,9 +1372,9 @@ $howManySteps: 100; //this needs to be even.
                                     background-color: transparent !important;
 
                                     .box-full{
-                                        .download-wrap{
-                                            border-color: $color-primary;
-                                        }
+                                        // .download-wrap{
+                                        //     border-color: $color-primary;
+                                        // }
     
                                         .icon-angle{
                                             color: $color-primary;
@@ -1458,6 +1505,7 @@ $howManySteps: 100; //this needs to be even.
                                         font-weight: $font-regular;
                                     }
                                 }
+
                                 .right{
                                     flex: 1;
                                     padding: 30px 15px 40px 15px;
@@ -1511,11 +1559,31 @@ $howManySteps: 100; //this needs to be even.
                                         }
                                     }
                                 }
+
+                                &.detail-page{
+                                    border-top: none;
+                                    background-color: transparent;
+
+                                    .right{
+                                        padding: 20px 0 30px;
+                                        .page-detail{
+                                            .title{
+                                                color: $color-text;
+                                            }
+                                        }
+                                    }
+
+                                    .left{
+                                        padding: 30px 15px;
+                                        background-color: white;
+                                    }
+                                }
                             }
 
-                            &.-vote{
-                                align-items: stretch;
-                                height: 200px;
+                            &.vote{
+                                display: block;
+                                height: auto;
+                                border-top: solid 2px $color-primary;
                                 background-color: white;
 
                                 .left{
@@ -1545,7 +1613,7 @@ $howManySteps: 100; //this needs to be even.
                                     height: auto;
 
                                     .text-content{
-                                        margin: 0 0 10px 0;
+                                        margin: 0 0 50px 0;
                                     }
 
                                     .text-view{
@@ -1607,6 +1675,15 @@ $howManySteps: 100; //this needs to be even.
                         .list-item{
                             .item{
                                 margin-bottom: 30px;
+
+                                &.question{
+                                    .right{
+                                        padding: 30px 15px 15px;
+                                    }
+                                    .left{
+                                        padding: 15px 15px 50px;
+                                    }
+                                }
                             }
                         }
                     }
@@ -1694,7 +1771,7 @@ $howManySteps: 100; //this needs to be even.
                             font-size: 2rem;
                             line-height: 2.4rem;
                             font-weight: $font-regular;
-                            color: #525252;
+                            color: $color-text;
                         }
                         .choice-question{
                             position: relative;
@@ -1741,8 +1818,15 @@ $howManySteps: 100; //this needs to be even.
 
                     &.detail-page{
                         .question-choice{
+                            padding: 30px 0 20px;
                             background-color: transparent !important;
-                            margin-bottom: 25px;
+
+                            .text-question{
+                                margin: 0 0 30px;
+                                font-size: 3.6rem;
+                                line-height: 4rem;
+                                font-weight: 500;
+                            }
             
                             .choice-question{
                                 ul{
@@ -1758,9 +1842,6 @@ $howManySteps: 100; //this needs to be even.
                         }
             
                         .score-wrapper{
-                            margin-bottom: 30px;
-                            border: 1px solid #cfd1d4;
-            
                             .text-score{
                                 .text-vote{
                                     color: $color-text !important;
@@ -1957,7 +2038,7 @@ $howManySteps: 100; //this needs to be even.
                     font-size: 1.8rem;
                     font-weight: $font-regular;
                     line-height: 2.4rem;
-                    color: #525252;
+                    color: $color-text;
                     margin-bottom: 30px;
                     table{
                         width: 100%;
@@ -1985,7 +2066,7 @@ $howManySteps: 100; //this needs to be even.
                                 padding: 12px 20px 10px;
                                 margin: auto;
                                 text-align: center;
-                                border: solid 2px white;
+                                // border: solid 2px white;
                                 border-top: solid 3px $color-primary;
                                 background-color: white;
                                 transition: all 0.3s ease;
@@ -2059,9 +2140,10 @@ $howManySteps: 100; //this needs to be even.
                             background-color: transparent !important;
 
                             .box-full{
-                                .download-wrap{
-                                    border-color: $color-primary;
-                                }
+                                // .download-wrap{
+                                //     border: solid 2px $color-primary;
+                                //     border-top-width: 3px;
+                                // }
 
                                 .icon-angle{
                                     color: $color-primary;
@@ -2072,6 +2154,15 @@ $howManySteps: 100; //this needs to be even.
                 }
                 .group-activity-location{
                     margin-bottom: 30px;
+
+                    .top-content{
+                        padding: 0;
+                        margin: 0;
+                        .group-text{
+                            margin: 0;
+                            text-align: left;
+                        }
+                    }
                     .location{
                         iframe{
                             width: 100%;
@@ -2112,7 +2203,7 @@ $howManySteps: 100; //this needs to be even.
                                 }
                                 .text-email-link{
                                     float: left;
-                                    color: #525252;
+                                    color: $color-text;
                                     font-size: 1.8rem;
                                     font-weight: $font-regular;
                                 }
@@ -2129,7 +2220,7 @@ $howManySteps: 100; //this needs to be even.
                         .like-count{
                             .icon-like{
                                 position: relative;
-                                background-color: rgba($color: #525252, $alpha: 0.5);
+                                background-color: rgba($color: $color-text, $alpha: 0.5);
                                 width: 40px;
                                 height: 35px;
                                 margin-right: 40px;
@@ -2174,7 +2265,7 @@ $howManySteps: 100; //this needs to be even.
                             .title-article{
                                 font-size: 1.8rem;
                                 font-weight: $font-regular;
-                                color: #525252;
+                                color: $color-text;
                                 padding-bottom: 5px;
                                 margin-bottom: 15px;
                                 &.border-bt{
@@ -2186,32 +2277,101 @@ $howManySteps: 100; //this needs to be even.
                             }
                         }
                     }
+
+                    &.contact{
+                        position: relative;
+                        margin-top: 0;
+
+                        .input-wrapper{
+                            padding: 15px;
+                            margin: 0 auto;
+                            margin-top: -44px;
+                            background-color: #cfd1d4;
+                        }
+                        
+                        .input-custom {
+                            .text-area{
+                                height: 222px;
+                            }
+                        }
+                    }
                 }
                 
                 .calendar-wrapper{
-                    position: relative;
                     .head-calendar{
                         margin-bottom: 20px;
                         .title-calendar{
-                            display: flex;
-                            align-items: center;
+                            display: block;
+                            padding: 30px 20px 20px;
+                            text-align: center;
+                            // display: flex;
+                            // flex-flow: wrap;
+                            // align-items: center;
+                            background-color: #cfd1d4;
+                            .date-title{
+                                font-size: 6.6rem;
+                                line-height: 7rem;
+                                color: $color-secondary;
+                            }
+
                             .month-title{
                                 font-size: 2.6rem;
                                 font-weight: $font-regular;
                                 margin-right: 10px;
-                                color: $color-primary;
                             }
                             .year-title{
                                 font-size: 2.6rem;
                                 font-weight: $font-regular;
-                                color: $color-primary;
+                            }
+
+                            .current-title{
+                                font-size: 2.6rem;
+                                line-height: 3rem;
+                                font-weight: $font-regular;
+                            }
+                        }
+
+                        .search-content{
+                            display: block;
+                            padding: 30px 20px 20px;
+                            text-align: center;
+                            // display: flex;
+                            // flex-flow: wrap;
+                            // align-items: center;
+                            background-color: $color-secondary;
+
+                            form{
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-end;
+                            }
+
+                            .input-custom{
+                                margin-left: 15px;
+
+                                label{
+                                    font-size: 2.6rem;
+                                    line-height: 3rem;
+                                    font-weight: $font-regular;
+                                    color: white;
+                                }
+                            }
+
+                            .month-title{
+                                display: block;
+                                margin-top: 30px;
+                                font-size: 4rem;
+                                line-height: 4.4rem;
+                                font-weight: $font-regular;
+                                color: white;
+                                text-align: right;
                             }
                         }
                         .calendar-wrapper-btn{
                             text-align: right;
                             #prev{
                                 border-radius: 0;
-                                background-color: $color-text;
+                                background-color: #525252;
                                 width: 50px;
                                 height: 40px;
                                 background-image: url('../../assets/images/icons/icon-slide-prev.png');
@@ -2224,7 +2384,7 @@ $howManySteps: 100; //this needs to be even.
                             }
                             #next{
                                 border-radius: 0;
-                                background-color: $color-text;
+                                background-color: #525252;
                                 width: 50px;
                                 height: 40px;
                                 background-image: url('../../assets/images/icons/icon-slide-next.png');
@@ -2241,6 +2401,7 @@ $howManySteps: 100; //this needs to be even.
                         border-right-width: 0;
                     }
                     #calendar{
+
                         table{
                             // border: none;
                             border-width: 0;
@@ -2258,7 +2419,7 @@ $howManySteps: 100; //this needs to be even.
                             justify-content: center;
                             a{
                                 font-weight: $font-regular;
-                                color: $color-text;
+                                color: #525252;
                             }
                         }
                         
@@ -2269,7 +2430,7 @@ $howManySteps: 100; //this needs to be even.
                                         .fc-scrollgrid-sync-inner{
                                             .fc-col-header-cell-cushion {
                                                 padding: 4px;
-                                                color: white;
+                                                color: #fff;
                                                 font-weight: $font-regular;
                                             }
                                         }
@@ -2278,41 +2439,7 @@ $howManySteps: 100; //this needs to be even.
                             }
                         }
                         .fc-daygrid-day.fc-day-today{
-                            background-color: white;
-                            border: 1px solid $color-primary;
-                        }
-                        .fc-daygrid-day-events{
-                            .fc-daygrid-event-harness{
-                                .fc-h-event{
-                                    background-color: $color-secondary;
-                                    border: 1px solid $color-secondary;
-                                }
-                            }
-                            .fc-daygrid-day-bottom{
-                                .fc-daygrid-more-link{
-                                    color: $color-secondary;
-                                }
-                            }
-                        }
-                        .fc-col-header {
-                            tbody{
-                                tr{
-                                    .fc-col-header-cell{
-                                        background-color: $color-secondary;
-                                        border: 1px solid $color-secondary;
-                                    }
-                                }
-                            }
-                        }
-                        .fc-popover{
-                            .fc-popover-body {
-                                .fc-daygrid-event-harness{
-                                    .fc-h-event{
-                                        background-color: $color-secondary;
-                                        border: 1px solid $color-secondary;
-                                    }
-                                }
-                            }
+                            background-color: #fff;
                         }
                     }
                 }
@@ -2372,28 +2499,33 @@ $howManySteps: 100; //this needs to be even.
                         }
                     }
                 }
+
                 .accordion-wrapper{
                     .accordion{
                         .card{
                             border-radius: 0;
                             border: none;
                             margin-bottom: 30px;
+                            background-color: transparent;
                             .card-header{
                                 padding: 0;
                                 border: none;
-                                background-color: #fff;
+                                background-color: transparent;
                                 cursor: pointer;
                                 .card-header-item{
+                                    transform: skew(-14deg);
+                                    background-color: #cfd1d4;
+                                    
                                     .icon-card-header{
                                         position: relative;
-                                        flex: 0 0 120px;
-                                        padding: 15px 20px;
+                                        flex: 0 0 80px;
+                                        padding: 0;
                                         min-height: 80px;
                                         display: flex;
                                         align-items: center;
                                         justify-content: center;
+                                        transform: skew(14deg);
                                         .icon-content{
-                                            
                                             height: 100%;
                                             svg {
                                                 width: 32px;
@@ -2403,15 +2535,67 @@ $howManySteps: 100; //this needs to be even.
                                                 stroke-width:2;
                                                 stroke-miterlimit:10;
                                                 vertical-align: bottom;
+
+                                                .st0{
+                                                    stroke: white;
+                                                }
                                             }
                                         }
                                     }
                                     .title-card-header{
+                                        position: relative;
                                         font-size: 2rem;
                                         line-height: 2.4rem;
                                         font-weight: $font-regular;
-                                        color: #525252;
-                                        padding: 15px 20px;
+                                        color: $color-text;
+                                        padding: 15px 45px 15px 0;
+                                        transform: skew(14deg);
+
+                                        .icon-content{
+                                            position: absolute;
+                                            top: 50%;
+                                            transform: translateY(-50%);
+                                            right: 5px;
+                                            width: 30px;
+                                            height: 30px;
+                                            visibility: hidden;
+                                            svg {
+                                                width: 30px;
+                                                height: 30px;
+                                                fill:none;
+                                                stroke: #fff;
+                                                stroke-width:2;
+                                                stroke-miterlimit:10;
+                                                vertical-align: bottom;
+                                                transition: all 0.3s ease;
+
+                                                .st0{fill:none;stroke:$color-primary;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+
+                                                // .st0{
+                                                //     fill: $color-primary;
+                                                // }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .card-header-item[aria-expanded="true"]{
+                                    transform: skew(0);
+                                    background-color: $color-primary;
+
+                                    .icon-card-header{
+                                        transform: skew(0);
+                                    }
+
+                                    .title-card-header{
+                                        transform: skew(0);
+                                        color: white;
+                                        .icon-content{
+                                            svg {
+                                                transform: rotate(180deg);
+                                                .st0{fill:none;stroke:white;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+                                            }
+                                        }
                                     }
                                 }
                             }
@@ -2419,49 +2603,59 @@ $howManySteps: 100; //this needs to be even.
                                 .card-body{
                                     position: relative;
                                     padding: 20px;
+                                    border: solid 1px $color-primary;
+                                    background-color: white;
                                     .show-view{
                                         position: relative;
-                                        //text-align: right;
+                                        padding: 0;
+                                        margin: 10px 0;
+                                        font-weight: $font-light;
                                         font-size: 1.8rem;
-                                        font-weight: $font-regular;
                                         line-height: 2.4rem;
-                                        margin-bottom: 10px;
+                                        color: #b4b4b4;
+                                        text-align: right;
+                                        // border-left: solid 1px #e7e8e9;
                                     }
                                     .content{
                                         font-size: 1.8rem;
-                                        font-weight: $font-regular;
+                                        font-weight: $font-light;
                                         line-height: 2.4rem;
-                                        color: #525252;
-                                    }
-                                    &:after{
-                                        content: '';
-                                        width: 0;
-                                        height: 0;
-                                        border-style: solid;
-                                        border-width: 16px 15.5px 0 15.5px;
-                                        position: absolute;
-                                        top: 0;
-                                        left: 4%;
+                                        color: $color-text;
                                     }
                                 }
                             }
-                            // &:last-of-type{
-                            //     margin-bottom: 30px;
-                            // }
                         }
                     }
                 }
 
-                &.-contact{
+                &.contact{
                     .contact-tel{
-                        img{
-                            margin-right: 5px;
+                        display: flex;
+                        flex-flow: row;
+                        align-items: center;
+                        justify-content: flex-end;
+
+                        .link-tel{
+                            padding: 0 10px;
+                            a{
+                                font-size: 1.8rem;
+                                font-weight: $font-regular;
+                                color: $color-text;
+
+                                &:hover{
+                                    color: $color-secondary;
+                                }
+                            }
                         }
-                        a{
-                            font-size: 1.8rem;
-                            font-weight: $font-regular;
-                            color: #525252;
-                        }
+
+                        .icon-content{
+                            padding: 10px;
+                            transform: skew(-14deg);
+                            background-color: #cfd1d4;
+                            img{
+                                transform: skew(14deg);
+                            }
+                        }  
                     }
                     .iframe-map{
                         margin: 20px 0;
@@ -2473,54 +2667,77 @@ $howManySteps: 100; //this needs to be even.
                     .list-item-gov{
                         margin-bottom: 30px;
                         .title-gov{
-                            font-size: 1.8rem;
                             font-weight: $font-regular;
+                            font-size: 1.8rem;
                             line-height: 2.4rem;
-                            color: #525252;
+                            color: $color-text;
                             text-align: center;
-                            padding: 8px 15px;
-                            box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
+                            padding: 15px;
+                            background-color: #cfd1d4;
                         }
                         .contact-gov{
                             .tel-gov{
-                                background-color: $color-secondary;
-                                padding: 5px 10px;
                                 width: 50%;
+                                padding: 10px 0;
+                                
                                 .on{
-                                    width: 14px;
-                                    height: 18px;
-                                    img{
+                                    width: 20px;
+                                    height: 20px;
+                                    margin-bottom: 5px;
+
+                                    svg{
                                         width: 100%;
-                                        display: block;
+                                        height: 100%;
+                                    }
+
+                                    .st0{
+                                        fill:$color-primary;
                                     }
                                 }
                                 .number{
                                     font-size: 1.8rem;
                                     line-height: 2.4rem;
                                     font-weight: $font-regular;
-                                    color: #fff;
+                                    color: $color-text;
                                 }
                             }
                             .tel-internal{
-                                background-color: $color-primary;
-                                padding: 5px 10px;
+                                padding: 10px 0;
                                 width: 50%;
                                 text-align: right;
                                 .on{
-                                    font-size: 1.2rem;
+                                    margin-bottom: 5px;
+                                    font-size: 1.4rem;
+                                    line-height: 2.0rem;
                                     font-weight: $font-regular;
-                                    color: #fff;
+                                    color: $color-primary;
                                 }
                                 .number{
                                     font-size: 1.8rem;
                                     line-height: 2.4rem;
                                     font-weight: $font-regular;
-                                    color: #fff;
+                                    color: $color-text;
                                 }
                             }
                         }
                         .social-wrapper{
                             margin-top: 5px;
+
+                            ul{
+                                li{
+                                    a{
+                                        padding: 0;
+
+                                        svg{
+                                            width: 100%;
+                                            height: 100%;
+                                        }
+
+                                        .st0{fill:#0076FA;}
+                                        .st1{fill:#FFFFFF;}
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -2529,36 +2746,41 @@ $howManySteps: 100; //this needs to be even.
             .vote-comment-content{
                 position: relative;
                 .content{
-                    margin-top: 30px;
+                    margin: 0 0 30px;
 
                     .box-title{
                         .title-head{
                             font-size: 3.6rem;
                             line-height: 3.6rem;
                             font-weight: $font-medium;
-                            margin: 0 0 20px;
+                            margin: 0 0 30px;
                         }
 
                         .order-all {
                             font-size: 1.6rem;
                             line-height: 3.6rem;
-                            margin: 0 0 20px;
+                            margin: 0 0 30px;
                         }
                     }
 
                     .sort-order{
-                        margin-bottom: 10px;
+                        margin-bottom: 30px;
                         .text-order{
                             margin-right: 10px;
                             font-size: 1.6rem;
                             font-weight: $font-regular;
-                            color: #525252;
+                            color: $color-text;
+                        }
+
+                        .input-custom{
+                            margin-bottom: 0 !important;
                         }
                     }
 
                     &.-vote{
+                        margin-top: 30px;
                         .list-choice-vote{
-                            margin-bottom: 25px;
+                            margin: 0 0 30px;
                             ul{
                                 margin: 0;
                                 padding: 0;
@@ -2595,16 +2817,83 @@ $howManySteps: 100; //this needs to be even.
                                 align-items: flex-start;
                                 justify-content: space-between;
                                 .show-login{
-                                    a{
-                                        font-size: 1.4rem;
-                                        font-weight: $font-regular;
-                                        color: #525252;
-                                        opacity: 0.5;
-                                        display: block;
-                                        transition: all 0.5s ease;
-                                        margin-top: 5px;
-                                        &:hover{
-                                            opacity: 1;
+                                    position: relative;
+
+                                    ul{
+                                        list-style: none;
+                                        padding: 0;
+                                        margin: 0;
+                                        
+                                        li{
+                                            
+                                            display: inline-block;
+                                            vertical-align: middle;
+                                            padding: 0;
+                                            margin: 0 10px 0 0;
+                                            min-height: 34px;
+                        
+                                            a{
+                                                display: flex;
+                                                align-items: center;
+                                                color: $color-text;
+                                                font-size: 1.6rem;
+                                                line-height: 2rem;
+                                                font-weight: $font-light;
+                                                transition: all 0.3s ease;
+                                                
+                                                &:hover{
+                                                    text-decoration: none;
+                                                    opacity: 1;
+                                                    .icon-register{
+                                                        background-position: bottom center;
+                                                    }
+                                                    .icon-signin{
+                                                        background-position: bottom center;
+                                                    }
+
+                                                    .skew-wrap{
+                                                        background-color: $color-primary;
+                                                    }
+                                                }
+                                            }
+                        
+                                            .link-wrap{
+                                                margin: 0 10px 0 0;
+                                            }
+                        
+                                            .skew-wrap{
+                                                display: flex;
+                                                align-items: center;
+                                                text-align: center;
+                                                width: 55px;
+                                                height: 45px;
+                                                background-color: #cfd1d4;
+                                                transform: skew(-14deg);
+                        
+                                                .icon-register{
+                                                    background-image: url('../../assets/images/icons/icon-register.png');
+                                                    width: 100%;
+                                                    height: 16px;
+                                                    background-repeat: no-repeat;
+                                                    background-position: top center;
+                                                    transition: all 0.3s ease;
+                                                    transform: skew(14deg);
+                                                }
+                                                .icon-signin{
+                                                    background-image: url('../../assets/images/icons/icon-signin.png');
+                                                    width: 100%;
+                                                    height: 16px;
+                                                    background-repeat: no-repeat;
+                                                    background-position: top center;
+                                                    transition: all 0.3s ease;
+                                                    transform: skew(14deg);
+                                                }
+                                            }
+                        
+                                            &:first-child{
+                                                border-right: 1px solid #fff;
+                                                padding-left: 0;
+                                            }
                                         }
                                     }
                                 }
@@ -2613,9 +2902,13 @@ $howManySteps: 100; //this needs to be even.
                     }
 
                     &.-comment{
-                        padding-bottom: 20px;
+                        padding: 0 0 20px;
+                        margin-top: 30px;
                         border-bottom: 1px solid #cfd1d4;
-                        margin-bottom: 20px;
+
+                        .input-custom{
+                            margin: 0 0 30px;
+                        }
                     }
                 }
                 .user-comment-wrapper{
@@ -2634,36 +2927,22 @@ $howManySteps: 100; //this needs to be even.
                                 .post-user{
                                     font-size: 1.6rem;
                                     font-weight: $font-regular;
-                                    color: #525252;
+                                    color: $color-text;
                                 }
                             }
                         }
                     }
                     .load-more{
-                        text-align: right;
-                        // a{
-                        //     width: 100%;
-                        //     display: block;
-                        //     font-size: 1.6rem;
-                        //     font-weight: $font-regular;
-                        //     color: #b1b1b1;
-                        //     padding: 5px 8px;
-                        //     border: 1px solid #b1b1b1;
-                        //     text-align: center;
-                        //     transition: all 0.3s ease;
-                        //     &:hover{
-                        //         color: #fff;
-                        //         background-color: #525252;
-                        //         border: 1px solid #525252;
-                        //     }
-                        // }
+                        .btn{
+                            width: 100%;
+                        }
                     }
                 }
             }
         }
 
         &.bg-faq{
-            padding: 45px 0 90px;
+            padding: 25px 0 70px;
             background-color: white;
             background-image: url('../../theme-pink/assets/images/bg-index-faq.jpg');
             background-repeat: no-repeat;
@@ -2675,6 +2954,10 @@ $howManySteps: 100; //this needs to be even.
         display: none;
     }
       
+}
+
+.load-more{
+    text-align: center;
 }
 
 .gallery-template{
@@ -2852,7 +3135,7 @@ $howManySteps: 100; //this needs to be even.
                     font-size: 2rem;
                     font-weight: $font-regular;
                     line-height: 2.4rem;
-                    color: #525252;
+                    color: $color-text;
                     //opacity: 0.7;
                     transition: all 0.3s ease;
                     &:hover{
@@ -2864,7 +3147,7 @@ $howManySteps: 100; //this needs to be even.
                 position: absolute;
                 bottom: 0;
                 width: 100%;
-                color: #525252;
+                color: $color-text;
                 font-size: 1.6rem;
                 font-weight: $font-regular;
                 i{
@@ -3232,7 +3515,7 @@ $howManySteps: 100; //this needs to be even.
                         font-size: 2rem;
                         font-weight: $font-regular;
                         line-height: 2.4rem;
-                        color: #525252;
+                        color: $color-text;
                         //opacity: 0.7;
                         transition: all 0.3s ease;
                         &:hover{
@@ -3245,7 +3528,7 @@ $howManySteps: 100; //this needs to be even.
                     position: absolute;
                     bottom: 5px;
                     width: 100%;
-                    color: #525252;
+                    color: $color-text;
                     font-size: 1.6rem;
                     font-weight: $font-regular;
                     i{
@@ -3270,90 +3553,6 @@ $howManySteps: 100; //this needs to be even.
                 margin-top: 10px;
             }
         }
-    }
-}
-
-.sitemap-container{
-    position: relative;
-    margin: 0 0 125px 0;
-
-    .level-01{
-        font-size: 3.6rem;
-        line-height: 5rem;
-    }
-
-    .level-02{
-        font-size: 2.6rem;
-        line-height: 3rem;
-    }
-
-    .level-03{
-        font-size: 2.2rem;
-        line-height: 3rem;
-    }
-
-    .sitemap{
-        list-style: none;
-        padding: 0;
-        margin: 0;
-
-        .line-sub{
-            display: block;
-            margin-bottom: 40px;
-        }
-
-        .line-group{
-            list-style: none;
-            padding: 0;
-            padding-top: 30px;
-            margin: 0;
-            display: grid;
-            grid-template-columns: auto auto auto auto;
-            grid-gap: 30px;
-
-            .line-item{
-                height: auto;
-            }
-
-            @include media-breakpoint-down(lg) {
-                grid-template-columns: auto auto auto;
-            }
-
-            @include media-breakpoint-down(md) {
-                grid-template-columns: auto auto;
-            }
-
-            @include media-breakpoint-down(sm) {
-                grid-template-columns: auto;
-            }
-        }
-
-        .link-group{
-            list-style-image: url('../../assets/images/icons/list-style-01.png');
-            padding-top: 20px;
-            padding-left: 17px;
-
-            .link-item{
-                margin-bottom: 20px;
-            }
-        }
-    }
-
-    @include media-breakpoint-down(sm) {
-        // .level-01{
-        //     font-size: 34px;
-        //     line-height: 44px;
-        // }
-    
-        // .level-02{
-        //     font-size: 2rem;
-        //     line-height: 24px;
-        // }
-    
-        // .level-03{
-        //     font-size: 1.8rem;
-        //     line-height: 24px;
-        // }
     }
 }
 
@@ -3384,7 +3583,7 @@ $howManySteps: 100; //this needs to be even.
         .text-bkk{
             font-size: 1.4rem;
             font-weight: $font-regular;
-            color: #525252;
+            color: $color-text;
             line-height: 1.5rem;
 
             label{
@@ -3396,6 +3595,199 @@ $howManySteps: 100; //this needs to be even.
         }
         &:hover{
             text-decoration: none;
+        }
+    }
+}
+
+.sitemap-container{
+    position: relative;
+    margin: 30px 0 125px 0;
+
+    .level-01{
+        font-size: 3.6rem;
+        line-height: 4rem;
+        color: $color-text;
+
+        &:hover{
+            color: $color-primary;
+        }
+    }
+
+    .level-02{
+        font-size: 2.6rem;
+        line-height: 3rem;
+        color: $color-text;
+        &:hover{
+            color: $color-primary;
+        }
+    }
+
+    .level-03{
+        font-size: 2.2rem;
+        line-height: 2.6rem;
+        color: $color-text;
+        &:hover{
+            color: $color-primary;
+        }
+    }
+
+    .sitemap{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        .line-sub{
+            display: block;
+            padding: 0;
+            margin-bottom: 45px;
+        }
+
+        .line-group{
+            list-style: none;
+            padding: 0;
+            padding-top: 30px;
+            margin: 0;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-gap: 30px;
+
+            .line-item{
+                height: auto;
+            }
+
+            @include media-breakpoint-down(lg) {
+                grid-template-columns: auto auto auto;
+            }
+
+            @include media-breakpoint-down(md) {
+                grid-template-columns: auto auto;
+            }
+
+            @include media-breakpoint-down(sm) {
+                grid-template-columns: auto;
+            }
+        }
+
+        .link-group{
+            list-style: none;
+            padding: 20px 0;
+            margin: 0;
+
+            .link-item{
+                padding: 10px 0 0;
+                margin: 0 0 10px 0;
+                border-top: solid 2px white;
+
+                .level-03{
+                    position: relative;
+                    display: block;
+                    padding-right: 30px;
+
+                    &:after{
+                        font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f101";
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        // .level-01{
+        //     font-size: 34px;
+        //     line-height: 44px;
+        // }
+    
+        // .level-02{
+        //     font-size: 2rem;
+        //     line-height: 24px;
+        // }
+    
+        // .level-03{
+        //     font-size: 1.8rem;
+        //     line-height: 24px;
+        // }
+    }
+}
+
+.relate-link-container{
+    position: relative;
+    margin: 0 auto 30px;
+    .item-group{
+        margin-bottom: 30px;
+
+        .item-title{
+            display: flex;
+            align-items: center;
+
+            .title-icon{
+                padding: 10px;
+                margin-left: 10px;
+                border: 1px solid $color-primary;
+                background-color: $color-primary;
+                transform: skew(-14deg);
+
+                svg{
+                    transform: skew(14deg);
+                }
+
+                .st0{fill:white;}
+            }
+
+            .title-text{
+                font-weight: $font-regular;
+                font-size: 2.6rem;
+                line-height: 3.2rem;
+                color: $color-text;
+                padding: 0 15px;
+            }
+        }
+
+        .item-content{
+            display: block;
+            padding: 20px;
+            margin: 5px 0 0;
+            border-top: solid 2px $color-primary;
+            background-color: white;
+
+            ul{
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: grid;
+                // grid-template-columns: auto auto auto auto;
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+                grid-gap: 30px;
+
+                li{
+                    // width: auto;
+                    height: auto;
+                    // display: block;
+
+                    a{
+                        font-size: 2.2rem;
+                        line-height: 2.6rem;
+                        color: $color-text;
+                        &:hover{
+                            color: $color-primary;
+                        }
+                    }
+                }
+
+                @include media-breakpoint-down(lg) {
+                    grid-template-columns: repeat(3, minmax(0, 1fr));
+                }
+
+                @include media-breakpoint-down(md) {
+                    grid-template-columns: repeat(2, minmax(0, 1fr));
+                }
+
+                @include media-breakpoint-down(sm) {
+                    grid-template-columns: repeat(1, minmax(0, 1fr));
+                }
+            }
         }
     }
 }
@@ -3412,9 +3804,15 @@ $howManySteps: 100; //this needs to be even.
     .text-social{
         font-size: 1.6rem;
         font-weight: $font-regular;
-        //color: #fff;
+        color: white;
         //opacity: 0.7;
-        margin-right: 10px;
+        padding: 10px 20px;
+        margin: 0 10px;
+        transform: skew(-14deg);
+        background-color: $color-primary;
+        .txt{
+            transform: skew(14deg);
+        }
     }
     ul{
         margin: 0;
@@ -3489,7 +3887,7 @@ $howManySteps: 100; //this needs to be even.
 //             font-size: 2rem;
 //             line-height: 2.4rem;
 //             font-weight: $font-regular;
-//             color: #525252;
+//             color: $color-text;
 //         }
 //     }
 //     .num-online{
@@ -3507,7 +3905,7 @@ $howManySteps: 100; //this needs to be even.
     .all-page{
         font-size: 1.8rem;
         font-weight: $font-regular;
-        color: #525252;
+        color: $color-text;
         span{
             padding: 0 5px;
         }

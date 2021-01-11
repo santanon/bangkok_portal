@@ -20,7 +20,7 @@
         <div class="inner-content">
             <div class="row">
                 <div class="col-12">
-                    <div class="top-content styled-row bg-color-secondary">
+                    <div class="top-content flex-row bg-color-secondary">
                         <div class="group-text">
                             <h3 class="title">VOTE</h3>
                             <p class="desc">The Bangkok Metropolitan Council Secretariat </p>
@@ -34,7 +34,7 @@
 
                     <div class="main-content">
                         <div class="group-vote">
-                        <div class="question-choice">
+                            <div class="question-choice">
                                 <form action="">
                                     <div class="row">
                                         <div class="col-12">
@@ -96,7 +96,6 @@
                                 </form>
                             </div>
 
-
                             <div class="score-wrapper">
                                 <div class="row">
                                     <div class="col-sm-4 col-md-4 col-lg-4">
@@ -120,8 +119,6 @@
                                 </div>
                             </div>
 
-
-                            
                             <!-- <div class="top-content">
                                 <div class="group-text">
                                     <h3 class="title color-primary">ผลโหวต</h3>

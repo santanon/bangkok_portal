@@ -18,7 +18,7 @@
     </div>
     <div class="container">
         <div class="inner-content">
-            <div class="top-content no-styled">
+            <div class="top-content flex-row-arrow">
                 <div class="group-text">
                     <a href="faq" class="title">คำถามที่พบบ่อย</a>
                     <p class="desc">The Bangkok Metropolitan Council Secretariat </p>

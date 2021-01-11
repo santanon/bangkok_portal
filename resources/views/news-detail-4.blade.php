@@ -32,6 +32,7 @@
                 </div>
             </div>
         </div>
+
         <div class="banner-wrapper onlyOne">
             <div class="container-fluid">
                 <div class="row">

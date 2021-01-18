@@ -218,8 +218,6 @@ Route::any('/sitemap-3', function () {
     return view('sitemap-3');
 });
 
-
-
 //template4
 Route::any('/home-4', function () {
     return view('home-4');
@@ -287,4 +285,48 @@ Route::any('/sitemap-4', function () {
 
 Route::any('/ita-4', function () {
     return view('ita-page-4');
+});
+
+//template5
+Route::any('/home-5', function () {
+    return view('home-5');
+});
+Route::any('/about-5', function () {
+    return view('about-detail-5');
+});
+Route::any('/news-5', function () {
+    return view('news-main-5');
+});
+Route::any('/news-detail-5', function () {
+    return view('news-detail-5');
+});
+Route::any('/album-5', function () {
+    return view('gallery-main-5');
+});
+Route::any('/video-5', function () {
+    return view('video-main-5');
+});
+Route::any('/download-5', function () {
+    return view('download-main-5');
+});
+Route::any('/faq-5', function () {
+    return view('faq-main-5');
+});
+Route::any('/questionnaire-5', function () {
+    return view('questionnaire-main-5');
+});
+Route::any('/questionnaire-detail-5', function () {
+    return view('questionnaire-detail-5');
+});
+Route::any('/vote-5', function () {
+    return view('vote-main-5');
+});
+Route::any('/vote-detail-5', function () {
+    return view('vote-detail-5');
+});
+Route::any('/contact-5', function () {
+    return view('contact-main-5');
+});
+Route::any('/sitemap-5', function () {
+    return view('sitemap-5');
 });

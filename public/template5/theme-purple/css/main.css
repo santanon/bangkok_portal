@@ -14096,10 +14096,8 @@ body.menu-open {
             margin-bottom: 0; }
         .group-section-content .section-content .inner-content .main-content .group-back:hover a {
           color: #6950a1; }
-          .group-section-content .section-content .inner-content .main-content .group-back:hover a .icon-more {
-            border: 2px solid #6950a1; }
-            .group-section-content .section-content .inner-content .main-content .group-back:hover a .icon-more svg .st0 {
-              fill: #6950a1; }
+          .group-section-content .section-content .inner-content .main-content .group-back:hover a .icon-more svg .st0 {
+            fill: #6950a1; }
         .group-section-content .section-content .inner-content .main-content .group-back.v2 {
           display: inline-block;
           margin: 0 0 30px;
@@ -16935,6 +16933,86 @@ body.menu-open {
     .pagination-custom .item-page .slide-next.disabled {
       opacity: 0.5;
       cursor: not-allowed; }
+
+.relate-link-container {
+  position: relative;
+  margin: 0 auto 30px; }
+  .relate-link-container .top-content .group-text .title {
+    color: #6950a1; }
+  .relate-link-container .item-group {
+    margin-bottom: 30px; }
+    .relate-link-container .item-group .item-title {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin-bottom: 15px; }
+      .relate-link-container .item-group .item-title .title-icon {
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 15px;
+        margin-right: 10px; }
+        .relate-link-container .item-group .item-title .title-icon .st0 {
+          fill: #6950a1; }
+      .relate-link-container .item-group .item-title .title-text {
+        font-weight: 400;
+        font-size: 2.6rem;
+        line-height: 3.2rem;
+        color: #fff;
+        padding: 16px 20px;
+        background-color: #6950a1;
+        border-radius: 15px;
+        width: 100%; }
+    .relate-link-container .item-group .item-content {
+      display: block; }
+      .relate-link-container .item-group .item-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: (minmax(0, 1fr))[4];
+        grid-template-columns: repeat(4, minmax(0, 1fr)); }
+        .relate-link-container .item-group .item-content ul li {
+          height: auto;
+          border: 1px solid #cfd1d4;
+          border-radius: 15px;
+          background-color: #f8f8f8;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          margin-right: 10px;
+          margin-bottom: 10px;
+          -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2); }
+          .relate-link-container .item-group .item-content ul li a {
+            font-size: 2.2rem;
+            line-height: 2.6rem;
+            color: #525252;
+            padding: 15px 20px;
+            display: block; }
+            .relate-link-container .item-group .item-content ul li a:hover {
+              background-color: #8672b2;
+              color: #fff; }
+          .relate-link-container .item-group .item-content ul li:nth-child(4) {
+            margin-right: 0; }
+        @media (max-width: 1199.98px) {
+          .relate-link-container .item-group .item-content ul {
+            -ms-grid-columns: (minmax(0, 1fr))[3];
+            grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+        @media (max-width: 991.98px) {
+          .relate-link-container .item-group .item-content ul {
+            -ms-grid-columns: (minmax(0, 1fr))[2];
+            grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+        @media (max-width: 767.98px) {
+          .relate-link-container .item-group .item-content ul {
+            -ms-grid-columns: (minmax(0, 1fr))[1];
+            grid-template-columns: repeat(1, minmax(0, 1fr)); } }
 
 /* This for loop creates the necessary css animation names 
 Due to the split circle of progress-left and progress right, we must use the animations on each side. 

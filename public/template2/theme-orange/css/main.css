@@ -16160,6 +16160,78 @@ template {
       opacity: 0.5;
       cursor: not-allowed; }
 
+.relate-link-container {
+  position: relative;
+  margin: 0 auto 30px; }
+  .relate-link-container .top-content .group-text {
+    -webkit-box-align: start !important;
+    -ms-flex-align: start !important;
+    align-items: flex-start !important; }
+    .relate-link-container .top-content .group-text .title {
+      color: #f08220;
+      border: none !important;
+      text-align: left !important;
+      padding: 10px 0 !important; }
+      .relate-link-container .top-content .group-text .title:after {
+        display: none !important; }
+    .relate-link-container .top-content .group-text:after {
+      display: none; }
+  .relate-link-container .item-group {
+    margin-bottom: 30px; }
+    .relate-link-container .item-group .item-title {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      background-color: #fff; }
+      .relate-link-container .item-group .item-title .title-icon {
+        padding: 10px;
+        border: 1px solid #f08220;
+        background-color: #f08220; }
+        .relate-link-container .item-group .item-title .title-icon .st0 {
+          fill: white; }
+      .relate-link-container .item-group .item-title .title-text {
+        font-weight: 400;
+        font-size: 2.6rem;
+        line-height: 3.2rem;
+        color: #f08220;
+        padding: 0 15px; }
+    .relate-link-container .item-group .item-content {
+      display: block;
+      background-color: white; }
+      .relate-link-container .item-group .item-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: (minmax(0, 1fr))[4];
+        grid-template-columns: repeat(4, minmax(0, 1fr)); }
+        .relate-link-container .item-group .item-content ul li {
+          height: auto; }
+          .relate-link-container .item-group .item-content ul li a {
+            font-size: 2.2rem;
+            line-height: 2.6rem;
+            color: #525252;
+            padding: 20px;
+            display: block; }
+            .relate-link-container .item-group .item-content ul li a:hover {
+              color: #f08220; }
+        @media (max-width: 1199.98px) {
+          .relate-link-container .item-group .item-content ul {
+            -ms-grid-columns: (minmax(0, 1fr))[3];
+            grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+        @media (max-width: 991.98px) {
+          .relate-link-container .item-group .item-content ul {
+            -ms-grid-columns: (minmax(0, 1fr))[2];
+            grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+        @media (max-width: 767.98px) {
+          .relate-link-container .item-group .item-content ul {
+            -ms-grid-columns: (minmax(0, 1fr))[1];
+            grid-template-columns: repeat(1, minmax(0, 1fr)); } }
+
 /* This for loop creates the necessary css animation names 
 Due to the split circle of progress-left and progress right, we must use the animations on each side. 
 */

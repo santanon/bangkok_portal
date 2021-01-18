@@ -1,0 +1,143 @@
+// grid core function ###############################################################
+
+// grid vars -------------------
+$columns: 12 !default;
+$column-width: 4em !default;
+$gutter-width: 1em !default;
+$support-old-ie: true !default;
+// -----------------------------
+
+%grid {
+	text-align: justify !important;
+	text-justify: distribute-all-lines;
+	font-size: 0 !important;
+	//overflow: hidden; //add by Pop.
+
+	& > * {
+		text-align: left;
+		font-size: medium;
+		text-justify:auto; //fix ie8 text align center by Pop.
+	}
+
+	&::after {  // edit &:after -> &::after to fix ie8 unnecessary space between each row by Pop.
+		content: '';
+		display: inline-block;
+		width: 100%;
+	}
+
+	@if $support-old-ie {
+		.lt-ie8 & {
+			zoom: 1;
+		}
+	}
+}
+
+%grid-cell {
+	vertical-align: top;
+	display: inline-block;
+	width: 100%;
+
+	@if $support-old-ie {
+		.lt-ie8 & {
+			display: inline;
+		}
+	}
+}
+
+@function grid-span($cols, $total: $columns) {
+	@return ($column-width * $cols  + $gutter-width * ($cols  - 1)) /
+			($column-width * $total + $gutter-width * ($total - 1)) * 100%;
+}
+
+@function grid-span-no-gutter($cols, $total: $columns) {
+	@return ($column-width * $cols) /
+			($column-width * $total) * 100%;
+}
+
+@function grid-xt($cols, $total: $columns) {
+	@return ($column-width + $gutter-width) * $cols /
+			($column-width * $total + $gutter-width * ($total - 1)) * 100%;
+}
+
+@mixin grid-push($cols, $total: $columns) {
+	left: grid-xt($cols, $total);
+}
+
+@mixin grid-pull($cols, $total: $columns) {
+	left: grid-xt(-$cols, $total);
+}
+
+@mixin grid-prepend($cols, $total: $columns) {
+	margin-left: grid-xt($cols, $total);
+}
+
+@mixin grid-append($cols, $total: $columns) {
+	margin-right: grid-xt($cols, $total);
+}
+
+//grid class controller ######################################################
+.se-box{
+	@extend %grid;
+
+	&__item{
+		@extend %grid-cell;
+
+		@for $i from 1 through 12 {
+			&--span#{$i}{
+				width: grid-span($i);
+			}
+			&--push#{$i}{
+				position: relative;
+				@include grid-push($i);
+			}
+		}
+	}
+
+	&--left{
+		overflow: hidden;
+		text-align: left !important;
+	}
+
+	&--right{
+		overflow: hidden;
+		text-align: right !important;
+	}
+
+	&--center{
+		overflow: hidden;
+		text-align: center !important;
+	}
+
+	&--block{
+		overflow: hidden;
+		text-align: left !important;
+		>.se-box__item{
+			display: block;
+		}
+	}
+
+	&--no-gutter{
+		.se-box__item{
+			@for $i from 1 through 12 {
+				&--span#{$i}{
+					width: grid-span-no-gutter($i) !important;
+				}
+			}
+		}
+	}
+
+}
+
+
+@media #{$mobile} {
+
+	.se-box__item{ display: block; width: 100% !important; }
+
+}
+
+@media #{$tablet} {
+
+}
+
+
+

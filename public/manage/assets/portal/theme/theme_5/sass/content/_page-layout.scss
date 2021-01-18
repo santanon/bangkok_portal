@@ -1,0 +1,45 @@
+#custom-box-blank{
+
+	.texteditor{
+		font-size:13px; line-height:18px; margin-bottom: 20px;
+		a{
+			color:#207430;
+		}
+	}
+	.image-text{
+		font-size:13px; line-height:18px; margin-bottom: 20px;
+		.image{
+			float: none; width: 100%; display: block; text-align: center; margin: 10px;
+			.im{
+				width: auto;
+			}
+		}
+		.image2{
+			float: left; display: block; text-align: center;
+			.im{
+				width: auto;
+				margin: 0 10px 10px 0px;
+			}
+		}
+		.text{
+			overflow: hidden;
+		}
+	}
+	.vdo{
+		position: relative;
+		width: 100%;
+		display: block;
+		overflow: hidden;
+		margin:20px 0; 
+	}
+}
+
+@media #{$mobile} {
+	
+}
+@media #{$tablet} {
+	
+
+}
+
+

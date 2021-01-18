@@ -1,0 +1,1 @@
+<meta http-equiv="refresh" content="0;URL=http://localhost/bangkok.go.th.portal/panel/main" />

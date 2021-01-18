@@ -1,0 +1,80 @@
+.slider-container{
+	position: relative;
+	display: none;
+	margin-top: $main-slide-marginTop;
+	&.main-slider{
+		overflow: hidden;
+		position: relative;
+		width: 100%;
+	}
+	&.bg-slider{
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		// width: 100%;
+		// height: auto;
+		// background:#7CEFFC;
+	}
+	img{
+		width: 100%;
+		height: auto;
+		vertical-align: top;
+	}
+}
+.slider-controller{
+	// position: absolute;
+	position: relative;
+	z-index: 1;
+	top: 10px;
+	width: 100%;
+}
+
+#foo_pager{
+	// position: relative;
+	z-index: 10;
+	float: right;
+	width: auto;
+	font-size: 13px;
+	span.pager_list{
+		float: left;
+		display: block;
+		margin-right:5px;
+		width: 11px;
+		height: 11px;
+		>a{
+			display: block;
+			width: 11px;
+			height: 11px;
+			background:url('../images/bgslide/bull_pager.png') left top no-repeat;
+		}
+		&.selected a{
+			background:url('../images/bgslide/bull_pager.png') left -22px no-repeat;
+		}
+	}
+
+}
+#foo_prev{
+
+}
+#foo_next{
+
+}
+
+
+@media #{$mobile} {
+	.slider-container{
+		margin-top: 0px;
+	}
+	.slider-controller{
+		display: none;
+	}
+}
+
+@media #{$tablet} {
+	.slider-container{
+		margin-top: 50px;
+	}
+	.slider-controller{
+		display: none;
+	}
+}

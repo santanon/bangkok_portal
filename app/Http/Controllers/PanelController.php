@@ -6,10 +6,276 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Http; 
  
 class PanelController extends Controller
-{  
+{   
+	var $mod = 'ballsite'; 
+	var $theme = 'theme_1';
+	
+	public function include_header()
+    {      
+		$CustomHelper = new \App\CustomHelper;
+		
+		if(isset($_SESSION['member_login']) && $_SESSION['member_login'] == 1)
+		{
+			$_SESSION['login_'.$this->mod.'_pass'] = '1';
+			$_SESSION['login_'.$this->mod.'_id'] = $_SESSION['member_id']; 
+			$_SESSION['login_'.$this->mod.'_title'] = $_SESSION['member_name']; 
+			$_SESSION['login_'.$this->mod.'_lastname'] = $_SESSION['member_lastname']; 
+			$_SESSION['login_'.$this->mod.'_username'] = $_SESSION['member_user']; 
+			$_SESSION['login_'.$this->mod.'_email'] = $_SESSION['member_email']; 
+			$_SESSION['login_'.$this->mod.'_gender'] = $_SESSION['member_sex']; 
+			$_SESSION['login_'.$this->mod.'_birthday'] = $_SESSION['member_birthday']; 
+			$_SESSION['login_'.$this->mod.'_tel'] = $_SESSION['member_tel']; 
+			$_SESSION['login_'.$this->mod.'_address'] = $_SESSION['member_addr']; 
+			$_SESSION['login_'.$this->mod.'_zip_code'] = $_SESSION['member_postal']; 
+			$_SESSION['login_'.$this->mod.'_province'] = $_SESSION['member_province_id']; 
+			$_SESSION['login_'.$this->mod.'_idcard'] = $_SESSION['member_idcard']; 
+			$_SESSION['login_'.$this->mod.'_img1'] = $_SESSION['member_img']; 	
+		}
+		else
+		{
+			$_SESSION['login_'.$this->mod.'_pass'] = '';
+			$_SESSION['login_'.$this->mod.'_id'] = '';
+			$_SESSION['login_'.$this->mod.'_title'] = '';
+			$_SESSION['login_'.$this->mod.'_lastname'] = '';
+			$_SESSION['login_'.$this->mod.'_username'] = '';
+			$_SESSION['login_'.$this->mod.'_email'] = '';
+			$_SESSION['login_'.$this->mod.'_gender'] = '';
+			$_SESSION['login_'.$this->mod.'_birthday'] = '';
+			$_SESSION['login_'.$this->mod.'_tel'] = '';
+			$_SESSION['login_'.$this->mod.'_address'] = '';
+			$_SESSION['login_'.$this->mod.'_zip_code'] = '';
+			$_SESSION['login_'.$this->mod.'_province'] = '';
+			$_SESSION['login_'.$this->mod.'_idcard'] = '';
+			$_SESSION['login_'.$this->mod.'_img1'] = '';
+		} 
+		   
+		$q = "SELECT * FROM tbl_portal_website WHERE web_url = ?";
+        $v = $this->mod;
+		$res = $CustomHelper->API_CALL($CustomHelper->API_URL('api_website'),$q,$v);
+		 
+		if(trim($res) == '')
+        {  
+            ?><script>alert('ไม่สามารถเชื่อมต่อ Service : Login ได้ \n\n<?php echo $CustomHelper->API_URL('api_login_check') ?>');</script><?php
+            exit;
+		}
+		if(trim($res) == '[]')
+        {  
+            ?><script>alert('ไม่พบข้อมูล');</script><?php
+            exit;
+        }
+		  
+		$obj_portal_website = json_decode($res); 
+		$web_id = $obj_portal_website[0]->id; 
+
+		$_SESSION['portal_website_' . $this->mod . '_id'] = $obj_portal_website[0]->id;
+		$_SESSION['portal_website_' . $this->mod . '_username'] = $obj_portal_website[0]->username;
+		$_SESSION['portal_website_' . $this->mod . '_web_code'] = $obj_portal_website[0]->web_code;
+		$_SESSION['portal_website_' . $this->mod . '_web_name_th'] = $obj_portal_website[0]->web_name;
+		$_SESSION['portal_website_' . $this->mod . '_web_name_en'] = $obj_portal_website[0]->web_name_en;
+		$_SESSION['portal_website_' . $this->mod . '_web_desc'] = $obj_portal_website[0]->web_desc;
+		$_SESSION['portal_website_' . $this->mod . '_web_url'] = $obj_portal_website[0]->web_url;
+		$_SESSION['portal_website_' . $this->mod . '_web_disk'] = $obj_portal_website[0]->web_disk;
+		$_SESSION['portal_website_' . $this->mod . '_web_disk_use'] = $obj_portal_website[0]->web_disk_use;
+		$_SESSION['portal_website_' . $this->mod . '_web_type'] = $obj_portal_website[0]->web_type;
+		$_SESSION['portal_website_' . $this->mod . '_web_package'] = $obj_portal_website[0]->web_package;
+		$_SESSION['portal_website_' . $this->mod . '_profile_name'] = $obj_portal_website[0]->profile_name;
+		$_SESSION['portal_website_' . $this->mod . '_profile_lastname'] = $obj_portal_website[0]->profile_lastname;
+		$_SESSION['portal_website_' . $this->mod . '_profile_email'] = $obj_portal_website[0]->profile_email;
+		$_SESSION['portal_website_' . $this->mod . '_profile_mobile'] = $obj_portal_website[0]->profile_mobile;
+		$_SESSION['portal_website_' . $this->mod . '_profile_idcard'] = $obj_portal_website[0]->profile_idcard;
+		$_SESSION['portal_website_' . $this->mod . '_register_confirm'] = $obj_portal_website[0]->register_confirm;
+		$_SESSION['portal_website_' . $this->mod . '_login_count'] = $obj_portal_website[0]->login_count;
+		$_SESSION['portal_website_' . $this->mod . '_login_wrong'] = $obj_portal_website[0]->login_wrong;
+		$_SESSION['portal_website_' . $this->mod . '_last_login'] = $obj_portal_website[0]->last_login;
+		$_SESSION['portal_website_' . $this->mod . '_last_create'] = $obj_portal_website[0]->last_create;
+		$_SESSION['portal_website_' . $this->mod . '_last_update'] = $obj_portal_website[0]->last_update;
+		$_SESSION['portal_website_' . $this->mod . '_status'] = $obj_portal_website[0]->status; 
+		$_SESSION['portal_website_' . $this->mod . '_session_id'] = $obj_portal_website[0]->session_id;  
+
+		$q = "SELECT * FROM tbl_portal_website_style WHERE web_id = ?";
+		$v = $web_id;
+		$res = $CustomHelper->API_CALL($CustomHelper->API_URL('api_website_style'),$q,$v);
+		$obj_portal_website_style = json_decode($res);
+		  
+		$_SESSION['portal_website_style_' . $this->mod . '_logo_type'] = $obj_portal_website_style[0]->logo_type; 
+		$_SESSION['portal_website_style_' . $this->mod . '_logo_img1'] = $obj_portal_website_style[0]->logo_img1; 
+		$_SESSION['portal_website_style_' . $this->mod . '_logo_url'] = $obj_portal_website_style[0]->logo_url; 
+		$_SESSION['portal_website_style_' . $this->mod . '_template_id'] = $obj_portal_website_style[0]->template_id; 
+		$_SESSION['portal_website_style_' . $this->mod . '_info_title'] = $obj_portal_website_style[0]->info_title; 
+		$_SESSION['portal_website_style_' . $this->mod . '_info_keyword'] = $obj_portal_website_style[0]->info_keyword; 
+		$_SESSION['portal_website_style_' . $this->mod . '_info_description'] = $obj_portal_website_style[0]->info_description; 
+		$_SESSION['portal_website_style_' . $this->mod . '_search_option'] = $obj_portal_website_style[0]->search_option; 
+		$_SESSION['portal_website_style_' . $this->mod . '_search_id'] = $obj_portal_website_style[0]->search_id; 
+		$_SESSION['portal_website_style_' . $this->mod . '_search_layout'] = $obj_portal_website_style[0]->search_layout; 
+		$_SESSION['portal_website_style_' . $this->mod . '_lang_option'] = $obj_portal_website_style[0]->lang_option; 
+		$_SESSION['portal_website_style_' . $this->mod . '_lang_id'] = $obj_portal_website_style[0]->lang_id; 
+		$_SESSION['portal_website_style_' . $this->mod . '_lang_layout'] = $obj_portal_website_style[0]->lang_layout; 
+		$_SESSION['portal_website_style_' . $this->mod . '_social_option'] = $obj_portal_website_style[0]->social_option; 
+		$_SESSION['portal_website_style_' . $this->mod . '_social_id'] = $obj_portal_website_style[0]->social_id; 
+		$_SESSION['portal_website_style_' . $this->mod . '_social_layout'] = $obj_portal_website_style[0]->social_layout; 
+		$_SESSION['portal_website_style_' . $this->mod . '_social_fb'] = $obj_portal_website_style[0]->social_fb; 
+		$_SESSION['portal_website_style_' . $this->mod . '_social_tw'] = $obj_portal_website_style[0]->social_tw; 
+		$_SESSION['portal_website_style_' . $this->mod . '_social_ins'] = $obj_portal_website_style[0]->social_ins; 
+		$_SESSION['portal_website_style_' . $this->mod . '_social_yt'] = $obj_portal_website_style[0]->social_yt; 
+		$_SESSION['portal_website_style_' . $this->mod . '_copyright_option'] = $obj_portal_website_style[0]->copyright_option; 
+		$_SESSION['portal_website_style_' . $this->mod . '_copyright_info'] = $obj_portal_website_style[0]->copyright_info; 
+		$_SESSION['portal_website_style_' . $this->mod . '_copyright_info_en'] = $obj_portal_website_style[0]->copyright_info_en; 
+		$_SESSION['portal_website_style_' . $this->mod . '_lang_start'] = $obj_portal_website_style[0]->lang_start; 
+		$_SESSION['portal_website_style_' . $this->mod . '_block_ip'] = $obj_portal_website_style[0]->block_ip; 
+		$_SESSION['portal_website_style_' . $this->mod . '_close_status'] = $obj_portal_website_style[0]->close_status;  
+		$_SESSION['portal_website_style_' . $this->mod . '_close_type'] = $obj_portal_website_style[0]->close_type; 
+		$_SESSION['portal_website_style_' . $this->mod . '_close_info'] = $obj_portal_website_style[0]->close_info; 
+		$_SESSION['portal_website_style_' . $this->mod . '_close_redirect'] = $obj_portal_website_style[0]->close_redirect; 
+		$_SESSION['portal_website_style_' . $this->mod . '_css_info'] = $obj_portal_website_style[0]->css_info; 
+		$_SESSION['portal_website_style_' . $this->mod . '_html_head_info'] = $obj_portal_website_style[0]->html_head_info; 
+		$_SESSION['portal_website_style_' . $this->mod . '_html_body_info'] = $obj_portal_website_style[0]->html_body_info; 
+		$_SESSION['portal_website_style_' . $this->mod . '_html_foot_info'] = $obj_portal_website_style[0]->html_foot_info; 
+		$_SESSION['portal_website_style_' . $this->mod . '_call_center_info'] = $obj_portal_website_style[0]->call_center_info; 
+		$_SESSION['portal_website_style_' . $this->mod . '_slogan_1'] = $obj_portal_website_style[0]->slogan_1;
+		$_SESSION['portal_website_style_' . $this->mod . '_slogan_2'] = $obj_portal_website_style[0]->slogan_2;
+		$_SESSION['portal_website_style_' . $this->mod . '_slogan_1_en'] = $obj_portal_website_style[0]->slogan_1_en;
+		$_SESSION['portal_website_style_' . $this->mod . '_slogan_2_en'] = $obj_portal_website_style[0]->slogan_2_en;
+		$_SESSION['portal_website_style_' . $this->mod . '_contact_text_1'] = $obj_portal_website_style[0]->contact_text_1;
+		$_SESSION['portal_website_style_' . $this->mod . '_contact_text_2'] = $obj_portal_website_style[0]->contact_text_2;
+		$_SESSION['portal_website_style_' . $this->mod . '_contact_text_3'] = $obj_portal_website_style[0]->contact_text_3;
+		$_SESSION['portal_website_style_' . $this->mod . '_contact_text_4'] = $obj_portal_website_style[0]->contact_text_4;
+		 
+		if(empty($_SESSION["portal_lang"]))
+		{ 
+			if($_SESSION['portal_website_style_' . $this->mod . '_lang_start'] == 'EN')
+			{
+				$_SESSION["portal_lang"] = "english";	
+			}
+			else
+			{
+				$_SESSION["portal_lang"] = "thai";	
+			} 
+		}	
+
+		$_SESSION['portal_website_' . $this->mod . '_web_name'] = $CustomHelper->L($_SESSION['portal_website_' . $this->mod . '_web_name_th'],$_SESSION['portal_website_' . $this->mod . '_web_name_en']);
+		  
+		if(empty($_SESSION["portal_lang"]))
+		{ 
+			if($_SESSION['portal_website_style_' . $this->mod . '_lang_start'] == 'EN')
+			{
+				$_SESSION["portal_lang"] = "english";	
+			}
+			else
+			{
+				$_SESSION["portal_lang"] = "thai";	
+			} 
+		}	
+		$str_check_lang = " AND en_title <> '' ";
+		if($_SESSION["portal_lang"] == 'thai')
+		{
+			$str_check_lang = " AND title <> '' ";
+		}
+
+		$q = "SELECT * FROM tbl_portal_website_all_bg WHERE web_id = ?";
+		$v = $web_id;
+		$res = $CustomHelper->API_CALL($CustomHelper->API_URL('api_website_all_bg'),$q,$v);
+		$obj_portal_website_all_bg = json_decode($res);
+ 
+		$_SESSION['portal_website_all_bg_' . $this->mod . '_mod_news'] = $obj_portal_website_all_bg[0]->mod_news; 
+		$_SESSION['portal_website_all_bg_' . $this->mod . '_mod_member'] = $obj_portal_website_all_bg[0]->mod_member; 
+		$_SESSION['portal_website_all_bg_' . $this->mod . '_mod_activities'] = $obj_portal_website_all_bg[0]->mod_activities; 
+		$_SESSION['portal_website_all_bg_' . $this->mod . '_mod_gallery'] = $obj_portal_website_all_bg[0]->mod_gallery; 
+		$_SESSION['portal_website_all_bg_' . $this->mod . '_mod_webboard'] = $obj_portal_website_all_bg[0]->mod_webboard; 
+		$_SESSION['portal_website_all_bg_' . $this->mod . '_mod_poll'] = $obj_portal_website_all_bg[0]->mod_poll; 
+		$_SESSION['portal_website_all_bg_' . $this->mod . '_mod_question'] = $obj_portal_website_all_bg[0]->mod_question; 
+		$_SESSION['portal_website_all_bg_' . $this->mod . '_mod_faq'] = $obj_portal_website_all_bg[0]->mod_faq; 
+		$_SESSION['portal_website_all_bg_' . $this->mod . '_mod_download'] = $obj_portal_website_all_bg[0]->mod_download; 
+		$_SESSION['portal_website_all_bg_' . $this->mod . '_mod_search'] = $obj_portal_website_all_bg[0]->mod_search; 
+		$_SESSION['portal_website_all_bg_' . $this->mod . '_mod_sitemap'] = $obj_portal_website_all_bg[0]->mod_sitemap; 
+		$_SESSION['portal_website_all_bg_' . $this->mod . '_mod_banner'] = $obj_portal_website_all_bg[0]->mod_banner; 
+		$_SESSION['portal_website_all_bg_' . $this->mod . '_mod_texteditor'] = $obj_portal_website_all_bg[0]->mod_texteditor; 
+		$_SESSION['portal_website_all_bg_' . $this->mod . '_mod_contact'] = $obj_portal_website_all_bg[0]->mod_contact; 
+ 
+		/*$q = "SELECT * FROM tbl_portal_website_bg WHERE ( web_id = 1 AND status = '1' AND date_set = '0' ) OR ( web_id = 1 AND status = '1' AND date_set = '1' AND date_start < '" . date('U') . "' AND date_end > '" . date('U') . "' ) ORDER BY sort ASC LIMIT 0,99";*/
+
+		$q = "SELECT * FROM tbl_portal_website_bg WHERE web_id = ? ORDER BY sort ASC LIMIT 0,99";
+		$v = $web_id;
+		$res = $CustomHelper->API_CALL($CustomHelper->API_URL('api_website_bg'),$q,$v);
+		$obj_portal_website_bg = json_decode($res);
+		 
+		$_SESSION['portal_website_bg_' . $this->mod . '_list'] = $obj_portal_website_bg;
+   
+		$q = "SELECT * FROM tbl_portal_website_contentbox WHERE web_id = ? ORDER BY sort ASC LIMIT 0,99";
+		$v = $web_id;
+		$res = $CustomHelper->API_CALL($CustomHelper->API_URL('api_website_contentbox'),$q,$v);
+		$obj_portal_website_contentbox = json_decode($res);
+ 
+		$_SESSION['portal_website_contentbox_' . $this->mod . '_list'] = $obj_portal_website_contentbox; 
+		
+		$q = "SELECT * FROM tbl_portal_website_contentbox_cat WHERE web_id = ? ORDER BY sort ASC LIMIT 0,99";
+		$v = $web_id;
+		$res = $CustomHelper->API_CALL($CustomHelper->API_URL('api_website_contentbox_cat'),$q,$v);
+		$obj_portal_website_contentbox_cat = json_decode($res);
+  
+		$_SESSION['portal_website_contentbox_cat_' . $this->mod . '_list'] = $obj_portal_website_contentbox_cat;
+		
+		$q = "SELECT * FROM tbl_portal_website_footer_menu_page WHERE web_id = ? ORDER BY sort ASC LIMIT 0,99";
+		$v = $web_id;
+		$res = $CustomHelper->API_CALL($CustomHelper->API_URL('api_website_footer_menu_page'),$q,$v);
+		$obj_portal_website_footer_menu_page = json_decode($res);
+		 
+		$_SESSION['portal_website_footer_menu_' . $this->mod . '_list'] = $obj_portal_website_footer_menu_page;	
+ 
+		$q = "SELECT * FROM tbl_portal_website_top_menu_page WHERE web_id = ? ORDER BY sort ASC LIMIT 0,99";
+		$v = $web_id;
+		$res = $CustomHelper->API_CALL($CustomHelper->API_URL('api_website_top_menu_page'),$q,$v);
+		$obj_portal_website_top_menu_page = json_decode($res);
+
+		$_SESSION['portal_website_sub_menu_' . $this->mod . '_list'] = $obj_portal_website_top_menu_page;
+
+		$q = "SELECT * FROM tbl_portal_website_main_menu_page WHERE web_id = ? ORDER BY sort ASC LIMIT 0,99";
+		$v = $web_id;
+		$res = $CustomHelper->API_CALL($CustomHelper->API_URL('api_website_main_menu_page'),$q,$v);
+		$obj_portal_website_main_menu_page = json_decode($res);
+
+		$_SESSION['portal_website_main_menu_' . $this->mod . '_list'] = $obj_portal_website_main_menu_page;
+
+		$str_check_lang = " AND en_title <> '' ";
+		if($_SESSION["portal_lang"] == 'thai')
+		{
+			$str_check_lang = " AND title <> '' ";
+		}
+
+		$ball_check_it = 22;
+		$show_drop_down = $obj_portal_website_main_menu_page;
+ 
+		foreach($show_drop_down as $r)
+		{  
+			if($r->page_type == 'group')
+			{
+				$q = "SELECT * FROM tbl_portal_website_page WHERE ( web_id = ? AND status = '1' AND cat_id = '" . $r->id . "' AND page_id = '0' ) ORDER BY sort ASC LIMIT 0,99";
+				$v = $web_id;
+				$res = $CustomHelper->API_CALL($CustomHelper->API_URL('api_website_page'),$q,$v);
+				$obj_portal_website_page = json_decode($res);
+				 
+				$_SESSION['portal_website_page_' . $r->id . '_' . $this->mod . '_list'] = $obj_portal_website_page;
+				  
+				foreach($_SESSION['portal_website_page_' . $r->id . '_' . $this->mod . '_list'] as $r_sub)
+				{  
+					$q = "SELECT * FROM tbl_portal_website_page WHERE ( web_id = ? AND cat_id = '" . $r->id . "' AND status = '1' AND page_id = '" . $r_sub->id . "' ) ORDER BY sort ASC LIMIT 0,10";
+					$v = $web_id;
+					$res = $CustomHelper->API_CALL($CustomHelper->API_URL('api_website_page'),$q,$v); 
+					$obj_portal_website_page_sub = json_decode($res);
+					$_SESSION['portal_website_page_' . $r->id . '_' . $r_sub->id . '_' . $this->mod . '_list'] = $obj_portal_website_page_sub;   
+				} 
+			}
+		} 
+	}
+
+	public function include_lang()
+    {
+	}
+	
 	public function login()
     {        
-        if(isset($_SESSION['panel_login']) && $_SESSION['panel_login'] == 1)
+		$CustomHelper = new \App\CustomHelper;
+
+		if($CustomHelper->check_panel_login() == 1)
         {
 			?><script>window.location = '/';</script><?php
             exit;
@@ -21,13 +287,7 @@ class PanelController extends Controller
     }
 
     public function login_check(Request $request)
-    {   
-		if(isset($_SESSION['panel_login']) && $_SESSION['panel_login'] == 1)
-        {
-			?><script>window.location = '/';</script><?php
-            exit;
-        }
-		
+    {    
 		$CustomHelper = new \App\CustomHelper;
         
         $new_login_pass = false;
@@ -38,8 +298,8 @@ class PanelController extends Controller
         $u = $request->input('u');
         $p = $request->input('p');
         
-        $q = "SELECT * FROM tbl_portal_website WHERE username = ? AND password = ?";
-        $v = $u."|".md5($p);
+        $q = "SELECT * FROM tbl_portal_website WHERE username = '".addslashes($u)."' AND password = ?";
+        $v = md5($p);
 		$res = $CustomHelper->API_CALL($CustomHelper->API_URL('api_login_check'),$q,$v);
 		
 		if(trim($res) == '')
@@ -163,7 +423,7 @@ class PanelController extends Controller
 			?><meta http-equiv="refresh" content="0;URL=http://localhost/bangkok.go.th.portal/panel/login" /><?
 			*/
 
-			?><script>window.location = '/panel-admin/templatestep1';</script><?php
+			?><script>window.location = '/panel-admin/login';</script><?php
         	exit;
 		}
 		
@@ -173,7 +433,9 @@ class PanelController extends Controller
 	
 	public function logout()
     {        
-		if(isset($_SESSION['panel_login']) && $_SESSION['panel_login'] == 1)
+		$CustomHelper = new \App\CustomHelper;
+		
+		if($CustomHelper->check_panel_login() == 1) 
         {   
 			/*
 			$this->load->model('Portal_website_log_model'); 
@@ -184,5 +446,60 @@ class PanelController extends Controller
 		session_destroy(); 
 		?><script>window.location = '/';</script><?php
         exit;
+	}
+	
+	public function web_home()
+    {    
+		$CustomHelper = new \App\CustomHelper;
+		
+		if($CustomHelper->check_panel_login() == 1)
+		{  
+			if($_SESSION['panel_style_template_id'] == '0' || $_SESSION['panel_style_template_id'] == '')
+			{
+				?>
+				<script>window.location = '/panel-admin/templatestep1';</script>
+				<?php
+			}
+			
+		}
+
+		$this->include_header();
+ 
+		$data['mod'] = $this->mod;  
+		$data['theme'] = 'theme_'.$_SESSION['portal_website_style_' . $this->mod . '_template_id'];  
+		$data['title'] = $_SESSION['portal_website_' . $this->mod . '_web_name']; 
+
+		$q = "SELECT * FROM tbl_portal_website_contentbox WHERE web_id = ? AND status = '1' ORDER BY sort ASC";
+		$v = $_SESSION['portal_website_' . $this->mod . '_id'];
+		$res = $CustomHelper->API_CALL($CustomHelper->API_URL('api_website_contentbox'),$q,$v);
+		$obj_portal_website_contentbox = json_decode($res);
+
+		$data['box'] = $obj_portal_website_contentbox;
+		$r_box = $obj_portal_website_contentbox; 
+ 
+		foreach($r_box as $r_box_loop)
+		{   
+			if(substr($r_box_loop->{'box1'},0,1) == 'm')
+			{
+				$new_id = substr($r_box_loop->{'box1'},1); 
+				$q = "SELECT * FROM tbl_portal_website_main_menu_page WHERE web_id = '".$_SESSION['portal_website_' . $this->mod . '_id']."' AND id = ?";
+				$v = $new_id; 
+				$res = $CustomHelper->API_CALL($CustomHelper->API_URL('api_website_main_menu_page'),$q,$v);
+				$obj_portal_website_main_menu_page = json_decode($res); 
+				$data['box_page'][$r_box_loop->id][1] = $obj_portal_website_main_menu_page;
+				$data['box_page_type'][$r_box_loop->id][1] = 'main_menu'; 
+			}
+			else
+			{
+				$q = "SELECT * FROM tbl_portal_website_page WHERE web_id = '".$_SESSION['portal_website_' . $this->mod . '_id']."' AND id = ?";
+				$v = $r_box_loop->{'box1'}; 
+				$res = $CustomHelper->API_CALL($CustomHelper->API_URL('api_website_page'),$q,$v);
+				$obj_portal_website_page = json_decode($res); 
+				$data['box_page'][$r_box_loop->id][1] = $obj_portal_website_page;
+				$data['box_page_type'][$r_box_loop->id][1] = 'page';		
+			} 
+		}    
+
+		return view('home');
     }
 }

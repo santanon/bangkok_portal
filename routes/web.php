@@ -37,12 +37,14 @@ Route::any('manage-admin/edit', [ManageController::class,'edit']);
 Route::any('manage-admin/edit_logo', [ManageController::class,'edit_logo']);
 Route::any('manage-admin/action', [ManageController::class,'action']);
 
+Route::any('/', [PanelController::class,'web_home']);
 
 
 /* Front */
 Route::any('/', function () {
     return view('home');
 });
+
 
 Route::any('/coverpage', function () {
     return view('coverpage');

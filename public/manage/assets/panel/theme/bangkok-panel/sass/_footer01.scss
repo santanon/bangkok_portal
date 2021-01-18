@@ -1,0 +1,135 @@
+#se-footer {
+	overflow: hidden;
+	padding: 12px 0 10px 0;
+	.se-footer__box{
+		float: left;
+		margin: 0 15px;
+		width: auto;
+	}
+}
+#callcenter{
+	position: relative;
+	overflow: hidden;
+	padding-left: 50px;
+	height: 50px;
+	background:url('../images/icn-callcenter.png') left top no-repeat;
+	>span{
+		display: block;
+		&.cc-text{
+			margin-top: -5px;
+			font-size: 26px;
+			color: #004E6C;
+		}
+		&.cc-num{
+			margin-top: -10px;
+			font-size: 32px;
+			color: #999999;
+		}
+	}
+}
+#site-storage{
+	overflow: hidden;
+	>span{
+		display: block;
+		float: left;
+		margin: 0 10px;
+		font-size: 26px;
+		color: #004E6C;
+	}
+	.storage-bar-container{
+		float: left;
+		margin: 5px 0 0 0;
+		width: 250px;
+		border: 1px solid #014f6d;
+		height: 15px;
+		>.storage-bar{
+			display: block;
+			height: 100%;
+			background:#014f6d;
+		}
+	}
+}
+#last-login{
+	overflow: hidden;
+	>span{
+		display: block;
+		float: left;
+		margin-right: 10px;
+		font-size: 24px;
+		color: #666;
+		&:first-child{
+			font-size: 26px;
+			color: #004E6C;
+		}
+	}
+}
+#switch-language{
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	overflow: hidden;
+	margin: 0 0 0 0;
+	padding: 0;
+	list-style: none;
+	>li{
+		display: block;
+		float: left;
+		margin: 0 5px;
+		padding: 0 0 0 0;
+		width: auto;
+		// height: 14px;
+		font-size:26px;
+		color: #004e6c;
+		>a{
+			display: block;
+			margin: 0 0 0 0;
+			padding: 0 0 0 20px;
+			width: 15px;
+			height: 12px;
+			font-size:16px;
+			color: #666;
+			text-decoration: none;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+		&.flag-th{
+			padding-top: 8px;
+			>a{
+				// color: lighten($color-text, 45%);
+				background:url('../images/icn-flag2.png') left -60px no-repeat;
+			}
+			&.active{
+				>a{
+					// color: $color-text;
+					background:url('../images/icn-flag2.png') left top no-repeat;
+				}
+			}
+			&:hover{
+				>a{
+					// color: $color-text;
+					background:url('../images/icn-flag2.png') left top no-repeat;
+				}
+			}
+		}
+		&.flag-en{
+			padding-top: 8px;
+			>a{
+				// color: lighten($color-text, 45%);
+				background:url('../images/icn-flag2.png') left -90px no-repeat;
+			}
+			&.active{
+				>a{
+					// color: $color-text;
+					background:url('../images/icn-flag2.png') left -30px no-repeat;
+				}
+			}
+			&:hover{
+				>a{
+					// color: $color-text;
+					background:url('../images/icn-flag2.png') left -30px no-repeat;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,22 @@
+.mod_tab-content{
+	&.side-tab{
+		>.header{
+			float: left;
+		}
+		>.content{
+			float: left;
+		}
+	}
+	>.header{
+
+	}
+	>.content{
+		.tab-content{
+			display: none;
+			&.show{
+				display: block;
+			}
+		}
+
+	}
+}

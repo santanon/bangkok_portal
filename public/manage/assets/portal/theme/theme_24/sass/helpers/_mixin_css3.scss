@@ -1,0 +1,57 @@
+/* note : for IE8,7 need css3pie helper*/
+
+@mixin gradient-bg($start_color,$stop_color) {
+	background: $start_color; /* Old browsers */
+	background: -moz-linear-gradient(top,  $start_color 0%, $stop_color 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$start_color), color-stop(100%,$stop_color)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  $start_color 0%,$stop_color 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  $start_color 0%,$stop_color 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  $start_color 0%,$stop_color 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  $start_color 0%,$stop_color 100%); /* W3C */
+	-pie-background: linear-gradient($start_color, $stop_color); /* IE6-9 via PIE */
+	behavior: url(/bangkok.go.th/assets/pie/PIE.htc);
+}
+
+@mixin round-corner($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+	-pie-border-radius: $radius;
+	behavior: url(/bangkok.go.th/assets/pie/PIE.htc);
+
+}
+
+@mixin round-corner2($a,$b,$c,$d) {
+	-webkit-border-radius: $a $b $c $d;
+	-moz-border-radius: $a $b $c $d;
+	border-radius: $a $b $c $d;
+	-pie-border-radius: $a $b $c $d;
+	// behavior: url(pie/PIE.htc);
+	behavior: url(/bangkok.go.th/assets/pie/PIE.htc);
+}
+
+@mixin drop-shadow($color,$x,$y,$blur) {
+	-webkit-box-shadow: $color $x $y $blur;
+	-moz-box-shadow: $color $x $y $blur;
+	box-shadow: $color $x $y $blur;
+	-pie-box-shadow: $color $x $y $blur;
+	// behavior: url(pie/PIE.htc);
+	behavior: url(/bangkok.go.th/assets/pie/PIE.htc);
+}
+
+@mixin opacity-bg($color,$opa){
+	$r : red($color);
+	$g : green($color);
+	$b : blue($color);
+	$ie : ie-hex-str(rgba($r,$g,$b,$opa));// convert rgba to IE 'AARRGGBB' format
+
+	background:rgb($r,$g,$b);
+	background: transparent\9;
+	background:rgba($r,$g,$b,$opa);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie},endColorstr=#{$ie});
+	zoom: 1;
+}
+
+
+
+

@@ -1,0 +1,131 @@
+
+@media #{$tablet-portrait} {
+
+
+}
+
+@media #{$tablet-landscape} {
+
+
+}
+@media #{$tablet} {
+
+	/* justifygrid */
+	//.se-box__item{ display: block; width: 100% !important; }
+
+	/* global-styles */
+	#se-wrapper{
+		max-width: inherit;
+		min-width: inherit;
+		width: 100%;
+	}
+
+	/* offcanvas-menu  */
+	#menu-trigger{
+		display: inline-block;
+	}
+
+	/* main bg cover */
+	#se-bg-cover{
+		display: none;
+		// position:absolute;
+		top:450px;
+		// width:100%;
+		// height:350px;
+		// background:#759;
+	}
+
+	#se-maincontainer{
+		margin: auto;
+		padding: 0 1% 48px 1%;
+		width: 98%;
+	}
+
+	#se-footer-wrapper{
+		min-height: inherit;
+		height: auto;
+		background: #efefef;
+	}
+
+	.centerwrapper{
+		margin: auto;
+		padding: 0;
+		width: 100%;
+	}
+
+	/* welcome text */
+	#welcome-text{
+		position: absolute;
+		top: 110px;
+		right: 0;
+		// background: #489;
+		>p{
+			margin: 0;
+			padding: 0;
+			color: #fff;
+			text-shadow: #333 2px 2px 3px;
+
+			&.heading{
+				font-size: 2.2em;
+			}
+			&.desc{
+				font-size: 1.4em;
+			}
+		}
+	}
+	/* page navigation */
+	#page-navi{
+		// display: none;
+		padding-top: 10px;
+		height: 25px;
+		ul{
+			margin: 0;
+			padding: 0 15px;
+			>li{
+				display: inline-block;
+				//*display: inline;
+				//zoom: 1;
+				margin: 0;
+				padding: 0 0 0 0;
+				list-style: none;
+				a{
+					text-decoration: none;
+					font-size: 12px;
+					// color: #333;
+					&:hover{
+						text-decoration: underline;
+						// color: #1b7aad;
+					}
+				}
+				&:before {
+				    content: "/";
+				    padding: 0 5px 0 1px;
+				    font-size: 12px;
+				}
+				&:first-child{
+					&:before{
+						content: none;
+					}
+				}
+				&.unavailable a{
+					// color: #ccc;
+					text-decoration: none;
+					cursor: default;
+				}
+				&.current a{
+					// color: #1b7aad;
+					text-decoration: none;
+					cursor: default;
+				}
+			}
+		}
+	}
+	/* end page navigation */
+}
+
+@import "header/header01-tablet";
+@import "footer/footer01-tablet";
+@import "content/layout-index01-tablet";
+@import "content/layout-page01-tablet";
+
+

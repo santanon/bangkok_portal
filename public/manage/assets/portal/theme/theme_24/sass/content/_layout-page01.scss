@@ -1,0 +1,45 @@
+#se-maincontainer{
+
+	#page-content{
+		margin-top: 140px;
+		padding: 0px 10px 10px 10px;
+		background: #fff;
+		box-sizing: border-box;
+		border: 1px solid #e8e8e8;
+	}
+	.page-custom-box{
+
+	}
+	.page-box-heading{
+		margin: 0 0 10px 0;
+		padding: 0;
+		font-size: 26px;
+		font-weight: normal;
+		.heading1{
+			color: #333333;
+		}
+		.heading2{
+			color: #0490D8;
+		}
+	}
+	#custom-box-gallery{
+		.fontfacetext{
+			background-color: #494949 !important;
+			&:hover{
+				background-color: #EBE7D2 !important;
+				a{
+					span{
+						color: #494949;
+						i{
+							color: #494949;
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
+
+
+

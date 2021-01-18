@@ -1,0 +1,36 @@
+#se-main-container{
+	&.index{
+		overflow: hidden;
+		margin: 0;
+	}
+}
+#login-page{
+	overflow: hidden;
+	padding: 280px 0 0 270px;
+	width: 565px;
+}
+#login-form-box{
+	margin-top: 20px;
+	table td{
+		padding: 5px 0;
+	}
+	label{
+		margin: 0 10px 0 0;
+		font-size:25px;
+		color: #333;
+	}
+	.btn-forget-pass{
+		font-size: 22px;
+		color: #666;
+		text-decoration: none;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+	input[type=text],input[type=password]{
+		width: 180px;
+	}
+	.icon-caret-right{
+		color: #666;
+	}
+}

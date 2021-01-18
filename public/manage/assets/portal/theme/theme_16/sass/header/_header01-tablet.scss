@@ -1,0 +1,248 @@
+@media #{$tablet} {
+
+#se-header-wrapper{
+	width: 100%;
+	height: auto;
+	min-height: inherit;
+	// background: #fff;
+}
+
+#se-header{
+	overflow: hidden;
+	margin: auto;
+	padding: 0;
+	width: 100%;
+	background: none;
+}
+#header-panel-box{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	background: none;
+	@at-root{
+		#mainlogo{
+			float: none;
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			height: 100px;
+			background: none;
+			#logo-img{
+				float: left;
+				width: 450px;
+				height: 100px;
+				line-height: 95px;
+				>img{
+					max-width: 450px;
+					max-height: 100%;
+					vertical-align: middle;
+				}
+			}
+			#mobile-menu-trigger{
+				display: inline-block;
+				float: right;
+				margin: 22px 15px 0 0;
+				padding: 0px 10px;
+				font-size: 48px;
+				color: #35A6E5;
+				text-decoration: none;
+				box-sizing: border-box;
+				// border: 1px solid #ccc;
+			}
+		}
+		#top-panel{
+			display: none;
+			float: none;
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			height: auto;
+			background:#DB98F1;
+		}
+		.top-panel-box{
+			float: left;
+		}
+		#after-login{
+			display: none;
+		}
+		#switch-language{
+			display: none;
+			*display: none;
+			zoom: 1;
+			overflow: hidden;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			>li{
+				display: block;
+				float: left;
+				margin: 0 5px;
+				padding: 6px 0 0 0;
+				width: auto;
+				height: 14px;
+				font-size:11px;
+				color: $color-text;
+				>a{
+					display: block;
+					margin: 0 0 0 0;
+					width: 15px;
+					height: 12px;
+					// font-size:13px;
+					color: $color-text;
+					text-decoration: none;
+					&:hover{
+						text-decoration: underline;
+					}
+				}
+				&.flag-en{
+					>a{
+						background:url('../images/icn-flag.png') left top no-repeat;
+					}
+				}
+				&.flag-th{
+					>a{
+						background:url('../images/icn-flag.png') left -30px no-repeat;
+					}
+				}
+			}
+		}
+		#top-menu{
+			display: none;
+			*display: none;
+			zoom: 1;
+			overflow: hidden;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			>li{
+				display: block;
+				float: left;
+				margin: 0 5px;
+				padding: 0;
+				width: auto;
+				height: 20px;
+				// font-size:13px;
+				a{
+					display: block;
+					margin: 1px 0 0 0;
+					//width: 15px;
+					//height: 15px;
+					font-size:20px;
+					color: $color-text;
+					text-decoration: none;
+					&:hover{
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+		#search-site{
+			position: relative;
+			display: none;
+			*display: none;
+			zoom: 1;
+			overflow: hidden;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+
+			td{
+				padding: 0 3px;
+			}
+
+			.search-text{
+				display: block;
+				position: relative;
+				margin: 0 0 0 15px;
+				font-size: 20px;
+			}
+			a{
+				display: block;
+				margin: 1px 0 0 0;
+				//width: 15px;
+				//height: 15px;
+				font-size:20px;
+				color: $color-text;
+				text-decoration: none;
+				&:hover{
+					text-decoration: underline;
+				}
+			}
+			i{
+				position: absolute;
+				top: 7px;
+				font-size: 12px;
+				color: #333;
+			}
+		}
+		#top-social{
+			display: none;
+			*display: none;
+			zoom: 1;
+			overflow: hidden;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			>li{
+				display: block;
+				float: left;
+				margin: 0 5px;
+				padding: 1px 0 0 0;
+				width: auto;
+				height: 19px;
+				font-size:11px;
+				color: $color-text;
+				>span{
+					display: block;
+					padding: 3px 0 0 0;
+				}
+				>a{
+					display: block;
+					margin: 0 0 0 0;
+					width: 19px;
+					height: 19px;
+					// font-size:13px;
+					color: $color-text;
+					text-decoration: none;
+					&:hover{
+						text-decoration: underline;
+					}
+				}
+				&.icn-fb{
+					>a{
+						background:url('../images/icn-social.jpg') left top no-repeat;
+					}
+				}
+				&.icn-tw{
+					>a{
+						background:url('../images/icn-social.jpg') left -30px no-repeat;
+					}
+				}
+				&.icn-yt{
+					>a{
+						background:url('../images/icn-social.jpg') left -60px no-repeat;
+					}
+				}
+				&.icn-ig{
+					>a{
+						background:url('../images/icn-social.jpg') left -90px no-repeat;
+					}
+				}
+			}
+		}
+	}
+}
+#header-mainmenu-box{
+	display: none;
+	margin: 0;
+	padding: 0;
+	height: 50px;
+	background: #073443;
+	>.centerwrapper{
+		margin: 0;
+		padding: 0;
+		width: 100%;
+	}
+}
+
+} //end mediaquery

@@ -1,0 +1,99 @@
+/* set global config vars */
+
+/* default font family */
+$font-header: "kittithada_roman_55_pregular";
+$font-header-bold: "kittithada_medium_65_pregular";
+$font-content: tahoma,arial;
+
+/* defualt page width setting(PC) */
+$page-min-width: 1000px;
+$page-max-width: 1280px;
+$page-sidepadding: 10px;
+
+/* off canvas menu width *ex. 70px or 70% */
+$offcanvas-width: 240px;
+$offcanvas-bgColor: #424439;
+
+/* main slide margin top */
+$main-slide-marginTop: 130px;
+$main-slide-imageHeight: 141px;
+
+/* header height */
+$header-height: 155px;
+
+/* footer height */
+$footer-height: 130px;
+$footer-marginTop: 0; //for adjust whitespace between content and footer
+
+/* font size multiplier */
+$large-multiplier : 1.3;
+$xlarge-multiplier : 1.5;
+
+/* default font size */
+$font-size-content: 0.8125em;
+$font-size-header: 1.2em;
+
+/* default theme color */
+$color-primary: #265B9D;
+$color-secondary: #F9981C;
+$color-text: #666666;
+
+/* mediaquery breakpoint */
+$screen: "only screen";
+$landscape: "(orientation: landscape)";
+$portrait: "(orientation: portrait)";
+
+$mobile: "#{$screen} and (max-width: 40em)"; // max-width 640px
+$mobile-portrait: "#{$screen} and (max-width: 40em) and #{$portrait}"; // for portrait mobile only
+$mobile-landscape: "#{$screen} and (max-width: 40em) and #{$landscape}"; // for landscape mobile only
+
+$tablet: "#{$screen} and (min-width: 40.063em) and (max-width: 64em)"; // min-width 641px and max-width 1024px
+$tablet-portrait: "#{$screen} and (min-width: 40.063em) and (max-width: 64em) and #{$portrait}"; // for portrait tablet only
+$tablet-landscape: "#{$screen} and (min-width: 40.063em) and (max-width: 64em) and #{$landscape}"; // for landscape tablet only
+
+/* ------------------------------------------- */
+
+/* grid system */
+@import "helpers/justifygrid";
+
+/* css3 crossbrowser */
+@import "helpers/mixin_css3"; // note : for IE8,7 need 'css3pie'
+
+/* fontface class */
+@import "helpers/fontface";
+
+/* scss components */
+@import "components/mod-main-slide";
+@import "components/mod-canvas-menu";
+@import "components/mod-tab-content";
+@import "components/mod-banner-slide";
+@import "components/mod-accordion-list";
+@import "components/mod-sticky-footer";
+
+/* global layout setting */
+@import "global-styles";
+
+/* scss layout */
+@import "header/header01";
+@import "content/layout-index01";
+@import "content/layout-page01";
+@import "footer/footer01";
+
+
+/* scss page style */
+@import "content/page-sitemap";
+@import "content/page-download";
+@import "content/page-question";
+@import "content/page-webboard";
+@import "content/page-pollvote";
+@import "content/page-news";
+@import "content/page-member";
+@import "content/page-gallery";
+@import "content/page-faq";
+@import "content/page-register";
+@import "content/page-layout";
+
+/* responsive control stylesheet */
+/* **DO NOT** import another scss component below reponsive import!! */
+@import "responsive-mobile";
+@import "responsive-tablet";

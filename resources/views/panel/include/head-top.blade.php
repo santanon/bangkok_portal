@@ -12,20 +12,15 @@
     <div class="right">
         <ul>
             <li class="account"> 
-                <a href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('MY ACCOUNT','manage-admin/edit?m=portal_website');">
+                <a href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('¡ÓÅÑ§âËÅ´...','manage-admin/edit?m=setting_website');">
                     <i class="fas fa-user"></i> my account
                 </a>
-            </li>
-            <!-- <li class="question">
-                <a href="">
-                    <i class="fas fa-question"></i> ask a question
-                </a>
-            </li> -->
+            </li> 
             <li class="setting">
-                <a href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('SETTING','manage-admin/edit?m=portal_website_style');">
+                <a href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('¡ÓÅÑ§âËÅ´...','manage-admin/edit?m=setting_html_css');">
                     <i class="fas fa-cog"></i> setting
                 </a>
-            </li>
+            </li> 
         </ul>
     </div>
 </div>

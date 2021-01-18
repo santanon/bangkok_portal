@@ -1,0 +1,518 @@
+/* default font family */
+/* css3 crossbrowser */
+/* note : for IE8,7 need css3pie helper*/
+/* fontface class */
+@font-face {
+  font-family: 'kittithada_roman_55_pregular';
+  src: url("../fonts/kit55p-webfont.eot");
+  src: url("../fonts/kit55p-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/kit55p-webfont.woff") format("woff"), url("../fonts/kit55p-webfont.ttf") format("truetype"), url("../fonts/kit55p-webfont.svg#kittithada_roman_55_pregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'kittithada_medium_65_pregular';
+  src: url("../fonts/kit65p-webfont.eot");
+  src: url("../fonts/kit65p-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/kit65p-webfont.woff") format("woff"), url("../fonts/kit65p-webfont.ttf") format("truetype"), url("../fonts/kit65p-webfont.svg#kittithada_medium_65_pregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 26, ../sass/helpers/_fontface.scss */
+.fontfacetext {
+  font-family: "kittithada_roman_55_pregular";
+}
+
+/* line 29, ../sass/helpers/_fontface.scss */
+.fontfacetext-bold {
+  font-family: "kittithada_medium_65_pregular";
+}
+
+/* slider setting*/
+/* line 13, ../sass/mod-box.scss */
+.slider-container {
+  position: relative;
+  display: none;
+  margin: 5px 0 0 0;
+  box-sizing: border-box;
+}
+/* line 20, ../sass/mod-box.scss */
+.slider-container.foo5-banner-slider {
+  margin: auto;
+  padding: 0 0%;
+  background: #FFFFFF;
+}
+/* line 26, ../sass/mod-box.scss */
+.slider-container.foo5-intab-slider {
+  margin: auto;
+  padding: 0 0%;
+  background: #FFFFFF;
+}
+
+/* line 33, ../sass/mod-box.scss */
+.foo5-banner-slider #foo5_prev {
+  position: absolute;
+  z-index: 2;
+  top: -32px;
+  right: 18px;
+  cursor: pointer;
+}
+/* line 43, ../sass/mod-box.scss */
+.foo5-banner-slider #foo5_prev > i {
+  display: block;
+  padding-top: 9px;
+  font-size: 18px;
+  text-align: center;
+  color: #8ac527;
+}
+/* line 49, ../sass/mod-box.scss */
+.foo5-banner-slider #foo5_prev > i:hover {
+  color: #ccc;
+}
+
+/* line 58, ../sass/mod-box.scss */
+.foo5-banner-slider #foo5_next {
+  position: absolute;
+  z-index: 2;
+  top: -32px;
+  right: 0px;
+  cursor: pointer;
+}
+/* line 68, ../sass/mod-box.scss */
+.foo5-banner-slider #foo5_next > i {
+  display: block;
+  padding-top: 9px;
+  font-size: 18px;
+  text-align: center;
+  color: #8ac527;
+}
+/* line 74, ../sass/mod-box.scss */
+.foo5-banner-slider #foo5_next > i:hover {
+  color: #ccc;
+}
+
+/* line 81, ../sass/mod-box.scss */
+.foo5-intab-slider #foo5_prev {
+  position: absolute;
+  z-index: 2;
+  top: 30px;
+  left: -5px;
+  cursor: pointer;
+}
+/* line 91, ../sass/mod-box.scss */
+.foo5-intab-slider #foo5_prev > i {
+  display: block;
+  padding-top: 9px;
+  font-size: 18px;
+  text-align: center;
+  color: #333;
+}
+/* line 97, ../sass/mod-box.scss */
+.foo5-intab-slider #foo5_prev > i:hover {
+  color: #666666;
+}
+
+/* line 105, ../sass/mod-box.scss */
+.foo5-intab-slider #foo5_next {
+  position: absolute;
+  z-index: 2;
+  top: 30px;
+  right: -5px;
+  cursor: pointer;
+}
+/* line 115, ../sass/mod-box.scss */
+.foo5-intab-slider #foo5_next > i {
+  display: block;
+  padding-top: 9px;
+  font-size: 18px;
+  text-align: center;
+  color: #333;
+}
+/* line 121, ../sass/mod-box.scss */
+.foo5-intab-slider #foo5_next > i:hover {
+  color: #666666;
+}
+
+/* line 127, ../sass/mod-box.scss */
+.slider-container.foo5-banner-slider ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: block;
+}
+/* line 133, ../sass/mod-box.scss */
+.slider-container.foo5-banner-slider ul.banner li {
+  float: left;
+  display: block;
+  margin: 19px 2px;
+  padding: 0;
+  width: 224px;
+  height: 67px;
+  border: 1px solid #e4e4e4;
+  box-sizing: border-box;
+}
+/* line 146, ../sass/mod-box.scss */
+.slider-container.foo5-banner-slider ul.contentbox li {
+  float: left;
+  display: block;
+  position: relative;
+  margin: 0 1px;
+  padding: 0;
+  width: auto;
+  height: auto;
+  box-sizing: border-box;
+  color: #666;
+}
+
+/* line 161, ../sass/mod-box.scss */
+.slider-container.foo5-intab-slider ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: block;
+}
+/* line 167, ../sass/mod-box.scss */
+.slider-container.foo5-intab-slider ul.banner li {
+  float: left;
+  display: block;
+  margin: 19px 8px;
+  padding: 0;
+  width: 230px;
+  height: 67px;
+  border: 1px solid #e4e4e4;
+  box-sizing: border-box;
+}
+/* line 180, ../sass/mod-box.scss */
+.slider-container.foo5-intab-slider ul.contentbox li {
+  float: left;
+  display: block;
+  position: relative;
+  margin: 0 12px;
+  padding: 0;
+  width: 217px;
+  height: auto;
+  box-sizing: border-box;
+  color: #666;
+}
+
+/* end slider */
+/* scroll-box setting */
+/* line 198, ../sass/mod-box.scss */
+.scroll-box {
+  overflow: hidden;
+  padding-right: 10px;
+  height: 258px;
+}
+
+/* line 205, ../sass/mod-box.scss */
+#main-wrapper {
+  position: relative;
+  padding: 30px 10px 5px 10px;
+}
+
+/* line 214, ../sass/mod-box.scss */
+.mod-box-topic {
+  margin: 0;
+  padding: 0 30px 0 0;
+  font-weight: normal;
+  font-size: 25px;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* line 225, ../sass/mod-box.scss */
+.mod-box-btn {
+  margin: 5px 0 0 0;
+  text-align: right;
+}
+/* line 229, ../sass/mod-box.scss */
+.mod-box-btn span a {
+  text-decoration: none;
+  font-size: 13px;
+  color: #333;
+}
+/* line 233, ../sass/mod-box.scss */
+.mod-box-btn span a:hover {
+  text-decoration: underline;
+}
+/* line 237, ../sass/mod-box.scss */
+.mod-box-btn span > i {
+  margin: 5px 3px 0 0;
+  font-size: 12px;
+  color: #8AC527;
+}
+
+/* line 246, ../sass/mod-box.scss */
+.mod-box-news {
+  overflow: hidden;
+  height: 235px;
+}
+/* line 252, ../sass/mod-box.scss */
+.mod-box-news.news-type1 > .img-thumb {
+  display: none;
+  float: left;
+  width: 100px;
+  height: auto;
+}
+/* line 257, ../sass/mod-box.scss */
+.mod-box-news.news-type1 > .img-thumb > img {
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+  max-height: 235px;
+}
+/* line 264, ../sass/mod-box.scss */
+.mod-box-news.news-type1 > .content {
+  float: right;
+  width: 100%;
+}
+/* line 268, ../sass/mod-box.scss */
+.mod-box-news.news-type1 > .content .heading {
+  margin: 0 0 0 0;
+  padding: 0;
+}
+/* line 272, ../sass/mod-box.scss */
+.mod-box-news.news-type1 > .content .desc {
+  margin: 0;
+  padding: 0;
+}
+/* line 280, ../sass/mod-box.scss */
+.mod-box-news.news-type2 > .img-thumb {
+  float: left;
+  width: 100px;
+  height: auto;
+}
+/* line 284, ../sass/mod-box.scss */
+.mod-box-news.news-type2 > .img-thumb > img {
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+  max-height: 235px;
+}
+/* line 291, ../sass/mod-box.scss */
+.mod-box-news.news-type2 > .content {
+  float: right;
+  width: 68%;
+}
+/* line 295, ../sass/mod-box.scss */
+.mod-box-news.news-type2 > .content .heading {
+  margin: 0 0 5px 0;
+  padding: 0;
+}
+/* line 299, ../sass/mod-box.scss */
+.mod-box-news.news-type2 > .content .desc {
+  margin: 0;
+  padding: 0;
+}
+/* line 307, ../sass/mod-box.scss */
+.mod-box-news.news-type3 > .img-thumb {
+  float: none;
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+/* line 312, ../sass/mod-box.scss */
+.mod-box-news.news-type3 > .img-thumb a {
+  display: block;
+  overflow: hidden;
+  margin: auto;
+  width: 185px;
+  height: 123px;
+}
+/* line 319, ../sass/mod-box.scss */
+.mod-box-news.news-type3 > .img-thumb img {
+  max-width: 100%;
+  height: auto;
+  max-height: 123px;
+}
+/* line 326, ../sass/mod-box.scss */
+.mod-box-news.news-type3 > .content {
+  float: none;
+  margin-top: 10px;
+  width: 100%;
+}
+/* line 331, ../sass/mod-box.scss */
+.mod-box-news.news-type3 > .content .heading {
+  margin: 0 0 5px 0;
+  padding: 0;
+}
+/* line 335, ../sass/mod-box.scss */
+.mod-box-news.news-type3 > .content .desc {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 343, ../sass/mod-box.scss */
+.mod-box-download td {
+  padding: 5px 0;
+}
+/* line 346, ../sass/mod-box.scss */
+.mod-box-download .date-bold {
+  padding: 0 5px;
+  font-weight: bold;
+}
+/* line 350, ../sass/mod-box.scss */
+.mod-box-download .odd {
+  background: #e9e9e9;
+}
+/* line 353, ../sass/mod-box.scss */
+.mod-box-download a {
+  text-decoration: none;
+  color: #6F5F5F;
+}
+/* line 357, ../sass/mod-box.scss */
+.mod-box-download a img {
+  padding-right: 5px;
+  vertical-align: middle;
+}
+
+/* line 364, ../sass/mod-box.scss */
+.list-group {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+/* line 365, ../sass/mod-box.scss */
+.list-group .list-group-category {
+  margin: 0 0 10px 0;
+  padding: 0;
+  line-height: 1;
+  font-size: 1.8em;
+  font-weight: normal;
+  color: #333;
+}
+
+/* line 374, ../sass/mod-box.scss */
+.list-group .list-group-category-desc {
+  color: #666;
+}
+
+/* line 375, ../sass/mod-box.scss */
+.list-group .list-group-item {
+  padding: 1px 0 1px 0;
+}
+
+/* line 376, ../sass/mod-box.scss */
+.list-group .list-group-item:first-child {
+  padding: 0 0 1px 0;
+}
+
+/* line 377, ../sass/mod-box.scss */
+.list-group .list-group-item .list-group-head {
+  position: relative;
+  padding: 3px 0 5px 0;
+  min-height: 25px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  border-bottom: 1px dotted #CCC;
+  line-height: 1.5;
+}
+
+/* line 387, ../sass/mod-box.scss */
+.list-group .list-group-item .active span a {
+  color: #8AC527 !important;
+}
+
+/* line 391, ../sass/mod-box.scss */
+.list-group .list-group-item .list-group-head span {
+  position: relative;
+  display: block;
+  padding-right: 25px;
+  background: url("../images/side-nav/icn-plus2.png") right 5px no-repeat;
+}
+
+/* line 398, ../sass/mod-box.scss */
+.list-group .list-group-item .list-group-head span a {
+  top: -1px;
+  left: 0px;
+  color: #444;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+/* line 406, ../sass/mod-box.scss */
+.list-group .list-group-item .active span {
+  background: url("../images/side-nav/icn-minus2.png") right 5px no-repeat;
+}
+
+/* line 410, ../sass/mod-box.scss */
+.list-group .list-group-item .list-group-content {
+  display: none;
+}
+
+/* line 414, ../sass/mod-box.scss */
+.list-group .list-group-item .list-group-content.opened {
+  display: block;
+}
+
+/* line 418, ../sass/mod-box.scss */
+.list-group .list-group-item .list-group-content .text_editor_box {
+  padding: 5px;
+  font-size: 13px;
+  color: #666;
+}
+
+/* line 424, ../sass/mod-box.scss */
+.list-group .list-group-item .list-group-content .list-group-more {
+  display: block;
+  margin: 5px 0 0 3px;
+  font-size: 0.8em;
+}
+
+/* line 430, ../sass/mod-box.scss */
+.list-group .list-group-item .list-group-content .list-group-more i {
+  color: #e00100;
+}
+
+/* line 434, ../sass/mod-box.scss */
+.list-group .list-group-item .list-group-content .list-group-more a {
+  color: #333333;
+  text-decoration: none;
+}
+
+/* line 439, ../sass/mod-box.scss */
+.list-group .list-group-item .list-group-content .list-group-more a:hover {
+  text-decoration: underline;
+}
+
+/* line 442, ../sass/mod-box.scss */
+#list-group01.list-group .list-group-item span {
+  background: url(../images/side-nav/icon-down.png) right no-repeat !important;
+}
+
+/* line 443, ../sass/mod-box.scss */
+#list-group01.list-group .list-group-item .active span {
+  background: url(../images/side-nav/icon-down-g.png) right no-repeat !important;
+}
+
+/* line 444, ../sass/mod-box.scss */
+.bg-color {
+  background: #0399e6 !important;
+}
+
+/* line 446, ../sass/mod-box.scss */
+.title-bottom {
+  color: #666 !important;
+}
+
+/* line 451, ../sass/mod-box.scss */
+.box-webboard a span {
+  font-weight: bold;
+  text-decoration: underline solid #fff !important;
+}
+
+/* line 457, ../sass/mod-box.scss */
+.right-content-poll {
+  color: #8AC527 !important;
+}
+/* line 459, ../sass/mod-box.scss */
+.right-content-poll .title {
+  color: #8AC527 !important;
+}
+/* line 462, ../sass/mod-box.scss */
+.right-content-poll .bg-color {
+  background: #8AC527 !important;
+}
+
+/* responsive style */

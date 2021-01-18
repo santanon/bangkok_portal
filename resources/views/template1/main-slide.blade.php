@@ -7,7 +7,7 @@
             <li class="order-list order-close">ปิด</li>
         </ul>
     </div> -->
-    <a href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('IMAGE SLIDE','manage-admin/list?m=portal_website_bg');">
+    <a href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('กำลังโหลด...','manage-admin/list?m=home_bg');">
         <div class="manage-edit">
             <img src="{{ asset('template2/assets/images/icons/icon-edit.svg')}}" alt="icon">
         </div>

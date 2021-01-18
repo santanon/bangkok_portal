@@ -1,7 +1,7 @@
 <div class="section-content">
     <div class="container">
         <div class="inner-content">
-            <div class="top-content no-styled content-page">
+            <div class="top-content flex-detail">
                 <div class="group-text">
                     <h3 class="title">การดำเนินงานด้านความปลอดภัย อาชีวอนามัย และสภาพแวดล้อมในการทำงานของสำนักงานเลขานุการสภากรุงเทพมหานคร </h3>
                 </div>
@@ -11,7 +11,7 @@
                     <i class="far fa-calendar"></i> 2 กรกฎาคม 2556
                 </div>
                 <div class="source-post">
-                    แหล่งที่มา <span>PR BKK</span>
+                    แหล่งที่มา : <span>PR BKK</span>
                 </div>
             </div>
             <div class="main-content border-bottom">
@@ -216,9 +216,9 @@
 
                 <!-- location -->
                 <div class="group-activity-location">
-                    <div class="top-content">
+                    <div class="top-content flex-detail">
                         <div class="group-text">
-                            <h3 class="title color-primary">สถานที่กิจกรรม</h3>
+                            <h3 class="title">สถานที่กิจกรรม</h3>
                         </div>
                     </div>
                     <div class="location">
@@ -233,7 +233,11 @@
                 <div class="group-social-share d-flex align-items-center justify-content-between">
                     <div class="shared-email d-flex align-items-center">
                         <div class="social-wrapper d-flex align-items-center">
-                            <div class="text-social color-secondary">Share</div>
+                            <div class="text-social">
+                                <div class="txt">
+                                    Share
+                                </div>
+                            </div>
                             <ul class="d-flex align-items-center">
                                 <li class="facebook d-flex align-items-center not-hover">
                                     <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"><span class="color-secondary">5</span> 
@@ -285,7 +289,7 @@
                     <div class="col-lg-6">
                         <div class="content -vote">
                             <div class="box-title">
-                                <div class="title-head color-primary">คุณเห็นด้วยกับข่าวนี้หรือไม่</div>
+                                <div class="title-head">คุณเห็นด้วยกับข่าวนี้หรือไม่</div>
                             </div>
                             <form action="">
                                 <div class="list-choice-vote">
@@ -321,10 +325,28 @@
                                 </div>
                                 <div class="btn-choice-vote -login">
                                     <div class="show-login">
-                                        <button class="btn btn-primary icon" type="button"><i class="fas fa-lock"></i> Sign in</button>
-                                        <a href="">Register</a>
+                                        <ul>
+                                            <li>
+                                                <a href="#nogo">
+                                                    <div class="link-wrap">
+                                                        Register
+                                                    </div> 
+                                                    <div class="skew-wrap"><span class="icon-register"></span></div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#nogo">
+                                                    <div class="link-wrap">
+                                                        Sign in 
+                                                    </div> 
+                                                    <div class="skew-wrap"><span class="icon-signin"></span></div>
+                                                </a>
+                                            </li>
+                                        </ul>
                                     </div>
-                                    <button class="btn btn-primary" type="button">VOTE</button>
+                                    <div class="btn-custom btn-custom-skew">
+                                        <button class="btn btn-primary btn-skew" type="button"><i class="far fa-thumbs-up"></i> VOTE</button>
+                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -332,8 +354,8 @@
                     <div class="col-lg-6">
                         <div class="content -comment">
                             <div class="box-title d-flex justify-content-between align-items-center">
-                                <div class="title-head color-primary">ความคิดเห็น</div>
-                                <div class="order-all color-secondary">5 รายการ</div>
+                                <div class="title-head">ความคิดเห็น</div>
+                                <div class="order-all">5 รายการ</div>
                             </div>
                             <div class="sort-order d-flex justify-content-end align-items-center">
                                 <div class="text-order">เรียงลำดับตาม</div>
@@ -352,7 +374,9 @@
                                 <textarea class="text-area" name="" id="" rows="3"></textarea>
                             </div>
                             <div class="btn-custom width-full d-flex justify-content-end">
-                                <button class="btn btn-primary" type="button">SEND</button>
+                                <div class="btn-custom btn-custom-skew">
+                                    <button class="btn btn-primary btn-skew" type="button">SEND</button>
+                                </div>
                             </div>
                         </div>
                         <div class="user-comment-wrapper">

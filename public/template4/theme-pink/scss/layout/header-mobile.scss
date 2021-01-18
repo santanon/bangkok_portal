@@ -1,4 +1,4 @@
-@media only screen and (max-width: 1024px) {
+@include media-breakpoint-down(lg) {
     .manage{
         .main-wrapper{
             #header-wrapper{
@@ -16,8 +16,8 @@
         }
     }
 
-
     #header-wrapper{
+
         .header-lg{
             display: none;
         }
@@ -27,13 +27,13 @@
             .logo-mobile{
                 .logo{
                     max-width: 300px;
-                    margin: auto;
+                    margin: 0;
                     height: 100%;
                     display: flex;
-                    align-items: center;
+                    align-items: flex-start;
                     padding: 10px 0;
                     img{
-                        width: 100%;
+                        max-width: 100%;
                     }
                 }
                 .menu-sizefonts-wrapper{
@@ -49,14 +49,14 @@
                     }
                     
                     .tools-sizefonts{
-                        padding-right: 10px;
+                        padding: 10px 15px;
                         .sizefonts-wrapper{
                             display: flex;
                             align-items: center;
                             justify-content: space-between;
                             padding: 5px 23px;
                             .reduce{
-                                background-image: url('../../assets/images/icons/icon-reduce-sizefont.png');
+                                background-image: url('../../assets/images/icons/icon-reduce-sizefont-w.png');
                                 width: 22px;
                                 height: 13px;
                                 background-repeat: no-repeat;
@@ -73,7 +73,7 @@
                             .normal{
                                 padding-left: 23px;
                                 padding-right: 23px;
-                                background-image: url('../../assets/images/icons/icon-normal-sizefont.png');
+                                background-image: url('../../assets/images/icons/icon-normal-sizefont-w.png');
                                 width: 22px;
                                 height: 13px;
                                 background-repeat: no-repeat;
@@ -88,7 +88,7 @@
                                 }
                             }
                             .increase{
-                                background-image: url('../../assets/images/icons/icon-increase-sizefont.png');
+                                background-image: url('../../assets/images/icons/icon-increase-sizefont-w.png');
                                 width: 22px;
                                 height: 13px;
                                 background-repeat: no-repeat;
@@ -141,7 +141,6 @@ body.nav-expanded {
     display: block;
     .canvas-menu{
         display: block;
-        // background-color: rgba($color: #fff, $alpha: 1.0);
         background-color: white;
         height: 100%;
         width: 640px;
@@ -151,6 +150,7 @@ body.nav-expanded {
         top: 0;
         z-index: 3000;
         transition: right 0.5s ease;
+
         .canvas-header{
             display: flex;
             justify-content: flex-end;
@@ -171,7 +171,9 @@ body.nav-expanded {
                 }
             }
         }
+
         .canvas-lang{
+            justify-content: space-between;
             ul{
                 margin: 0 15px;
                 padding: 0;
@@ -201,6 +203,7 @@ body.nav-expanded {
                 }
             }
         }
+
         .canvas-top{
             border-bottom: 1px solid #eaeaea;
             padding: 20px 15px;
@@ -240,6 +243,7 @@ body.nav-expanded {
                 }
             }
         }
+
         .canvas-list-menu{
             padding: 20px 50px;
             .nav-menu-MB{
@@ -338,10 +342,80 @@ body.nav-expanded {
                 }
             }
         }
+
+        .menu-sizefonts-wrapper{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            // &.sticky{
+            //     position: fixed;
+            //     top: 0;
+            //     width: 100%;
+            //     z-index: 1040;
+            // }
+            
+            .tools-sizefonts{
+                padding: 10px 15px;
+                .sizefonts-wrapper{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 5px 23px;
+                    .reduce{
+                        background-image: url('../../assets/images/icons/icon-reduce-sizefont.png');
+                        width: 22px;
+                        height: 13px;
+                        background-repeat: no-repeat;
+                        background-position: top center;
+                        cursor: pointer;
+                        transition: all 0.3s;
+                        &:hover{
+                            background-position: bottom center;
+                        }
+                        &.active{
+                            background-position: bottom center;
+                        }
+                    }
+                    .normal{
+                        padding-left: 23px;
+                        padding-right: 23px;
+                        background-image: url('../../assets/images/icons/icon-normal-sizefont.png');
+                        width: 22px;
+                        height: 13px;
+                        background-repeat: no-repeat;
+                        background-position: top center;
+                        cursor: pointer;
+                        transition: all 0.3s;
+                        &:hover{
+                            background-position: bottom center;
+                        }
+                        &.active{
+                            background-position: bottom center;
+                        }
+                    }
+                    .increase{
+                        background-image: url('../../assets/images/icons/icon-increase-sizefont.png');
+                        width: 22px;
+                        height: 13px;
+                        background-repeat: no-repeat;
+                        background-position: top center;
+                        cursor: pointer;
+                        transition: all 0.3s;
+                        &:hover{
+                            background-position: bottom center;
+                        }
+                        &.active{
+                            background-position: bottom center;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
-@media only screen and (max-width: 767px) {
+@include media-breakpoint-down(sm){
     .manage{
         .main-wrapper{
             #header-wrapper{

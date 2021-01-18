@@ -18,7 +18,7 @@
     </div>
     <div class="container">
         <div class="inner-content">
-            <div class="top-content no-styled">
+            <div class="top-content flex-row-arrow">
                 <div class="group-text">
                     <h3 class="title">BANNER</h3>
                     <p class="desc">The Bangkok Metropolitan Council Secretariat </p>

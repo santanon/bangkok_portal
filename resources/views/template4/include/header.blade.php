@@ -7,7 +7,16 @@
             </div>
             <div class="clearPrefix"></div>
         </div>
-        <div class="canvas-lang d-block d-md-none">
+        <div class="canvas-lang d-flex d-lg-none">
+            <div class="menu-sizefonts-wrapper">
+                <div class="tools-sizefonts">
+                    <div class="sizefonts-wrapper">
+                        <div class="reduce"></div>
+                        <div class="normal active"></div>
+                        <div class="increase"></div>
+                    </div>
+                </div>
+            </div>
             <ul>
                 <li class="lang active">
                     <a href="">TH</a>
@@ -22,7 +31,7 @@
                 </li>
             </ul>
         </div>
-        <div class="canvas-top d-block d-md-none">
+        <div class="canvas-top d-block d-lg-none">
             <ul>
                 <li class="">
                     <div class="group-canvas-top">
@@ -33,7 +42,6 @@
                             <div class="text-top">เข้าสู่ระบบ</div>
                         </a>
                     </div>
-                    
                 </li>
                 <li class="">
                     <div class="group-canvas-top">
@@ -80,7 +88,6 @@
         </div>
     </div>
 </div>
-
 
 <div class="header-lg">
     <div class="container-fluid">
@@ -156,11 +163,6 @@
                                 <a href="/">EN</a>
                             </li>
                         </ul>
-                    </div>
-                    <div class="bar-menu" id="nav-expander">
-                        <div class="icon-menu">
-                            Menu <i class="fas fa-bars"></i>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -397,13 +399,12 @@
     </div>
 </div>
 
-
 <div class="header-sm">
     <div class="logo-mobile">
         <div class="logo">
             <img src="{{ asset('template1/assets/images/logo.png')}}" alt="logo">
         </div>
-        <div id="menu_sticky" class="menu-sizefonts-wrapper">
+        <div id="menu_sticky" class="menu-sizefonts-wrapper" style="display: none">
             <div class="tools-sizefonts">
                 <div class="sizefonts-wrapper">
                     <div class="reduce"></div>
@@ -412,6 +413,12 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
+<div class="bar-menu" id="nav-expander">
+    <div class="icon-menu">
+        Menu <i class="fas fa-bars"></i>
     </div>
 </div>
 

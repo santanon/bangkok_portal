@@ -1,10 +1,7 @@
 .btn-submit{
     border: none;
-    //border: 1px solid #1e6eaf;
     background-color: #3090C1;
-    //background-color: #fff;
     color: #fff;
-    //color: #1e6eaf;
     width: 200px;
     display: block;
     padding: 5px 0;
@@ -50,7 +47,7 @@
 
 .btn-custom{
     display: inline-block;
-    padding: 0 45px;
+    padding: 0 0.75rem;
 
     &.width-full{
         width: 100%;
@@ -71,12 +68,23 @@
             background-color: $color-secondary !important;
         }
 
+        &.skew-color-gray{
+            border: 1px solid #cfd1d4;
+            background-color: #cfd1d4;
+            color: $color-text;
+
+            &:hover, &:focus, &:active{
+                border-color: $color-secondary !important;
+                background-color: $color-secondary !important;
+            }
+        }
+
         .btn{
             width: 100%;
             text-align: center;
             transform: skew(14deg);
 
-            &.btn-primary{
+            &.btn-primary, &.btn-default{
                 border: none;
                 background-color: transparent;
 
@@ -113,11 +121,11 @@
 }
 
 .btn {
-    height: 40px;
+    height: 45px;
     padding: 0 15px;
     font-weight: $font-regular;
     font-size: 1.6rem;
-    line-height: 40px;
+    line-height: 4.5rem;
     border-radius: 0;
     transition: all 0.3s ease;
     box-shadow: none !important;
@@ -146,6 +154,17 @@
         }
     }
 
+    &.btn-default{
+        border: 1px solid #cfd1d4;
+        background-color: #cfd1d4;
+        color: $color-text;
+
+        &:hover, &:focus, &:active{
+            border-color: $color-secondary !important;
+            background-color: $color-secondary !important;
+        }
+    }
+
     &.btn-outline-white{
         border: 1px solid white;
         color: white;
@@ -165,6 +184,25 @@
             border-color: $color-primary;
             background-color: $color-primary;
             color: white;
+        }
+    }
+
+    &.icn-right{
+        padding-right: 4.5rem;
+
+        i, svg{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 1rem;
+        }
+
+        .st0{
+            fill:none;
+            stroke:#fff;
+            stroke-width:2;
+            stroke-linejoin:round;
+            stroke-miterlimit:10;
         }
     }
 }

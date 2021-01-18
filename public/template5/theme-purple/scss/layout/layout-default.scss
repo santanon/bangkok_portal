@@ -3883,7 +3883,7 @@ $howManySteps: 100; //this needs to be even.
 
 .sitemap-container{
     position: relative;
-    margin: 0 0 50px 0;
+    margin: 0 0 125px 0;
 
     .level-01{
         font-size: 3.6rem;
@@ -3891,12 +3891,12 @@ $howManySteps: 100; //this needs to be even.
     }
 
     .level-02{
-        font-size: 2.2rem;
+        font-size: 2.6rem;
         line-height: 3rem;
     }
 
     .level-03{
-        font-size: 2.0rem;
+        font-size: 2.2rem;
         line-height: 3rem;
     }
 
@@ -3907,32 +3907,26 @@ $howManySteps: 100; //this needs to be even.
 
         .line-sub{
             display: block;
-            margin-bottom: 10px;
-            background-color: #efefef;
-            a{
-                padding: 10px 15px;
-                display: block;
-            }
+            margin-bottom: 40px;
         }
 
         .line-group{
             list-style: none;
-            padding: 20px 0;
+            padding: 0;
+            padding-top: 30px;
             margin: 0;
             display: grid;
             grid-template-columns: auto auto auto auto;
-            grid-gap: 15px;
-            background-color: #f8f8f8;
-
-            li{
-                a{
-                    border-left: 2px solid $color-secondary;
-                    color: $color-secondary;
-                }
-            }
+            grid-gap: 30px;
 
             .line-item{
                 height: auto;
+                a{
+                    color: #525252;
+                    &:hover{
+                        color: $color-secondary;
+                    }
+                }
             }
 
             @include media-breakpoint-down(lg) {
@@ -3949,14 +3943,15 @@ $howManySteps: 100; //this needs to be even.
         }
 
         .link-group{
+            list-style: disc;
             //list-style-image: url('../../assets/images/icons/list-style-01.png');
-            list-style: none;
-            padding: 0;
+            padding-top: 20px;
+            padding-left: 17px;
+            color: #525252;
 
             .link-item{
                 margin-bottom: 20px;
                 a{
-                    border-left: none ;
                     color: #525252;
                 }
             }

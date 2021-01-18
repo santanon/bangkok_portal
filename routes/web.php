@@ -40,8 +40,12 @@ Route::any('manage-admin/action', [ManageController::class,'action']);
 Route::any('/', [PanelController::class,'web_home']);
 
 
+/* Front */
+Route::any('/', function () {
+    return view('home');
+});
 
-/* Front */ 
+
 Route::any('/coverpage', function () {
     return view('coverpage');
 });
@@ -49,6 +53,7 @@ Route::any('/coverpage', function () {
 Route::any('/news', function () {
     return view('news-main');
 });
+
 Route::any('/news-detail', function () {
     return view('news-detail');
 });
@@ -93,4 +98,251 @@ Route::any('/about', function () {
 
 Route::any('/contact', function () {
     return view('contact-main');
+});
+
+Route::any('/vote', function () {
+    return view('vote-main');
+});
+
+Route::any('/vote-detail', function () {
+    return view('vote-detail');
+});
+
+Route::any('/ita', function () {
+    return view('ita-page');
+});
+
+
+
+
+//template2
+Route::any('/home-2', function () {
+    return view('home-2');
+});
+
+Route::any('/about-2', function () {
+    return view('about-detail-2');
+});
+
+Route::any('/news-2', function () {
+    return view('news-main-2');
+});
+
+Route::any('/news-detail-2', function () {
+    return view('news-detail-2');
+});
+
+Route::any('/album-2', function () {
+    return view('gallery-main-2');
+});
+
+Route::any('/video-2', function () {
+    return view('video-main-2');
+});
+
+Route::any('/download-2', function () {
+    return view('download-main-2');
+});
+
+Route::any('/faq-2', function () {
+    return view('faq-main-2');
+});
+
+Route::any('/questionnaire-2', function () {
+    return view('questionnaire-main-2');
+});
+
+Route::any('/questionnaire-detail-2', function () {
+    return view('questionnaire-detail-2');
+});
+
+Route::any('/vote-2', function () {
+    return view('vote-main-2');
+});
+
+Route::any('/vote-detail-2', function () {
+    return view('vote-detail-2');
+});
+
+Route::any('/calendar-2', function () {
+    return view('calendar-main-2');
+});
+
+Route::any('/calendar-detail-2', function () {
+    return view('calendar-detail-2');
+});
+
+Route::any('/contact-2', function () {
+    return view('contact-main-2');
+});
+
+Route::any('/sitemap-2', function () {
+    return view('sitemap-2');
+});
+Route::any('/ita-2', function () {
+    return view('ita-page-2');
+});
+
+
+//Template3
+Route::any('/home-3', function () {
+    return view('home-3');
+});
+Route::any('/about-3', function () {
+    return view('about-detail-3');
+});
+Route::any('/news-3', function () {
+    return view('news-main-3');
+});
+Route::any('/news-detail-3', function () {
+    return view('news-detail-3');
+});
+Route::any('/album-3', function () {
+    return view('gallery-main-3');
+});
+Route::any('/video-3', function () {
+    return view('video-main-3');
+});
+Route::any('/download-3', function () {
+    return view('download-main-3');
+});
+Route::any('/faq-3', function () {
+    return view('faq-main-3');
+});
+Route::any('/questionnaire-3', function () {
+    return view('questionnaire-main-3');
+});
+Route::any('/questionnaire-detail-3', function () {
+    return view('questionnaire-detail-3');
+});
+Route::any('/vote-3', function () {
+    return view('vote-main-3');
+});
+Route::any('/vote-detail-3', function () {
+    return view('vote-detail-3');
+});
+Route::any('/contact-3', function () {
+    return view('contact-main-3');
+});
+Route::any('/sitemap-3', function () {
+    return view('sitemap-3');
+});
+Route::any('/ita-3', function () {
+    return view('ita-page-3');
+});
+
+//template4
+Route::any('/home-4', function () {
+    return view('home-4');
+});
+
+Route::any('/about-4', function () {
+    return view('about-detail-4');
+});
+
+Route::any('/news-4', function () {
+    return view('news-main-4');
+});
+
+Route::any('/news-detail-4', function () {
+    return view('news-detail-4');
+});
+
+Route::any('/album-4', function () {
+    return view('gallery-main-4');
+});
+
+Route::any('/video-4', function () {
+    return view('video-main-4');
+});
+
+Route::any('/download-4', function () {
+    return view('download-main-4');
+});
+
+Route::any('/faq-4', function () {
+    return view('faq-main-4');
+});
+
+Route::any('/questionnaire-4', function () {
+    return view('questionnaire-main-4');
+});
+
+Route::any('/questionnaire-detail-4', function () {
+    return view('questionnaire-detail-4');
+});
+
+Route::any('/vote-4', function () {
+    return view('vote-main-4');
+});
+
+Route::any('/vote-detail-4', function () {
+    return view('vote-detail-4');
+});
+
+Route::any('/calendar-4', function () {
+    return view('calendar-main-4');
+});
+
+Route::any('/calendar-detail-4', function () {
+    return view('calendar-detail-4');
+});
+
+Route::any('/contact-4', function () {
+    return view('contact-main-4');
+});
+
+Route::any('/sitemap-4', function () {
+    return view('sitemap-4');
+});
+
+Route::any('/ita-4', function () {
+    return view('ita-page-4');
+});
+
+//template5
+Route::any('/home-5', function () {
+    return view('home-5');
+});
+Route::any('/about-5', function () {
+    return view('about-detail-5');
+});
+Route::any('/news-5', function () {
+    return view('news-main-5');
+});
+Route::any('/news-detail-5', function () {
+    return view('news-detail-5');
+});
+Route::any('/album-5', function () {
+    return view('gallery-main-5');
+});
+Route::any('/video-5', function () {
+    return view('video-main-5');
+});
+Route::any('/download-5', function () {
+    return view('download-main-5');
+});
+Route::any('/faq-5', function () {
+    return view('faq-main-5');
+});
+Route::any('/questionnaire-5', function () {
+    return view('questionnaire-main-5');
+});
+Route::any('/questionnaire-detail-5', function () {
+    return view('questionnaire-detail-5');
+});
+Route::any('/vote-5', function () {
+    return view('vote-main-5');
+});
+Route::any('/vote-detail-5', function () {
+    return view('vote-detail-5');
+});
+Route::any('/contact-5', function () {
+    return view('contact-main-5');
+});
+Route::any('/sitemap-5', function () {
+    return view('sitemap-5');
+});
+Route::any('/ita-5', function () {
+    return view('ita-page-5');
 });

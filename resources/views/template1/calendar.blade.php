@@ -57,72 +57,88 @@
                             </div>
                             
                             <div class="group-slide">
-                                <ul id="slide_1" class="list-item">
-                                    <li>
-                                        <div class="item">
-                                            <div class="left">
-                                                <div class="text-content bg-color-primary">2</div>
-                                                <div class="text-onbottom bg-color-secondary">พ.ย.</div>
-                                            </div>
-                                            <div class="right">
-                                                <div class="text-content">
-                                                    <a href="">
-                                                        บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือ
-                                                    </a>
+                                <div class="list-item" id="slide_1">
+                                    <div class="item">
+                                        <div class="row">
+                                            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                                <div class="left">
+                                                    <div class="text-content bg-color-primary">2</div>
+                                                    <div class="text-onbottom bg-color-secondary">พ.ย.</div>
                                                 </div>
-                                                <div class="text-onbottom"><i class="fas fa-map-marker-alt"></i> ถนนเสรีไทย ฝั่งเลขคู่</div>
+                                            </div>
+                                            <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                                <div class="right">
+                                                    <div class="text-content">
+                                                        <a href="">
+                                                            บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือ
+                                                        </a>
+                                                    </div>
+                                                    <div class="text-onbottom"><i class="fas fa-map-marker-alt"></i> ถนนเสรีไทย ฝั่งเลขคู่</div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </li>
-                                    <li>
-                                        <div class="item">
-                                            <div class="left">
-                                                <div class="text-content bg-color-primary">3</div>
-                                                <div class="text-onbottom bg-color-secondary">พ.ย.</div>
-                                            </div>
-                                            <div class="right">
-                                                <div class="text-content">
-                                                    <a href="">
-                                                        ตรวจพื้นที่ถนนพระรามที่ 4 ตั้งแต่แยกกล้วยน้ำไทถึงแยกพระโขนง
-                                                    </a>
+                                    </div>
+                                    <div class="item">
+                                        <div class="row">
+                                            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                                <div class="left">
+                                                    <div class="text-content bg-color-primary">3</div>
+                                                    <div class="text-onbottom bg-color-secondary">พ.ย.</div>
                                                 </div>
-                                                <div class="text-onbottom"><i class="fas fa-map-marker-alt"></i> ถนนเสรีไทย ฝั่งเลขคู่</div>
+                                            </div>
+                                            <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                                <div class="right">
+                                                    <div class="text-content">
+                                                        <a href="">
+                                                            ตรวจพื้นที่ถนนพระรามที่ 4 ตั้งแต่แยกกล้วยน้ำไทถึงแยกพระโขนง
+                                                        </a>
+                                                    </div>
+                                                    <div class="text-onbottom"><i class="fas fa-map-marker-alt"></i> ถนนเสรีไทย ฝั่งเลขคู่</div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </li>
-                                    <li>
-                                        <div class="item">
-                                            <div class="left">
-                                                <div class="text-content bg-color-primary">2</div>
-                                                <div class="text-onbottom bg-color-secondary">พ.ย.</div>
-                                            </div>
-                                            <div class="right">
-                                                <div class="text-content">
-                                                    <a href="">
-                                                        บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือ
-                                                    </a>
+                                    </div>
+                                    <div class="item">
+                                        <div class="row">
+                                            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                                <div class="left">
+                                                    <div class="text-content bg-color-primary">2</div>
+                                                    <div class="text-onbottom bg-color-secondary">พ.ย.</div>
                                                 </div>
-                                                <div class="text-onbottom"><i class="fas fa-map-marker-alt"></i> ถนนเสรีไทย ฝั่งเลขคู่</div>
+                                            </div>
+                                            <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                                <div class="right">
+                                                    <div class="text-content">
+                                                        <a href="">
+                                                            บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือ
+                                                        </a>
+                                                    </div>
+                                                    <div class="text-onbottom"><i class="fas fa-map-marker-alt"></i> ถนนเสรีไทย ฝั่งเลขคู่</div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </li>
-                                    <li>
-                                        <div class="item">
-                                            <div class="left">
-                                                <div class="text-content bg-color-primary">3</div>
-                                                <div class="text-onbottom bg-color-secondary">พ.ย.</div>
-                                            </div>
-                                            <div class="right">
-                                                <div class="text-content">
-                                                    <a href="">
-                                                        ตรวจพื้นที่ถนนพระรามที่ 4 ตั้งแต่แยกกล้วยน้ำไทถึงแยกพระโขนง
-                                                    </a>
+                                    </div>
+                                    <div class="item">
+                                        <div class="row">
+                                            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                                <div class="left">
+                                                    <div class="text-content bg-color-primary">3</div>
+                                                    <div class="text-onbottom bg-color-secondary">พ.ย.</div>
                                                 </div>
-                                                <div class="text-onbottom"><i class="fas fa-map-marker-alt"></i> ถนนเสรีไทย ฝั่งเลขคู่</div>
+                                            </div>
+                                            <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                                <div class="right">
+                                                    <div class="text-content">
+                                                        <a href="">
+                                                            ตรวจพื้นที่ถนนพระรามที่ 4 ตั้งแต่แยกกล้วยน้ำไทถึงแยกพระโขนง
+                                                        </a>
+                                                    </div>
+                                                    <div class="text-onbottom"><i class="fas fa-map-marker-alt"></i> ถนนเสรีไทย ฝั่งเลขคู่</div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </li>
-                                </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

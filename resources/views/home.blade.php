@@ -33,19 +33,6 @@ function sfi(title,url)
     </header>
     
     <div id="site-content">
-
-        <div class="group-link-mainbkk">
-            <a href="">
-                <div class="icon-bkk">
-                    <img src="{{ asset('template1/assets/images/icons/icon-bkk.png')}}" alt="icon">
-                </div>
-                <div class="text-bkk">
-                    <label>กรุงเทพมหานคร</label>
-                    Bangkok.go.th
-                </div>
-            </a>
-        </div>
- 
         <div class="banner-wrapper">
             @include('template1/main-slide')
         </div>
@@ -261,25 +248,32 @@ function sfi(title,url)
         
         //$('#exampleModal').modal('show')
 
-        // DragDrop
-        var sortable = new Sortable(manage_dragdrop, {
-            ghostClass: "sortable-ghost",
-            chosenClass: "sortable-chosen",
-            dragClass: "sortable-drag",
-            swapThreshold: 1,
-            animation: 150,
-            dataIdAttr: "data-id",
-            //handle: '.manage-dragdrop',
-        });
-        //var order = sortable.toArray();
-        //console.log(order);
-        $('.getOrder_ele').click(function() {
-            var order = sortable.toArray();
-            alert(order);
-            // for (var i = 0; i < order.length; i++) {
-            //     alert("Position: " + i + " ID: " + order[i]);
-            // }
-        });
+
+        if($('body').hasClass('manage')){
+            $("div.group-section-content").attr('id', 'manage_dragdrop');
+            // DragDrop
+            var sortable = new Sortable(manage_dragdrop, {
+                ghostClass: "sortable-ghost",
+                chosenClass: "sortable-chosen",
+                dragClass: "sortable-drag",
+                swapThreshold: 1,
+                animation: 150,
+                dataIdAttr: "data-id",
+                //handle: '.manage-dragdrop',
+            });
+            //var order = sortable.toArray();
+            //console.log(order);
+            $('.getOrder_ele').click(function() {
+                var order = sortable.toArray();
+                alert(order);
+                // for (var i = 0; i < order.length; i++) {
+                //     alert("Position: " + i + " ID: " + order[i]);
+                // }
+            });
+        }else{
+            $("div.group-section-content").removeAttr("id");
+        }
+
     });
 </script>
 <!-- Gallery -->
@@ -346,6 +340,39 @@ function sfi(title,url)
                 },{
                     src: 'https://sachinchoolur.github.io/lightGallery/static/img/4.jpg',
                     thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-4.jpg'
+                }],
+                slideEndAnimatoin: false,
+                loop: false,
+                hideControlOnEnd: true,
+                download: false,
+            });
+        });
+
+        $('#dynamic3').on('click', function(e) {
+            $(document).lightGallery({
+                dynamic: true,
+                dynamicEl: [{
+                    src: 'https://youtu.be/YD_gvR234qg',
+                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-1.jpg'
+                },{
+                    src: 'https://youtu.be/YD_gvR234qg',
+                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-1.jpg'
+                }],
+                slideEndAnimatoin: false,
+                loop: false,
+                hideControlOnEnd: true,
+                download: false,
+            });
+        });
+
+
+        $('#dynamic4').on('click', function(e) {
+            $(document).lightGallery({
+                dynamic: true,
+                dynamicEl: [{
+                    src: 'https://www.youtube.com/watch?v=meBbDqAXago',
+                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-v-y-1.jpg',
+                    poster: 'https://sachinchoolur.github.io/lightGallery/static/img/videos/y-video1-cover.jpg'
                 }],
                 slideEndAnimatoin: false,
                 loop: false,

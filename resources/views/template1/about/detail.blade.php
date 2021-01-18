@@ -3,7 +3,7 @@
                     <div class="inner-content">
                         <div class="top-content">
                             <div class="group-text">
-                                <h3 class="title color-primary">ภารกิจหน้าที่</h3>
+                                <h3 class="title color-primary">เกี่ยวกับหน่วยงาน</h3>
                                 <p class="desc color-secondary">The Bangkok Metropolitan Council Secretariat </p>
                             </div>
                         </div>
@@ -17,23 +17,23 @@
                                 ผ่านทางเว็บไซต์ <a href="http://www.tosh.or.th/">http://www.tosh.or.th/</a> แอพลิเคชั่น T-OSH Guide และผ่านทางช่องทาง QR Code ท้ายหนังสือนี้
                             </div>
                             
-                            <div class="group-back">
-                                <a href="/news">ย้อนกลับ</a>
-                            </div>
+                            <!-- <div class="group-back">
+                                <a href="/">ย้อนกลับ</a>
+                            </div> -->
 
                             <div class="group-social-share d-flex align-items-center justify-content-between">
                                 <div class="shared-email d-flex align-items-center">
                                     <div class="social-wrapper d-flex align-items-center">
-                                        <div class="text-social">Share</div>
+                                        <div class="text-social color-secondary">Share</div>
                                         <ul class="d-flex align-items-center">
                                             <li class="facebook d-flex align-items-center not-hover">
-                                                <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"><span>5</span> 
+                                                <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"> <span class="color-secondary">5</span> 
                                             </li>
                                             <li class="twitter d-flex align-items-center not-hover">
-                                                <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon">  5
+                                                <img src="{{ asset('template1/assets/images/icons/icon-social-twitter.svg')}}" alt="icon"> <span class="color-secondary">5</span> 
                                             </li>
                                             <li class="line d-flex align-items-center not-hover">
-                                                <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon">   5
+                                                <img src="{{ asset('template1/assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"> <span class="color-secondary">5</span> 
                                             </li>
                                         </ul>
                                     </div>
@@ -59,14 +59,13 @@
                                     </div>
                                 </div>
                                 <div class="views-like d-flex align-items-center">
-                                    <div class="view-count">
+                                    <div class="view-count color-secondary">
                                         View : <span>1.5K</span>
                                     </div>
                                     <div class="like-count d-flex align-items-center">
-                                        <div class="icon-like">
+                                        <a href="#" title="Love it" data-count="0" class="icon-like">
                                             <img src="{{ asset('template1/assets/images/icons/icon-like.png')}}" alt="icon">
-                                        </div>
-                                        <span>1.2K</span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>

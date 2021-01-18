@@ -133,25 +133,22 @@
 
 @include('template1/include.css_scripts')
 
+
+<script src='https://cdn.jsdelivr.net/npm/moment@2.27.0/min/moment.min.js'></script>
+
 <link rel="stylesheet" href="{{ asset('template1/theme-green/css/calendar/main.min.css')}}">
-<script type="text/javascript" src="{{ asset('template1/theme-green/js/calendar/main.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('template1/js/calendar/main.min.js') }}"></script>
 
-<script type="text/javascript">
-    $(document).ready(function () {
-        
-        //$('#exampleModal').modal('show');
-
-    });
-</script>
 <script>
 
     // Calendar
     document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
         var calendar = new FullCalendar.Calendar(calendarEl, {
-            initialView: 'dayGridMonth',
-            headerToolbar: false,
+            timeZone: 'UTC',
             locale: 'th',
+            //initialView: 'dayGridMonth',
+            headerToolbar: false,
             dayMaxEventRows: true,
             events: [
                 {
@@ -214,13 +211,34 @@
             $('.year-title').html(c_year[1]);
         });
 
+
+
         // default
         var view = calendar.view;
         var v_title = view.title;
-        var c_month = (view.title).split(' ');
-        var c_year = (view.title).split(' ');
+        var c_month = (v_title).split(' ');
+        var c_year = (v_title).split(' ');
+        var cc_month = c_month[0];
+        var cc_year = c_year[1];
         $('.month-title').html(c_month[0]);
         $('.year-title').html(c_year[1]);
+        console.log(v_title);
+        $("#month_fullcalendar option[value='" + cc_month + "']").attr("selected","selected");
+        $("#year_fullcalendar option[value='" + cc_year + "']").attr("selected","selected");
+
+
+        $( "#month_fullcalendar").on('change', function() {
+            //alert( this.value );
+            var link = $(this);
+            var date = link.val();
+            
+            var m = moment([date, moment().year()+543]);
+            console.log(m)
+
+            //calendar.gotoDate(m)
+        });
+
+
 
     });
 

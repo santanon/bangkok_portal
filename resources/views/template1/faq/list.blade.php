@@ -172,13 +172,12 @@
                                 </div>
                                 <div class="views-like d-flex align-items-center">
                                     <div class="view-count color-secondary">
-                                        View : <span class="color-secondary">1.5K</span>
+                                        View : <span>1.5K</span>
                                     </div>
                                     <div class="like-count d-flex align-items-center">
-                                        <div class="icon-like">
+                                        <a href="#" title="Love it" data-count="0" class="icon-like">
                                             <img src="{{ asset('template1/assets/images/icons/icon-like.png')}}" alt="icon">
-                                        </div>
-                                        <span class="color-secondary">1.2K</span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>

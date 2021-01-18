@@ -106,6 +106,10 @@ Route::any('/vote-detail', function () {
     return view('vote-detail');
 });
 
+Route::any('/ita', function () {
+    return view('ita-page');
+});
+
 
 
 
@@ -173,6 +177,10 @@ Route::any('/contact-2', function () {
 Route::any('/sitemap-2', function () {
     return view('sitemap-2');
 });
+Route::any('/ita-2', function () {
+    return view('ita-page-2');
+});
+
 
 //Template3
 Route::any('/home-3', function () {
@@ -216,6 +224,9 @@ Route::any('/contact-3', function () {
 });
 Route::any('/sitemap-3', function () {
     return view('sitemap-3');
+});
+Route::any('/ita-3', function () {
+    return view('ita-page-3');
 });
 
 //template4
@@ -329,4 +340,7 @@ Route::any('/contact-5', function () {
 });
 Route::any('/sitemap-5', function () {
     return view('sitemap-5');
+});
+Route::any('/ita-5', function () {
+    return view('ita-page-5');
 });

@@ -3080,6 +3080,92 @@ $howManySteps: 100; //this needs to be even.
     }                   
 }
 
+// ita
+.relate-link-container{
+    position: relative;
+    margin: 0 auto 30px;
+    .top-content{
+        .group-text{
+            .title{
+                color: $color-primary;
+            }
+        }
+    }
+    .item-group{
+        margin-bottom: 30px;
+
+        .item-title{
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+
+            .title-icon{
+                padding: 10px;
+                border: 1px solid $color-primary;
+                background-color: $color-primary;
+
+                .st0{fill:white;}
+            }
+
+            .title-text{
+                font-weight: $font-regular;
+                font-size: 2.6rem;
+                line-height: 3.2rem;
+                color: $color-primary;
+                padding: 0 15px;
+            }
+        }
+
+        .item-content{
+            display: block;
+            //padding: 20px;
+            //margin: 5px 0 0;
+            //border-top: solid 2px $color-primary;
+            background-color: white;
+
+            ul{
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: grid;
+                // grid-template-columns: auto auto auto auto;
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+                //grid-gap: 30px;
+
+                li{
+                    // width: auto;
+                    height: auto;
+                    // display: block;
+
+                    a{
+                        font-size: 2.2rem;
+                        line-height: 2.6rem;
+                        color: $color-text;
+                        padding: 20px;
+                        display: block;
+                        &:hover{
+                            background-color: $color-secondary;
+                            color: #fff;
+                        }
+                    }
+                }
+
+                @include media-breakpoint-down(lg) {
+                    grid-template-columns: repeat(3, minmax(0, 1fr));
+                }
+
+                @include media-breakpoint-down(md) {
+                    grid-template-columns: repeat(2, minmax(0, 1fr));
+                }
+
+                @include media-breakpoint-down(sm) {
+                    grid-template-columns: repeat(1, minmax(0, 1fr));
+                }
+            }
+        }
+    }
+}
+
 
 // For Progress Circle
 /* This for loop creates the necessary css animation names 

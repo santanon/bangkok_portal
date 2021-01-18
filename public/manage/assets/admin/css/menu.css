@@ -1,0 +1,61 @@
+html,body 
+{
+	height:100%;
+	width:100%;
+	overflow:auto;
+	margin:0px;
+	padding:0px;
+	font-size:16px;
+	font-weight:bold;
+	font-family:Helvetica;
+}
+.m-1
+{
+	border-bottom:1px solid #999999;
+	height:25px;
+	padding-top:9px;
+	padding-left:9px;
+	cursor:pointer;
+}
+.m-2
+{
+	border-bottom:1px solid #999999;
+	height:25px;
+	padding-top:9px;
+	padding-left:9px;
+	background-color:#0066FF;
+	background-image:url(../../../assets/admin/images/bg-menu-2-over.png);
+	color:#FFFFFF;
+	cursor:pointer;
+}
+.m-sub-1
+{
+	border-bottom:1px solid #999999;
+	height:25px;
+	padding-top:9px;
+	padding-left:9px;
+	background-color:#EEEEEE;
+	cursor:pointer;
+	font-size:12px;
+}
+.m-sub-2
+{
+	border-bottom:1px solid #999999;
+	height:25px;
+	padding-top:9px;
+	padding-left:9px;
+	background-color:#0066FF;
+	background-image:url(../../../assets/admin/images/bg-menu-2-over.png);
+	color:#FFFFFF;
+	cursor:pointer;
+	font-size:12px;
+}
+.m-s-1
+{ 
+	float:left;
+}
+.m-s-2
+{
+	float:right; 
+	margin-right:9px;
+}

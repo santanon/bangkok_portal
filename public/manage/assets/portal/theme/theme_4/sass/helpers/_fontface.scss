@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'kittithada_roman_55_pregular';
+    src: url('../fonts/kit55p-webfont.eot');
+    src: url('../fonts/kit55p-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/kit55p-webfont.woff') format('woff'),
+         url('../fonts/kit55p-webfont.ttf') format('truetype'),
+         url('../fonts/kit55p-webfont.svg#kittithada_roman_55_pregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'kittithada_medium_65_pregular';
+    src: url('../fonts/kit65p-webfont.eot');
+    src: url('../fonts/kit65p-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/kit65p-webfont.woff') format('woff'),
+         url('../fonts/kit65p-webfont.ttf') format('truetype'),
+         url('../fonts/kit65p-webfont.svg#kittithada_medium_65_pregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+//fontface class
+.fontfacetext{
+	font-family: $font-header;
+}
+.fontfacetext-bold{
+	font-family: $font-header-bold;
+}

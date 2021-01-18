@@ -1,0 +1,147 @@
+#custom-box-register-form{
+	.box-title{
+		float:left;
+		width:100%;
+	}
+	.group-btn{
+		float:right;
+		width:30%;
+
+		.btn-blue
+		{
+			background:#0490D8;
+			min-width:30%;
+			margin:0 5px;
+			float:right;
+
+			img {
+				margin-left:5px;
+			}
+			a {
+				color: #fff;
+				border: none;
+				font-size: 22px;
+				text-decoration: none;
+				text-align: center;
+				width: 80px;
+				display: inline-block;
+				padding: 2px;
+			}
+		}
+		
+	}
+	.heading2 {
+		color: #0490D8;
+		font-size: 25px;
+	}
+	.box-main-input{
+		width: 90%; margin: auto; font-size:13px; line-height:18px; border-bottom:1px solid #CCC; padding-bottom:10px; margin-bottom:10px;
+	}
+	.texthead{
+		float:left; text-align:right; width:100px; margin-top:10px;
+	}
+	.box-input{
+		margin-left:10px; margin-top:10px; overflow:hidden;
+	}
+}
+
+@media #{$mobile} {
+	#custom-box-register-form{
+
+	.box-title{
+		float:left;
+		width:100%;
+	}
+	.group-btn{
+		float:right;
+		width:30%;
+
+		.btn-blue
+		{
+			background:#0490D8;
+			min-width:30%;
+			margin:0 5px;
+			float:right;
+
+			img {
+				margin-left:5px;
+			}
+			a {
+				color: #fff;
+				border: none;
+				font-size: 22px;
+				text-decoration: none;
+				text-align: center;
+				width: 80px;
+				display: inline-block;
+				padding: 2px;
+			}
+		}
+	}
+	.heading2 {
+		color: #0490D8;
+		font-size: 25px;
+	}
+	.box-main-input{
+		width: 98%; font-size:13px; line-height:18px; border-bottom:1px solid #CCC; padding-bottom:10px; margin-bottom:10px;
+	}
+	.texthead{
+		float:none; text-align:left; width:100px; margin-top:0px;
+	}
+	.box-input{
+		margin-left:0px; margin-top:5px; overflow:hidden;
+	}
+}
+
+}
+@media #{$tablet} {
+	#custom-box-register-form{
+
+		.box-title{
+			float:left;
+			width:100%;
+		}
+		.group-btn{
+			float:right;
+			width:30%;
+
+			.btn-blue
+			{
+				background:#0490D8;
+				min-width:30%;
+				margin:0 5px;
+				float:right;
+
+				img {
+					margin-left:5px;
+				}
+				a {
+					color: #fff;
+					border: none;
+					font-size: 22px;
+					text-decoration: none;
+					text-align: center;
+					width: 80px;
+					display: inline-block;
+					padding: 2px;
+				}
+			}
+		}
+		.heading2 {
+			color: #0490D8;
+			font-size: 25px;
+		}
+		.box-main-input{
+			width: 98%; margin: auto; font-size:13px; line-height:18px; border-bottom:1px solid #CCC; padding-bottom:10px; margin-bottom:10px;
+		}
+		.texthead{
+			float:left; text-align:right; width:100px; margin-top:10px;
+		}
+		.box-input{
+			margin-left:10px; margin-top:10px; overflow:hidden;
+		}
+	}
+
+}
+
+

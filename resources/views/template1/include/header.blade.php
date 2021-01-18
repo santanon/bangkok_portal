@@ -96,7 +96,7 @@
                             <li class="order-list order-close">ปิด</li>
                         </ul>
                     </div>-->
-                    <a href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('LOGO','manage-admin/edit_logo?m=portal_website');">
+                    <a href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('กำลังโหลด...','manage-admin/edit_logo?m=setting_website');">
                         <div class="manage-edit">
                             <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
                         </div>
@@ -186,7 +186,7 @@
                                     <li class="order-list order-close">ปิด</li>
                                 </ul>
                             </div>-->
-                            <a href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('TOP MENU','manage-admin/list?m=portal_website_top_menu_page');">
+                            <a href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('กำลังโหลด...','manage-admin/list?m=top_menu');">
                                 <div class="manage-edit">
                                     <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
                                 </div>
@@ -245,7 +245,7 @@
                             <li class="order-list order-close">ปิด</li>
                         </ul>
                     </div> --> 
-                    <a href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('TOP MENU','manage-admin/list?m=portal_website_main_menu_page');">
+                    <a href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('กำลังโหลด...','manage-admin/list?m=main_menu');">
                         <div class="manage-edit">
                             <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
                         </div>

@@ -1,0 +1,213 @@
+@media #{$mobile} {
+
+#se-footer {
+	// overflow: hidden;
+	position: relative;
+	// z-index: 5;
+	margin: auto;
+	padding: 12px 2% 5px 2%;
+	width: 96%;
+	background:none;
+
+	>.footer-row{
+		overflow: hidden;
+		margin-bottom: 0px;
+		// height: 20px;
+		background:none;
+		// text-align: center;
+		// font-size:0;
+		>.footer-box{
+			// float: left;
+			width: auto;
+		}
+		&:last-child{
+			margin-bottom: 10px;
+		}
+	}
+	.footer-panel-box{
+		width: 100%;
+		&.left{
+			float: left;
+		}
+		&.right{
+			float: right;
+		}
+		&.center{
+			margin: auto !important;
+			width: 100%;
+			text-align: center;
+		}
+	}
+
+	#top-social{
+		display: none;
+		overflow: hidden;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		>li{
+			display: block;
+			float: none;
+			margin: 5px 0;
+			padding: 1px 0 0 0;
+			width: auto;
+			height: 19px;
+			font-size:11px;
+			color: $color-text;
+			>span{
+				display: block;
+				padding: 3px 0 0 0;
+			}
+			>a{
+				display: block;
+				margin: 0 0 0 0;
+				padding: 2px 26px 0 0;
+				width: auto;
+				height: 17px;
+				// font-size:13px;
+				color: $color-text;
+				text-decoration: none;
+				text-align: right;
+				&:hover{
+					text-decoration: underline;
+				}
+				>span{
+					display: block;
+				}
+			}
+			&:first-child{
+				display: none;
+			}
+			&.icn-fb{
+				>a{
+					background:url('../images/icn-social.jpg') right top no-repeat;
+				}
+			}
+			&.icn-tw{
+				>a{
+					background:url('../images/icn-social.jpg') right -30px no-repeat;
+				}
+			}
+			&.icn-yt{
+				>a{
+					background:url('../images/icn-social.jpg') right -60px no-repeat;
+				}
+			}
+		}
+	}
+
+}
+
+#footer-menu{
+	display: none;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size:0;
+	border: solid 1px #f00;
+	>li{
+		display: inline-block;
+		*display: inline;
+		zoom: 1;
+		float: none;
+		margin: 0 5px;
+		padding: 0;
+		width: auto;
+		height: 20px;
+		a{
+			display: block;
+			margin: 1px 0 0 0;
+			//width: 15px;
+			//height: 15px;
+			font-size:20px;
+			color: $color-text;
+			text-decoration: none;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+#callcenter{
+	display: none;
+	position: relative;
+	overflow: hidden;
+	padding-left: 50px;
+	// height: 50px;
+	background:url('../images/icn-callcenter.png') left 2px no-repeat;
+	>span{
+		display: block;
+		font-family: arial;
+		&.cc-text{
+			margin-top: -3px;
+			font-weight: bold;
+			font-size: 19px;
+			color: $color-primary;
+		}
+		&.cc-num{
+			margin-top: -5px;
+			font-size: 26px;
+			color: #999999;
+		}
+	}
+}
+#enewsletter{
+	position: relative;
+	display: none;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	td{
+		padding: 0 3px;
+	}
+
+	.search-text{
+		display: block;
+		position: relative;
+		margin: 0 0 0 15px;
+		font-size: 20px;
+	}
+	a{
+		display: block;
+		margin: 1px 0 0 0;
+		//width: 15px;
+		//height: 15px;
+		font-size:20px;
+		color: $color-text;
+		text-decoration: none;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+	i{
+		position: absolute;
+		top: 7px;
+		font-size: 12px;
+		color: #333;
+	}
+}
+#footer-address{
+	p{
+		margin: 0;
+		padding: 0;
+		font-size: 1em;
+	}
+}
+
+#site-stat{
+	display: none;
+	td{
+		font-size: 13px;
+		color: #0490D8;
+	}
+	.site-stat-num{
+		color: #333;
+	}
+}
+
+} //end mediaquery
+

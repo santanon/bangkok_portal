@@ -1,0 +1,39 @@
+/* line 2, ../sass/Copy of _layout-page01.scss */
+#se-maincontainer-wrapper.page01 {
+  background: #f5f5f5;
+}
+
+/* line 9, ../sass/Copy of _layout-page01.scss */
+#page1col {
+  overflow: hidden;
+  margin: 20px 40px 0 40px;
+}
+/* line 12, ../sass/Copy of _layout-page01.scss */
+#page1col .content-slide-box {
+  width: 1075px;
+}
+
+/* line 18, ../sass/Copy of _layout-page01.scss */
+#page2col {
+  overflow: hidden;
+  margin: 20px 40px 0 40px;
+}
+/* line 21, ../sass/Copy of _layout-page01.scss */
+#page2col .content-slide-box {
+  float: left;
+  width: 620px;
+}
+/* line 24, ../sass/Copy of _layout-page01.scss */
+#page2col .content-slide-box .content-slide-detail {
+  padding: 115px 10px 5px 18px !important;
+}
+/* line 29, ../sass/Copy of _layout-page01.scss */
+#page2col .sidebox {
+  float: left;
+  margin: 25px 0 0 9px;
+  padding: 5px 10px;
+  width: 275px;
+  min-height: 125px;
+  background: #fff;
+  border: 1px solid #ccc;
+}

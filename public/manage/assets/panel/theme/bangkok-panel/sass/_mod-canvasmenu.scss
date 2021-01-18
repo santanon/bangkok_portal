@@ -1,0 +1,60 @@
+.canvas-wrapper{
+	// position: relative;
+	// overflow: hidden;
+	// background:#FF5357;
+}
+.canvas-wrapper{
+	-webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+	// position: relative;
+	// z-index: 1001;
+	width: 100%;
+	height: 100%;
+}
+
+#canvas-menu-section{
+	position: absolute;
+	z-index: 1001;
+	width: $offcanvas-width;
+	min-height: 100%;
+	top: 0;
+	background:$offcanvas-bgColor;
+	&.left{
+		left: -$offcanvas-width;
+	}
+	&.right{
+		right: 0;
+	}
+}
+#exit-canvas{
+	position: absolute;
+	display: block;
+	visibility: hidden;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	opacity:0;
+}
+#menu-trigger{
+	// display:none;
+	box-sizing: border-box;
+	padding: 0 8px 0 8px;
+	font-size: 2em;
+	color: #fff;
+	border: 1px solid #ccc;
+	>i{
+		margin: 0;
+		padding: 0;
+	}
+}
+.canvas-menu__list{
+	margin: 0;
+	padding: 0;
+	>li{
+		display: block;
+		width: 100%;
+	}
+}

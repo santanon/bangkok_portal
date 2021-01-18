@@ -1,0 +1,69 @@
+#se-maincontainer{
+	// overflow: hidden;
+	// margin-top: 20px;
+
+	#index-spacing-box{
+		position: relative;
+		height: 240px;
+	}
+
+	.se-box{
+		margin: 0 0 0 0;
+	}
+
+	#img-test{
+		@include round-corner(10px);
+	}
+
+	.index-custom-box{
+		position: relative;
+		overflow: hidden;
+		margin: 0 0 16px 0;
+		height: 300px;
+		box-sizing:border-box;
+		border: 1px solid #cdcdcd;
+		background:#fff;
+		>.heading{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			margin: 0;
+			padding: 0 30px 0 0;
+			width: 75%;
+		}
+		iframe{
+			position: relative;
+			width: 100%;
+			// min-width: 100%;
+			// *width: 100%;
+			height: 100%;
+		}
+		.mod-box-topic{
+			margin: 0;
+			padding: 0 0 0 8px;
+			width: 100%;
+			// background:#1BAF87;
+			font-weight: normal;
+			font-size: 25px;
+			color: #333;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		.mod_tab-content{
+			.header{
+				position: absolute;
+				z-index: 2;
+				top: 0px;
+				left: 0px;
+				margin: 0;
+				padding: 0 0 0 0;
+				width: 100%;
+				background: #1b7aad;
+			}
+		}
+	}
+
+}
+
+

@@ -5,7 +5,11 @@
 @extends('template1/include/start')
 @section('contentpage')
  
-<!--<?php print_r($_SESSION) ?>-->
+<!--<?php //print_r($_SESSION) ?>-->
+
+<style>
+#modal_full_span{ font-size:30px; }
+</style>
 
 <script>
 var main_iframe_url = '';

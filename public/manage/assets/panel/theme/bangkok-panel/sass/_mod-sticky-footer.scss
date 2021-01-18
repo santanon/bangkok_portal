@@ -1,0 +1,31 @@
+html,body{
+	height: 100%;
+}
+#se-wrapper{
+	min-height: 100%;
+}
+// .canvas-wrapper{
+// 	overflow: visible;
+// 	height: 100%;
+// 	background: #000;
+// }
+#page-container{
+	height: 100%;
+}
+#se-maincontainer-wrapper{
+	padding-bottom: $footer-height + $footer-marginTop;
+}
+#se-footer-wrapper{
+	position: absolute !important;
+	bottom: 0;
+}
+.no-bg-slider{
+	#se-maincontainer-wrapper{
+		padding-bottom: $footer-height + $footer-marginTop +60;
+	}
+	#se-footer-wrapper{
+		padding-top: 75px;
+		bottom: 0;
+		background: url('../images/bg-page.jpg') top no-repeat #fff;
+	}
+}

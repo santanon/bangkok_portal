@@ -1,0 +1,136 @@
+#custom-box-news{
+	.group-menu{
+		clear:both;
+	}
+	.group-content{
+		// float:left;
+		font-size:13px;
+
+		.title{
+			color:#207430;
+			font-size:25px;
+			display: block;
+			margin: 10px 0;
+		}
+		.link-footer{
+			display:block;
+			margin: 15px 0;
+			a{
+				text-decoration: underline;
+				color:#666666;
+			}
+		}
+	}
+
+	.group-menu{
+		.se-box__item {
+			vertical-align: top;
+			display: inline-block;
+			width: 100%;
+		}
+	}
+	.group-img-list{
+		ul{
+			position: relative;
+			width: 100%;
+			list-style: none;
+			height: 300px;
+			padding: 0;
+
+			li{
+				float: left;
+				margin: 0 0 10px 0;
+				padding: 0 10px;
+				width: 165px;
+				height: 210px;
+				//height: auto;
+
+				>a{
+					display: block;
+					overflow: hidden;
+					margin-bottom: 10px;
+					width: 165px;
+					height: 110px;
+					text-align: center;
+					>img{
+						width: 100%;
+					}
+				}
+				span > a{
+					display: block;
+					color: #666;
+					font-size:13px;
+					text-decoration:none;
+				}
+			}
+		}
+	}
+	.group-img-list-banner{
+		ul{
+			position: relative;
+			width: 100%;
+			list-style: none;
+			height: 300px;
+			padding: 0;
+
+			li{
+				float: left;
+				margin: 0 0 10px 0;
+				padding: 0 10px;
+				width: 165px;
+				height: 150px;
+				//height: auto;
+
+				>a{
+					display: block;
+					overflow: hidden;
+					margin-bottom: 10px;
+					width: 165px;
+					height: 58px;
+					text-align: center;
+					>img{
+						width: 100%;
+					}
+				}
+				span > a{
+					overflow: hidden;
+					display: block;
+					color: #666;
+					font-size:13px;
+					text-decoration:none;
+					>u{
+						word-wrap: break-word;
+					}
+				}
+			}
+		}
+	}
+	.pagenumber {
+		a {
+			text-decoration: none;
+			color: #666 !important;
+		}
+	}
+}
+
+@media #{$mobile} {
+	.group-img-list  {
+		ul{
+	
+			li{
+				float: left;
+				display:block;
+				margin: 0 0 10px 0 !important;
+				padding: 0 7px !important;
+				width: 165px;
+				height:170px !important;
+			}
+	
+		}
+	}
+}
+@media #{$tablet} {
+	
+}
+
+

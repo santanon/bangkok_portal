@@ -1,0 +1,37 @@
+
+@media #{$tablet-portrait} {
+
+	/* offcanvas-menu  */
+	#menu-trigger{
+		display: inline-block;
+	}
+}
+
+@media #{$tablet-landscape} {
+
+	/* offcanvas-menu  */
+	#menu-trigger{
+		display: none;
+	}
+}
+@media #{$tablet} {
+
+	/* test */
+	// body{ background: #753C7D; }
+	#se-wrapper{ background: #26410A ; }
+
+	/* justifygrid */
+	//.se-box__item{ display: block; width: 100% !important; }
+
+	/* global-styles */
+	#se-wrapper{
+		max-width: inherit;
+		min-width: inherit;
+		width: 100%;
+	}
+
+	/* offcanvas-menu  */
+	#menu-trigger{
+		display: inline-block;
+	}
+}

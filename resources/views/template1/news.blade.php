@@ -12,7 +12,7 @@
                     <div class="manage-dragdrop">
                         <img src="{{ asset('../../assets/images/icons/icon-dragdrop.svg')}}" alt="icon" title="Drag and Drop">
                     </div>
-                    <a href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('NEWS','manage-admin/list?m=portal_website_news');">
+                    <a href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('กำลังโหลด...','manage-admin/list?m=news');">
                         <div class="manage-edit">
                             <img src="{{ asset('../../assets/images/icons/icon-edit.svg')}}" alt="icon">
                         </div>
@@ -35,7 +35,7 @@
                                     <div class="group-mange-section">
                                         <div class="manage-tools">
                                             <ul>
-                                                <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('NEWS','manage-admin/edit?m=portal_website_news');">แก้ไข</a></li> 
+                                                <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('กำลังโหลด...','manage-admin/edit?m=news');">แก้ไข</a></li> 
                                                 <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_hide">ซ่อน</a></li>
                                                 <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_delete">ลบ</a></li> 
                                                 <li class="order-list order-close">ปิด</li>
@@ -85,7 +85,7 @@
                                             <div class="group-mange-section">
                                                 <div class="manage-tools">
                                                     <ul>
-                                                        <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('NEWS','manage-admin/edit?m=portal_website_news');">แก้ไข</a></li> 
+                                                        <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('กำลังโหลด...','manage-admin/edit?m=news');">แก้ไข</a></li> 
                                                         <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_hide">ซ่อน</a></li>
                                                         <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_delete">ลบ</a></li>
                                                         <li class="order-list order-close">ปิด</li>
@@ -138,7 +138,7 @@
                                             <div class="group-mange-section">
                                                 <div class="manage-tools">
                                                     <ul>
-                                                        <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('NEWS','manage-admin/edit?m=portal_website_news');">แก้ไข</a></li> 
+                                                        <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('กำลังโหลด...','manage-admin/edit?m=news');">แก้ไข</a></li> 
                                                         <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_hide">ซ่อน</a></li>
                                                         <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_delete">ลบ</a></li>
                                                         <li class="order-list order-close">ปิด</li>

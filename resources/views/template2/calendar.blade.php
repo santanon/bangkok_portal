@@ -59,6 +59,16 @@
                                             </div>
                                         </div> -->
                                         <div class="main-calendar">
+                                            <div class="input-custom">
+                                                <div class="select-wrapper width-full">
+                                                    <select name="month" class="slc">
+                                                        <option value="">month 1</option>
+                                                        <option value="">month 2</option>
+                                                        <option value="">month 3</option>
+                                                        <option value="">month 4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
                                             <div id="calendar">
                                             </div>
                                         </div>

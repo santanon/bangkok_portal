@@ -41,7 +41,7 @@
                             </div>
                         </div>
                         <div class="main-content">
-                            <div class="action-slide dis-flex justify-between">
+                            <div class="action-slide dis-flex justify-end">
                                 <div class="input-custom">
                                     <div class="select-wrapper">
                                         <select name="month" class="slc">
@@ -69,91 +69,87 @@
                                 </div>
                             </div>
                             
-                            <div class="group-slide">
-                                <div class="list-item" id="slide_1">
-                                    <div class="item">
-                                        <div class="row">
-                                            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                                                <div class="left">
-                                                    <div class="text-content bg-color-primary">2</div>
-                                                    <div class="text-onbottom bg-color-secondary">พ.ย.</div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
-                                                <div class="right">
-                                                    <div class="text-content">
-                                                        <a href="">
-                                                            บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือ
-                                                        </a>
-                                                    </div>
-                                                    <div class="text-onbottom"><i class="fas fa-map-marker-alt"></i> ถนนเสรีไทย ฝั่งเลขคู่</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="row">
-                                            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                                                <div class="left">
-                                                    <div class="text-content bg-color-primary">3</div>
-                                                    <div class="text-onbottom bg-color-secondary">พ.ย.</div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
-                                                <div class="right">
-                                                    <div class="text-content">
-                                                        <a href="">
-                                                            ตรวจพื้นที่ถนนพระรามที่ 4 ตั้งแต่แยกกล้วยน้ำไทถึงแยกพระโขนง
-                                                        </a>
-                                                    </div>
-                                                    <div class="text-onbottom"><i class="fas fa-map-marker-alt"></i> ถนนเสรีไทย ฝั่งเลขคู่</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="row">
-                                            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                                                <div class="left">
-                                                    <div class="text-content bg-color-primary">2</div>
-                                                    <div class="text-onbottom bg-color-secondary">พ.ย.</div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
-                                                <div class="right">
-                                                    <div class="text-content">
-                                                        <a href="">
-                                                            บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือ
-                                                        </a>
-                                                    </div>
-                                                    <div class="text-onbottom"><i class="fas fa-map-marker-alt"></i> ถนนเสรีไทย ฝั่งเลขคู่</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="row">
-                                            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                                                <div class="left">
-                                                    <div class="text-content bg-color-primary">3</div>
-                                                    <div class="text-onbottom bg-color-secondary">พ.ย.</div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
-                                                <div class="right">
-                                                    <div class="text-content">
-                                                        <a href="">
-                                                            ตรวจพื้นที่ถนนพระรามที่ 4 ตั้งแต่แยกกล้วยน้ำไทถึงแยกพระโขนง
-                                                        </a>
-                                                    </div>
-                                                    <div class="text-onbottom"><i class="fas fa-map-marker-alt"></i> ถนนเสรีไทย ฝั่งเลขคู่</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="main-calendar">
+                                <div id="calendar_inside"></div>
                             </div>
+                            
                         </div>
                     </div>
                 </div>
             </div>
+
+
+<script src='https://cdn.jsdelivr.net/npm/moment@2.27.0/min/moment.min.js'></script>
+
+<link rel="stylesheet" href="{{ asset('template3/theme-green/css/calendar/main.min.css')}}">
+<script type="text/javascript" src="{{ asset('template3/js/calendar/main.min.js') }}"></script>
+
+<script>
+    // Calendar
+    document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar_inside');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            timeZone: 'UTC',
+            locale: 'th',
+            initialView: 'dayGridWeek',
+            views: {
+                week: {
+                    type: 'basic', /* 'basicWeek' ?? */
+                    duration: { weeks: 2 }
+                }
+            },
+            //initialView: 'dayGridMonth',
+            headerToolbar: false,
+            dayMaxEventRows: true,
+            events: [
+                {
+                    "title": "All Day Event",
+                    "start": "2020-11-23",
+                    //"color": "#E76F0E",
+                    "url": "/calendar-detail"
+                },
+                {
+                    "title": "บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือasdalk k;lkdpa sk",
+                    "start": "2020-11-23",
+                    //"color": "#8CB81F",
+                    "url": "/calendar-detail"
+                },
+                {
+                    "title": "บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือ บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือ",
+                    "start": "2020-11-23",
+                    //"color": "#8CB81F",
+                    "url": "/calendar-detail"
+                },
+                {
+                    "title": "บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือasdalk k;lkdpa sk",
+                    "start": "2020-11-23",
+                    //"color": "#8CB81F",
+                    "url": "/calendar-detail"
+                },
+                {
+                    "title": "บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือasdalk k;lkdpa sk",
+                    "start": "2020-11-23",
+                    //"color": "#8CB81F",
+                    "url": "/calendar-detail"
+                },
+            ],
+        });
+        calendar.render();
+
+
+        // default
+        var view = calendar.view;
+        var v_title = view.title;
+        var c_month = (v_title).split(' ');
+        var c_year = (v_title).split(' ');
+        var cc_month = c_month[0];
+        var cc_year = c_year[1];
+        $('.month-title').html(c_month[0]);
+        $('.year-title').html(c_year[1]);
+        console.log(v_title);
+        $("#month_fullcalendar option[value='" + cc_month + "']").attr("selected","selected");
+        $("#year_fullcalendar option[value='" + cc_year + "']").attr("selected","selected");
+
+
+    });
+</script>

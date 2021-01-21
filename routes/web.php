@@ -221,6 +221,12 @@ Route::any('/vote-3', function () {
 Route::any('/vote-detail-3', function () {
     return view('vote-detail-3');
 });
+Route::any('/calendar-3', function () {
+    return view('calendar-main-3');
+});
+Route::any('/calendar-detail-3', function () {
+    return view('calendar-detail-3');
+});
 Route::any('/contact-3', function () {
     return view('contact-main-3');
 });
@@ -336,6 +342,12 @@ Route::any('/vote-5', function () {
 });
 Route::any('/vote-detail-5', function () {
     return view('vote-detail-5');
+});
+Route::any('/calendar-5', function () {
+    return view('calendar-main-5');
+});
+Route::any('/calendar-detail-5', function () {
+    return view('calendar-detail-5');
 });
 Route::any('/contact-5', function () {
     return view('contact-main-5');

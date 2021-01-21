@@ -443,7 +443,7 @@ $howManySteps: 100; //this needs to be even.
                 margin-bottom: 40px;
                 .public-post{
                     font-size: 3.6rem;
-                    line-height: 3rem;
+                    line-height: 4rem;
                     font-weight: $font-medium;
                     color: #525252;
                     background-color: #efefef;
@@ -468,6 +468,7 @@ $howManySteps: 100; //this needs to be even.
                         display: block;
                         i{
                             margin-right: 5px;
+                            color: #525252;
                         }
                     }
                     &.no-bg{

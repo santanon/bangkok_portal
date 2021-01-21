@@ -12193,6 +12193,11 @@ template {
   margin-bottom: 20px; }
   .input-custom .select-wrapper.width-full {
     width: 100%; }
+  .input-custom .select-wrapper.fixed-width {
+    width: 400px; }
+    @media only screen and (max-width: 767px) {
+      .input-custom .select-wrapper.fixed-width {
+        width: 100%; } }
   .input-custom .select-wrapper .slc {
     cursor: pointer;
     -moz-appearance: none;
@@ -12221,6 +12226,9 @@ template {
     .input-custom .select-wrapper .slc optgroup {
       font-size: 14px;
       font-weight: 400; }
+    .input-custom .select-wrapper .slc.slc {
+      text-align: center;
+      text-align-last: center; }
 
 .input-custom .custom-control .custom-control-label {
   font-size: 1.6rem;
@@ -13994,7 +14002,7 @@ body.menu-open {
       margin-bottom: 30px; }
     .group-section-content .section-content .inner-content .post-content {
       margin-bottom: 40px;
-      padding: 20px 15px;
+      padding: 2px 15px;
       background-color: #fff;
       border-radius: 15px;
       -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
@@ -14356,6 +14364,30 @@ body.menu-open {
             background-position: center center;
             background-size: 7%;
             right: 0; }
+        .group-section-content .section-content .inner-content .main-content .action-slide .remark-calendar ul {
+          margin: 0;
+          padding: 0; }
+          .group-section-content .section-content .inner-content .main-content .action-slide .remark-calendar ul li {
+            list-style: none;
+            margin-right: 10px;
+            color: #525252; }
+            .group-section-content .section-content .inner-content .main-content .action-slide .remark-calendar ul li.activity-calendar::before {
+              content: '';
+              display: inline-block;
+              width: 8px;
+              height: 8px;
+              background-color: #6950a1;
+              border-radius: 100%;
+              margin-right: 5px; }
+            .group-section-content .section-content .inner-content .main-content .action-slide .remark-calendar ul li.today-calendar {
+              margin-right: 0; }
+              .group-section-content .section-content .inner-content .main-content .action-slide .remark-calendar ul li.today-calendar::before {
+                content: '';
+                display: inline-block;
+                width: 8px;
+                height: 8px;
+                border: 1px solid #6950a1;
+                margin-right: 5px; }
         @media only screen and (max-width: 991px) {
           .group-section-content .section-content .inner-content .main-content .action-slide .slide-wrapper .slide-arrow {
             width: 120px; }
@@ -14363,6 +14395,36 @@ body.menu-open {
             background-size: auto; }
           .group-section-content .section-content .inner-content .main-content .action-slide .slide-wrapper .slide-next {
             background-size: auto; } }
+        @media only screen and (max-width: 320px) {
+          .group-section-content .section-content .inner-content .main-content .action-slide .-month-calendar {
+            margin-bottom: 15px; } }
+      .group-section-content .section-content .inner-content .main-content .day-group ul {
+        margin: 0;
+        padding: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+        .group-section-content .section-content .inner-content .main-content .day-group ul li {
+          list-style: none;
+          width: 14.286%;
+          text-align: center;
+          padding: 2px;
+          vertical-align: top;
+          background-color: #cfd1d4;
+          border: 1px solid #cfd1d4;
+          border-radius: 15px;
+          margin-bottom: 2px;
+          margin-right: 2px; }
+          .group-section-content .section-content .inner-content .main-content .day-group ul li span {
+            font-size: 2rem;
+            letter-spacing: 1.5px;
+            color: #fff;
+            padding: 5px 0; }
+          .group-section-content .section-content .inner-content .main-content .day-group ul li:last-child {
+            margin-right: 0; }
+      .group-section-content .section-content .inner-content .main-content .date-now {
+        font-size: 2.2rem;
+        color: #6950a1; }
       .group-section-content .section-content .inner-content .main-content .group-slide {
         position: relative; }
         .group-section-content .section-content .inner-content .main-content .group-slide .list-item {

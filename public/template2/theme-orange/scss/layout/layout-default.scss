@@ -2093,6 +2093,15 @@ $howManySteps: 100; //this needs to be even.
                     .fc .fc-scrollgrid-section>*{
                         border-right-width: 0;
                     }
+                    .main-calendar{
+                        .select-wrapper{
+                            padding: 0 4px;
+                            .slc{
+                                color: white;
+                                background-color: $color-secondary;
+                            }
+                        }
+                    }
                     #calendar{
                         table{
                             // border: none;
@@ -2122,13 +2131,17 @@ $howManySteps: 100; //this needs to be even.
                                         .fc-scrollgrid-sync-inner{
                                             .fc-col-header-cell-cushion {
                                                 padding: 4px;
-                                                color: white;
                                                 font-weight: $font-regular;
+                                                color: $color-text;
                                             }
                                         }
                                     }
                                 }
                             }
+                        }
+                        .fc-daygrid-day.fc-day{
+                            background-color: white;
+                            border: 1px solid white;
                         }
                         .fc-daygrid-day.fc-day-today{
                             background-color: white;
@@ -2151,8 +2164,9 @@ $howManySteps: 100; //this needs to be even.
                             tbody{
                                 tr{
                                     .fc-col-header-cell{
-                                        background-color: $color-secondary;
-                                        border: 1px solid $color-secondary;
+                                        color: $color-text;
+                                        background-color: white;
+                                        border: 1px solid white;
                                     }
                                 }
                             }

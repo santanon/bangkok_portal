@@ -140,7 +140,6 @@
 <script type="text/javascript" src="{{ asset('template1/js/calendar/main.min.js') }}"></script>
 
 <script>
-
     // Calendar
     document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');

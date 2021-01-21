@@ -56,6 +56,12 @@
         &.width-full{
             width: 100%;
         }
+        &.fixed-width{
+            width: 400px;
+            @media only screen and (max-width: 767px) {
+                width: 100%;
+            }
+        }
         .slc{
             cursor: pointer;
             -moz-appearance:none; /* Firefox */
@@ -85,6 +91,11 @@
             optgroup { 
                 font-size:14px; 
                 font-weight: $font-regular;
+            }
+
+            &.slc{
+                text-align: center;
+                text-align-last: center;
             }
         }
     }

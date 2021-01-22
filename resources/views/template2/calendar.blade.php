@@ -32,45 +32,26 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="calendar-wrapper">
-                                        <!-- <div class="head-calendar">
-                                            <div class="row">
-                                                <div class="col-lg-12">
-                                                    <div id='caljump'>
-                                                        <label for='months'>Jump to</label>
-                                                        <select id='months'></select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-8 col-sm-8 col-6">
-                                                    <div class="title-calendar">
-                                                        <div class="month-title"></div>
-                                                        <div class="year-title"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4 col-sm-4 col-6">
-                                                    <div class="calendar-wrapper-btn">
-                                                        <button id='prev' class="btn">
-                                                        </button>
-                                                        <button id='next' class="btn">
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div> -->
                                         <div class="main-calendar">
                                             <div class="input-custom">
                                                 <div class="select-wrapper width-full">
-                                                    <select name="month" class="slc">
-                                                        <option value="">month 1</option>
-                                                        <option value="">month 2</option>
-                                                        <option value="">month 3</option>
-                                                        <option value="">month 4</option>
+                                                    <select name="month" class="slc -month text-center">
+                                                        <option value="1">มกราคม</option>
+                                                        <option value="2">กุมภาพันธ์</option>
+                                                        <option value="3">มีนาคม</option>
+                                                        <option value="4">เมษายน</option>
+                                                        <option value="5">พฤษภาคม</option>
+                                                        <option value="6">มิถุนายน</option>
+                                                        <option value="7">กรกฎาคม</option>
+                                                        <option value="8">สิงหาคม</option>
+                                                        <option value="9">กันยายน</option>
+                                                        <option value="10">ตุลาคม</option>
+                                                        <option value="11">พฤศจิกายน</option>
+                                                        <option value="12">ธันวาคม</option>
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div id="calendar">
-                                            </div>
+                                            <div id="calendar" class="calendar-home"></div>
                                         </div>
                                     </div>
                                 </div>

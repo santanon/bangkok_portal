@@ -2107,79 +2107,108 @@ $howManySteps: 100; //this needs to be even.
                             // border: none;
                             border-width: 0;
                             border-collapse: separate;
-                            border-spacing: 2px;
+                            border-spacing: 4px 2px;
                             thead{
                                 tr{
+                                    th{
+                                        border: 1px solid #fff;
+                                        background-color: #fff;
+                                        padding: 8px 0;
+                                        span{
+                                            font-weight: $font-medium;
+                                            color: #525252;
+                                        }
+                                    }
                                     td{
-                                        border-right-width: 0;
+                                        border: none;
+                                    }
+                                }
+                            }
+                            .fc-body{
+                                >tr{
+                                    >td.fc-widget-content{
+                                        border: none;
                                     }
                                 }
                             }
                         }
-                        .fc-daygrid-day-top{
-                            justify-content: center;
-                            a{
-                                font-weight: $font-regular;
-                                color: $color-text;
+                        .fc-day{
+                            background-color: #fff;
+                            border: 1px solid #fff;
+                        }
+                        .fc-day-number{
+                            font-size: 1.6rem;
+                            text-align: center;
+                            width: 100%;
+                        }
+                        .fc-bg{
+                            .fc-today{
+                                border: 1px solid $color-primary;
+                            }
+                        }
+                        .fc-content-skeleton{
+                            .fc-day-top{
+                                padding-top: 5px;
+                            }
+                            .fc-today{
+                                color: $color-primary;
+                            }
+                        }
+                        .fc-event-container{
+                            .fc-event{
+                                background-color: $color-primary;
+                                border: 1px solid $color-primary;
+                                padding: 2px;
+                            }
+                        }
+                        .fc-more-cell{
+                            div{
+                                a{
+                                    color: $color-primary;
+                                }
                             }
                         }
                         
-                        .fc-col-header {
-                            tbody{
-                                tr{
-                                    .fc-col-header-cell{
-                                        .fc-scrollgrid-sync-inner{
-                                            .fc-col-header-cell-cushion {
-                                                padding: 4px;
-                                                font-weight: $font-regular;
-                                                color: $color-text;
-                                            }
-                                        }
+                    }
+                    .remark-calendar{
+                        ul{
+                            margin: 0;
+                            padding: 0;
+                            li{
+                                list-style: none;
+                                margin-right: 10px;
+                                color: #525252;
+                                &.activity-calendar{
+                                    &::before{
+                                        content: '';
+                                        display: inline-block;
+                                        width: 8px;
+                                        height: 8px;
+                                        background-color: $color-primary;
+                                        border-radius: 100%;
+                                        margin-right: 5px;
+                                    }
+
+                                }
+                                &.today-calendar{
+                                    margin-right: 0;
+                                    &::before{
+                                        content: '';
+                                        display: inline-block;
+                                        width: 8px;
+                                        height: 8px;
+                                        border: 1px solid $color-primary;
+                                        margin-right: 5px;
                                     }
                                 }
                             }
                         }
-                        .fc-daygrid-day.fc-day{
-                            background-color: white;
-                            border: 1px solid white;
-                        }
-                        .fc-daygrid-day.fc-day-today{
-                            background-color: white;
-                            border: 1px solid $color-primary;
-                        }
-                        .fc-daygrid-day-events{
-                            .fc-daygrid-event-harness{
-                                .fc-h-event{
-                                    background-color: $color-secondary;
-                                    border: 1px solid $color-secondary;
-                                }
-                            }
-                            .fc-daygrid-day-bottom{
-                                .fc-daygrid-more-link{
-                                    color: $color-secondary;
-                                }
-                            }
-                        }
-                        .fc-col-header {
-                            tbody{
-                                tr{
-                                    .fc-col-header-cell{
-                                        color: $color-text;
-                                        background-color: white;
-                                        border: 1px solid white;
-                                    }
-                                }
-                            }
-                        }
-                        .fc-popover{
-                            .fc-popover-body {
-                                .fc-daygrid-event-harness{
-                                    .fc-h-event{
-                                        background-color: $color-secondary;
-                                        border: 1px solid $color-secondary;
-                                    }
-                                }
-                            }
+                    }
+                }
+                .calendar-home{
+                    .fc-event-container{
+                        .fc-event{
+                            padding: 0 !important;
                         }
                     }
                 }

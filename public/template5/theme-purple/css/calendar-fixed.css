@@ -96,7 +96,7 @@
   color: rgba(255, 255, 255, 0.3);
   opacity: 0.5; }
 
-.day.today .day-number.today .day-number {
+.day.today .day-number {
   color: #6950a1;
   background-color: #fff; }
 
@@ -179,7 +179,6 @@
   animation: moveToTopFade .5s ease both; }
 
 .arrow {
-  display: none;
   position: absolute;
   top: -5px;
   left: 50%;

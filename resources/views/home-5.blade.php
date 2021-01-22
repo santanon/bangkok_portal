@@ -246,10 +246,7 @@ function sfi(title,url)
 
 <script type="text/javascript">
     $(document).ready(function () {
-        
         //$('#exampleModal').modal('show')
-
-
         if($('body').hasClass('manage')){
             $("div.group-section-content").attr('id', 'manage_dragdrop');
             // DragDrop
@@ -394,7 +391,35 @@ function sfi(title,url)
         $('.match-height').matchHeight({});
         $('.match-height2').matchHeight({});
 
+        //calendar
+        var data = [
+            {eventName: 'Lunch Meeting w/ Mark', calendar: 'Work', color: 'orange', eventTime: moment()},
+            {eventName: 'Interview - Jr. Web Developer', calendar: 'Work', color: 'orange', eventTime: moment("2021-01-23")},
+            {eventName: 'Demo New App to the Board', calendar: 'Work', color: 'orange', eventTime: moment("2021-01-05")},
+            {eventName: 'Dinner w/ Marketing', calendar: 'Work', color: 'orange', eventTime: moment("2020-05-30")},
         
+            {eventName: 'Game vs Portalnd', calendar: 'Sports', color: 'blue', eventTime: moment("2020-05-16")},
+            {eventName: 'Game vs Houston', calendar: 'Sports', color: 'blue', eventTime: moment("2020-05-5")},
+            {eventName: 'Game vs Denver', calendar: 'Sports', color: 'blue', eventTime: moment("2020-05-8")},
+            {eventName: 'Game vs San Degio', calendar: 'Sports', color: 'blue', eventTime: moment("2020-05-10")},
+        
+            {eventName: 'School Play', calendar: 'Kids', color: 'yellow', eventTime: moment("2020-01-19")},
+            {eventName: 'Parent/Teacher Conference', calendar: 'Kids', color: 'yellow', eventTime: moment("2020-05-13")},
+            {eventName: 'Pick up from Soccer Practice', calendar: 'Kids', color: 'yellow', eventTime: moment("2020-05-26")},
+            {eventName: 'Ice Cream Night', calendar: 'Kids', color: 'yellow', eventTime: moment("2020-05-22")},
+        
+            {eventName: 'Free Tamale Night', calendar: 'Other', color: 'green', eventTime: moment("2020-05-6")},
+            {eventName: 'Bowling Team', calendar: 'Other', color: 'green', eventTime: moment("2020-05-27")},
+            {eventName: 'Teach Kids to Code', calendar: 'Other', color: 'green', eventTime: moment("2020-05-19")},
+            {eventName: 'Startup Weekend', calendar: 'Other', color: 'green', eventTime: moment("2020-05-31")}
+        ];
+        var calendar = new Calendar('#calendar_home', data);
+        
+        $("#slc-month").on('change', function(){
+            var value = $("option:selected", this).val() - 1;
+            calendar.goToMonth(value);
+        })
+
 </script>
 
 @endsection

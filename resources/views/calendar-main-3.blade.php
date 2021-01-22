@@ -1,8 +1,8 @@
-@section('title', 'ติดต่อสอบถาม')
+@section('title', 'รายละเอียดข่าวประชาสัมพันธ์')
 @section('tagkeyword', '')
 @section('tagdescription', '')
 
-@extends('template5/include/start')
+@extends('template3/include/start')
 @section('contentpage')
 
 <div class="main-wrapper">
@@ -13,18 +13,39 @@
     </div>
 
     <header id="header-wrapper">
-        @include('template5/include.header')
+        @include('template3/include.header')
     </header>
     
     <div id="site-content">
-    
+
         <div class="banner-wrapper onlyOne">
-            @include('template5/main-slide')
-            <style>
-                .slide-count-wrap, .slick-arrow{
-                    display: none !important;
-                }
-            </style>
+            <div class="group-mange-section no-mg right-0">
+                <div class="manage-tools">
+                    <ul>
+                        <li class="order-list">จัดการ</li>
+                        <li class="order-list">ลบ</li>
+                        <li class="order-list">ซ่อน</li>
+                        <li class="order-list order-close">ปิด</li>
+                    </ul>
+                </div> 
+                <div class="manage-edit">
+                    <img src="{{ asset('template3/assets/images/icons/icon-edit.svg')}}" alt="icon">
+                </div>
+            </div>
+            <ul>
+                <li>
+                    <div class="bg-layer"></div>
+                    <div class="banner" style="background-image: url('../../template3/assets/images/banner/img-banner-demo2.png');"></div>
+                    <div class="item-Onbanner-outer">
+                        <div class="item-Onbanner-inner">
+                            <div class="list">
+                                <h2 class="title-banner">ข่าวสาร</h2>
+                                <p class="desc-banner">มุ่งมั่นการทำงาน แหล่งค้นคว้าการประชุม เครือข่ายมหานครอาเซียน</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
 
         <div class="group-section-breadcrumb">
@@ -32,7 +53,7 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">หน้าแรก</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">ปฎิทินกิจกรรม</li>
+                        <li class="breadcrumb-item active" aria-current="page">ปฏิทินกิจกรรม</li>
                     </ol>
                 </nav>
             </div>
@@ -40,15 +61,13 @@
         </div> 
 
         <div class="group-section-content">
-            @include('template5/calendar.list')
+            @include('template3/calendar.list')
         </div>
-
     </div>
 
     <footer id="footer-wrapper">
-        @include('template5/include.footer')
+        @include('template3/include.footer')
     </footer>
-
 
     <!-- Manage Save -->
     <!-- <div class="manage-save">
@@ -98,14 +117,13 @@
 </div>
 
 
-@include('template5/include.css_scripts')
+@include('template3/include.css_scripts')
 
 <!-- calendar -->
-<link rel="stylesheet" href="{{ asset('template5/js/calendar3_9/fullcalendar.min.css')}}">
-<script type="text/javascript" src="{{ asset('template5/js/calendar3_9/lib/moment.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('template5/js/calendar3_9/fullcalendar.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('template5/js/calendar3_9/locale-all.js') }}"></script>
-
+<link rel="stylesheet" href="{{ asset('template3/js/calendar3_9/fullcalendar.min.css')}}">
+<script type="text/javascript" src="{{ asset('template3/js/calendar3_9/lib/moment.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('template3/js/calendar3_9/fullcalendar.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('template3/js/calendar3_9/locale-all.js') }}"></script>
 <script>
 
   $(document).ready(function() {

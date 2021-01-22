@@ -126,158 +126,74 @@
 
 @include('template2/include.css_scripts')
 
-<!-- <link rel="stylesheet" href="{{ asset('template2/theme-orange/css/calendar/main.min.css')}}">
-<script type="text/javascript" src="{{ asset('template2/js/calendar/main.min.js') }}"></script> -->
 
-<script type="text/javascript">
-    $(document).ready(function () {
-        
-        //$('#exampleModal').modal('show');
-
-    });
-</script>
-<script>
-
-    // Calendar
-    // document.addEventListener('DOMContentLoaded', function() {
-    //     var calendarEl = document.getElementById('calendar');
-    //     var calendar = new FullCalendar.Calendar(calendarEl, {
-    //         initialView: 'dayGridMonth',
-    //         headerToolbar: false,
-    //         locale: 'th',
-    //         dayMaxEventRows: true,
-    //         events: [
-    //             {
-    //                 "title": "All Day Event",
-    //                 "start": "2020-11-23",
-    //                 //"color": "#E76F0E",
-    //                 "url": "/calendar-detail"
-    //             },
-    //             {
-    //                 "title": "บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือasdalk k;lkdpa sk",
-    //                 "start": "2020-11-23",
-    //                 //"color": "#8CB81F",
-    //                 "url": "/calendar-detail"
-    //             },
-    //             {
-    //                 "title": "บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือ บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือ",
-    //                 "start": "2020-11-23",
-    //                 //"color": "#8CB81F",
-    //                 "url": "/calendar-detail"
-    //             },
-    //             {
-    //                 "title": "บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือasdalk k;lkdpa sk",
-    //                 "start": "2020-11-23",
-    //                 //"color": "#8CB81F",
-    //                 "url": "/calendar-detail"
-    //             },
-    //             {
-    //                 "title": "บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือasdalk k;lkdpa sk",
-    //                 "start": "2020-11-23",
-    //                 //"color": "#8CB81F",
-    //                 "url": "/calendar-detail"
-    //             },
-    //         ],
-
-    //     });
-    //     calendar.render();
-
-    //     document.getElementById('prev').addEventListener('click', function () {
-    //         calendar.prev(); // call method
-
-    //         var view = calendar.view;
-    //         var v_title = view.title;
-    //         //console.log(v_title);
-    //         var c_month = (view.title).split(' ');
-    //         var c_year = (view.title).split(' ');
-    //         $('.month-title').html(c_month[0]);
-    //         $('.year-title').html(c_year[1]);
-
-    //     });
-
-    //     document.getElementById('next').addEventListener('click', function () {
-    //         calendar.next(); // call method
-
-    //         var view = calendar.view;
-    //         var v_title = view.title;
-    //         //console.log(v_title);
-    //         var c_month = (view.title).split(' ');
-    //         var c_year = (view.title).split(' ');
-    //         $('.month-title').html(c_month[0]);
-    //         $('.year-title').html(c_year[1]);
-    //     });
-
-    //     // default
-    //     var view = calendar.view;
-    //     var v_title = view.title;
-    //     var c_month = (view.title).split(' ');
-    //     var c_year = (view.title).split(' ');
-    //     $('.month-title').html(c_month[0]);
-    //     $('.year-title').html(c_year[1]);
-
-    // });
-
-</script>
-
-<link href='https://fullcalendar.io/releases/fullcalendar/3.9.0/fullcalendar.min.css' rel='stylesheet' />
-<link href='https://fullcalendar.io/releases/fullcalendar/3.9.0/fullcalendar.print.min.css' rel='stylesheet' media='print' />
-<script src='https://fullcalendar.io/releases/fullcalendar/3.9.0/lib/moment.min.js'></script>
-<script src='https://fullcalendar.io/releases/fullcalendar/3.9.0/fullcalendar.min.js'></script>
+<link rel="stylesheet" href="{{ asset('template2/js/calendar3_9/fullcalendar.min.css')}}">
+<script type="text/javascript" src="{{ asset('template2/js/calendar3_9/lib/moment.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('template2/js/calendar3_9/fullcalendar.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('template2/js/calendar3_9/locale-all.js') }}"></script>
 
 <script>
 
   $(document).ready(function() {
+
+    var d = new Date();
+    var y = d.getFullYear();
+
     $('#calendar').fullCalendar({
-      header: {
-        left: '',
-        center: 'title',
-        right: ''
-      },
+      // header: {
+      //   left: '',
+      //   center: 'title',
+      //   right: ''
+      // },
+      header:false,
+      locale: 'th',
       defaultDate: moment().format("YYYY-MM-DD"),
-      navLinks: true, // can click day/week names to navigate views
-      editable: true,
+      navLinks: false, // can click day/week names to navigate views
+      editable: false,
       eventLimit: true, // allow "more" link when too many events
       events: [
         {
           title: 'Lunch',
-          start: '2021-01-12T12:00:00'
+          start: '2021-01-12'
         },
         {
           title: 'Meeting',
-          start: '2021-01-12T14:30:00'
+          start: '2021-01-12'
         },
         {
           title: 'Happy Hour',
-          start: '2021-01-12T17:30:00'
+          start: '2021-01-12'
         },
         {
           title: 'Dinner',
-          start: '2021-01-12T20:00:00'
+          start: '2021-01-12'
         },
         {
           title: 'Birthday Party',
-          start: '2021-01-13T07:00:00'
+          start: '2021-01-13'
         },
         {
           title: 'Click for Google',
-          url: 'https://therichpost.com/open-bootstrap-modal-popup-event-click-fullcalendar',
+          url: '/calendar-detail-2',
           start: '2021-01-28'
         }
       ]
     });
   
-   $(".fc-right").append('<select class="select_month form-control"><option value="">Select Month</option><option value="1">Jan</option><option value="2">Feb</option><option value="3">Mrch</option><option value="4">Aprl</option><option value="5">May</option><option value="6">June</option><option value="7">July</option><option value="8">Aug</option><option value="9">Sep</option><option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option></select>');
-   $(".fc-left").append('<select class="select_year form-control"><option value="2020">2020</option><option value="2021">2021</option></select>');
+  //$(".fc-right").append('<select class="select_month form-control"><option value="">Select Month</option><option value="1">Jan</option><option value="2">Feb</option><option value="3">Mrch</option><option value="4">Aprl</option><option value="5">May</option><option value="6">June</option><option value="7">July</option><option value="8">Aug</option><option value="9">Sep</option><option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option></select>');
+  //$(".fc-left").append('<select class="select_year form-control"><option value="2021">2021</option><option value="2022">2022</option></select>');
   
-   $(".select_month").on("change", function(event) {
+   $(".-month").on("change", function(event) {
       $('#calendar').fullCalendar('changeView', 'month', this.value);
-      $('#calendar').fullCalendar('gotoDate', $(".select_year").val()+"-"+this.value+"-1");
+      $('#calendar').fullCalendar('gotoDate', y +"-"+ this.value);
+      //$('#calendar').fullCalendar('gotoDate', $(".select_year").val()+"-"+this.value);
+      //console.log(this.value);
    });
 
-   $(".select_year").on("change", function(event) {
-      $('#calendar').fullCalendar('changeView', 'month', this.value);
-      $('#calendar').fullCalendar('gotoDate', this.value+"-"+$(".select_month").val()+"-1");
-   });
+  //  $(".select_year").on("change", function(event) {
+  //     $('#calendar').fullCalendar('changeView', 'month', this.value);
+  //     $('#calendar').fullCalendar('gotoDate', this.value+"-"+$(".select_month").val());
+  //  });
 
   });
 

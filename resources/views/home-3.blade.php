@@ -384,5 +384,26 @@ function sfi(title,url)
 </script>
 
 
+<link rel="stylesheet" href="{{ asset('template3/js/calendar_week/mobiscroll.jquery.min.css')}}">
+<script type="text/javascript" src="{{ asset('template3/js/calendar_week/mobiscroll.jquery.min.js') }}"></script>
+
+<script>
+    mobiscroll.setOptions({
+        locale: mobiscroll.localeTh,  // Specify language like: locale: mobiscroll.localePl or omit setting to use default
+        theme: 'ios',                 // Specify theme like: theme: 'ios' or omit setting to use default
+        themeVariant: 'light'
+    });
+
+    $(function () {
+        $('#calendar_inside').mobiscroll().datepicker({
+            controls: ['calendar'],   // More info about controls: https://docs.mobiscroll.com/5-0-3/calendar#opt-controls
+            display: 'inline',        // Specify display mode like: display: 'bottom' or omit setting to use default
+            calendarType: 'week',
+            weeks: 1                  // More info about weeks: https://docs.mobiscroll.com/5-0-3/calendar#opt-weeks
+        });
+    });
+</script>
+
+
 @endsection
 

@@ -29,63 +29,39 @@
                                         </div>
                                     </div>
                                     <div class="col-md-8">
-                                        <div class="search-content matchHeight">
+                                        <div class="search-content matchHeight m-0">
                                             <form action="">
                                                 <div class="input-custom">
                                                     <label>เลือกเดือน</label>
                                                 </div>
                                                 <div class="input-custom inp-categories">
                                                     <div class="select-wrapper width-full">
-                                                        <select id="month_fullcalendar" name="month" class="slc">
+                                                        <select id="month_fullcalendar" name="month" class="slc -month">
                                                             <optgroup label="เดือน">
-                                                                <option value="มกราคม">มกราคม</option>
-                                                                <option value="กุมภาพันธ์">กุมภาพันธ์</option>
-                                                                <option value="มีนาคม">มีนาคม</option>
-                                                                <option value="เมษายน">เมษายน</option>
-                                                                <option value="พฤษภาคม">พฤษภาคม</option>
-                                                                <option value="มิถุนายน">มิถุนายน</option>
-                                                                <option value="กรกฎาคม">กรกฎาคม</option>
-                                                                <option value="สิงหาคม">สิงหาคม</option>
-                                                                <option value="กันยายน">กันยายน</option>
-                                                                <option value="ตุลาคม">ตุลาคม</option>
-                                                                <option value="พฤศจิกายน">พฤศจิกายน</option>
-                                                                <option value="ธันวาคม">ธันวาคม</option>
-                                                            </optgroup>
-                                                        </select>
-                                                    </div>
-                                                </div>
-
-                                                <div class="input-custom inp-categories">
-                                                    <div class="select-wrapper width-full">
-                                                        <select id="year_fullcalendar" name="month" class="slc">
-                                                            <optgroup label="ปี">
-                                                                <option value="2562">2562</option>
-                                                                <option value="2563">2563</option>
-                                                                <option value="2564">2564</option>
-                                                                <option value="2565">2565</option>
+                                                                <option value="1">มกราคม</option>
+                                                                <option value="2">กุมภาพันธ์</option>
+                                                                <option value="3">มีนาคม</option>
+                                                                <option value="4">เมษายน</option>
+                                                                <option value="5">พฤษภาคม</option>
+                                                                <option value="6">มิถุนายน</option>
+                                                                <option value="7">กรกฎาคม</option>
+                                                                <option value="8">สิงหาคม</option>
+                                                                <option value="9">กันยายน</option>
+                                                                <option value="10">ตุลาคม</option>
+                                                                <option value="11">พฤศจิกายน</option>
+                                                                <option value="12">ธันวาคม</option>
                                                             </optgroup>
                                                         </select>
                                                     </div>
                                                 </div>
                                             </form>
-                                            <div class="month-title">
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-4 col-xs-6" style="display: none">
-                                        <div class="calendar-wrapper-btn">
-                                            <button id='prev' class="btn">
-                                            </button>
-                                            <button id='next' class="btn">
-                                            </button>
+                                            <div class="month-title"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="main-calendar">
-                                <div id="calendar">
-                                </div>
+                                <div id="calendar" class=""></div>
                             </div>
                         </div>
                     </div>

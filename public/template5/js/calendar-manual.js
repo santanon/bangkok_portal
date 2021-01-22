@@ -40,8 +40,21 @@
   
         var left = createElement('div', 'left');
         left.addEventListener('click', function() { self.prevMonth(); });
+
+        var selectMonth = document.createElement("select");
+          selectMonth.setAttribute("class", "selectMonth");
+          for (var j = 0; j < 12; j++) {
+            var optionMonth = document.createElement("option");
+            optionMonth.setAttribute("value", j);
+            optionMonth.innerHTML = j + 1;
+            selectMonth.appendChild(optionMonth);
+          }
+          selectMonth.addEventListener('change', function() { 
+            self.goToMonth(this.value); 
+          });
   
         //Append the Elements
+        this.header.appendChild(selectMonth);
         this.header.appendChild(this.title); 
         this.header.appendChild(right);
         this.header.appendChild(left);
@@ -55,7 +68,8 @@
       var self = this;
       
       this.events.forEach(function(ev) {
-       ev.date = self.current.clone().date(Math.random() * (29 - 1) + 1);
+        //ev.date = self.current.clone().date(Math.random() * (29 - 1) + 1);
+        ev.date = moment(ev.eventTime, "YYYY-MM-DD");
       });
       
       
@@ -302,11 +316,19 @@
       this.next = true;
       this.draw();
     }
+
   
     Calendar.prototype.prevMonth = function() {
       this.current.subtract('months', 1);
       this.next = false;
       this.draw();
+    }
+    
+    Calendar.prototype.goToMonth = function(monthIndex){
+      this.current.set('month', parseInt(monthIndex));
+      this.next = true;
+      this.draw();
+      
     }
   
     window.Calendar = Calendar;
@@ -323,36 +345,39 @@
     }
   }();
   
-  !function() {
+  /*!function() {
     var data = [
-      { eventName: 'Lunch Meeting w/ Mark', calendar: 'Work', color: 'orange' },
-      { eventName: 'Interview - Jr. Web Developer', calendar: 'Work', color: 'orange' },
-      { eventName: 'Demo New App to the Board', calendar: 'Work', color: 'orange' },
-      { eventName: 'Dinner w/ Marketing', calendar: 'Work', color: 'orange' },
+      {eventName: 'Lunch Meeting w/ Mark', calendar: 'Work', color: 'orange', eventTime: moment()},
+      {eventName: 'Interview - Jr. Web Developer', calendar: 'Work', color: 'orange', eventTime: moment("2021-01-23")},
+      {eventName: 'Demo New App to the Board', calendar: 'Work', color: 'orange', eventTime: moment("2021-01-05")},
+      {eventName: 'Dinner w/ Marketing', calendar: 'Work', color: 'orange', eventTime: moment("2020-05-30")},
   
-      { eventName: 'Game vs Portalnd', calendar: 'Sports', color: 'blue' },
-      { eventName: 'Game vs Houston', calendar: 'Sports', color: 'blue' },
-      { eventName: 'Game vs Denver', calendar: 'Sports', color: 'blue' },
-      { eventName: 'Game vs San Degio', calendar: 'Sports', color: 'blue' },
+      {eventName: 'Game vs Portalnd', calendar: 'Sports', color: 'blue', eventTime: moment("2020-05-16")},
+      {eventName: 'Game vs Houston', calendar: 'Sports', color: 'blue', eventTime: moment("2020-05-5")},
+      {eventName: 'Game vs Denver', calendar: 'Sports', color: 'blue', eventTime: moment("2020-05-8")},
+      {eventName: 'Game vs San Degio', calendar: 'Sports', color: 'blue', eventTime: moment("2020-05-10")},
   
-      { eventName: 'School Play', calendar: 'Kids', color: 'yellow' },
-      { eventName: 'Parent/Teacher Conference', calendar: 'Kids', color: 'yellow' },
-      { eventName: 'Pick up from Soccer Practice', calendar: 'Kids', color: 'yellow' },
-      { eventName: 'Ice Cream Night', calendar: 'Kids', color: 'yellow' },
+      {eventName: 'School Play', calendar: 'Kids', color: 'yellow', eventTime: moment("2020-01-19")},
+      {eventName: 'Parent/Teacher Conference', calendar: 'Kids', color: 'yellow', eventTime: moment("2020-05-13")},
+      {eventName: 'Pick up from Soccer Practice', calendar: 'Kids', color: 'yellow', eventTime: moment("2020-05-26")},
+      {eventName: 'Ice Cream Night', calendar: 'Kids', color: 'yellow', eventTime: moment("2020-05-22")},
   
-      { eventName: 'Free Tamale Night', calendar: 'Other', color: 'green' },
-      { eventName: 'Bowling Team', calendar: 'Other', color: 'green' },
-      { eventName: 'Teach Kids to Code', calendar: 'Other', color: 'green' },
-      { eventName: 'Startup Weekend', calendar: 'Other', color: 'green' }
+      {eventName: 'Free Tamale Night', calendar: 'Other', color: 'green', eventTime: moment("2020-05-6")},
+      {eventName: 'Bowling Team', calendar: 'Other', color: 'green', eventTime: moment("2020-05-27")},
+      {eventName: 'Teach Kids to Code', calendar: 'Other', color: 'green', eventTime: moment("2020-05-19")},
+      {eventName: 'Startup Weekend', calendar: 'Other', color: 'green', eventTime: moment("2020-05-31")}
     ];
   
     
   
     function addDate(ev) {
       
+      
     }
   
     var calendar = new Calendar('#calendar_home', data);
-  
-  }();
+    
+    
+
+  }();*/
   

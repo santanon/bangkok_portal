@@ -121,7 +121,7 @@
    }
   }
   
-  .day.today .day-number {
+  .day{
       &.today{
           .day-number{
             color: #6950a1;
@@ -220,7 +220,7 @@
   }
   
   .arrow {
-    display: none;
+    //display: none;
     position: absolute;
     top: -5px;
     left: 50%;

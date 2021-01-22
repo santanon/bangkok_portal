@@ -85,6 +85,10 @@
                 font-size:14px; 
                 font-weight: $font-regular;
             }
+            &.text-center{
+                text-align: center;
+                text-align-last: center;
+            }
         }
     }
     .custom-control{

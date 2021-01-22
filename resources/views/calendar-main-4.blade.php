@@ -129,110 +129,85 @@
 
 @include('template4/include.css_scripts')
 
-
-<script src='https://cdn.jsdelivr.net/npm/moment@2.27.0/min/moment.min.js'></script>
-
-<link rel="stylesheet" href="{{ asset('template4/theme-pink/css/calendar/main.min.css')}}">
-<script type="text/javascript" src="{{ asset('template4/js/calendar/main.min.js') }}"></script>
-
+<link rel="stylesheet" href="{{ asset('template4/js/calendar3_9/fullcalendar.min.css')}}">
+<script type="text/javascript" src="{{ asset('template4/js/calendar3_9/lib/moment.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('template4/js/calendar3_9/fullcalendar.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('template4/js/calendar3_9/locale-all.js') }}"></script>
 <script>
 
-    // Calendar
-    document.addEventListener('DOMContentLoaded', function() {
-        var calendarEl = document.getElementById('calendar');
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-            timeZone: 'UTC',
-            locale: 'th',
-            //initialView: 'dayGridMonth',
-            headerToolbar: false,
-            dayMaxEventRows: true,
-            events: [
-                {
-                    "title": "All Day Event",
-                    "start": "2020-11-23",
-                    //"color": "#E76F0E",
-                    "url": "/calendar-detail"
-                },
-                {
-                    "title": "บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือasdalk k;lkdpa sk",
-                    "start": "2020-11-23",
-                    //"color": "#8CB81F",
-                    "url": "/calendar-detail"
-                },
-                {
-                    "title": "บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือ บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือ",
-                    "start": "2020-11-23",
-                    //"color": "#8CB81F",
-                    "url": "/calendar-detail"
-                },
-                {
-                    "title": "บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือasdalk k;lkdpa sk",
-                    "start": "2020-11-23",
-                    //"color": "#8CB81F",
-                    "url": "/calendar-detail"
-                },
-                {
-                    "title": "บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือasdalk k;lkdpa sk",
-                    "start": "2020-11-23",
-                    //"color": "#8CB81F",
-                    "url": "/calendar-detail"
-                },
-            ],
+  $(document).ready(function() {
 
-        });
-        calendar.render();
+    var d = new Date();
+    var y = d.getFullYear();
 
-        document.getElementById('prev').addEventListener('click', function () {
-            calendar.prev(); // call method
+    $('#calendar').fullCalendar({
+      header: {
+        left: '',
+        center: 'title',
+        right: ''
+      },
+      //header: false,
+      locale: 'th',
+      defaultDate: moment().format("YYYY-MM-DD"),
+      navLinks: false, // can click day/week names to navigate views
+      editable: false,
+      eventLimit: true, // allow "more" link when too many events
 
-            var view = calendar.view;
-            var v_title = view.title;
-            //console.log(v_title);
-            var c_month = (view.title).split(' ');
-            var c_year = (view.title).split(' ');
-            $('.month-title').html(c_month[0]);
-            $('.year-title').html(c_year[1]);
-
-        });
-
-        document.getElementById('next').addEventListener('click', function () {
-            calendar.next(); // call method
-
-            var view = calendar.view;
-            var v_title = view.title;
-            //console.log(v_title);
-            var c_month = (view.title).split(' ');
-            var c_year = (view.title).split(' ');
-            $('.month-title').html(c_month[0]);
-            $('.year-title').html(c_year[1]);
-        });
-
-        // default
-        var view = calendar.view;
-        var v_title = view.title;
-        var c_month = (v_title).split(' ');
-        var c_year = (v_title).split(' ');
-        var cc_month = c_month[0];
-        var cc_year = c_year[1];
-        $('.month-title').html(c_month[0]);
-        $('.year-title').html(c_year[1]);
-        // console.log(v_title);
-        $("#month_fullcalendar option[value='" + cc_month + "']").attr("selected","selected");
-        $("#year_fullcalendar option[value='" + cc_year + "']").attr("selected","selected");
-
-
-        $( "#month_fullcalendar").on('change', function() {
-            //alert( this.value );
-            var link = $(this);
-            var date = link.val();
-            
-            var m = moment([date, moment().year()+543]);
-            console.log(m)
-
-            //calendar.gotoDate(m)
-        });
-
+      events: [
+        {
+          title: 'Lunch',
+          start: '2021-01-12'
+        },
+        {
+          title: 'Meeting',
+          start: '2021-01-12'
+        },
+        {
+          title: 'Happy Hour',
+          start: '2021-01-12'
+        },
+        {
+          title: 'Dinner',
+          start: '2021-01-12'
+        },
+        {
+          title: 'Birthday Party',
+          start: '2021-01-13'
+        },
+        {
+          title: 'Birthday Party2',
+          start: '2021-01-13'
+        },
+        {
+          title: 'Click for Google',
+          url: '/calendar-detail-4',
+          start: '2021-01-28'
+        }
+      ]
     });
+  
+  //$(".fc-right").append('<select class="select_month form-control"><option value="">Select Month</option><option value="1">Jan</option><option value="2">Feb</option><option value="3">Mrch</option><option value="4">Aprl</option><option value="5">May</option><option value="6">June</option><option value="7">July</option><option value="8">Aug</option><option value="9">Sep</option><option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option></select>');
+  //$(".fc-left").append('<select class="select_year form-control"><option value="2021">2021</option><option value="2022">2022</option></select>');
+    $('.fc-header-toolbar').hide();
+    var text_my = $('.fc-center h2').text();
+    var text_m = text_my.split(" ")[0];
+    $('.month-title').html(text_m);
+
+    $(".-month").on("change", function(event) {
+        $('#calendar').fullCalendar('changeView', 'month', this.value);
+        $('#calendar').fullCalendar('gotoDate', y +"-"+ this.value);
+        //$('#calendar').fullCalendar('gotoDate', $(".select_year").val()+"-"+this.value);
+        var text_my = $('.fc-center h2').text();
+        var text_m = text_my.split(" ")[0];
+        $('.month-title').html(text_m);
+    });
+
+  //  $(".select_year").on("change", function(event) {
+  //     $('#calendar').fullCalendar('changeView', 'month', this.value);
+  //     $('#calendar').fullCalendar('gotoDate', this.value+"-"+$(".select_month").val());
+  //  });
+
+  });
 
 </script>
 

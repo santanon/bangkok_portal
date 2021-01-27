@@ -74,7 +74,7 @@
                                                 <div class="img-news" style="background-image: url('../../assets/images/img-news-demo1.png');">
                                                     <div class="pin"><i class="fas fa-thumbtack"></i></div>
                                                     <div class="read-news-outer">
-                                                        <a href="/news-detail">
+                                                        <a href="/news-detail-2">
                                                             อ่านข่าวสาร
                                                         </a>
                                                     </div>
@@ -137,7 +137,7 @@
                                             <div class="col-lg-12">
                                                 <div class="img-news" style="background-image: url('../../assets/images/img-news-demo2.png');">
                                                     <div class="read-news-outer">
-                                                        <a href="/news-detail">
+                                                        <a href="/news-detail-2">
                                                             อ่านข่าวสาร
                                                         </a>
                                                     </div>
@@ -190,7 +190,7 @@
                                             <div class="col-lg-12">
                                                 <div class="img-news" style="background-image: url('../../assets/images/img-news-demo2.png');">
                                                     <div class="read-news-outer">
-                                                        <a href="/news-detail">
+                                                        <a href="/news-detail-2">
                                                             อ่านข่าวสาร
                                                         </a>
                                                     </div>
@@ -243,7 +243,7 @@
                                             <div class="col-lg-12">
                                                 <div class="img-news" style="background-image: url('../../assets/images/img-news-demo2.png');">
                                                     <div class="read-news-outer">
-                                                        <a href="/news-detail">
+                                                        <a href="/news-detail-2">
                                                             อ่านข่าวสาร
                                                         </a>
                                                     </div>
@@ -296,7 +296,7 @@
                                             <div class="col-lg-12">
                                                 <div class="img-news" style="background-image: url('../../assets/images/img-news-demo2.png');">
                                                     <div class="read-news-outer">
-                                                        <a href="/news-detail">
+                                                        <a href="/news-detail-2">
                                                             อ่านข่าวสาร
                                                         </a>
                                                     </div>
@@ -349,7 +349,7 @@
                                             <div class="col-lg-12">
                                                 <div class="img-news" style="background-image: url('../../assets/images/img-news-demo2.png');">
                                                     <div class="read-news-outer">
-                                                        <a href="/news-detail">
+                                                        <a href="/news-detail-2">
                                                             อ่านข่าวสาร
                                                         </a>
                                                     </div>
@@ -402,7 +402,7 @@
                                             <div class="col-lg-12">
                                                 <div class="img-news" style="background-image: url('../../assets/images/img-news-demo2.png');">
                                                     <div class="read-news-outer">
-                                                        <a href="/news-detail">
+                                                        <a href="/news-detail-2">
                                                             อ่านข่าวสาร
                                                         </a>
                                                     </div>
@@ -455,7 +455,7 @@
                                             <div class="col-lg-12">
                                                 <div class="img-news" style="background-image: url('../../assets/images/img-news-demo2.png');">
                                                     <div class="read-news-outer">
-                                                        <a href="/news-detail">
+                                                        <a href="/news-detail-2">
                                                             อ่านข่าวสาร
                                                         </a>
                                                     </div>
@@ -508,7 +508,7 @@
                                             <div class="col-lg-12">
                                                 <div class="img-news" style="background-image: url('../../assets/images/img-news-demo2.png');">
                                                     <div class="read-news-outer">
-                                                        <a href="/news-detail">
+                                                        <a href="/news-detail-2">
                                                             อ่านข่าวสาร
                                                         </a>
                                                     </div>
@@ -561,7 +561,7 @@
                                             <div class="col-lg-12">
                                                 <div class="img-news" style="background-image: url('../../assets/images/img-news-demo2.png');">
                                                     <div class="read-news-outer">
-                                                        <a href="/news-detail">
+                                                        <a href="/news-detail-2">
                                                             อ่านข่าวสาร
                                                         </a>
                                                     </div>

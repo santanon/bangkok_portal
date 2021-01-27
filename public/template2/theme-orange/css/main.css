@@ -14654,6 +14654,8 @@ template {
                 vertical-align: bottom; }
               .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item:hover .left .icon-content .st0 {
                 stroke: #fff; }
+            .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item:hover.-faq .right .text-content p {
+              color: #fff; }
           @media (max-width: 767.98px) {
             .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item {
               margin-bottom: 5px; } }

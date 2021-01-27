@@ -1436,6 +1436,15 @@ $howManySteps: 100; //this needs to be even.
                                 //         }
                                 //     }
                                 // }
+                                &.-faq{
+                                    .right{
+                                        .text-content{
+                                            p{
+                                                color: #fff;
+                                            }
+                                        }
+                                    }
+                                }
                             }
 
                             @include media-breakpoint-down(sm){

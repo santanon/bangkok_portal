@@ -20,11 +20,11 @@
         <div class="inner-content">
             <div class="top-content">
                 <div class="group-text">
-                    <a href="/vote" class="title">VOTE</a>
+                    <a href="/vote-2" class="title">VOTE</a>
                     <p class="desc">The Bangkok Metropolitan Council Secretariat </p>
                 </div>
                 <div class="group-gotoall">
-                    <a href="/vote" class="btn btn-outline-dark">หัวข้อโหวตทั้งหมด</a>
+                    <a href="/vote-2" class="btn btn-outline-dark">หัวข้อโหวตทั้งหมด</a>
                 </div>
             </div>
             <div class="main-content">

@@ -20,7 +20,7 @@
         <div class="inner-content">
             <div class="row">
                 <div class="col-lg-3"> 
-                    <div class="top-content flex-wrap matchHeight">
+                    <div class="top-content flex-wrap bg-color-secondary-onM matchHeight">
                         <div class="group-text">
                             <h3 class="title">ภาพกิจกรรม</h3>
                             <p class="desc">The Bangkok Metropolitan Council Secretariat </p>

@@ -247,8 +247,7 @@ function sfi(title,url)
     $(document).ready(function () {
         
         //$('#exampleModal').modal('show')
-
-
+        
         if($('body').hasClass('manage')){
             $("div.group-section-content").attr('id', 'manage_dragdrop');
             // DragDrop

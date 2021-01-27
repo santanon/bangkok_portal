@@ -130,10 +130,4 @@
 
 @include('template4/include.css_scripts')
 
-
-<script type="text/javascript">
-    $(document).ready(function () {
-        
-    });
-</script>
 @endsection

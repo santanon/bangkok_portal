@@ -410,6 +410,18 @@ $howManySteps: 100; //this needs to be even.
                             }
                         }
                     }
+
+                    @media only screen and (max-width: 992px) {
+                        margin-bottom: 30px;
+                        .group-text{
+                            .title{
+                                margin: 0;
+                            }
+                            .desc{
+                                margin-bottom: 15px;
+                            }
+                        }
+                    }
                 }
 
                 &.flex-row{
@@ -464,6 +476,21 @@ $howManySteps: 100; //this needs to be even.
                             }
                         }
                     }
+                    @media only screen and (max-width: 992px) {
+                        .group-text{
+                            padding: 0;
+                            .slide-wrapper{
+                                display: flex;
+                                justify-content: space-between;
+                                position: relative;
+                                top: 20px;
+                                .slick-arrow{
+                                    position: relative;
+                                    top: 0;
+                                }
+                            }
+                        }
+                    }
                 }
 
                 &.flex-detail{
@@ -501,6 +528,38 @@ $howManySteps: 100; //this needs to be even.
                 &.bg-color-secondary{
                     .group-text{
                         color: white;
+                    }
+                }
+                &.bg-color-secondary-onM{
+                    @media only screen and (max-width: 992px) {
+                        .group-text{
+                            color: white;
+                        }
+                        .btn{
+                            border: 1px solid #fff;
+                            color: #fff;
+                        }
+                    }
+                }
+
+                &.title-top-x{
+                    @media only screen and (max-width: 992px) {
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        .group-text{
+                            width: 100%;
+                            flex-wrap: wrap;
+                            margin-bottom: 15px;
+                            .title{
+                                width: 100%;
+                                padding: 0;
+                                text-align: center;
+                            }
+                            .desc{
+                                width: 100%;
+                                text-align: center;
+                            }
+                        }
                     }
                 }
 
@@ -592,6 +651,22 @@ $howManySteps: 100; //this needs to be even.
                         text-align: center;
                         font-size: 2rem;
                         font-weight: 400;
+                    }
+                    &.date-calendar{
+                        background-color: #cfd1d4;
+                        height: 110px;
+                        .text-content{
+                            font-size: 6rem;
+                            line-height: 6rem;
+                            height: auto;
+                            padding-top: 1rem;
+                        }
+                        .text-onbottom{
+                            position: relative;
+                            font-size: 2rem;
+                            line-height: 2rem;
+                            color: #525252;
+                        }
                     }
                 }
                 .content{
@@ -848,6 +923,9 @@ $howManySteps: 100; //this needs to be even.
                     .date-now{
                         font-size: 2.2rem;
                         color: $color-primary;
+                    }
+                    @media only screen and (max-width: 992px) {
+                        margin-bottom: 20px;
                     }
                 }
                 .action-slide{
@@ -1121,6 +1199,23 @@ $howManySteps: 100; //this needs to be even.
                                 &:hover{
                                     background-color: transparent;
                                     background-image: url('../../theme-pink/assets/images/bg-layer-skew.png');
+                                }
+
+                                @media only screen and (max-width: 992px) {
+                                    background-image: none;
+                                    background-color: $color-secondary;
+                                    align-items: flex-start;
+                                    .right{
+                                        .text-content{
+                                            padding: 0;
+                                            -webkit-line-clamp: 5;
+                                        }
+                                    }
+                                    .left{
+                                        .icon-content{
+                                            padding: 15px 0;
+                                        }
+                                    }
                                 }
                             }
 

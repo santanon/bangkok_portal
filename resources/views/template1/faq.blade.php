@@ -53,7 +53,7 @@
                                             <div class="col-lg-8 col-md-8 col-sm-8">
                                                 <div class="right">
                                                     <div class="text-content">
-                                                        <a href="">
+                                                        <a href="/faq">
                                                         เด็กอายุกี่ขวบต้องแจ้งการเข้าเรียนตามกฎหมาย และใช้เอกสารอะไรบ้าง?
                                                         </a>
                                                     </div>
@@ -78,7 +78,7 @@
                                             <div class="col-lg-8 col-md-8 col-sm-8">
                                                 <div class="right">
                                                     <div class="text-content">
-                                                        <a href="">
+                                                        <a href="/faq">
                                                         เด็กอายุกี่ขวบต้องแจ้งการเข้าเรียนตามกฎหมาย และใช้เอกสารอะไรบ้าง?
                                                         </a>
                                                     </div>
@@ -103,7 +103,7 @@
                                             <div class="col-lg-8 col-md-8 col-sm-8">
                                                 <div class="right">
                                                     <div class="text-content">
-                                                        <a href="">
+                                                        <a href="/faq">
                                                         เด็กอายุกี่ขวบต้องแจ้งการเข้าเรียนตามกฎหมาย และใช้เอกสารอะไรบ้าง?
                                                         </a>
                                                     </div>

@@ -826,7 +826,81 @@ $howManySteps: 100; //this needs to be even.
                             }
                         }
                     }
+                    @media only screen and (max-width: 767px) {
+                        .input-custom{
+                            margin-bottom: 15px;
+                        }
+                    }
                 }
+
+                //calendar
+                .day-group{
+                    ul{
+                        margin: 0;
+                        padding: 0;
+                        display: flex;
+                        li{
+                            list-style: none;
+                            width: 14.286%;
+                            text-align: center;
+                            padding: 2px;
+                            vertical-align: top;
+                            background-color: #cfd1d4;
+                            border: 1px solid #cfd1d4;
+                            border-radius: 15px;
+                            margin-bottom: 2px;
+                            margin-right: 2px;
+                            span{
+                                font-size: 2rem;
+                                letter-spacing: 1.5px;
+                                color: #fff;
+                                padding: 5px 0;
+                            }
+                            &:last-child{
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                }
+                .date-now{
+                    font-size: 2.2rem;
+                    color: $color-primary;
+                }
+                .remark-calendar{
+                    ul{
+                        margin: 0;
+                        padding: 0;
+                        li{
+                            list-style: none;
+                            margin-right: 10px;
+                            color: #525252;
+                            &.activity-calendar{
+                                &::before{
+                                    content: '';
+                                    display: inline-block;
+                                    width: 8px;
+                                    height: 8px;
+                                    background-color: $color-primary;
+                                    border-radius: 100%;
+                                    margin-right: 5px;
+                                }
+
+                            }
+                            &.today-calendar{
+                                margin-right: 0;
+                                &::before{
+                                    content: '';
+                                    display: inline-block;
+                                    width: 8px;
+                                    height: 8px;
+                                    border: 1px solid $color-primary;
+                                    margin-right: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+
 
                 .group-slide{
                     position: relative;

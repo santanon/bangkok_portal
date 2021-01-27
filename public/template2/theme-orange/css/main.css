@@ -12617,7 +12617,8 @@ template {
               height: auto;
               padding: 10.5px 10px;
               display: block;
-              text-align: center; }
+              text-align: center;
+              background-color: #e16500; }
               #header-wrapper .header-lg .tools-web ul .lang-site .multi-lang li a:hover {
                 text-decoration: none;
                 background-color: #e16500; }

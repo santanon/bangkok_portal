@@ -79,6 +79,38 @@
                     }
                 }
             }
+            @media only screen and (max-width: 992px) {
+                .item-Onbanner-outer{
+                    left: 0;
+                    padding: 0 20px;
+                    .item-Onbanner-inner{
+                        transform: skew(0deg);
+                        width: 100%;
+                        height: auto;
+                        padding: 0;
+                        .txt-position{
+                            position: relative;
+                            transform: translateY(0);
+                            .list{
+                                transform: skew(0deg);
+                                .title-banner{
+                                    font-size: 2.4rem;
+                                    line-height: 2.4rem;
+                                    margin-bottom: 15px;
+                                }
+                                .desc-banner{
+                                    font-size: 1.8rem;
+                                    line-height: 1.8rem;
+                                    
+                                }
+                            }
+                        }
+                        &:after{
+                            display: none;
+                        }
+                    }
+                }
+            }
         }
         .slick-arrow{
             position: absolute;

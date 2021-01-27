@@ -1,30 +1,30 @@
 <div class="section-content">
                 <div class="container">
                     <div class="inner-content">
-                        <div class="group-inner d-flex">
-                            <div class="date">
-                                <div class="text-content bg-color-primary">2</div>
-                                <div class="text-onbottom bg-color-secondary">พ.ย.</div>
+                        <div class="group-inner d-flex mt-4">
+                            <div class="date date-calendar">
+                                <div class="text-content color-primary">2</div>
+                                <div class="text-onbottom">พฤศจิกายน</div>
                             </div>
                             <div class="content">
                                 <div class="top-content">
                                     <div class="group-text">
-                                        <h3 class="title color-primary">บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือ หนุนเด็กรักการอ่าน</h3>
-                                        <p class="desc color-secondary">
+                                        <h3 class="title">บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือ หนุนเด็กรักการอ่าน</h3>
+                                        <p class="desc">
                                             กล่าวว่า เขตบึงกุ่มได้จัดทำโครงการ ครอบครัวรักการอ่านขึ้นเพื่อส่งเสริมให้เด็กและเยาวชนในพื้นที่เขตบึงกุ่ม
                                             รักการอ่าน รู้จักใช้เวลาว่างให้เป็นประโยชน์ ตลอดจนเป็นการสร้างจิตสำนึกในการเรียนรู้ โดยให้ผู้เรียนเป็นศูนย์กลาง
                                         </p>
                                     </div>
                                 </div>
-                                <div class="post-content d-flex justify-content-between align-items-center">
-                                    <div class="public-post">
-                                        <i class="far fa-calendar"></i> วันอังคาร ที่ 2 กรกฎาคม พ.ศ. 2556
-                                    </div>
-                                    <div class="source-post no-bg">
-                                        <span><i class="fas fa-clock"></i> 06.00 น.</span>
-                                        <span><i class="fas fa-map-marker-alt"></i> ถนนเสรีไทย ฝั่งเลขคู่</span>
-                                    </div>
-                                </div>
+                            </div>
+                        </div>
+                        <div class="post-content d-flex justify-content-between align-items-center">
+                            <div class="public-post">
+                                <i class="far fa-calendar"></i> วันอังคาร ที่ 2 กรกฎาคม พ.ศ. 2556
+                            </div>
+                            <div class="source-post no-bg">
+                                <span><i class="fas fa-clock"></i> 06.00 น.</span>
+                                <span><i class="fas fa-map-marker-alt"></i> ถนนเสรีไทย ฝั่งเลขคู่</span>
                             </div>
                         </div>
                         <div class="main-content border-bottom">

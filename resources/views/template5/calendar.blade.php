@@ -39,7 +39,7 @@
                             <div class="col-lg-9">
                                 <div class="d-flex-manual">
                                     <div class="main-content p-0">
-                                        <div class="action-slide d-flex align-items-center justify-between flex-wrap">
+                                        <div class="action-slide d-flex align-items-center justify-between">
                                             <div class="input-custom -month-calendar">
                                                 <div class="select-wrapper fixed-width m-0">
                                                     <select id="slc-month" name="month" class="slc text-center">

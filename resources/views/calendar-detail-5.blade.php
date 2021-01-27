@@ -102,7 +102,6 @@
 <!-- CKeditor -->
 <script src="https://cdn.ckeditor.com/ckeditor5/23.1.0/inline/ckeditor.js"></script>
 
-
 <script>
     InlineEditor
         .create( document.querySelector( '#editor' ) )

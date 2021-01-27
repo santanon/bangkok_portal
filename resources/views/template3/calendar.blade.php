@@ -41,36 +41,51 @@
                             </div>
                         </div>
                         <div class="main-content">
-                            <div class="action-slide dis-flex justify-end">
+                            <div class="action-slide d-flex justify-content-between flex-wrap m-2">
                                 <div class="input-custom">
-                                    <div class="select-wrapper">
-                                        <select name="month" class="slc">
+                                    <div class="select-wrapper fixed-width m-0">
+                                        <select id="slc-month" name="month" class="slc text-center">
                                             <optgroup label="เดือน">
-                                                <option value="">มกราคม</option>
-                                                <option value="">กุมภาพันธ์</option>
-                                                <option value="">มีนาคม</option>
-                                                <option value="">เมษายน</option>
-                                                <option value="">พฤษภาคม</option>
-                                                <option value="">มิถุนายน</option>
-                                                <option value="">กรกฎาคม</option>
-                                                <option value="">สิงหาคม</option>
-                                                <option value="">กันยายน</option>
-                                                <option value="">ตุลาคม</option>
-                                                <option value="">พฤศจิกายน</option>
-                                                <option value="">ธันวาคม</option>
+                                                <option value="1">มกราคม</option>
+                                                <option value="2">กุมภาพันธ์</option>
+                                                <option value="3">มีนาคม</option>
+                                                <option value="4">เมษายน</option>
+                                                <option value="5">พฤษภาคม</option>
+                                                <option value="6">มิถุนายน</option>
+                                                <option value="7">กรกฎาคม</option>
+                                                <option value="8">สิงหาคม</option>
+                                                <option value="9">กันยายน</option>
+                                                <option value="10">ตุลาคม</option>
+                                                <option value="11">พฤศจิกายน</option>
+                                                <option value="12">ธันวาคม</option>
                                             </optgroup>
                                         </select>
                                     </div>
                                 </div>
-
-                                <div class="slide-wrapper" id="action-slide_1">
-                                    <div class="slide-arrow slide-prev"></div>
-                                    <div class="slide-arrow slide-next"></div>
+                                <div class="date-now text-right">
+                                    วันนี้ : <span class="date">2 / พฤศจิกายน / 2563</span>
                                 </div>
                             </div>
                             
-                            <div class="main-calendar">
-                                <div id="calendar_inside"></div>
+                            <div class="main-content">
+                                <div class="day-group">
+                                    <ul>
+                                        <li><span>อา.</span></li>
+                                        <li><span>จ.</span></li>
+                                        <li><span>อ.</span></li>
+                                        <li><span>พ.</span></li>
+                                        <li><span>พฤ.</span></li>
+                                        <li><span>ศ.</span></li>
+                                        <li><span>ส.</span></li>
+                                    </ul>
+                                </div>
+                                <div id="calendar_home"></div>
+                                <div class="remark-calendar">
+                                    <ul class="d-flex align-item-center justify-content-end">
+                                        <li class="activity-calendar">กิจกรรมวันนี้</li>
+                                        <li class="today-calendar">วันนี้</li>
+                                    </ul>
+                                </div>
                             </div>
                             
                         </div>

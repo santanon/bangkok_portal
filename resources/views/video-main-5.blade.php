@@ -151,8 +151,8 @@
 
 <script type="text/javascript">
 
-// TH
-$.datepicker.regional['th'] ={
+    // TH
+    $.datepicker.regional['th'] ={
         dateFormat: 'dd/mm/yy',
         changeMonth: true,
         changeYear: true,

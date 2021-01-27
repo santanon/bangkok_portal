@@ -14209,6 +14209,60 @@ body.menu-open {
             width: 170px; }
           .group-section-content .section-content .inner-content .main-content .action-slide .slide-wrapper .slide-arrow {
             width: 40px; } }
+        @media only screen and (max-width: 767px) {
+          .group-section-content .section-content .inner-content .main-content .action-slide .input-custom {
+            margin-bottom: 15px; } }
+      .group-section-content .section-content .inner-content .main-content .day-group ul {
+        margin: 0;
+        padding: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+        .group-section-content .section-content .inner-content .main-content .day-group ul li {
+          list-style: none;
+          width: 14.286%;
+          text-align: center;
+          padding: 2px;
+          vertical-align: top;
+          background-color: #cfd1d4;
+          border: 1px solid #cfd1d4;
+          border-radius: 15px;
+          margin-bottom: 2px;
+          margin-right: 2px; }
+          .group-section-content .section-content .inner-content .main-content .day-group ul li span {
+            font-size: 2rem;
+            letter-spacing: 1.5px;
+            color: #fff;
+            padding: 5px 0; }
+          .group-section-content .section-content .inner-content .main-content .day-group ul li:last-child {
+            margin-right: 0; }
+      .group-section-content .section-content .inner-content .main-content .date-now {
+        font-size: 2.2rem;
+        color: #006600; }
+      .group-section-content .section-content .inner-content .main-content .remark-calendar ul {
+        margin: 0;
+        padding: 0; }
+        .group-section-content .section-content .inner-content .main-content .remark-calendar ul li {
+          list-style: none;
+          margin-right: 10px;
+          color: #525252; }
+          .group-section-content .section-content .inner-content .main-content .remark-calendar ul li.activity-calendar::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: #006600;
+            border-radius: 100%;
+            margin-right: 5px; }
+          .group-section-content .section-content .inner-content .main-content .remark-calendar ul li.today-calendar {
+            margin-right: 0; }
+            .group-section-content .section-content .inner-content .main-content .remark-calendar ul li.today-calendar::before {
+              content: '';
+              display: inline-block;
+              width: 8px;
+              height: 8px;
+              border: 1px solid #006600;
+              margin-right: 5px; }
       .group-section-content .section-content .inner-content .main-content .group-slide {
         position: relative; }
         .group-section-content .section-content .inner-content .main-content .group-slide .list-item {

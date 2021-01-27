@@ -238,11 +238,6 @@ function sfi(title,url)
  
 @include('template5/include.css_scripts')
 
-<!-- calendar -->
-<link rel="stylesheet" href="{{ asset('template5/theme-purple/css/calendar-fixed.css')}}">
-<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
-<script type="text/javascript" src="{{ asset('template5/js/calendar-manual.js') }}"></script>
-
 
 <script type="text/javascript">
     $(document).ready(function () {
@@ -295,6 +290,12 @@ function sfi(title,url)
         });
     });
 </script>
+
+
+<!-- calendar -->
+<link rel="stylesheet" href="{{ asset('template5/theme-purple/css/calendar-fixed.css')}}">
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
+<script type="text/javascript" src="{{ asset('template5/js/calendar-manual.js') }}"></script>
 <script>
     $(document).ready(function() {
         let $document = $(this);

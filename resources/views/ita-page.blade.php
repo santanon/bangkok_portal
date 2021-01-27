@@ -131,19 +131,5 @@
 
 @include('template1/include.css_scripts')
 
-
-<script type="text/javascript">
-
-    $(document).ready(function () {
-        
-    });
-</script>
-<script>
-    InlineEditor
-        .create( document.querySelector( '#editor' ) )
-        .catch( error => {
-            console.error( error );
-        } );
-</script>
 @endsection
 

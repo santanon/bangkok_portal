@@ -20,6 +20,11 @@
 .bg-color-secondary-opacity{
     background-color: rgba($color: $color-secondary, $alpha: 0.8);
 }
+.bg-color-secondary-onM{
+    @media only screen and (max-width: 992px) {
+        background-color: $color-secondary;
+    }
+}
 
 .color-primary{
     color: $color-primary !important;

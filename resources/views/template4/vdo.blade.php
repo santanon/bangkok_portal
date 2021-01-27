@@ -20,7 +20,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="top-content flex-row bg-color-secondary">
+                    <div class="top-content title-top-x flex-row bg-color-secondary">
                         <div class="group-text">
                             <h3 class="title">วิดิทัศน์</h3>
                             <p class="desc">The Bangkok Metropolitan Council Secretariat </p>

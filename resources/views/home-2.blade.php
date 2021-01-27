@@ -242,10 +242,7 @@ function sfi(title,url)
 
 <script type="text/javascript">
     $(document).ready(function () {
-        
         //$('#exampleModal').modal('show')
-
-
         if($('body').hasClass('manage')){
             $("div.group-section-content").attr('id', 'manage_dragdrop');
             // DragDrop
@@ -270,7 +267,6 @@ function sfi(title,url)
         }else{
             $("div.group-section-content").removeAttr("id");
         }
-
     });
 </script>
 <!-- Gallery -->
@@ -395,11 +391,6 @@ function sfi(title,url)
     var y = d.getFullYear();
 
     $('#calendar').fullCalendar({
-      // header: {
-      //   left: '',
-      //   center: 'title',
-      //   right: ''
-      // },
       header:false,
       locale: 'th',
       defaultDate: moment().format("YYYY-MM-DD"),
@@ -438,21 +429,11 @@ function sfi(title,url)
         }
       ]
     });
-  
-  //$(".fc-right").append('<select class="select_month form-control"><option value="">Select Month</option><option value="1">Jan</option><option value="2">Feb</option><option value="3">Mrch</option><option value="4">Aprl</option><option value="5">May</option><option value="6">June</option><option value="7">July</option><option value="8">Aug</option><option value="9">Sep</option><option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option></select>');
-  //$(".fc-left").append('<select class="select_year form-control"><option value="2021">2021</option><option value="2022">2022</option></select>');
-  
+
    $(".-month").on("change", function(event) {
       $('#calendar').fullCalendar('changeView', 'month', this.value);
       $('#calendar').fullCalendar('gotoDate', y +"-"+ this.value);
-      //$('#calendar').fullCalendar('gotoDate', $(".select_year").val()+"-"+this.value);
-      //console.log(this.value);
    });
-
-  //  $(".select_year").on("change", function(event) {
-  //     $('#calendar').fullCalendar('changeView', 'month', this.value);
-  //     $('#calendar').fullCalendar('gotoDate', this.value+"-"+$(".select_month").val());
-  //  });
 
   });
 

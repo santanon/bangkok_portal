@@ -146,7 +146,6 @@
         center: 'title',
         right: ''
       },
-      //header: false,
       locale: 'th',
       defaultDate: moment().format("YYYY-MM-DD"),
       navLinks: false, // can click day/week names to navigate views
@@ -185,9 +184,7 @@
         }
       ]
     });
-  
-  //$(".fc-right").append('<select class="select_month form-control"><option value="">Select Month</option><option value="1">Jan</option><option value="2">Feb</option><option value="3">Mrch</option><option value="4">Aprl</option><option value="5">May</option><option value="6">June</option><option value="7">July</option><option value="8">Aug</option><option value="9">Sep</option><option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option></select>');
-  //$(".fc-left").append('<select class="select_year form-control"><option value="2021">2021</option><option value="2022">2022</option></select>');
+
     $('.fc-header-toolbar').hide();
     var text_my = $('.fc-center h2').text();
     var text_m = text_my.split(" ")[0];
@@ -196,17 +193,10 @@
     $(".-month").on("change", function(event) {
         $('#calendar').fullCalendar('changeView', 'month', this.value);
         $('#calendar').fullCalendar('gotoDate', y +"-"+ this.value);
-        //$('#calendar').fullCalendar('gotoDate', $(".select_year").val()+"-"+this.value);
         var text_my = $('.fc-center h2').text();
         var text_m = text_my.split(" ")[0];
         $('.month-title').html(text_m);
     });
-
-  //  $(".select_year").on("change", function(event) {
-  //     $('#calendar').fullCalendar('changeView', 'month', this.value);
-  //     $('#calendar').fullCalendar('gotoDate', this.value+"-"+$(".select_month").val());
-  //  });
-
   });
 
 </script>

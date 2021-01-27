@@ -11,15 +11,15 @@
 <script type="text/javascript" src="{{ asset('animation/aos.js') }}"></script>
 
 <!-- navgoco -->
-<link rel="stylesheet" href="{{ asset('template2/theme-orange/css/jquery.navgoco.css')}}">
+<link rel="stylesheet" href="{{ asset('template2/css/jquery.navgoco.css')}}">
 <script type="text/javascript" src="{{ asset('template2/js/jquery.navgoco.min.js') }}"></script>
 
 <!-- DragDrop -->
 <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script> 
 
 <!-- Slick -->
-<link rel="stylesheet" href="{{ asset('template2/theme-orange/css/slick.css')}}">
-<link rel="stylesheet" href="{{ asset('template2/theme-orange/css/slick-theme.css')}}">
+<link rel="stylesheet" href="{{ asset('template2/css/slick.css')}}">
+<link rel="stylesheet" href="{{ asset('template2/css/slick-theme.css')}}">
 <script type="text/javascript" src="{{ asset('template2/js/slick.min.js') }}"></script>
 
 <script>

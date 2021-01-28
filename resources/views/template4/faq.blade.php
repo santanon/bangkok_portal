@@ -20,7 +20,7 @@
         <div class="inner-content">
             <div class="top-content flex-row-arrow">
                 <div class="group-text">
-                    <a href="faq" class="title">คำถามที่พบบ่อย</a>
+                    <a href="/faq-4" class="title">คำถามที่พบบ่อย</a>
                     <p class="desc">The Bangkok Metropolitan Council Secretariat </p>
 
                     <div class="slide-wrapper" id="action-slide_2">
@@ -48,7 +48,7 @@
                                 <div class="col-12">
                                     <div class="right">
                                         <div class="text-content">
-                                            <a href="">
+                                            <a href="/faq-4">
                                                 หากท่านต้องการตรวจสอบภาพจากกล้อง
                                                 CCTV ให้เตรียมใบรายงานประจำวันรับแจ้ง
                                                 เป็นหลักฐาน (ใบลงบันทึกประจำวัน)
@@ -76,7 +76,7 @@
                                 <div class="col-12">
                                     <div class="right">
                                         <div class="text-content">
-                                            <a href="">
+                                            <a href="/faq-4">
                                             เด็กอายุกี่ขวบต้องแจ้งการเข้าเรียนตามกฎหมาย และใช้เอกสารอะไรบ้าง?
                                             </a>
                                         </div>
@@ -101,7 +101,7 @@
                                 <div class="col-12">
                                     <div class="right">
                                         <div class="text-content">
-                                            <a href="">
+                                            <a href="/faq-4">
                                             เด็กอายุกี่ขวบต้องแจ้งการเข้าเรียนตามกฎหมาย และใช้เอกสารอะไรบ้าง?
                                             </a>
                                         </div>

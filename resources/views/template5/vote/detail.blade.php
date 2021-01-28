@@ -5,7 +5,7 @@
                 <div class="col-lg-2">
                     <div class="main-content p-0">
                         <div class="group-back">
-                            <a href="/questionnaire-5">
+                            <a href="/vote-5">
                                 <div class="icon-more">
                                     <i class="fas fa-arrow-left"></i>
                                 </div>

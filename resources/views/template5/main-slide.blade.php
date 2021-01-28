@@ -32,7 +32,7 @@
                     </a>
                 </div>
                 <div class="logo">
-                    <a href="/">
+                    <a href="/home-5">
                         <img src="{{ asset('template5/assets/images/logo.png')}}" alt="logo">
                     </a>
                 </div>

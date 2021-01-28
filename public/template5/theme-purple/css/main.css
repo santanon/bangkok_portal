@@ -14090,7 +14090,10 @@ body.menu-open {
         margin-bottom: 20px; }
         .group-section-content .section-content .inner-content .main-content .group-back a {
           font-size: 1.6rem;
-          color: #525252; }
+          color: #525252;
+          width: 100%;
+          height: 100%;
+          display: block; }
           .group-section-content .section-content .inner-content .main-content .group-back a .icon-more {
             display: inline-block;
             text-align: center;

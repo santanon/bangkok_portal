@@ -36,6 +36,7 @@
             $("html").css("font-size",'62.5' + "%");
         });
         $("#reduce-size").on("click",function(){
+            console.log('pass');
             $("html").css("font-size",'52.5'+ "%");
         });
     });

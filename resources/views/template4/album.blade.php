@@ -24,7 +24,7 @@
                         <div class="group-text">
                             <h3 class="title">ภาพกิจกรรม</h3>
                             <p class="desc">The Bangkok Metropolitan Council Secretariat </p>
-                            <a href="/album" class="btn btn-outline-dark">ข่าวสารทั้งหมด</a>
+                            <a href="/album-4" class="btn btn-outline-dark">ภาพกิจกรรมทั้งหมด</a>
                         </div>
                     </div>
                 </div>

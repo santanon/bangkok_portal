@@ -28,7 +28,7 @@
                                         <p class="desc">The Bangkok Metropolitan Council Secretariat</p>
                                     </div>
                                     <div class="group-gotoall">
-                                        <a href="/news-3">
+                                        <a href="/news-5">
                                             <div class="icon-more">
                                                 <i class="fas fa-arrow-right"></i>
                                             </div>
@@ -50,7 +50,7 @@
                                                 <img src="{{ asset('../../assets/images/icons/icon-edit.svg')}}" alt="icon">
                                             </div> 
                                         </div>
-                                        <a href="/">
+                                        <a href="/news-detail-5">
                                             <div class="img-news" style="background-image: url('../../assets/images/img-news-demo1.png');"></div>
                                         </a>
                                         <div class="content-news-main">
@@ -58,7 +58,7 @@
                                                 <span>ข่าววันที่ : 25 พ.ย.</span> <img src="{{ asset('../../assets/images/icons/icon-new.png')}}" alt="icon">
                                             </div>
                                             <div class="desc-news">
-                                                <a href="">
+                                                <a href="/news-detail-5">
                                                     หน่วยงานภาครัฐและภาคเอกชนประชุมกรรมการดำเนินงานด้านการป้องกัน
                                                 </a>
                                             </div>
@@ -77,7 +77,7 @@
                                             </div>
                                         </div>
                                         <div class="read-news-outer">
-                                            <a href="/">
+                                            <a href="/news-detail-5">
                                                 อ่านข่าวสาร
                                             </a>
                                         </div>

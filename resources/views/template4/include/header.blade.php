@@ -186,7 +186,7 @@
                     </a>
                 </div>
                 <div class="logo">
-                    <a href="/">
+                    <a href="/home-4">
                         <img src="{{ asset('template1/assets/images/logo.png')}}" alt="logo">
                     </a>
                 </div>

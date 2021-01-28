@@ -845,9 +845,9 @@ $howManySteps: 100; //this needs to be even.
                             text-align: center;
                             padding: 2px;
                             vertical-align: top;
-                            background-color: #cfd1d4;
-                            border: 1px solid #cfd1d4;
-                            border-radius: 15px;
+                            background-color: $color-secondary;
+                            border: 1px solid $color-secondary;
+                            //border-radius: 15px;
                             margin-bottom: 2px;
                             margin-right: 2px;
                             span{

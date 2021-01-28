@@ -11875,7 +11875,7 @@ template {
   color: #f67483; }
 
 .input-custom .select-wrapper .slc {
-  background-image: url("../assets/images/icons/icon-arrow-dropdown-green.svg"); }
+  background-image: url("../assets/images/icons/icon-arrow-dropdown.svg"); }
 
 .input-custom .custom-control .custom-control-input[type="radio"]:checked ~ .custom-control-label:before {
   border-color: #ff5778;
@@ -12783,6 +12783,8 @@ a.ui-button:active,
       transform: skew(14deg); }
     #header-wrapper .header-lg .search-site:hover .icon-search {
       background-position: bottom center; }
+    #header-wrapper .header-lg .search-site.active .icon-wrap {
+      background-color: #f67483; }
     #header-wrapper .header-lg .search-site.active .icon-search {
       background-position: bottom center; }
   #header-wrapper .header-lg .bg-color-menutop {
@@ -12964,7 +12966,8 @@ a.ui-button:active,
           align-items: center;
           -webkit-box-pack: center;
           -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+          background-color: #f67483; }
           #header-wrapper .header-lg .section-search-wrapper .group-search .input-custom .btn-search .icon-search {
             background-color: inherit;
             background-image: url("../../assets/images/icons/icon-search.png");

@@ -236,7 +236,9 @@ function sfi(title,url)
     </div>
   </div>
  
-@include('template5/include.css_scripts')
+
+
+  @include('template5/include.css_scripts')
 
 
 <script type="text/javascript">

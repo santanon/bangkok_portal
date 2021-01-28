@@ -148,7 +148,7 @@
         },
         {
           title: 'Click for Google',
-          url: '/calendar-detail-2',
+          url: '/calendar-detail-5',
           start: '2021-01-28'
         }
       ]

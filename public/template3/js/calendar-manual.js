@@ -254,7 +254,7 @@
         var square = createElement('div', 'event-category ' + ev.color);
         var span = createElement('span');
         var aTag = createElement('a');
-        aTag.setAttribute('href',"/calendar-detail-5");
+        aTag.setAttribute('href',"/calendar-detail-3");
         aTag.textContent= ev.eventName;
   
         div.appendChild(square);

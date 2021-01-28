@@ -24,7 +24,7 @@
                         <div class="group-text">
                             <h3 class="title">ปฏิทินกิจกรรม</h3>
                             <p class="desc">The Bangkok Metropolitan Council Secretariat </p>
-                            <a href="/calendar" class="btn btn-outline-white">ปฏิทิน</a>
+                            <a href="/calendar-4" class="btn btn-outline-white">ปฏิทิน</a>
                         </div>
                     </div>
                 </div>
@@ -77,7 +77,7 @@
                                             </div>
                                             <div class="right">
                                                 <div class="text-content">
-                                                    <a href="">
+                                                    <a href="/calendar-detail-4">
                                                         บึงกุ่มชวนร่วมกิจกรรม
                                                         บ้านหนังสือ ถนนสุขุมวิท,
                                                         สะพานหน้าสำนักงาน

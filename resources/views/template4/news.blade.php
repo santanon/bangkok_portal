@@ -52,7 +52,7 @@
                                                     <div class="col-lg-12">
                                                         <div class="img-news" style="background-image: url('../../assets/images/img-news-demo2.png');">
                                                             <div class="read-news-outer">
-                                                                <a href="/">
+                                                                <a href="/news-detail-4">
                                                                     อ่านข่าวสาร
                                                                 </a>
                                                             </div>
@@ -65,7 +65,7 @@
                                                                 <span>ข่าววันที่ : 5 พ.ย.</span>
                                                             </div>
                                                             <div class="desc-news">
-                                                                <a href="">
+                                                                <a href="/news-detail-4">
                                                                     หน่วยงานภาครัฐและภาคเอกชนประชุมกรรมการดำเนินงานด้านการป้องกัน...
                                                                 </a>
                                                             </div>
@@ -107,7 +107,7 @@
                                                     <div class="col-lg-12">
                                                         <div class="img-news" style="background-image: url('../../assets/images/img-news-demo3.png');">
                                                             <div class="read-news-outer">
-                                                                <a href="/">
+                                                                <a href="/news-detail-4">
                                                                     อ่านข่าวสาร
                                                                 </a>
                                                             </div>
@@ -120,7 +120,7 @@
                                                                 <span>ข่าววันที่ : 5 พ.ย.</span>
                                                             </div>
                                                             <div class="desc-news">
-                                                                <a href="">
+                                                                <a href="/news-detail-4">
                                                                     หน่วยงานภาครัฐและภาคเอกชนประชุมกรรมการดำเนินงานด้านการป้องกัน...
                                                                 </a>
                                                             </div>
@@ -162,7 +162,7 @@
                                                     <div class="col-lg-12">
                                                         <div class="img-news" style="background-image: url('../../assets/images/img-news-demo2.png');">
                                                             <div class="read-news-outer">
-                                                                <a href="/">
+                                                                <a href="/news-detail-4">
                                                                     อ่านข่าวสาร
                                                                 </a>
                                                             </div>
@@ -175,7 +175,7 @@
                                                                 <span>ข่าววันที่ : 5 พ.ย.</span>
                                                             </div>
                                                             <div class="desc-news">
-                                                                <a href="">
+                                                                <a href="/news-detail-4">
                                                                     หน่วยงานภาครัฐและภาคเอกชนประชุมกรรมการดำเนินงานด้านการป้องกัน...
                                                                 </a>
                                                             </div>

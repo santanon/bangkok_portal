@@ -68,13 +68,17 @@
 
                             
                             <div class="group-back">
-                                <a href="/calendar">ย้อนกลับ</a>
+                                <a href="/calendar-4">ย้อนกลับ</a>
                             </div>
 
                             <div class="group-social-share d-flex align-items-center justify-content-between">
                                 <div class="shared-email d-flex align-items-center">
                                     <div class="social-wrapper d-flex align-items-center">
-                                        <div class="text-social color-secondary">Share</div>
+                                        <div class="text-social">
+                                            <div class="txt">
+                                                Share
+                                            </div>
+                                        </div>
                                         <ul class="d-flex align-items-center">
                                             <li class="facebook d-flex align-items-center not-hover">
                                                 <img src="{{ asset('template1/assets/images/icons/icon-social-facebook.svg')}}" alt="icon"><span class="color-secondary">5</span> 

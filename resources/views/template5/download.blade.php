@@ -45,7 +45,7 @@
                                             <div class="group-box">
                                                 <div class="item -download">
                                                     <div class="box-full ">
-                                                        <a href="/">
+                                                        <a href="/download-5">
                                                             <div class="bg-img">
                                                                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                                         width="585px" viewBox="0 0 585 95" style="enable-background:new 0 0 585 95;" xml:space="preserve">
@@ -85,7 +85,7 @@
                                             <div class="group-box">
                                                 <div class="item -download">
                                                     <div class="box-full ">
-                                                        <a href="/">
+                                                        <a href="/download-5">
                                                             <div class="bg-img">
                                                                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                                         width="585px" viewBox="0 0 585 95" style="enable-background:new 0 0 585 95;" xml:space="preserve">
@@ -125,7 +125,7 @@
                                             <div class="group-box">
                                                 <div class="item -download">
                                                     <div class="box-full ">
-                                                        <a href="/">
+                                                        <a href="/download-5">
                                                             <div class="bg-img">
                                                                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                                         width="585px" viewBox="0 0 585 95" style="enable-background:new 0 0 585 95;" xml:space="preserve">
@@ -165,7 +165,7 @@
                                             <div class="group-box">
                                                 <div class="item -download">
                                                     <div class="box-full ">
-                                                        <a href="/">
+                                                        <a href="/download-5">
                                                             <div class="bg-img">
                                                                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                                         width="585px" viewBox="0 0 585 95" style="enable-background:new 0 0 585 95;" xml:space="preserve">

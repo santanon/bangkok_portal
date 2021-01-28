@@ -12063,7 +12063,7 @@ template {
     padding-right: 55px;
     -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
-    background-image: url("../../assets/images/icons/icon-arrow-dropdown.svg"); }
+    background-image: url("../assets/images/icons/icon-arrow-dropdown.svg"); }
     .input-custom .select-wrapper .slc:focus {
       outline: none; }
     .input-custom .select-wrapper .slc optgroup {

@@ -171,8 +171,7 @@
     overflow-y: auto;
     overflow-x: hidden;
     background-color: #fff;
-    border: 1px solid #006600;
-    border-radius: 15px; }
+    border: 1px solid #006600; }
   #calendar_home .events.in {
     -webkit-animation: fadeIn .3s ease both;
     -moz-animation: fadeIn .3s ease both;

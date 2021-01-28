@@ -15625,7 +15625,7 @@ a.ui-button:active,
     .gallery-template .item:hover .right .text-content a {
       opacity: 1; }
     .gallery-template .item:hover.-album .cover-album .bg-layer {
-      background-color: rgba(0, 102, 0, 0.5);
+      background-color: rgba(0, 93, 171, 0.5);
       opacity: 1; }
     .gallery-template .item:hover.-album .cover-album .top-album .source {
       background-color: inherit; }

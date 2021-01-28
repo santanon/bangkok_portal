@@ -2714,7 +2714,7 @@ $howManySteps: 100; //this needs to be even.
             &.-album{
                 .cover-album{
                     .bg-layer{
-                        background-color: rgba(0, 102, 0, 0.5);
+                        background-color: rgba($color: $color-primary, $alpha: 0.5);
                         opacity: 1;
                         
                     }

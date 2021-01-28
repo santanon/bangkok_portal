@@ -194,6 +194,7 @@
       var details, arrow;
       var dayNumber = +el.querySelectorAll('.day-number')[0].innerText || +el.querySelectorAll('.day-number')[0].textContent;
       var day = this.current.clone().date(dayNumber);
+      console.log(day);
   
       var currentOpened = document.querySelector('.details');
   
@@ -241,7 +242,19 @@
   
       this.renderEvents(todaysEvents, details);
   
-      arrow.style.left = el.offsetLeft - el.parentNode.offsetLeft + 75 + 'px';
+      var width = window.screen.width;
+      if(width <= 320){
+        arrow.style.left = el.offsetLeft - el.parentNode.offsetLeft + 20 + 'px';
+      }
+      else if(width <= 414) {
+        arrow.style.left = el.offsetLeft - el.parentNode.offsetLeft + 25 + 'px';
+      }
+      else if(width <= 768){
+        arrow.style.left = el.offsetLeft - el.parentNode.offsetLeft + 45 + 'px';
+      }
+      else{
+        arrow.style.left = el.offsetLeft - el.parentNode.offsetLeft + 70 + 'px';
+      }
     }
   
     Calendar.prototype.renderEvents = function(events, ele) {

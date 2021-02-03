@@ -12594,7 +12594,7 @@ body.menu-open {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 0 15px; }
+    padding: 15px; }
     #header-wrapper .header-lg .logo img {
       width: 100%; }
   #header-wrapper .header-lg .account-wrapper ul {

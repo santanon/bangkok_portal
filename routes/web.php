@@ -71,68 +71,58 @@ Route::any('/', function () {
 Route::any('/coverpage', function () {
     return view('coverpage');
 });
-
 Route::any('/news', function () {
     return view('news-main');
 });
-
 Route::any('/news-detail', function () {
     return view('news-detail');
 });
-
 Route::any('/album', function () {
     return view('gallery-main');
 });
-
 Route::any('/video', function () {
     return view('video-main');
 });
-
 Route::any('/calendar', function () {
     return view('calendar-main');
 });
 Route::any('/calendar-detail', function () {
     return view('calendar-detail');
 });
-
 Route::any('/questionnaire', function () {
     return view('questionnaire-main');
 });
 Route::any('/questionnaire-detail', function () {
     return view('questionnaire-detail');
 });
-
 Route::any('/download', function () {
     return view('download-main');
 });
-
 Route::any('/sitemap', function () {
     return view('sitemap');
 });
-
 Route::any('/faq', function () {
     return view('faq-main');
 });
-
 Route::any('/about', function () {
     return view('about-detail');
 });
-
 Route::any('/contact', function () {
     return view('contact-main');
 });
-
 Route::any('/vote', function () {
     return view('vote-main');
 });
-
 Route::any('/vote-detail', function () {
     return view('vote-detail');
 });
-
 Route::any('/ita', function () {
     return view('ita-page');
 });
+Route::any('/organization', function () {
+    return view('organization');
+});
+
 
 
 

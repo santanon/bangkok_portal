@@ -8,6 +8,8 @@
                             </div>
                         </div>
  
+ 
+                         @csrf <!-- {{ csrf_field() }} -->
                         <div class="date-content d-flex justify-content-between align-items-center">
                             <div class="date-now color-secondary">
                                 วันนี้ : 2 / พฤศจิกายน / 2563
@@ -31,6 +33,7 @@
                                                 <option value="12">ธันวาคม</option>
                                             </optgroup>
                                         </select>
+ 
  
                                     </div>
                                 </div>

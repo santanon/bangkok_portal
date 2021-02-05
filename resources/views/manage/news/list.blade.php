@@ -20,7 +20,7 @@ foreach ($list as $row)
 	if($row->can_review == '1')
 	{
 		?>
-        &nbsp; <img src="<?php echo base_url() ?>assets/panel/comment.png" align="absmiddle" style="cursor:pointer;" onclick="callLightbox('<?php echo base_url(); ?>panels/<?php echo $config_mod ?>/comment_text/<?php echo $row->id ?>/news',800,640);return false;" />
+        &nbsp; <img src="<?php echo base_url() ?>assets/panel/comment.png" align="absmiddle" style="cursor:pointer;" onclick="callLightbox('http://127.0.0.1:8000/manage-admin/comment_text?m=<?php echo $config_mod ?>&id=<?php echo $row->id ?>&main_type=news',800,640);return false;" />
         <?php
 	}
 	?>

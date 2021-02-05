@@ -8,7 +8,7 @@ $TextLanguage = new \App\TextLanguage;
  
 
 <?php
-$r = $list_template->result();
+$r = $list_template;
 ?>
  
 	<div class="form-box">
@@ -35,12 +35,12 @@ $r = $list_template->result();
                                  if(confirm('<?php echo $TextLanguage->lang('choose_this_template'); ?>?'))
                                  { 
                                  	if(confirm('<?php echo $TextLanguage->lang('use_template_background'); ?>?'))
-                                    {
-                                    	window.location = '<?php echo base_url(); ?>panels/template_list/set_template/<?php echo $r[$run]->id ?>/1';  
+                                    { 
+                                        window.location = 'http://127.0.0.1:8000/manage-admin/set_template?m=template_list&id=<?php echo $r[$run]->id ?>&id2=1';  
                                     }
                                     else
-                                    {
-                                    	window.location = '<?php echo base_url(); ?>panels/template_list/set_template/<?php echo $r[$run]->id ?>/0';  
+                                    { 
+                                        window.location = 'http://127.0.0.1:8000/manage-admin/set_template?m=template_list&id=<?php echo $r[$run]->id ?>&id2=0';  
                                     } 
                                  }
                                  

@@ -127,7 +127,8 @@
 
                         <div class="section-search-wrapper">
                             <div class="group-search">
-                                <form action="">
+                                 <form action="">
+                @csrf <!-- {{ csrf_field() }} -->
                                     <div class="input-custom">
                                         <div class="input-box">
                                             <input type="text" name="" required="">

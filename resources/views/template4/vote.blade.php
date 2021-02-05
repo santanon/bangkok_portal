@@ -35,7 +35,8 @@
                     <div class="main-content">
                         <div class="group-vote">
                             <div class="question-choice">
-                                <form action="">
+                                 <form action="">
+                @csrf <!-- {{ csrf_field() }} -->
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="text-question">

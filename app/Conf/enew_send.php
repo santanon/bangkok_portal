@@ -5,12 +5,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage; 
 use Illuminate\Support\Facades\Http; 
 use Cache;
-
- 
-/*
-URL PATH : /panels/enew_send/
-LOCATION : /application/controllers/panels/enew_send.php
-*/
  
 class Enew_send
 {  
@@ -43,83 +37,80 @@ class Enew_send
 	var $config_use_status= true;
 	 
 	public function index()
-	{
-		//redirect('/panels/' . $this->mod . '/form'); 
-		?>
-		<meta http-equiv="refresh" content="0;URL=<?php echo 'http://localhost/bangkok.go.th.portal/panels/' . $this->mod . '/form' ?>" />
+	{  
+		?> 
+        <meta http-equiv="refresh" content="0;URL=<?php echo 'http://127.0.0.1:8000/manage-admin/form?m='.$this->mod.'' ?>" />
 		<?php
 		exit;	
 	}
 	
 	public function form()
-	{ 
-		$this->include_header(); 
+	{   
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		  
 		 
-		$data['this_cat'] = $this->lang->line($this->mod);
-		$data['this_page'] = $this->lang->line('form');
-		$data['title'] = $data['this_page'] . ' : ' . $data['this_cat'] . ' - ' . $this->lang->line('bangkok_portal');     
+		$data['this_cat'] = $TextLanguage->lang(@$this->mod);
+		$data['this_page'] = $TextLanguage->lang('form');
+		$data['title'] = $data['this_page'] . ' : ' . $data['this_cat'] . ' - ' . $TextLanguage->lang('bangkok_portal');     
 		$data['config_mod'] = $this->mod; 
 		$data['config_submenu_title'] = $this->config_submenu_title;
 		$data['config_submenu_mod'] = $this->config_submenu_mod;   
-		$data['config_header_info'] = $this->lang->line('help_'.$this->mod.'_add');							   
+		$data['config_header_info'] = $TextLanguage->lang('help_'.$this->mod.'_add');							   
 		$data['config_footer_js'] = 'mainmenuFocus(1,16,3); btn2stageFocus(0,1);';  
-		$data['config_dropdown_title'] = $this->lang->line($this->mod_cat_dropdown_title);       
+		$data['config_dropdown_title'] = $TextLanguage->lang(@$this->mod_cat_dropdown_title);       
 		 
-		if($this->mod_cat_model <> '')
-		{
-			$this->load->model($this->mod_model);
-			$this->load->model($this->mod_cat_model);
-			
-			$d = new stdClass();  
-			$d->orderby = $this->mod_cat_order_by;
-			$d->where = array('web_id'=>$_SESSION['panel_id']);
-			$data['list_cat'] = $this->{$this->mod_cat_model}->select_data($d);  
-			 
-			$d = new stdClass(); 
-			$d->orderby = $this->mod_cat_order_by;
-			$d->where = array('web_id'=>$_SESSION['panel_id']);
-			$list = $this->{$this->mod_cat_model}->select_data($d);   
-			 
-			foreach ($list->result() as $row)
+		if(@$this->mod_cat_model <> '')
+		{ 
+			$q = "SELECT * FROM ".$CustomHelper->model_to_table($this->mod_cat_model)." WHERE web_id = ? ORDER BY ".$this->mod_cat_order_by;	 	
+			$v = $_SESSION['panel_id'];
+			$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_cat_model)),$q,$v);
+			$data['list_cat'] = json_decode($res); 
+			$list = $data['list_cat'];
+		
+			foreach ($list as $row)
 			{  
-				$d = new stdClass();  
-				$d->where = array($this->mod_cat_field => $row->id); 
-				$d->count = true; 
-				$data['list_cat_count'][] = $this->{$this->mod_model}->select_data($d);      
+				$q = "SELECT * FROM ".$CustomHelper->model_to_table($this->mod_model)." WHERE ".$this->mod_cat_field." = ?";	 	
+				$v = $row->id;
+				$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),$q,$v);
+				$q = json_decode($res);  
+				
+				$data['list_cat_count'][] = count($q);    
 			}   
 		}
 		 
-		$this->load->view('panel/'.$this->mod.'/add', $data); 
+		return $data;
+		//return view('manage.'.$this->mod.'.add',$data);
+		//$this->load->view('panel/'.$this->mod.'/add', $data); 
 	}  
 	
 	public function send_submit()
 	{ 
-		$cat_id = $this->input->post('cat_id', TRUE);
-		$title = htmlspecialchars($this->input->post('title', TRUE));
-		//$info = $this->input->post('info', FALSE);
-		$info = htmlspecialchars_decode($this->input->post('info', FALSE));  
+		$cat_id = $CustomHelper->input_post('cat_id', TRUE);
+		$title = htmlspecialchars($CustomHelper->input_post('title', TRUE));
+		//$info = $CustomHelper->input_post('info', FALSE);
+		$info = htmlspecialchars_decode($CustomHelper->input_post('info', FALSE));  
 		 
-		$this->include_header(); 
-		
-		$this->load->model($this->mod_model); 
-		
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		  
 		$this->load->library('email'); 
 		$this->email->from($_SESSION['panel_profile_email'], $_SESSION['panel_profile_name'] . ' ' . $_SESSION['panel_profile_lastname']);
-		
-		$d = new stdClass();  
-		$d->orderby = 'title ASC';
-		
+		 
 		if($cat_id == 'all')
 		{ 
-		
+			$q = "SELECT * FROM ".$CustomHelper->model_to_table($this->mod_model)." ORDER BY title ASC";	 	
 		}
 		else
 		{ 
-			$d->where = array('cat_id' => $cat_id);  
+			$q = "SELECT * FROM ".$CustomHelper->model_to_table($this->mod_model)." WHERE cat_id = '".$cat_id."' ORDER BY title ASC";	  
 		}
-		
-		$q = $this->{$this->mod_model}->select_data($d);  
-		foreach ($q->result() as $row)
+		 
+		$v = '';
+		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),$q,$v);
+		$q = json_decode($res);
+		  
+		foreach ($q as $row)
 		{   
 			$this->email->to($row->title);     
 			echo $row->title . '<br>';

@@ -5,13 +5,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage; 
 use Illuminate\Support\Facades\Http; 
 use Cache;
-
- 
-/*
-URL PATH : /panels/inbox/
-LOCATION : /application/controllers/panels/inbox.php
-*/
- 
+  
 class Inbox
 {  
 	var $mod = 'inbox'; 
@@ -43,18 +37,23 @@ class Inbox
 	var $config_sort2 = 'desc'; 
 	  
 	public function read($v1 = '0')
-	{ 
-		$this->include_header(); 
+	{   
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		  
 		 
-		$this->load->model($this->mod_model); 
+		 
+		 
 		
-		$d = new stdClass();  
-		$d->where = array('id' => $v1,'web_id' => $_SESSION['panel_id']);
-		$q = $this->{$this->mod_model}->select_data($d);  
+		$q = "SELECT * FROM ".$CustomHelper->model_to_table($this->mod_model)." WHERE web_id = ?";	 	
+		$v = $_SESSION['panel_id'];
+		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),$q,$v);
+		$q = json_decode($res);
+		
 		 
-		if($q->num_rows == 1)
+		if(count($q) > 0)
 		{  
-			$row = $q->result();  
+			$row = $q;  
 			
 			$data['read_id'] = $row[0]->id;
 			$data['read_web_id'] = $row[0]->web_id;
@@ -66,14 +65,21 @@ class Inbox
 			$data['read_flag_read'] = $row[0]->flag_read;
 			$data['read_last_create'] = $row[0]->last_create; 
 			
-			$data['this_cat'] = $this->lang->line('inbox');
-			$data['this_page'] = $this->lang->line('send_message');
-			$data['title'] = $data['this_page'] . ' : ' . $data['this_cat'] . ' - ' . $this->lang->line('bangkok_portal');
+			$data['this_cat'] = $TextLanguage->lang('inbox');
+			$data['this_page'] = $TextLanguage->lang('send_message');
+			$data['title'] = $data['this_page'] . ' : ' . $data['this_cat'] . ' - ' . $TextLanguage->lang('bangkok_portal');
 			
-			$d = new stdClass();  
+			$d = new \stdClass();  
 			$d->flag_read = '2';
-			$this->{$this->mod_model}->update_data($d,$data['read_id'],'id',$_SESSION['panel_id'],'web_id');  
-			 
+			
+			$this_qr = ''; 
+			foreach($d as $key=>$value) 
+			{
+				$this_qr = $this_qr.$key." = '".addslashes($value)."',";
+			}
+			$this_qr = substr($this_qr,0,-1);  	 
+			$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),"UPDATE ".$CustomHelper->model_to_table($this->mod_model)." SET ".$this_qr." WHERE web_id = '".$_SESSION['panel_id']."' AND id = '".$data['read_id']."'",'');
+			  
 			$data['config_mod'] = $this->mod;       
 			   
 			$this->load->view('panel/inbox/read', $data); 
@@ -85,24 +91,28 @@ class Inbox
 	}
 	
 	public function send($v1 = '0')
-	{ 
-		$this->include_header(); 
+	{   
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		  
 		 
-		$data['this_cat'] = $this->lang->line($this->mod);
-		$data['this_page'] = $this->lang->line('send_message');
-		$data['title'] = $data['this_page'] . ' : ' . $data['this_cat'] . ' - ' . $this->lang->line('bangkok_portal');    
+		$data['this_cat'] = $TextLanguage->lang(@$this->mod);
+		$data['this_page'] = $TextLanguage->lang('send_message');
+		$data['title'] = $data['this_page'] . ' : ' . $data['this_cat'] . ' - ' . $TextLanguage->lang('bangkok_portal');    
 		
 		if($v1 <> '0')
 		{
-			$this->load->model($this->mod_model); 
-		
-			$d = new stdClass();  
-			$d->where = array('id' => $v1,'web_id' => $_SESSION['panel_id']);
-			$q = $this->{$this->mod_model}->select_data($d);  
 			 
-			if($q->num_rows == 1)
+		
+			 
+			$q = "SELECT * FROM ".$CustomHelper->model_to_table($this->mod_model)." WHERE web_id = ? AND id = '".$v1."'";	 	
+			$v = $_SESSION['panel_id'];
+			$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),$q,$v);
+			$q = json_decode($res);
+			 
+			if(count($q) > 0)
 			{  
-				$row = $q->result();  
+				$row = $q;  
 				 
 				$data['read_reply'] = 1;
 				$data['read_id'] = $row[0]->id;
@@ -114,16 +124,18 @@ class Inbox
 				$data['read_from_name'] = $row[0]->from_name;
 				$data['read_flag_read'] = $row[0]->flag_read;
 				$data['read_last_create'] = $row[0]->last_create; 
-				
-				$this->load->model('Portal_website_model'); 
-		
-				$d = new stdClass();  
-				$d->where = array('id' => $data['read_from_id']);   
-				$q = $this->Portal_website_model->select_data($d);  
 				 
-				if($q->num_rows == 1)
+		
+				 
+				$q = "SELECT * FROM ".$CustomHelper->model_to_table('Portal_website_model')." WHERE id = ?";	 	
+				$v = $data['read_from_id'];
+				$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('Portal_website_model')),$q,$v);
+				$q = json_decode($res);
+				 
+				 
+				if(count($q) > 0)
 				{ 
-					$row = $q->result();  
+					$row = $q;  
 				 
 					$data['read_username'] = $row[0]->username;
 				} 
@@ -138,27 +150,32 @@ class Inbox
 		$data['config_submenu_title'] = $this->config_submenu_title;
 		$data['config_submenu_mod'] = $this->config_submenu_mod;   
 		
-		$data['config_header_info'] = $this->lang->line('help_'.$this->mod.'_add');
+		$data['config_header_info'] = $TextLanguage->lang('help_'.$this->mod.'_add');
 									   
 		$data['config_footer_js'] = 'btn2stageFocus(0,2);';    
-		$data['config_dropdown_title'] = $this->lang->line($this->mod_cat_dropdown_title);      
+		$data['config_dropdown_title'] = $TextLanguage->lang(@$this->mod_cat_dropdown_title);      
 		  
 		$this->load->view('panel/inbox/send', $data); 
 	}
 	
 	public function send_submit()
 	{ 
-		$username = $this->input->post('username', TRUE);
+		$username = $CustomHelper->input_post('username', TRUE);
 		 
-		$this->include_header(); 
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
 		 
-		$this->load->model('Portal_website_model'); 
+		  
 		
-		$d = new stdClass();  
-		$d->where = array('username' => $username);   
-		$q = $this->Portal_website_model->select_data($d);  
+		 
+		$q = "SELECT * FROM ".$CustomHelper->model_to_table('Portal_website_model')." WHERE username = ?";	 	
+		$v = $username;
+		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('Portal_website_model')),$q,$v);
+		$q = json_decode($res);
 		
-		if($q->num_rows == 1 || $username == 'Admin')
+		
+		
+		if(count($q) > 0 || $username == 'Admin')
 		{  
 			$config['upload_path']	 = './upload/inbox/';
 			$config['allowed_types'] = UPLOAD_FILE_TYPE;
@@ -213,30 +230,35 @@ class Inbox
 			}
 			else
 			{
-				$row = $q->result(); 
+				$row = $q; 
 				$this_id = $row[0]->id;		
 			}
 			 
-			$this->load->model($this->mod_model);  
-			$d = new stdClass(); 
+			  
+			$d = new \stdClass(); 
 			$d->web_id = $this_id; 
-			$d->title = htmlspecialchars($this->input->post('title', TRUE));
-			$d->info = $this->input->post('info', FALSE);
+			$d->title = htmlspecialchars($CustomHelper->input_post('title', TRUE));
+			$d->info = $CustomHelper->input_post('info', FALSE);
 			$d->file1 = $this_file;
 			$d->from_id = $_SESSION['panel_id'];
 			$d->from_name = $_SESSION['panel_profile_name'] . ' ' . $_SESSION['panel_profile_lastname'];
 			$d->flag_read = 1; 
 			$d->last_create = date('U');    
-			$this->{$this->mod_model}->add_data($d);    
-			 	
-			$this->load->model('Portal_website_log_model'); 
-			$this->Portal_website_log_model->add_log('Inbox - Send Message (' . $this->input->post('title', TRUE) . ')',$_SESSION['panel_username'],$_SESSION['panel_id'],strtoupper($this->mod).'_SEND');  
+			$this_qr = ''; 
+		foreach($d as $key=>$value) 
+		{
+			$this_qr = $this_qr.$key." = '".addslashes($value)."',";
+		}
+		$this_qr = substr($this_qr,0,-1);  	 
+		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),"INSERT INTO ".$CustomHelper->model_to_table($this->mod_model)." SET ".$this_qr."",'');  
+		 	 
+			$CustomHelper->add_log(''.$this->mod_title.'Inbox - Send Message ('.$CustomHelper->input_post('title', TRUE).')',$_SESSION['panel_username'],$_SESSION['panel_id'],strtoupper($this->mod).'_SEND');
 			
 			?>
             <meta charset="utf-8" />
 			<script type="text/javascript">
-			alert('<?php echo $this->lang->line('send_message_success'); ?>'); 
-			window.location = '../../panels/<?php echo $this->mod ?>/lists';
+			alert('<?php echo $TextLanguage->lang('send_message_success'); ?>'); 
+			window.location = 'http://127.0.0.1:8000/manage-admin/list?m=<?php echo $this->mod ?>';
 			</script>
 			<?php  
 			exit;
@@ -246,7 +268,7 @@ class Inbox
 			?>
             <meta charset="utf-8" />
             <script type="text/javascript">
-			alert('<?php echo $this->lang->line('username_does_not_exist'); ?>');
+			alert('<?php echo $TextLanguage->lang('username_does_not_exist'); ?>');
 			window.history.back();
 			</script>
             <?php

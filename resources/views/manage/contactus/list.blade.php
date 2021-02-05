@@ -15,7 +15,7 @@ foreach ($list as $row)
         <td align="center">#<?php echo $row->id ?></td>
         <td> 
         
-        <span class="link-text"><a class="clightbox" data-width="600" data-height="500" href="<?php echo base_url() ?>panels/<?php echo $config_mod; ?>/read/<?php echo $row->id ?>"> <?php echo $row->title ?> </a></span>
+        <span class="link-text"><a class="clightbox" data-width="600" data-height="500" href="<?php echo 'http://127.0.0.1:8000/manage-admin/read?m='.$config_mod.'&id='.$row->id ?>"> <?php echo $row->title ?> </a></span>
           
          </td> 
          

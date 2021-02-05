@@ -85,7 +85,8 @@ $TextLanguage = new \App\TextLanguage;
 									<?php
 								}
 								?>  
-                                    <form method="post" action="<?php echo base_url(); ?>panel/reset_password_save" onSubmit="return check_email()">
+                                    <form method="post" action="http://127.0.0.1:8000/manage-admin/reset_password_save" onSubmit="return check_email()">
+                                    @csrf <!-- {{ csrf_field() }} -->
                                         <table>
                                             <tr>
                                                 <td align="right"><label for="uId" class="fontfacetext-bold"><?php echo $TextLanguage->lang('new_password'); ?></label></td>
@@ -98,8 +99,8 @@ $TextLanguage = new \App\TextLanguage;
                                             <tr>
                                                 <td>&nbsp;</td>
                                                 <td><span class="btn round big green"><input type="submit" value="<?php echo $TextLanguage->lang('save'); ?>" class="fontfacetext"></span>
-                                                &nbsp;
-                                                <span class="btn round big green"><input onClick="window.location = '<?php echo base_url(); ?>panel/';" type="button" value="<?php echo $TextLanguage->lang('cancel'); ?>" class="fontfacetext"></span>
+                                                <!--&nbsp;
+                                                <span class="btn round big green"><input onClick="window.location = '';" type="button" value="<?php echo $TextLanguage->lang('cancel'); ?>" class="fontfacetext"></span>-->
                                                 
                                                 </td>
                                             </tr>

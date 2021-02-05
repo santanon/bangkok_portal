@@ -11,7 +11,8 @@
                 <div class="vote-template">
                 <div class="group-vote detail-page">
                     <div class="question-choice">
-                        <form action="">
+                         <form action="">
+                @csrf <!-- {{ csrf_field() }} -->
                             <div class="choice-question">
                                 <ul>
                                     <li>

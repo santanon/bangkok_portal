@@ -344,14 +344,20 @@ class PanelController extends Controller
 			$_SESSION['panel_session_id'] = $obj_portal_website[0]->session_id;
 			  
 			//$this->Portal_website_log_model->add_log('Login Success ( ' . $_SESSION['panel_username'] . ' )',$_SESSION['panel_username'],$_SESSION['panel_id'],'LOGIN_PASS');
-			 
-			/*
-			$d = new stdClass(); 
+			  
+			$d = new \stdClass(); 
 			$d->last_login = date('U'); 
 			$d->login_count = $_SESSION['panel_login_count']+1;
 			$d->session_id = session_id(); 
-			$this->Portal_website_model->update_data($d,$_SESSION['panel_id'],'id');    
-			*/
+			 
+			$this_qr = ''; 
+			foreach($d as $key=>$value) 
+			{
+				$this_qr = $this_qr.$key." = '".addslashes($value)."',";
+			}
+			$this_qr = substr($this_qr,0,-1);  	 
+			$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('Portal_website_model')),"UPDATE ".$CustomHelper->model_to_table('Portal_website_model')." SET ".$this_qr." WHERE id = '".$_SESSION['panel_id']."'",'');
+			
 
 			$q = "SELECT * FROM tbl_portal_website_style WHERE web_id = ?";
 			$v = $_SESSION['panel_id'];
@@ -360,11 +366,11 @@ class PanelController extends Controller
 
 			/*
 			$this->load->model('Portal_website_style_model'); 
-			$d = new stdClass();  
+			$d = new \stdClass();  
 			$d->where = array('web_id' => $_SESSION['panel_id']);   
 			$q = $this->Portal_website_style_model->select_data($d);  
 			 
-			$row = $q->result(); 
+			$row = $q; 
 			*/
 
 			$_SESSION['panel_style_logo_type'] = $obj_portal_website_style[0]->logo_type;
@@ -415,12 +421,9 @@ class PanelController extends Controller
 			  
 			/*
 			$this->load->model('Portal_website_all_bg_model'); 
-			$d = new stdClass();  
+			$d = new \stdClass();  
 			$d->where = array('web_id' => $_SESSION['panel_id']);   
-			$q = $this->Portal_website_all_bg_model->select_data($d);  
-			 	
-			//redirect('/panel/login');
-			?><meta http-equiv="refresh" content="0;URL=http://localhost/bangkok.go.th.portal/panel/login" /><?
+			$q = $this->Portal_website_all_bg_model->select_data($d);   
 			*/
 
 			?><script>window.location = '/panel-admin/login';</script><?php

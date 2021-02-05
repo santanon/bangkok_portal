@@ -18,7 +18,7 @@ foreach ($list as $row)
 	if($row->have_submenu == '2')
 	{
 		?>
-        <span class="link-text">[ <a href="<?php echo base_url() ?>panels/page/set_cat/<?php echo $row->id ?>"> <?php echo $TextLanguage->lang('have_sub_menu') ?> </a> ]</span>
+        <span class="link-text">[ <a href="<?php echo 'http://127.0.0.1:8000/manage-admin/set_cat?m=page&id='.$row->id ?>"> <?php echo $TextLanguage->lang('have_sub_menu') ?> </a> ]</span>
         <?php
 	}
 	?> </td>

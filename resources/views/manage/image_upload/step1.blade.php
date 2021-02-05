@@ -11,7 +11,8 @@ $TextLanguage = new \App\TextLanguage;
 if($_SESSION['panel_style_logo_img1'] == '')
 {
 	?>
-    <form enctype="multipart/form-data" action="<?php echo base_url() ?>panels/image_upload/step2" id="form_step_1" method="post">
+    <form enctype="multipart/form-data" action="http://127.0.0.1:8000/manage-admin/step2?m=image_upload" id="form_step_1" method="post">
+    @csrf <!-- {{ csrf_field() }} -->
     <br />
     <br /> 
     <br />
@@ -49,7 +50,7 @@ else
 					<td align="center">
 					<img src="<?php echo base_url(); ?>upload/web/<?php echo $_SESSION['panel_style_logo_img1'] ?>" style="border:1px solid #CCC;"> 
 					<br /><br /> 
-					<span class="btn round big gray"><input onclick="if(confirm('<?php echo $TextLanguage->lang('confirm') ?>?')){ window.location = '<?php echo base_url(); ?>panels/image_upload/reset_logo';}" type="reset" class="fontfacetext" value="<?php echo $TextLanguage->lang('reset_logo') ?>"></span> 
+					<span class="btn round big gray"><input onclick="if(confirm('<?php echo $TextLanguage->lang('confirm') ?>?')){ window.location = 'http://127.0.0.1:8000/manage-admin/reset_logo?m=image_upload';}" type="reset" class="fontfacetext" value="<?php echo $TextLanguage->lang('reset_logo') ?>"></span> 
 					</td>
 				</tr> 
 			</tbody>

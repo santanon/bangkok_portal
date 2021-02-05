@@ -34,7 +34,8 @@ function check_form()
 	}
 }
 </script>
-<form method="post" enctype="multipart/form-data" onsubmit="return check_form();" action="<?php echo base_url(); ?>panels/setting_website/edit_submit">
+<form method="post" enctype="multipart/form-data" onsubmit="return check_form();" action="http://127.0.0.1:8000/manage-admin/edit_submit?m=setting_website">
+@csrf <!-- {{ csrf_field() }} -->
 <table>
 	<tbody>  
     	<tr>
@@ -44,7 +45,7 @@ function check_form()
          
 <select class="selectric" name="web_type" id="web_type" style="width:500px;"> 
 <?php 
-foreach ($list_cat->result() as $row_cat)
+foreach ($list_cat as $row_cat)
 {   
 	?>
 	<option value="<?php echo $row_cat->id; ?>" <?php if($_SESSION['panel_web_type'] == $row_cat->id){ ?> selected="selected" <?php } ?>><?php echo $row_cat->title; ?></option> 
@@ -130,11 +131,11 @@ foreach ($list_cat->result() as $row_cat)
 			<td> 
             
 <div class="align-box" style="width:110px;"> 
-    <input name="lang_start" type="radio" id="lang_start1" value="TH" <?php if(@$_SESSION['panel_style_lang_start'] == 'TH'){ ?> checked="checked" <? } ?>/> 
+    <input name="lang_start" type="radio" id="lang_start1" value="TH" <?php if(@$_SESSION['panel_style_lang_start'] == 'TH'){ ?> checked="checked" <?php } ?>/> 
     <label class="input-label" for="lang_start1"><?php echo $TextLanguage->lang('thai'); ?></label>
 </div>&nbsp;&nbsp;
 <div class="align-box" style="width:110px;"> 
-    <input name="lang_start" type="radio" id="lang_start2" value="EN" <?php if(@$_SESSION['panel_style_lang_start'] == 'EN'){ ?> checked="checked" <? } ?>  />
+    <input name="lang_start" type="radio" id="lang_start2" value="EN" <?php if(@$_SESSION['panel_style_lang_start'] == 'EN'){ ?> checked="checked" <?php } ?>  />
     <label class="input-label" for="lang_start2"><?php echo $TextLanguage->lang('english'); ?></label>
 </div> 
              
@@ -153,11 +154,11 @@ foreach ($list_cat->result() as $row_cat)
 			<td> 
              
 <div class="align-box" style="width:110px;"> 
-    <input name="close_status" type="radio" id="close_status1" value="2" <?php if(@$_SESSION['panel_style_close_status'] <> '1'){ ?> checked="checked" <? } ?> onclick="hide_close_type();hide_close_info();hide_close_redirect(); document.getElementById('close_type1').checked = true;" /> 
+    <input name="close_status" type="radio" id="close_status1" value="2" <?php if(@$_SESSION['panel_style_close_status'] <> '1'){ ?> checked="checked" <?php } ?> onclick="hide_close_type();hide_close_info();hide_close_redirect(); document.getElementById('close_type1').checked = true;" /> 
     <label class="input-label" for="close_status1"><?php echo $TextLanguage->lang('open'); ?></label>
 </div>&nbsp;&nbsp;
 <div class="align-box" style="width:110px;"> 
-    <input name="close_status" type="radio" id="close_status2" value="1" <?php if(@$_SESSION['panel_style_close_status'] == '1'){ ?> checked="checked" <? } ?> onclick="show_close_type();show_close_info()" />
+    <input name="close_status" type="radio" id="close_status2" value="1" <?php if(@$_SESSION['panel_style_close_status'] == '1'){ ?> checked="checked" <?php } ?> onclick="show_close_type();show_close_info()" />
     <label class="input-label" for="close_status2"><?php echo $TextLanguage->lang('close'); ?></label>
 </div>     
              
@@ -169,11 +170,11 @@ foreach ($list_cat->result() as $row_cat)
 			<td> 
             
 <div class="align-box" style="width:110px;"> 
-    <input name="close_type" type="radio" id="close_type1" value="page" <?php if(@$_SESSION['panel_style_close_type'] == 'page'){ ?> checked="checked" <? } ?> onclick="show_close_info();hide_close_redirect();" /> 
+    <input name="close_type" type="radio" id="close_type1" value="page" <?php if(@$_SESSION['panel_style_close_type'] == 'page'){ ?> checked="checked" <?php } ?> onclick="show_close_info();hide_close_redirect();" /> 
     <label class="input-label" for="close_type1"><?php echo $TextLanguage->lang('page1'); ?></label>
 </div>&nbsp;&nbsp;
 <div class="align-box" style="width:110px;"> 
-    <input name="close_type" type="radio" id="close_type2" value="link" <?php if(@$_SESSION['panel_style_close_type'] == 'link'){ ?> checked="checked" <? } ?> onclick="hide_close_info();show_close_redirect();" />
+    <input name="close_type" type="radio" id="close_type2" value="link" <?php if(@$_SESSION['panel_style_close_type'] == 'link'){ ?> checked="checked" <?php } ?> onclick="hide_close_info();show_close_redirect();" />
     <label class="input-label" for="close_type2"><?php echo $TextLanguage->lang('redirect'); ?></label>
 </div> 
             
@@ -215,7 +216,7 @@ foreach ($list_cat->result() as $row_cat)
 			<td>
 			
 			<span class="btn round big blue"><input type="submit" class="fontfacetext" value="<?php echo $TextLanguage->lang('save'); ?>"></span>&nbsp;
-			<span class="btn round big gray"><input type="button" class="fontfacetext" value="<?php echo $TextLanguage->lang('cancel'); ?>" onclick="window.location = '<?php echo base_url() . 'panels/' ?>';"></span>
+			<span class="btn round big gray"><input type="button" class="fontfacetext" value="<?php echo $TextLanguage->lang('cancel'); ?>" onclick="window.history.back();"></span>
 
 			</td>
 		</tr>

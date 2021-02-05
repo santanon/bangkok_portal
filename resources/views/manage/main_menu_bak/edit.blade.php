@@ -52,7 +52,8 @@ $TextLanguage = new \App\TextLanguage;
         }
     }
     </script>
-    <form method="post" enctype="multipart/form-data" onsubmit="return check_form();" action="<?php echo base_url(); ?>panels/<?php echo $config_mod; ?>/edit_submit">
+    <form method="post" enctype="multipart/form-data" onsubmit="return check_form();" action="http://127.0.0.1:8000/manage-admin/edit_submit?m=<?php echo $config_mod;  ?>">
+    @csrf <!-- {{ csrf_field() }} -->
     <table>
         <tbody>
             <tr>
@@ -86,10 +87,10 @@ a3.style.display = 'none';
             <tr>
                 <th width="120"><?php echo $TextLanguage->lang('type'); ?></th>
                 <td><div class="align-box" style="width:110px;">
-                <input name="have_submenu" type="radio" id="test-radio1" value="1" <?php if($edit_have_submenu == '1'){ ?> checked="checked" <? } ?>  onclick="show_link('1');"> 
+                <input name="have_submenu" type="radio" id="test-radio1" value="1" <?php if($edit_have_submenu == '1'){ ?> checked="checked" <?php } ?>  onclick="show_link('1');"> 
                 <label class="input-label" for="test-radio1"><?php echo $TextLanguage->lang('link_url'); ?></label></div>&nbsp;&nbsp;
                     <div class="align-box" style="width:210px;"> 
-                    <input name="have_submenu" type="radio" id="test-radio2" value="2" <?php if($edit_have_submenu == '2'){ ?> checked="checked" <? } ?> onclick="show_link('2');"  />
+                    <input name="have_submenu" type="radio" id="test-radio2" value="2" <?php if($edit_have_submenu == '2'){ ?> checked="checked" <?php } ?> onclick="show_link('2');"  />
                     <label class="input-label" for="test-radio2"><?php echo $TextLanguage->lang('have_sub_menu'); ?></label></div>
                     
                     &nbsp;&nbsp;
@@ -102,7 +103,7 @@ a3.style.display = 'none';
             <tr id="link_hide_1">
                 <th width="120"><?php echo $TextLanguage->lang('link_type'); ?></th>
                 <td><div class="align-box" style="width:90px;">
-                <input id="test-radio3" name="link_type" value="1" type="radio" <?php if($edit_link_type == '1'){ ?> checked="checked" <? } ?>  > 
+                <input id="test-radio3" name="link_type" value="1" type="radio" <?php if($edit_link_type == '1'){ ?> checked="checked" <?php } ?>  > 
                 <label class="input-label" for="test-radio3"><?php echo $TextLanguage->lang('internal'); ?></label></div>&nbsp;&nbsp;
                 <input name="link_page" id="link_page" type="text" class="sm-input" style="width:235px" value="<?php echo $edit_link_page ?>">  
                 <input type="button" name="upload" value="<?php echo $TextLanguage->lang('link_helper'); ?>" onclick="callLightbox('<?php echo base_url(); ?>panel/lh/form/link_page',500,640);return false;" /> 
@@ -112,7 +113,7 @@ a3.style.display = 'none';
             </tr>
             <tr id="link_hide_2">
                 <th width="120">&nbsp;</th>
-                <td><div class="align-box" style="width:90px;"><input id="test-radio4" name="link_type" value="2" type="radio" <?php if($edit_link_type == '2'){ ?> checked="checked" <? } ?>> 
+                <td><div class="align-box" style="width:90px;"><input id="test-radio4" name="link_type" value="2" type="radio" <?php if($edit_link_type == '2'){ ?> checked="checked" <?php } ?>> 
                 <label class="input-label" for="test-radio4"><?php echo $TextLanguage->lang('external'); ?></label></div>&nbsp;&nbsp;
                     <input name="url" type="text" class="sm-input--flag-th" id="url" style="width:235px" placeholder="http://" value="<?php echo $edit_url; ?>">
                     <input name="en_url" type="text" class="sm-input--flag-en" id="en_url" style="width:235px" placeholder="http://" value="<?php echo $edit_en_url; ?>">
@@ -121,8 +122,8 @@ a3.style.display = 'none';
             </tr> 
             <tr id="link_hide_3">
                 <th width="120"><?php echo $TextLanguage->lang('link_target'); ?></th>
-                <td><div class="align-box" style="width:110px;"><input name="url_target" type="radio" id="test-radio5" value="_top"  <?php if($edit_url_target == '_top'){ ?> checked="checked" <? } ?>> <label class="input-label" for="test-radio5"><?php echo $TextLanguage->lang('redirect'); ?></label></div>&nbsp;&nbsp;
-                    <div class="align-box" style="width:110px;"><input name="url_target" type="radio" id="test-radio6" value="_blank" <?php if($edit_url_target == '_blank'){ ?> checked="checked" <? } ?>> <label class="input-label" for="test-radio6"><?php echo $TextLanguage->lang('new_window'); ?></label></div>&nbsp;&nbsp;
+                <td><div class="align-box" style="width:110px;"><input name="url_target" type="radio" id="test-radio5" value="_top"  <?php if($edit_url_target == '_top'){ ?> checked="checked" <?php } ?>> <label class="input-label" for="test-radio5"><?php echo $TextLanguage->lang('redirect'); ?></label></div>&nbsp;&nbsp;
+                    <div class="align-box" style="width:110px;"><input name="url_target" type="radio" id="test-radio6" value="_blank" <?php if($edit_url_target == '_blank'){ ?> checked="checked" <?php } ?>> <label class="input-label" for="test-radio6"><?php echo $TextLanguage->lang('new_window'); ?></label></div>&nbsp;&nbsp;
                 </td>
             </tr>
             
@@ -138,7 +139,7 @@ $this_data['edit_date_end'] = $edit_date_end;
                 <td>
                 
                 <span class="btn round big blue"><input type="submit" class="fontfacetext" value="<?php echo $TextLanguage->lang('save'); ?>"></span>&nbsp;
-                <span class="btn round big gray"><input type="button" class="fontfacetext" value="<?php echo $TextLanguage->lang('cancel'); ?>" onclick="window.location = '<?php echo base_url() . 'panels/' . $config_mod . '' ?>';"></span>
+                <span class="btn round big gray"><input type="button" class="fontfacetext" value="<?php echo $TextLanguage->lang('cancel'); ?>" onclick="window.location = 'http://127.0.0.1:8000/manage-admin/list?m=<?php echo $config_mod;  ?>';"></span>
 
                 </td>
             </tr>

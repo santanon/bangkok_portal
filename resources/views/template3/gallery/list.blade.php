@@ -8,7 +8,8 @@
                 </div>
             </div>
             <div class="search-content">
-                <form action="">
+                 <form action="">
+                @csrf <!-- {{ csrf_field() }} -->
                     <div class="row">
                         <div class="col-lg-11 col-sm-6">
                             <div class="input-custom inp-search">

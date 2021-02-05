@@ -16,7 +16,7 @@ foreach ($list as $row)
         <td> 
         
         <span id="read_message_show_<?php echo $row->id ?>"> 
-            <img src="<?php echo base_url(); ?>assets/panel/<?php if($row->flag_read == 2){ ?>msg-read.gif<?php }else{ ?>msg-unread.gif<?php } ?>" width="16" height="16" align="absmiddle" /> &nbsp; <span class="link-text"><a <?php if($row->flag_read == '1'){ ?> onclick="document.getElementById('read_message_show_<?php echo $row->id ?>').style.display = 'none';document.getElementById('read_message_hide_<?php echo $row->id ?>').style.display = '';" <?php } ?> class="clightbox" data-width="600" data-height="500" href="<?php echo base_url() ?>panels/<?php echo $config_mod; ?>/read/<?php echo $row->id ?>"><?php 
+            <img src="<?php echo base_url(); ?>assets/panel/<?php if($row->flag_read == 2){ ?>msg-read.gif<?php }else{ ?>msg-unread.gif<?php } ?>" width="16" height="16" align="absmiddle" /> &nbsp; <span class="link-text"><a <?php if($row->flag_read == '1'){ ?> onclick="document.getElementById('read_message_show_<?php echo $row->id ?>').style.display = 'none';document.getElementById('read_message_hide_<?php echo $row->id ?>').style.display = '';" <?php } ?> class="clightbox" data-width="600" data-height="500" href="http://127.0.0.1:8000/manage-admin/read?m=<?php echo $config_mod; ?>&id=<?php echo $row->id ?>"><?php 
             
             if($row->flag_read == 2)
             {
@@ -37,7 +37,7 @@ foreach ($list as $row)
 		?>
         
         <span id="read_message_hide_<?php echo $row->id ?>" style="display:none;"> 
-            <img src="<?php echo base_url(); ?>assets/panel/msg-read.gif" width="16" height="16" align="absmiddle" /> &nbsp; <span class="link-text"><a class="clightbox" data-width="600" data-height="500" href="<?php echo base_url() ?>panels/<?php echo $config_mod; ?>/read/<?php echo $row->id ?>"> <?php echo $row->title ?> </a></span>
+            <img src="<?php echo base_url(); ?>assets/panel/msg-read.gif" width="16" height="16" align="absmiddle" /> &nbsp; <span class="link-text"><a class="clightbox" data-width="600" data-height="500" href="http://127.0.0.1:8000/manage-admin/read?m=<?php echo $config_mod; ?>&id=<?php echo $row->id ?>"> <?php echo $row->title ?> </a></span>
         </span>
           
          </td>

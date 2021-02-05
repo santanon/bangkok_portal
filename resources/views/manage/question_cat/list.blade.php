@@ -18,28 +18,28 @@ foreach ($list as $row)
 	
 	$can_delete = '1';
 	
-	if(count($list_check_main_menu[$row->id]->result()) > 0)
+	if(count($list_check_main_menu[$row->id]) > 0)
 	{
-		$ro = $list_check_main_menu[$row->id]->result(); 
-		?>  &nbsp;  <span class="link-text"><a href="<?php echo base_url() . 'panels/main_menu/edit/' . $ro[0]->id ?>"> <?php echo $TextLanguage->lang('main_menu') ?> </a></span> <?php 
+		$ro = $list_check_main_menu[$row->id]; 
+		?>  &nbsp;  <span class="link-text"><a href="http://127.0.0.1:8000/manage-admin/edit?m=main_menu&id=<?php echo $ro[0]->id ?>"> <?php echo $TextLanguage->lang('main_menu') ?> </a></span> <?php 
 		$can_delete = '2';
 	}  
-	if(count($list_check_page[$row->id]->result()) > 0)
+	if(count($list_check_page[$row->id]) > 0)
 	{
-		$ro = $list_check_page[$row->id]->result(); 
-		?><span class="link-text"><a href="<?php echo base_url() . 'panels/page/edit/' . $ro[0]->id ?>"> <?php echo $TextLanguage->lang('page') ?> </a></span> <?php 
+		$ro = $list_check_page[$row->id]; 
+		?><span class="link-text"><a href="http://127.0.0.1:8000/manage-admin/edit?m=page&id=<?php echo $ro[0]->id ?>"> <?php echo $TextLanguage->lang('page') ?> </a></span> <?php 
 		$can_delete = '2';
 	} 
-	if(count($list_check_top_menu[$row->id]->result()) > 0)
+	if(count($list_check_top_menu[$row->id]) > 0)
 	{
-		$ro = $list_check_top_menu[$row->id]->result(); 
-		?><span class="link-text"><a href="<?php echo base_url() . 'panels/top_menu/edit/' . $ro[0]->id ?>"> <?php echo $TextLanguage->lang('top_menu') ?> </a></span> <?php 
+		$ro = $list_check_top_menu[$row->id]; 
+		?><span class="link-text"><a href="http://127.0.0.1:8000/manage-admin/edit?m=top_menu&id=<?php echo $ro[0]->id ?>"> <?php echo $TextLanguage->lang('top_menu') ?> </a></span> <?php 
 		$can_delete = '2';
 	} 
-	if(count($list_check_footer_menu[$row->id]->result()) > 0)
+	if(count($list_check_footer_menu[$row->id]) > 0)
 	{
-		$ro = $list_check_footer_menu[$row->id]->result(); 
-		?><span class="link-text"><a href="<?php echo base_url() . 'panels/footer_menu/edit/' . $ro[0]->id ?>"> <?php echo $TextLanguage->lang('footer_menu') ?> </a></span> <?php 
+		$ro = $list_check_footer_menu[$row->id]; 
+		?><span class="link-text"><a href="http://127.0.0.1:8000/manage-admin/edit?m=footer_menu&id=<?php echo $ro[0]->id ?>"> <?php echo $TextLanguage->lang('footer_menu') ?> </a></span> <?php 
 		$can_delete = '2';
 	} 
 	
@@ -49,7 +49,7 @@ foreach ($list as $row)
 	}
 	
 	?>  </td> 
-    <td align="center"> <a href="<?php echo base_url() ?>panels/question_cat/export/<?php echo $row->id ?>"><img src="<?php echo base_url() ?>assets/panel/icon-excel.png" align="absmiddle" border="0" /></a> [ <?php echo $list_sub_count [$row->id] ?> ]</td>
+    <td align="center"> <a href="http://127.0.0.1:8000/manage-admin/export?m=question_cat&id=<?php echo $row->id ?>"><img src="<?php echo base_url() ?>assets/panel/icon-excel.png" align="absmiddle" border="0" /></a> [ <?php echo $list_sub_count [$row->id] ?> ]</td>
     <td align="center"><span class="link-text"><a href="#" title="<?php echo date("d/m/Y [H:i:s]",$row->last_create) ?>"> <?php echo $CustomHelper->time_elapsed_string_th($row->last_create); ?> </a></span></td> 
     
     <?php

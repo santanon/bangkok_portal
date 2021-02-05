@@ -16,10 +16,11 @@ function check_form()
 </script>
  
 <?php 
-$ro = $list_cat->result();
+$ro = $list_cat;
 ?>  
 
-<form method="post" enctype="multipart/form-data" onsubmit="return check_form();" action="<?php echo base_url(); ?>panels/setting_bg/edit_submit">
+<form method="post" enctype="multipart/form-data" onsubmit="return check_form();" action="http://127.0.0.1:8000/manage-admin/edit_submit?m=setting_bg">
+@csrf <!-- {{ csrf_field() }} -->
 <table>
 	<tbody>
 		 
@@ -37,7 +38,7 @@ while($each = each($all_list))
     <tr>
     <th width="120" valign="top" style="padding-top:10px;"><?php echo $TextLanguage->lang($each_name['value']); ?></th>
     <td>
-    <input type="button" name="upload" value="<?php echo $TextLanguage->lang('file_manager'); ?>" onclick="callLightbox('<?php echo base_url(); ?>panel/fm/form/<?php echo $this_mod_input ?>',1120,640);return false;" /> <?php if(strlen($ro[0]->{$this_mod_input}) > 5){ ?><input type="button" value="<?php echo $TextLanguage->lang('reset'); ?>" onclick="if(confirm('<?php echo $TextLanguage->lang('confirm'); ?>?'))window.location = '<?php echo base_url(); ?>panels/setting_bg/reset_bg/<?php echo $each[1] ?>';" /><?php } ?><br />
+    <input type="button" name="upload" value="<?php echo $TextLanguage->lang('file_manager'); ?>" onclick="callLightbox('<?php echo base_url(); ?>panel/fm/form/<?php echo $this_mod_input ?>',1120,640);return false;" /> <?php if(strlen($ro[0]->{$this_mod_input}) > 5){ ?><input type="button" value="<?php echo $TextLanguage->lang('reset'); ?>" onclick="if(confirm('<?php echo $TextLanguage->lang('confirm'); ?>?'))window.location = 'http://127.0.0.1:8000/manage-admin/reset_bg?m=setting_bg&data=<?php echo $each[1] ?>';" /><?php } ?><br />
     <?php echo $TextLanguage->lang('image_size_setting_bg'); ?><br />      
     <img width="150" id="<?php echo $this_mod_input ?>_preview" style="border:1px solid #CCC;" src="<?php echo $ro[0]->{$this_mod_input} ?>" />
     <input type="text" name="<?php echo $this_mod_input ?>" id="<?php echo $this_mod_input ?>" value="<?php echo $ro[0]->{$this_mod_input} ?>" />
@@ -59,7 +60,7 @@ while($each = each($all_list))
 			<td>
 			
 			<span class="btn round big blue"><input type="submit" class="fontfacetext" value="<?php echo $TextLanguage->lang('save'); ?>"></span>&nbsp;
-			<span class="btn round big gray"><input type="button" class="fontfacetext" value="<?php echo $TextLanguage->lang('cancel'); ?>" onclick="window.location = '<?php echo base_url() . 'panels/' ?>';"></span>
+			<span class="btn round big gray"><input type="button" class="fontfacetext" value="<?php echo $TextLanguage->lang('cancel'); ?>" onclick="window.history.back();"></span>
 
 			</td>
 		</tr>

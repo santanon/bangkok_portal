@@ -29,8 +29,8 @@
 				</div><!-- box -->
 				<div class="topbar-panel__box">
 					<div id="button-group">
-                    	<span class="btn round big green"><a class="fontfacetext" href="<?php echo base_url(); ?>panels/inbox"><?php echo $TextLanguage->lang('inbox'); ?></a></span>
-						<span class="btn round big green"><a class="fontfacetext" href="<?php echo base_url(); ?>panels/setting_account"><?php echo $TextLanguage->lang('account_setting'); ?></a></span>
+                    	<span class="btn round big green"><a class="fontfacetext" href="http://127.0.0.1:8000/manage-admin/inbox?m=<?php echo $config_mod ?>"><?php echo $TextLanguage->lang('inbox'); ?></a></span>
+						<span class="btn round big green"><a class="fontfacetext" href="http://127.0.0.1:8000/manage-admin/setting_account?m=<?php echo $config_mod ?>"><?php echo $TextLanguage->lang('account_setting'); ?></a></span>
 						<span class="btn round big blue"><a class="fontfacetext" onclick="if(!confirm('<?php echo $TextLanguage->lang('logout_confirm'); ?>?')){ return false; }" href="<?php echo base_url(); ?>panel/logout"><?php echo $TextLanguage->lang('logout'); ?></a></span>
 					</div>
 				</div><!-- box -->

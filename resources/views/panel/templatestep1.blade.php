@@ -75,6 +75,19 @@
                                 Template 01
                             </div>
                         </div>
+                        <div class="theme-color">
+                            <div class="input-custom">
+                                <div class="select-wrapper width-full">
+                                    <select class="slc" name="" id="">
+                                        <option value="green" selected>Green</option>
+                                        <option value="blue">Blue</option>
+                                        <option value="orange">Orange</option>
+                                        <option value="pink">Pink</option>
+                                        <option value="purple">Purple</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
                         <div class="action-btn">
                             <div class="row">
                                 <div class="col-lg-6 col-md-12">
@@ -83,7 +96,7 @@
                                             <button type="button" class="btn btn-gray">
                                                 ดูตัวอย่าง
                                             </button>
-                                            </a>
+                                        </a>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-12">
@@ -104,6 +117,19 @@
                             <img src="{{ asset('panel/assets/images/template/template02.png')}}" alt="icon" title="Template02">
                             <div class="name-template">
                                 Template 02
+                            </div>
+                        </div>
+                        <div class="theme-color">
+                            <div class="input-custom">
+                                <div class="select-wrapper width-full">
+                                    <select class="slc" name="" id="">
+                                        <option value="green">Green</option>
+                                        <option value="blue">Blue</option>
+                                        <option value="orange" selected>Orange</option>
+                                        <option value="pink">Pink</option>
+                                        <option value="purple">Purple</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                         <div class="action-btn">
@@ -134,6 +160,19 @@
                             <img src="{{ asset('panel/assets/images/template/template03.png')}}" alt="icon" title="Template03">
                             <div class="name-template">
                                 Template 03
+                            </div>
+                        </div>
+                        <div class="theme-color">
+                            <div class="input-custom">
+                                <div class="select-wrapper width-full">
+                                    <select class="slc" name="" id="">
+                                        <option value="green">Green</option>
+                                        <option value="blue">Blue</option>
+                                        <option value="orange">Orange</option>
+                                        <option value="pink">Pink</option>
+                                        <option value="purple" selected>Purple</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                         <div class="action-btn">
@@ -167,6 +206,19 @@
                                 Template 04
                             </div>
                         </div>
+                        <div class="theme-color">
+                            <div class="input-custom">
+                                <div class="select-wrapper width-full">
+                                    <select class="slc" name="" id="">
+                                        <option value="green">Green</option>
+                                        <option value="blue">Blue</option>
+                                        <option value="orange">Orange</option>
+                                        <option value="pink" selected>Pink</option>
+                                        <option value="purple">Purple</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
                         <div class="action-btn">
                             <div class="row">
                                 <div class="col-lg-6 col-md-12">
@@ -187,7 +239,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
@@ -196,6 +247,19 @@
                             <img src="{{ asset('panel/assets/images/template/template05.png')}}" alt="icon" title="Template05">
                             <div class="name-template">
                                 Template 05
+                            </div>
+                        </div>
+                        <div class="theme-color">
+                            <div class="input-custom">
+                                <div class="select-wrapper width-full">
+                                    <select class="slc" name="" id="">
+                                        <option value="green">Green</option>
+                                        <option value="blue" selected>Blue</option>
+                                        <option value="orange">Orange</option>
+                                        <option value="pink">Pink</option>
+                                        <option value="purple">Purple</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                         <div class="action-btn">

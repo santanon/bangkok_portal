@@ -12264,11 +12264,6 @@ select:-webkit-autofill:focus {
     width: 100%; }
   .input-custom .select-wrapper .slc {
     cursor: pointer;
-    -moz-appearance: none;
-    /* Firefox */
-    -webkit-appearance: none;
-    /* Safari and Chrome */
-    appearance: none;
     width: 100%;
     height: 40px;
     border: none;
@@ -13535,6 +13530,40 @@ select:-webkit-autofill:focus {
 .group-section-breadcrumb {
   margin-bottom: 30px; }
 
+.theme-color {
+  margin-bottom: 30px; }
+
+.title-page {
+  font-size: 26px;
+  color: #fff; }
+
+.desc-page {
+  font-size: 16px;
+  color: #fff; }
+
+.list-menu {
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 30px; }
+  .list-menu .icon-menu {
+    width: 60px;
+    height: 40px;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .list-menu .icon-menu img {
+      width: auto; }
+  .list-menu .text-menu {
+    font-size: 18px;
+    color: #fff; }
+
 .modal-open .modal.modal-center {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
@@ -13645,6 +13674,9 @@ select:-webkit-autofill:focus {
       width: 100%;
       height: 600px;
       overflow-y: auto; }
+
+.modal-custom#modalpanel {
+  padding-right: 17px; }
 
 .loading {
   background-color: #1e6eaf;

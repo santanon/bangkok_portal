@@ -132,41 +132,10 @@
 
 
 @include('template1/include.css_scripts')
-<!-- FlexSlider -->
-<link rel="stylesheet" href="{{ asset('template1/css/flexslider.css')}}">
-<script type="text/javascript" src="{{ asset('template1/js/jquery.flexslider.js') }}"></script>
 
 <!-- CKeditor -->
 <script src="https://cdn.ckeditor.com/ckeditor5/23.1.0/inline/ckeditor.js"></script>
 
-
-<script type="text/javascript">
-    $(window).load(function(){
-        $('#carousel').flexslider({
-            animation: "slide",
-            controlNav: false,
-            animationLoop: false,
-            slideshow: false,
-            itemWidth: 260,
-            itemMargin: 30,
-            asNavFor: '#slider'
-        });
-
-        $('#slider').flexslider({
-            animation: "slide",
-            controlNav: false,
-            animationLoop: false,
-            slideshow: false,
-            sync: "#carousel",
-            start: function(slider){
-                $('body').removeClass('loading');
-            }
-        });
-    });
-    $(document).ready(function () {
-        
-    });
-</script>
 <script>
     InlineEditor
         .create( document.querySelector( '#editor' ) )

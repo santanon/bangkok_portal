@@ -26,7 +26,7 @@
                             <p class="desc">The Bangkok Metropolitan Council Secretariat</p>
                         </div>
                         <div class="group-gotoall">
-                            <a href="/news-3">
+                            <a href="/album-5">
                                 <div class="icon-more">
                                     <i class="fas fa-arrow-right"></i>
                                 </div>

@@ -497,7 +497,7 @@ $howManySteps: 100; //this needs to be even.
             }
             .post-content{
                 margin-bottom: 40px;
-                padding: 20px 15px;
+                padding: 2px 15px;
                 background-color: #fff;
                 border-radius: 15px;
                 box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
@@ -603,6 +603,9 @@ $howManySteps: 100; //this needs to be even.
                     a{
                         font-size: 1.6rem;
                         color: #525252;
+                        width: 100%;
+                        height: 100%;
+                        display: block;
                         .icon-more{
                             display: inline-block;
                             text-align: center;
@@ -943,6 +946,40 @@ $howManySteps: 100; //this needs to be even.
                             right: 0;
                         }
                     }
+                    .remark-calendar{
+                        ul{
+                            margin: 0;
+                            padding: 0;
+                            li{
+                                list-style: none;
+                                margin-right: 10px;
+                                color: #525252;
+                                &.activity-calendar{
+                                    &::before{
+                                        content: '';
+                                        display: inline-block;
+                                        width: 8px;
+                                        height: 8px;
+                                        background-color: $color-primary;
+                                        border-radius: 100%;
+                                        margin-right: 5px;
+                                    }
+
+                                }
+                                &.today-calendar{
+                                    margin-right: 0;
+                                    &::before{
+                                        content: '';
+                                        display: inline-block;
+                                        width: 8px;
+                                        height: 8px;
+                                        border: 1px solid $color-primary;
+                                        margin-right: 5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
 
                     @media only screen and (max-width: 991px) {
                         .slide-wrapper{
@@ -957,6 +994,46 @@ $howManySteps: 100; //this needs to be even.
                             }
                         }
                     }
+
+                    @media only screen and (max-width: 320px) {
+                        .-month-calendar{
+                            margin-bottom: 15px;
+                        }
+                    }
+                }
+
+                //calendar
+                .day-group{
+                    ul{
+                        margin: 0;
+                        padding: 0;
+                        display: flex;
+                        li{
+                            list-style: none;
+                            width: 14.286%;
+                            text-align: center;
+                            padding: 2px;
+                            vertical-align: top;
+                            background-color: #cfd1d4;
+                            border: 1px solid #cfd1d4;
+                            border-radius: 15px;
+                            margin-bottom: 2px;
+                            margin-right: 2px;
+                            span{
+                                font-size: 2rem;
+                                letter-spacing: 1.5px;
+                                color: #fff;
+                                padding: 5px 0;
+                            }
+                            &:last-child{
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                }
+                .date-now{
+                    font-size: 2.2rem;
+                    color: $color-primary;
                 }
 
                 .group-slide{
@@ -2373,7 +2450,101 @@ $howManySteps: 100; //this needs to be even.
                         }
                     }
                 }
-                .clendar-warpper{
+                // .clendar-warpper{
+                //     .head-calendar{
+                //         margin-bottom: 20px;
+                //         .title-calendar{
+                //             display: flex;
+                //             align-items: center;
+                //             .month-title{
+                //                 font-size: 2.6rem;
+                //                 font-weight: $font-regular;
+                //                 margin-right: 10px;
+                //             }
+                //             .year-title{
+                //                 font-size: 2.6rem;
+                //                 font-weight: $font-regular;
+                //             }
+                //         }
+                //         .calendar-wrapper-btn{
+                //             text-align: right;
+                //             #prev{
+                //                 border-radius: 0;
+                //                 background-color: #525252;
+                //                 width: 50px;
+                //                 height: 40px;
+                //                 background-image: url('../../assets/images/icons/icon-slide-prev.png');
+                //                 background-repeat: no-repeat;
+                //                 background-position: center center;
+                //                 &:focus{
+                //                     outline: none;
+                //                     box-shadow: none;
+                //                 }
+                //             }
+                //             #next{
+                //                 border-radius: 0;
+                //                 background-color: #525252;
+                //                 width: 50px;
+                //                 height: 40px;
+                //                 background-image: url('../../assets/images/icons/icon-slide-next.png');
+                //                 background-repeat: no-repeat;
+                //                 background-position: center center;
+                //                 &:focus{
+                //                     outline: none;
+                //                     box-shadow: none;
+                //                 }
+                //             }
+                //         }
+                //     }
+                //     .fc .fc-scrollgrid-section>*{
+                //         border-right-width: 0;
+                //     }
+                //     #calendar{
+
+                //         table{
+                //             // border: none;
+                //             border-width: 0;
+                //             border-collapse: separate;
+                //             border-spacing: 2px;
+                //             thead{
+                //                 tr{
+                //                     td{
+                //                         border-right-width: 0;
+                //                     }
+                //                 }
+                //             }
+                //         }
+                //         .fc-daygrid-day-top{
+                //             justify-content: center;
+                //             a{
+                //                 font-weight: $font-regular;
+                //                 color: #525252;
+                //             }
+                //         }
+                        
+                //         .fc-col-header {
+                //             tbody{
+                //                 tr{
+                //                     .fc-col-header-cell{
+                //                         .fc-scrollgrid-sync-inner{
+                //                             .fc-col-header-cell-cushion {
+                //                                 padding: 4px;
+                //                                 color: #fff;
+                //                                 font-weight: $font-regular;
+                //                             }
+                //                         }
+                //                     }
+                //                 }
+                //             }
+                //         }
+                //         .fc-daygrid-day.fc-day-today{
+                //             background-color: #fff;
+                //         }
+                //     }
+                // }
+
+                .calendar-wrapper{
+                    position: relative;
                     .head-calendar{
                         margin-bottom: 20px;
                         .title-calendar{
@@ -2383,17 +2554,19 @@ $howManySteps: 100; //this needs to be even.
                                 font-size: 2.6rem;
                                 font-weight: $font-regular;
                                 margin-right: 10px;
+                                color: $color-primary;
                             }
                             .year-title{
                                 font-size: 2.6rem;
                                 font-weight: $font-regular;
+                                color: $color-primary;
                             }
                         }
                         .calendar-wrapper-btn{
                             text-align: right;
                             #prev{
                                 border-radius: 0;
-                                background-color: #525252;
+                                background-color: $color-text;
                                 width: 50px;
                                 height: 40px;
                                 background-image: url('../../assets/images/icons/icon-slide-prev.png');
@@ -2406,7 +2579,7 @@ $howManySteps: 100; //this needs to be even.
                             }
                             #next{
                                 border-radius: 0;
-                                background-color: #525252;
+                                background-color: $color-text;
                                 width: 50px;
                                 height: 40px;
                                 background-image: url('../../assets/images/icons/icon-slide-next.png');
@@ -2422,46 +2595,141 @@ $howManySteps: 100; //this needs to be even.
                     .fc .fc-scrollgrid-section>*{
                         border-right-width: 0;
                     }
+                    .main-calendar{
+                        .select-wrapper{
+                            padding: 0 4px;
+                            .slc{
+                                color: white;
+                                background-color: $color-secondary;
+                            }
+                        }
+                    }
                     #calendar{
-
                         table{
                             // border: none;
                             border-width: 0;
                             border-collapse: separate;
-                            border-spacing: 2px;
+                            border-spacing: 4px 2px;
                             thead{
                                 tr{
+                                    th{
+                                        border: 1px solid #fff;
+                                        background-color: #fff;
+                                        padding: 8px 0;
+                                        span{
+                                            font-weight: $font-medium;
+                                            color: #525252;
+                                        }
+                                    }
                                     td{
-                                        border-right-width: 0;
+                                        border: none;
+                                    }
+                                }
+                            }
+                            .fc-body{
+                                >tr{
+                                    >td.fc-widget-content{
+                                        border: none;
                                     }
                                 }
                             }
                         }
-                        .fc-daygrid-day-top{
-                            justify-content: center;
-                            a{
-                                font-weight: $font-regular;
-                                color: #525252;
+                        .fc-day{
+                            background-color: #fff;
+                            border: 1px solid #fff;
+                            border-radius: 15px;
+                        }
+                        .fc-day-number{
+                            font-size: 1.6rem;
+                            text-align: center;
+                            width: 100%;
+                            color: #525252;
+                        }
+                        .fc-bg{
+                            .fc-today{
+                                border: 1px solid $color-primary;
                             }
                         }
-                        
-                        .fc-col-header {
-                            tbody{
-                                tr{
-                                    .fc-col-header-cell{
-                                        .fc-scrollgrid-sync-inner{
-                                            .fc-col-header-cell-cushion {
-                                                padding: 4px;
-                                                color: #fff;
-                                                font-weight: $font-regular;
+                        .fc-content-skeleton{
+                            .fc-day-top{
+                                padding-top: 5px;
+                            }
+                            .fc-today{
+                                color: $color-primary;
+                            }
+                        }
+                        .fc-event-container{
+                            .fc-event{
+                                background-color: $color-primary;
+                                border: 1px solid $color-primary;
+                                padding: 2px;
+                            }
+                        }
+                        .fc-more-cell{
+                            div{
+                                a{
+                                    color: $color-primary;
+                                }
+                            }
+                        }
+                        .fc-head{
+                            .fc-head-container{
+                                table{
+                                    thead{
+                                        tr{
+                                            th.fc-day-header{
+                                                border-radius: 15px;
+                                                background-color: #cfd1d4;
+                                                span{
+                                                    color: #fff;
+                                                }
                                             }
                                         }
                                     }
                                 }
                             }
                         }
-                        .fc-daygrid-day.fc-day-today{
-                            background-color: #fff;
+                        
+                    }
+                    .remark-calendar{
+                        ul{
+                            margin: 0;
+                            padding: 0;
+                            li{
+                                list-style: none;
+                                margin-right: 10px;
+                                color: #525252;
+                                &.activity-calendar{
+                                    &::before{
+                                        content: '';
+                                        display: inline-block;
+                                        width: 8px;
+                                        height: 8px;
+                                        background-color: $color-primary;
+                                        border-radius: 100%;
+                                        margin-right: 5px;
+                                    }
+
+                                }
+                                &.today-calendar{
+                                    margin-right: 0;
+                                    &::before{
+                                        content: '';
+                                        display: inline-block;
+                                        width: 8px;
+                                        height: 8px;
+                                        border: 1px solid $color-primary;
+                                        margin-right: 5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .calendar-home{
+                    .fc-event-container{
+                        .fc-event{
+                            padding: 0 !important;
                         }
                     }
                 }

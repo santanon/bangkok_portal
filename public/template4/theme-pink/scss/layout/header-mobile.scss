@@ -132,7 +132,8 @@ body.nav-expanded {
     .canvas-menu-wrapper{
         .canvas-menu{
             right: 0;
-            width: 640px;
+            max-width: 640px;
+            width: 100%;
         }
     }
 }

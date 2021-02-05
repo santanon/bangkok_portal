@@ -24,7 +24,7 @@
                                 <p class="desc color-secondary">The Bangkok Metropolitan Council Secretariat</p>
                             </div>
                             <div class="group-gotoall">
-                                <a href="/news">
+                                <a href="/calendar-3">
                                     MORE 
                                     <div class="icon-more">
                                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -41,119 +41,56 @@
                             </div>
                         </div>
                         <div class="main-content">
-                            <div class="action-slide dis-flex justify-between">
+                            <div class="action-slide d-flex justify-content-between flex-wrap m-2">
                                 <div class="input-custom">
-                                    <div class="select-wrapper">
-                                        <select name="month" class="slc">
+                                    <div class="select-wrapper fixed-width m-0">
+                                        <select id="slc-month" name="month" class="slc text-center">
                                             <optgroup label="เดือน">
-                                                <option value="">มกราคม</option>
-                                                <option value="">กุมภาพันธ์</option>
-                                                <option value="">มีนาคม</option>
-                                                <option value="">เมษายน</option>
-                                                <option value="">พฤษภาคม</option>
-                                                <option value="">มิถุนายน</option>
-                                                <option value="">กรกฎาคม</option>
-                                                <option value="">สิงหาคม</option>
-                                                <option value="">กันยายน</option>
-                                                <option value="">ตุลาคม</option>
-                                                <option value="">พฤศจิกายน</option>
-                                                <option value="">ธันวาคม</option>
+                                                <option value="1">มกราคม</option>
+                                                <option value="2">กุมภาพันธ์</option>
+                                                <option value="3">มีนาคม</option>
+                                                <option value="4">เมษายน</option>
+                                                <option value="5">พฤษภาคม</option>
+                                                <option value="6">มิถุนายน</option>
+                                                <option value="7">กรกฎาคม</option>
+                                                <option value="8">สิงหาคม</option>
+                                                <option value="9">กันยายน</option>
+                                                <option value="10">ตุลาคม</option>
+                                                <option value="11">พฤศจิกายน</option>
+                                                <option value="12">ธันวาคม</option>
                                             </optgroup>
                                         </select>
                                     </div>
                                 </div>
-
-                                <div class="slide-wrapper" id="action-slide_1">
-                                    <div class="slide-arrow slide-prev"></div>
-                                    <div class="slide-arrow slide-next"></div>
+                                <div class="date-now text-right">
+                                    วันนี้ : <span class="date">2 / พฤศจิกายน / 2563</span>
                                 </div>
                             </div>
                             
-                            <div class="group-slide">
-                                <div class="list-item" id="slide_1">
-                                    <div class="item">
-                                        <div class="row">
-                                            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                                                <div class="left">
-                                                    <div class="text-content bg-color-primary">2</div>
-                                                    <div class="text-onbottom bg-color-secondary">พ.ย.</div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
-                                                <div class="right">
-                                                    <div class="text-content">
-                                                        <a href="">
-                                                            บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือ
-                                                        </a>
-                                                    </div>
-                                                    <div class="text-onbottom"><i class="fas fa-map-marker-alt"></i> ถนนเสรีไทย ฝั่งเลขคู่</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="row">
-                                            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                                                <div class="left">
-                                                    <div class="text-content bg-color-primary">3</div>
-                                                    <div class="text-onbottom bg-color-secondary">พ.ย.</div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
-                                                <div class="right">
-                                                    <div class="text-content">
-                                                        <a href="">
-                                                            ตรวจพื้นที่ถนนพระรามที่ 4 ตั้งแต่แยกกล้วยน้ำไทถึงแยกพระโขนง
-                                                        </a>
-                                                    </div>
-                                                    <div class="text-onbottom"><i class="fas fa-map-marker-alt"></i> ถนนเสรีไทย ฝั่งเลขคู่</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="row">
-                                            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                                                <div class="left">
-                                                    <div class="text-content bg-color-primary">2</div>
-                                                    <div class="text-onbottom bg-color-secondary">พ.ย.</div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
-                                                <div class="right">
-                                                    <div class="text-content">
-                                                        <a href="">
-                                                            บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือ
-                                                        </a>
-                                                    </div>
-                                                    <div class="text-onbottom"><i class="fas fa-map-marker-alt"></i> ถนนเสรีไทย ฝั่งเลขคู่</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="row">
-                                            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                                                <div class="left">
-                                                    <div class="text-content bg-color-primary">3</div>
-                                                    <div class="text-onbottom bg-color-secondary">พ.ย.</div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
-                                                <div class="right">
-                                                    <div class="text-content">
-                                                        <a href="">
-                                                            ตรวจพื้นที่ถนนพระรามที่ 4 ตั้งแต่แยกกล้วยน้ำไทถึงแยกพระโขนง
-                                                        </a>
-                                                    </div>
-                                                    <div class="text-onbottom"><i class="fas fa-map-marker-alt"></i> ถนนเสรีไทย ฝั่งเลขคู่</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                            <div class="main-content">
+                                <div class="day-group">
+                                    <ul>
+                                        <li><span>อา.</span></li>
+                                        <li><span>จ.</span></li>
+                                        <li><span>อ.</span></li>
+                                        <li><span>พ.</span></li>
+                                        <li><span>พฤ.</span></li>
+                                        <li><span>ศ.</span></li>
+                                        <li><span>ส.</span></li>
+                                    </ul>
+                                </div>
+                                <div id="calendar_home"></div>
+                                <div class="remark-calendar">
+                                    <ul class="d-flex align-item-center justify-content-end">
+                                        <li class="activity-calendar">กิจกรรมวันนี้</li>
+                                        <li class="today-calendar">วันนี้</li>
+                                    </ul>
                                 </div>
                             </div>
+                            
                         </div>
                     </div>
                 </div>
             </div>
+
+

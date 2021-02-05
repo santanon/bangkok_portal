@@ -65,7 +65,7 @@
                                                         <img src="{{ asset('../../assets/images/icons/icon-edit.svg')}}" alt="icon">
                                                     </div> 
                                                 </div>
-                                                <a href="/">
+                                                <a href="/news-detail-3">
                                                     <div class="img-news" style="background-image: url('../../assets/images/img-news-demo1.png');"></div>
                                                 </a>
                                             </div>

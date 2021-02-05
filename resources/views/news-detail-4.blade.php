@@ -128,7 +128,7 @@
 
 @include('template4/include.css_scripts')
 <!-- FlexSlider -->
-<link rel="stylesheet" href="{{ asset('template4/theme-pink/css/flexslider.css')}}">
+<link rel="stylesheet" href="{{ asset('template4/css/flexslider.css')}}">
 <script type="text/javascript" src="{{ asset('template4/js/jquery.flexslider.js') }}"></script>
 
 <!-- CKeditor -->

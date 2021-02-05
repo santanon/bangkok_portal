@@ -24,7 +24,7 @@
                         <div class="group-text">
                             <h3 class="title">QUESTIONNAIRE</h3>
                             <p class="desc">The Bangkok Metropolitan Council Secretariat </p>
-                            <a href="/questionnaire" class="btn btn-outline-white">คำถามทั้งหมด</a>
+                            <a href="/questionnaire-4" class="btn btn-outline-white">คำถามทั้งหมด</a>
                         </div>
                     </div>
                 </div>
@@ -47,7 +47,7 @@
                                                 <div class="col-12">
                                                     <div class="right">                                                 
                                                         <div class="text-content">
-                                                            <a href="##">
+                                                            <a href="/questionnaire-detail-4">
                                                                 ร่วมส่งแรงใจให้เยาวชนนักเตะรุ่นใหม่ชิงชัยเอกสารที่ต้องใช้ 1. สูติบัตร พร้อมสำเนา 2. ทะเบียนบ้าน พร้อมสำเนา
                                                             </a>
                                                         </div>
@@ -93,7 +93,7 @@
                                                 <div class="col-12">
                                                     <div class="right">                                                 
                                                         <div class="text-content">
-                                                            <a href="##">
+                                                            <a href="/questionnaire-detail-4">
                                                                 ร่วมส่งแรงใจให้เยาวชนนักเตะรุ่นใหม่ชิงชัยเอกสารที่ต้องใช้ 1. สูติบัตร พร้อมสำเนา 2. ทะเบียนบ้าน พร้อมสำเนา
                                                             </a>
                                                         </div>
@@ -139,7 +139,7 @@
                                                 <div class="col-12">
                                                     <div class="right">                                                 
                                                         <div class="text-content">
-                                                            <a href="##">
+                                                            <a href="/questionnaire-detail-4">
                                                                 ร่วมส่งแรงใจให้เยาวชนนักเตะรุ่นใหม่ชิงชัยเอกสารที่ต้องใช้ 1. สูติบัตร พร้อมสำเนา 2. ทะเบียนบ้าน พร้อมสำเนา
                                                             </a>
                                                         </div>

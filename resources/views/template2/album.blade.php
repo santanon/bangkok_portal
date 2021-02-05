@@ -20,11 +20,11 @@
         <div class="inner-content">
             <div class="top-content">
                 <div class="group-text">
-                    <a href="/album" class="title">ภาพกิจกรรม</a>
+                    <a href="/album-2" class="title">ภาพกิจกรรม</a>
                     <p class="desc">The Bangkok Metropolitan Council Secretariat </p>
                 </div>
                 <div class="group-gotoall">
-                    <a href="/album" class="btn btn-outline-dark">ภาพกิจกรรมทั้งหมด</a>
+                    <a href="/album-2" class="btn btn-outline-dark">ภาพกิจกรรมทั้งหมด</a>
                 </div>
             </div>
             <div class="main-content">

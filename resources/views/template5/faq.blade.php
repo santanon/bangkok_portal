@@ -25,7 +25,7 @@
                                         <div class="title_gotoall">
                                             <h3 class="title color-primary txt-align-center-left">คำถามที่พบบ่อย</h3>
                                             <div class="group-gotoall">
-                                                <a href="/news-3">
+                                                <a href="/faq-5">
                                                     <div class="icon-more">
                                                         <i class="fas fa-arrow-right"></i>
                                                     </div>
@@ -55,7 +55,7 @@
                                                         <div class="group-box">
                                                             <div class="item">
                                                                 <div class="box-full">
-                                                                    <a href="/">
+                                                                    <a href="/faq-5">
                                                                         <div class="bg-img" style="background-image: url('../../../../template5/theme-purple/assets/images/bg-faq.png');">
                                                                             <div class="content">
                                                                                 <div class="text-content">
@@ -82,7 +82,7 @@
                                                         <div class="group-box">
                                                             <div class="item">
                                                                 <div class="box-full ">
-                                                                    <a href="/">
+                                                                    <a href="/faq-5">
                                                                         <div class="bg-img" style="background-image: url('../../../../template5/theme-purple/assets/images/bg-faq.png');">
                                                                             <div class="content">
                                                                                 <div class="text-content">
@@ -109,7 +109,7 @@
                                                         <div class="group-box">
                                                             <div class="item">
                                                                 <div class="box-full ">
-                                                                    <a href="/">
+                                                                    <a href="/faq-5">
                                                                         <div class="bg-img" style="background-image: url('../../../../template5/theme-purple/assets/images/bg-faq.png');">
                                                                             <div class="content">
                                                                                 <div class="text-content">

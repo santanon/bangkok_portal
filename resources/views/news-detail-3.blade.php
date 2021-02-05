@@ -120,7 +120,7 @@
 
 @include('template3/include.css_scripts')
 <!-- FlexSlider -->
-<link rel="stylesheet" href="{{ asset('template3/theme-green/css/flexslider.css')}}">
+<link rel="stylesheet" href="{{ asset('template3/css/flexslider.css')}}">
 <script type="text/javascript" src="{{ asset('template3/js/jquery.flexslider.js') }}"></script>
 
 <!-- CKeditor -->

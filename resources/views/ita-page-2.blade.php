@@ -125,7 +125,7 @@
   </div>
 </div>
 
-
 @include('template2/include.css_scripts')
+
 @endsection
 

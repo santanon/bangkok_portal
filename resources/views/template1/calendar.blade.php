@@ -69,7 +69,7 @@
                                             <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
                                                 <div class="right">
                                                     <div class="text-content">
-                                                        <a href="">
+                                                        <a href="/calendar-detail">
                                                             บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือ
                                                         </a>
                                                     </div>
@@ -89,7 +89,7 @@
                                             <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
                                                 <div class="right">
                                                     <div class="text-content">
-                                                        <a href="">
+                                                        <a href="/calendar-detail">
                                                             ตรวจพื้นที่ถนนพระรามที่ 4 ตั้งแต่แยกกล้วยน้ำไทถึงแยกพระโขนง
                                                         </a>
                                                     </div>
@@ -109,7 +109,7 @@
                                             <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
                                                 <div class="right">
                                                     <div class="text-content">
-                                                        <a href="">
+                                                        <a href="/calendar-detail">
                                                             บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือ
                                                         </a>
                                                     </div>
@@ -129,7 +129,7 @@
                                             <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
                                                 <div class="right">
                                                     <div class="text-content">
-                                                        <a href="">
+                                                        <a href="/calendar-detail">
                                                             ตรวจพื้นที่ถนนพระรามที่ 4 ตั้งแต่แยกกล้วยน้ำไทถึงแยกพระโขนง
                                                         </a>
                                                     </div>

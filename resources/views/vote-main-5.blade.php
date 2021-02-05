@@ -100,48 +100,5 @@
 
 @include('template5/include.css_scripts')
 
-<script type="text/javascript">
-// TH
-$.datepicker.regional['th'] ={
-        dateFormat: 'dd/mm/yy',
-        changeMonth: true,
-        changeYear: true,
-        dayNamesMin: ['อา', 'จ', 'อ', 'พ', 'พฤ', 'ศ', 'ส'],
-        monthNamesShort: ['มกราคม', 'กุมภาพันธ์', 'มีนาคม', 'เมษายน', 'พฤษภาคม', 'มิถุนายน', 'กรกฎาคม', 'สิงหาคม', 'กันยายน', 'ตุลาคม', 'พฤศจิกายน', 'ธันวาคม'],
-        constrainInput: true,
-        yearOffSet : 543,
-        yearRange: '-40:+0',
-    };
-    $.datepicker.setDefaults($.datepicker.regional['th']);
-
-    // EN
-    $.datepicker.regional['en'] ={
-        dateFormat: 'dd/mm/yy',
-        changeMonth: true,
-        changeYear: true,
-        constrainInput: true,
-        yearOffSet : 0,
-        yearRange: '-40:+0',
-    };
-    //$.datepicker.setDefaults($.datepicker.regional['en']);
-
-    $(document).ready(function () {
-        $("#start_date").datepicker({
-            maxDate: 0,
-            onSelect: function(){
-                $('#end_date').val('');
-                var dt2 = $('#end_date');
-                var startDate = $(this).datepicker('getDate');
-                var minDate = $(this).datepicker('getDate');
-                dt2.datepicker('option', 'minDate', startDate);
-            },
-        });
-        $("#start_date").datepicker( "setDate", new Date());
-        $( "#end_date" ).datepicker({
-            maxDate: 0,
-        });
-        $("#end_date").datepicker( "setDate", new Date());
-    });
-</script>
 @endsection
 

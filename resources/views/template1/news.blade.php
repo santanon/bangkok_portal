@@ -61,7 +61,7 @@
                                                 <img src="{{ asset('../../assets/images/icons/icon-edit.svg')}}" alt="icon">
                                             </div> 
                                         </div>
-                                        <a href="/">
+                                        <a href="/news-detail">
                                             <div class="img-news" style="background-image: url('../../assets/images/img-news-demo1.png');"></div>
                                         </a>
                                         <div class="content-news-main">
@@ -69,7 +69,7 @@
                                                 <span>ข่าววันที่ : 25 พ.ย.</span> <img src="{{ asset('../../assets/images/icons/icon-new.png')}}" alt="icon">
                                             </div>
                                             <div class="desc-news">
-                                                <a href="">
+                                                <a href="/news-detail">
                                                     หน่วยงานภาครัฐและภาคเอกชนประชุมกรรมการดำเนินงานด้านการป้องกัน
                                                 </a>
                                             </div>
@@ -88,7 +88,7 @@
                                             </div>
                                         </div>
                                         <div class="read-news-outer">
-                                            <a href="/">
+                                            <a href="/news-detail">
                                                 อ่านข่าวสาร
                                             </a>
                                         </div>
@@ -130,7 +130,7 @@
                                                     <div class="col-lg-6">
                                                         <div class="img-news" style="background-image: url('../../assets/images/img-news-demo2.png');">
                                                             <div class="read-news-outer">
-                                                                <a href="/">
+                                                                <a href="/news-detail">
                                                                     อ่านข่าวสาร
                                                                 </a>
                                                             </div>
@@ -198,7 +198,7 @@
                                                     <div class="col-lg-6">
                                                         <div class="img-news" style="background-image: url('../../assets/images/img-news-demo3.png');">
                                                             <div class="read-news-outer">
-                                                                <a href="/">
+                                                                <a href="/news-detail">
                                                                     อ่านข่าวสาร
                                                                 </a>
                                                             </div>
@@ -210,7 +210,7 @@
                                                                 <span>ข่าววันที่ : 5 พ.ย.</span>
                                                             </div>
                                                             <div class="desc-news">
-                                                                <a href="">
+                                                                <a href="/news-detail">
                                                                     หน่วยงานภาครัฐและภาคเอกชนประชุมกรรมการดำเนินงานด้านการป้องกัน...
                                                                 </a>
                                                             </div>

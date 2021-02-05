@@ -242,10 +242,7 @@ function sfi(title,url)
 
 <script type="text/javascript">
     $(document).ready(function () {
-        
         //$('#exampleModal').modal('show')
-
-
         if($('body').hasClass('manage')){
             $("div.group-section-content").attr('id', 'manage_dragdrop');
             // DragDrop
@@ -270,7 +267,6 @@ function sfi(title,url)
         }else{
             $("div.group-section-content").removeAttr("id");
         }
-
     });
 </script>
 <!-- Gallery -->
@@ -382,86 +378,66 @@ function sfi(title,url)
 </script>
 
 
-<link rel="stylesheet" href="{{ asset('template2/theme-orange/css/calendar/main.min.css')}}">
-<script type="text/javascript" src="{{ asset('template2/js/calendar/main.min.js') }}"></script>
+
+<link rel="stylesheet" href="{{ asset('template2/js/calendar3_9/fullcalendar.min.css')}}">
+<script type="text/javascript" src="{{ asset('template2/js/calendar3_9/lib/moment.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('template2/js/calendar3_9/fullcalendar.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('template2/js/calendar3_9/locale-all.js') }}"></script>
 <script>
-    // Calendar
-    document.addEventListener('DOMContentLoaded', function() {
-        var calendarEl = document.getElementById('calendar');
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-            initialView: 'dayGridMonth',
-            headerToolbar: false,
-            locale: 'th',
-            dayMaxEventRows: true,
-            events: [
-                {
-                    "title": "All Day Event",
-                    "start": "2020-11-23",
-                    //"color": "#E76F0E",
-                    "url": "/calendar-detail"
-                },
-                {
-                    "title": "บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือasdalk k;lkdpa sk",
-                    "start": "2020-11-23",
-                    //"color": "#8CB81F",
-                    "url": "/calendar-detail"
-                },
-                {
-                    "title": "บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือ บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือ",
-                    "start": "2020-11-23",
-                    //"color": "#8CB81F",
-                    "url": "/calendar-detail"
-                },
-                {
-                    "title": "บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือasdalk k;lkdpa sk",
-                    "start": "2020-11-23",
-                    //"color": "#8CB81F",
-                    "url": "/calendar-detail"
-                },
-                {
-                    "title": "บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือasdalk k;lkdpa sk",
-                    "start": "2020-11-23",
-                    //"color": "#8CB81F",
-                    "url": "/calendar-detail"
-                },
-            ],
 
-        });
-        calendar.render();
+  $(document).ready(function() {
 
-        document.getElementById('prev').addEventListener('click', function () {
-            calendar.prev(); // call method
+    var d = new Date();
+    var y = d.getFullYear();
 
-            var view = calendar.view;
-            var v_title = view.title;
-            //console.log(v_title);
-            var c_month = (view.title).split(' ');
-            var c_year = (view.title).split(' ');
-            $('.month-title').html(c_month[0]);
-            $('.year-title').html(c_year[1]);
-
-        });
-
-        document.getElementById('next').addEventListener('click', function () {
-            calendar.next(); // call method
-
-            var view = calendar.view;
-            var v_title = view.title;
-            //console.log(v_title);
-            var c_month = (view.title).split(' ');
-            var c_year = (view.title).split(' ');
-            $('.month-title').html(c_month[0]);
-            $('.year-title').html(c_year[1]);
-        });
-
-        // default
-        var view = calendar.view;
-        var v_title = view.title;
-        var c_month = (view.title).split(' ');
-        var c_year = (view.title).split(' ');
-        $('.month-title').html(c_month[0]);
-        $('.year-title').html(c_year[1]);
+    $('#calendar').fullCalendar({
+      header:false,
+      locale: 'th',
+      defaultDate: moment().format("YYYY-MM-DD"),
+      navLinks: false, // can click day/week names to navigate views
+      editable: false,
+      eventLimit: true, // allow "more" link when too many events
+      events: [
+        {
+          title: 'Lunch',
+          start: '2021-01-12'
+        },
+        {
+          title: 'Meeting',
+          start: '2021-01-12'
+        },
+        {
+          title: 'Happy Hour',
+          start: '2021-01-12'
+        },
+        {
+          title: 'Dinner',
+          start: '2021-01-12'
+        },
+        {
+          title: 'Birthday Party',
+          start: '2021-01-13'
+        },
+        {
+          title: 'Birthday Party2',
+          start: '2021-01-13'
+        },
+        {
+          title: 'Click for Google',
+          url: '/calendar-detail-2',
+          start: '2021-01-28'
+        }
+      ]
     });
+
+   $(".-month").on("change", function(event) {
+      $('#calendar').fullCalendar('changeView', 'month', this.value);
+      $('#calendar').fullCalendar('gotoDate', y +"-"+ this.value);
+   });
+
+  });
+
 </script>
+
 @endsection
 

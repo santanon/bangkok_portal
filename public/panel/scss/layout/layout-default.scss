@@ -64,6 +64,38 @@
 .group-section-breadcrumb{
     margin-bottom: 30px;
 }
+.theme-color{
+    margin-bottom: 30px;
+}
+
+.title-page{
+    font-size: 26px;
+    color: #fff;
+}
+.desc-page{
+    font-size: 16px;
+    color: #fff;
+}
+.list-menu{
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 30px;
+    .icon-menu{
+        width: 60px;
+        height: 40px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            width: auto;
+        }
+    }
+    .text-menu{
+        font-size: 18px;
+        color: #fff;
+    }
+}
 
 // Modal
 .modal-open .modal.modal-center {
@@ -201,6 +233,9 @@
             }
         }
     }
+}
+.modal-custom#modalpanel{
+    padding-right: 17px;
 }
 
 //Loading

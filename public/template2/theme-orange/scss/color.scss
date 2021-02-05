@@ -39,11 +39,7 @@
             }
         }
     }
-    .select-wrapper{
-        .slc{
-            background-image: url('../assets/images/icons/icon-arrow-dropdown-green.svg');
-        }
-    }
+
     .custom-control{
         .custom-control-input[type="radio"]:checked ~ .custom-control-label{
             &:before{

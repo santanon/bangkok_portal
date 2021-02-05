@@ -75,6 +75,8 @@
             color: #525252;
             padding-right: 55px;
             text-overflow: ellipsis;
+
+            background-image: url('../assets/images/icons/icon-arrow-dropdown.svg');
             &:focus{
                 outline: none;
             }
@@ -82,6 +84,10 @@
             optgroup { 
                 font-size:14px; 
                 font-weight: $font-regular;
+            }
+            &.text-center{
+                text-align: center;
+                text-align-last: center;
             }
         }
     }

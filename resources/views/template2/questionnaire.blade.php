@@ -20,11 +20,11 @@
                     <div class="inner-content">
                         <div class="top-content">
                             <div class="group-text">
-                                <a href="/questionnaire" class="title">QUESTIONNAIRE</a>
+                                <a href="/questionnaire-2" class="title">QUESTIONNAIRE</a>
                                 <p class="desc">The Bangkok Metropolitan Council Secretariat</p>
                             </div>
                             <div class="group-gotoall">
-                                <a href="/questionnaire" class="btn btn-outline-dark">คำถามทั้งหมด</a>
+                                <a href="/questionnaire-2" class="btn btn-outline-dark">คำถามทั้งหมด</a>
                             </div>
                         </div>
                         <div class="main-content">
@@ -46,7 +46,7 @@
                                         </div>
                                         <div class="right">                                                
                                             <div class="text-content">
-                                                <a href="#">
+                                                <a href="/questionnaire-detail-2">
                                                     ร่วมส่งแรงใจให้เยาวชนนักเตะรุ่นใหม่ชิงชัยเอกสารที่ต้องใช้ 1. สูติบัตร พร้อมสำเนา 2. ทะเบียนบ้าน พร้อมสำเนา
                                                 </a>
                                             </div>
@@ -79,7 +79,7 @@
                                         </div>
                                         <div class="right">                                                
                                             <div class="text-content">
-                                                <a href="#">
+                                                <a href="/questionnaire-detail-2">
                                                     ร่วมส่งแรงใจให้เยาวชนนักเตะรุ่นใหม่ชิงชัยเอกสารที่ต้องใช้ 1. สูติบัตร พร้อมสำเนา 2. ทะเบียนบ้าน พร้อมสำเนา
                                                 </a>
                                             </div>

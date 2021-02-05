@@ -126,13 +126,5 @@
 
 @include('template2/include.css_scripts')
 
-
-<script type="text/javascript">
-    $(document).ready(function () {
-        
-        //$('#exampleModal').modal('show')
-
-    });
-</script>
 @endsection
 

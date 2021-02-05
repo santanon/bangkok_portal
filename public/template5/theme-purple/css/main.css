@@ -12193,6 +12193,11 @@ template {
   margin-bottom: 20px; }
   .input-custom .select-wrapper.width-full {
     width: 100%; }
+  .input-custom .select-wrapper.fixed-width {
+    width: 400px; }
+    @media only screen and (max-width: 767px) {
+      .input-custom .select-wrapper.fixed-width {
+        width: 100%; } }
   .input-custom .select-wrapper .slc {
     cursor: pointer;
     -moz-appearance: none;
@@ -12221,6 +12226,9 @@ template {
     .input-custom .select-wrapper .slc optgroup {
       font-size: 14px;
       font-weight: 400; }
+    .input-custom .select-wrapper .slc.text-center {
+      text-align: center;
+      text-align-last: center; }
 
 .input-custom .custom-control .custom-control-label {
   font-size: 1.6rem;
@@ -13994,7 +14002,7 @@ body.menu-open {
       margin-bottom: 30px; }
     .group-section-content .section-content .inner-content .post-content {
       margin-bottom: 40px;
-      padding: 20px 15px;
+      padding: 2px 15px;
       background-color: #fff;
       border-radius: 15px;
       -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
@@ -14082,7 +14090,10 @@ body.menu-open {
         margin-bottom: 20px; }
         .group-section-content .section-content .inner-content .main-content .group-back a {
           font-size: 1.6rem;
-          color: #525252; }
+          color: #525252;
+          width: 100%;
+          height: 100%;
+          display: block; }
           .group-section-content .section-content .inner-content .main-content .group-back a .icon-more {
             display: inline-block;
             text-align: center;
@@ -14356,6 +14367,30 @@ body.menu-open {
             background-position: center center;
             background-size: 7%;
             right: 0; }
+        .group-section-content .section-content .inner-content .main-content .action-slide .remark-calendar ul {
+          margin: 0;
+          padding: 0; }
+          .group-section-content .section-content .inner-content .main-content .action-slide .remark-calendar ul li {
+            list-style: none;
+            margin-right: 10px;
+            color: #525252; }
+            .group-section-content .section-content .inner-content .main-content .action-slide .remark-calendar ul li.activity-calendar::before {
+              content: '';
+              display: inline-block;
+              width: 8px;
+              height: 8px;
+              background-color: #6950a1;
+              border-radius: 100%;
+              margin-right: 5px; }
+            .group-section-content .section-content .inner-content .main-content .action-slide .remark-calendar ul li.today-calendar {
+              margin-right: 0; }
+              .group-section-content .section-content .inner-content .main-content .action-slide .remark-calendar ul li.today-calendar::before {
+                content: '';
+                display: inline-block;
+                width: 8px;
+                height: 8px;
+                border: 1px solid #6950a1;
+                margin-right: 5px; }
         @media only screen and (max-width: 991px) {
           .group-section-content .section-content .inner-content .main-content .action-slide .slide-wrapper .slide-arrow {
             width: 120px; }
@@ -14363,6 +14398,36 @@ body.menu-open {
             background-size: auto; }
           .group-section-content .section-content .inner-content .main-content .action-slide .slide-wrapper .slide-next {
             background-size: auto; } }
+        @media only screen and (max-width: 320px) {
+          .group-section-content .section-content .inner-content .main-content .action-slide .-month-calendar {
+            margin-bottom: 15px; } }
+      .group-section-content .section-content .inner-content .main-content .day-group ul {
+        margin: 0;
+        padding: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+        .group-section-content .section-content .inner-content .main-content .day-group ul li {
+          list-style: none;
+          width: 14.286%;
+          text-align: center;
+          padding: 2px;
+          vertical-align: top;
+          background-color: #cfd1d4;
+          border: 1px solid #cfd1d4;
+          border-radius: 15px;
+          margin-bottom: 2px;
+          margin-right: 2px; }
+          .group-section-content .section-content .inner-content .main-content .day-group ul li span {
+            font-size: 2rem;
+            letter-spacing: 1.5px;
+            color: #fff;
+            padding: 5px 0; }
+          .group-section-content .section-content .inner-content .main-content .day-group ul li:last-child {
+            margin-right: 0; }
+      .group-section-content .section-content .inner-content .main-content .date-now {
+        font-size: 2.2rem;
+        color: #6950a1; }
       .group-section-content .section-content .inner-content .main-content .group-slide {
         position: relative; }
         .group-section-content .section-content .inner-content .main-content .group-slide .list-item {
@@ -15506,69 +15571,126 @@ body.menu-open {
             font-size: 2rem;
             line-height: 2.2rem;
             font-weight: 400; }
-      .group-section-content .section-content .inner-content .main-content .clendar-warpper .head-calendar {
-        margin-bottom: 20px; }
-        .group-section-content .section-content .inner-content .main-content .clendar-warpper .head-calendar .title-calendar {
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-align: center;
-          -ms-flex-align: center;
-          align-items: center; }
-          .group-section-content .section-content .inner-content .main-content .clendar-warpper .head-calendar .title-calendar .month-title {
-            font-size: 2.6rem;
-            font-weight: 400;
-            margin-right: 10px; }
-          .group-section-content .section-content .inner-content .main-content .clendar-warpper .head-calendar .title-calendar .year-title {
-            font-size: 2.6rem;
-            font-weight: 400; }
-        .group-section-content .section-content .inner-content .main-content .clendar-warpper .head-calendar .calendar-wrapper-btn {
-          text-align: right; }
-          .group-section-content .section-content .inner-content .main-content .clendar-warpper .head-calendar .calendar-wrapper-btn #prev {
-            border-radius: 0;
-            background-color: #525252;
-            width: 50px;
-            height: 40px;
-            background-image: url("../../assets/images/icons/icon-slide-prev.png");
-            background-repeat: no-repeat;
-            background-position: center center; }
-            .group-section-content .section-content .inner-content .main-content .clendar-warpper .head-calendar .calendar-wrapper-btn #prev:focus {
-              outline: none;
-              -webkit-box-shadow: none;
-              box-shadow: none; }
-          .group-section-content .section-content .inner-content .main-content .clendar-warpper .head-calendar .calendar-wrapper-btn #next {
-            border-radius: 0;
-            background-color: #525252;
-            width: 50px;
-            height: 40px;
-            background-image: url("../../assets/images/icons/icon-slide-next.png");
-            background-repeat: no-repeat;
-            background-position: center center; }
-            .group-section-content .section-content .inner-content .main-content .clendar-warpper .head-calendar .calendar-wrapper-btn #next:focus {
-              outline: none;
-              -webkit-box-shadow: none;
-              box-shadow: none; }
-      .group-section-content .section-content .inner-content .main-content .clendar-warpper .fc .fc-scrollgrid-section > * {
-        border-right-width: 0; }
-      .group-section-content .section-content .inner-content .main-content .clendar-warpper #calendar table {
-        border-width: 0;
-        border-collapse: separate;
-        border-spacing: 2px; }
-        .group-section-content .section-content .inner-content .main-content .clendar-warpper #calendar table thead tr td {
+      .group-section-content .section-content .inner-content .main-content .calendar-wrapper {
+        position: relative; }
+        .group-section-content .section-content .inner-content .main-content .calendar-wrapper .head-calendar {
+          margin-bottom: 20px; }
+          .group-section-content .section-content .inner-content .main-content .calendar-wrapper .head-calendar .title-calendar {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center; }
+            .group-section-content .section-content .inner-content .main-content .calendar-wrapper .head-calendar .title-calendar .month-title {
+              font-size: 2.6rem;
+              font-weight: 400;
+              margin-right: 10px;
+              color: #6950a1; }
+            .group-section-content .section-content .inner-content .main-content .calendar-wrapper .head-calendar .title-calendar .year-title {
+              font-size: 2.6rem;
+              font-weight: 400;
+              color: #6950a1; }
+          .group-section-content .section-content .inner-content .main-content .calendar-wrapper .head-calendar .calendar-wrapper-btn {
+            text-align: right; }
+            .group-section-content .section-content .inner-content .main-content .calendar-wrapper .head-calendar .calendar-wrapper-btn #prev {
+              border-radius: 0;
+              background-color: #525252;
+              width: 50px;
+              height: 40px;
+              background-image: url("../../assets/images/icons/icon-slide-prev.png");
+              background-repeat: no-repeat;
+              background-position: center center; }
+              .group-section-content .section-content .inner-content .main-content .calendar-wrapper .head-calendar .calendar-wrapper-btn #prev:focus {
+                outline: none;
+                -webkit-box-shadow: none;
+                box-shadow: none; }
+            .group-section-content .section-content .inner-content .main-content .calendar-wrapper .head-calendar .calendar-wrapper-btn #next {
+              border-radius: 0;
+              background-color: #525252;
+              width: 50px;
+              height: 40px;
+              background-image: url("../../assets/images/icons/icon-slide-next.png");
+              background-repeat: no-repeat;
+              background-position: center center; }
+              .group-section-content .section-content .inner-content .main-content .calendar-wrapper .head-calendar .calendar-wrapper-btn #next:focus {
+                outline: none;
+                -webkit-box-shadow: none;
+                box-shadow: none; }
+        .group-section-content .section-content .inner-content .main-content .calendar-wrapper .fc .fc-scrollgrid-section > * {
           border-right-width: 0; }
-      .group-section-content .section-content .inner-content .main-content .clendar-warpper #calendar .fc-daygrid-day-top {
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center; }
-        .group-section-content .section-content .inner-content .main-content .clendar-warpper #calendar .fc-daygrid-day-top a {
-          font-weight: 400;
+        .group-section-content .section-content .inner-content .main-content .calendar-wrapper .main-calendar .select-wrapper {
+          padding: 0 4px; }
+          .group-section-content .section-content .inner-content .main-content .calendar-wrapper .main-calendar .select-wrapper .slc {
+            color: white;
+            background-color: #8672b2; }
+        .group-section-content .section-content .inner-content .main-content .calendar-wrapper #calendar table {
+          border-width: 0;
+          border-collapse: separate;
+          border-spacing: 4px 2px; }
+          .group-section-content .section-content .inner-content .main-content .calendar-wrapper #calendar table thead tr th {
+            border: 1px solid #fff;
+            background-color: #fff;
+            padding: 8px 0; }
+            .group-section-content .section-content .inner-content .main-content .calendar-wrapper #calendar table thead tr th span {
+              font-weight: 500;
+              color: #525252; }
+          .group-section-content .section-content .inner-content .main-content .calendar-wrapper #calendar table thead tr td {
+            border: none; }
+          .group-section-content .section-content .inner-content .main-content .calendar-wrapper #calendar table .fc-body > tr > td.fc-widget-content {
+            border: none; }
+        .group-section-content .section-content .inner-content .main-content .calendar-wrapper #calendar .fc-day {
+          background-color: #fff;
+          border: 1px solid #fff;
+          border-radius: 15px; }
+        .group-section-content .section-content .inner-content .main-content .calendar-wrapper #calendar .fc-day-number {
+          font-size: 1.6rem;
+          text-align: center;
+          width: 100%;
           color: #525252; }
-      .group-section-content .section-content .inner-content .main-content .clendar-warpper #calendar .fc-col-header tbody tr .fc-col-header-cell .fc-scrollgrid-sync-inner .fc-col-header-cell-cushion {
-        padding: 4px;
-        color: #fff;
-        font-weight: 400; }
-      .group-section-content .section-content .inner-content .main-content .clendar-warpper #calendar .fc-daygrid-day.fc-day-today {
-        background-color: #fff; }
+        .group-section-content .section-content .inner-content .main-content .calendar-wrapper #calendar .fc-bg .fc-today {
+          border: 1px solid #6950a1; }
+        .group-section-content .section-content .inner-content .main-content .calendar-wrapper #calendar .fc-content-skeleton .fc-day-top {
+          padding-top: 5px; }
+        .group-section-content .section-content .inner-content .main-content .calendar-wrapper #calendar .fc-content-skeleton .fc-today {
+          color: #6950a1; }
+        .group-section-content .section-content .inner-content .main-content .calendar-wrapper #calendar .fc-event-container .fc-event {
+          background-color: #6950a1;
+          border: 1px solid #6950a1;
+          padding: 2px; }
+        .group-section-content .section-content .inner-content .main-content .calendar-wrapper #calendar .fc-more-cell div a {
+          color: #6950a1; }
+        .group-section-content .section-content .inner-content .main-content .calendar-wrapper #calendar .fc-head .fc-head-container table thead tr th.fc-day-header {
+          border-radius: 15px;
+          background-color: #cfd1d4; }
+          .group-section-content .section-content .inner-content .main-content .calendar-wrapper #calendar .fc-head .fc-head-container table thead tr th.fc-day-header span {
+            color: #fff; }
+        .group-section-content .section-content .inner-content .main-content .calendar-wrapper .remark-calendar ul {
+          margin: 0;
+          padding: 0; }
+          .group-section-content .section-content .inner-content .main-content .calendar-wrapper .remark-calendar ul li {
+            list-style: none;
+            margin-right: 10px;
+            color: #525252; }
+            .group-section-content .section-content .inner-content .main-content .calendar-wrapper .remark-calendar ul li.activity-calendar::before {
+              content: '';
+              display: inline-block;
+              width: 8px;
+              height: 8px;
+              background-color: #6950a1;
+              border-radius: 100%;
+              margin-right: 5px; }
+            .group-section-content .section-content .inner-content .main-content .calendar-wrapper .remark-calendar ul li.today-calendar {
+              margin-right: 0; }
+              .group-section-content .section-content .inner-content .main-content .calendar-wrapper .remark-calendar ul li.today-calendar::before {
+                content: '';
+                display: inline-block;
+                width: 8px;
+                height: 8px;
+                border: 1px solid #6950a1;
+                margin-right: 5px; }
+      .group-section-content .section-content .inner-content .main-content .calendar-home .fc-event-container .fc-event {
+        padding: 0 !important; }
       .group-section-content .section-content .inner-content .main-content .page-list-item-wrapper .topic-category {
         padding: 0 0 8px;
         margin-bottom: 20px; }

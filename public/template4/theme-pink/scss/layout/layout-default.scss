@@ -410,6 +410,18 @@ $howManySteps: 100; //this needs to be even.
                             }
                         }
                     }
+
+                    @media only screen and (max-width: 992px) {
+                        margin-bottom: 30px;
+                        .group-text{
+                            .title{
+                                margin: 0;
+                            }
+                            .desc{
+                                margin-bottom: 15px;
+                            }
+                        }
+                    }
                 }
 
                 &.flex-row{
@@ -464,6 +476,21 @@ $howManySteps: 100; //this needs to be even.
                             }
                         }
                     }
+                    @media only screen and (max-width: 992px) {
+                        .group-text{
+                            padding: 0;
+                            .slide-wrapper{
+                                display: flex;
+                                justify-content: space-between;
+                                position: relative;
+                                top: 20px;
+                                .slick-arrow{
+                                    position: relative;
+                                    top: 0;
+                                }
+                            }
+                        }
+                    }
                 }
 
                 &.flex-detail{
@@ -501,6 +528,38 @@ $howManySteps: 100; //this needs to be even.
                 &.bg-color-secondary{
                     .group-text{
                         color: white;
+                    }
+                }
+                &.bg-color-secondary-onM{
+                    @media only screen and (max-width: 992px) {
+                        .group-text{
+                            color: white;
+                        }
+                        .btn{
+                            border: 1px solid #fff;
+                            color: #fff;
+                        }
+                    }
+                }
+
+                &.title-top-x{
+                    @media only screen and (max-width: 992px) {
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        .group-text{
+                            width: 100%;
+                            flex-wrap: wrap;
+                            margin-bottom: 15px;
+                            .title{
+                                width: 100%;
+                                padding: 0;
+                                text-align: center;
+                            }
+                            .desc{
+                                width: 100%;
+                                text-align: center;
+                            }
+                        }
                     }
                 }
 
@@ -592,6 +651,22 @@ $howManySteps: 100; //this needs to be even.
                         text-align: center;
                         font-size: 2rem;
                         font-weight: 400;
+                    }
+                    &.date-calendar{
+                        background-color: #cfd1d4;
+                        height: 110px;
+                        .text-content{
+                            font-size: 6rem;
+                            line-height: 6rem;
+                            height: auto;
+                            padding-top: 1rem;
+                        }
+                        .text-onbottom{
+                            position: relative;
+                            font-size: 2rem;
+                            line-height: 2rem;
+                            color: #525252;
+                        }
                     }
                 }
                 .content{
@@ -839,7 +914,20 @@ $howManySteps: 100; //this needs to be even.
                 .add-news{
                     display: none;
                 }
-
+                //calendar
+                .head-calendar{
+                    margin-bottom: 10px;
+                    .ddl{
+                        margin-right: 20px;
+                    }
+                    .date-now{
+                        font-size: 2.2rem;
+                        color: $color-primary;
+                    }
+                    @media only screen and (max-width: 992px) {
+                        margin-bottom: 20px;
+                    }
+                }
                 .action-slide{
                     margin: 20px 0 30px;
                     //margin: 50px 0;
@@ -1112,6 +1200,23 @@ $howManySteps: 100; //this needs to be even.
                                     background-color: transparent;
                                     background-image: url('../../theme-pink/assets/images/bg-layer-skew.png');
                                 }
+
+                                @media only screen and (max-width: 992px) {
+                                    background-image: none;
+                                    background-color: $color-secondary;
+                                    align-items: flex-start;
+                                    .right{
+                                        .text-content{
+                                            padding: 0;
+                                            -webkit-line-clamp: 5;
+                                        }
+                                    }
+                                    .left{
+                                        .icon-content{
+                                            padding: 15px 0;
+                                        }
+                                    }
+                                }
                             }
 
                             &.banner{
@@ -1240,6 +1345,7 @@ $howManySteps: 100; //this needs to be even.
                                         color: $color-primary;
                                         text-align: left;
                                         background-color: transparent;
+                                        border-top: 2px solid $color-primary;
                                     }
                                     .text-onbottom{
                                         position: relative;
@@ -2401,45 +2507,88 @@ $howManySteps: 100; //this needs to be even.
                         border-right-width: 0;
                     }
                     #calendar{
-
                         table{
                             // border: none;
                             border-width: 0;
                             border-collapse: separate;
-                            border-spacing: 2px;
+                            //border-spacing: 4px 2px;
+                            border-spacing: 1px;
                             thead{
                                 tr{
+                                    th{
+                                        border: 1px solid #fff;
+                                        background-color: #fff;
+                                        padding: 8px 0;
+                                        span{
+                                            font-weight: $font-medium;
+                                            color: #525252;
+                                        }
+                                    }
                                     td{
-                                        border-right-width: 0;
+                                        border: none;
+                                    }
+                                }
+                            }
+                            .fc-body{
+                                >tr{
+                                    >td.fc-widget-content{
+                                        border: none;
                                     }
                                 }
                             }
                         }
-                        .fc-daygrid-day-top{
-                            justify-content: center;
-                            a{
-                                font-weight: $font-regular;
-                                color: #525252;
+                        .fc-header-toolbar{
+                            margin-bottom: 0;
+                            background-color: $color-primary;
+                            padding: 8px 0;
+                            .fc-center{
+                                color: #fff;
+                                vertical-align: middle;
+                            }
+                        }
+                        .fc-day{
+                            background-color: #fff;
+                            border: 1px solid #fff;
+                        }
+                        .fc-day-number{
+                            font-size: 1.6rem;
+                            text-align: center;
+                            width: 100%;
+                        }
+                        .fc-bg{
+                            .fc-today{
+                                border: 1px solid $color-primary;
+                            }
+                        }
+                        .fc-content-skeleton{
+                            .fc-day-top{
+                                padding-top: 5px;
+                            }
+                            .fc-today{
+                                color: $color-primary;
+                            }
+                        }
+                        .fc-event-container{
+                            .fc-event{
+                                background-color: $color-primary;
+                                border: 1px solid $color-primary;
+                                padding: 2px;
+                            }
+                        }
+                        .fc-more-cell{
+                            div{
+                                a{
+                                    color: $color-primary;
+                                }
                             }
                         }
                         
-                        .fc-col-header {
-                            tbody{
-                                tr{
-                                    .fc-col-header-cell{
-                                        .fc-scrollgrid-sync-inner{
-                                            .fc-col-header-cell-cushion {
-                                                padding: 4px;
-                                                color: #fff;
-                                                font-weight: $font-regular;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                        .fc-daygrid-day.fc-day-today{
-                            background-color: #fff;
+                    }
+                }
+                .calendar-home{
+                    .fc-event-container{
+                        .fc-event{
+                            padding: 0 !important;
                         }
                     }
                 }

@@ -24,43 +24,46 @@
                         <div class="group-text">
                             <h3 class="title">ปฏิทินกิจกรรม</h3>
                             <p class="desc">The Bangkok Metropolitan Council Secretariat </p>
-                            <a href="/calendar" class="btn btn-outline-white">ปฏิทิน</a>
+                            <a href="/calendar-4" class="btn btn-outline-white">ปฏิทิน</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-9">
                     <div class="main-content matchHeight">
                         <div class="row">
+                            <div class="col-lg-12">
+                                <div class="head-calendar d-flex align-items-center flex-wrap">
+                                    <div class="ddl">
+                                        <div class="input-custom">
+                                            <div class="select-wrapper width-full m-0">
+                                                <select name="month" class="slc -month">
+                                                    <optgroup label="เดือน">
+                                                        <option value="1">มกราคม</option>
+                                                        <option value="2">กุมภาพันธ์</option>
+                                                        <option value="3">มีนาคม</option>
+                                                        <option value="4">เมษายน</option>
+                                                        <option value="5">พฤษภาคม</option>
+                                                        <option value="6">มิถุนายน</option>
+                                                        <option value="7">กรกฎาคม</option>
+                                                        <option value="8">สิงหาคม</option>
+                                                        <option value="9">กันยายน</option>
+                                                        <option value="10">ตุลาคม</option>
+                                                        <option value="11">พฤศจิกายน</option>
+                                                        <option value="12">ธันวาคม</option>
+                                                    </optgroup>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="date-now">
+                                        วันนี้ : <span class="date">2 / พฤศจิกายน / 2563</span>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="col-lg-8">
                                 <div class="calendar-wrapper">
-                                    <!-- <div class="head-calendar">
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <div id='caljump'>
-                                                    <label for='months'>Jump to</label>
-                                                    <select id='months'></select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-8 col-sm-8 col-6">
-                                                <div class="title-calendar">
-                                                    <div class="month-title"></div>
-                                                    <div class="year-title"></div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 col-sm-4 col-6">
-                                                <div class="calendar-wrapper-btn">
-                                                    <button id='prev' class="btn">
-                                                    </button>
-                                                    <button id='next' class="btn">
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> -->
                                     <div class="main-calendar">
-                                        <div id="calendar">
+                                        <div id="calendar" class="calendar-home">
                                         </div>
                                     </div>
                                 </div>
@@ -74,7 +77,7 @@
                                             </div>
                                             <div class="right">
                                                 <div class="text-content">
-                                                    <a href="">
+                                                    <a href="/calendar-detail-4">
                                                         บึงกุ่มชวนร่วมกิจกรรม
                                                         บ้านหนังสือ ถนนสุขุมวิท,
                                                         สะพานหน้าสำนักงาน

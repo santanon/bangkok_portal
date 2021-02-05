@@ -148,7 +148,7 @@
                         </ul>
                     </div>
 
-                    <div class="tools-web" style="display: none;">
+                    <!-- <div class="tools-web" style="display: none;">
                         <ul>
                             <li>
                                 <a href="">
@@ -200,7 +200,7 @@
                                 </form>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

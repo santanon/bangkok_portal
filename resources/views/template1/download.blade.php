@@ -40,7 +40,7 @@
                                     <li>
                                         <div class="item -download">
                                             <div class="box-full bg-color-primary">
-                                                <a href="/">
+                                                <a href="/download">
                                                     <div class="icon-content">
                                                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                             width="42.2px" height="42.2px" viewBox="0 0 42.2 42.2" style="enable-background:new 0 0 42.2 42.2;" xml:space="preserve">                                                 
@@ -61,7 +61,7 @@
                                     <li>
                                         <div class="item -download">
                                             <div class="box-full bg-color-primary">
-                                                <a href="/">
+                                                <a href="/download">
                                                     <div class="icon-content">
                                                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                             width="42.2px" height="42.2px" viewBox="0 0 42.2 42.2" style="enable-background:new 0 0 42.2 42.2;" xml:space="preserve">                                                 
@@ -82,7 +82,7 @@
                                     <li>
                                         <div class="item -download">
                                             <div class="box-full bg-color-primary">
-                                                <a href="/">
+                                                <a href="/download">
                                                     <div class="icon-content">
                                                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                             width="42.2px" height="42.2px" viewBox="0 0 42.2 42.2" style="enable-background:new 0 0 42.2 42.2;" xml:space="preserve">                                                 
@@ -103,7 +103,7 @@
                                     <li>
                                         <div class="item -download">
                                             <div class="box-full bg-color-primary">
-                                                <a href="/">
+                                                <a href="/download">
                                                     <div class="icon-content">
                                                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                             width="42.2px" height="42.2px" viewBox="0 0 42.2 42.2" style="enable-background:new 0 0 42.2 42.2;" xml:space="preserve">                                                 

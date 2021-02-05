@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="top-content flex-row bg-color-secondary">
-                        <div class="group-text">
+                        <div class="group-text flex-wrap">
                             <h3 class="title">ข่าวประชาสัมพันธ์</h3>
                             <p class="desc">The Bangkok Metropolitan Council Secretariat </p>
                         </div>
@@ -94,7 +94,7 @@
                                             <div class="img-news" style="background-image: url('../../assets/images/img-news-demo2.png');">
                                                 <div class="pin"><i class="fas fa-thumbtack"></i></div>
                                                 <div class="read-news-outer">
-                                                    <a href="/">
+                                                    <a href="/news-detail-4">
                                                         อ่านข่าวสาร
                                                     </a>
                                                 </div>
@@ -107,7 +107,7 @@
                                                     <span>ข่าววันที่ : 5 พ.ย.</span>
                                                 </div>
                                                 <div class="desc-news">
-                                                    <a href="">
+                                                    <a href="/news-detail-4">
                                                         หน่วยงานภาครัฐและภาคเอกชนประชุมกรรมการดำเนินงานด้านการป้องกัน...
                                                     </a>
                                                 </div>
@@ -150,7 +150,7 @@
                                             <div class="img-news" style="background-image: url('../../assets/images/img-news-demo2.png');">
                                                 <!-- <div class="pin"><i class="fas fa-thumbtack"></i></div> -->
                                                 <div class="read-news-outer">
-                                                    <a href="/">
+                                                    <a href="/news-detail-4">
                                                         อ่านข่าวสาร
                                                     </a>
                                                 </div>
@@ -163,7 +163,7 @@
                                                     <span>ข่าววันที่ : 5 พ.ย.</span>
                                                 </div>
                                                 <div class="desc-news">
-                                                    <a href="">
+                                                    <a href="/news-detail-4">
                                                         หน่วยงานภาครัฐและภาคเอกชนประชุมกรรมการดำเนินงานด้านการป้องกัน...
                                                     </a>
                                                 </div>
@@ -206,7 +206,7 @@
                                             <div class="img-news" style="background-image: url('../../assets/images/img-news-demo2.png');">
                                                 <!-- <div class="pin"><i class="fas fa-thumbtack"></i></div> -->
                                                 <div class="read-news-outer">
-                                                    <a href="/">
+                                                    <a href="/news-detail-4">
                                                         อ่านข่าวสาร
                                                     </a>
                                                 </div>
@@ -219,7 +219,7 @@
                                                     <span>ข่าววันที่ : 5 พ.ย.</span>
                                                 </div>
                                                 <div class="desc-news">
-                                                    <a href="">
+                                                    <a href="/news-detail-4">
                                                         หน่วยงานภาครัฐและภาคเอกชนประชุมกรรมการดำเนินงานด้านการป้องกัน...
                                                     </a>
                                                 </div>
@@ -262,7 +262,7 @@
                                             <div class="img-news" style="background-image: url('../../assets/images/img-news-demo2.png');">
                                                 <!-- <div class="pin"><i class="fas fa-thumbtack"></i></div> -->
                                                 <div class="read-news-outer">
-                                                    <a href="/">
+                                                    <a href="/news-detail-4">
                                                         อ่านข่าวสาร
                                                     </a>
                                                 </div>
@@ -275,7 +275,7 @@
                                                     <span>ข่าววันที่ : 5 พ.ย.</span>
                                                 </div>
                                                 <div class="desc-news">
-                                                    <a href="">
+                                                    <a href="/news-detail-4">
                                                         หน่วยงานภาครัฐและภาคเอกชนประชุมกรรมการดำเนินงานด้านการป้องกัน...
                                                     </a>
                                                 </div>
@@ -318,7 +318,7 @@
                                             <div class="img-news" style="background-image: url('../../assets/images/img-news-demo2.png');">
                                                 <!-- <div class="pin"><i class="fas fa-thumbtack"></i></div> -->
                                                 <div class="read-news-outer">
-                                                    <a href="/">
+                                                    <a href="/news-detail-4">
                                                         อ่านข่าวสาร
                                                     </a>
                                                 </div>
@@ -331,7 +331,7 @@
                                                     <span>ข่าววันที่ : 5 พ.ย.</span>
                                                 </div>
                                                 <div class="desc-news">
-                                                    <a href="">
+                                                    <a href="/news-detail-4">
                                                         หน่วยงานภาครัฐและภาคเอกชนประชุมกรรมการดำเนินงานด้านการป้องกัน...
                                                     </a>
                                                 </div>
@@ -374,7 +374,7 @@
                                             <div class="img-news" style="background-image: url('../../assets/images/img-news-demo2.png');">
                                                 <!-- <div class="pin"><i class="fas fa-thumbtack"></i></div> -->
                                                 <div class="read-news-outer">
-                                                    <a href="/">
+                                                    <a href="/news-detail-4">
                                                         อ่านข่าวสาร
                                                     </a>
                                                 </div>
@@ -387,7 +387,7 @@
                                                     <span>ข่าววันที่ : 5 พ.ย.</span>
                                                 </div>
                                                 <div class="desc-news">
-                                                    <a href="">
+                                                    <a href="/news-detail-4">
                                                         หน่วยงานภาครัฐและภาคเอกชนประชุมกรรมการดำเนินงานด้านการป้องกัน...
                                                     </a>
                                                 </div>
@@ -430,7 +430,7 @@
                                             <div class="img-news" style="background-image: url('../../assets/images/img-news-demo2.png');">
                                                 <!-- <div class="pin"><i class="fas fa-thumbtack"></i></div> -->
                                                 <div class="read-news-outer">
-                                                    <a href="/">
+                                                    <a href="/news-detail-4">
                                                         อ่านข่าวสาร
                                                     </a>
                                                 </div>
@@ -443,7 +443,7 @@
                                                     <span>ข่าววันที่ : 5 พ.ย.</span>
                                                 </div>
                                                 <div class="desc-news">
-                                                    <a href="">
+                                                    <a href="/news-detail-4">
                                                         หน่วยงานภาครัฐและภาคเอกชนประชุมกรรมการดำเนินงานด้านการป้องกัน...
                                                     </a>
                                                 </div>
@@ -486,7 +486,7 @@
                                             <div class="img-news" style="background-image: url('../../assets/images/img-news-demo2.png');">
                                                 <!-- <div class="pin"><i class="fas fa-thumbtack"></i></div> -->
                                                 <div class="read-news-outer">
-                                                    <a href="/">
+                                                    <a href="/news-detail-4">
                                                         อ่านข่าวสาร
                                                     </a>
                                                 </div>
@@ -499,7 +499,7 @@
                                                     <span>ข่าววันที่ : 5 พ.ย.</span>
                                                 </div>
                                                 <div class="desc-news">
-                                                    <a href="">
+                                                    <a href="/news-detail-4">
                                                         หน่วยงานภาครัฐและภาคเอกชนประชุมกรรมการดำเนินงานด้านการป้องกัน...
                                                     </a>
                                                 </div>
@@ -542,7 +542,7 @@
                                             <div class="img-news" style="background-image: url('../../assets/images/img-news-demo2.png');">
                                                 <!-- <div class="pin"><i class="fas fa-thumbtack"></i></div> -->
                                                 <div class="read-news-outer">
-                                                    <a href="/">
+                                                    <a href="/news-detail-4">
                                                         อ่านข่าวสาร
                                                     </a>
                                                 </div>
@@ -555,7 +555,7 @@
                                                     <span>ข่าววันที่ : 5 พ.ย.</span>
                                                 </div>
                                                 <div class="desc-news">
-                                                    <a href="">
+                                                    <a href="/news-detail-4">
                                                         หน่วยงานภาครัฐและภาคเอกชนประชุมกรรมการดำเนินงานด้านการป้องกัน...
                                                     </a>
                                                 </div>
@@ -598,7 +598,7 @@
                                             <div class="img-news" style="background-image: url('../../assets/images/img-news-demo2.png');">
                                                 <!-- <div class="pin"><i class="fas fa-thumbtack"></i></div> -->
                                                 <div class="read-news-outer">
-                                                    <a href="/">
+                                                    <a href="/news-detail-4">
                                                         อ่านข่าวสาร
                                                     </a>
                                                 </div>
@@ -611,7 +611,7 @@
                                                     <span>ข่าววันที่ : 5 พ.ย.</span>
                                                 </div>
                                                 <div class="desc-news">
-                                                    <a href="">
+                                                    <a href="/news-detail-4">
                                                         หน่วยงานภาครัฐและภาคเอกชนประชุมกรรมการดำเนินงานด้านการป้องกัน...
                                                     </a>
                                                 </div>

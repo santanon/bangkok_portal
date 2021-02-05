@@ -20,11 +20,11 @@
         <div class="inner-content">
             <div class="row">
                 <div class="col-lg-3"> 
-                    <div class="top-content flex-wrap matchHeight">
+                    <div class="top-content flex-wrap bg-color-secondary-onM matchHeight">
                         <div class="group-text">
                             <h3 class="title">ภาพกิจกรรม</h3>
                             <p class="desc">The Bangkok Metropolitan Council Secretariat </p>
-                            <a href="/album" class="btn btn-outline-dark">ข่าวสารทั้งหมด</a>
+                            <a href="/album-4" class="btn btn-outline-dark">ภาพกิจกรรมทั้งหมด</a>
                         </div>
                     </div>
                 </div>

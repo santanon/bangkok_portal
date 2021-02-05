@@ -20,11 +20,11 @@
                     <div class="inner-content">
                         <div class="top-content">
                             <div class="group-text">
-                                <a href="/faq" class="title">คำถามที่พบบ่อย</a>
+                                <a href="/faq-2" class="title">คำถามที่พบบ่อย</a>
                                 <p class="desc">The Bangkok Metropolitan Council Secretariat </p>
                             </div>
                             <div class="group-gotoall">
-                                <a href="/faq" class="btn btn-outline-dark">คำถามทั้งหมด</a>
+                                <a href="/faq-2" class="btn btn-outline-dark">คำถามทั้งหมด</a>
                             </div>
                         </div>
                         <div class="main-content">
@@ -39,7 +39,7 @@
                                 <div class="list-item">
                                     <div class="row">
                                         <div class="col-xl-6 col-lg-6 col-md-4 col-sm-4">
-                                            <a href="/faq" class="item -faq">
+                                            <a href="/faq-2" class="item -faq">
                                                 <div class="row">
                                                     <div class="col-lg-12">
                                                         <div class="left">
@@ -63,7 +63,7 @@
                                             </a>
                                         </div>
                                         <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4">
-                                            <a href="/faq" class="item -faq">
+                                            <a href="/faq-2" class="item -faq">
                                                 <div class="row">
                                                     <div class="col-lg-12">
                                                         <div class="left">
@@ -88,7 +88,7 @@
                                             
                                         </div>
                                         <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4">
-                                            <a href="/faq" class="item -faq">
+                                            <a href="/faq-2" class="item -faq">
                                                 <div class="row">
                                                     <div class="col-lg-12">
                                                         <div class="left">

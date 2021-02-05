@@ -11872,9 +11872,6 @@ template {
 .input-custom.inp-calendar .icon-calendar i {
   color: #e16500; }
 
-.input-custom .select-wrapper .slc {
-  background-image: url("../assets/images/icons/icon-arrow-dropdown-green.svg"); }
-
 .input-custom .custom-control .custom-control-input[type="radio"]:checked ~ .custom-control-label:before {
   border-color: #f08220;
   background-color: #f08220; }
@@ -12065,12 +12062,16 @@ template {
     color: #525252;
     padding-right: 55px;
     -o-text-overflow: ellipsis;
-    text-overflow: ellipsis; }
+    text-overflow: ellipsis;
+    background-image: url("../assets/images/icons/icon-arrow-dropdown.svg"); }
     .input-custom .select-wrapper .slc:focus {
       outline: none; }
     .input-custom .select-wrapper .slc optgroup {
       font-size: 14px;
       font-weight: 400; }
+    .input-custom .select-wrapper .slc.text-center {
+      text-align: center;
+      text-align-last: center; }
 
 .input-custom .custom-control .custom-control-label {
   font-size: 1.6rem;
@@ -12616,7 +12617,8 @@ template {
               height: auto;
               padding: 10.5px 10px;
               display: block;
-              text-align: center; }
+              text-align: center;
+              background-color: #e16500; }
               #header-wrapper .header-lg .tools-web ul .lang-site .multi-lang li a:hover {
                 text-decoration: none;
                 background-color: #e16500; }
@@ -14652,6 +14654,8 @@ template {
                 vertical-align: bottom; }
               .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item:hover .left .icon-content .st0 {
                 stroke: #fff; }
+            .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item:hover.-faq .right .text-content p {
+              color: #fff; }
           @media (max-width: 767.98px) {
             .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item {
               margin-bottom: 5px; } }
@@ -15165,37 +15169,71 @@ template {
               box-shadow: none; }
       .group-section-content .section-content .inner-content .main-content .calendar-wrapper .fc .fc-scrollgrid-section > * {
         border-right-width: 0; }
+      .group-section-content .section-content .inner-content .main-content .calendar-wrapper .main-calendar .select-wrapper {
+        padding: 0 4px; }
+        .group-section-content .section-content .inner-content .main-content .calendar-wrapper .main-calendar .select-wrapper .slc {
+          color: white;
+          background-color: #e16500; }
       .group-section-content .section-content .inner-content .main-content .calendar-wrapper #calendar table {
         border-width: 0;
         border-collapse: separate;
-        border-spacing: 2px; }
+        border-spacing: 4px 2px; }
+        .group-section-content .section-content .inner-content .main-content .calendar-wrapper #calendar table thead tr th {
+          border: 1px solid #fff;
+          background-color: #fff;
+          padding: 8px 0; }
+          .group-section-content .section-content .inner-content .main-content .calendar-wrapper #calendar table thead tr th span {
+            font-weight: 500;
+            color: #525252; }
         .group-section-content .section-content .inner-content .main-content .calendar-wrapper #calendar table thead tr td {
-          border-right-width: 0; }
-      .group-section-content .section-content .inner-content .main-content .calendar-wrapper #calendar .fc-daygrid-day-top {
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center; }
-        .group-section-content .section-content .inner-content .main-content .calendar-wrapper #calendar .fc-daygrid-day-top a {
-          font-weight: 400;
-          color: #525252; }
-      .group-section-content .section-content .inner-content .main-content .calendar-wrapper #calendar .fc-col-header tbody tr .fc-col-header-cell .fc-scrollgrid-sync-inner .fc-col-header-cell-cushion {
-        padding: 4px;
-        color: white;
-        font-weight: 400; }
-      .group-section-content .section-content .inner-content .main-content .calendar-wrapper #calendar .fc-daygrid-day.fc-day-today {
-        background-color: white;
+          border: none; }
+        .group-section-content .section-content .inner-content .main-content .calendar-wrapper #calendar table .fc-body > tr > td.fc-widget-content {
+          border: none; }
+      .group-section-content .section-content .inner-content .main-content .calendar-wrapper #calendar .fc-day {
+        background-color: #fff;
+        border: 1px solid #fff; }
+      .group-section-content .section-content .inner-content .main-content .calendar-wrapper #calendar .fc-day-number {
+        font-size: 1.6rem;
+        text-align: center;
+        width: 100%; }
+      .group-section-content .section-content .inner-content .main-content .calendar-wrapper #calendar .fc-bg .fc-today {
         border: 1px solid #f08220; }
-      .group-section-content .section-content .inner-content .main-content .calendar-wrapper #calendar .fc-daygrid-day-events .fc-daygrid-event-harness .fc-h-event {
-        background-color: #e16500;
-        border: 1px solid #e16500; }
-      .group-section-content .section-content .inner-content .main-content .calendar-wrapper #calendar .fc-daygrid-day-events .fc-daygrid-day-bottom .fc-daygrid-more-link {
-        color: #e16500; }
-      .group-section-content .section-content .inner-content .main-content .calendar-wrapper #calendar .fc-col-header tbody tr .fc-col-header-cell {
-        background-color: #e16500;
-        border: 1px solid #e16500; }
-      .group-section-content .section-content .inner-content .main-content .calendar-wrapper #calendar .fc-popover .fc-popover-body .fc-daygrid-event-harness .fc-h-event {
-        background-color: #e16500;
-        border: 1px solid #e16500; }
+      .group-section-content .section-content .inner-content .main-content .calendar-wrapper #calendar .fc-content-skeleton .fc-day-top {
+        padding-top: 5px; }
+      .group-section-content .section-content .inner-content .main-content .calendar-wrapper #calendar .fc-content-skeleton .fc-today {
+        color: #f08220; }
+      .group-section-content .section-content .inner-content .main-content .calendar-wrapper #calendar .fc-event-container .fc-event {
+        background-color: #f08220;
+        border: 1px solid #f08220;
+        padding: 2px; }
+      .group-section-content .section-content .inner-content .main-content .calendar-wrapper #calendar .fc-more-cell div a {
+        color: #f08220; }
+      .group-section-content .section-content .inner-content .main-content .calendar-wrapper .remark-calendar ul {
+        margin: 0;
+        padding: 0; }
+        .group-section-content .section-content .inner-content .main-content .calendar-wrapper .remark-calendar ul li {
+          list-style: none;
+          margin-right: 10px;
+          color: #525252; }
+          .group-section-content .section-content .inner-content .main-content .calendar-wrapper .remark-calendar ul li.activity-calendar::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: #f08220;
+            border-radius: 100%;
+            margin-right: 5px; }
+          .group-section-content .section-content .inner-content .main-content .calendar-wrapper .remark-calendar ul li.today-calendar {
+            margin-right: 0; }
+            .group-section-content .section-content .inner-content .main-content .calendar-wrapper .remark-calendar ul li.today-calendar::before {
+              content: '';
+              display: inline-block;
+              width: 8px;
+              height: 8px;
+              border: 1px solid #f08220;
+              margin-right: 5px; }
+    .group-section-content .section-content .inner-content .main-content .calendar-home .fc-event-container .fc-event {
+      padding: 0 !important; }
     .group-section-content .section-content .inner-content .main-content .page-list-item-wrapper {
       position: relative; }
       .group-section-content .section-content .inner-content .main-content .page-list-item-wrapper .topic-category {

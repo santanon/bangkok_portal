@@ -463,6 +463,9 @@
                 }
             }
             &.active{
+                .icon-wrap{
+                    background-color: $color-secondary;
+                }
                 .icon-search{
                     background-position: bottom center;
                 }
@@ -678,6 +681,7 @@
                         display: flex;
                         align-items: center;
                         justify-content: center;
+                        background-color: $color-secondary;
                         .icon-search{
                             background-color: inherit;
                             background-image: url('../../assets/images/icons/icon-search.png');

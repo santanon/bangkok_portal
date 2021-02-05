@@ -8,10 +8,13 @@
                             </div>
                         </div>
                         <div class="main-content">
+ 
+ 
                             <div class="calendar-wrapper">
                                 <div class="filter-date d-flex justify-content-between align-items-baseline flex-wrap">
                                     <div class="search-content">
                                         <form action="">
+                                         @csrf <!-- {{ csrf_field() }} -->
                                             <div class="input-custom inp-categories m-0">
                                                 <div class="select-wrapper width-full">
                                                     <select name="month" class="slc -month">
@@ -30,6 +33,8 @@
                                                             <option value="12">ธันวาคม</option>
                                                         </optgroup>
                                                     </select>
+ 
+ 
                                                 </div>
                                             </div>
                                         </form>

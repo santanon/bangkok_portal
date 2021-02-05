@@ -68,7 +68,8 @@ $(window).load(function ()
     </div>
      
     <br style="clear:both;"/>
-	<form name="thumbnail" action="<?php echo base_url() ?>panels/image_upload/step3" method="post">
+	<form name="thumbnail" action="http://127.0.0.1:8000/manage-admin/list?m=image_upload&step3=1" method="post">
+    @csrf <!-- {{ csrf_field() }} -->
 	<input type="hidden" name="x1" value="" id="x1" />
 	<input type="hidden" name="y1" value="" id="y1" />
 	<input type="hidden" name="x2" value="" id="x2" />
@@ -77,7 +78,7 @@ $(window).load(function ()
 	<input type="hidden" name="h" value="" id="h" />
 	<br />
     
-    <span class="btn round big gray"><input type="button" value="<?php echo $TextLanguage->lang('back'); ?>" onClick="window.location = '<?php echo base_url() ?>panels/image_upload/<?php echo @$redirect ?>'" class="fontfacetext"></span> 
+    <span class="btn round big gray"><input type="button" value="<?php echo $TextLanguage->lang('back'); ?>" onClick="window.location = 'http://127.0.0.1:8000/manage-admin/list?m=image_upload&<?php echo @$redirect ?>=1';" class="fontfacetext"></span> 
     <span class="btn round big blue"><input type="submit" id="save_thumb" class="fontfacetext" value="<?php echo $TextLanguage->lang('next'); ?>"></span> 
     <?php
 	if(isset($redirect))

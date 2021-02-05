@@ -20,7 +20,8 @@ $TextLanguage = new \App\TextLanguage;
         }
     }
     </script>
-    <form method="post" enctype="multipart/form-data" onsubmit="return check_form();" action="<?php echo base_url(); ?>panels/<?php echo $config_mod; ?>/add_submit">
+    <form method="post" enctype="multipart/form-data" onsubmit="return check_form();" action="http://127.0.0.1:8000/manage-admin/add_submit?m=<?php echo $config_mod;  ?>">
+    @csrf <!-- {{ csrf_field() }} -->
     <table>
         <tbody>
          
@@ -211,7 +212,7 @@ shiftEnterMode: CKEDITOR.ENTER_BR
 <select class="selectric" name="page_type_news"> 
 <option value="new" selected="selected">+ <?php echo $TextLanguage->lang('create_new') ?></option>
 <?php  
-foreach ($Portal_website_news_cat_model->result() as $row_cat)
+foreach ($Portal_website_news_cat_model as $row_cat)
 {   
 	?>
 	<option value="<?php echo $row_cat->id; ?>"><?php echo $row_cat->title; ?></option> 
@@ -228,7 +229,7 @@ foreach ($Portal_website_news_cat_model->result() as $row_cat)
 <select class="selectric" name="page_type_calendar"> 
 <option value="new" selected="selected">+ <?php echo $TextLanguage->lang('create_new') ?></option>
 <?php  
-foreach ($Portal_website_activities_cat_model->result() as $row_cat)
+foreach ($Portal_website_activities_cat_model as $row_cat)
 {   
 	?>
 	<option value="<?php echo $row_cat->id; ?>"><?php echo $row_cat->title; ?> <?php   
@@ -247,7 +248,7 @@ foreach ($Portal_website_activities_cat_model->result() as $row_cat)
 <select class="selectric" name="page_type_faq"> 
 <option value="new" selected="selected">+ <?php echo $TextLanguage->lang('create_new') ?></option>
 <?php  
-foreach ($Portal_website_faq_cat_model->result() as $row_cat)
+foreach ($Portal_website_faq_cat_model as $row_cat)
 {   
 	?>
 	<option value="<?php echo $row_cat->id; ?>"><?php echo $row_cat->title; ?> <?php   
@@ -266,7 +267,7 @@ foreach ($Portal_website_faq_cat_model->result() as $row_cat)
 <select class="selectric" name="page_type_gallery"> 
 <option value="new" selected="selected">+ <?php echo $TextLanguage->lang('create_new') ?></option>
 <?php  
-foreach ($Portal_website_gallery_cat_model->result() as $row_cat)
+foreach ($Portal_website_gallery_cat_model as $row_cat)
 {   
 	?>
 	<option value="<?php echo $row_cat->id; ?>"><?php echo $row_cat->title; ?> <?php   
@@ -285,7 +286,7 @@ foreach ($Portal_website_gallery_cat_model->result() as $row_cat)
 <select class="selectric" name="page_type_banner"> 
 <option value="new" selected="selected">+ <?php echo $TextLanguage->lang('create_new') ?></option>
 <?php  
-foreach ($Portal_website_banner_cat_model->result() as $row_cat)
+foreach ($Portal_website_banner_cat_model as $row_cat)
 {   
 	?>
 	<option value="<?php echo $row_cat->id; ?>"><?php echo $row_cat->title; ?> <?php   
@@ -304,7 +305,7 @@ foreach ($Portal_website_banner_cat_model->result() as $row_cat)
 <select class="selectric" name="page_type_download"> 
 <option value="new" selected="selected">+ <?php echo $TextLanguage->lang('create_new') ?></option>
 <?php  
-foreach ($Portal_website_download_cat_model->result() as $row_cat)
+foreach ($Portal_website_download_cat_model as $row_cat)
 {   
 	?>
 	<option value="<?php echo $row_cat->id; ?>"><?php echo $row_cat->title; ?> <?php   
@@ -323,7 +324,7 @@ foreach ($Portal_website_download_cat_model->result() as $row_cat)
 <select class="selectric" name="page_type_question"> 
 <option value="new" selected="selected">+ <?php echo $TextLanguage->lang('create_new') ?></option>
 <?php  
-foreach ($Portal_website_question_cat_model->result() as $row_cat)
+foreach ($Portal_website_question_cat_model as $row_cat)
 {   
 	?>
 	<option value="<?php echo $row_cat->id; ?>"><?php echo $row_cat->title; ?> <?php   
@@ -342,7 +343,7 @@ foreach ($Portal_website_question_cat_model->result() as $row_cat)
 <select class="selectric" name="page_type_poll"> 
 <option value="new" selected="selected">+ <?php echo $TextLanguage->lang('create_new') ?></option>
 <?php  
-foreach ($Portal_website_poll_cat_model->result() as $row_cat)
+foreach ($Portal_website_poll_cat_model as $row_cat)
 {   
 	?>
 	<option value="<?php echo $row_cat->id; ?>"><?php echo $row_cat->title; ?> <?php   
@@ -361,7 +362,7 @@ foreach ($Portal_website_poll_cat_model->result() as $row_cat)
 <select class="selectric" name="page_type_webboard">
 <option value="new" selected="selected">+ <?php echo $TextLanguage->lang('create_new') ?></option>
 <?php  
-foreach ($Portal_website_webboard_cat_model->result() as $row_cat)
+foreach ($Portal_website_webboard_cat_model as $row_cat)
 {   
 	?>
 	<option value="<?php echo $row_cat->id; ?>"><?php echo $row_cat->title; ?> <?php   
@@ -391,7 +392,7 @@ hide_all();
                 <td>
                 
                 <span class="btn round big blue"><input type="submit" class="fontfacetext" value="<?php echo $TextLanguage->lang('save'); ?>"></span>&nbsp;
-                <span class="btn round big gray"><input type="button" class="fontfacetext" value="<?php echo $TextLanguage->lang('cancel'); ?>" onclick="window.location = '<?php echo base_url() . 'panels/' . $config_mod . '' ?>';"></span>
+                <span class="btn round big gray"><input type="button" class="fontfacetext" value="<?php echo $TextLanguage->lang('cancel'); ?>" onclick="window.location = 'http://127.0.0.1:8000/manage-admin/list?m=<?php echo $config_mod;  ?>';"></span>
 
                 </td>
             </tr>

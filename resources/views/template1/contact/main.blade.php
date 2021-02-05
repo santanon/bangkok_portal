@@ -10,7 +10,8 @@
                                     </div>
                                 </div>
                                 <div class="main-content">
-                                    <form action="">
+                                     <form action=""> 
+                                    @csrf <!-- {{ csrf_field() }} -->
                                         <div class="group-form-section -contact">
                                             <div class="row">
                                                 <div class="col-lg-12">

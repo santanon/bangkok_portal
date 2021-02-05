@@ -74,7 +74,8 @@ function check_list()
 	}	
 }
 </script> 
-<form action="set_sort?m=<?php echo $config_mod ?>" method="post" name="list_form" id="list_form">                                            														
+<form action="set_sort?m=<?php echo $config_mod ?>" method="post" name="list_form" id="list_form">  
+@csrf <!-- {{ csrf_field() }} -->                                          														
 												<table>
 													<thead>
                                                     	<tr>                                                        

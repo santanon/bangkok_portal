@@ -94,8 +94,8 @@ if($_SESSION['panel_style_template_id'] == '0')
 					<?php
 					for($ii=1;$ii<=5;$ii++)
 					{
-						?>
-						 <td><a onclick="if(!confirm('<?php echo $TextLanguage->lang('choose_this_template'); ?>?')){ return false; }" href="<?php echo base_url(); ?>panel/set_template/<?php echo $run; ?>/1"><img src="<?php echo base_url(); ?>upload/admin/<?php echo $run; ?>.jpg" style="border:1px solid #CCC; width:145px;"></a></td>
+						?> 
+						 <td><a onclick="if(!confirm('<?php echo $TextLanguage->lang('choose_this_template'); ?>?')){ return false; }" href="http://127.0.0.1:8000/manage-admin/set_template?id=<?php echo $run; ?>&id2=1"><img src="<?php echo base_url(); ?>upload/admin/<?php echo $run; ?>.jpg" style="border:1px solid #CCC; width:145px;"></a></td>
 						<?php
 						$run++;
 					}
@@ -123,7 +123,7 @@ else
 					<br />
 				  #Template<?php echo $_SESSION['panel_style_template_id'] ?>
 					<br /><br /> 
-					<span class="btn round big gray"><input onclick="if(confirm('<?php echo $TextLanguage->lang('confirm') ?>?')){ window.location = '<?php echo base_url(); ?>panel/set_template_reset';}" type="reset" class="fontfacetext" value="<?php echo $TextLanguage->lang('reset_template') ?>"></span> 
+					<span class="btn round big gray"><input onclick="if(confirm('<?php echo $TextLanguage->lang('confirm') ?>?')){ window.location = 'http://127.0.0.1:8000/manage-admin/set_template_reset';}" type="reset" class="fontfacetext" value="<?php echo $TextLanguage->lang('reset_template') ?>"></span> 
 					</td>
 				</tr> 
 			</tbody>
@@ -147,9 +147,9 @@ else
                                                     
 <?php
 if($_SESSION['panel_style_logo_img1'] == '')
-{
+{  
 	?>
-    <iframe frameborder="0" scrolling="auto" width="100%" height="350" src="<?php echo base_url() ?>panels/image_upload/"></iframe>
+    <iframe frameborder="0" scrolling="auto" width="100%" height="350" src="http://127.0.0.1:8000/manage-admin/list?m=image_upload"></iframe>
     <?php
 }
 else
@@ -162,7 +162,7 @@ else
 					<td align="center">
 					<img src="<?php echo base_url(); ?>upload/web/<?php echo $_SESSION['panel_style_logo_img1'] ?>" style="border:1px solid #CCC;"> 
 					<br /><br /> 
-					<span class="btn round big gray"><input onclick="if(confirm('<?php echo $TextLanguage->lang('confirm') ?>?')){ window.location = '<?php echo base_url(); ?>panels/image_upload/reset_logo';}" type="reset" class="fontfacetext" value="<?php echo $TextLanguage->lang('reset_logo') ?>"></span> 
+					<span class="btn round big gray"><input onclick="if(confirm('<?php echo $TextLanguage->lang('confirm') ?>?')){ window.location = 'http://127.0.0.1:8000/manage-admin/list?m=image_upload&reset_logo=1';}" type="reset" class="fontfacetext" value="<?php echo $TextLanguage->lang('reset_logo') ?>"></span> 
 					</td>
 				</tr> 
 			</tbody>
@@ -213,7 +213,8 @@ else
         }
     }
     </script>
-    <form method="post" enctype="multipart/form-data" onsubmit="return check_form();" action="<?php echo base_url(); ?>panel/set_info">
+    <form method="post" enctype="multipart/form-data" onsubmit="return check_form();" action="http://127.0.0.1:8000/manage-admin/set_info">
+    @csrf <!-- {{ csrf_field() }} -->
     <table align="center">
         <tbody>
              

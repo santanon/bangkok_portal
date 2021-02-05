@@ -38,7 +38,7 @@ $TextLanguage = new \App\TextLanguage;
 													<div id="logo-select-pc">
                                                     
                                                     
-														<iframe frameborder="0" scrolling="yes" width="100%" height="350" src="<?php echo base_url() ?>panels/image_upload/edit_logo"></iframe>
+														<iframe frameborder="0" scrolling="yes" width="100%" height="350" src="http://127.0.0.1:8000/manage-admin/edit_logo?m=image_upload"></iframe>
                                                         
                                                         
 													</div>
@@ -63,7 +63,8 @@ $TextLanguage = new \App\TextLanguage;
 													}
 												}
 												</script>
-                                            	<form method="post" enctype="multipart/form-data" onsubmit="return check_form();" action="<?php echo base_url(); ?>panels/<?php echo $config_mod; ?>/url_submit">
+                                            	<form method="post" enctype="multipart/form-data" onsubmit="return check_form();" action="http://127.0.0.1:8000/manage-admin/url_submit?m=<?php echo $config_mod ?>">
+                                                @csrf <!-- {{ csrf_field() }} -->
 												<table>
 													<tbody>
                                                     	  

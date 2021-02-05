@@ -220,7 +220,8 @@
                 <div class="close-search">
                     <div class="icon-close"></div>
                 </div>
-                <form action="">
+                 <form action="">
+                @csrf <!-- {{ csrf_field() }} -->
                     <div class="input-custom">
                         <div class="input-box">
                             <input type="text" name="" required="">

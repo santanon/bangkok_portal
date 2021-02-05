@@ -24,7 +24,8 @@ function check_form()
 	}
 }
 </script>
-<form method="post" enctype="multipart/form-data" onsubmit="return check_form();" action="<?php echo base_url(); ?>panels/<?php echo $config_mod; ?>/send_submit">
+<form method="post" enctype="multipart/form-data" onsubmit="return check_form();" action="http://127.0.0.1:8000/manage-admin/send_submit?m=<?php echo $config_mod ?>">
+@csrf <!-- {{ csrf_field() }} -->
 <table>
 	<tbody>
         <tr>
@@ -35,7 +36,7 @@ function check_form()
                 <option value="all">- <?php echo $TextLanguage->lang('all'); ?> -</option> 
                 <?php 
 				$run = 0;
-                foreach ($list_cat->result() as $row_cat)
+                foreach ($list_cat as $row_cat)
                 {   
                     ?>
                     <option value="<?php echo $row_cat->id; ?>"><?php echo $row_cat->title; ?> (<?php echo $list_cat_count[$run] ?>)</option> 
@@ -80,7 +81,7 @@ function check_form()
 			<td>
 			
 			<span class="btn round big blue"><input type="submit" class="fontfacetext" value="<?php echo $TextLanguage->lang('send'); ?>"></span>&nbsp;
-			<span class="btn round big gray"><input type="button" class="fontfacetext" value="<?php echo $TextLanguage->lang('cancel'); ?>" onclick="window.location = '<?php echo base_url() . 'panels/' . $config_mod . '' ?>';"></span>
+			<span class="btn round big gray"><input type="button" class="fontfacetext" value="<?php echo $TextLanguage->lang('cancel'); ?>" onclick="window.location = 'http://127.0.0.1:8000/manage-admin/list?m=<?php echo $config_mod;  ?>';"></span>
 
 			</td>
 		</tr>

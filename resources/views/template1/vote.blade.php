@@ -59,7 +59,8 @@
                         </div>
                     </div>
                     <div class="question-choice">
-                        <form action="">
+                         <form action=""> 
+                        @csrf <!-- {{ csrf_field() }} -->
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="text-question">

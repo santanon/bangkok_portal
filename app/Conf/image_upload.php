@@ -5,12 +5,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage; 
 use Illuminate\Support\Facades\Http; 
 use Cache;
-
- 
-/*
-URL PATH : /panels/image_upload/
-LOCATION : /application/controllers/panels/image_upload.php
-*/
  
 class Image_upload
 {  
@@ -24,17 +18,18 @@ class Image_upload
 	var $config_size_h = 120;
 	  
 	public function index()
-	{  
-		//redirect('/panels/' . $this->mod . '/step1'); 
-		?>
-		<meta http-equiv="refresh" content="0;URL=<?php echo 'http://localhost/bangkok.go.th.portal/panels/' . $this->mod . '/step1' ?>" />
+	{   
+		?> 
+        <meta http-equiv="refresh" content="0;URL=<?php echo 'http://127.0.0.1:8000/manage-admin/step1?m='.$this->mod.'' ?>" />
 		<?php
 		exit;	
 	} 
 	
 	public function step1()
 	{  
-		$this->include_header(); 
+		$$CustomHelper = new \App\CustomHelper;
+$TextLanguage = new \App\TextLanguage;
+		  
 		
 		$data['title'] = '';
 		
@@ -43,7 +38,9 @@ class Image_upload
 	
 	public function step2()
 	{  
-		$this->include_header(); 
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		 
 		
 		$config['upload_path']	 = './upload/tmp/'; 
 		
@@ -100,7 +97,7 @@ class Image_upload
 		{
 			?><meta charset="utf-8" />
 			<script type="text/javascript">
-            alert('<?php echo $this->lang->line('please_upload_file') ?>');
+            alert('<?php echo $TextLanguage->lang('please_upload_file') ?>');
             window.history.back();
             </script>
             <?php  exit;
@@ -123,7 +120,9 @@ class Image_upload
 	
 	public function step3()
 	{  
-		$this->include_header(); 
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		 
 		
 		$x1 = $_POST["x1"];
 		$y1 = $_POST["y1"];
@@ -189,7 +188,9 @@ class Image_upload
 	
 	public function step4()
 	{  
-		$this->include_header(); 
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		 
 		
 		$ext = explode('.',$_SESSION['crop_image_thumb']);
 		$ext = $ext[count($ext)-1];
@@ -207,20 +208,24 @@ class Image_upload
 			$this->ftp->connect($config); 
 			$this->ftp->upload('./upload/web/'.$new_file, FTP_PATH.'upload/web/'.$new_file, 'binary', 0775); 
 			$this->ftp->close();
-			 
-			
-			$this->load->model('Portal_website_style_model');
-		
-			$d = new stdClass(); 
+		 
+			$d = new \stdClass(); 
 			$d->logo_type = '1';
 			$d->logo_img1 = $new_file;
 			$d->logo_url = '';
 			$d->logo_lastupdate = date('U');    
-			$this->Portal_website_style_model->update_data($d,$_SESSION['panel_id'],'web_id'); 
 			 
-			$this->load->model('Portal_website_log_model');  
-			$this->Portal_website_log_model->add_log('Change Logo',$_SESSION['panel_username'],$_SESSION['panel_id'],'LOGO_EDIT');
+			$this_qr = ''; 
+			foreach($d as $key=>$value) 
+			{
+				$this_qr = $this_qr.$key." = '".addslashes($value)."',";
+			}
+			$this_qr = substr($this_qr,0,-1);  	 
+			$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('Portal_website_style_model')),"UPDATE ".$CustomHelper->model_to_table('Portal_website_style_model')." SET ".$this_qr." WHERE web_id = '".$_SESSION['panel_id']."'",'');
 			
+			
+			$CustomHelper->add_log(''.$this->mod_title.'Change Logo',$_SESSION['panel_username'],$_SESSION['panel_id'],'LOGO_EDIT');
+			 
 			$_SESSION['panel_style_logo_type'] = '1';
 			$_SESSION['panel_style_logo_img1'] = $new_file;
 			$_SESSION['panel_style_logo_url'] = '';
@@ -255,22 +260,33 @@ class Image_upload
 	}
 	
 	public function reset_logo()
-	{  
-		$this->include_header(); 
+	{   
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		  
 		
 		@unlink('./upload/web/'.$_SESSION['panel_style_logo_img1']);
+		 
 		
-		$this->load->model('Portal_website_style_model');
-		
-		$d = new stdClass(); 
+		$d = new \stdClass(); 
 		$d->logo_type = '';
 		$d->logo_img1 = '';
 		$d->logo_url = '';
 		$d->logo_lastupdate = date('U');    
-		$this->Portal_website_style_model->update_data($d,$_SESSION['panel_id'],'web_id'); 
 		 
-		$this->load->model('Portal_website_log_model');  
-		$this->Portal_website_log_model->add_log('Reset Logo',$_SESSION['panel_username'],$_SESSION['panel_id'],'LOGO_RESET');
+		
+		
+		$this_qr = ''; 
+		foreach($d as $key=>$value) 
+		{
+			$this_qr = $this_qr.$key." = '".addslashes($value)."',";
+		}
+		$this_qr = substr($this_qr,0,-1);  	 
+		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('Portal_website_style_model')),"UPDATE ".$CustomHelper->model_to_table('Portal_website_style_model')." SET ".$this_qr." WHERE web_id = '".$_SESSION['panel_id']."'",'');
+		
+		
+		  
+		$CustomHelper->add_log(''.$this->mod_title.'Reset Logo',$_SESSION['panel_username'],$_SESSION['panel_id'],'LOGO_RESET');
 		
 		$_SESSION['panel_style_logo_type'] = '';
 		$_SESSION['panel_style_logo_img1'] = '';
@@ -280,15 +296,17 @@ class Image_upload
 		$data['title'] = '';
 		
 		//redirect('/panel/intro/2');
-		?>
-		<meta http-equiv="refresh" content="0;URL=<?php echo 'http://localhost/bangkok.go.th.portal/panel/intro/2' ?>" />
+		?> 
+        <meta http-equiv="refresh" content="0;URL=<?php echo 'http://127.0.0.1:8000/manage-admin/intro2?m='.$this->mod.'' ?>" />
 		<?php
 		exit;	
 	} 
 	
 	public function edit_logo()
-	{  
-		$this->include_header(); 
+	{   
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		  
 		
 		$data['title'] = '';
 		

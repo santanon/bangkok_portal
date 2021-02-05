@@ -15,7 +15,7 @@ foreach ($list as $row)
     <td align="center">#<?php echo sprintf('%06d', $row->id) ?></td> 
     <td align="left"> &nbsp; <?php if($row->title <> ''){echo $row->title;}else if($row->en_title <> ''){echo $row->en_title;}else{echo '-';} ?>
     
-    <span class="link-text"><a href="<?php echo base_url() . 'panels/' . $config_mod_sub_mod . '/set_cat/' . $row->id ?>"> ( <?php echo $list_sub_count[$row->id] ?> ) </a></span>
+    <span class="link-text"><a href="<?php echo 'http://127.0.0.1:8000/manage-admin/set_cat?m='.$config_mod_sub_mod.'&id='.$row->id ?>"> ( <?php echo $list_sub_count[$row->id] ?> ) </a></span>
     
     </td>
     <td align="center"><span class="link-text"><a href="#" title="<?php echo date("d/m/Y [H:i:s]",$row->last_create) ?>"> <?php echo $CustomHelper->time_elapsed_string_th($row->last_create); ?> </a></span></td> 

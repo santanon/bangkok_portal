@@ -322,7 +322,8 @@
                                         <div class="box-title">
                                             <div class="title-head color-primary">คุณเห็นด้วยกับข่าวนี้หรือไม่</div>
                                         </div>
-                                        <form action="">
+                                         <form action="">
+                @csrf <!-- {{ csrf_field() }} -->
                                             <div class="list-choice-vote">
                                                 <ul>
                                                     <li class="d-flex justify-content-between align-items-center">

@@ -5,12 +5,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage; 
 use Illuminate\Support\Facades\Http; 
 use Cache;
-
- 
-/*
-URL PATH : /panels/enew_cat/
-LOCATION : /application/controllers/panels/enew_cat.php
-*/
  
 class Enew_cat
 {  
@@ -45,93 +39,98 @@ class Enew_cat
 	var $config_sort2 = 'asc';
 	 
 	public function add()
-	{ 
-		$this->include_header(); 
-		 
-		$data['this_cat'] = $this->lang->line($this->mod);
-		$data['this_page'] = $this->lang->line('add');
-		$data['title'] = $data['this_page'] . ' : ' . $data['this_cat'] . ' - ' . $this->lang->line('bangkok_portal');  
+	{   
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		 		 
+		$data['this_cat'] = $TextLanguage->lang(@$this->mod);
+		$data['this_page'] = $TextLanguage->lang('add');
+		$data['title'] = $data['this_page'] . ' : ' . $data['this_cat'] . ' - ' . $TextLanguage->lang('bangkok_portal');  
 		$data['config_mod'] = $this->mod; 
 		$data['config_submenu_title'] = $this->config_submenu_title;
 		$data['config_submenu_mod'] = $this->config_submenu_mod;   
-		$data['config_header_info'] = $this->lang->line('help_'.$this->mod.'_add');
+		$data['config_header_info'] = $TextLanguage->lang('help_'.$this->mod.'_add');
 		$data['config_footer_js'] = 'mainmenuFocus(1,16,1); btn2stageFocus(0,2);';        
 		  
-		$this->load->view('panel/'.$this->mod.'/add', $data); 
+		return $data;
+		//return view('manage.'.$this->mod.'.add',$data);
+		//$this->load->view('panel/'.$this->mod.'/add', $data); 
 	}
 	
 	public function add_submit()
-	{ 
-		$this->include_header(); 
+	{   
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		 		  
 		  
-		$this->load->model($this->mod_model);  
 		 
-		$d = new stdClass();  
-		$d->where = array('web_id' => $_SESSION['panel_id']); 
-		$d->orderby = 'sort DESC';
-		$q = $this->{$this->mod_model}->select_data($d);  
+		 
+		$q = "SELECT * FROM ".$CustomHelper->model_to_table($this->mod_model)." WHERE web_id = ? ORDER BY sort DESC";	 	
+		$v = $_SESSION['panel_id'];
+		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),$q,$v);
+		$q = json_decode($res);
+		
+		 
 		 
 		$sort = '1';
-		if($q->num_rows > 0)
+		if(count($q) > 0)
 		{  
-			$row = $q->result(); 
+			$row = $q; 
 			$sort = $row[0]->sort;	 
 			$sort = $sort + 1;
 		} 
 		 
-		$d = new stdClass(); 
+		$d = new \stdClass(); 
 		$d->web_id = $_SESSION['panel_id']; 
-		$d->title = htmlspecialchars($this->input->post('title', TRUE));
-		$d->en_title = htmlspecialchars($this->input->post('en_title', TRUE));   
+		$d->title = htmlspecialchars($CustomHelper->input_post('title', TRUE));
+		$d->en_title = htmlspecialchars($CustomHelper->input_post('en_title', TRUE));   
 		$d->last_create = date('U');  
 		$d->last_update = date('U');    
 		$d->sort = $sort;
 		$d->status = '1';
 		 
-		$this->{$this->mod_model}->add_data($d);    
-			
-		$this->load->model('Portal_website_log_model'); 
-		$this->Portal_website_log_model->add_log('' . $this->mod_title . ' - Add (' . $this->input->post('title', TRUE) . ')',$_SESSION['panel_username'],$_SESSION['panel_id'],strtoupper($this->mod).'_ADD');  
-		
-		//redirect('/panels/' . $this->mod . '/');
+		$this_qr = ''; 
+		foreach($d as $key=>$value) 
+		{
+			$this_qr = $this_qr.$key." = '".addslashes($value)."',";
+		}
+		$this_qr = substr($this_qr,0,-1);  	 
+		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),"INSERT INTO ".$CustomHelper->model_to_table($this->mod_model)." SET ".$this_qr."",'');  
+		 	
+		$CustomHelper->add_log(''.$this->mod_title.' - Add ('.$CustomHelper->input_post('title', TRUE).')',$_SESSION['panel_username'],$_SESSION['panel_id'],strtoupper($this->mod).'_ADD');    
 		?>
-        <meta http-equiv="refresh" content="0;URL=<?php echo  'http://localhost/bangkok.go.th.portal/panels/' . $this->mod . '/' ?>" />
+        <meta http-equiv="refresh" content="0;URL=<?php echo  'http://127.0.0.1:8000/manage-admin/list?m='.$this->mod.'' ?>" />
         <?php  } 
 	
 	public function edit($v1 = '0')
-	{ 
-		$this->include_header(); 
-		 
-		$this->load->model($this->mod_model); 
+	{   
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
 		
-		$d = new stdClass();  
-		$d->where = array('id' => $v1,'web_id' => $_SESSION['panel_id']);
-		$q = $this->{$this->mod_model}->select_data($d);  
-		 
-		if($q->num_rows == 1)
+		$q = "SELECT * FROM ".$CustomHelper->model_to_table($this->mod_model)." WHERE web_id = '".$_SESSION['panel_id']."' AND id = ?";	 	
+		$v = $v1;
+		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),$q,$v);
+		$q = json_decode($res); 
+		  
+		if(count($q) > 0)
 		{  
-			$row = $q->result();  
-			
+			$row = $q; 
+		 
 			$data['edit_id'] = $row[0]->id;
 			$data['edit_web_id'] = $row[0]->web_id;
 			$data['edit_title'] = $row[0]->title;
 			$data['edit_en_title'] = $row[0]->en_title;  
-			$data['edit_last_update'] = $row[0]->last_update; 
-			 
-			$data['this_cat'] = $this->lang->line($this->mod);
-			$data['this_page'] = $this->lang->line('edit');
-			$data['title'] = $data['this_page'] . ' : ' . $data['this_cat'] . ' - ' . $this->lang->line('bangkok_portal');    
-			 
-			$data['config_mod'] = $this->mod; 
-			
+			$data['edit_last_update'] = $row[0]->last_update; 			 
+			$data['this_cat'] = $TextLanguage->lang(@$this->mod);
+			$data['this_page'] = $TextLanguage->lang('edit');
+			$data['title'] = $data['this_page'] . ' : ' . $data['this_cat'] . ' - ' . $TextLanguage->lang('bangkok_portal');    			 
+			$data['config_mod'] = $this->mod; 			
 			$data['config_submenu_title'] = $this->config_submenu_title;
-			$data['config_submenu_mod'] = $this->config_submenu_mod;   
-			
-			$data['config_header_info'] = $this->lang->line('help_'.$this->mod.'_edit');
-										   
+			$data['config_submenu_mod'] = $this->config_submenu_mod;   			
+			$data['config_header_info'] = $TextLanguage->lang('help_'.$this->mod.'_edit');										   
 			$data['config_footer_js'] = 'mainmenuFocus(1,16,1); btn2stageFocus(0,1);';        
 			  
-			$this->load->view('panel/'.$this->mod.'/edit', $data); 
+			return $data;
 		}
 		else
 		{
@@ -140,23 +139,28 @@ class Enew_cat
 	}	
 	
 	public function edit_submit()
-	{ 
-		$this->include_header(); 
-		$this->load->model($this->mod_model);  
+	{   
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
 		 
-		$d = new stdClass();  
-		$d->title = htmlspecialchars($this->input->post('title', TRUE));
-		$d->en_title = htmlspecialchars($this->input->post('en_title', TRUE));   
+		  
+		 
+		$d = new \stdClass();  
+		$d->title = htmlspecialchars($CustomHelper->input_post('title', TRUE));
+		$d->en_title = htmlspecialchars($CustomHelper->input_post('en_title', TRUE));   
 		$d->last_update = date('U'); 
 		       
-		$this->{$this->mod_model}->update_data($d,$_SESSION['panel_id'],'web_id',$this->input->post('id', TRUE),'id');    
+		$this_qr = ''; 
+		foreach($d as $key=>$value) 
+		{
+			$this_qr = $this_qr.$key." = '".addslashes($value)."',";
+		}
+		$this_qr = substr($this_qr,0,-1);  	 
+		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),"UPDATE ".$CustomHelper->model_to_table($this->mod_model)." SET ".$this_qr." WHERE web_id = '".$_SESSION['panel_id']."' AND id = '".$CustomHelper->input_post('id', TRUE)."'",'');    
  	
-		$this->load->model('Portal_website_log_model'); 
-		$this->Portal_website_log_model->add_log('' . $this->mod_title . ' - Edit (' . $this->input->post('title', TRUE) . ')',$_SESSION['panel_username'],$_SESSION['panel_id'],strtoupper($this->mod).'_EDIT');  
-		
-		//redirect('/panels/' . $this->mod . '/');
+		$CustomHelper->add_log(''.$this->mod_title.' - Edit ('.$CustomHelper->input_post('title', TRUE).')',$_SESSION['panel_username'],$_SESSION['panel_id'],strtoupper($this->mod).'_EDIT');   
 		?>
-        <meta http-equiv="refresh" content="0;URL=<?php echo  'http://localhost/bangkok.go.th.portal/panels/' . $this->mod . '/' ?>" />
+        <meta http-equiv="refresh" content="0;URL=<?php echo  'http://127.0.0.1:8000/manage-admin/list?m='.$this->mod.'' ?>" />
         <?php  } 
 }
 ?>

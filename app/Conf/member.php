@@ -5,12 +5,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage; 
 use Illuminate\Support\Facades\Http; 
 use Cache;
-
- 
-/*
-URL PATH : /panels/member/
-LOCATION : /application/controllers/panels/member.php
-*/
  
 class Member
 {  
@@ -47,18 +41,18 @@ class Member
 	} 
 	
 	public function edit($v1 = '0')
-	{ 
-		$this->include_header(); 
-		 
-		$this->load->model($this->mod_model); 
+	{   
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
 		
-		$d = new stdClass();  
-		$d->where = array('id' => $v1,'web_id' => $_SESSION['panel_id']);
-		$q = $this->{$this->mod_model}->select_data($d);  
-		 
-		if($q->num_rows == 1)
+		$q = "SELECT * FROM ".$CustomHelper->model_to_table($this->mod_model)." WHERE web_id = '".$_SESSION['panel_id']."' AND id = ?";	 	
+		$v = $v1;
+		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),$q,$v);
+		$q = json_decode($res); 
+		  
+		if(count($q) > 0)
 		{  
-			$row = $q->result();  
+			$row = $q;    
 			
 			$data['edit_id'] = $row[0]->id;
 			$data['edit_web_id'] = $row[0]->web_id; 
@@ -73,22 +67,17 @@ class Member
 			$data['edit_zip_code'] = $row[0]->zip_code;  
 			$data['edit_province'] = $row[0]->province; 
 			$data['edit_idcard'] = $row[0]->idcard;  
-			$data['edit_img1'] = $row[0]->img1;  
-			 
-			$data['this_cat'] = $this->lang->line($this->mod);
-			$data['this_page'] = $this->lang->line('edit');
-			$data['title'] = $data['this_page'] . ' : ' . $data['this_cat'] . ' - ' . $this->lang->line('bangkok_portal');    
-			 
-			$data['config_mod'] = $this->mod; 
-			
+			$data['edit_img1'] = $row[0]->img1;  			 
+			$data['this_cat'] = $TextLanguage->lang(@$this->mod);
+			$data['this_page'] = $TextLanguage->lang('edit');
+			$data['title'] = $data['this_page'] . ' : ' . $data['this_cat'] . ' - ' . $TextLanguage->lang('bangkok_portal');    			 
+			$data['config_mod'] = $this->mod; 			
 			$data['config_submenu_title'] = $this->config_submenu_title;
-			$data['config_submenu_mod'] = $this->config_submenu_mod;   
-			
-			$data['config_header_info'] = $this->lang->line('help_'.$this->mod.'_edit');
-										   
+			$data['config_submenu_mod'] = $this->config_submenu_mod;   			
+			$data['config_header_info'] = $TextLanguage->lang('help_'.$this->mod.'_edit');										   
 			$data['config_footer_js'] = 'mainmenuFocus(1,6,1); btn2stageFocus(0,1);';        
 			  
-			$this->load->view('panel/'.$this->mod.'/edit', $data); 
+			return $data; 
 		}
 		else
 		{
@@ -97,28 +86,30 @@ class Member
 	}	
 	
 	public function edit_submit()
-	{ 
-		$this->include_header(); 
-		  
-		$this->load->model($this->mod_model);  
+	{   
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
 		 
-		$d = new stdClass();  
+		  
+		  
+		 
+		$d = new \stdClass();  
 		
-		$change_password = @$this->input->post('change_password', TRUE);  
+		$change_password = @$CustomHelper->input_post('change_password', TRUE);  
 		if($change_password == 1)
 		{
-			$password = $this->input->post('password', TRUE);  
+			$password = $CustomHelper->input_post('password', TRUE);  
 		}
-		$d->title = htmlspecialchars($this->input->post('title', TRUE)); 
-		$d->lastname = $this->input->post('lastname', TRUE); 
-		$d->email = $this->input->post('email', TRUE); 
-		$d->gender = $this->input->post('gender', TRUE); 
-		//$d->birthday = $this->input->post('birthday', TRUE); 
-		$d->tel = $this->input->post('tel', TRUE); 
-		$d->address = $this->input->post('address', TRUE); 
-		$d->zip_code = $this->input->post('zip_code', TRUE); 
-		$d->province = $this->input->post('province', TRUE); 
-		$d->idcard = $this->input->post('idcard', TRUE); 
+		$d->title = htmlspecialchars($CustomHelper->input_post('title', TRUE)); 
+		$d->lastname = $CustomHelper->input_post('lastname', TRUE); 
+		$d->email = $CustomHelper->input_post('email', TRUE); 
+		$d->gender = $CustomHelper->input_post('gender', TRUE); 
+		//$d->birthday = $CustomHelper->input_post('birthday', TRUE); 
+		$d->tel = $CustomHelper->input_post('tel', TRUE); 
+		$d->address = $CustomHelper->input_post('address', TRUE); 
+		$d->zip_code = $CustomHelper->input_post('zip_code', TRUE); 
+		$d->province = $CustomHelper->input_post('province', TRUE); 
+		$d->idcard = $CustomHelper->input_post('idcard', TRUE); 
 		
 		
 		
@@ -171,21 +162,24 @@ class Member
 		}
 		
 		 		
-		$change_password = @$this->input->post('change_password', TRUE);  
+		$change_password = @$CustomHelper->input_post('change_password', TRUE);  
 		if($change_password == 1)
 		{
 			$d->password = md5($password); 
 		} 
 		$d->last_update = date('U');   
 		     
-		$this->{$this->mod_model}->update_data($d,$_SESSION['panel_id'],'web_id',$this->input->post('id', TRUE),'id');    
+		$this_qr = ''; 
+		foreach($d as $key=>$value) 
+		{
+			$this_qr = $this_qr.$key." = '".addslashes($value)."',";
+		}
+		$this_qr = substr($this_qr,0,-1);  	 
+		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),"UPDATE ".$CustomHelper->model_to_table($this->mod_model)." SET ".$this_qr." WHERE web_id = '".$_SESSION['panel_id']."' AND id = '".$CustomHelper->input_post('id', TRUE)."'",'');    
  	
-		$this->load->model('Portal_website_log_model'); 
-		$this->Portal_website_log_model->add_log('' . $this->mod_title . ' - Edit (' . $this->input->post('title', TRUE) . ')',$_SESSION['panel_username'],$_SESSION['panel_id'],strtoupper($this->mod).'_EDIT');  
-		
-		//redirect('/panels/' . $this->mod . '/');
+		$CustomHelper->add_log(''.$this->mod_title.' - Edit ('.$CustomHelper->input_post('title', TRUE).')',$_SESSION['panel_username'],$_SESSION['panel_id'],strtoupper($this->mod).'_EDIT');   
 		?>
-        <meta http-equiv="refresh" content="0;URL=<?php echo  'http://localhost/bangkok.go.th.portal/panels/' . $this->mod . '/' ?>" />
+        <meta http-equiv="refresh" content="0;URL=<?php echo  'http://127.0.0.1:8000/manage-admin/list?m='.$this->mod.'' ?>" />
         <?php  } 
 }
 ?>

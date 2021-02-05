@@ -25,7 +25,8 @@ $TextLanguage = new \App\TextLanguage;
         }
     }
     </script>
-    <form method="post" enctype="multipart/form-data" onsubmit="return check_form();" action="<?php echo base_url(); ?>panels/<?php echo $config_mod; ?>/edit_submit">
+    <form method="post" enctype="multipart/form-data" onsubmit="return check_form();" action="http://127.0.0.1:8000/manage-admin/edit_submit?m=<?php echo $config_mod;  ?>">
+    @csrf <!-- {{ csrf_field() }} -->
     <table>
         <tbody>
             <tr>
@@ -64,11 +65,11 @@ $TextLanguage = new \App\TextLanguage;
              <tr>
                 <th width="120"><?php echo $TextLanguage->lang('url_target'); ?></th>
                 <td> 
-                    <div class="align-box" style="width:110px;"><input name="url_target" type="radio" id="test-radio1" value="_top" <?php if($edit_url_target == '_top'){ ?> checked="checked" <? } ?>> 
+                    <div class="align-box" style="width:110px;"><input name="url_target" type="radio" id="test-radio1" value="_top" <?php if($edit_url_target == '_top'){ ?> checked="checked" <?php } ?>> 
                     <label class="input-label" for="test-radio1"><?php echo $TextLanguage->lang('redirect'); ?></label>
                     </div>&nbsp;&nbsp;
                     
-                    <div class="align-box" style="width:110px;"><input name="url_target" type="radio" id="test-radio2" value="_blank" <?php if($edit_url_target == '_blank'){ ?> checked="checked" <? } ?>> 
+                    <div class="align-box" style="width:110px;"><input name="url_target" type="radio" id="test-radio2" value="_blank" <?php if($edit_url_target == '_blank'){ ?> checked="checked" <?php } ?>> 
                     <label class="input-label" for="test-radio2"><?php echo $TextLanguage->lang('new_window'); ?></label>
                     </div>&nbsp;&nbsp; 
                 </td>
@@ -89,7 +90,7 @@ $this_data['edit_date_end'] = $edit_date_end;
                 <td>
                 
                 <span class="btn round big blue"><input type="submit" class="fontfacetext" value="<?php echo $TextLanguage->lang('save'); ?>"></span>&nbsp;
-                <span class="btn round big gray"><input type="button" class="fontfacetext" value="<?php echo $TextLanguage->lang('cancel'); ?>" onclick="window.location = '<?php echo base_url() . 'panels/' . $config_mod . '' ?>';"></span>
+                <span class="btn round big gray"><input type="button" class="fontfacetext" value="<?php echo $TextLanguage->lang('cancel'); ?>" onclick="window.location = 'http://127.0.0.1:8000/manage-admin/list?m=<?php echo $config_mod;  ?>';"></span>
 
                 </td>
             </tr>

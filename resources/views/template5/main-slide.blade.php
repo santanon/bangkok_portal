@@ -66,7 +66,8 @@
         </div>
         <div class="section-search-wrapper">
             <div class="group-search">
-                <form action="">
+                 <form action="">
+                @csrf <!-- {{ csrf_field() }} -->
                     <div class="input-custom">
                         <div class="input-box">
                             <label for=""></label>
@@ -170,7 +171,8 @@
     </div>
     <div class="search-onbanner">
         <div class="group-search">
-            <form action="">
+             <form action="">
+                @csrf <!-- {{ csrf_field() }} -->
                 <div class="input-custom">
                     <div class="input-box">
                         <label for=""></label>

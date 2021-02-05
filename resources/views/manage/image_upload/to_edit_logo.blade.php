@@ -5,7 +5,7 @@
 </head> 
 <body>
 <script type="text/javascript">
-window.top.location = '<?php echo base_url() ?>panels/logo';
+window.top.location = 'http://127.0.0.1:8000/manage-admin/list?m=logo';
 </script>
 </body>
 </html> 

@@ -14,7 +14,7 @@ $TextLanguage = new \App\TextLanguage;
 			
 
 <?php
-$r = $list_template->result();
+$r = $list_template;
 ?>            
             
 <div class="form-box">
@@ -26,7 +26,7 @@ $r = $list_template->result();
 					<br />
 				  #<?php echo $r[0]->title ?>
 					<br /><br /> 
-					<span class="btn round big gray"><input onclick="if(confirm('<?php echo $TextLanguage->lang('confirm') ?>?')){ window.location = '<?php echo base_url(); ?>panels/template_my/reset_it';}" type="reset" class="fontfacetext" value="<?php echo $TextLanguage->lang('reset_template') ?>"></span>   <span class="btn round big blue"><input onclick="window.location = '<?php echo base_url(); ?>panels/contentbox_cat';" type="button" class="fontfacetext" value="<?php echo $TextLanguage->lang('custom_layout_box') ?>"></span> 
+					<span class="btn round big gray"><input onclick="if(confirm('<?php echo $TextLanguage->lang('confirm') ?>?')){ window.location = 'http://127.0.0.1:8000/manage-admin/reset_it?m=template_my';}" type="reset" class="fontfacetext" value="<?php echo $TextLanguage->lang('reset_template') ?>"></span>   <span class="btn round big blue"><input onclick="window.location = 'http://127.0.0.1:8000/manage-admin/list?m=contentbox_cat';" type="button" class="fontfacetext" value="<?php echo $TextLanguage->lang('custom_layout_box') ?>"></span> 
 					</td>
 				</tr> 
 			</tbody>

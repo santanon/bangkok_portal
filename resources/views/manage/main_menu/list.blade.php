@@ -20,7 +20,7 @@ foreach ($list as $row)
 	{
 		case "group" :
 			?> &nbsp; 
-             <span class="link-text">[ <a href="<?php echo base_url() ?>panels/page/set_cat/<?php echo $row->id ?>"> <?php echo $TextLanguage->lang('sub_menu_list') ?> ( <?php echo $list_sub_count[$row->id] ?> ) </a> ]</span> 
+             <span class="link-text">[ <a href="<?php echo 'http://127.0.0.1:8000/manage-admin/set_cat?m=page&id='.$row->id ?>"> <?php echo $TextLanguage->lang('sub_menu_list') ?> ( <?php echo $list_sub_count[$row->id] ?> ) </a> ]</span> 
                <?php	
 			break;
 		case "texteditor" :
@@ -30,7 +30,7 @@ foreach ($list as $row)
 			if($row->can_review == '1')
 			{
 				?>
-				&nbsp; <img src="<?php echo base_url() ?>assets/panel/comment.png" align="absmiddle" style="cursor:pointer;" onclick="callLightbox('<?php echo base_url(); ?>panels/<?php echo $config_mod ?>/comment_text/<?php echo $row->id ?>/main',800,640);return false;" />
+				&nbsp; <img src="<?php echo base_url() ?>assets/panel/comment.png" align="absmiddle" style="cursor:pointer;" onclick="callLightbox('http://127.0.0.1:8000/manage-admin/comment_text?m=<?php echo $config_mod ?>&id=<?php echo $row->id ?>&main_type=main',800,640);return false;" />
 				<?php
 			}
 			?>
@@ -41,31 +41,31 @@ foreach ($list as $row)
 			?><?php
 			break;
 		case "news" :
-			?> &nbsp; [ <span class="link-text"><a href="<?php echo base_url() ?>panels/news/set_cat_from_main_menu/<?php echo $row->data_id ?>"> <?php echo $list_page_mod_title[$row->id] ?> ( <?php echo $list_page_mod_count[$row->id] ?> ) </a></span> ]  <?php
+			?> &nbsp; [ <span class="link-text"><a href="http://127.0.0.1:8000/manage-admin/set_cat_from_main_menu?m=news&id=<?php echo $row->data_id ?>"> <?php echo $list_page_mod_title[$row->id] ?> ( <?php echo $list_page_mod_count[$row->id] ?> ) </a></span> ]  <?php
 			break;
 		case "calendar" :
-			?> &nbsp; [ <span class="link-text"><a href="<?php echo base_url() ?>panels/activities/set_cat_from_main_menu/<?php echo $row->data_id ?>"> <?php echo $list_page_mod_title[$row->id] ?> ( <?php echo $list_page_mod_count[$row->id] ?> ) </a></span> ]  <?php
+			?> &nbsp; [ <span class="link-text"><a href="http://127.0.0.1:8000/manage-admin/set_cat_from_main_menu?m=activities&id=<?php echo $row->data_id ?>"> <?php echo $list_page_mod_title[$row->id] ?> ( <?php echo $list_page_mod_count[$row->id] ?> ) </a></span> ]  <?php
 			break;
 		case "faq" :
-			?> &nbsp; [ <span class="link-text"><a href="<?php echo base_url() ?>panels/faq/set_cat_from_main_menu/<?php echo $row->data_id ?>"> <?php echo $list_page_mod_title[$row->id] ?> ( <?php echo $list_page_mod_count[$row->id] ?> ) </a></span> ]  <?php
+			?> &nbsp; [ <span class="link-text"><a href="http://127.0.0.1:8000/manage-admin/set_cat_from_main_menu?m=faq&id=<?php echo $row->data_id ?>"> <?php echo $list_page_mod_title[$row->id] ?> ( <?php echo $list_page_mod_count[$row->id] ?> ) </a></span> ]  <?php
 			break;
 		case "gallery" :
-			?> &nbsp; [ <span class="link-text"><a href="<?php echo base_url() ?>panels/gallery/set_cat_from_main_menu/<?php echo $row->data_id ?>"> <?php echo $list_page_mod_title[$row->id] ?> ( <?php echo $list_page_mod_count[$row->id] ?> ) </a></span> ]  <?php
+			?> &nbsp; [ <span class="link-text"><a href="http://127.0.0.1:8000/manage-admin/set_cat_from_main_menu?m=gallery&id=<?php echo $row->data_id ?>"> <?php echo $list_page_mod_title[$row->id] ?> ( <?php echo $list_page_mod_count[$row->id] ?> ) </a></span> ]  <?php
 			break;
 		case "banner" :
-			?> &nbsp; [ <span class="link-text"><a href="<?php echo base_url() ?>panels/banner/set_cat_from_main_menu/<?php echo $row->data_id ?>"> <?php echo $list_page_mod_title[$row->id] ?> ( <?php echo $list_page_mod_count[$row->id] ?> ) </a></span> ]  <?php
+			?> &nbsp; [ <span class="link-text"><a href="http://127.0.0.1:8000/manage-admin/set_cat_from_main_menu?m=banner&id=<?php echo $row->data_id ?>"> <?php echo $list_page_mod_title[$row->id] ?> ( <?php echo $list_page_mod_count[$row->id] ?> ) </a></span> ]  <?php
 			break;
 		case "download" :
-			?> &nbsp; [ <span class="link-text"><a href="<?php echo base_url() ?>panels/download/set_cat_from_main_menu/<?php echo $row->data_id ?>"> <?php echo $list_page_mod_title[$row->id] ?> ( <?php echo $list_page_mod_count[$row->id] ?> ) </a></span> ]  <?php
+			?> &nbsp; [ <span class="link-text"><a href="http://127.0.0.1:8000/manage-admin/set_cat_from_main_menu?m=download&id=<?php echo $row->data_id ?>"> <?php echo $list_page_mod_title[$row->id] ?> ( <?php echo $list_page_mod_count[$row->id] ?> ) </a></span> ]  <?php
 			break;
 		case "question" :
-			?> &nbsp; [ <span class="link-text"><a href="<?php echo base_url() ?>panels/question/set_cat_from_main_menu/<?php echo $row->data_id ?>"> <?php echo $list_page_mod_title[$row->id] ?> ( <?php echo $list_page_mod_count[$row->id] ?> ) </a></span> ]  <?php
+			?> &nbsp; [ <span class="link-text"><a href="http://127.0.0.1:8000/manage-admin/set_cat_from_main_menu?m=question&id=<?php echo $row->data_id ?>"> <?php echo $list_page_mod_title[$row->id] ?> ( <?php echo $list_page_mod_count[$row->id] ?> ) </a></span> ]  <?php
 			break;
 		case "poll" :
-			?> &nbsp; [ <span class="link-text"><a href="<?php echo base_url() ?>panels/poll/set_cat_from_main_menu/<?php echo $row->data_id ?>"> <?php echo $list_page_mod_title[$row->id] ?> ( <?php echo $list_page_mod_count[$row->id] ?> ) </a></span> ]  <?php
+			?> &nbsp; [ <span class="link-text"><a href="http://127.0.0.1:8000/manage-admin/set_cat_from_main_menu?m=poll&id=<?php echo $row->data_id ?>"> <?php echo $list_page_mod_title[$row->id] ?> ( <?php echo $list_page_mod_count[$row->id] ?> ) </a></span> ]  <?php
 			break;
 		case "webboard" :
-			?> &nbsp; [ <span class="link-text"><a href="<?php echo base_url() ?>panels/webboard/set_cat_from_main_menu/<?php echo $row->data_id ?>"> <?php echo $list_page_mod_title[$row->id] ?> ( <?php echo $list_page_mod_count[$row->id] ?> ) </a></span> ]  <?php
+			?> &nbsp; [ <span class="link-text"><a href="http://127.0.0.1:8000/manage-admin/set_cat_from_main_menu?m=webboard&id=<?php echo $row->data_id ?>"> <?php echo $list_page_mod_title[$row->id] ?> ( <?php echo $list_page_mod_count[$row->id] ?> ) </a></span> ]  <?php
 			break; 
 		default :
 			?>-<?php

@@ -45,18 +45,19 @@ function show_link(v1)
 }
 </script>
     
-    <form method="post" enctype="multipart/form-data" onsubmit="return check_form();" action="<?php echo base_url(); ?>panels/<?php echo $config_mod; ?>/edit_submit">
+    <form method="post" enctype="multipart/form-data" onsubmit="return check_form();" action="http://127.0.0.1:8000/manage-admin/edit_submit?m=<?php echo $config_mod;  ?>">
+    @csrf <!-- {{ csrf_field() }} -->
     <table>
         <tbody>
             <tr>
                 <th width="120"><?php echo $TextLanguage->lang('enable'); ?></th>
                 <td>
             <div class="align-box" style="width:110px;"> 
-                <input name="search_option" type="radio" id="test-radio1" value="1" <?php if($edit_search_option == '1'){ ?> checked="checked" <? } ?>  onclick="show_link('1');"> 
+                <input name="search_option" type="radio" id="test-radio1" value="1" <?php if($edit_search_option == '1'){ ?> checked="checked" <?php } ?>  onclick="show_link('1');"> 
                 <label class="input-label" for="test-radio1"><?php echo $TextLanguage->lang('on'); ?></label>
             </div>&nbsp;&nbsp;
             <div class="align-box" style="width:110px;"> 
-                    <input name="search_option" type="radio" id="test-radio2" value="2" <?php if($edit_search_option == '2'){ ?> checked="checked" <? } ?> onclick="show_link('2');"  />
+                    <input name="search_option" type="radio" id="test-radio2" value="2" <?php if($edit_search_option == '2'){ ?> checked="checked" <?php } ?> onclick="show_link('2');"  />
                     <label class="input-label" for="test-radio2"><?php echo $TextLanguage->lang('off'); ?></label>
             </div>
                     
@@ -68,11 +69,11 @@ function show_link(v1)
                 <th width="120"><?php echo $TextLanguage->lang('position'); ?></th>
                 <td>
             <div class="align-box" style="width:110px;"> 
-                <input name="search_layout" type="radio" id="test-radio3" value="1" <?php if($edit_search_layout == '1'){ ?> checked="checked" <? } ?> /> 
+                <input name="search_layout" type="radio" id="test-radio3" value="1" <?php if($edit_search_layout == '1'){ ?> checked="checked" <?php } ?> /> 
                 <label class="input-label" for="test-radio3"><?php echo $TextLanguage->lang('top'); ?></label>
             </div>&nbsp;&nbsp;
             <div class="align-box" style="width:110px;"> 
-                    <input name="search_layout" type="radio" id="test-radio4" value="2" <?php if($edit_search_layout == '2'){ ?> checked="checked" <? } ?>  />
+                    <input name="search_layout" type="radio" id="test-radio4" value="2" <?php if($edit_search_layout == '2'){ ?> checked="checked" <?php } ?>  />
                     <label class="input-label" for="test-radio4"><?php echo $TextLanguage->lang('bottom'); ?></label>
             </div> 
                     

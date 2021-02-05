@@ -62,7 +62,8 @@
                                 <p class="desc">กรุณากรอกข้อมูลของท่าน</p>
                             </div>
                         </div>
-                        <form action="">
+                         <form action="">
+                @csrf <!-- {{ csrf_field() }} -->
                             <div class="group-form-section contact">
                                 <div class="row">
                                     <div class="col-lg-6">

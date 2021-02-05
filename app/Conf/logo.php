@@ -5,12 +5,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage; 
 use Illuminate\Support\Facades\Http; 
 use Cache;
-
- 
-/*
-URL PATH : /panels/logo/
-LOCATION : /application/controllers/panels/logo.php
-*/
  
 class Logo
 {  
@@ -21,12 +15,14 @@ class Logo
 	var $config_search_field = array('');
 	 
 	public function index()
-	{ 
-		$this->include_header(); 
+	{   
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		  
 		 
-		$data['this_cat'] = $this->lang->line('logo');
-		$data['this_page'] = $this->lang->line('edit');
-		$data['title'] = $data['this_page'] . ' : ' . $data['this_cat'] . ' - ' . $this->lang->line('bangkok_portal');
+		$data['this_cat'] = $TextLanguage->lang('logo');
+		$data['this_page'] = $TextLanguage->lang('edit');
+		$data['title'] = $data['this_page'] . ' : ' . $data['this_cat'] . ' - ' . $TextLanguage->lang('bangkok_portal');
 		  
 		$data['config_mod'] = $this->mod;       
 		   
@@ -34,31 +30,38 @@ class Logo
 	} 
 	
 	public function url_submit()
-	{ 
-		$this->include_header(); 
+	{   
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		  
 		 
-		$url = $this->input->post('url', TRUE);
+		$url = $CustomHelper->input_post('url', TRUE);
 		 
-		$this->load->model('Portal_website_style_model'); 
-		
-		$d = new stdClass(); 
+		 
+		$d = new \stdClass(); 
 		$d->logo_type = '2';
 		$d->logo_img1 = $url;
 		$d->logo_url = $url;
 		$d->logo_lastupdate = date('U');    
-		$this->Portal_website_style_model->update_data($d,$_SESSION['panel_id'],'web_id');  
-			
-		$this->load->model('Portal_website_log_model');   
-		$this->Portal_website_log_model->add_log('Change Logo',$_SESSION['panel_username'],$_SESSION['panel_id'],strtoupper($this->mod).'_EDIT');
+		 
+		
+		$this_qr = ''; 
+		foreach($d as $key=>$value) 
+		{
+			$this_qr = $this_qr.$key." = '".addslashes($value)."',";
+		}
+		$this_qr = substr($this_qr,0,-1);  	 
+		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('Portal_website_style_model')),"UPDATE ".$CustomHelper->model_to_table('Portal_website_style_model')." SET ".$this_qr." WHERE web_id = '".$_SESSION['panel_id']."'",'');
+		
+		  
+		$CustomHelper->add_log(''.$this->mod_title.' - Change Logo ('.$CustomHelper->input_post('title', TRUE).')',$_SESSION['panel_username'],$_SESSION['panel_id'],strtoupper($this->mod).'_EDIT');   
 		 
 		$_SESSION['panel_style_logo_type'] = '2';
 		$_SESSION['panel_style_logo_img1'] = $url;
 		$_SESSION['panel_style_logo_url'] = $url;
-		$_SESSION['panel_style_logo_lastupdate'] = date('U');    
-		
-		//redirect('/panels/' . $this->mod . '/index'); 
-		?>
-		<meta http-equiv="refresh" content="0;URL=<?php echo 'http://localhost/bangkok.go.th.portal/panels/' . $this->mod . '/index' ?>" />
+		$_SESSION['panel_style_logo_lastupdate'] = date('U');     
+		?> 
+        <meta http-equiv="refresh" content="0;URL=<?php echo 'http://127.0.0.1:8000/manage-admin/index?m=' . $this->mod . '' ?>" />
 		<?php
 		exit;	
 	}

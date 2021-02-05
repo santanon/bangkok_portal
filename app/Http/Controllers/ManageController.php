@@ -40,27 +40,47 @@ class ManageController extends Controller
     
     public function action()
     {        
-        return view('manage.action');
+        $CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		$this->include_check_login();  
+		
+		return view('manage.action');
     } 
     public function add()
     {        
-        $this->include_check_login();
-        return view('manage.form',$data);
+        $CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		$this->include_check_login();
+		 
+		$c = "\App\Conf\\".$_GET['m'];
+		$m = new $c();  
+		$data = $m->add();
+		  
+        return view('manage.'.$_GET['m'].'.add',$data);
+    } 
+	public function add_submit()
+    {     
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		$this->include_check_login();  
+		$c = "\App\Conf\\".$_GET['m'];
+		$m = new $c();   
+		$m->add_submit();
     } 
     public function comment($v1 = '0')
 	{
-		$this->include_header(); 
-        
-        /*
-		$this->load->model($this->mod_model); 
-		
-		$d = new stdClass();  
-		$d->where = array('id' => $v1,'web_id' => $_SESSION['panel_id']);
-		$q = $this->{$this->mod_model}->select_data($d);  
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		$this->include_check_login();  
+         
+		$q = "SELECT * FROM ".$CustomHelper->model_to_table($this->mod_model)." WHERE web_id = ? AND id = '".$v1."'";	 	
+		$v = $_SESSION['panel_id'];
+		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),$q,$v);
+		$q = json_decode($res);
 		 
-		if($q->num_rows == 1)
+		if(count($q) > 0)
 		{  
-			$row = $q->result();  
+			$row = $q;  
 			
 			$data['edit_id'] = $row[0]->id;
 			$data['edit_web_id'] = $row[0]->web_id;
@@ -82,34 +102,34 @@ class ManageController extends Controller
 			$data['config_mod'] = $this->mod; 
 			 
 			
-			$comment_model = 'portal_website_'.$this->mod.'_comment_model';
-			$this->load->model($comment_model);
-			$d = new stdClass();  
-			$d->orderby = 'id ASC';
-			$d->where = array('web_id'=>$_SESSION['panel_id'],'cat_id'=>$row[0]->id);
-			$data['list_comment'] = $this->{$comment_model}->select_data($d);   
+			$comment_model = 'portal_website_'.$this->mod.'_comment_model'; 
+			$q = "SELECT * FROM ".$CustomHelper->model_to_table($comment_model)." WHERE web_id = ? AND cat_id = '".$row[0]->id."' ORDER BY id ASC";	 	
+			$v = $_SESSION['panel_id'];
+			$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($comment_model)),$q,$v);
+			$data['list_comment'] = json_decode($res);
+		 
 			  
 			$this->load->view('panel/comment', $data); 
 		}
 		else
 		{
 			exit;	
-        } 
-        */  
+        }   
     }
     public function comment_text($v1 = '0',$v2 = '')
 	{
-		$this->include_header(); 
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		$this->include_check_login();  
 		 
-		/*$this->load->model($this->mod_model); 
-		
-		$d = new stdClass();  
-		$d->where = array('id' => $v1,'web_id' => $_SESSION['panel_id']);
-		$q = $this->{$this->mod_model}->select_data($d);  
+		$q = "SELECT * FROM ".$CustomHelper->model_to_table($this->mod_model)." WHERE web_id = ? AND id = '".$v1."'";	 	
+		$v = $_SESSION['panel_id'];
+		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),$q,$v);
+		$q = json_decode($res);
 		 
-		if($q->num_rows == 1)
+		if(count($q) > 0)
 		{  
-			$row = $q->result();  
+			$row = $q;  
 			
 			$data['edit_id'] = $row[0]->id;
 			$data['edit_web_id'] = $row[0]->web_id; 
@@ -129,43 +149,54 @@ class ManageController extends Controller
 			 
 			$data['config_mod'] = $this->mod; 
 			 
-			
 			$comment_model = 'Portal_website_main_comment_model';
-			$this->load->model($comment_model);
-			$d = new stdClass();  
-			$d->orderby = 'id ASC';
-			$d->where = array('web_id'=>$_SESSION['panel_id'],'this_id'=>$v1,'main_type'=>$v2);
-			$data['list_comment'] = $this->{$comment_model}->select_data($d);   
+			 
+			$q = "SELECT * FROM ".$CustomHelper->model_to_table($comment_model)." WHERE web_id = ? AND this_id = '".$v1."' AND main_type = '".$v2."' ORDER BY id ASC";	 	
+			$v = $_SESSION['panel_id'];
+			$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($comment_model)),$q,$v);
+			$data['list_comment'] = json_decode($res);
 			  
 			$this->load->view('panel/comment', $data); 
 		}
 		else
 		{
 			exit;	
-		} */  
+		} 
     }
     public function comment_delete($v1 = '0',$v2 = '0',$v3 = '')
 	{
-		$this->include_header();  
-		
-		/*$comment_model = 'portal_website_main_comment_model';
-		$this->load->model($comment_model); 
-		$this->{$comment_model}->delete_data($v1,'id',$_SESSION['panel_id'],'web_id');   */
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		$this->include_check_login();  
+		 
+		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('portal_website_main_comment_model')),"DELETE FROM ".$CustomHelper->model_to_table('portal_website_main_comment_model')." WHERE web_id = '".$_SESSION['panel_id']."' AND id = '".$v1."'",'');
     }    
     public function delete($id = '0')
 	{ 
-		$this->include_header(); 
+		if(isset($_GET['id']))
+		{
+			$id = $_GET['id'];
+		}
+		else
+		{
+			$id = '0';	
+		}
+		
+		
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		$this->include_check_login();  
         
-        /*
-        $this->load->model($this->mod_model); 
+         
+         
 		
 		if($this->mod == 'page')
 		{
-			$d = new stdClass();  
-			$d->where = array('web_id' => $_SESSION['panel_id'],'page_id' => $id); 
-			$d->count = true; 
-			$q = $this->{$this->mod_model}->select_data($d);   
-			
+			$q = "SELECT * FROM ".$CustomHelper->model_to_table($this->mod_model)." WHERE web_id = ? AND page_id = '".$id."'";	 	
+			$v = $_SESSION['panel_id'];
+			$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),$q,$v);
+			$q = json_decode($res);
+			 
 			if($q > 0)
 			{
 				?>
@@ -180,86 +211,74 @@ class ManageController extends Controller
 		}
 		  
 		if($this->mod == 'inbox')
-		{
-			$d = new stdClass();  
-			$d->where = array('web_id' => $_SESSION['panel_id'],'id' => $id); 
-			$q = $this->{$this->mod_model}->select_data($d);  
-			$t = $q->result(); 	
+		{  
+			$q = "SELECT * FROM ".$CustomHelper->model_to_table($this->mod_model)." WHERE web_id = ? AND id = '".$id."'";	 	
+			$v = $_SESSION['panel_id'];
+			$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),$q,$v);
+			$q = json_decode($res);   
+			$t = $q; 	
 			
 			@unlink('./upload/inbox/'.$t[0]->file1);
 		}
 		
 		if(strlen($this->mod_sub_model) > 3)
-		{ 
-			$this->load->model($this->mod_sub_model); 
-			$d = new stdClass();  
-			$d->where = array('web_id' => $_SESSION['panel_id'],$this->mod_sub_field => $id); 
-			$d->count = true; 
-			$q = $this->{$this->mod_sub_model}->select_data($d);   
+		{   
+			$q = "SELECT * FROM ".$CustomHelper->model_to_table($this->mod_sub_model)." WHERE web_id = ? AND ".$this->mod_sub_field." = '".$id."'";	 	
+			$v = $_SESSION['panel_id'];
+			$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_sub_model)),$q,$v);
+			$q = json_decode($res); 
+			
 			
 			if($q > 0)
-			{
-				$this->{$this->mod_sub_model}->delete_data($id,$this->mod_sub_field,$_SESSION['panel_id'],'web_id');  
+			{ 
+				$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_sub_model)),"DELETE FROM ".$CustomHelper->model_to_table($this->mod_sub_model)." WHERE web_id = '".$_SESSION['panel_id']."' AND ".$this->mod_sub_field." = '".$id."'",''); 
 			}
 		}
 		 
-		$d = new stdClass(); 
-		$d->column = '*';
-		$d->where = array('web_id' => $_SESSION['panel_id'],'id' => $id);
-		$d->like = array();
-		$d->orderby = 'id DESC';
-		$d->limit_row = '1';
-		$d->limit_offset = '';
-		$d->count = false; 
-		$q = $this->{$this->mod_model}->select_data($d);  
-		$t = $q->result();
+		 
+		$q = "SELECT * FROM ".$CustomHelper->model_to_table($this->mod_model)." WHERE web_id = ? AND id = '".$id."' ORDER BY id DESC LIMIT 0,1";	 	
+		$v = $_SESSION['panel_id'];
+		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),$q,$v);
+		$q = json_decode($res); 
+		  
+		$t = $q;
 		$this_title = $t[0]->title; 
+		 
+		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),"DELETE FROM ".$CustomHelper->model_to_table($this->mod_model)." WHERE web_id = '".$_SESSION['panel_id']."' AND id = '".$id."'",''); 
+		 
 		
-		$this->{$this->mod_model}->delete_data($id,'id',$_SESSION['panel_id'],'web_id'); 
+		$CustomHelper->add_log($this->mod_title . ' - Delete (' . $this_title . ')',$_SESSION['panel_username'],$_SESSION['panel_id'],strtoupper($this->mod).'_DELETE'); 	
 		
-		$this->load->model('Portal_website_log_model');
-		$this->Portal_website_log_model->add_log($this->mod_title . ' - Delete (' . $this_title . ')',$_SESSION['panel_username'],$_SESSION['panel_id'],strtoupper($this->mod).'_DELETE');
-		*/
+		?> <meta http-equiv="refresh" content="0;URL=<?php echo  'http://127.0.0.1:8000/manage-admin/list?m='.$this->mod.'' ?>" /><?php
+		exit;	
 	} 
     public function edit()
     {        
-        $this->include_check_login();
-        
-        $CustomHelper = new \App\CustomHelper;
-		$TextLanguage = new \App\TextLanguage; 
-		
-         
-        $m = $CustomHelper->module_setting($_GET['m']);
-        
-        $data['mode']                       = 'edit';
-        $data['text_header']                = $m['text_header'].' : แก้ไข';
-        $data['text_header_description']    = $m['text_header_description'];
-        $data['col_list']                   = explode(',',$m['col_list']);
- 
-        $q = "SELECT * FROM tbl_".$m['table_name']." WHERE id = ?";
-        $v = $_SESSION['panel_id'];
-        $res = $CustomHelper->API_CALL($CustomHelper->API_URL('api_'.$m['api_name']),$q,$v);
- 
-        if($res != '')
-        {
-            $data['rows'] = json_decode($res);
-        }
-        else
-        {
-            ?>
-            ไม่พบข้อมูล...
-            <?php
-            exit;
-        }
-         
-        return view('manage.form',$data);
-    } 
-    public function edit_logo()
-    {        
-        $this->include_check_login();
-        
         $CustomHelper = new \App\CustomHelper;
 		$TextLanguage = new \App\TextLanguage;
+		$this->include_check_login();
+		 
+		$c = "\App\Conf\\".$_GET['m'];
+		$m = new $c();  
+		$data = $m->edit($_GET['id']);
+		  
+        return view('manage.'.$_GET['m'].'.edit',$data); 
+    } 
+	public function edit_submit()
+    {        
+        $CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		$this->include_check_login();
+		 
+		$c = "\App\Conf\\".$_GET['m'];
+		$m = new $c();  
+		$m->edit_submit();
+    } 	 
+    public function edit_logo()
+    {        
+        $CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		$this->include_check_login();  
          
         $m = $CustomHelper->module_setting($_GET['m']);
         
@@ -422,7 +441,7 @@ class ManageController extends Controller
 			} 
 		} 
 		 
-		$q = "SELECT COUNT(id) AS count_id FROM ".$CustomHelper->model_to_table($this->mod_model)." WHERE id > 0 ".$qr_d;  
+		$q = "SELECT COUNT(id) AS count_id FROM ".$CustomHelper->model_to_table($this->mod_model)." WHERE id > 0 ".$qr_d;   
 		$v = $_SESSION['panel_id'];
 		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),$q,$v);
 		$total_rows = json_decode($res); 
@@ -470,7 +489,7 @@ class ManageController extends Controller
 		    		  
 		$data['list'] = json_decode($res); 
 		$data['this_cat'] = $TextLanguage->lang($this->mod);
-		$data['this_page'] = 'แสดรายการ';
+		$data['this_page'] = 'แสดงรายการ';
 		$data['title'] = $data['this_page'] . ' : ' . $this->mod_title . ' - หน่วยงานกรุงเทพมหานคร'; 
 		$data['this_cat_list'] = @$_SESSION[$this->mod.'_group'];		 
 		$data['content_head'] = '( '.$total_rows.' ข้อมูล )';		  
@@ -694,11 +713,11 @@ class ManageController extends Controller
 					 
 					if($this_run == 1)
 					{
-						$str_navi = '<td>  &nbsp; /  &nbsp;<b>' . $ro[0]->title . '</b>  </td>' . $str_navi;	
+						$str_navi = '<td> &nbsp; /  &nbsp;<b>' . $ro[0]->title . '</b> </td>'.$str_navi;	
 					}
 					else
 					{
-						$str_navi = '<td>  &nbsp; /  &nbsp;<span class="link-text"><a href="' . base_url() . 'panels/page/set_cat_page/' . $ro[0]->id . '">' . $ro[0]->title . '</a></span>  </td>' . $str_navi;	
+						$str_navi = '<td> &nbsp; / &nbsp;<span class="link-text"><a href="http://127.0.0.1:8000/manage-admin/set_cat_page?m=page&id='.$ro[0]->id.'">'.$ro[0]->title.'</a></span> </td>'.$str_navi;
 					}
 					 
 					if($ro[0]->page_id == '0')
@@ -993,38 +1012,39 @@ class ManageController extends Controller
     } 
     public function lists_sort()
 	{ 
-        /*
-        $this->include_header();  
-		$start_rows = $_SESSION[$this->mod.'_page_num'] * $_SESSION[$this->mod.'_max_rows']; 
-		$this->load->model($this->mod_model); 
-		$d = new stdClass(); 
-		if($_SESSION[$this->mod.'_group'] <> '0')
-		{
-			$d->where = array($this->mod_cat_field => $_SESSION[$this->mod.'_group'],'web_id' => $_SESSION['panel_id']);	
-		}
-		else
-		{ 
-			$d->where = array($this->mod_cat_field => '0','web_id' => $_SESSION['panel_id']);	
-		}	 
-		$d->count = true; 
-		$total_rows = $this->{$this->mod_model}->select_data($d);
-		$total_pages = ceil($total_rows/$_SESSION[$this->mod.'_max_rows'])-1;
-		
-		$d = new stdClass();  
-		if($_SESSION[$this->mod.'_group'] <> '0')
-		{
-			$d->where = array($this->mod_cat_field => $_SESSION[$this->mod.'_group'],'web_id' => $_SESSION['panel_id']);	
-		}
-		else
-		{ 
-			$d->where = array($this->mod_cat_field => '0','web_id' => $_SESSION['panel_id']);	 
-		}	 
-		$d->orderby = 'sort ASC';
-		$d->limit_row = $_SESSION[$this->mod.'_max_rows'];
-		$d->limit_offset = $start_rows;
-		$d->count = false; 
-		$q = $this->{$this->mod_model}->select_data($d);  
+        $CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		$this->include_check_login();  
 		 
+		$start_rows = $_SESSION[$this->mod.'_page_num'] * $_SESSION[$this->mod.'_max_rows']; 
+		 
+		if($_SESSION[$this->mod.'_group'] <> '0')
+		{
+			$q = "SELECT * FROM ".$CustomHelper->model_to_table($this->mod_model)." WHERE web_id = ? AND ".$this->mod_cat_field." = '".$_SESSION[$this->mod.'_group']."'";	 
+		}
+		else
+		{ 
+			$q = "SELECT * FROM ".$CustomHelper->model_to_table($this->mod_model)." WHERE web_id = ? AND ".$this->mod_cat_field." = '0'";	 
+		}	 
+			
+		$v = $_SESSION['panel_id'];
+		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),$q,$v);
+		$total_rows = json_decode($res);
+		$total_pages = ceil($total_rows/$_SESSION[$this->mod.'_max_rows'])-1;
+		 
+		if($_SESSION[$this->mod.'_group'] <> '0')
+		{
+			$q = "SELECT * FROM ".$CustomHelper->model_to_table($this->mod_model)." WHERE web_id = ? AND ".$this->mod_cat_field." = '".$_SESSION[$this->mod.'_group']."' ORDER BY sort ASC LIMIT ".$start_rows.",".$_SESSION[$this->mod.'_max_rows']."";
+		}
+		else
+		{ 
+			$q = "SELECT * FROM ".$CustomHelper->model_to_table($this->mod_model)." WHERE web_id = ? AND ".$this->mod_cat_field." = '0' ORDER BY sort ASC LIMIT ".$start_rows.",".$_SESSION[$this->mod.'_max_rows']."";
+		}	 
+		
+		$v = $_SESSION['panel_id'];
+		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),$q,$v);
+		$q = json_decode($res);
+		  
 		$data['list'] = $q; 
 		$data['this_cat'] = $TextLanguage->lang($this->mod);
 		$data['this_page'] = $TextLanguage->lang('list');
@@ -1059,36 +1079,36 @@ class ManageController extends Controller
 		$data['this_group_page'] = $_SESSION[$this->mod.'_group_page'];  
 		
 		if($this->mod_cat_model <> '')
-		{
-			$this->load->model($this->mod_cat_model);
-			
-			$d = new stdClass();  
-			$d->where = array('web_id'=>$_SESSION['panel_id']);
-			$d->orderby = $this->mod_cat_order_by;
-			$data['list_cat'] = $this->{$this->mod_cat_model}->select_data($d);  
+		{ 
 			 
-			$d = new stdClass(); 
-			$d->where = array('web_id'=>$_SESSION['panel_id']);
-			$d->orderby = $this->mod_cat_order_by;
-			$list = $this->{$this->mod_cat_model}->select_data($d);
+			$q = "SELECT * FROM ".$CustomHelper->model_to_table($this->mod_cat_model)." WHERE web_id = ? ORDER BY ".$this->mod_cat_order_by."";	 	
+			$v = $_SESSION['panel_id'];
+			$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_cat_model)),$q,$v);
+			$data['list_cat'] = json_decode($res);
+			 
+			$q = "SELECT * FROM ".$CustomHelper->model_to_table($this->mod_cat_model)." WHERE web_id = ? ORDER BY ".$this->mod_cat_order_by."";	 	
+			$v = $_SESSION['panel_id'];
+			$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_cat_model)),$q,$v);
+			$list = json_decode($res);
 			
 			if($this->mod == 'page')
 			{
-				foreach ($list->result() as $row)
-				{  
-					$d = new stdClass();  
-					$d->where = array($this->mod_cat_field => $row->id,'page_id'=>'0'); 
-					$d->count = true; 
-					$data['list_cat_count'][] = $this->{$this->mod_model}->select_data($d);      
+				foreach ($list as $row)
+				{   
+					$q = "SELECT * FROM ".$CustomHelper->model_to_table($this->mod_model)." WHERE ".$this->mod_cat_field." = ? AND page_id = '0'";	 	
+					$v = $row->id;
+					$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),$q,$v);
+					$data['list_cat_count'][] = json_decode($res);    
 				} 
 				
 				if(@$_SESSION[$this->mod.'_group'] > 0)
-				{
-					$d = new stdClass();  
-					$d->orderby = $this->mod_cat_order_by;
-					$d->where = array('web_id'=>$_SESSION['panel_id'],'id'=>$_SESSION[$this->mod.'_group']);
-					$q = $this->{$this->mod_cat_model}->select_data($d);   
-					$r = $q->result();
+				{ 
+					$q = "SELECT * FROM ".$CustomHelper->model_to_table($this->mod_cat_model)." WHERE web_id = ? AND id = '".$_SESSION[$this->mod.'_group']."' ORDER BY ".$this->mod_cat_order_by;	 	
+					$v = '';
+					$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_cat_model)),$q,$v);
+					$q = json_decode($res);
+					 
+					$r = $q;
 					$data['list_menu_title'] = $r[0]->title;	
 				}
 				
@@ -1097,13 +1117,13 @@ class ManageController extends Controller
 			{
 				$mod_cat_run = 1;
 				
-				foreach ($list->result() as $row)
-				{  
-					$d = new stdClass();  
-					$d->where = array($this->mod_cat_field => $row->id); 
-					$d->count = true; 
-					$data['list_cat_count'][] = $this->{$this->mod_model}->select_data($d); 
-					
+				foreach ($list as $row)
+				{   
+					$q = "SELECT * FROM ".$CustomHelper->model_to_table($this->mod_model)." WHERE ".$this->mod_cat_field." = '".$row->id."'";	 	
+					$v = '';
+					$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),$q,$v);
+					$data['list_cat_count'][] = json_decode($res);
+					 
 					$mod_cat_run++;     
 				}  	
 				
@@ -1115,15 +1135,15 @@ class ManageController extends Controller
 		}
 		
 		$data['config_list_footer_js'] = 'mainmenuFocus(1,11,2); btn2stageFocus(0,2);'; 
-		$this->load->view('panel/' . $this->mod . '/list_sort', $data); */
+		$this->load->view('panel/' . $this->mod . '/list_sort', $data);
 	}	
 	public function save_list()
 	{ 
-        /*
-        $this->include_header();  
-		$this->load->model($this->mod_model);  
-		
-		$list_order = $this->input->post('list_order', TRUE);  
+        $CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		$this->include_check_login();  
+		 
+		$list_order = $CustomHelper->input_post('list_order', TRUE);  
 		$list_order = explode(',',$list_order);
 		
 		while($each = each($list_order))
@@ -1131,193 +1151,388 @@ class ManageController extends Controller
 			if(strlen($each[1]) > 1)
 			{
 				$each_sub = explode('=',$each[1]);  
-				$d = new stdClass();  
+				$d = new \stdClass();  
 				$d->sort = $each_sub[1]+1;
-				$d->last_update = date('U');  
-				$this->{$this->mod_model}->update_data($d,$_SESSION['panel_id'],'web_id',$each_sub[0],'id');    	
+				$d->last_update = date('U'); 
+				
+				$this_qr = ''; 
+				foreach($d as $key=>$value) 
+				{
+					$this_qr = $this_qr.$key." = '".addslashes($value)."',";
+				}
+				$this_qr = substr($this_qr,0,-1);  	 
+				$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),"UPDATE ".$CustomHelper->model_to_table($this->mod_model)." SET ".$this_qr." WHERE web_id = '".$_SESSION['panel_id']."' AND id = '".$each_sub[0]."'",''); 
 			} 
 		}
+		
+		
+		$CustomHelper->add_log('' . $this->mod_title . ' - Sort',$_SESSION['panel_username'],$_SESSION['panel_id'],strtoupper($this->mod).'_EDIT'); 
 		 
-		$this->load->model('Portal_website_log_model'); 
-		$this->Portal_website_log_model->add_log('' . $this->mod_title . ' - Sort',$_SESSION['panel_username'],$_SESSION['panel_id'],strtoupper($this->mod).'_EDIT');  
-		
-		//redirect('/panels/' . $this->mod . '/lists_sort');	
-        ?><meta http-equiv="refresh" content="0;URL=http://localhost/bangkok.go.th.portal/panels/<?= $this->mod ?>/lists_sort" /><?
-        */
-	}	
-	public function search()
-	{
-        /*
-        $_SESSION[$this->mod.'_page_num'] = '0';
-		$_SESSION[$this->mod.'_search'] = trim($_POST["s"]);  
-		//redirect('/panels/' . $this->mod . '/lists');	
-        ?><meta http-equiv="refresh" content="0;URL=http://localhost/bangkok.go.th.portal/panels/<?= $this->mod ?>/lists" /><?
-        */
-				
-	}	
-	public function search_reset()
-	{
-        /*
-        $_SESSION[$this->mod.'_search'] = '';
-		$_SESSION[$this->mod.'_page_num'] = '0';
-		//redirect('/panels/' . $this->mod . '/lists');
-        ?><meta http-equiv="refresh" content="0;URL=http://localhost/bangkok.go.th.portal/panels/<?= $this->mod ?>/lists" /><?
-        */
-	}	
-	public function set_cat($id = '0')
-	{
-        /*
-        $_SESSION[$this->mod.'_page_num'] = '0';
-		$_SESSION[$this->mod.'_group'] = $id; 
-		$_SESSION[$this->mod.'_group_page'] = '0';  
-		
-		//redirect('/panels/' . $this->mod . '/lists');
-        ?><meta http-equiv="refresh" content="0;URL=http://localhost/bangkok.go.th.portal/panels/<?= $this->mod ?>/lists" /><?
-        */
+        ?><meta http-equiv="refresh" content="0;URL=http://127.0.0.1:8000/manage-admin/lists_sort?m=<?php echo $this->mod ?>" /><?php
+		exit; 
 	}	
 	public function set_cat_sort($id = '0')
 	{
-        /*
+		if(isset($_GET['id']))
+		{
+			$id = $_GET['id'];
+		}
+		else
+		{
+			$id = '0';	
+		}
+		
+        $CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		$this->include_check_login();  
+		  
         $_SESSION[$this->mod.'_page_num'] = '0';
 		$_SESSION[$this->mod.'_group'] = $id; 
 		$_SESSION[$this->mod.'_group_page'] = '0';  
-		 
-		//redirect('/panels/' . $this->mod . '/lists_sort');
-        ?><meta http-equiv="refresh" content="0;URL=http://localhost/bangkok.go.th.portal/panels/<?= $this->mod ?>/lists_sort" /><?
-        */
+		  
+        ?><meta http-equiv="refresh" content="0;URL=http://127.0.0.1:8000/manage-admin/lists_sort?m=<?php echo $this->mod ?>" /><?php
+         
+		exit;
 	}	
 	public function set_cat_from_page($id = '0')
 	{
-        /*
+        if(isset($_GET['id']))
+		{
+			$id = $_GET['id'];
+		}
+		else
+		{
+			$id = '0';	
+		}
+		
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		$this->include_check_login();  
+		
+		if(isset($_GET['id']))
+		{
+			$id = $_GET['id'];
+		}
+		 
         $_SESSION[$this->mod.'_page_num'] = '0';
 		$_SESSION[$this->mod.'_group'] = $id; 
 		$_SESSION[$this->mod.'_group_page'] = '0'; 
 		$_SESSION[$this->mod.'_set_cat'] = '1';
-		
-		//redirect('/panels/' . $this->mod . '/lists');
-        ?><meta http-equiv="refresh" content="0;URL=http://localhost/bangkok.go.th.portal/panels/<?= $this->mod ?>/lists" /><?
-        */
+		 
+        ?><meta http-equiv="refresh" content="0;URL=http://127.0.0.1:8000/manage-admin/list?m=<?php echo $this->mod ?>" /><?php
+         
+		exit;
 	}	
 	public function set_cat_from_main_menu($id = '0')
 	{
-        /*
+        if(isset($_GET['id']))
+		{
+			$id = $_GET['id'];
+		}
+		else
+		{
+			$id = '0';	
+		}
+		
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		$this->include_check_login();  
+		  
         $_SESSION[$this->mod.'_page_num'] = '0';
 		$_SESSION[$this->mod.'_group'] = $id; 
 		$_SESSION[$this->mod.'_group_page'] = '0'; 
 		$_SESSION[$this->mod.'_set_cat_main_menu'] = '1';
-		
-		//redirect('/panels/' . $this->mod . '/lists');
-        ?><meta http-equiv="refresh" content="0;URL=http://localhost/bangkok.go.th.portal/panels/<?= $this->mod ?>/lists" /><?
-        */
+		 
+        ?><meta http-equiv="refresh" content="0;URL=http://127.0.0.1:8000/manage-admin/list?m=<?php echo $this->mod ?>" /><?php
+         
+		exit;
 	}	
 	public function set_cat_from_top_menu($id = '0')
 	{
-        /*
+        if(isset($_GET['id']))
+		{
+			$id = $_GET['id'];
+		}
+		else
+		{
+			$id = '0';	
+		}
+		
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		$this->include_check_login();  
+		  
         $_SESSION[$this->mod.'_page_num'] = '0';
 		$_SESSION[$this->mod.'_group'] = $id; 
 		$_SESSION[$this->mod.'_group_page'] = '0'; 
 		$_SESSION[$this->mod.'_set_cat_top_menu'] = '1';
-		
-		//redirect('/panels/' . $this->mod . '/lists');
-        ?><meta http-equiv="refresh" content="0;URL=http://localhost/bangkok.go.th.portal/panels/<?= $this->mod ?>/lists" /><?
-        */
+		 
+        ?><meta http-equiv="refresh" content="0;URL=http://127.0.0.1:8000/manage-admin/list?m=<?php echo $this->mod ?>" /><?php
+        
+		exit;
 	}	
 	public function set_cat_from_footer_menu($id = '0')
 	{
-        /*
+        if(isset($_GET['id']))
+		{
+			$id = $_GET['id'];
+		}
+		else
+		{
+			$id = '0';	
+		}
+		
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		$this->include_check_login();  
+		 
         $_SESSION[$this->mod.'_page_num'] = '0';
 		$_SESSION[$this->mod.'_group'] = $id; 
 		$_SESSION[$this->mod.'_group_page'] = '0'; 
 		$_SESSION[$this->mod.'_set_cat_footer_menu'] = '1';
-		
-		//redirect('/panels/' . $this->mod . '/lists');
-        ?><meta http-equiv="refresh" content="0;URL=http://localhost/bangkok.go.th.portal/panels/<?= $this->mod ?>/lists" /><?
-        */
+		 
+        ?><meta http-equiv="refresh" content="0;URL=http://127.0.0.1:8000/manage-admin/list?m=<?php echo $this->mod ?>" /><?php
+         
+		exit;
 	}	
 	public function set_cat_page($id = '0')
 	{
-        /*
+        if(isset($_GET['id']))
+		{
+			$id = $_GET['id'];
+		}
+		else
+		{
+			$id = '0';	
+		}
+		
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		$this->include_check_login();
+		 
         $_SESSION[$this->mod.'_page_num'] = '0'; 
-		$_SESSION[$this->mod.'_group_page'] = $id; 
-		//redirect('/panels/' . $this->mod . '/lists');
-        ?><meta http-equiv="refresh" content="0;URL=http://localhost/bangkok.go.th.portal/panels/<?= $this->mod ?>/lists" /><?
-        */
+		$_SESSION[$this->mod.'_group_page'] = $id;  
+        ?><meta http-equiv="refresh" content="0;URL=http://127.0.0.1:8000/manage-admin/list?m=<?php echo $this->mod ?>" /><?php
+         
+		exit;
 	}	
 	public function set_max_rows($a = '5')
 	{
-        /*
+        $CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		$this->include_check_login();  
+		
+		$a = '0';
+		if(isset($_GET['p']))
+		{
+			$a = $_GET['p'];
+		}
+		
         $_SESSION[$this->mod.'_max_rows'] = $a;
-		$_SESSION[$this->mod.'_page_num'] = '0'; 
-		//redirect('/panels/' . $this->mod . '/lists');
-        ?><meta http-equiv="refresh" content="0;URL=http://localhost/bangkok.go.th.portal/panels/<?= $this->mod ?>/lists" /><?
-        */
+		$_SESSION[$this->mod.'_page_num'] = '0';  
+        ?><meta http-equiv="refresh" content="0;URL=http://127.0.0.1:8000/manage-admin/list?m=<?php echo $this->mod ?>" /><?php
+         
+		exit;
 	}	
 	public function set_page_num($a = '0')
 	{
-        /*
-        $_SESSION[$this->mod.'_page_num'] = $a; 
-		//redirect('/panels/' . $this->mod . '/lists');
-        ?><meta http-equiv="refresh" content="0;URL=http://localhost/bangkok.go.th.portal/panels/<?= $this->mod ?>/lists" /><?
-        */
+        $CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		$this->include_check_login(); 
+		
+		$a = '0';
+		if(isset($_GET['p']))
+		{
+			$a = $_GET['p'];
+		}
+		 
+        $_SESSION[$this->mod.'_page_num'] = $a;  
+        ?><meta http-equiv="refresh" content="0;URL=http://127.0.0.1:8000/manage-admin/list?m=<?php echo $this->mod ?>" /><?php
+        
+		exit;
 	}	
 	public function set_order_by($a = 'id',$b = 'ASC')
 	{
-        /*
+        $CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		$this->include_check_login();
+		
+		$a = 'id';
+		if(isset($_GET['sort1']))
+		{
+			$a = $_GET['sort1'];
+		}
+		$b = 'ASC';
+		if(isset($_GET['sort2']))
+		{
+			$b = $_GET['sort2'];
+		}
+		 
         $_SESSION[$this->mod.'_sort_1'] = $a;
-		$_SESSION[$this->mod.'_sort_2'] = $b;
-		//redirect('/panels/' . $this->mod . '/lists');
-        ?><meta http-equiv="refresh" content="0;URL=http://localhost/bangkok.go.th.portal/panels/<?= $this->mod ?>/lists" /><?
-        */
+		$_SESSION[$this->mod.'_sort_2'] = $b; 
+        ?><meta http-equiv="refresh" content="0;URL=http://127.0.0.1:8000/manage-admin/list?m=<?php echo $this->mod ?>" /><?php
+         
+		exit;
 	} 	
 	public function set_status_show($a = '0')
-	{
-        /*
-        $this->load->model($this->mod_model); 
+	{ 
+        $CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		$this->include_check_login();  
 		
-		$d = new stdClass(); 
+		$a = '0';
+		if(isset($_GET['id']))
+		{
+			$a = $_GET['id'];
+		}
+		
+		$d = new \stdClass(); 
 		$d->status = '1';
-		$this->{$this->mod_model}->update_data($d,$_SESSION['panel_id'],'web_id',$a,'id');        
 		
-		$this->load->model('Portal_website_log_model');   
-		$this->Portal_website_log_model->add_log('Status Show - '.$this->mod_title.'',$_SESSION['panel_username'],$_SESSION['panel_id'],strtoupper($this->mod).'_SHOW');
-		  
-		//redirect('/panels/' . $this->mod . '/');
-        ?><meta http-equiv="refresh" content="0;URL=http://localhost/bangkok.go.th.portal/panels/<?= $this->mod ?>/" /><?	
-        */	
+		$this_qr = ''; 
+		foreach($d as $key=>$value) 
+		{
+			$this_qr = $this_qr.$key." = '".addslashes($value)."',";
+		}
+		$this_qr = substr($this_qr,0,-1);  	 
+		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),"UPDATE ".$CustomHelper->model_to_table($this->mod_model)." SET ".$this_qr." WHERE web_id = '".$_SESSION['panel_id']."' AND id = '".$a."'",''); 
+		 
+		$CustomHelper->add_log('Status Show - '.$this->mod_title.'',$_SESSION['panel_username'],$_SESSION['panel_id'],strtoupper($this->mod).'_SHOW');
+		 
+        ?> 
+		<meta http-equiv="refresh" content="0;URL=<?php echo  'http://127.0.0.1:8000/manage-admin/list?m='.$this->mod.'' ?>" />
+		<?php 
+		exit;
 	}	
 	public function set_status_hide($a = '0')
-	{ 
-        /*
-        $this->load->model($this->mod_model); 
+	{   
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		$this->include_check_login();  
 		
-		$d = new stdClass(); 
-		$d->status = '0';
-		$this->{$this->mod_model}->update_data($d,$_SESSION['panel_id'],'web_id',$a,'id');        
-		
-		$this->load->model('Portal_website_log_model');   
-		$this->Portal_website_log_model->add_log('Status Hide - '.$this->mod_title.'',$_SESSION['panel_username'],$_SESSION['panel_id'],strtoupper($this->mod).'_HIDE');
+		$a = '0';
+		if(isset($_GET['id']))
+		{
+			$a = $_GET['id'];
+		}
 		 
-		//redirect('/panels/' . $this->mod . '/');
-        ?><meta http-equiv="refresh" content="0;URL=http://localhost/bangkok.go.th.portal/panels/<?= $this->mod ?>/" /><?	
-        */		
+		$d = new \stdClass(); 
+		$d->status = '0';
+		
+		$this_qr = ''; 
+		foreach($d as $key=>$value) 
+		{
+			$this_qr = $this_qr.$key." = '".addslashes($value)."',";
+		}
+		$this_qr = substr($this_qr,0,-1);
+		  	 
+		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),"UPDATE ".$CustomHelper->model_to_table($this->mod_model)." SET ".$this_qr." WHERE web_id = '".$_SESSION['panel_id']."' AND id = '".$a."'",''); 
+		 
+		$CustomHelper->add_log('Status Hide - '.$this->mod_title.'',$_SESSION['panel_username'],$_SESSION['panel_id'],strtoupper($this->mod).'_HIDE');
+		  
+        ?> 
+		<meta http-equiv="refresh" content="0;URL=<?php echo  'http://127.0.0.1:8000/manage-admin/list?m='.$this->mod.'' ?>" />
+		<?php 
+		exit;		
 	}	
 	public function set_sort()
-	{  
-        /*
-        $this->load->model($this->mod_model); 
-		
-		while($each = each($_POST['sort']))
-		{ 
-			$d = new stdClass(); 
-			$d->sort = $each[1];   
-			$this->{$this->mod_model}->update_data($d,$_SESSION['panel_id'],'web_id',$each[0],'id');        
+	{   
+        $CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		$this->include_check_login();  
+	 
+		foreach($_POST['sort'] as $post_k=>$post_v)
+		{  
+			$d = new \stdClass(); 
+			$d->sort = $post_v;
+ 
+			$this_qr = ''; 
+			foreach($d as $key=>$value) 
+			{
+				$this_qr = $this_qr.$key." = '".addslashes($value)."',";
+			}
+			$this_qr = substr($this_qr,0,-1);  	 
+			$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),"UPDATE ".$CustomHelper->model_to_table($this->mod_model)." SET ".$this_qr." WHERE web_id = '".$_SESSION['panel_id']."' AND id = '".$post_k."'",'');        
 		} 
-		
-		$this->load->model('Portal_website_log_model');   
-		$this->Portal_website_log_model->add_log('Update Sort - '.$this->mod_title.'',$_SESSION['panel_username'],$_SESSION['panel_id'],strtoupper($this->mod).'_SORT');
 		 
-		//redirect('/panels/' . $this->mod . '/');
-        ?><meta http-equiv="refresh" content="0;URL=http://localhost/bangkok.go.th.portal/panels/<?= $this->mod ?>/" /><?	
-        */	
-	}
+		$CustomHelper->add_log('Update Sort - '.$this->mod_title.'',$_SESSION['panel_username'],$_SESSION['panel_id'],strtoupper($this->mod).'_SORT');		 
+        ?>
+		<meta http-equiv="refresh" content="0;URL=<?php echo  'http://127.0.0.1:8000/manage-admin/list?m='.$this->mod.'' ?>" />
+		<?php 
+		exit;		
+	}	
+	public function panels($mod='',$act='',$id='',$id2='',$main_type='')
+	{
+		if($mod != '' && $act != '' && $id != '' && $id2 != '' && $main_type != '') 
+		{ 
+			?><meta http-equiv="refresh" content="0;URL=<?php echo 'http://127.0.0.1:8000/manage-admin/'.$act.'?m='.$mod.'&id='.$id.'&id2='.$id2.'&main_type='.$main_type; ?>" /><?php
+			exit;
+		}
+		else if($mod != '' && $act != '' && $id != '' && $id2 != '')
+		{
+			?><meta http-equiv="refresh" content="0;URL=<?php echo 'http://127.0.0.1:8000/manage-admin/'.$act.'?m='.$mod.'&id='.$id.'&id2='.$id2.''; ?>" /><?php
+			exit;
+		}
+		else if($mod != '' && $act != '' && $id != '')
+		{
+			?><meta http-equiv="refresh" content="0;URL=<?php echo 'http://127.0.0.1:8000/manage-admin/'.$act.'?m='.$mod.'&id='.$id.''; ?>" /><?php
+			exit;
+		}
+		else if($mod != '' && $act != '')
+		{     
+			?><meta http-equiv="refresh" content="0;URL=<?php echo 'http://127.0.0.1:8000/manage-admin/'.$act.'?m='.$mod.''; ?>" /><?php
+			exit;
+		}
+		else if($mod != '')
+		{
+			?><meta http-equiv="refresh" content="0;URL=<?php echo 'http://127.0.0.1:8000/manage-admin/list?m='.$mod; ?>" /><?php
+			exit;
+		} 
+		exit;	
+	}	
+	public function search()
+	{    
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		$this->include_check_login();  
+		 
+		$_SESSION[$this->mod.'_page_num'] = '0';
+		$_SESSION[$this->mod.'_search'] = trim($_POST["s"]);   
+        ?><meta http-equiv="refresh" content="0;URL=http://127.0.0.1:8000/manage-admin/list?m=<?php echo $this->mod ?>" /><?php 
+		exit;
+	}	
+	public function search_reset()
+	{
+        $CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		$this->include_check_login();  
+		 
+        $_SESSION[$this->mod.'_search'] = '';
+		$_SESSION[$this->mod.'_page_num'] = '0'; 
+        ?><meta http-equiv="refresh" content="0;URL=http://127.0.0.1:8000/manage-admin/list?m=<?php echo $this->mod ?>" /><?php         
+		exit;
+	}		
+	public function set_cat($id = '0')
+	{
+      	if(isset($_GET['id']))
+		{
+			$id = $_GET['id'];
+		}
+		else
+		{
+			$id = '0';	
+		}
+	  
+	    $CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		$this->include_check_login();  
+		 
+        $_SESSION[$this->mod.'_page_num'] = '0';
+		$_SESSION[$this->mod.'_group'] = $id; 
+		$_SESSION[$this->mod.'_group_page'] = '0';  
+		 
+        ?><meta http-equiv="refresh" content="0;URL=http://127.0.0.1:8000/manage-admin/list?m=<?php echo $this->mod ?>" /><?php
+        
+		exit;
+	}		
 }

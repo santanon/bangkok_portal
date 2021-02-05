@@ -5,12 +5,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage; 
 use Illuminate\Support\Facades\Http; 
 use Cache;
-
- 
-/*
-URL PATH : /panels/contactus/
-LOCATION : /application/controllers/panels/contactus.php
-*/
  
 class Contactus
 {  
@@ -43,18 +37,22 @@ class Contactus
 	var $config_sort2 = 'desc'; 
 	  
 	public function read($v1 = '0')
-	{ 
-		$this->include_header(); 
-		 
-		$this->load->model($this->mod_model); 
+	{   
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		  
+		  
 		
-		$d = new stdClass();  
-		$d->where = array('id' => $v1,'web_id' => $_SESSION['panel_id']);
-		$q = $this->{$this->mod_model}->select_data($d);  
+		$q = "SELECT * FROM ".$CustomHelper->model_to_table($this->mod_model)." WHERE web_id = ? ORDER BY sort DESC";	 	
+		$v = $_SESSION['panel_id'];
+		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),$q,$v);
+		$q = json_decode($res); 
+		
 		 
-		if($q->num_rows == 1)
+		 
+		if(count($q) > 0)
 		{  
-			$row = $q->result();  
+			$row = $q;  
 			
 			$data['read_id'] = $row[0]->id;
 			$data['read_web_id'] = $row[0]->web_id;
@@ -67,9 +65,9 @@ class Contactus
 			$data['read_last_create'] = $row[0]->last_create; 
 			$data['read_ip'] = $row[0]->ip;
 			
-			$data['this_cat'] = $this->lang->line('contactus');
-			$data['this_page'] = $this->lang->line('information');
-			$data['title'] = $data['this_page'] . ' : ' . $data['this_cat'] . ' - ' . $this->lang->line('bangkok_portal');
+			$data['this_cat'] = $TextLanguage->lang('contactus');
+			$data['this_page'] = $TextLanguage->lang('information');
+			$data['title'] = $data['this_page'] . ' : ' . $data['this_cat'] . ' - ' . $TextLanguage->lang('bangkok_portal');
 			 
 			$data['config_mod'] = $this->mod;       
 			   
@@ -78,18 +76,21 @@ class Contactus
 	}
 	
 	public function info()
-	{ 
-		$this->include_header(); 
-		 
-		$this->load->model('Portal_website_style_model'); 
+	{   
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		  
 		
-		$d = new stdClass();  
-		$d->where = array('id >' => 0,'web_id' => $_SESSION['panel_id']);
-		$q = $this->Portal_website_style_model->select_data($d);  
+		$q = "SELECT * FROM ".$CustomHelper->model_to_table('Portal_website_style_model')." WHERE id > 0 AND web_id = ?";	 	
+		$v = $_SESSION['panel_id'];
+		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('Portal_website_style_model')),$q,$v);
+		$q = json_decode($res); 
+		
 		 
-		if($q->num_rows == 1)
+		 
+		if(count($q) > 0)
 		{  
-			$row = $q->result();  
+			$row = $q;  
 			
 			$data['edit_id'] = $row[0]->id;
 			$data['edit_web_id'] = $row[0]->web_id;
@@ -98,16 +99,16 @@ class Contactus
 			$data['edit_contact_text_3'] = $row[0]->contact_text_3;
 			$data['edit_contact_text_4'] = $row[0]->contact_text_4;  
 			     
-			$data['this_cat'] = $this->lang->line($this->mod);
-			$data['this_page'] = $this->lang->line('edit');
-			$data['title'] = $data['this_page'] . ' : ' . $data['this_cat'] . ' - ' . $this->lang->line('bangkok_portal');    
+			$data['this_cat'] = $TextLanguage->lang(@$this->mod);
+			$data['this_page'] = $TextLanguage->lang('edit');
+			$data['title'] = $data['this_page'] . ' : ' . $data['this_cat'] . ' - ' . $TextLanguage->lang('bangkok_portal');    
 			 
 			$data['config_mod'] = $this->mod; 
 			
 			$data['config_submenu_title'] = $this->config_submenu_title;
 			$data['config_submenu_mod'] = $this->config_submenu_mod;   
 			
-			$data['config_header_info'] = $this->lang->line('help_'.$this->mod.'_edit');
+			$data['config_header_info'] = $TextLanguage->lang('help_'.$this->mod.'_edit');
 										   
 			$data['config_footer_js'] = 'mainmenuFocus(1,1,9); btn2stageFocus(0,2);';        
 			  
@@ -120,32 +121,36 @@ class Contactus
 	}	
 	
 	public function info_submit()
-	{ 
-		$this->include_header(); 
+	{   
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
 		  
-		$this->load->model('Portal_website_style_model');  
+		   
 		 
-		$d = new stdClass();   
-		$d->contact_text_1 = htmlspecialchars_decode($this->input->post('contact_text_1', FALSE)); 
-		$d->contact_text_2 = htmlspecialchars_decode($this->input->post('contact_text_2', FALSE)); 
+		$d = new \stdClass();   
+		$d->contact_text_1 = htmlspecialchars_decode($CustomHelper->input_post('contact_text_1', FALSE)); 
+		$d->contact_text_2 = htmlspecialchars_decode($CustomHelper->input_post('contact_text_2', FALSE)); 
 		
 		/* 
 		echo $d->contact_text_1;
 		echo "<br>";
 		echo $d->contact_text_2;
 		 */
-		  
+		   
+		$d->contact_text_3 = $CustomHelper->input_post('contact_text_3', FALSE); 
+		$d->contact_text_4 = $CustomHelper->input_post('contact_text_4', FALSE); 
 		
-		$d->contact_text_3 = $this->input->post('contact_text_3', FALSE); 
-		$d->contact_text_4 = $this->input->post('contact_text_4', FALSE); 
-		$this->Portal_website_style_model->update_data($d,$_SESSION['panel_id'],'web_id',$this->input->post('id', TRUE),'id');    
- 	
-		$this->load->model('Portal_website_log_model'); 
-		$this->Portal_website_log_model->add_log('' . $this->mod_title . ' - Edit (' . $this->input->post('title', TRUE) . ')',$_SESSION['panel_username'],$_SESSION['panel_id'],strtoupper($this->mod).'_EDIT');  
-		
-		//redirect('/panels/' . $this->mod . '/info');
+		$this_qr = ''; 
+		foreach($d as $key=>$value) 
+		{
+			$this_qr = $this_qr.$key." = '".addslashes($value)."',";
+		}
+		$this_qr = substr($this_qr,0,-1);  	 
+		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('Portal_website_style_model')),"UPDATE ".$CustomHelper->model_to_table('Portal_website_style_model')." SET ".$this_qr." WHERE web_id = '".$_SESSION['panel_id']."' AND id = '".$CustomHelper->input_post('id', TRUE)."'",'');
+		 
+		$CustomHelper->add_log(''.$this->mod_title.' - Edit ('.$CustomHelper->input_post('title', TRUE).')',$_SESSION['panel_username'],$_SESSION['panel_id'],strtoupper($this->mod).'_EDIT');   
 		?>
-        <meta http-equiv="refresh" content="0;URL=<?php echo 'http://localhost/bangkok.go.th.portal/panels/' . $this->mod . '/info' ?>" />
+        <meta http-equiv="refresh" content="0;URL=<?php echo 'http://127.0.0.1:8000/manage-admin/info?m='.$this->mod.'' ?>" />
         <?php
         exit;	
 	}  	

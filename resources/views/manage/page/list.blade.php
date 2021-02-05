@@ -28,7 +28,7 @@ foreach ($list as $row)
 	switch($row->page_type)
 	{
 		case "group" :
-			?> &nbsp; [ <span class="link-text"><a href="<?php echo base_url() ?>panels/page/set_cat_page/<?php echo $row->id ?>"> <?php echo $TextLanguage->lang('sub_menu_list') ?> ( <?php echo $list_page_count[$row->id] ?> ) </a></span> ]  <a style="color:#FFFFFF;" href="http://www.siamedigital.com:81/bkk-lib/menu_cache/<?php echo $row->cat_id ?>_<?php echo $row->id ?>_<?= $_SESSION['panel_web_url'] ?>.php">Menu</a> <?php	
+			?> &nbsp; [ <span class="link-text"><a href="http://127.0.0.1:8000/manage-admin/set_cat_page?m=page&id=<?php echo $row->id ?>"> <?php echo $TextLanguage->lang('sub_menu_list') ?> ( <?php echo $list_page_count[$row->id] ?> ) </a></span> ]  <a style="color:#FFFFFF;" href="http://www.siamedigital.com:81/bkk-lib/menu_cache/<?php echo $row->cat_id ?>_<?php echo $row->id ?>_<?php echo $_SESSION['panel_web_url'] ?>.php">Menu</a> <?php	
 			break;
 		case "texteditor" :
 			?>
@@ -37,7 +37,7 @@ foreach ($list as $row)
 			if($row->can_review == '1')
 			{
 				?>
-				&nbsp; <img src="<?php echo base_url() ?>assets/panel/comment.png" align="absmiddle" style="cursor:pointer;" onclick="callLightbox('<?php echo base_url(); ?>panels/<?php echo $config_mod ?>/comment_text/<?php echo $row->id ?>/sub',800,640);return false;" />
+				&nbsp; <img src="<?php echo base_url() ?>assets/panel/comment.png" align="absmiddle" style="cursor:pointer;" onclick="callLightbox('http://127.0.0.1:8000/manage-admin/comment_text?m=<?php echo $config_mod ?>&id=<?php echo $row->id ?>&main_type=sub',800,640);return false;" />
 				<?php
 			}
 			?>
@@ -48,31 +48,31 @@ foreach ($list as $row)
 			?><?php
 			break;
 		case "news" :
-			?> &nbsp; [ <span class="link-text"><a href="<?php echo base_url() ?>panels/news/set_cat_from_page/<?php echo $row->data_id ?>"> <?php echo $list_page_mod_title[$row->id] ?> ( <?php echo $list_page_mod_count[$row->id] ?> ) </a></span> ]  <?php
+			?> &nbsp; [ <span class="link-text"><a href="http://127.0.0.1:8000/manage-admin/set_cat_from_page?m=news&id=<?php echo $row->data_id ?>"> <?php echo $list_page_mod_title[$row->id] ?> ( <?php echo $list_page_mod_count[$row->id] ?> ) </a></span> ]  <?php
 			break;
 		case "calendar" :
-			?> &nbsp; [ <span class="link-text"><a href="<?php echo base_url() ?>panels/activities/set_cat_from_page/<?php echo $row->data_id ?>"> <?php echo $list_page_mod_title[$row->id] ?> ( <?php echo $list_page_mod_count[$row->id] ?> ) </a></span> ]  <?php
+			?> &nbsp; [ <span class="link-text"><a href="http://127.0.0.1:8000/manage-admin/set_cat_from_page?m=activities&id=<?php echo $row->data_id ?>"> <?php echo $list_page_mod_title[$row->id] ?> ( <?php echo $list_page_mod_count[$row->id] ?> ) </a></span> ]  <?php
 			break;
 		case "faq" :
-			?> &nbsp; [ <span class="link-text"><a href="<?php echo base_url() ?>panels/faq/set_cat_from_page/<?php echo $row->data_id ?>"> <?php echo $list_page_mod_title[$row->id] ?> ( <?php echo $list_page_mod_count[$row->id] ?> ) </a></span> ]  <?php
+			?> &nbsp; [ <span class="link-text"><a href="http://127.0.0.1:8000/manage-admin/set_cat_from_page?m=faq&id=<?php echo $row->data_id ?>"> <?php echo $list_page_mod_title[$row->id] ?> ( <?php echo $list_page_mod_count[$row->id] ?> ) </a></span> ]  <?php
 			break;
 		case "gallery" :
-			?> &nbsp; [ <span class="link-text"><a href="<?php echo base_url() ?>panels/gallery/set_cat_from_page/<?php echo $row->data_id ?>"> <?php echo $list_page_mod_title[$row->id] ?> ( <?php echo $list_page_mod_count[$row->id] ?> ) </a></span> ]  <?php
+			?> &nbsp; [ <span class="link-text"><a href="http://127.0.0.1:8000/manage-admin/set_cat_from_page?m=gallery&id=<?php echo $row->data_id ?>"> <?php echo $list_page_mod_title[$row->id] ?> ( <?php echo $list_page_mod_count[$row->id] ?> ) </a></span> ]  <?php
 			break;
 		case "banner" :
-			?> &nbsp; [ <span class="link-text"><a href="<?php echo base_url() ?>panels/banner/set_cat_from_page/<?php echo $row->data_id ?>"> <?php echo $list_page_mod_title[$row->id] ?> ( <?php echo $list_page_mod_count[$row->id] ?> ) </a></span> ]  <?php
+			?> &nbsp; [ <span class="link-text"><a href="http://127.0.0.1:8000/manage-admin/set_cat_from_page?m=banner&id=<?php echo $row->data_id ?>"> <?php echo $list_page_mod_title[$row->id] ?> ( <?php echo $list_page_mod_count[$row->id] ?> ) </a></span> ]  <?php
 			break;
 		case "download" :
-			?> &nbsp; [ <span class="link-text"><a href="<?php echo base_url() ?>panels/download/set_cat_from_page/<?php echo $row->data_id ?>"> <?php echo $list_page_mod_title[$row->id] ?> ( <?php echo $list_page_mod_count[$row->id] ?> ) </a></span> ]  <?php
+			?> &nbsp; [ <span class="link-text"><a href="http://127.0.0.1:8000/manage-admin/set_cat_from_page?m=download&id=<?php echo $row->data_id ?>"> <?php echo $list_page_mod_title[$row->id] ?> ( <?php echo $list_page_mod_count[$row->id] ?> ) </a></span> ]  <?php
 			break;
 		case "question" :
-			?> &nbsp; [ <span class="link-text"><a href="<?php echo base_url() ?>panels/question/set_cat_from_page/<?php echo $row->data_id ?>"> <?php echo $list_page_mod_title[$row->id] ?> ( <?php echo $list_page_mod_count[$row->id] ?> ) </a></span> ]  <?php
+			?> &nbsp; [ <span class="link-text"><a href="http://127.0.0.1:8000/manage-admin/set_cat_from_page?m=question&id=<?php echo $row->data_id ?>"> <?php echo $list_page_mod_title[$row->id] ?> ( <?php echo $list_page_mod_count[$row->id] ?> ) </a></span> ]  <?php
 			break;
 		case "poll" :
-			?> &nbsp; [ <span class="link-text"><a href="<?php echo base_url() ?>panels/poll/set_cat_from_page/<?php echo $row->data_id ?>"> <?php echo $list_page_mod_title[$row->id] ?> ( <?php echo $list_page_mod_count[$row->id] ?> ) </a></span> ]  <?php
+			?> &nbsp; [ <span class="link-text"><a href="http://127.0.0.1:8000/manage-admin/set_cat_from_page?m=poll&id=<?php echo $row->data_id ?>"> <?php echo $list_page_mod_title[$row->id] ?> ( <?php echo $list_page_mod_count[$row->id] ?> ) </a></span> ]  <?php
 			break;
 		case "webboard" :
-			?> &nbsp; [ <span class="link-text"><a href="<?php echo base_url() ?>panels/webboard/set_cat_from_page/<?php echo $row->data_id ?>"> <?php echo $list_page_mod_title[$row->id] ?> ( <?php echo $list_page_mod_count[$row->id] ?> ) </a></span> ]  <?php
+			?> &nbsp; [ <span class="link-text"><a href="http://127.0.0.1:8000/manage-admin/set_cat_from_page?m=webboard&id=<?php echo $row->data_id ?>"> <?php echo $list_page_mod_title[$row->id] ?> ( <?php echo $list_page_mod_count[$row->id] ?> ) </a></span> ]  <?php
 			break; 
 		default :
 			?>-<?php
@@ -145,13 +145,13 @@ foreach ($list as $row)
 } 
 ?>                                                     
  
-<?
+<?php
 if($show_extra == "1")
 {
 	?>
-    <tr><td colspan="8"><div align="center" style="font-size:14px;">หากเมนูแสดงไม่ถูกต้อง <a href="http://www.siamedigital.com:81/bkk-lib/assets/update_menu_1.php?a=<?php echo $show_extra_id ?>&b=<?php echo $show_extra_cat_id ?>&c=<?= $_SESSION['panel_web_url'] ?>" target="_blank">กรุณากดที่นี่</a></div></td></tr>
+    <tr><td colspan="8"><div align="center" style="font-size:14px;">หากเมนูแสดงไม่ถูกต้อง <a href="http://www.siamedigital.com:81/bkk-lib/assets/update_menu_1.php?a=<?php echo $show_extra_id ?>&b=<?php echo $show_extra_cat_id ?>&c=<?php echo $_SESSION['panel_web_url'] ?>" target="_blank">กรุณากดที่นี่</a></div></td></tr>
     
-    <?
+    <?php
 }
 ?>
 

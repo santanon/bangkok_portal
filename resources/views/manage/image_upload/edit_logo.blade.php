@@ -7,7 +7,8 @@ $TextLanguage = new \App\TextLanguage;
  
 <div align="center" style="font-size:12px;">
 
-<form enctype="multipart/form-data" action="<?php echo base_url() ?>panels/image_upload/step2" id="form_step_1" method="post">
+<form enctype="multipart/form-data" action="http://127.0.0.1:8000/manage-admin/step2?m=image_upload" id="form_step_1" method="post">
+@csrf <!-- {{ csrf_field() }} -->
 <br />
 <br /> 
 <br />

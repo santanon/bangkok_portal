@@ -27,7 +27,8 @@ $TextLanguage = new \App\TextLanguage;
         }
     }
     </script>
-    <form method="post" enctype="multipart/form-data" onsubmit="return check_form();" action="<?php echo base_url(); ?>panels/<?php echo $config_mod; ?>/edit_submit">
+    <form method="post" enctype="multipart/form-data" onsubmit="return check_form();" action="http://127.0.0.1:8000/manage-admin/edit_submit?m=<?php echo $config_mod;  ?>">
+    @csrf <!-- {{ csrf_field() }} -->
     <table>
         <tbody>
          <tr>
@@ -36,7 +37,7 @@ $TextLanguage = new \App\TextLanguage;
                 
                <select class="selectric" name="cat_id" id="cat_id"> 
                     <?php 
-                    foreach ($list_cat->result() as $row_cat)
+                    foreach ($list_cat as $row_cat)
                     {   
                         ?>
                         <option value="<?php echo $row_cat->id; ?>" <?php if($this_cat_list == $row_cat->id){ ?> selected="selected" <?php } ?>><?php echo $row_cat->title; ?></option> 
@@ -116,7 +117,7 @@ $TextLanguage = new \App\TextLanguage;
                 <td>
                 
                 <span class="btn round big blue"><input type="submit" class="fontfacetext" value="<?php echo $TextLanguage->lang('save'); ?>"></span>&nbsp;
-                <span class="btn round big gray"><input type="button" class="fontfacetext" value="<?php echo $TextLanguage->lang('cancel'); ?>" onclick="window.location = '<?php echo base_url() . 'panels/' . $config_mod . '' ?>';"></span>
+                <span class="btn round big gray"><input type="button" class="fontfacetext" value="<?php echo $TextLanguage->lang('cancel'); ?>" onclick="window.location = 'http://127.0.0.1:8000/manage-admin/list?m=<?php echo $config_mod;  ?>';"></span>
 
                 </td>
             </tr>
@@ -142,11 +143,12 @@ $TextLanguage = new \App\TextLanguage;
     
 	<?php 
 	$run = 1;
-	foreach($list_reply->result() as $ro_reply)
+	foreach($list_reply as $ro_reply)
 	{   
 		?> 
         <br /><br /><a name="edit_<?php echo $ro_reply->id; ?>"></a>
-        <form method="post" enctype="multipart/form-data" onsubmit="return check_edit_reply();" action="<?php echo base_url(); ?>panels/<?php echo $config_mod; ?>/reply_edit_submit">
+        <form method="post" enctype="multipart/form-data" onsubmit="return check_edit_reply();" action="http://127.0.0.1:8000/manage-admin/reply_edit_submit?m=<?php echo $config_mod ?>">
+        @csrf <!-- {{ csrf_field() }} -->
         <table style="border:1px solid #666; padding:10px; border-collapse: separate; width:500px" align="center">
         <tbody> 
          <tr style="background-color:#00719b;">
@@ -199,7 +201,7 @@ $TextLanguage = new \App\TextLanguage;
             <td>
             
             <span class="btn round big blue"><input type="submit" class="fontfacetext" value="<?php echo $TextLanguage->lang('edit'); ?>"></span>&nbsp;
-             <span class="btn round big red"><input onclick="if(confirm('<?php echo $TextLanguage->lang('confirm'); ?>?')){ window.location = '<?php echo base_url(); ?>panels/<?php echo $config_mod; ?>/reply_delete/<?php echo $ro_reply->id ?>/<?php echo $edit_id ?>'; }" type="button" class="fontfacetext" value="<?php echo $TextLanguage->lang('delete'); ?>"></span>&nbsp;
+             <span class="btn round big red"><input onclick="if(confirm('<?php echo $TextLanguage->lang('confirm'); ?>?')){ window.location = 'http://127.0.0.1:8000/manage-admin/reply_delete?m=<?php echo $config_mod ?>&id=<?php echo $ro_reply->id ?>&id2=<?php echo $edit_id ?>'; }" type="button" class="fontfacetext" value="<?php echo $TextLanguage->lang('delete'); ?>"></span>&nbsp;
              
             </td>
         </tr>
@@ -238,7 +240,8 @@ $TextLanguage = new \App\TextLanguage;
     </script> 
     <br /><br />
     <a name="add_new"></a>
-     <form method="post" enctype="multipart/form-data" onsubmit="return check_add_reply();" action="<?php echo base_url(); ?>panels/<?php echo $config_mod; ?>/reply_add_submit">
+     <form method="post" enctype="multipart/form-data" onsubmit="return check_add_reply();" action="http://127.0.0.1:8000/manage-admin/reply_add_submit?m=<?php echo $config_mod ?>">
+     @csrf <!-- {{ csrf_field() }} -->
     <table style="border:1px solid #666; padding:10px; border-collapse: separate; width:500px" align="center">
         <tbody> 
         	 <tr style="background-color:#002837;">

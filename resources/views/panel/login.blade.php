@@ -43,6 +43,7 @@
                 <h3>Login</h3>
                 <h6>Please insert your Username & Password </h6>
                 <form action="{{url('panel-admin/login_check')}}" method="post">
+                @csrf <!-- {{ csrf_field() }} -->
                     @csrf
                     <div class="input-box">
                         <input type="text" name="u" required="">
@@ -77,7 +78,8 @@
                 </div>
                 <div class="modal-body border-bottom-main">
                     <p>Enter your email below to receive your password reset instructions.</p>
-                    <form action="">
+                     <form action=""> 
+                    @csrf <!-- {{ csrf_field() }} -->
                         <div class="input-box">
                             <input type="email" name="" required="">
                             <label for="">E-mail</label>

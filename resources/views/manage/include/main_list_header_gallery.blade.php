@@ -64,7 +64,7 @@
 											if($config_use_add)
 											{
 												?>
-                                                 <span class="btn round big green"><input onclick="window.location = '<?php echo base_url() . 'panels/' . $config_mod . '/add' ?>';" type="button" class="fontfacetext" value="<?php echo $TextLanguage->lang('add'); ?>"></span> 
+                                                 <span class="btn round big green"><input onclick="window.location = 'http://127.0.0.1:8000/manage-admin/add?m=<?php echo $config_mod ?>';" type="button" class="fontfacetext" value="<?php echo $TextLanguage->lang('add'); ?>"></span> 
                                                 <?php
 											}
 											?>

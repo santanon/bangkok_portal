@@ -88,7 +88,8 @@ if(document.referrer == "http://www.bangkok.go.th/panel/login")
 									<?php
 								}
 								?>  
-                                    <form action="<?php echo base_url(); ?>panel/login_check" method="post" onSubmit="return check_form()">
+                                    <form action="http://127.0.0.1:8000/manage-admin/login_check" method="post" onSubmit="return check_form()">
+                                    @csrf <!-- {{ csrf_field() }} -->
                                         <table>
                                             <tr>
                                                 <td align="right"><label for="uId" class="fontfacetext-bold"><?php echo $TextLanguage->lang('username'); ?></label></td>
@@ -104,7 +105,7 @@ if(document.referrer == "http://www.bangkok.go.th/panel/login")
                                             </tr>
                                             <tr>
                                                 <td>&nbsp;</td>
-                                                <td><i class="icon-caret-right"></i> <a class="btn-forget-pass fontfacetext" href="<?php echo base_url(); ?>panel/forgot_password"><?php echo $TextLanguage->lang('forgot_password'); ?></a></td>
+                                                <td><i class="icon-caret-right"></i> <a class="btn-forget-pass fontfacetext" href="http://127.0.0.1:8000/manage-admin/forgot_password"><?php echo $TextLanguage->lang('forgot_password'); ?></a></td>
                                             </tr>
                                         </table>
                                     </form>

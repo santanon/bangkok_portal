@@ -81,7 +81,7 @@ $TextLanguage = new \App\TextLanguage;
 								</div>
                                 
                                 <div align="center"><br />
-                                <span class="btn round big blue"><input type="button" class="fontfacetext" value="<?php echo $TextLanguage->lang('reply') ?>" onclick="window.top.location = '<?php echo base_url() ?>panels/<?php echo $config_mod; ?>/send/<?php echo $read_id ?>';"></span>
+                                <span class="btn round big blue"><input type="button" class="fontfacetext" value="<?php echo $TextLanguage->lang('reply') ?>" onclick="window.top.location = 'http://127.0.0.1:8000/manage-admin/send?m=<?php echo $config_mod; ?>&id=<?php echo $row->read_id ?>';"></span>
                                 <span class="btn round big green"><input type="button" class="fontfacetext" value="<?php echo $TextLanguage->lang('print') ?>" onclick="window.print();"></span>
                                 <span class="btn round big gray"><input type="button" class="fontfacetext" value="<?php echo $TextLanguage->lang('close') ?>" onclick="parent.jQuery.fancybox.close();"></span>
                                 </div> 

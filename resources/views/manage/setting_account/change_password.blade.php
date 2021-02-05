@@ -35,7 +35,8 @@ function check_form()
 	}
 }
 </script>
-<form method="post" enctype="multipart/form-data" onsubmit="return check_form();" action="<?php echo base_url(); ?>panels/<?php echo $config_mod; ?>/change_password_submit">
+<form method="post" enctype="multipart/form-data" onsubmit="return check_form();" action="http://127.0.0.1:8000/manage-admin/change_password_submit?m=<?php echo $config_mod ?>">
+@csrf <!-- {{ csrf_field() }} -->
 <table>
 	<tbody>
 		 
@@ -51,8 +52,8 @@ function check_form()
 		    <th>สังกัด</th>
 		    <td><?php echo $_SESSION['panel_login_web_user_section'] ?></td>
 		    </tr>
-        <?
-	}
+        <?php
+}
 	?>	 
 		
             
@@ -85,7 +86,7 @@ function check_form()
 			<td>
 			
 			<span class="btn round big blue"><input type="submit" class="fontfacetext" value="<?php echo $TextLanguage->lang('save'); ?>"></span>&nbsp;
-			<span class="btn round big gray"><input type="button" class="fontfacetext" value="<?php echo $TextLanguage->lang('cancel'); ?>" onclick="window.location = '<?php echo base_url() . 'panels/'; ?>';"></span>
+			<span class="btn round big gray"><input type="button" class="fontfacetext" value="<?php echo $TextLanguage->lang('cancel'); ?>" onclick="window.history.back();"></span>
 
 			</td>
 		</tr>

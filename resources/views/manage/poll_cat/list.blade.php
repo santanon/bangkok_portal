@@ -13,33 +13,33 @@ foreach ($list as $row)
 	?>
     <tr>
     <td align="center">#<?php echo sprintf('%06d', $row->id) ?></td> 
-    <td align="left"> &nbsp; <?php if($row->title <> ''){echo $row->title;}else if($row->en_title <> ''){echo $row->en_title;}else{echo '-';} ?> <span class="link-text"><a href="<?php echo base_url() . 'panels/' . $config_mod_sub_mod . '/set_cat/' . $row->id ?>"> ( <?php echo $list_sub_count[$row->id] ?> ) </a></span> </td>
+    <td align="left"> &nbsp; <?php if($row->title <> ''){echo $row->title;}else if($row->en_title <> ''){echo $row->en_title;}else{echo '-';} ?> <span class="link-text"><a href="<?php echo 'http://127.0.0.1:8000/manage-admin/set_cat?m='.$config_mod_sub_mod.'&id='.$row->id ?>"> ( <?php echo $list_sub_count[$row->id] ?> ) </a></span> </td>
     <td align="center"> &nbsp; <?php 
 	
 	$can_delete = '1';
 	
-	if(count($list_check_main_menu[$row->id]->result()) > 0)
+	if(count($list_check_main_menu[$row->id]) > 0)
 	{
-		$ro = $list_check_main_menu[$row->id]->result(); 
-		?>  &nbsp;  <span class="link-text"><a href="<?php echo base_url() . 'panels/main_menu/edit/' . $ro[0]->id ?>"> <?php echo $TextLanguage->lang('main_menu') ?> </a></span> <?php 
+		$ro = $list_check_main_menu[$row->id]; 
+		?>  &nbsp;  <span class="link-text"><a href="http://127.0.0.1:8000/manage-admin/edit?m=main_menu&id=<?php echo $ro[0]->id ?>"> <?php echo $TextLanguage->lang('main_menu') ?> </a></span> <?php 
 		$can_delete = '2';
 	}  
-	if(count($list_check_page[$row->id]->result()) > 0)
+	if(count($list_check_page[$row->id]) > 0)
 	{
-		$ro = $list_check_page[$row->id]->result(); 
-		?><span class="link-text"><a href="<?php echo base_url() . 'panels/page/edit/' . $ro[0]->id ?>"> <?php echo $TextLanguage->lang('page') ?> </a></span> <?php 
+		$ro = $list_check_page[$row->id]; 
+		?><span class="link-text"><a href="http://127.0.0.1:8000/manage-admin/edit?m=page&id=<?php echo $ro[0]->id ?>"> <?php echo $TextLanguage->lang('page') ?> </a></span> <?php 
 		$can_delete = '2';
 	} 
-	if(count($list_check_top_menu[$row->id]->result()) > 0)
+	if(count($list_check_top_menu[$row->id]) > 0)
 	{
-		$ro = $list_check_top_menu[$row->id]->result(); 
-		?><span class="link-text"><a href="<?php echo base_url() . 'panels/top_menu/edit/' . $ro[0]->id ?>"> <?php echo $TextLanguage->lang('top_menu') ?> </a></span> <?php 
+		$ro = $list_check_top_menu[$row->id]; 
+		?><span class="link-text"><a href="http://127.0.0.1:8000/manage-admin/edit?m=top_menu&id=<?php echo $ro[0]->id ?>"> <?php echo $TextLanguage->lang('top_menu') ?> </a></span> <?php 
 		$can_delete = '2';
 	} 
-	if(count($list_check_footer_menu[$row->id]->result()) > 0)
+	if(count($list_check_footer_menu[$row->id]) > 0)
 	{
-		$ro = $list_check_footer_menu[$row->id]->result(); 
-		?><span class="link-text"><a href="<?php echo base_url() . 'panels/footer_menu/edit/' . $ro[0]->id ?>"> <?php echo $TextLanguage->lang('footer_menu') ?> </a></span> <?php 
+		$ro = $list_check_footer_menu[$row->id]; 
+		?><span class="link-text"><a href="http://127.0.0.1:8000/manage-admin/edit?m=footer_menu&id=<?php echo $ro[0]->id ?>"> <?php echo $TextLanguage->lang('footer_menu') ?> </a></span> <?php 
 		$can_delete = '2';
 	} 
 	

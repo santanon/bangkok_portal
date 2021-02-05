@@ -35,10 +35,10 @@ $TextLanguage = new \App\TextLanguage;
 								<div class="content-slide-detail">
                                 <?php
 								$i = 0;
-								foreach ($highlight_banner->result() as $r)
+								foreach ($highlight_banner as $r)
 								{   
 									?>
-									<span class="link-text" style="font-size:12px;">- <a href="javascript:;" onclick="callLightbox('<?php echo base_url(); ?>panel/highlight_banner/<?php echo $r->id ?>',600,400);"><?php echo $r->title ?></a> <i>(<?php echo date('d/m/Y H:i:s',$r->last_create) ?>)</i> </span><br />
+									<span class="link-text" style="font-size:12px;">- <a href="javascript:;" onclick="callLightbox('http://127.0.0.1:8000/manage-admin/highlight_banner?id=<?php echo $r->id ?>',600,400);"><?php echo $r->title ?></a> <i>(<?php echo date('d/m/Y H:i:s',$r->last_create) ?>)</i> </span><br />
 									<?php  
 									$i++;
 								}
@@ -59,10 +59,10 @@ $TextLanguage = new \App\TextLanguage;
 								<div class="content-slide-detail">
 								<?php
 								$i = 0;
-								foreach ($ins_step->result() as $r)
+								foreach ($ins_step as $r)
 								{   
 									?>
-									<span class="link-text" style="font-size:12px;">- <a href="javascript:;" onclick="callLightbox('<?php echo base_url(); ?>panel/ins_step/<?php echo $r->id ?>',600,400);"><?php echo $r->title ?></a> <i>(<?php echo date('d/m/Y H:i:s',$r->last_create) ?>)</i> </span><br />
+									<span class="link-text" style="font-size:12px;">- <a href="javascript:;" onclick="callLightbox('http://127.0.0.1:8000/manage-admin/ins_step?id=<?php echo $r->id ?>',600,400);"><?php echo $r->title ?></a> <i>(<?php echo date('d/m/Y H:i:s',$r->last_create) ?>)</i> </span><br />
 									<?php  
 									$i++;
 								}
@@ -85,10 +85,10 @@ $TextLanguage = new \App\TextLanguage;
 									<div class="mod_news-list">
 										 <?php
 										$i = 0;
-										foreach ($notification->result() as $r)
+										foreach ($notification as $r)
 										{   
 											?>
-											<span class="link-text" style="font-size:12px;">- <a href="javascript:;" onclick="callLightbox('<?php echo base_url(); ?>panel/notification/<?php echo $r->id ?>',600,400);"><?php echo $r->title ?></a> <i>(<?php echo date('d/m/Y H:i:s',$r->last_create) ?>)</i> </span><br />
+											<span class="link-text" style="font-size:12px;">- <a href="javascript:;" onclick="callLightbox('http://127.0.0.1:8000/manage-admin/notification/?id=<?php echo $r->id ?>',600,400);"><?php echo $r->title ?></a> <i>(<?php echo date('d/m/Y H:i:s',$r->last_create) ?>)</i> </span><br />
 											<?php  
 											$i++;
 										}
@@ -126,19 +126,19 @@ $( document ).ready(function()
 	if($_SESSION['panel_style_template_id'] == '0')
 	{
 		?>
-		callLightbox('<?php echo base_url(); ?>panel/intro',920,600); 
+		callLightbox('http://127.0.0.1:8000/manage-admin/intro',920,600); 
 		<?php	
 	}
 	else if($_SESSION['panel_style_logo_img1'] == '')
 	{
 		?>
-		callLightbox('<?php echo base_url(); ?>panel/intro/2',920,600); 
+		callLightbox('http://127.0.0.1:8000/manage-admin/intro?id=2',920,600); 
 		<?php	
 	}
 	else if($_SESSION['panel_style_info_title'] == '' || $_SESSION['panel_style_info_keyword'] == '' || $_SESSION['panel_style_info_description'] == '')
 	{
 		?>
-		callLightbox('<?php echo base_url(); ?>panel/intro/3',920,600); 
+		callLightbox('http://127.0.0.1:8000/manage-admin/intro?id=3',920,600); 
 		<?php	
 	}
 	?>
@@ -147,7 +147,7 @@ $( document ).ready(function()
 	if($_SESSION['panel_web_disk_over'] == 1)
 	{ 
 		?>
-		callLightbox('<?php echo base_url(); ?>panel/file_manager',1150,520); 
+		callLightbox('http://127.0.0.1:8000/manage-admin/file_manager',1150,520); 
 		<?php
 	} 
 	?>  

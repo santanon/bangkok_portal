@@ -34,7 +34,8 @@ function check_form()
 	}
 }
 </script>
-<form method="post" enctype="multipart/form-data" onsubmit="return check_form();" action="<?php echo base_url(); ?>panels/setting_profile/edit_submit">
+<form method="post" enctype="multipart/form-data" onsubmit="return check_form();" action="http://127.0.0.1:8000/manage-admin/edit_submit?m=setting_profile">
+@csrf <!-- {{ csrf_field() }} -->
 <table>
 	<tbody> 
     
@@ -56,7 +57,7 @@ function check_form()
 			<th width="120"><?php echo $TextLanguage->lang('profile_email'); ?> <span style="color:red">*</span></th>
 			<td>
 			<input id="profile_email" name="profile_email" type="text" class="sm-input" style="width:235px" value="<?php echo @$_SESSION['panel_profile_email'] ?>" disabled="disabled">   
-            &nbsp; <span class="link-text"><a href="<?php echo base_url() ?>panels/setting_account/change_email">Change E-mail</a></span> 
+            &nbsp; <span class="link-text"><a href="http://127.0.0.1:8000/manage-admin/change_email?m=setting_account">Change E-mail</a></span> 
 			</td>
 		</tr>
         
@@ -80,7 +81,7 @@ function check_form()
 			<td>
 			
 			<span class="btn round big blue"><input type="submit" class="fontfacetext" value="<?php echo $TextLanguage->lang('save'); ?>"></span>&nbsp;
-			<span class="btn round big gray"><input type="button" class="fontfacetext" value="<?php echo $TextLanguage->lang('cancel'); ?>" onclick="window.location = '<?php echo base_url() . 'panels/' ?>';"></span>
+			<span class="btn round big gray"><input type="button" class="fontfacetext" value="<?php echo $TextLanguage->lang('cancel'); ?>" onclick="window.history.back();"></span>
 
 			</td>
 		</tr>

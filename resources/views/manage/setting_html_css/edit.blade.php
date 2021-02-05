@@ -33,7 +33,8 @@ function check_form()
 	}
 }
 </script>
-<form method="post" enctype="multipart/form-data" onsubmit="return check_form();" action="<?php echo base_url(); ?>panels/setting_html_css/edit_submit">
+<form method="post" enctype="multipart/form-data" onsubmit="return check_form();" action="http://127.0.0.1:8000/manage-admin/edit_submit?m=<setting_html_css">
+@csrf <!-- {{ csrf_field() }} -->
 <table>
 	<tbody>  
 		  <tr>

@@ -2,10 +2,10 @@
     <th width="120"><?php echo $TextLanguage->lang('publish_date'); ?></th>
     <td>
     <div class="align-box" style="width:110px;">
-    <input name="date_set" type="radio" id="test-radio8" value="0" <?php if($edit_date_set == '0'){ ?> checked="checked" <? } ?> onclick="show_link2('2');"> 
+    <input name="date_set" type="radio" id="test-radio8" value="0" <?php if($edit_date_set == '0'){ ?> checked="checked" <?php } ?> onclick="show_link2('2');"> 
     <label class="input-label" for="test-radio8"><?php echo $TextLanguage->lang('always'); ?></label></div>&nbsp;&nbsp;
     <div class="align-box" style="width:110px;">
-    <input name="date_set" type="radio" id="test-radio7" value="1" <?php if($edit_date_set == '1'){ ?> checked="checked" <? } ?> onclick="show_link2('1');"> 
+    <input name="date_set" type="radio" id="test-radio7" value="1" <?php if($edit_date_set == '1'){ ?> checked="checked" <?php } ?> onclick="show_link2('1');"> 
     <label class="input-label" for="test-radio7"><?php echo $TextLanguage->lang('setting'); ?></label></div>&nbsp;&nbsp; 
     </td>
 </tr>

@@ -57,7 +57,8 @@ function check_confirm()
 	}
 }
 </script>
-<form method="post" action="<?php echo base_url() ?>panels/<?php echo $config_mod ?>/save_list" onsubmit="return check_confirm();">
+<form method="post" action="http://127.0.0.1:8000/manage-admin/save_list?m=<?php echo $config_mod ?>" onsubmit="return check_confirm();">
+@csrf <!-- {{ csrf_field() }} -->
 <input type="hidden" name="list_order" id="list_order" value="" />
 <div align="center"><input type="submit" name="a" value="<?php echo $TextLanguage->lang('save') ?>" /></div><br />
 </form>

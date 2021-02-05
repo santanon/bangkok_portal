@@ -7,10 +7,32 @@ use Illuminate\Support\Facades\Http;
 use Cache;
 
 class CustomHelper 
-{
-    function API_CALL($url,$q,$v)
-    { 
-        $k = 'Si@mEPoRtaL@2564';  
+{ 
+	function add_log($title,$this_user,$this_user_id,$this_action)
+    {     
+		$log_data = new \stdClass();
+		$log_data->title = $title;
+		$log_data->this_user = $this_user;
+		$log_data->this_user_id = $this_user_id;
+		$log_data->this_action = $this_action;
+		$log_data->ip = $_SERVER['REMOTE_ADDR'];
+		$log_data->session_id = session_id();
+		$log_data->last_create = date('U'); 
+		$log_data->last_create_full = date('d/m/Y [H:i:s]'); 
+		$log_data->last_create_thai = 'เมื่อวัน'.$this->tran_day_thai(date('l')).'ที่ '.date('d').' '.$this->tran_mon_thai(date('m')).' พ.ศ. '.(date('Y')+543).' เวลา '.date('H.i').' น.'; 
+		 
+		$this_qr = ''; 
+		foreach($log_data as $key=>$value) 
+		{
+			$this_qr = $this_qr.$key." = '".addslashes($value)."',";
+		}
+		$this_qr = substr($this_qr,0,-1);  	 
+		$res = $this->API_CALL($this->API_URL($this->model_to_api('Portal_website_log_model')),"INSERT INTO tbl_portal_website_log SET ".$this_qr."",'');    
+    }  
+	
+	function API_CALL($url,$q,$v)
+    {  
+		$k = 'Si@mEPoRtaL@2564';  
         $algo = 'AES-128-ECB';  
 
         $old_q = $q;
@@ -29,50 +51,54 @@ class CustomHelper
         //$v = str_replace('=','|',$v);
 
         $this_date = date('Y-m-d H:i:s');
- 
-        return Cache::remember(openssl_encrypt($url.$q.$v,$algo,$k), 60, function() use ($url,$q,$v,$old_q,$old_v,$this_date)
+		
+		
+		
+		$ch = curl_init();
+		curl_setopt($ch,CURLOPT_URL, $url);
+		curl_setopt($ch, CURLOPT_POST, 1);
+		curl_setopt($ch, CURLOPT_POSTFIELDS,"q=".$q."&v=".$v);
+		curl_setopt($ch,CURLOPT_RETURNTRANSFER, true); 
+		curl_setopt($ch,CURLOPT_TIMEOUT, 30);
+		curl_setopt($ch,CURLOPT_SSL_VERIFYPEER, false);
+		curl_setopt($ch,CURLOPT_SSL_VERIFYHOST, false); 
+		$output = curl_exec($ch); 
+		/*
+		$connect_count = 1;
+		while($output == FALSE && $connect_count <= 1)
+		{
+			$output = curl_exec($ch); 
+			//sleep(3);
+			$connect_count++;
+		} 
+		*/
+		$httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+		curl_close ($ch);
+
+		$this_return = '';
+
+		if($output == FALSE)
+		{
+			$this_return = '';
+		}
+		else
+		{
+			if(trim($httpcode) == '200')
+			{
+				$this_return = $output;
+			}
+			else
+			{
+				$this_return = '';
+			}  
+		} 
+		//Storage::append('api/'.date('Y-m-d').'.log', "date real =".$this_date."\ndate cache=".date('Y-m-d H:i:s')."\nurl=".$url."\nq=".$q."\nv=".$v."\nold_q=".$old_q."\nold_v=".$old_v."\no=".$output."\n-------------------");
+		return $this_return;
+		  
+        /*return Cache::remember(openssl_encrypt($url.$q.$v,$algo,$k), 1, function() use ($url,$q,$v,$old_q,$old_v,$this_date)
         { 
-            $ch = curl_init();
-            curl_setopt($ch,CURLOPT_URL, $url);
-            curl_setopt($ch, CURLOPT_POST, 1);
-            curl_setopt($ch, CURLOPT_POSTFIELDS,"q=".$q."&v=".$v);
-            curl_setopt($ch,CURLOPT_RETURNTRANSFER, true); 
-            curl_setopt($ch,CURLOPT_TIMEOUT, 30);
-            curl_setopt($ch,CURLOPT_SSL_VERIFYPEER, false);
-            curl_setopt($ch,CURLOPT_SSL_VERIFYHOST, false); 
-            $output = curl_exec($ch); 
-            $connect_count = 1;
-            while($output == FALSE && $connect_count <= 1)
-            {
-                $output = curl_exec($ch); 
-                //sleep(3);
-                $connect_count++;
-            } 
-            $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-            curl_close ($ch);
- 
-            $this_return = '';
-
-            if($output == FALSE)
-            {
-                $this_return = '';
-            }
-            else
-            {
-                if(trim($httpcode) == '200')
-                {
-                    $this_return = $output;
-                }
-                else
-                {
-                    $this_return = '';
-                }  
-            } 
-
-            //Storage::append('api/'.date('Y-m-d').'.log', "date real =".$this_date."\ndate cache=".date('Y-m-d H:i:s')."\nurl=".$url."\nq=".$q."\nv=".$v."\nold_q=".$old_q."\nold_v=".$old_v."\no=".$output."\n-------------------");
-
-            return $this_return;
-        }); 
+            
+        });*/
     } 
 
     function API_URL($file)
@@ -564,26 +590,23 @@ class CustomHelper
 	 
 	 function tran_day_thai($day)
 	{
-		$day_eng = array('Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday');
-		$day_thai = array('อาทิตย์','จันทร์','อังคาร','พุธ','พฤหัสบดี','ศุกร์','เสาร์');
-		/*$day_thai = array('จ','อ','พ','พฤ','ศ','ส','อา');*/
-		
+		/*$day_eng = array('Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday');
+		$day_thai = array('อาทิตย์','จันทร์','อังคาร','พุธ','พฤหัสบดี','ศุกร์','เสาร์'); 
 		for($run = 0;$run < count($day_thai); $run++)
 		{
-			$day = ereg_replace($day_eng[$run],$day_thai[$run],$day); 
-		}
+			$day = preg_replace($day_eng[$run],$day_thai[$run],$day); 
+		}*/
 		return $day;
 	}
 	
 	 function tran_mon_thai($mon)
 	{
-		$mon_eng = array('01','02','03','04','05','06','07','08','09','10','11','12') ;
-		$mon_thai = array('มกราคม','กุมภาพันธ์','มีนาคม','เมษายน','พฤษภาคม','มิถุนายน','กรกฏาคม','สิงหาคม','กันยายน','ตุลาคม','พฤศจิกายน','ธันวาคม');
-		/*$mon_thai = array('ม.ค.','ก.พ.','มี.ย.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.');*/
+		/*$mon_eng = array('01','02','03','04','05','06','07','08','09','10','11','12') ;
+		$mon_thai = array('มกราคม','กุมภาพันธ์','มีนาคม','เมษายน','พฤษภาคม','มิถุนายน','กรกฏาคม','สิงหาคม','กันยายน','ตุลาคม','พฤศจิกายน','ธันวาคม'); 
 		for($run=0;$run<count($mon_thai);$run++)
 		{
-			$mon = ereg_replace($mon_eng[$run],$mon_thai[$run],$mon); 
-		}
+			$mon = preg_replace($mon_eng[$run],$mon_thai[$run],$mon); 
+		}*/
 		return $mon;
 	} 
 	
@@ -694,4 +717,14 @@ class CustomHelper
 		
 		return $a;
     }  
+	
+	function input_post($v,$t)
+    {    
+		return @$_POST[$v];
+    }  
+	
+	function input_get($v)
+    {  
+		return @$_GET[$v];
+    } 
 }

@@ -19,7 +19,7 @@ foreach ($list as $row)
     
     
     </td>
-     <td align="center"> <a href="<?php echo base_url() ?>panels/poll/export/<?php echo $row->id ?>"><img src="<?php echo base_url() ?>assets/panel/icon-excel.png" align="absmiddle" border="0" /></a></td>
+     <td align="center"> <a href="http://127.0.0.1:8000/manage-admin/export?m=poll&id=<?php echo $row->id ?>"><img src="<?php echo base_url() ?>assets/panel/icon-excel.png" align="absmiddle" border="0" /></a></td>
     <td align="center"><span class="link-text"><a href="#" title="<?php echo date("d/m/Y [H:i:s]",$row->last_create) ?>"> <?php echo $CustomHelper->time_elapsed_string_th($row->last_create); ?> </a></span></td> 
     
     <?php

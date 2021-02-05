@@ -12,7 +12,8 @@
                                 <div class="row">
                                     <div class="col-lg-8">
                                         <div class="search-content">
-                                            <form action="">
+                                             <form action=""> 
+                                            @csrf <!-- {{ csrf_field() }} -->
                                                 <div class="row">
                                                     <div class="col-lg-4">
                                                         <div class="input-custom inp-categories">

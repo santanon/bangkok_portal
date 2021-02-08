@@ -164,6 +164,9 @@
     background-color: #fff;
     .header-lg{
         display: block;
+        .logo-wrapper{
+            position: relative;
+        }
         .logo{
             //max-width: 300px;
             margin: auto;

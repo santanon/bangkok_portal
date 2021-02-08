@@ -1246,6 +1246,7 @@ $howManySteps: 100; //this needs to be even.
                         .list-item{
                             .item{
                                 margin-bottom: 30px;
+                                position: relative;
                             }
                         }
                     }
@@ -1982,6 +1983,8 @@ $howManySteps: 100; //this needs to be even.
                             border-radius: 0;
                             border: none;
                             margin-bottom: 30px;
+                            position: relative;
+                            overflow: inherit;
                             .card-header{
                                 padding: 0;
                                 border: none;

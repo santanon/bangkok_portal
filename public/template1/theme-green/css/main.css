@@ -12585,6 +12585,8 @@ a.ui-button:active,
   background-color: #fff; }
   #header-wrapper .header-lg {
     display: block; }
+    #header-wrapper .header-lg .logo-wrapper {
+      position: relative; }
     #header-wrapper .header-lg .logo {
       margin: auto;
       height: 100%;
@@ -14472,7 +14474,8 @@ a.ui-button:active,
         .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item.-vote .right {
           height: 200px; }
     .group-section-content .section-content .inner-content .main-content .group-slide.group-list .list-item .item {
-      margin-bottom: 30px; }
+      margin-bottom: 30px;
+      position: relative; }
   .group-section-content .section-content .inner-content .main-content .group-vote .score-wrapper {
     padding: 20px; }
     .group-section-content .section-content .inner-content .main-content .group-vote .score-wrapper .text-score .num-vote {

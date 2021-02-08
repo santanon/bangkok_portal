@@ -1,4 +1,12 @@
 <div class="section-content">
+    <div class="group-mange-section">
+        <div class="manage-edit">
+            <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="แก้ไข">
+        </div>
+        <div class="manage-add">
+            <img src="{{ asset('template1/assets/images/icons/icon-add.svg')}}" alt="เพิ่ม">
+        </div>
+    </div>
                 <div class="container">
                     <div class="inner-content">
                         <div class="top-content">
@@ -49,6 +57,19 @@
                             <div class="group-slide group-list">
                                 <div class="list-item">
                                     <div class="item -question">
+                                        <div class="group-mange-section">
+                                            <div class="manage-tools">
+                                                <ul>
+                                                    <li class="order-list">จัดการ</li>
+                                                    <li class="order-list">ลบ</li>
+                                                    <li class="order-list">ซ่อน</li>
+                                                    <li class="order-list order-close">ปิด</li>
+                                                </ul>
+                                            </div> 
+                                            <div class="manage-edit">
+                                                <img src="http://127.0.0.1:8000/template1/assets/images/icons/icon-edit.svg" alt="icon">
+                                            </div>
+                                        </div>
                                         <div class="row">
                                             <div class="col-sm-4 col-lg-3 col-xl-3">
                                                 <div class="left bg-color-primary active">
@@ -103,6 +124,19 @@
                                     </div>
 
                                     <div class="item -question">
+                                        <div class="group-mange-section">
+                                            <div class="manage-tools">
+                                                <ul>
+                                                    <li class="order-list">จัดการ</li>
+                                                    <li class="order-list">ลบ</li>
+                                                    <li class="order-list">ซ่อน</li>
+                                                    <li class="order-list order-close">ปิด</li>
+                                                </ul>
+                                            </div> 
+                                            <div class="manage-edit">
+                                                <img src="http://127.0.0.1:8000/template1/assets/images/icons/icon-edit.svg" alt="icon">
+                                            </div>
+                                        </div>
                                         <div class="row">
                                             <div class="col-sm-4 col-lg-3 col-xl-3">
                                                 <div class="left bg-color-primary active">
@@ -157,6 +191,19 @@
                                     </div>
 
                                     <div class="item -question">
+                                        <div class="group-mange-section">
+                                            <div class="manage-tools">
+                                                <ul>
+                                                    <li class="order-list">จัดการ</li>
+                                                    <li class="order-list">ลบ</li>
+                                                    <li class="order-list">ซ่อน</li>
+                                                    <li class="order-list order-close">ปิด</li>
+                                                </ul>
+                                            </div> 
+                                            <div class="manage-edit">
+                                                <img src="http://127.0.0.1:8000/template1/assets/images/icons/icon-edit.svg" alt="icon">
+                                            </div>
+                                        </div>
                                         <div class="row">
                                             <div class="col-sm-4 col-lg-3 col-xl-3">
                                                 <div class="left bg-color-primary active">
@@ -211,6 +258,19 @@
                                     </div>
 
                                     <div class="item -question">
+                                        <div class="group-mange-section">
+                                            <div class="manage-tools">
+                                                <ul>
+                                                    <li class="order-list">จัดการ</li>
+                                                    <li class="order-list">ลบ</li>
+                                                    <li class="order-list">ซ่อน</li>
+                                                    <li class="order-list order-close">ปิด</li>
+                                                </ul>
+                                            </div> 
+                                            <div class="manage-edit">
+                                                <img src="http://127.0.0.1:8000/template1/assets/images/icons/icon-edit.svg" alt="icon">
+                                            </div>
+                                        </div>
                                         <div class="row">
                                             <div class="col-sm-4 col-lg-3 col-xl-3">
                                                 <div class="left bg-color-primary active">
@@ -265,6 +325,19 @@
                                     </div>
 
                                     <div class="item -question">
+                                        <div class="group-mange-section">
+                                            <div class="manage-tools">
+                                                <ul>
+                                                    <li class="order-list">จัดการ</li>
+                                                    <li class="order-list">ลบ</li>
+                                                    <li class="order-list">ซ่อน</li>
+                                                    <li class="order-list order-close">ปิด</li>
+                                                </ul>
+                                            </div> 
+                                            <div class="manage-edit">
+                                                <img src="http://127.0.0.1:8000/template1/assets/images/icons/icon-edit.svg" alt="icon">
+                                            </div>
+                                        </div>
                                         <div class="row">
                                             <div class="col-sm-4 col-lg-3 col-xl-3">
                                                 <div class="left bg-color-primary active">

@@ -67,8 +67,7 @@ Route::any('/', [PanelController::class,'web_home']);
 Route::any('/', function () {
     return view('home');
 });
-
-Route::any('/coverpage', function () {
+Route::any('/coverpages', function () {
     return view('coverpage');
 });
 Route::any('/news', function () {

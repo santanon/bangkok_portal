@@ -12258,11 +12258,29 @@ template {
     opacity: 0;
     filter: alpha(opacity=0); }
 
-.daterangepicker td.start-date {
-  border-radius: 0 !important; }
+.ui-datepicker {
+  z-index: 999 !important; }
 
-.daterangepicker td.end-date {
-  border-radius: 0 !important; }
+.ui-widget button, .ui-widget input, .ui-widget select, .ui-widget textarea {
+  font-family: 'Kanit' !important; }
+
+.ui-datepicker-calendar thead tr th span {
+  font-family: 'Kanit'; }
+
+.ui-datepicker-calendar tbody tr td a {
+  font-family: 'Kanit'; }
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+  background-color: #f08220 !important;
+  border: 1px solid #f08220 !important; }
+
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+  color: #fff !important; }
 
 @media only screen and (max-width: 992px) {
   .input-custom.inp-categories, .input-custom.inp-search, .input-custom.inp-calendar {
@@ -12404,6 +12422,8 @@ template {
   display: block; }
   #header-wrapper .header-lg .menu-right-top {
     margin-bottom: 30px; }
+  #header-wrapper .header-lg .logo-wrapper {
+    position: relative; }
   #header-wrapper .header-lg .logo {
     margin: auto;
     padding: 23px 15px;
@@ -14573,7 +14593,7 @@ template {
               -webkit-box-flex: 1;
               -ms-flex: 1;
               flex: 1;
-              padding: 15px 15px 40px 15px;
+              padding: 15px 40px 40px 15px;
               height: auto; }
               .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item.-question .right .text-content {
                 margin: 0 0 10px 0; }
@@ -14627,7 +14647,7 @@ template {
               -webkit-box-flex: 1;
               -ms-flex: 1;
               flex: 1;
-              padding: 15px 15px 40px 15px;
+              padding: 15px 40px 40px 15px;
               height: auto; }
               .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item.-vote .right .text-content {
                 margin: 0 0 10px 0; }
@@ -14660,7 +14680,8 @@ template {
             .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item {
               margin-bottom: 5px; } }
       .group-section-content .section-content .inner-content .main-content .group-slide.group-list .list-item .item {
-        margin-bottom: 30px; }
+        margin-bottom: 30px;
+        position: relative; }
     .group-section-content .section-content .inner-content .main-content .group-vote .score-wrapper {
       padding: 0;
       margin-bottom: 40px; }
@@ -15279,68 +15300,70 @@ template {
         border: none;
         background-color: white;
         cursor: pointer; }
-        .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .card-header .card-header-item .icon-card-header {
-          position: relative;
-          -webkit-box-flex: 0;
-          -ms-flex: 0 0 80px;
-          flex: 0 0 80px;
-          padding: 0;
-          min-height: 80px;
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-align: center;
-          -ms-flex-align: center;
-          align-items: center;
-          -webkit-box-pack: center;
-          -ms-flex-pack: center;
-          justify-content: center; }
-          .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .card-header .card-header-item .icon-card-header .icon-content {
-            height: 100%; }
-            .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .card-header .card-header-item .icon-card-header .icon-content svg {
-              width: 32px;
-              height: 32px;
-              fill: none;
-              stroke: #fff;
-              stroke-width: 2;
-              stroke-miterlimit: 10;
-              vertical-align: bottom; }
-              .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .card-header .card-header-item .icon-card-header .icon-content svg .st0 {
-                stroke: #e16500; }
-        .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .card-header .card-header-item .title-card-header {
-          position: relative;
-          font-size: 2rem;
-          line-height: 2.4rem;
-          font-weight: 400;
-          color: #525252;
-          padding: 15px 45px 15px 0; }
-          .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .card-header .card-header-item .title-card-header .icon-content {
-            position: absolute;
-            top: 50%;
-            -webkit-transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
-            right: 5px;
-            width: 30px;
-            height: 30px; }
-            .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .card-header .card-header-item .title-card-header .icon-content svg {
-              width: 30px;
-              height: 30px;
-              fill: none;
-              stroke: #fff;
-              stroke-width: 2;
-              stroke-miterlimit: 10;
-              vertical-align: bottom;
-              -webkit-transition: all 0.3s ease;
-              -o-transition: all 0.3s ease;
-              transition: all 0.3s ease; }
-              .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .card-header .card-header-item .title-card-header .icon-content svg .st0 {
+        .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .card-header .card-header-item {
+          padding: 20px 0; }
+          .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .card-header .card-header-item .icon-card-header {
+            position: relative;
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 80px;
+            flex: 0 0 80px;
+            padding: 0;
+            min-height: 80px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center; }
+            .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .card-header .card-header-item .icon-card-header .icon-content {
+              height: 100%; }
+              .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .card-header .card-header-item .icon-card-header .icon-content svg {
+                width: 32px;
+                height: 32px;
                 fill: none;
-                stroke: #f08220;
+                stroke: #fff;
                 stroke-width: 2;
-                stroke-linecap: round;
-                stroke-linejoin: round;
-                stroke-miterlimit: 10; }
+                stroke-miterlimit: 10;
+                vertical-align: bottom; }
+                .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .card-header .card-header-item .icon-card-header .icon-content svg .st0 {
+                  stroke: #e16500; }
+          .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .card-header .card-header-item .title-card-header {
+            position: relative;
+            font-size: 2rem;
+            line-height: 2.4rem;
+            font-weight: 400;
+            color: #525252;
+            padding: 15px 45px 15px 0; }
+            .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .card-header .card-header-item .title-card-header .icon-content {
+              position: absolute;
+              top: 50%;
+              -webkit-transform: translateY(-50%);
+              -ms-transform: translateY(-50%);
+              transform: translateY(-50%);
+              right: 5px;
+              width: 30px;
+              height: 30px; }
+              .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .card-header .card-header-item .title-card-header .icon-content svg {
+                width: 30px;
+                height: 30px;
+                fill: none;
+                stroke: #fff;
+                stroke-width: 2;
+                stroke-miterlimit: 10;
+                vertical-align: bottom;
+                -webkit-transition: all 0.3s ease;
+                -o-transition: all 0.3s ease;
+                transition: all 0.3s ease; }
+                .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .card-header .card-header-item .title-card-header .icon-content svg .st0 {
+                  fill: none;
+                  stroke: #f08220;
+                  stroke-width: 2;
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  stroke-miterlimit: 10; }
         .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .card-header .card-header-item[aria-expanded="true"] {
           background-color: #f08220; }
           .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .card-header .card-header-item[aria-expanded="true"] .icon-card-header .icon-content svg .st0 {
@@ -18248,7 +18271,7 @@ Due to the split circle of progress-left and progress right, we must use the ani
 
 .manage #site-content #manage_dragdrop.group-section-content .section-content {
   border: 2px dashed #cccccc;
-  padding: 20px;
+  padding: 60px 20px 20px;
   margin: 0px 20px 20px;
   cursor: -webkit-grab !important;
   cursor: grab !important; }
@@ -18340,6 +18363,13 @@ Due to the split circle of progress-left and progress right, we must use the ani
     right: 0;
     cursor: pointer; }
     .manage .group-mange-section .manage-edit img {
+      width: 100%; }
+  .manage .group-mange-section .manage-add {
+    width: 34px;
+    position: absolute;
+    right: 40px;
+    cursor: pointer; }
+    .manage .group-mange-section .manage-add img {
       width: 100%; }
   .manage .group-mange-section.no-mg {
     margin: 0; }

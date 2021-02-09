@@ -194,6 +194,11 @@
 
 
 <div class="header-lg in-banner -relative">
+    <div class="group-mange-section">
+        <div class="manage-edit">
+            <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="แก้ไข">
+        </div>
+    </div>
     <div class="menu-main-wrapper">
         <ul class="sub-menu-main d-flex align-items-stretch">
             <li class="list icon-home">

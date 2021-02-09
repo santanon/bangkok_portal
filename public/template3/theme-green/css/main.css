@@ -12416,7 +12416,7 @@ template {
     filter: alpha(opacity=0); }
 
 .ui-datepicker {
-  z-index: 99 !important; }
+  z-index: 999 !important; }
 
 .ui-widget button, .ui-widget input, .ui-widget select, .ui-widget textarea {
   font-family: 'Kanit' !important; }
@@ -12584,7 +12584,8 @@ body.menu-open {
   width: 100%;
   z-index: 100; }
   #header-wrapper .header-lg .logo-wrapper {
-    background-color: transparent; }
+    background-color: transparent;
+    position: relative; }
   #header-wrapper .header-lg .logo {
     margin: auto;
     height: 100%;
@@ -13038,7 +13039,7 @@ body.menu-open {
   #header-wrapper .header-lg .menu-main-fullpage {
     display: none;
     position: absolute;
-    z-index: 99;
+    z-index: 9999;
     top: 0;
     width: 100%;
     height: 100vh;
@@ -14685,6 +14686,7 @@ body.menu-open {
             .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item.-vote .right {
               height: 200px; }
         .group-section-content .section-content .inner-content .main-content .group-slide.group-list .list-item .item {
+          position: relative;
           margin-bottom: 30px; }
       .group-section-content .section-content .inner-content .main-content .group-box .item {
         display: -webkit-box;
@@ -14989,6 +14991,7 @@ body.menu-open {
           border: 1px solid #f8f8f8;
           padding: 10px 15px;
           margin-bottom: 15px;
+          position: relative;
           cursor: pointer; }
           .group-section-content .section-content .inner-content .main-content .group-list-downloadfile .item .text-content {
             font-size: 2rem;
@@ -18601,6 +18604,13 @@ Due to the split circle of progress-left and progress right, we must use the ani
     cursor: pointer; }
     .manage .group-mange-section .manage-edit img {
       width: 100%; }
+  .manage .group-mange-section .manage-add {
+    width: 34px;
+    position: absolute;
+    right: 40px;
+    cursor: pointer; }
+    .manage .group-mange-section .manage-add img {
+      width: 100%; }
   .manage .group-mange-section.no-mg {
     margin: 0; }
   .manage .group-mange-section.right-0 {
@@ -18657,6 +18667,15 @@ Due to the split circle of progress-left and progress right, we must use the ani
   max-width: 500px;
   width: 100%;
   margin: auto; }
+
+.manage .logo-wrapper .group-mange-section .manage-edit {
+  left: 0; }
+
+.manage .banner-wrapper .group-mange-section {
+  top: 45%; }
+
+.manage .menu-main-wrapper .group-mange-section .manage-edit {
+  display: block !important; }
 
 html {
   font-size: 62.5%; }

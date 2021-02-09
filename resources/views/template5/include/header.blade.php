@@ -148,7 +148,7 @@
                         </ul>
                     </div>
 
-                    <!-- <div class="tools-web" style="display: none;">
+                    <div class="tools-web" style="display: none;">
                         <ul>
                             <li>
                                 <a href="">
@@ -187,7 +187,7 @@
                         <div class="section-search-wrapper">
                             <div class="group-search">
                                  <form action="">
-                @csrf <!-- {{ csrf_field() }} -->
+                                    @csrf <!-- {{ csrf_field() }} -->
                                     <div class="input-custom">
                                         <div class="input-box">
                                             <input type="text" name="" required="">
@@ -200,7 +200,7 @@
                                 </form>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
             </div>
         </div>

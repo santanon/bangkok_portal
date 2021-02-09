@@ -29,7 +29,7 @@ function sfi(title,url)
     </header>
     
     <div id="site-content">
-        <div class="group-section-content">
+        <div class="group-section-content-head">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-10">
@@ -326,7 +326,6 @@ function sfi(title,url)
     $(document).ready(function () {
         
         //$('#exampleModal').modal('show')
-
 
         if($('body').hasClass('manage')){
             $("div.group-section-content").attr('id', 'manage_dragdrop');

@@ -1,4 +1,12 @@
 <div class="section-content">
+    <div class="group-mange-section">
+        <div class="manage-edit">
+            <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="แก้ไข">
+        </div>
+        <div class="manage-add">
+            <img src="{{ asset('template1/assets/images/icons/icon-add.svg')}}" alt="เพิ่ม">
+        </div>
+    </div>
     <div class="container">
         <div class="inner-content">
             <div class="top-content border-bottom">
@@ -37,6 +45,11 @@
                     <div class="list-item">
 
                         <div class="item -question">
+                            <div class="group-mange-section">
+                                <div class="manage-edit">
+                                    <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="แก้ไข">
+                                </div>
+                            </div>
                             <div class="row no-gutters">
                                 <div class="col-lg-3 col-md-3 col-sm-3">
                                     <div class="left bg-color-secondary active">
@@ -77,6 +90,11 @@
                         </div>
 
                         <div class="item -question">
+                            <div class="group-mange-section">
+                                <div class="manage-edit">
+                                    <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="แก้ไข">
+                                </div>
+                            </div>
                             <div class="row no-gutters">
                                 <div class="col-lg-3 col-md-3 col-sm-3">
                                     <div class="left bg-color-secondary active">
@@ -133,12 +151,4 @@
             </div>
         </div>
     </div>
-</div>
-
-<!-- Hidden video div -->
-<div style="display:none;" id="video1">
-    <video class="lg-video-object lg-html5" controls preload="none">
-        <source src="https://sachinchoolur.github.io/lightGallery/static/videos/video1.mp4" type="video/mp4">
-         Your browser does not support HTML5 video.
-    </video>
 </div>

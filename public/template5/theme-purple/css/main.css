@@ -12595,7 +12595,8 @@ body.menu-open {
     background-color: rgba(255, 255, 255, 0.8);
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
-    height: 110px; }
+    height: 110px;
+    position: relative; }
   .header-lg .logo {
     margin: auto;
     height: 100%;
@@ -14852,6 +14853,7 @@ body.menu-open {
                   background-color: #6950a1;
                   height: 20px; }
         .group-section-content .section-content .inner-content .main-content .group-slide.group-list .list-item .item {
+          position: relative;
           margin-bottom: 20px; }
       .group-section-content .section-content .inner-content .main-content .group-box .item {
         display: -webkit-box;
@@ -15327,6 +15329,7 @@ body.menu-open {
           .group-section-content .section-content .inner-content .main-content .group-list-downloadfile .item:hover {
             border: 1px solid #6950a1; }
         .group-section-content .section-content .inner-content .main-content .group-list-downloadfile.list .item {
+          position: relative;
           padding: 15px;
           border: 1px solid #cfd1d4;
           padding-right: 5px;
@@ -19091,7 +19094,7 @@ Due to the split circle of progress-left and progress right, we must use the ani
 
 .manage #site-content #manage_dragdrop.group-section-content .section-content {
   border: 2px dashed #cccccc;
-  padding: 20px;
+  padding: 60px 20px;
   margin: 0px 20px 20px;
   cursor: -webkit-grab !important;
   cursor: grab !important; }
@@ -19112,7 +19115,7 @@ Due to the split circle of progress-left and progress right, we must use the ani
 
 .manage #site-content .group-section-content .section-content {
   border: 2px dashed #cccccc;
-  padding: 20px;
+  padding: 60px 20px;
   margin: 0px 20px 20px; }
   .manage #site-content .group-section-content .section-content .inner-content .main-content .add-news {
     display: block;
@@ -19183,6 +19186,13 @@ Due to the split circle of progress-left and progress right, we must use the ani
     right: 0;
     cursor: pointer; }
     .manage .group-mange-section .manage-edit img {
+      width: 100%; }
+  .manage .group-mange-section .manage-add {
+    width: 34px;
+    position: absolute;
+    right: 40px;
+    cursor: pointer; }
+    .manage .group-mange-section .manage-add img {
       width: 100%; }
   .manage .group-mange-section.no-mg {
     margin: 0; }

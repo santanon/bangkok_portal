@@ -1,4 +1,12 @@
 <div class="section-content">
+    <div class="group-mange-section">
+        <div class="manage-edit">
+            <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="แก้ไข">
+        </div>
+        <div class="manage-add">
+            <img src="{{ asset('template1/assets/images/icons/icon-add.svg')}}" alt="เพิ่ม">
+        </div>
+    </div>
     <div class="inner-content">
         <div class="container-fluid">
             <div class="row">
@@ -67,6 +75,11 @@
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="card">
+                                            <div class="group-mange-section">
+                                                <div class="manage-edit">
+                                                    <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="แก้ไข">
+                                                </div>
+                                            </div>
                                             <div class="card-header" id="faq_1">
                                                 <div class="card-header-item d-flex align-items-center" data-toggle="collapse" data-target="#collapse_1" aria-expanded="false" aria-controls="collapse_1">
                                                     <div class="icon-card-header">
@@ -101,6 +114,11 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="card">
+                                            <div class="group-mange-section">
+                                                <div class="manage-edit">
+                                                    <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="แก้ไข">
+                                                </div>
+                                            </div>
                                             <div class="card-header" id="faq_2">
                                                 <div class="card-header-item d-flex align-items-center" data-toggle="collapse" data-target="#collapse_2" aria-expanded="false" aria-controls="collapse_2">
                                                     <div class="icon-card-header">
@@ -134,6 +152,11 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="card">
+                                            <div class="group-mange-section">
+                                                <div class="manage-edit">
+                                                    <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="แก้ไข">
+                                                </div>
+                                            </div>
                                             <div class="card-header" id="faq_3">
                                                 <div class="card-header-item d-flex align-items-center" data-toggle="collapse" data-target="#collapse_3" aria-expanded="false" aria-controls="collapse_3">
                                                     <div class="icon-card-header">
@@ -167,6 +190,11 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="card">
+                                            <div class="group-mange-section">
+                                                <div class="manage-edit">
+                                                    <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="แก้ไข">
+                                                </div>
+                                            </div>
                                             <div class="card-header" id="faq_4">
                                                 <div class="card-header-item d-flex align-items-center" data-toggle="collapse" data-target="#collapse_4" aria-expanded="false" aria-controls="collapse_4">
                                                     <div class="icon-card-header">
@@ -200,6 +228,11 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="card">
+                                            <div class="group-mange-section">
+                                                <div class="manage-edit">
+                                                    <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="แก้ไข">
+                                                </div>
+                                            </div>
                                             <div class="card-header" id="faq_5">
                                                 <div class="card-header-item d-flex align-items-center" data-toggle="collapse" data-target="#collapse_5" aria-expanded="false" aria-controls="collapse_5">
                                                     <div class="icon-card-header">
@@ -233,6 +266,11 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="card">
+                                            <div class="group-mange-section">
+                                                <div class="manage-edit">
+                                                    <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="แก้ไข">
+                                                </div>
+                                            </div>
                                             <div class="card-header" id="faq_6">
                                                 <div class="card-header-item d-flex align-items-center" data-toggle="collapse" data-target="#collapse_6" aria-expanded="false" aria-controls="collapse_6">
                                                     <div class="icon-card-header">
@@ -254,7 +292,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-
                                             <div id="collapse_6" class="collapse" aria-labelledby="faq_6" data-parent="#accordionExample">
                                                 <div class="card-body">
                                                     <div class="content">

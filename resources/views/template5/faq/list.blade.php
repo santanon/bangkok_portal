@@ -1,4 +1,12 @@
 <div class="section-content">
+    <div class="group-mange-section">
+        <div class="manage-edit">
+            <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="แก้ไข">
+        </div>
+        <div class="manage-add">
+            <img src="{{ asset('template1/assets/images/icons/icon-add.svg')}}" alt="เพิ่ม">
+        </div>
+    </div>
                 <div class="container">
                     <div class="inner-content">
 
@@ -58,6 +66,11 @@
                             <div class="accordion-wrapper">
                                 <div class="accordion" id="accordionExample">
                                     <div class="card">
+                                        <div class="group-mange-section">
+                                            <div class="manage-edit">
+                                                <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="แก้ไข">
+                                            </div>
+                                        </div>
                                         <div class="card-header" id="faq_1">
                                             <div class="card-header-item d-flex align-items-center" data-toggle="collapse" data-target="#collapse_1" aria-expanded="true" aria-controls="collapse_1">                                                
                                                 <div class="title-card-header">เด็กอายุกี่ขวบต้องแจ้งการเข้าเรียนตามกฎหมาย และใช้เอกสารอะไรบ้าง?</div>
@@ -97,6 +110,11 @@
                                         </div>
                                     </div>
                                     <div class="card">
+                                        <div class="group-mange-section">
+                                            <div class="manage-edit">
+                                                <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="แก้ไข">
+                                            </div>
+                                        </div>
                                         <div class="card-header" id="faq_2">
                                             <div class="card-header-item d-flex align-items-center" data-toggle="collapse" data-target="#collapse_2" aria-expanded="false" aria-controls="collapse_2">                                                
                                                 <div class="title-card-header">เด็กอายุกี่ขวบต้องแจ้งการเข้าเรียนตามกฎหมาย และใช้เอกสารอะไรบ้าง?</div>
@@ -134,8 +152,6 @@
                                                 </div>
                                             </div>
                                         </div>
-
-
 
                                     </div>
                                 </div>

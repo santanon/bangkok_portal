@@ -167,6 +167,7 @@
         .menu-left-top{
             float: left;
             background-color: #f8f8f8;
+            position: relative;
         }
 
         .menu-right-top{
@@ -182,6 +183,7 @@
             justify-content: flex-end;
         }
         .logo-wrapper{
+            position: relative;
             height: 110px;
             .logo{
                 //max-width: 300px;
@@ -490,7 +492,7 @@
                     vertical-align: middle;
                     a{
                         display: block;
-                        padding: 25px 15px;
+                        padding: 30px 15px;
                         color: #525252;
                         opacity: 0.7;
                         transition: all 0.3s ease;
@@ -746,7 +748,8 @@
             }
         }
         #header-wrapper{
-            padding-top: 36.2px;
+            position: relative;
+            margin-top: 36.2px;
         }
     }
 }

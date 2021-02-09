@@ -1,4 +1,12 @@
 <div class="section-content">
+    <div class="group-mange-section">
+        <div class="manage-edit">
+            <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="แก้ไข">
+        </div>
+        <div class="manage-add">
+            <img src="{{ asset('template1/assets/images/icons/icon-add.svg')}}" alt="เพิ่ม">
+        </div>
+    </div>
                 <div class="container">
                     <div class="inner-content">
                         <div class="top-content">
@@ -11,7 +19,7 @@
                              <form action="">
                 @csrf <!-- {{ csrf_field() }} -->
                                 <div class="row">
-                                    <div class="col-lg-4">
+                                    <div class="col-lg-3">
                                         <div class="input-custom inp-categories">
                                             <div class="select-wrapper width-full">
                                                 <select name="month" class="slc">
@@ -25,9 +33,15 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-3">
+                                    <div class="col-lg-2">
                                         <div class="input-custom inp-calendar">
-                                            <input class="style-input" type="text" name="datefilter" placeholder="จากวันที่ - ถึงวันที่" />
+                                            <input id="start_date" class="style-input" type="text" name="datefilter" placeholder="จากวันที่" autocomplete="off" data-provide="datepicker" data-date-language="th-th" />
+                                            <div class="icon-calendar"><i class="far fa-calendar"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <div class="input-custom inp-calendar">
+                                            <input id="end_date" class="style-input" type="text" name="datefilter" placeholder="ถึงวันที่" autocomplete="off" data-provide="datepicker" data-date-language="th-th" />
                                             <div class="icon-calendar"><i class="far fa-calendar"></i></div>
                                         </div>
                                     </div>

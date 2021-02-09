@@ -160,8 +160,6 @@ $.datepicker.regional['th'] ={
     //$.datepicker.setDefaults($.datepicker.regional['en']);
 
     $(document).ready(function () {
-
-        
         $("#start_date").datepicker({
             maxDate: 0,
             onSelect: function(){

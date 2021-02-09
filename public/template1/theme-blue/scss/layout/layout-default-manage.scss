@@ -109,6 +109,15 @@
                 width: 100%;
             }
         }
+        .manage-add{
+            width: 34px;
+            position: absolute;
+            right: 40px;
+            cursor: pointer;
+            img{
+                width: 100%;
+            }
+        }
         &.no-mg{
             margin: 0;
         }

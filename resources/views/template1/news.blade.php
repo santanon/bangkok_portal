@@ -33,7 +33,7 @@
                             <div class="row">
                                 <div class="col-lg-6">
 
-                                    <div class="group-mange-section">
+                                    <!-- <div class="group-mange-section">
                                         <div class="manage-tools">
                                             <ul>
                                                 <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('กำลังโหลด...','manage-admin/edit?m=news');">แก้ไข</a></li> 
@@ -45,7 +45,7 @@
                                         <div class="manage-edit">
                                             <img src="{{ asset('../../assets/images/icons/icon-edit.svg')}}" alt="icon">
                                         </div> 
-                                    </div>
+                                    </div> -->
 
                                     <div class="main-news">
                                         <div class="group-mange-section">
@@ -98,7 +98,7 @@
                                     <div class="row">
                                         <div class="col-lg-12">
 
-                                            <div class="group-mange-section">
+                                            <!-- <div class="group-mange-section">
                                                 <div class="manage-tools">
                                                     <ul>
                                                         <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('กำลังโหลด...','manage-admin/edit?m=news');">แก้ไข</a></li> 
@@ -110,7 +110,7 @@
                                                 <div class="manage-edit">
                                                     <img src="{{ asset('../../assets/images/icons/icon-edit.svg')}}" alt="icon">
                                                 </div> 
-                                            </div>
+                                            </div> -->
 
                                             <div class="sub-news">
                                                 <div class="group-mange-section">
@@ -166,7 +166,7 @@
                                         </div>
                                         <div class="col-lg-12">
 
-                                            <div class="group-mange-section">
+                                            <!-- <div class="group-mange-section">
                                                 <div class="manage-tools">
                                                     <ul>
                                                         <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('กำลังโหลด...','manage-admin/edit?m=news');">แก้ไข</a></li> 
@@ -178,7 +178,7 @@
                                                 <div class="manage-edit">
                                                     <img src="{{ asset('../../assets/images/icons/icon-edit.svg')}}" alt="icon">
                                                 </div> 
-                                            </div>
+                                            </div> -->
 
                                             <div class="sub-news">
                                                 <div class="group-mange-section">

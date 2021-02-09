@@ -1,4 +1,12 @@
 <div class="section-content">
+    <div class="group-mange-section">
+        <div class="manage-edit">
+            <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="แก้ไข">
+        </div>
+        <div class="manage-add">
+            <img src="{{ asset('template1/assets/images/icons/icon-add.svg')}}" alt="เพิ่ม">
+        </div>
+    </div>
                 <div class="container">
                     <div class="inner-content">
                         <div class="row">
@@ -64,10 +72,6 @@
                                 </div>
                             </div>
                         </div>
-
-
-
-
                         <div class="main-content">
                             <div class="page-list-item-wrapper">
                                 <!-- list file download -->
@@ -88,39 +92,10 @@
                                                         Download
                                                     </a>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12">
-                                            <div class="item">
-                                                <div class="content">
-                                                    <div class="date-post">
-                                                        25 พ.ย. 2563
+                                                <div class="group-mange-section">
+                                                    <div class="manage-edit">
+                                                        <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="แก้ไข">
                                                     </div>
-                                                    <div class="text-content">
-                                                            เด็กอายุกี่ขวบต้องแจ้งการเข้าเรียนตามกฎหมาย และใช้เอกสารอะไรบ้าง? (.docx)
-                                                    </div>
-                                                </div>
-                                                <div class="btn-custom width-auto m-0 ml-auto">
-                                                    <a href="" class="btn">
-                                                        Download
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12">
-                                            <div class="item">
-                                                <div class="content">
-                                                    <div class="date-post">
-                                                        25 พ.ย. 2563
-                                                    </div>
-                                                    <div class="text-content">
-                                                            เด็กอายุกี่ขวบต้องแจ้งการเข้าเรียนตามกฎหมาย และใช้เอกสารอะไรบ้าง? (.docx)
-                                                    </div>
-                                                </div>
-                                                <div class="btn-custom width-auto m-0 ml-auto">
-                                                    <a href="" class="btn">
-                                                        Download
-                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -139,39 +114,10 @@
                                                         Download
                                                     </a>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12">
-                                            <div class="item">
-                                                <div class="content">
-                                                    <div class="date-post">
-                                                        25 พ.ย. 2563
+                                                <div class="group-mange-section">
+                                                    <div class="manage-edit">
+                                                        <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="แก้ไข">
                                                     </div>
-                                                    <div class="text-content">
-                                                            เด็กอายุกี่ขวบต้องแจ้งการเข้าเรียนตามกฎหมาย และใช้เอกสารอะไรบ้าง? (.docx)
-                                                    </div>
-                                                </div>
-                                                <div class="btn-custom width-auto m-0 ml-auto">
-                                                    <a href="" class="btn">
-                                                        Download
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12">
-                                            <div class="item">
-                                                <div class="content">
-                                                    <div class="date-post">
-                                                        25 พ.ย. 2563
-                                                    </div>
-                                                    <div class="text-content">
-                                                            เด็กอายุกี่ขวบต้องแจ้งการเข้าเรียนตามกฎหมาย และใช้เอกสารอะไรบ้าง? (.docx)
-                                                    </div>
-                                                </div>
-                                                <div class="btn-custom width-auto m-0 ml-auto">
-                                                    <a href="" class="btn">
-                                                        Download
-                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -190,6 +136,11 @@
                                                         Download
                                                     </a>
                                                 </div>
+                                                <div class="group-mange-section">
+                                                    <div class="manage-edit">
+                                                        <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="แก้ไข">
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="col-lg-12">
@@ -206,6 +157,55 @@
                                                     <a href="" class="btn">
                                                         Download
                                                     </a>
+                                                </div>
+                                                <div class="group-mange-section">
+                                                    <div class="manage-edit">
+                                                        <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="แก้ไข">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="item">
+                                                <div class="content">
+                                                    <div class="date-post">
+                                                        25 พ.ย. 2563
+                                                    </div>
+                                                    <div class="text-content">
+                                                            เด็กอายุกี่ขวบต้องแจ้งการเข้าเรียนตามกฎหมาย และใช้เอกสารอะไรบ้าง? (.docx)
+                                                    </div>
+                                                </div>
+                                                <div class="btn-custom width-auto m-0 ml-auto">
+                                                    <a href="" class="btn">
+                                                        Download
+                                                    </a>
+                                                </div>
+                                                <div class="group-mange-section">
+                                                    <div class="manage-edit">
+                                                        <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="แก้ไข">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="item">
+                                                <div class="content">
+                                                    <div class="date-post">
+                                                        25 พ.ย. 2563
+                                                    </div>
+                                                    <div class="text-content">
+                                                            เด็กอายุกี่ขวบต้องแจ้งการเข้าเรียนตามกฎหมาย และใช้เอกสารอะไรบ้าง? (.docx)
+                                                    </div>
+                                                </div>
+                                                <div class="btn-custom width-auto m-0 ml-auto">
+                                                    <a href="" class="btn">
+                                                        Download
+                                                    </a>
+                                                </div>
+                                                <div class="group-mange-section">
+                                                    <div class="manage-edit">
+                                                        <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="แก้ไข">
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

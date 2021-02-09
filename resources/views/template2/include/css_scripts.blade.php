@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="{{ asset('fontawesome/fontawesome.min.css')}}">
 <link rel="stylesheet" href="{{ asset('fontawesome/all.min.css')}}">
 
+<link rel="stylesheet" href="{{ asset('template2/theme-orange/css/jquery-ui.css')}}">
 <script type="text/javascript" rel="preload" src="{{ asset('template2/js/jquery-1.12.3.js') }}"></script>
 <script type="text/javascript" rel="preload" src="{{ asset('template2/js/bootstrap.min.js') }}"></script>
 <script type="text/javascript" rel="preload" src="{{ asset('template2/js/jquery-ui-1.11.4.custom.js') }}"></script>

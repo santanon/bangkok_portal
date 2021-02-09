@@ -3,7 +3,7 @@
         #manage_dragdrop.group-section-content{
             .section-content{
                 border: 2px dashed rgb(204, 204, 204);
-                padding: 20px;
+                padding: 60px 20px 20px;
                 margin: 0px 20px 20px;
                 cursor: grab !important;
             }
@@ -104,6 +104,15 @@
             width: 34px;
             position: absolute;
             right: 0;
+            cursor: pointer;
+            img{
+                width: 100%;
+            }
+        }
+        .manage-add{
+            width: 34px;
+            position: absolute;
+            right: 40px;
             cursor: pointer;
             img{
                 width: 100%;

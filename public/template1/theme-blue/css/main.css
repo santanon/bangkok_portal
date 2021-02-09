@@ -12422,7 +12422,7 @@ template {
     filter: alpha(opacity=0); }
 
 .ui-datepicker {
-  z-index: 99 !important; }
+  z-index: 999 !important; }
 
 .ui-widget button, .ui-widget input, .ui-widget select, .ui-widget textarea {
   font-family: 'Kanit' !important; }
@@ -12585,6 +12585,8 @@ a.ui-button:active,
   background-color: #fff; }
   #header-wrapper .header-lg {
     display: block; }
+    #header-wrapper .header-lg .logo-wrapper {
+      position: relative; }
     #header-wrapper .header-lg .logo {
       margin: auto;
       height: 100%;
@@ -14474,7 +14476,8 @@ a.ui-button:active,
         .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item.-vote .right {
           height: 200px; }
     .group-section-content .section-content .inner-content .main-content .group-slide.group-list .list-item .item {
-      margin-bottom: 30px; }
+      margin-bottom: 30px;
+      position: relative; }
   .group-section-content .section-content .inner-content .main-content .group-vote .score-wrapper {
     padding: 20px; }
     .group-section-content .section-content .inner-content .main-content .group-vote .score-wrapper .text-score .num-vote {
@@ -14990,7 +14993,9 @@ a.ui-button:active,
   .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card {
     border-radius: 0;
     border: none;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    position: relative;
+    overflow: inherit; }
     .group-section-content .section-content .inner-content .main-content .accordion-wrapper .accordion .card .card-header {
       padding: 0;
       border: none;
@@ -17989,6 +17994,13 @@ Due to the split circle of progress-left and progress right, we must use the ani
     right: 0;
     cursor: pointer; }
     .manage .group-mange-section .manage-edit img {
+      width: 100%; }
+  .manage .group-mange-section .manage-add {
+    width: 34px;
+    position: absolute;
+    right: 40px;
+    cursor: pointer; }
+    .manage .group-mange-section .manage-add img {
       width: 100%; }
   .manage .group-mange-section.no-mg {
     margin: 0; }

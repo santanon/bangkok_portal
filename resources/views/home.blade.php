@@ -39,11 +39,11 @@ function sfi(title,url)
 
         <div class="group-section-content" id="manage_dragdrop">
             @include('template1/news')
-
-            @include('template1/calendar')
-
+            
             @include('template1/faq')
 
+            @include('template1/calendar')
+ 
             @include('template1/album')
 
             @include('template1/vdo')

@@ -3,6 +3,18 @@ $CustomHelper = new \App\CustomHelper;
 $TextLanguage = new \App\TextLanguage; 
 ?>   
 @include('manage.include.main_form_header') 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
 
 	<script type="text/javascript">
     function check_form()
@@ -112,17 +124,10 @@ function show_it(v1)
 <th width="120" valign="top" style="padding-top:10px;"><?php echo $TextLanguage->lang('texteditor'); ?>&nbsp; <img align="absmiddle" src="<?php echo base_url() ?>assets/panel/f_th.jpg" /> </th>
 <td> 
 <?php
-$this_name = 'info'
+$this_name = 'info';
+$this_value = '';
 ?>
-<textarea id='<?php echo $this_name ?>' name='<?php echo $this_name ?>' rows='10'><?php echo @$edit_info ?></textarea>
-<script type="text/javascript"> 
-CKEDITOR.replace( '<?php echo $this_name ?>' , 
-{ 
-enterMode : CKEDITOR.ENTER_BR,
-shiftEnterMode: CKEDITOR.ENTER_BR 
-}); 
-</script>
-
+@include('manage.include.input_texteditor') 
 </td>
 </tr> 
 
@@ -130,17 +135,10 @@ shiftEnterMode: CKEDITOR.ENTER_BR
 <th width="120" valign="top" style="padding-top:10px;"><?php echo $TextLanguage->lang('texteditor'); ?>&nbsp; <img align="absmiddle" src="<?php echo base_url() ?>assets/panel/f_en.jpg" /></th>
 <td> 
 <?php
-$this_name = 'en_info'
+$this_name = 'en_info';
+$this_value = '';
 ?>
-<textarea id='<?php echo $this_name ?>' name='<?php echo $this_name ?>' rows='10'><?php echo @$edit_en_info ?></textarea>
-<script type="text/javascript"> 
-CKEDITOR.replace( '<?php echo $this_name ?>' , 
-{ 
-enterMode : CKEDITOR.ENTER_BR,
-shiftEnterMode: CKEDITOR.ENTER_BR 
-}); 
-</script>
-
+@include('manage.include.input_texteditor') 
 </td>
 </tr>  
 

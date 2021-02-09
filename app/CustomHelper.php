@@ -726,5 +726,5 @@ class CustomHelper
 	function input_get($v)
     {  
 		return @$_GET[$v];
-    } 
+    }  
 }

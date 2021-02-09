@@ -123,7 +123,7 @@
                                         <a href="">
                                             <span class="icon-signin"></span>Sign in
                                         </a>
-                                    </li>
+                                    </li> 
                                 </ul>
                             </div>
                             <div class="tools-web">

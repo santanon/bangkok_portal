@@ -309,8 +309,8 @@ class PanelController extends Controller
         }
 		 
         if(trim($res) == '[]')
-        {
-            //$this->Portal_website_log_model->add_log('Login is invalid (' . $u . ')',$u,'','LOGIN_FAIL');
+        { 
+			$CustomHelper->add_log('Login is invalid (' . $u . ')',$u,'','LOGIN_FAIL');
             
             ?><script>alert('Login Invalid.');window.history.back();</script><?php
             exit;
@@ -342,8 +342,8 @@ class PanelController extends Controller
 			$_SESSION['panel_login_count'] = $obj_portal_website[0]->login_count;  
 			$_SESSION['panel_last_login'] = $obj_portal_website[0]->last_login;  
 			$_SESSION['panel_session_id'] = $obj_portal_website[0]->session_id;
-			  
-			//$this->Portal_website_log_model->add_log('Login Success ( ' . $_SESSION['panel_username'] . ' )',$_SESSION['panel_username'],$_SESSION['panel_id'],'LOGIN_PASS');
+
+			$CustomHelper->add_log('Login Success ( ' . $_SESSION['panel_username'] . ' )',$_SESSION['panel_username'],$_SESSION['panel_id'],'LOGIN_PASS'); 
 			  
 			$d = new \stdClass(); 
 			$d->last_login = date('U'); 
@@ -439,11 +439,8 @@ class PanelController extends Controller
 		$CustomHelper = new \App\CustomHelper;
 		
 		if($CustomHelper->check_panel_login() == 1) 
-        {   
-			/*
-			$this->load->model('Portal_website_log_model'); 
-			$this->Portal_website_log_model->add_log('Logout ( ' . $_SESSION['panel_username'] . ' )',$_SESSION['panel_username'],$_SESSION['panel_id'],'LOGOUT');
-			*/ 
+        {     
+			$CustomHelper->add_log('Logout ( ' . $_SESSION['panel_username'] . ' )',$_SESSION['panel_username'],$_SESSION['panel_id'],'LOGOUT');
         } 
 
 		session_destroy(); 
@@ -454,7 +451,7 @@ class PanelController extends Controller
 	public function web_home()
     {    
 		$CustomHelper = new \App\CustomHelper;
-		
+  
 		if($CustomHelper->check_panel_login() == 1)
 		{  
 			if($_SESSION['panel_style_template_id'] == '0' || $_SESSION['panel_style_template_id'] == '')
@@ -462,10 +459,11 @@ class PanelController extends Controller
 				?>
 				<script>window.location = '/panel-admin/templatestep1';</script>
 				<?php
+				exit;
 			}
 			
 		}
-
+		
 		$this->include_header();
  
 		$data['mod'] = $this->mod;  

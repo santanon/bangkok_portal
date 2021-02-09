@@ -13,6 +13,7 @@ use App\Http\Controllers\ManageController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+ 
 
 /* Panel */
 //Route::any('/', [PanelController::class,'login']);
@@ -30,6 +31,7 @@ Route::any('panel-admin/templatestep3', function(){
 });
 
 /* Management */
+
 Route::any('manage-admin/list',         [ManageController::class,'list']);
 Route::any('manage-admin/add',          [ManageController::class,'add']);
 Route::any('manage-admin/edit',         [ManageController::class,'edit']);
@@ -60,9 +62,8 @@ Route::any('manage-admin/panels/{mod}/{act}',	[ManageController::class,'panels']
 Route::any('manage-admin/panels/{mod}/{act}/{id}',	[ManageController::class,'panels']);
 Route::any('manage-admin/panels/{mod}/{act}/{id}/{id2}',	[ManageController::class,'panels']);
 Route::any('manage-admin/panels/{mod}/{act}/{id}/{id2}/{main_type}',	[ManageController::class,'panels']); 
-
 Route::any('/', [PanelController::class,'web_home']);
- 
+
 /* Front */
 Route::any('/', function () {
     return view('home');

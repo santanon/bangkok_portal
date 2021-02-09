@@ -1,4 +1,12 @@
 <div class="section-content">
+    <div class="group-mange-section">
+        <div class="manage-edit">
+            <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="แก้ไข">
+        </div>
+        <div class="manage-add">
+            <img src="{{ asset('template1/assets/images/icons/icon-add.svg')}}" alt="เพิ่ม">
+        </div>
+    </div>
     <div class="container">
         <div class="inner-content">
             <div class="top-content">
@@ -10,7 +18,7 @@
             <div class="search-content">
                 <form action="search">
                     <div class="row">
-                        <div class="col-lg-4">
+                        <div class="col-lg-3">
                             <div class="input-custom inp-categories">
                                 <div class="select-wrapper width-full">
                                     <select name="month" class="slc">
@@ -24,21 +32,27 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-2">
                             <div class="input-custom inp-calendar">
-                                <input class="style-input" type="text" name="datefilter" placeholder="จากวันที่ - ถึงวันที่" />
+                                <input id="start_date" class="style-input" type="text" name="datefilter" placeholder="จากวันที่" autocomplete="off" data-provide="datepicker" data-date-language="th-th" />
+                                <div class="icon-calendar"><i class="far fa-calendar"></i></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="input-custom inp-calendar">
+                                <input id="end_date" class="style-input" type="text" name="datefilter" placeholder="ถึงวันที่" autocomplete="off" data-provide="datepicker" data-date-language="th-th" />
                                 <div class="icon-calendar"><i class="far fa-calendar"></i></div>
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="input-custom inp-search">
-                                <input class="style-input" type="text" name="keyword" placeholder="คำค้นหา" />
+                                <input class="style-input" type="text" name="" placeholder="คำค้นหา" />
                             </div>
                         </div>
                         <div class="col-lg-1">
                             <div class="btn-search ">
                                 <button type="submit" class="icon-search bg-color-primary">
-                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                         width="20px" height="20px" viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">
                                     <g>
                                         <circle class="st0" cx="9.3" cy="9.3" r="7.3"/>
@@ -58,6 +72,19 @@
                     </div>
                     <div class="group-list-downloadfile">
                         <a href="" class="item">
+                            <div class="group-mange-section">
+                                <div class="manage-tools">
+                                    <ul>
+                                        <li class="order-list">จัดการ</li>
+                                        <li class="order-list">ลบ</li>
+                                        <li class="order-list">ซ่อน</li>
+                                        <li class="order-list order-close">ปิด</li>
+                                    </ul>
+                                </div> 
+                                <div class="manage-edit">
+                                    <img src="http://127.0.0.1:8000/template1/assets/images/icons/icon-edit.svg" alt="icon">
+                                </div>
+                            </div>
                             <div class="icon-content">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                     width="24px" height="24px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
@@ -80,6 +107,19 @@
                         </a>
 
                         <a href="" class="item">
+                            <div class="group-mange-section">
+                                <div class="manage-tools">
+                                    <ul>
+                                        <li class="order-list">จัดการ</li>
+                                        <li class="order-list">ลบ</li>
+                                        <li class="order-list">ซ่อน</li>
+                                        <li class="order-list order-close">ปิด</li>
+                                    </ul>
+                                </div> 
+                                <div class="manage-edit">
+                                    <img src="http://127.0.0.1:8000/template1/assets/images/icons/icon-edit.svg" alt="icon">
+                                </div>
+                            </div>
                             <div class="icon-content">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                     width="24px" height="24px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
@@ -102,6 +142,19 @@
                         </a>
 
                         <a href="" class="item">
+                            <div class="group-mange-section">
+                                <div class="manage-tools">
+                                    <ul>
+                                        <li class="order-list">จัดการ</li>
+                                        <li class="order-list">ลบ</li>
+                                        <li class="order-list">ซ่อน</li>
+                                        <li class="order-list order-close">ปิด</li>
+                                    </ul>
+                                </div> 
+                                <div class="manage-edit">
+                                    <img src="http://127.0.0.1:8000/template1/assets/images/icons/icon-edit.svg" alt="icon">
+                                </div>
+                            </div>
                             <div class="icon-content">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                     width="24px" height="24px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
@@ -124,6 +177,19 @@
                         </a>
 
                         <a href="" class="item">
+                            <div class="group-mange-section">
+                                <div class="manage-tools">
+                                    <ul>
+                                        <li class="order-list">จัดการ</li>
+                                        <li class="order-list">ลบ</li>
+                                        <li class="order-list">ซ่อน</li>
+                                        <li class="order-list order-close">ปิด</li>
+                                    </ul>
+                                </div> 
+                                <div class="manage-edit">
+                                    <img src="http://127.0.0.1:8000/template1/assets/images/icons/icon-edit.svg" alt="icon">
+                                </div>
+                            </div>
                             <div class="icon-content">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                     width="24px" height="24px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
@@ -146,6 +212,19 @@
                         </a>
 
                         <a href="" class="item">
+                            <div class="group-mange-section">
+                                <div class="manage-tools">
+                                    <ul>
+                                        <li class="order-list">จัดการ</li>
+                                        <li class="order-list">ลบ</li>
+                                        <li class="order-list">ซ่อน</li>
+                                        <li class="order-list order-close">ปิด</li>
+                                    </ul>
+                                </div> 
+                                <div class="manage-edit">
+                                    <img src="http://127.0.0.1:8000/template1/assets/images/icons/icon-edit.svg" alt="icon">
+                                </div>
+                            </div>
                             <div class="icon-content">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                     width="24px" height="24px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">

@@ -125,7 +125,6 @@ Route::any('/organization', function () {
 
 
 
-
 //template2
 Route::any('/home-2', function () {
     return view('home-2');
@@ -252,70 +251,56 @@ Route::any('/ita-3', function () {
 Route::any('/home-4', function () {
     return view('home-4');
 });
-
 Route::any('/about-4', function () {
     return view('about-detail-4');
 });
-
 Route::any('/news-4', function () {
     return view('news-main-4');
 });
-
 Route::any('/news-detail-4', function () {
     return view('news-detail-4');
 });
-
 Route::any('/album-4', function () {
     return view('gallery-main-4');
 });
-
 Route::any('/video-4', function () {
     return view('video-main-4');
 });
-
 Route::any('/download-4', function () {
     return view('download-main-4');
 });
-
 Route::any('/faq-4', function () {
     return view('faq-main-4');
 });
-
 Route::any('/questionnaire-4', function () {
     return view('questionnaire-main-4');
 });
-
 Route::any('/questionnaire-detail-4', function () {
     return view('questionnaire-detail-4');
 });
-
 Route::any('/vote-4', function () {
     return view('vote-main-4');
 });
-
 Route::any('/vote-detail-4', function () {
     return view('vote-detail-4');
 });
-
 Route::any('/calendar-4', function () {
     return view('calendar-main-4');
 });
-
 Route::any('/calendar-detail-4', function () {
     return view('calendar-detail-4');
 });
-
 Route::any('/contact-4', function () {
     return view('contact-main-4');
 });
-
 Route::any('/sitemap-4', function () {
     return view('sitemap-4');
 });
-
 Route::any('/ita-4', function () {
     return view('ita-page-4');
 });
+
+
 
 //template5
 Route::any('/home-5', function () {

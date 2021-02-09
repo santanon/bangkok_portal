@@ -1780,6 +1780,7 @@ $howManySteps: 100; //this needs to be even.
                     &.group-list{
                         .list-item{
                             .item{
+                                position: relative;
                                 margin-bottom: 30px;
 
                                 &.question{

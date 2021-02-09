@@ -370,6 +370,21 @@
             </div>
         </div>
         <div class="menu-main-wrapper">
+            <div class="group-mange-section no-mg right-0">
+                <!--<div class="manage-tools">
+                    <ul>
+                        <li class="order-list">บริหารจัดการ</li>
+                        <li class="order-list">ลบ</li>
+                        <li class="order-list">ซ่อน</li>
+                        <li class="order-list order-close">ปิด</li>
+                    </ul>
+                </div>-->
+                <a href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('LOGO','manage-admin/edit_logo?m=portal_website');">
+                    <div class="manage-edit">
+                        <img src="{{ asset('template3/assets/images/icons/icon-edit.svg')}}" alt="icon">
+                    </div>
+                </a>
+            </div>
             <ul class="sub-menu-main">
                 <li class="list">
                     <a href="/" title="หน้าหลัก">หน้าหลัก</a>

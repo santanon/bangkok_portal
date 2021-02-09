@@ -243,7 +243,6 @@ function sfi(title,url)
         
         //$('#exampleModal').modal('show')
 
-
         if($('body').hasClass('manage')){
             $("div.group-section-content").attr('id', 'manage_dragdrop');
             // DragDrop

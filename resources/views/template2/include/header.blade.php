@@ -176,23 +176,23 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 p-0">
-                <div class="group-mange-section no-mg right-0">
-                    <!--<div class="manage-tools">
-                        <ul>
-                            <li class="order-list">จัดการ</li>
-                            <li class="order-list">ลบ</li>
-                            <li class="order-list">ซ่อน</li>
-                            <li class="order-list order-close">ปิด</li>
-                        </ul>
-                    </div> --> 
-                    <a href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('TOP MENU','manage-admin/list?m=portal_website_main_menu_page');">
-                        <div class="manage-edit">
-                            <img src="{{ asset('template2/assets/images/icons/icon-edit.svg')}}" alt="icon">
-                        </div>
-                    </a>
-                </div>
+            <div class="col-lg-12">
                 <div class="menu-main-wrapper">
+                    <div class="group-mange-section no-mg right-0">
+                        <!--<div class="manage-tools">
+                            <ul>
+                                <li class="order-list">จัดการ</li>
+                                <li class="order-list">ลบ</li>
+                                <li class="order-list">ซ่อน</li>
+                                <li class="order-list order-close">ปิด</li>
+                            </ul>
+                        </div> --> 
+                        <a href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('TOP MENU','manage-admin/list?m=portal_website_main_menu_page');">
+                            <div class="manage-edit">
+                                <img src="{{ asset('template2/assets/images/icons/icon-edit.svg')}}" alt="icon">
+                            </div>
+                        </a>
+                    </div>
                     <ul class="sub-menu-main">
                         <li class="list">
                             <a href="home-2" title="หน้าหลัก">
@@ -326,23 +326,24 @@
 
         <div class="row bg-color-menutop">
             <div class="col-lg-12">
-                <div class="group-mange-section no-mg right-0">
-                    <!--<div class="manage-tools">
-                        <ul>
-                            <li class="order-list">เพิ่ม</li>
-                            <li class="order-list">บริหารจัดการ</li>
-                            <li class="order-list">ซ่อน</li>
-                            <li class="order-list">ลบ</li>
-                            <li class="order-list order-close">ปิด</li>
-                        </ul>
-                    </div>-->
-                    <a href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('TOP MENU','manage-admin/list?m=portal_website_top_menu_page');">
-                        <div class="manage-edit">
-                            <img src="{{ asset('template2/assets/images/icons/icon-edit.svg')}}" alt="icon">
-                        </div>
-                    </a>
-                </div>
+                
                 <div class="menu-top-wrapper">
+                    <div class="group-mange-section no-mg right-0">
+                        <!--<div class="manage-tools">
+                            <ul>
+                                <li class="order-list">เพิ่ม</li>
+                                <li class="order-list">บริหารจัดการ</li>
+                                <li class="order-list">ซ่อน</li>
+                                <li class="order-list">ลบ</li>
+                                <li class="order-list order-close">ปิด</li>
+                            </ul>
+                        </div>-->
+                        <a href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('TOP MENU','manage-admin/list?m=portal_website_top_menu_page');">
+                            <div class="manage-edit">
+                                <img src="{{ asset('template2/assets/images/icons/icon-edit.svg')}}" alt="icon">
+                            </div>
+                        </a>
+                    </div>
                     <ul>
                         <li>
                             <div class="list-menu">

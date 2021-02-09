@@ -38,33 +38,35 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
-                        <div class="group-mange-section no-mg right-0">
-                            <div class="manage-tools">
-                                <ul>
-                                    <li class="order-list">จัดการ</li>
-                                    <li class="order-list">ลบ</li>
-                                    <li class="order-list">ซ่อน</li>
-                                    <li class="order-list order-close">ปิด</li>
-                                </ul>
-                            </div> 
-                            <div class="manage-edit">
-                                <img src="{{ asset('template4/assets/images/icons/icon-edit.svg')}}" alt="icon">
+                        <div class="banner-wrapper">
+                            <div class="group-mange-section no-mg right-0">
+                                <div class="manage-tools">
+                                    <ul>
+                                        <li class="order-list">จัดการ</li>
+                                        <li class="order-list">ลบ</li>
+                                        <li class="order-list">ซ่อน</li>
+                                        <li class="order-list order-close">ปิด</li>
+                                    </ul>
+                                </div> 
+                                <div class="manage-edit">
+                                    <img src="{{ asset('template4/assets/images/icons/icon-edit.svg')}}" alt="icon">
+                                </div>
                             </div>
-                        </div>
-                        <ul>
-                            <li>
-                                <div class="bg-layer"></div>
-                                <div class="banner" style="background-image: url('../../template4/assets/images/banner/img-banner-vote.png');"></div>
-                                <div class="item-Onbanner-outer">
-                                    <div class="item-Onbanner-inner">
-                                        <div class="list">
-                                            <h2 class="title-banner">การรับฟังปัญหา/ข้อคิดเห็น</h2>
-                                            <p class="desc-banner">มุ่งมั่นการทำงาน แหล่งค้นคว้าการประชุม เครือข่ายมหานครอาเซียน</p>
+                            <ul>
+                                <li>
+                                    <div class="bg-layer"></div>
+                                    <div class="banner" style="background-image: url('../../template4/assets/images/banner/img-banner-vote.png');"></div>
+                                    <div class="item-Onbanner-outer">
+                                        <div class="item-Onbanner-inner">
+                                            <div class="list">
+                                                <h2 class="title-banner">การรับฟังปัญหา/ข้อคิดเห็น</h2>
+                                                <p class="desc-banner">มุ่งมั่นการทำงาน แหล่งค้นคว้าการประชุม เครือข่ายมหานครอาเซียน</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </li>
-                        </ul>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

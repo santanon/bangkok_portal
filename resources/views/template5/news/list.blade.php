@@ -1,4 +1,12 @@
 <div class="section-content">
+    <div class="group-mange-section">
+        <div class="manage-edit">
+            <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="แก้ไข">
+        </div>
+        <div class="manage-add">
+            <img src="{{ asset('template1/assets/images/icons/icon-add.svg')}}" alt="เพิ่ม">
+        </div>
+    </div>
                 <div class="container">
                     <div class="inner-content">
                         <div class="row">
@@ -70,6 +78,19 @@
                             <div class="row">
                                 <div class="col-lg-9">
                                     <div class="sub-news inside -large">
+                                        <div class="group-mange-section no-mg right-0">
+                                            <div class="manage-tools">
+                                                <ul>
+                                                    <li class="order-list">จัดการ</li>
+                                                    <li class="order-list">ลบ</li>
+                                                    <li class="order-list">ซ่อน</li>
+                                                    <li class="order-list order-close">ปิด</li>
+                                                </ul>
+                                            </div> 
+                                            <div class="manage-edit">
+                                                <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
+                                            </div>
+                                        </div>
                                         <div class="row no-gutters">
                                             <div class="col-lg-8 order-lg-2">
                                                 <div class="img-news" style="background-image: url('../../template1/assets/images/img-news-demo2.png');">

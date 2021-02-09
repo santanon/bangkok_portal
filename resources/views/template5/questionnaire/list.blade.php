@@ -1,4 +1,12 @@
 <div class="section-content">
+    <div class="group-mange-section">
+        <div class="manage-edit">
+            <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="แก้ไข">
+        </div>
+        <div class="manage-add">
+            <img src="{{ asset('template1/assets/images/icons/icon-add.svg')}}" alt="เพิ่ม">
+        </div>
+    </div>
                 <div class="container">
                     <div class="inner-content">
                         <div class="row">
@@ -71,6 +79,11 @@
                             <div class="group-slide group-list">
                                 <div class="list-item">
                                     <div class="item -question">
+                                        <div class="group-mange-section">
+                                            <div class="manage-edit">
+                                                <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="แก้ไข">
+                                            </div>
+                                        </div>
                                         <div class="text-content match-height">
                                             <a href="/questionnaire-detail-5">
                                                 ร่วมส่งแรงใจให้เยาวชนนักเตะรุ่นใหม่ชิงชัยเอกสารที่ต้องใช้ 1. สูติบัตร พร้อมสำเนา 2. ทะเบียนบ้าน พร้อมสำเนา
@@ -107,6 +120,11 @@
                                         </div>
                                     </div>
                                     <div class="item -question">
+                                        <div class="group-mange-section">
+                                            <div class="manage-edit">
+                                                <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="แก้ไข">
+                                            </div>
+                                        </div>
                                         <div class="text-content match-height">
                                             <a href="/questionnaire-detail-5">
                                                 ร่วมส่งแรงใจให้เยาวชนนักเตะรุ่นใหม่ชิงชัยเอกสารที่ต้องใช้ 1. สูติบัตร พร้อมสำเนา 2. ทะเบียนบ้าน พร้อมสำเนา
@@ -143,6 +161,11 @@
                                         </div>
                                     </div>
                                     <div class="item -question">
+                                        <div class="group-mange-section">
+                                            <div class="manage-edit">
+                                                <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="แก้ไข">
+                                            </div>
+                                        </div>
                                         <div class="text-content match-height">
                                             <a href="/questionnaire-detail-5">
                                                 ร่วมส่งแรงใจให้เยาวชนนักเตะรุ่นใหม่ชิงชัยเอกสารที่ต้องใช้ 1. สูติบัตร พร้อมสำเนา 2. ทะเบียนบ้าน พร้อมสำเนา
@@ -179,6 +202,11 @@
                                         </div>
                                     </div>
                                     <div class="item -question">
+                                        <div class="group-mange-section">
+                                            <div class="manage-edit">
+                                                <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="แก้ไข">
+                                            </div>
+                                        </div>
                                         <div class="text-content match-height">
                                             <a href="/questionnaire-detail-5">
                                                 ร่วมส่งแรงใจให้เยาวชนนักเตะรุ่นใหม่ชิงชัยเอกสารที่ต้องใช้ 1. สูติบัตร พร้อมสำเนา 2. ทะเบียนบ้าน พร้อมสำเนา

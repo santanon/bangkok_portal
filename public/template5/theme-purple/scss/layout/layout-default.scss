@@ -1528,6 +1528,7 @@ $howManySteps: 100; //this needs to be even.
                     &.group-list{
                         .list-item{
                             .item{
+                                position: relative;
                                 margin-bottom: 20px;
                             }
                         }
@@ -2129,6 +2130,7 @@ $howManySteps: 100; //this needs to be even.
                     }
                     &.list{
                         .item{
+                            position: relative;
                             padding: 15px;
                             border: 1px solid #cfd1d4;
                             padding-right: 5px;

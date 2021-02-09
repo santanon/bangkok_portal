@@ -109,6 +109,15 @@
                 width: 100%;
             }
         }
+        .manage-add{
+            width: 34px;
+            position: absolute;
+            right: 40px;
+            cursor: pointer;
+            img{
+                width: 100%;
+            }
+        }
         &.no-mg{
             margin: 0;
         }
@@ -174,4 +183,25 @@
         width: 100%;
         margin: auto;
     }
+
+    .logo-wrapper{
+        .group-mange-section{
+            .manage-edit{
+                left: 0;
+            }
+        }
+    }
+    .banner-wrapper{
+        .group-mange-section{
+            top: 45%;
+        }
+    }
+    .menu-main-wrapper{
+        .group-mange-section{
+            .manage-edit{
+                display: block !important;
+            }
+        }
+    }
+
 }

@@ -1,4 +1,12 @@
 <div class="section-content">
+    <div class="group-mange-section">
+        <div class="manage-edit">
+            <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="แก้ไข">
+        </div>
+        <div class="manage-add">
+            <img src="{{ asset('template1/assets/images/icons/icon-add.svg')}}" alt="เพิ่ม">
+        </div>
+    </div>
                 <div class="container">
                     <div class="inner-content">
                         <div class="top-content border-bottom-secondary">
@@ -41,13 +49,23 @@
                             </form>
                         </div>
 
-
-
-
                         <div class="main-content">
                             <div class="accordion-wrapper">
                                 <div class="accordion" id="accordionExample">
                                     <div class="card">
+                                        <div class="group-mange-section">
+                                            <div class="manage-tools">
+                                                <ul>
+                                                    <li class="order-list">จัดการ</li>
+                                                    <li class="order-list">ลบ</li>
+                                                    <li class="order-list">ซ่อน</li>
+                                                    <li class="order-list order-close">ปิด</li>
+                                                </ul>
+                                            </div> 
+                                            <div class="manage-edit">
+                                                <img src="http://127.0.0.1:8000/template1/assets/images/icons/icon-edit.svg" alt="icon">
+                                            </div>
+                                        </div>
                                         <div class="card-header" id="faq_1">
                                             <div class="card-header-item d-flex align-items-center" data-toggle="collapse" data-target="#collapse_1" aria-expanded="true" aria-controls="collapse_1">
                                                 <div class="icon-card-header">
@@ -72,6 +90,19 @@
                                         </div>
                                     </div>
                                     <div class="card">
+                                        <div class="group-mange-section">
+                                            <div class="manage-tools">
+                                                <ul>
+                                                    <li class="order-list">จัดการ</li>
+                                                    <li class="order-list">ลบ</li>
+                                                    <li class="order-list">ซ่อน</li>
+                                                    <li class="order-list order-close">ปิด</li>
+                                                </ul>
+                                            </div> 
+                                            <div class="manage-edit">
+                                                <img src="http://127.0.0.1:8000/template1/assets/images/icons/icon-edit.svg" alt="icon">
+                                            </div>
+                                        </div>
                                         <div class="card-header" id="faq_2">
                                             <div class="card-header-item d-flex align-items-center" data-toggle="collapse" data-target="#collapse_2" aria-expanded="false" aria-controls="collapse_2">
                                                 <div class="icon-card-header">

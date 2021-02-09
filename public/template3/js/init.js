@@ -30,10 +30,12 @@ $(function () {
     $('.menu-bar').click(function(){
       $('.menu-main-fullpage').slideDown();
       $(document.body).addClass("menu-open");
+      $('.manage-edit, .manage-dragdrop').hide();
     });
     $('.close-menu').click(function(){
       $('.menu-main-fullpage').slideUp();
       $(document.body).removeClass("menu-open");
+      $('.manage-edit, .manage-dragdrop').show();
     });
 
     //menu mobile

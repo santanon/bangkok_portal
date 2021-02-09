@@ -76,19 +76,6 @@
                                     <div class="inner-content">
                                         <div class="main-content">
                                             <div class="main-news">
-                                                <div class="group-mange-section">
-                                                    <div class="manage-tools">
-                                                        <ul>
-                                                            <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('NEWS','manage-admin/edit?m=portal_website_news');">แก้ไข</a></li> 
-                                                            <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_hide">ซ่อน</a></li>
-                                                            <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_delete">ลบ</a></li> 
-                                                            <li class="order-list order-close">ปิด</li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="manage-edit">
-                                                        <img src="{{ asset('../../assets/images/icons/icon-edit.svg')}}" alt="icon">
-                                                    </div> 
-                                                </div>
                                                 <div class="content-news-main">
                                                     <div class="date">
                                                         <span>ข่าววันที่ : 25 พ.ย.</span> <img src="{{ asset('../../assets/images/icons/icon-new.png')}}" alt="icon">

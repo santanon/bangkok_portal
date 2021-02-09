@@ -1,4 +1,12 @@
 <div class="section-content">
+    <div class="group-mange-section">
+        <div class="manage-edit">
+            <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="แก้ไข">
+        </div>
+        <div class="manage-add">
+            <img src="{{ asset('template1/assets/images/icons/icon-add.svg')}}" alt="เพิ่ม">
+        </div>
+    </div>
     <div class="inner-content">
         <div class="container-fluid">
             <div class="row">
@@ -51,6 +59,14 @@
                         <div class="group-slide group-list">
                             <div class="list-item">
                                 <div class="item vote">
+                                    <div class="group-mange-section">
+                                        <div class="manage-edit">
+                                            <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="แก้ไข">
+                                        </div>
+                                        <div class="manage-add">
+                                            <img src="{{ asset('template1/assets/images/icons/icon-add.svg')}}" alt="เพิ่ม">
+                                        </div>
+                                    </div>
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <div class="right">       
@@ -83,6 +99,14 @@
                                 </div>
 
                                 <div class="item vote">
+                                    <div class="group-mange-section">
+                                        <div class="manage-edit">
+                                            <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="แก้ไข">
+                                        </div>
+                                        <div class="manage-add">
+                                            <img src="{{ asset('template1/assets/images/icons/icon-add.svg')}}" alt="เพิ่ม">
+                                        </div>
+                                    </div>
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <div class="right">       
@@ -115,6 +139,14 @@
                                 </div>
 
                                 <div class="item vote">
+                                    <div class="group-mange-section">
+                                        <div class="manage-edit">
+                                            <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="แก้ไข">
+                                        </div>
+                                        <div class="manage-add">
+                                            <img src="{{ asset('template1/assets/images/icons/icon-add.svg')}}" alt="เพิ่ม">
+                                        </div>
+                                    </div>
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <div class="right">       
@@ -147,6 +179,14 @@
                                 </div>
 
                                 <div class="item vote">
+                                    <div class="group-mange-section">
+                                        <div class="manage-edit">
+                                            <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="แก้ไข">
+                                        </div>
+                                        <div class="manage-add">
+                                            <img src="{{ asset('template1/assets/images/icons/icon-add.svg')}}" alt="เพิ่ม">
+                                        </div>
+                                    </div>
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <div class="right">       
@@ -179,6 +219,14 @@
                                 </div>
 
                                 <div class="item vote">
+                                    <div class="group-mange-section">
+                                        <div class="manage-edit">
+                                            <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="แก้ไข">
+                                        </div>
+                                        <div class="manage-add">
+                                            <img src="{{ asset('template1/assets/images/icons/icon-add.svg')}}" alt="เพิ่ม">
+                                        </div>
+                                    </div>
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <div class="right">       

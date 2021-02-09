@@ -1301,7 +1301,7 @@ $howManySteps: 100; //this needs to be even.
                                 }
                                 .right{
                                     flex: 1;
-                                    padding: 15px 15px 40px 15px;
+                                    padding: 15px 40px 40px 15px;
                                     height: auto;
                                     .text-content{
                                         margin: 0 0 10px 0;
@@ -1382,7 +1382,7 @@ $howManySteps: 100; //this needs to be even.
 
                                 .right{
                                     flex: 1;
-                                    padding: 15px 15px 40px 15px;
+                                    padding: 15px 40px 40px 15px;
                                     height: auto;
 
                                     .text-content{
@@ -1457,6 +1457,7 @@ $howManySteps: 100; //this needs to be even.
                         .list-item{
                             .item{
                                 margin-bottom: 30px;
+                                position: relative;
                             }
                         }
                     }
@@ -2293,6 +2294,7 @@ $howManySteps: 100; //this needs to be even.
                                 background-color: white;
                                 cursor: pointer;
                                 .card-header-item{
+                                    padding: 20px 0;
                                     .icon-card-header{
                                         position: relative;
                                         flex: 0 0 80px;

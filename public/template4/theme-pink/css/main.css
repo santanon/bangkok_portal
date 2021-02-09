@@ -12486,7 +12486,8 @@ a.ui-button:active,
   display: block; }
   #header-wrapper .header-lg .menu-left-top {
     float: left;
-    background-color: #f8f8f8; }
+    background-color: #f8f8f8;
+    position: relative; }
   #header-wrapper .header-lg .menu-right-top {
     float: left;
     padding: 25px 0;
@@ -12503,6 +12504,7 @@ a.ui-button:active,
     -ms-flex-pack: end;
     justify-content: flex-end; }
   #header-wrapper .header-lg .logo-wrapper {
+    position: relative;
     height: 110px; }
     #header-wrapper .header-lg .logo-wrapper .logo {
       margin: auto;
@@ -12803,7 +12805,7 @@ a.ui-button:active,
         vertical-align: middle; }
         #header-wrapper .header-lg .menu-top-wrapper ul li a {
           display: block;
-          padding: 25px 15px;
+          padding: 30px 15px;
           color: #525252;
           opacity: 0.7;
           -webkit-transition: all 0.3s ease;
@@ -13015,7 +13017,8 @@ a.ui-button:active,
     z-index: 999; }
 
 .manage .main-wrapper #header-wrapper {
-  padding-top: 36.2px; }
+  position: relative;
+  margin-top: 36.2px; }
 
 @media (max-width: 1199.98px) {
   .manage .main-wrapper #header-wrapper {
@@ -15238,6 +15241,7 @@ body.nav-expanded {
               .group-section-content .section-content .inner-content .main-content .group-slide .list-item .item {
                 margin-bottom: 5px; } }
         .group-section-content .section-content .inner-content .main-content .group-slide.group-list .list-item .item {
+          position: relative;
           margin-bottom: 30px; }
           .group-section-content .section-content .inner-content .main-content .group-slide.group-list .list-item .item.question .right {
             padding: 30px 15px 15px; }
@@ -19062,7 +19066,7 @@ Due to the split circle of progress-left and progress right, we must use the ani
 
 .manage #site-content #manage_dragdrop.group-section-content .section-content {
   border: 2px dashed #cccccc;
-  padding: 20px;
+  padding: 60px 20px 60px;
   margin: 0px 20px 20px;
   cursor: -webkit-grab !important;
   cursor: grab !important; }
@@ -19083,8 +19087,8 @@ Due to the split circle of progress-left and progress right, we must use the ani
 
 .manage #site-content .group-section-content .section-content {
   border: 2px dashed #cccccc;
-  padding: 20px;
-  margin: 0px 20px 20px; }
+  padding: 50px 20px 20px;
+  margin: 30px 20px 20px; }
   .manage #site-content .group-section-content .section-content .inner-content .main-content .add-news {
     display: block;
     position: relative;
@@ -19154,6 +19158,13 @@ Due to the split circle of progress-left and progress right, we must use the ani
     right: 0;
     cursor: pointer; }
     .manage .group-mange-section .manage-edit img {
+      width: 100%; }
+  .manage .group-mange-section .manage-add {
+    width: 34px;
+    position: absolute;
+    right: 40px;
+    cursor: pointer; }
+    .manage .group-mange-section .manage-add img {
       width: 100%; }
   .manage .group-mange-section.no-mg {
     margin: 0; }

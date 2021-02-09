@@ -1,4 +1,12 @@
 <div class="section-content">
+    <div class="group-mange-section">
+        <div class="manage-edit">
+            <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="แก้ไข">
+        </div>
+        <div class="manage-add">
+            <img src="{{ asset('template1/assets/images/icons/icon-add.svg')}}" alt="เพิ่ม">
+        </div>
+    </div>
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
@@ -12,113 +20,121 @@
                                 <div class="main-content pb-5">
                                      <form action="">
                 @csrf <!-- {{ csrf_field() }} -->
-                                        <div class="group-form-section mt-0 -contact">
-                                            <div class="row">
-                                                <div class="col-lg-6">
-                                                    <div class="row">
-                                                        <div class="col-lg-12">
-                                                            <div class="input-custom inp-categories">
-                                                                <label for="" class="title-field">เรื่อง</label>
-                                                                <div class="select-wrapper width-full">
-                                                                    <select name="month" class="slc">
-                                                                        <optgroup label="ประเภทข่าว">
-                                                                            <option value="">ประเภทข่าว 1</option>
-                                                                            <option value="">ประเภทข่าว 2</option>
-                                                                            <option value="">ประเภทข่าว 3</option>
-                                                                            <option value="">ประเภทข่าว 4</option>
-                                                                        </optgroup>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-12">
-                                                            <div class="input-custom">
-                                                                <label for="" class="title-field">ข้อความ</label>
-                                                                <textarea class="text-area -contact" name="" id="" placeholder="ข้อความ"></textarea>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <div class="row">
-                                                        <div class="col-lg-12">
-                                                            <div class="input-custom">
-                                                                <label for="" class="title-field">ชื่อ-นามสกุล</label>
-                                                                <input class="style-input" type="text" name="" placeholder="ระบุ">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-12">
-                                                            <div class="input-custom">
-                                                                <label for="" class="title-field">ที่อยู่</label>
-                                                                <input class="style-input" type="text" name="" placeholder="ระบุ">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-6">
-                                                            <div class="input-custom">
-                                                                <label for="" class="title-field">เบอร์โทรศัพท์</label>
-                                                                <input class="style-input" type="text" name="" placeholder="ระบุ">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-6">
-                                                            <div class="input-custom">
-                                                                <label for="" class="title-field">อีเมล</label>
-                                                                <input class="style-input" type="text" name="" placeholder="ระบุ">
-                                                            </div>
-                                                        </div>
+                            <div class="group-form-section mt-0 -contact">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="input-custom inp-categories">
+                                                    <label for="" class="title-field">เรื่อง</label>
+                                                    <div class="select-wrapper width-full">
+                                                        <select name="month" class="slc">
+                                                            <optgroup label="ประเภทข่าว">
+                                                                <option value="">ประเภทข่าว 1</option>
+                                                                <option value="">ประเภทข่าว 2</option>
+                                                                <option value="">ประเภทข่าว 3</option>
+                                                                <option value="">ประเภทข่าว 4</option>
+                                                            </optgroup>
+                                                        </select>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="btn-custom d-flex justify-content-center mx-auto">
-                                            <button class="btn width-full btn-primary" type="submit">ส่งข้อความ</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="inner-content">
-                                <div class="main-content -contact">
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <div class="iframe-map">
-                                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3878.0338107750213!2d100.4296997148538!3d13.594746604576166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e2bb0940b60c95%3A0x7916bd3efb77017b!2z4LiY4Liy4Lij4LiX4Liw4LmA4Lil4LiL4Li14Lif4Li54LmJ4LiU!5e0!3m2!1sen!2sth!4v1605687616968!5m2!1sen!2sth" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                                            <div class="col-lg-12">
+                                                <div class="input-custom">
+                                                    <label for="" class="title-field">ข้อความ</label>
+                                                    <textarea class="text-area -contact" name="" id="" placeholder="ข้อความ"></textarea>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-6">
-                                            <div class="row">
-                                                <div class="col-lg-12">
-                                                    <div class="top-content pt-4 border-top-primary">
-                                                        <div class="group-text">
-                                                            <h3 class="title color-primary">สำนักงานเลขานุการสภากรุงเทพฯ</h3>
-                                                            <p class="desc color-secondary">ชั้น 3 ศาลาว่าการกรุงเทพมหานคร 173 ถนนดินสอ เขตพระนคร กรุงเทพมหานคร 10200</p>
-                                                        </div>
-                                                    </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="input-custom">
+                                                    <label for="" class="title-field">ชื่อ-นามสกุล</label>
+                                                    <input class="style-input" type="text" name="" placeholder="ระบุ">
                                                 </div>
-                                                <div class="col-lg-12">
-                                                    <div class="contact-tel">
-                                                        <img src="{{ asset('template3/assets/images/icons/icon-tel-gray.svg')}}" alt="icon"> 
-                                                        <a class="link-tel" href="tel:022212141">0-2221-2141-69</a>
-                                                    </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="input-custom">
+                                                    <label for="" class="title-field">ที่อยู่</label>
+                                                    <input class="style-input" type="text" name="" placeholder="ระบุ">
                                                 </div>
-                                                <div class="col-lg-12">
-                                                    <div class="contact-tel">
-                                                        <img src="{{ asset('template3/assets/images/icons/icon-fax-gray.svg')}}" alt="icon"> 
-                                                        <a class="link-tel" href="tel:022243038">0-2224-3038</a>
-                                                    </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="input-custom">
+                                                    <label for="" class="title-field">เบอร์โทรศัพท์</label>
+                                                    <input class="style-input" type="text" name="" placeholder="ระบุ">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="input-custom">
+                                                    <label for="" class="title-field">อีเมล</label>
+                                                    <input class="style-input" type="text" name="" placeholder="ระบุ">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                            <div class="btn-custom d-flex justify-content-center mx-auto">
+                                <button class="btn width-full btn-primary" type="submit">ส่งข้อความ</button>
+                            </div>
+                        </form>
                     </div>
-                    
                 </div>
             </div>
+            <div class="col-lg-12">
+                <div class="inner-content">
+                    <div class="main-content -contact">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="iframe-map">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3878.0338107750213!2d100.4296997148538!3d13.594746604576166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e2bb0940b60c95%3A0x7916bd3efb77017b!2z4LiY4Liy4Lij4LiX4Liw4LmA4Lil4LiL4Li14Lif4Li54LmJ4LiU!5e0!3m2!1sen!2sth!4v1605687616968!5m2!1sen!2sth" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="top-content pt-4 border-top-primary">
+                                            <div class="group-text">
+                                                <h3 class="title color-primary">สำนักงานเลขานุการสภากรุงเทพฯ</h3>
+                                                <p class="desc color-secondary">ชั้น 3 ศาลาว่าการกรุงเทพมหานคร 173 ถนนดินสอ เขตพระนคร กรุงเทพมหานคร 10200</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="contact-tel">
+                                            <img src="{{ asset('template3/assets/images/icons/icon-tel-gray.svg')}}" alt="icon"> 
+                                            <a class="link-tel" href="tel:022212141">0-2221-2141-69</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="contact-tel">
+                                            <img src="{{ asset('template3/assets/images/icons/icon-fax-gray.svg')}}" alt="icon"> 
+                                            <a class="link-tel" href="tel:022243038">0-2224-3038</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
 
 <div class="section-content">
+    <div class="group-mange-section">
+        <div class="manage-edit">
+            <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="แก้ไข">
+        </div>
+        <div class="manage-add">
+            <img src="{{ asset('template1/assets/images/icons/icon-add.svg')}}" alt="เพิ่ม">
+        </div>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-lg-12">

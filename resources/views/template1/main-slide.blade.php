@@ -9,21 +9,21 @@
     </div> -->
     <a href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('กำลังโหลด...','manage-admin/list?m=home_bg');">
         <div class="manage-edit">
-            <img src="{{ asset('template2/assets/images/icons/icon-edit.svg')}}" alt="icon">
+            <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
         </div>
     </a>
 </div>
 <ul class="list-banner">
     <li>
         <div class="bg-layer"></div>
-        <div class="banner" style="background-image: url('../../template2/assets/images/banner/img-banner-demo.png');"></div>
+        <div class="banner" style="background-image: url('../../template1/assets/images/banner/img-banner-demo.png');"></div>
         <div class="item-Onbanner-outer">
             <div class="item-Onbanner-inner">
                 <div class="list">
                     <h2 class="title-banner">กรุงเทพมหานครเมืองหลวงของประเทศไทย</h2>
                     <p class="desc-banner">มุ่งมั่นการทำงาน แหล่งค้นคว้าการประชุม เครือข่ายมหานครอาเซียน</p>
                     <div class="action-link">
-                        <a href="#">เกี่ยวกับหน่วยงาน</a>
+                        <a href="#">รายละเอียดเพิ่มเติม</a>
                     </div>
                 </div>
             </div>
@@ -31,14 +31,14 @@
     </li>
     <li>
         <div class="bg-layer"></div>
-        <div class="banner" style="background-image: url('../../template2/assets/images/banner/img-banner-demo.png');"></div>
+        <div class="banner" style="background-image: url('../../template1/assets/images/banner/img-banner-demo.png');"></div>
         <div class="item-Onbanner-outer">
             <div class="item-Onbanner-inner">
                 <div class="list">
                     <h2 class="title-banner">กรุงเทพมหานครเมืองหลวงของประเทศไทย</h2>
                     <p class="desc-banner">มุ่งมั่นการทำงาน แหล่งค้นคว้าการประชุม เครือข่ายมหานครอาเซียน</p>
                     <div class="action-link">
-                        <a href="#">เกี่ยวกับหน่วยงาน</a>
+                        <a href="#">รายละเอียดเพิ่มเติม</a>
                     </div>
                 </div>
             </div>
@@ -46,14 +46,14 @@
     </li>
     <li>
         <div class="bg-layer"></div>
-        <div class="banner" style="background-image: url('../../template2/assets/images/banner/img-banner-demo.png');"></div>
+        <div class="banner" style="background-image: url('../../template1/assets/images/banner/img-banner-demo.png');"></div>
         <div class="item-Onbanner-outer">
             <div class="item-Onbanner-inner">
                 <div class="list">
                     <h2 class="title-banner">กรุงเทพมหานครเมืองหลวงของประเทศไทย</h2>
                     <p class="desc-banner">มุ่งมั่นการทำงาน แหล่งค้นคว้าการประชุม เครือข่ายมหานครอาเซียน</p>
                     <div class="action-link">
-                        <a href="#">เกี่ยวกับหน่วยงาน</a>
+                        <a href="#">รายละเอียดเพิ่มเติม</a>
                     </div>
                 </div>
             </div>

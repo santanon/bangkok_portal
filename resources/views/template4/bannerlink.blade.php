@@ -38,16 +38,16 @@
                                 <div class="bg-layer">
                                     <a href="#" title="เฟสบุ๊กผู้ว่าฯ อัศวิน"></a>
                                 </div>
-                                <div class="title">
+                                <!-- <div class="title">
                                     <div class="source">
                                         <span>FACEBOOK</span>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="caption">
                                     <div class="caption-wrap">
-                                        <div class="icon-content">
+                                        <!-- <div class="icon-content">
                                             <img src="{{ asset('template4/assets/images/icons/icon-banner-fb.png')}}" alt="icon">
-                                        </div>
+                                        </div> -->
                                         <div class="text-content">
                                             <span>ผู้ว่าฯ อัศวิน</span>
                                         </div>
@@ -62,16 +62,16 @@
                                 <div class="bg-layer">
                                     <a href="#" title="ทวิตเตอร์สำนักงานเลขานุการสภา"></a>
                                 </div>
-                                <div class="title">
+                                <!-- <div class="title">
                                     <div class="source">
                                         <span>TWITTER</span>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="caption">
                                     <div class="caption-wrap">
-                                        <div class="icon-content">
+                                        <!-- <div class="icon-content">
                                             <img src="{{ asset('template4/assets/images/icons/icon-banner-tw.png')}}" alt="icon">
-                                        </div>
+                                        </div> -->
                                         <div class="text-content">
                                             <span>สำนักงานเลขานุการสภา</span>
                                         </div>
@@ -84,16 +84,16 @@
                         <div class="item banner">
                             <div class="cover" style="background-image: url('../../template4/assets/images/img-album-demo3.jpg');">
                                 <div class="bg-layer"><a href="#" Title="เฟสบุ๊กสำนักงานเลขานุการสภา"></a></div>
-                                <div class="title">
+                                <!-- <div class="title">
                                     <div class="source">
                                         <span>FACEBOOK</span>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="caption">
                                     <div class="caption-wrap">
-                                        <div class="icon-content">
+                                        <!-- <div class="icon-content">
                                             <img src="{{ asset('template4/assets/images/icons/icon-banner-fb.png')}}" alt="icon">
-                                        </div>
+                                        </div> -->
                                         <div class="text-content">
                                             <span>สำนักงานเลขานุการสภา</span>
                                         </div>
@@ -106,16 +106,16 @@
                         <div class="item banner">
                             <div class="cover" style="background-image: url('../../template4/assets/images/img-album-demo4.jpg');">
                                 <div class="bg-layer"><a href="tel: 0-2222-5349" title="Telephone"></a></div>
-                                <div class="title">
+                                <!-- <div class="title">
                                     <div class="source">
                                         <span>สายด่วนเลขานุการสภา กทม.</span>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="caption">
                                     <div class="caption-wrap">
-                                        <div class="icon-content">
+                                        <!-- <div class="icon-content">
                                             <img src="{{ asset('template4/assets/images/icons/icon-banner-tel.png')}}" alt="icon">
-                                        </div>
+                                        </div> -->
                                         <div class="text-content">
                                             <span>0-2222-5349</span>
                                         </div>

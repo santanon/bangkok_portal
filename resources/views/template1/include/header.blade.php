@@ -26,7 +26,7 @@
             <ul>
                 <li class="">
                     <div class="group-canvas-top">
-                        <a href="">
+                        <a href="http://siamedigital.com:8002/login" target="_blank">
                             <div class="icon-top">
                                 <img src="{{ asset('template1/assets/images/icons/icon-signin-mobile.svg')}}" alt="icon">
                             </div>
@@ -37,7 +37,7 @@
                 </li>
                 <li class="">
                     <div class="group-canvas-top">
-                        <a href="">
+                        <a href="http://siamedigital.com:8002/register" target="_blank">
                             <div class="icon-top">
                                 <img src="{{ asset('template1/assets/images/icons/icon-register-mobile.svg')}}" alt="icon">
                             </div>
@@ -115,12 +115,12 @@
                             <div class="account-wrapper">
                                 <ul>
                                     <li>
-                                        <a href="">
+                                        <a href="http://siamedigital.com:8002/register" target="_blank">
                                             <span class="icon-register"></span>Register
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="">
+                                        <a href="http://siamedigital.com:8002/login" target="_blank">
                                             <span class="icon-signin"></span>Sign in
                                         </a>
                                     </li> 
@@ -382,7 +382,7 @@
         </div>
 
         <div class="group-link-mainbkk">
-            <a href="">
+            <a href="http://siamedigital.com:8002/" target="_blank">
                 <div class="icon-bkk">
                     <img src="{{ asset('template1/assets/images/icons/icon-bkk.png')}}" alt="icon">
                 </div>

@@ -72,8 +72,8 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6">
                     <div class="item-template" data-aos="zoom-in">
-                        <div class="img-template">
-                            <img src="{{ asset('panel/assets/images/template/template01.png')}}" alt="icon" title="Template01">
+                        <div class="img-template tp1">
+                            <img src="{{ asset('panel/assets/images/template/template01_1.jpg')}}" alt="icon" title="Template01">
                             <div class="name-template">
                                 Template 1
                             </div>
@@ -81,7 +81,7 @@
                         <div class="theme-color">
                             <div class="input-custom">
                                 <div class="select-wrapper width-full">
-                                    <select class="slc" name="t1" id="t1">
+<select class="slc" name="t1" id="t1">
                                         <option value="11" selected>สีเขียว</option>
                                         <option value="12">สีฟ้า</option>
                                         <option value="13">สีส้ม</option>
@@ -112,13 +112,12 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="item-template" data-aos="zoom-in">
-                        <div class="img-template">
-                            <img src="{{ asset('panel/assets/images/template/template02.png')}}" alt="icon" title="Template02">
+                        <div class="img-template tp2">
+                            <img src="{{ asset('panel/assets/images/template/template02_2.jpg')}}" alt="icon" title="Template02">
                             <div class="name-template">
                                 Template 2
                             </div>
@@ -126,7 +125,7 @@
                         <div class="theme-color">
                             <div class="input-custom">
                                 <div class="select-wrapper width-full">
-                                    <select class="slc" name="t2" id="t2">
+<select class="slc" name="t2" id="t2">
                                         <option value="21">สีเขียว</option>
                                         <option value="22">สีฟ้า</option>
                                         <option value="23" selected>สีส้ม</option>
@@ -161,8 +160,8 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="item-template" data-aos="zoom-in">
-                        <div class="img-template">
-                            <img src="{{ asset('panel/assets/images/template/template03.png')}}" alt="icon" title="Template03">
+                        <div class="img-template tp3">
+                            <img src="{{ asset('panel/assets/images/template/template03_3.jpg')}}" alt="icon" title="Template03">
                             <div class="name-template">
                                 Template 3
                             </div>
@@ -170,7 +169,7 @@
                         <div class="theme-color">
                             <div class="input-custom">
                                 <div class="select-wrapper width-full">
-                                    <select class="slc" name="t3" id="t3"> 
+<select class="slc" name="t3" id="t3"> 
                                         <option value="31">สีเขียว</option>
                                         <option value="32">สีฟ้า</option>
                                         <option value="33">สีส้ม</option>
@@ -206,8 +205,8 @@
 
                 <div class="col-lg-4 col-md-6">
                     <div class="item-template" data-aos="zoom-in">
-                        <div class="img-template">
-                            <img src="{{ asset('panel/assets/images/template/template04.png')}}" alt="icon" title="Template04">
+                        <div class="img-template tp4">
+                            <img src="{{ asset('panel/assets/images/template/template04_4.jpg')}}" alt="icon" title="Template04">
                             <div class="name-template">
                                 Template 4
                             </div>
@@ -215,7 +214,7 @@
                         <div class="theme-color">
                             <div class="input-custom">
                                 <div class="select-wrapper width-full">
-                                    <select class="slc" name="t4" id="t4">
+ <select class="slc" name="t4" id="t4">
                                         <option value="41">สีเขียว</option>
                                         <option value="42">สีฟ้า</option>
                                         <option value="43">สีส้ม</option>
@@ -250,8 +249,8 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="item-template" data-aos="zoom-in">
-                        <div class="img-template">
-                            <img src="{{ asset('panel/assets/images/template/template05.png')}}" alt="icon" title="Template05">
+                        <div class="img-template tp5">
+                            <img src="{{ asset('panel/assets/images/template/template05_5.jpg')}}" alt="icon" title="Template05">
                             <div class="name-template">
                                 Template 5
                             </div>
@@ -259,7 +258,7 @@
                         <div class="theme-color">
                             <div class="input-custom">
                                 <div class="select-wrapper width-full">
-                                    <select class="slc" name="t5" id="t5"> 
+ <select class="slc" name="t5" id="t5"> 
                                         <option value="51">สีเขียว</option>
                                         <option value="52" selected>สีฟ้า</option>
                                         <option value="53">สีส้ม</option>
@@ -310,7 +309,7 @@
                     </div>
                 </div>
                 <div class="modal-body">
-                    <div align="center"><img src="{{ asset('panel/assets/images/template/template01.png')}}"> </div> 
+                    <div align="center"><img src="{{ asset('panel/assets/images/template/template01_1.jpg')}}"> </div> 
                 </div>
             </div>
         </div>
@@ -325,7 +324,7 @@
                     </div>
                 </div>
                 <div class="modal-body">
-                    <div align="center"><img src="{{ asset('panel/assets/images/template/2.jpg')}}"> </div> 
+                    <div align="center"><img src="{{ asset('panel/assets/images/template/template02_2.jpg')}}"> </div> 
                 </div>
             </div>
         </div>
@@ -340,7 +339,7 @@
                     </div>
                 </div>
                 <div class="modal-body">
-                    <div align="center"><img src="{{ asset('panel/assets/images/template/3.jpg')}}"> </div> 
+                    <div align="center"><img src="{{ asset('panel/assets/images/template/template03_3.jpg')}}"> </div> 
                 </div>
             </div>
         </div>
@@ -355,7 +354,7 @@
                     </div>
                 </div>
                 <div class="modal-body">
-                    <div align="center"><img src="{{ asset('panel/assets/images/template/4.jpg')}}"> </div> 
+                    <div align="center"><img src="{{ asset('panel/assets/images/template/template04_4.jpg')}}"> </div> 
                 </div>
             </div>
         </div>
@@ -370,7 +369,7 @@
                     </div>
                 </div>
                 <div class="modal-body">
-                    <div align="center"><img src="{{ asset('panel/assets/images/template/5.jpg')}}"> </div> 
+                    <div align="center"><img src="{{ asset('panel/assets/images/template/template05_5.jpg')}}"> </div> 
                 </div>
             </div>
         </div>
@@ -381,6 +380,105 @@
 </div>
 
 @include('panel/include.css_scripts')
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#slc_tp1').change(function(){
+            if($(this).val()=='blue'){
+                $(this).closest('.item-template').find('.tp1 img').attr("src", '../panel/assets/images/template/template01_1.jpg');
+                $('#modal_1').find('.modal-body div img').attr("src", '../panel/assets/images/template/template01_1.jpg');
+            }else if($(this).val()=='orange'){
+                $(this).closest('.item-template').find('.tp1 img').attr("src", '../panel/assets/images/template/template01_2.jpg');
+                $('#modal_1').find('.modal-body div img').attr("src", '../panel/assets/images/template/template01_2.jpg');
+            }else if($(this).val()=='green'){
+                $(this).closest('.item-template').find('.tp1 img').attr("src", '../panel/assets/images/template/template01_3.jpg');
+                $('#modal_1').find('.modal-body div img').attr("src", '../panel/assets/images/template/template01_3.jpg');
+            }else if($(this).val()=='pink'){
+                $(this).closest('.item-template').find('.tp1 img').attr("src", '../panel/assets/images/template/template01_4.jpg');
+                $('#modal_1').find('.modal-body div img').attr("src", '../panel/assets/images/template/template01_4.jpg');
+            }else{
+                $(this).closest('.item-template').find('.tp1 img').attr("src", '../panel/assets/images/template/template01_5.jpg');
+                $('#modal_1').find('.modal-body div img').attr("src", '../panel/assets/images/template/template01_5.jpg');
+            }
+        });
+
+        $('#slc_tp2').change(function(){
+            if($(this).val()=='blue'){
+                $(this).closest('.item-template').find('.tp2 img').attr("src", '../panel/assets/images/template/template02_1.jpg');
+                $('#modal_2').find('.modal-body div img').attr("src", '../panel/assets/images/template/template02_1.jpg');
+            }else if($(this).val()=='orange'){
+                $(this).closest('.item-template').find('.tp2 img').attr("src", '../panel/assets/images/template/template02_2.jpg');
+                $('#modal_2').find('.modal-body div img').attr("src", '../panel/assets/images/template/template02_2.jpg');
+            }else if($(this).val()=='green'){
+                $(this).closest('.item-template').find('.tp2 img').attr("src", '../panel/assets/images/template/template02_3.jpg');
+                $('#modal_2').find('.modal-body div img').attr("src", '../panel/assets/images/template/template02_3.jpg');
+            }else if($(this).val()=='pink'){
+                $(this).closest('.item-template').find('.tp2 img').attr("src", '../panel/assets/images/template/template02_4.jpg');
+                $('#modal_2').find('.modal-body div img').attr("src", '../panel/assets/images/template/template02_4.jpg');
+            }else{
+                $(this).closest('.item-template').find('.tp2 img').attr("src", '../panel/assets/images/template/template02_5.jpg');
+                $('#modal_2').find('.modal-body div img').attr("src", '../panel/assets/images/template/template02_5.jpg');
+            }
+        });
+
+        $('#slc_tp3').change(function(){
+            if($(this).val()=='blue'){
+                $(this).closest('.item-template').find('.tp3 img').attr("src", '../panel/assets/images/template/template03_1.jpg');
+                $('#modal_3').find('.modal-body div img').attr("src", '../panel/assets/images/template/template03_1.jpg');
+            }else if($(this).val()=='orange'){
+                $(this).closest('.item-template').find('.tp3 img').attr("src", '../panel/assets/images/template/template03_2.jpg');
+                $('#modal_3').find('.modal-body div img').attr("src", '../panel/assets/images/template/template03_2.jpg');
+            }else if($(this).val()=='green'){
+                $(this).closest('.item-template').find('.tp3 img').attr("src", '../panel/assets/images/template/template03_3.jpg');
+                $('#modal_3').find('.modal-body div img').attr("src", '../panel/assets/images/template/template03_3.jpg');
+            }else if($(this).val()=='pink'){
+                $(this).closest('.item-template').find('.tp3 img').attr("src", '../panel/assets/images/template/template03_4.jpg');
+                $('#modal_3').find('.modal-body div img').attr("src", '../panel/assets/images/template/template03_4.jpg');
+            }else{
+                $(this).closest('.item-template').find('.tp3 img').attr("src", '../panel/assets/images/template/template03_5.jpg');
+                $('#modal_3').find('.modal-body div img').attr("src", '../panel/assets/images/template/template03_5.jpg');
+            }
+        });
+
+        $('#slc_tp4').change(function(){
+            if($(this).val()=='blue'){
+                $(this).closest('.item-template').find('.tp4 img').attr("src", '../panel/assets/images/template/template04_1.jpg');
+                $('#modal_4').find('.modal-body div img').attr("src", '../panel/assets/images/template/template04_1.jpg');
+            }else if($(this).val()=='orange'){
+                $(this).closest('.item-template').find('.tp4 img').attr("src", '../panel/assets/images/template/template04_2.jpg');
+                $('#modal_4').find('.modal-body div img').attr("src", '../panel/assets/images/template/template04_2.jpg');
+            }else if($(this).val()=='green'){
+                $(this).closest('.item-template').find('.tp4 img').attr("src", '../panel/assets/images/template/template04_3.jpg');
+                $('#modal_4').find('.modal-body div img').attr("src", '../panel/assets/images/template/template04_3.jpg');
+            }else if($(this).val()=='pink'){
+                $(this).closest('.item-template').find('.tp4 img').attr("src", '../panel/assets/images/template/template04_4.jpg');
+                $('#modal_4').find('.modal-body div img').attr("src", '../panel/assets/images/template/template04_4.jpg');
+            }else{
+                $(this).closest('.item-template').find('.tp4 img').attr("src", '../panel/assets/images/template/template04_5.jpg');
+                $('#modal_4').find('.modal-body div img').attr("src", '../panel/assets/images/template/template04_5.jpg');
+            }
+        });
+
+        $('#slc_tp5').change(function(){
+            if($(this).val()=='blue'){
+                $(this).closest('.item-template').find('.tp5 img').attr("src", '../panel/assets/images/template/template05_1.jpg');
+                $('#modal_5').find('.modal-body div img').attr("src", '../panel/assets/images/template/template05_1.jpg');
+            }else if($(this).val()=='orange'){
+                $(this).closest('.item-template').find('.tp5 img').attr("src", '../panel/assets/images/template/template05_2.jpg');
+                $('#modal_5').find('.modal-body div img').attr("src", '../panel/assets/images/template/template05_2.jpg');
+            }else if($(this).val()=='green'){
+                $(this).closest('.item-template').find('.tp5 img').attr("src", '../panel/assets/images/template/template05_3.jpg');
+                $('#modal_5').find('.modal-body div img').attr("src", '../panel/assets/images/template/template05_3.jpg');
+            }else if($(this).val()=='pink'){
+                $(this).closest('.item-template').find('.tp5 img').attr("src", '../panel/assets/images/template/template05_4.jpg');
+                $('#modal_5').find('.modal-body div img').attr("src", '../panel/assets/images/template/template05_4.jpg');
+            }else{
+                $(this).closest('.item-template').find('.tp5 img').attr("src", '../panel/assets/images/template/template05_5.jpg');
+                $('#modal_5').find('.modal-body div img').attr("src", '../panel/assets/images/template/template05_5.jpg');
+            }
+        });
+    });
+</script>
 
 @endsection
 

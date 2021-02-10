@@ -120,7 +120,7 @@ function sfi(title,url)
                 <div class="group-list-menu">
                     <div class="row">
                         <div class="col-md-3">
-                            <div class="list-menu" data-toggle="modal" data-target="#modalpanel" onclick="sfi('กำลังโหลด...','/manage-admin/edit_logo?m=logo');">
+ <div class="list-menu" data-toggle="modal" data-target="#modalpanel" onclick="sfi('กำลังโหลด...','/manage-admin/edit_logo?m=logo');">
                                 <div class="icon-menu">
                                     <img src="{{ asset('assets/panel/icon-1.png')}}" alt="icon">
                                 </div>
@@ -128,17 +128,21 @@ function sfi(title,url)
                                 <?php
                                 if($icon_logo_have == true)
                                 {
-                                    ?>(ok)<?php
-                                } 
+                                    ?><div class="check -pass"><i class="fas fa-check"></i></div><?php
+                                }
+                                else
+                                {
+                                    ?><div class="check -notpass"><i class="fas fa-times"></i></div><?php
+                                }
                                 ?>
                             </div>
                         </div> 
                         <div class="col-md-3">
-                            <div class="list-menu" data-toggle="modal" data-target="#modalpanel" onclick="sfi('กำลังโหลด...','/manage-admin/list?m=top_menu');">
+<div class="list-menu" data-toggle="modal" data-target="#modalpanel" onclick="sfi('กำลังโหลด...','/manage-admin/list?m=top_menu');">
                                 <div class="icon-menu">
                                     <img src="{{ asset('assets/panel/icon-3.png')}}" alt="icon">
                                 </div>
-                                <div class="text-menu">เมนูด้านบน</div>
+<div class="text-menu">เมนูด้านบน</div>
                                 <?php
                                 if($icon_topmenu_have == true)
                                 {
@@ -176,7 +180,7 @@ function sfi(title,url)
                             </div>
                         </div> 
                         <div class="col-md-3">
-                            <div class="list-menu" data-toggle="modal" data-target="#modalpanel" onclick="sfi('กำลังโหลด...','/manage-admin/list?m=footer_menu');">
+<div class="list-menu" data-toggle="modal" data-target="#modalpanel" onclick="sfi('กำลังโหลด...','/manage-admin/list?m=footer_menu');">
                                 <div class="icon-menu">
                                     <img src="{{ asset('assets/panel/icon-4.png')}}" alt="icon">
                                 </div>

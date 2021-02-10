@@ -43,7 +43,7 @@
                                                         <div class="caption-table">
                                                             <a href="#nogo" class="caption-cell">
                                                                 <h3>ผู้ว่าฯ อัศวิน</h3>
-                                                                <span>FACEBOOK</span>
+                                                                <!-- <span>FACEBOOK</span> -->
                                                             </a>
                                                         </div>
                                                     </div>
@@ -55,7 +55,7 @@
                                                         <div class="caption-table">
                                                             <a href="#nogo" class="caption-cell">
                                                                 <h3>สำนักงานเลขานุการสภา</h3>
-                                                                <span>TWITTER</span>
+                                                                <!-- <span>TWITTER</span> -->
                                                             </a>
                                                         </div>
                                                     </div>
@@ -67,7 +67,7 @@
                                                         <div class="caption-table">
                                                             <a href="#nogo" class="caption-cell">
                                                                 <h3>สำนักงานเลขานุการสภา</h3>
-                                                                <span>FACEBOOK</span>
+                                                                <!-- <span>FACEBOOK</span> -->
                                                             </a>
                                                         </div>
                                                     </div>
@@ -79,7 +79,7 @@
                                                         <div class="caption-table">
                                                             <a href="#nogo" class="caption-cell">
                                                                 <h3>สายด่วนเลขานุการสภา กทม.</h3>
-                                                                <span>0-2222-5349</span>
+                                                                <!-- <span>0-2222-5349</span> -->
                                                             </a>
                                                         </div>
                                                     </div>

@@ -1295,7 +1295,8 @@ $howManySteps: 100; //this needs to be even.
                                             display: flex;
                                             flex: row;
                                             align-items: center;
-                                            height: 70px;
+                                            //height: 70px;
+                                            height: 50px;
                                         }
 
                                         .icon-content{
@@ -1305,16 +1306,16 @@ $howManySteps: 100; //this needs to be even.
                                         }
     
                                         .text-content{
-                                            padding: 0 0 0 10px;
+                                            //padding: 0 0 0 10px;
                                             font-weight: $font-regular;
-                                            font-size: 2.2rem;
-                                            line-height: 2.6rem;
+                                            font-size: 2rem;
+                                            line-height: 2.2rem;
                                             color: $color-text;
                                             text-align: left;
                                             span{
                                                 font-weight: $font-regular;
-                                                font-size: 2.2rem;
-                                                line-height: 2.6rem;
+                                                font-size: 2rem;
+                                                line-height: 2.2rem;
                                                 color: $color-text;
                                                 display: -webkit-box;
                                                 -webkit-line-clamp: 2;

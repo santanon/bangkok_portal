@@ -83,9 +83,10 @@
                             </div>
                         </div>
                         <div class="main-content border-bottom">
-
-                            <div id="orgChartContainer">
-                                <div id="orgChart"></div>
+                            <div class="group-editor" id="editor">
+                                <div id="orgChartContainer">
+                                    <div id="orgChart"></div>
+                                </div>
                             </div>
 
                             <div class="group-social-share d-flex align-items-center justify-content-between">

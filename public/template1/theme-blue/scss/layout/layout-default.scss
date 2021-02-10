@@ -2935,8 +2935,8 @@ $howManySteps: 100; //this needs to be even.
 }
 
 .group-link-mainbkk{
-    position: absolute;
-    z-index: 9;
+    position: absolute; 
+    z-index: 100;
     right: 88px;
     padding: 8px;
     background-color: #d9d9d9;

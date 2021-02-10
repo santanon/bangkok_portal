@@ -382,7 +382,7 @@
         </div>
 
         <div class="group-link-mainbkk">
-            <a href="">
+            <a href="http://siamedigital.com:8002/" target="_blank">
                 <div class="icon-bkk">
                     <img src="{{ asset('template1/assets/images/icons/icon-bkk.png')}}" alt="icon">
                 </div>

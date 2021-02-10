@@ -69,8 +69,8 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6">
                     <div class="item-template" data-aos="zoom-in">
-                        <div class="img-template">
-                            <img src="{{ asset('panel/assets/images/template/template01.png')}}" alt="icon" title="Template01">
+                        <div class="img-template tp1">
+                            <img src="{{ asset('panel/assets/images/template/template01_1.jpg')}}" alt="icon" title="Template01">
                             <div class="name-template">
                                 Template 01
                             </div>
@@ -78,10 +78,10 @@
                         <div class="theme-color">
                             <div class="input-custom">
                                 <div class="select-wrapper width-full">
-                                    <select class="slc" name="" id="">
-                                        <option value="green" selected>Green</option>
-                                        <option value="blue">Blue</option>
+                                    <select class="slc" name="" id="slc_tp1">
+                                        <option value="blue" selected>Blue</option>
                                         <option value="orange">Orange</option>
+                                        <option value="green">Green</option>
                                         <option value="pink">Pink</option>
                                         <option value="purple">Purple</option>
                                     </select>
@@ -108,13 +108,12 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="item-template" data-aos="zoom-in">
-                        <div class="img-template">
-                            <img src="{{ asset('panel/assets/images/template/template02.png')}}" alt="icon" title="Template02">
+                        <div class="img-template tp2">
+                            <img src="{{ asset('panel/assets/images/template/template02_2.jpg')}}" alt="icon" title="Template02">
                             <div class="name-template">
                                 Template 02
                             </div>
@@ -122,10 +121,10 @@
                         <div class="theme-color">
                             <div class="input-custom">
                                 <div class="select-wrapper width-full">
-                                    <select class="slc" name="" id="">
-                                        <option value="green">Green</option>
+                                    <select class="slc" name="" id="slc_tp2">
                                         <option value="blue">Blue</option>
                                         <option value="orange" selected>Orange</option>
+                                        <option value="green">Green</option>
                                         <option value="pink">Pink</option>
                                         <option value="purple">Purple</option>
                                     </select>
@@ -156,8 +155,8 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="item-template" data-aos="zoom-in">
-                        <div class="img-template">
-                            <img src="{{ asset('panel/assets/images/template/template03.png')}}" alt="icon" title="Template03">
+                        <div class="img-template tp3">
+                            <img src="{{ asset('panel/assets/images/template/template03_3.jpg')}}" alt="icon" title="Template03">
                             <div class="name-template">
                                 Template 03
                             </div>
@@ -165,12 +164,12 @@
                         <div class="theme-color">
                             <div class="input-custom">
                                 <div class="select-wrapper width-full">
-                                    <select class="slc" name="" id="">
-                                        <option value="green">Green</option>
+                                    <select class="slc" name="" id="slc_tp3">
                                         <option value="blue">Blue</option>
                                         <option value="orange">Orange</option>
+                                        <option value="green" selected>Green</option>
                                         <option value="pink">Pink</option>
-                                        <option value="purple" selected>Purple</option>
+                                        <option value="purple">Purple</option>
                                     </select>
                                 </div>
                             </div>
@@ -200,8 +199,8 @@
 
                 <div class="col-lg-4 col-md-6">
                     <div class="item-template" data-aos="zoom-in">
-                        <div class="img-template">
-                            <img src="{{ asset('panel/assets/images/template/template04.png')}}" alt="icon" title="Template04">
+                        <div class="img-template tp4">
+                            <img src="{{ asset('panel/assets/images/template/template04_4.jpg')}}" alt="icon" title="Template04">
                             <div class="name-template">
                                 Template 04
                             </div>
@@ -209,10 +208,10 @@
                         <div class="theme-color">
                             <div class="input-custom">
                                 <div class="select-wrapper width-full">
-                                    <select class="slc" name="" id="">
-                                        <option value="green">Green</option>
+                                    <select class="slc" name="" id="slc_tp4">
                                         <option value="blue">Blue</option>
                                         <option value="orange">Orange</option>
+                                        <option value="green">Green</option>
                                         <option value="pink" selected>Pink</option>
                                         <option value="purple">Purple</option>
                                     </select>
@@ -243,8 +242,8 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="item-template" data-aos="zoom-in">
-                        <div class="img-template">
-                            <img src="{{ asset('panel/assets/images/template/template05.png')}}" alt="icon" title="Template05">
+                        <div class="img-template tp5">
+                            <img src="{{ asset('panel/assets/images/template/template05_5.jpg')}}" alt="icon" title="Template05">
                             <div class="name-template">
                                 Template 05
                             </div>
@@ -252,12 +251,12 @@
                         <div class="theme-color">
                             <div class="input-custom">
                                 <div class="select-wrapper width-full">
-                                    <select class="slc" name="" id="">
-                                        <option value="green">Green</option>
-                                        <option value="blue" selected>Blue</option>
+                                    <select class="slc" name="" id="slc_tp5">
+                                        <option value="blue">Blue</option>
                                         <option value="orange">Orange</option>
+                                        <option value="green">Green</option>
                                         <option value="pink">Pink</option>
-                                        <option value="purple">Purple</option>
+                                        <option value="purple" selected>Purple</option>
                                     </select>
                                 </div>
                             </div>
@@ -302,7 +301,7 @@
                     </div>
                 </div>
                 <div class="modal-body">
-                    <div align="center"><img src="{{ asset('panel/assets/images/template/template01.png')}}"> </div> 
+                    <div align="center"><img src="{{ asset('panel/assets/images/template/template01_1.jpg')}}"> </div> 
                 </div>
             </div>
         </div>
@@ -317,7 +316,7 @@
                     </div>
                 </div>
                 <div class="modal-body">
-                    <div align="center"><img src="{{ asset('panel/assets/images/template/2.jpg')}}"> </div> 
+                    <div align="center"><img src="{{ asset('panel/assets/images/template/template02_2.jpg')}}"> </div> 
                 </div>
             </div>
         </div>
@@ -332,7 +331,7 @@
                     </div>
                 </div>
                 <div class="modal-body">
-                    <div align="center"><img src="{{ asset('panel/assets/images/template/3.jpg')}}"> </div> 
+                    <div align="center"><img src="{{ asset('panel/assets/images/template/template03_3.jpg')}}"> </div> 
                 </div>
             </div>
         </div>
@@ -347,7 +346,7 @@
                     </div>
                 </div>
                 <div class="modal-body">
-                    <div align="center"><img src="{{ asset('panel/assets/images/template/4.jpg')}}"> </div> 
+                    <div align="center"><img src="{{ asset('panel/assets/images/template/template04_4.jpg')}}"> </div> 
                 </div>
             </div>
         </div>
@@ -362,7 +361,7 @@
                     </div>
                 </div>
                 <div class="modal-body">
-                    <div align="center"><img src="{{ asset('panel/assets/images/template/5.jpg')}}"> </div> 
+                    <div align="center"><img src="{{ asset('panel/assets/images/template/template05_5.jpg')}}"> </div> 
                 </div>
             </div>
         </div>
@@ -373,6 +372,105 @@
 </div>
 
 @include('panel/include.css_scripts')
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#slc_tp1').change(function(){
+            if($(this).val()=='blue'){
+                $(this).closest('.item-template').find('.tp1 img').attr("src", '../panel/assets/images/template/template01_1.jpg');
+                $('#modal_1').find('.modal-body div img').attr("src", '../panel/assets/images/template/template01_1.jpg');
+            }else if($(this).val()=='orange'){
+                $(this).closest('.item-template').find('.tp1 img').attr("src", '../panel/assets/images/template/template01_2.jpg');
+                $('#modal_1').find('.modal-body div img').attr("src", '../panel/assets/images/template/template01_2.jpg');
+            }else if($(this).val()=='green'){
+                $(this).closest('.item-template').find('.tp1 img').attr("src", '../panel/assets/images/template/template01_3.jpg');
+                $('#modal_1').find('.modal-body div img').attr("src", '../panel/assets/images/template/template01_3.jpg');
+            }else if($(this).val()=='pink'){
+                $(this).closest('.item-template').find('.tp1 img').attr("src", '../panel/assets/images/template/template01_4.jpg');
+                $('#modal_1').find('.modal-body div img').attr("src", '../panel/assets/images/template/template01_4.jpg');
+            }else{
+                $(this).closest('.item-template').find('.tp1 img').attr("src", '../panel/assets/images/template/template01_5.jpg');
+                $('#modal_1').find('.modal-body div img').attr("src", '../panel/assets/images/template/template01_5.jpg');
+            }
+        });
+
+        $('#slc_tp2').change(function(){
+            if($(this).val()=='blue'){
+                $(this).closest('.item-template').find('.tp2 img').attr("src", '../panel/assets/images/template/template02_1.jpg');
+                $('#modal_2').find('.modal-body div img').attr("src", '../panel/assets/images/template/template02_1.jpg');
+            }else if($(this).val()=='orange'){
+                $(this).closest('.item-template').find('.tp2 img').attr("src", '../panel/assets/images/template/template02_2.jpg');
+                $('#modal_2').find('.modal-body div img').attr("src", '../panel/assets/images/template/template02_2.jpg');
+            }else if($(this).val()=='green'){
+                $(this).closest('.item-template').find('.tp2 img').attr("src", '../panel/assets/images/template/template02_3.jpg');
+                $('#modal_2').find('.modal-body div img').attr("src", '../panel/assets/images/template/template02_3.jpg');
+            }else if($(this).val()=='pink'){
+                $(this).closest('.item-template').find('.tp2 img').attr("src", '../panel/assets/images/template/template02_4.jpg');
+                $('#modal_2').find('.modal-body div img').attr("src", '../panel/assets/images/template/template02_4.jpg');
+            }else{
+                $(this).closest('.item-template').find('.tp2 img').attr("src", '../panel/assets/images/template/template02_5.jpg');
+                $('#modal_2').find('.modal-body div img').attr("src", '../panel/assets/images/template/template02_5.jpg');
+            }
+        });
+
+        $('#slc_tp3').change(function(){
+            if($(this).val()=='blue'){
+                $(this).closest('.item-template').find('.tp3 img').attr("src", '../panel/assets/images/template/template03_1.jpg');
+                $('#modal_3').find('.modal-body div img').attr("src", '../panel/assets/images/template/template03_1.jpg');
+            }else if($(this).val()=='orange'){
+                $(this).closest('.item-template').find('.tp3 img').attr("src", '../panel/assets/images/template/template03_2.jpg');
+                $('#modal_3').find('.modal-body div img').attr("src", '../panel/assets/images/template/template03_2.jpg');
+            }else if($(this).val()=='green'){
+                $(this).closest('.item-template').find('.tp3 img').attr("src", '../panel/assets/images/template/template03_3.jpg');
+                $('#modal_3').find('.modal-body div img').attr("src", '../panel/assets/images/template/template03_3.jpg');
+            }else if($(this).val()=='pink'){
+                $(this).closest('.item-template').find('.tp3 img').attr("src", '../panel/assets/images/template/template03_4.jpg');
+                $('#modal_3').find('.modal-body div img').attr("src", '../panel/assets/images/template/template03_4.jpg');
+            }else{
+                $(this).closest('.item-template').find('.tp3 img').attr("src", '../panel/assets/images/template/template03_5.jpg');
+                $('#modal_3').find('.modal-body div img').attr("src", '../panel/assets/images/template/template03_5.jpg');
+            }
+        });
+
+        $('#slc_tp4').change(function(){
+            if($(this).val()=='blue'){
+                $(this).closest('.item-template').find('.tp4 img').attr("src", '../panel/assets/images/template/template04_1.jpg');
+                $('#modal_4').find('.modal-body div img').attr("src", '../panel/assets/images/template/template04_1.jpg');
+            }else if($(this).val()=='orange'){
+                $(this).closest('.item-template').find('.tp4 img').attr("src", '../panel/assets/images/template/template04_2.jpg');
+                $('#modal_4').find('.modal-body div img').attr("src", '../panel/assets/images/template/template04_2.jpg');
+            }else if($(this).val()=='green'){
+                $(this).closest('.item-template').find('.tp4 img').attr("src", '../panel/assets/images/template/template04_3.jpg');
+                $('#modal_4').find('.modal-body div img').attr("src", '../panel/assets/images/template/template04_3.jpg');
+            }else if($(this).val()=='pink'){
+                $(this).closest('.item-template').find('.tp4 img').attr("src", '../panel/assets/images/template/template04_4.jpg');
+                $('#modal_4').find('.modal-body div img').attr("src", '../panel/assets/images/template/template04_4.jpg');
+            }else{
+                $(this).closest('.item-template').find('.tp4 img').attr("src", '../panel/assets/images/template/template04_5.jpg');
+                $('#modal_4').find('.modal-body div img').attr("src", '../panel/assets/images/template/template04_5.jpg');
+            }
+        });
+
+        $('#slc_tp5').change(function(){
+            if($(this).val()=='blue'){
+                $(this).closest('.item-template').find('.tp5 img').attr("src", '../panel/assets/images/template/template05_1.jpg');
+                $('#modal_5').find('.modal-body div img').attr("src", '../panel/assets/images/template/template05_1.jpg');
+            }else if($(this).val()=='orange'){
+                $(this).closest('.item-template').find('.tp5 img').attr("src", '../panel/assets/images/template/template05_2.jpg');
+                $('#modal_5').find('.modal-body div img').attr("src", '../panel/assets/images/template/template05_2.jpg');
+            }else if($(this).val()=='green'){
+                $(this).closest('.item-template').find('.tp5 img').attr("src", '../panel/assets/images/template/template05_3.jpg');
+                $('#modal_5').find('.modal-body div img').attr("src", '../panel/assets/images/template/template05_3.jpg');
+            }else if($(this).val()=='pink'){
+                $(this).closest('.item-template').find('.tp5 img').attr("src", '../panel/assets/images/template/template05_4.jpg');
+                $('#modal_5').find('.modal-body div img').attr("src", '../panel/assets/images/template/template05_4.jpg');
+            }else{
+                $(this).closest('.item-template').find('.tp5 img').attr("src", '../panel/assets/images/template/template05_5.jpg');
+                $('#modal_5').find('.modal-body div img').attr("src", '../panel/assets/images/template/template05_5.jpg');
+            }
+        });
+    });
+</script>
 
 @endsection
 

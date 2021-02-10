@@ -26,7 +26,7 @@
             <ul>
                 <li class="">
                     <div class="group-canvas-top">
-                        <a href="">
+                        <a href="http://siamedigital.com:8002/login" target="_blank">
                             <div class="icon-top">
                                 <img src="{{ asset('template1/assets/images/icons/icon-signin-mobile.svg')}}" alt="icon">
                             </div>
@@ -37,7 +37,7 @@
                 </li>
                 <li class="">
                     <div class="group-canvas-top">
-                        <a href="">
+                        <a href="http://siamedigital.com:8002/register" target="_blank">
                             <div class="icon-top">
                                 <img src="{{ asset('template1/assets/images/icons/icon-register-mobile.svg')}}" alt="icon">
                             </div>
@@ -147,60 +147,7 @@
                             </li>
                         </ul>
                     </div>
-
-                    <div class="tools-web" style="display: none;">
-                        <ul>
-                            <li>
-                                <a href="">
-                                    <span class="icon-register"></span>Register
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <span class="icon-signin"></span>Sign in
-                                </a>
-                            </li>
-                            <li>
-                                <div class="sizefonts-wrapper">
-                                    <div class="reduce" id="reduce-size"></div>
-                                    <div class="normal active" id="normal-size"></div>
-                                    <div class="increase" id="increase-size"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="lang-site">
-                                    <span>TH</span><i class="fas fa-angle-up"></i>
-                                    <ul class="multi-lang">
-                                        <li>
-                                            <a href="/">EN</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="search-site">
-                                    <div class="icon-search"></div>
-                                </div>
-                            </li>
-                        </ul>
-
-                        <div class="section-search-wrapper">
-                            <div class="group-search">
-                                 <form action="">
-                                    @csrf <!-- {{ csrf_field() }} -->
-                                    <div class="input-custom">
-                                        <div class="input-box">
-                                            <input type="text" name="" required="">
-                                            <label for="">Search</label>
-                                        </div>
-                                    </div>
-                                    <div class="btn-search d-flex justify-content-end">
-                                        <button type="submit" class="btn btn-primary">SEARCH</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>

@@ -37,11 +37,11 @@
                                         <div class="item -album">
                                             <div class="cover-album" style="background-image: url('../../template1/assets/images/img-banner-demo1.png');">
                                                 <a href="#"><div class="bg-layer"></div></a>
-                                                <div class="top-album">
+                                                <!-- <div class="top-album">
                                                     <div class="source">
                                                         <span>FACEBOOK</span>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                                 <div class="caption-album show bg-color-primary-opacity">
                                                     <span>ผู้ว่าฯ อัศวิน</span>
                                                 </div>
@@ -52,11 +52,11 @@
                                         <div class="item -album">
                                             <div class="cover-album" style="background-image: url('../../template1/assets/images/img-album-demo2.jpg');">
                                                 <a href="#"><div class="bg-layer"></div></a>
-                                                <div class="top-album">
+                                                <!-- <div class="top-album">
                                                     <div class="source">
                                                         <span>TWITTER</span>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                                 <div class="caption-album show bg-color-primary-opacity">
                                                     <span>สำนักงานเลขานุการสภา</span>
                                                 </div>
@@ -67,11 +67,11 @@
                                         <div class="item -album">
                                             <div class="cover-album" style="background-image: url('../../template1/assets/images/img-album-demo3.jpg');">
                                                 <a href="#"><div class="bg-layer"></div></a>
-                                                <div class="top-album">
+                                                <!-- <div class="top-album">
                                                     <div class="source">
                                                         <span>FACEBOOK</span>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                                 <div class="caption-album show bg-color-primary-opacity">
                                                     <span>สำนักงานเลขานุการสภา</span>
                                                 </div>
@@ -82,11 +82,11 @@
                                         <div class="item -album">
                                             <div class="cover-album" style="background-image: url('../../template1/assets/images/img-album-demo4.jpg');">
                                                 <a href="#"><div class="bg-layer"></div></a>
-                                                <div class="top-album">
+                                                <!-- <div class="top-album">
                                                     <div class="source">
                                                         <span>สายด่วนเลขานุการสภา กทม.</span>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                                 <div class="caption-album show bg-color-primary-opacity">
                                                     <span>0-2222-5349</span>
                                                 </div>

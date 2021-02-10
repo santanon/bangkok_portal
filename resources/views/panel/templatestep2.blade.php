@@ -36,43 +36,53 @@
                 <div class="group-list-menu">
                     <div class="row">
                         <div class="col-md-3">
-                            <div class="list-menu" data-toggle="modal" data-target="#modalpanel">
+                            <div class="list-menu success" data-toggle="modal" data-target="#modalpanel">
                                 <div class="icon-menu">
                                     <img src="{{ asset('assets/panel/icon-1.png')}}" alt="icon">
                                 </div>
                                 <div class="text-menu">Web Site</div>
+                                <div class="check -pass"><i class="fas fa-check"></i></div>
+                                <div class="check -notpass"><i class="fas fa-times"></i></div>
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <div class="list-menu" data-toggle="modal" data-target="#modalpanel">
+                            <div class="list-menu success" data-toggle="modal" data-target="#modalpanel">
                                 <div class="icon-menu">
                                     <img src="{{ asset('assets/panel/icon-2.png')}}" alt="icon">
                                 </div>
                                 <div class="text-menu">Web User</div>
+                                <div class="check -pass"><i class="fas fa-check"></i></div>
+                                <div class="check -notpass"><i class="fas fa-times"></i></div>
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <div class="list-menu" data-toggle="modal" data-target="#modalpanel">
+                            <div class="list-menu success" data-toggle="modal" data-target="#modalpanel">
                                 <div class="icon-menu">
                                     <img src="{{ asset('assets/panel/icon-3.png')}}" alt="icon">
                                 </div>
                                 <div class="text-menu">Group Management Asset</div>
+                                <div class="check -pass"><i class="fas fa-check"></i></div>
+                                <div class="check -notpass"><i class="fas fa-times"></i></div>
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <div class="list-menu" data-toggle="modal" data-target="#modalpanel">
+                            <div class="list-menu success" data-toggle="modal" data-target="#modalpanel">
                                 <div class="icon-menu">
                                     <img src="{{ asset('assets/panel/icon-4.png')}}" alt="icon">
                                 </div>
                                 <div class="text-menu">Web Template</div>
+                                <div class="check -pass"><i class="fas fa-check"></i></div>
+                                <div class="check -notpass"><i class="fas fa-times"></i></div>
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <div class="list-menu" data-toggle="modal" data-target="#modalpanel">
+                            <div class="list-menu success" data-toggle="modal" data-target="#modalpanel">
                                 <div class="icon-menu">
                                     <img src="{{ asset('assets/panel/icon-4.png')}}" alt="icon">
                                 </div>
                                 <div class="text-menu">Web Template</div>
+                                <div class="check -pass"><i class="fas fa-check"></i></div>
+                                <div class="check -notpass"><i class="fas fa-times"></i></div>
                             </div>
                         </div>
                     </div>

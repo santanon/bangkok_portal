@@ -33,6 +33,8 @@
         .img-template{
             margin-bottom: 20px;
             position: relative;
+            height: 410px;
+            overflow: hidden;
             img{
                 width: 100%;
             }
@@ -80,6 +82,7 @@
     text-align: center;
     cursor: pointer;
     margin-bottom: 30px;
+    position: relative;
     .icon-menu{
         width: 60px;
         height: 40px;
@@ -94,6 +97,29 @@
     .text-menu{
         font-size: 18px;
         color: #fff;
+    }
+    .check{
+        display: none;
+        margin: 5px 0;
+        &.-pass{
+            .fas{
+                color: #5cb85c;
+            }
+        }
+        &.-notpass{
+            .fas{
+                color: #F32013;
+            }
+        }
+        .fas{
+            font-size: 1.6rem;
+        }
+    }
+
+    &.success{
+        .check{
+            display: block;
+        } 
     }
 }
 
@@ -236,6 +262,25 @@
 }
 .modal-custom#modalpanel{
     padding-right: 17px;
+}
+.modal{
+    &.modal-custom{
+        // padding-left: 17px;
+        .modal-dialog{
+            &.modal-xl{
+                max-width: 100%;
+                height: 96%;
+                padding-left: 17px;
+            }
+            .modal-content{
+                .modal-body{
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
 }
 
 //Loading

@@ -482,8 +482,7 @@ $howManySteps: 100; //this needs to be even.
                             background-color: #525252;
                         }
                     }
-                }
-             
+                }      
                 .main-news{
                     position: relative;
                     .img-news{
@@ -662,7 +661,6 @@ $howManySteps: 100; //this needs to be even.
                 .add-news{
                     display: none;
                 }
-
                 .action-slide{
                     margin: 20px 0 30px;
                     //margin: 50px 0;
@@ -721,7 +719,6 @@ $howManySteps: 100; //this needs to be even.
                         }
                     }
                 }
-
                 .group-slide{
                     position: relative;
                     .list-item{
@@ -817,7 +814,9 @@ $howManySteps: 100; //this needs to be even.
                             flex-direction: row;
                             flex-wrap: wrap;
                             background-color: white;
-
+                            &:focus{
+                                outline: none;
+                            }
                             .exthumb{
                                 display: none;
                             }
@@ -1252,7 +1251,6 @@ $howManySteps: 100; //this needs to be even.
                         }
                     }
                 }
-
                 .group-vote{
                     .score-wrapper{
                         padding: 20px;
@@ -1397,8 +1395,6 @@ $howManySteps: 100; //this needs to be even.
                         }
                     }
                 }
-
-
                 .group-oneimage{
                     text-align: center;
                     margin-bottom: 30px;
@@ -1784,97 +1780,146 @@ $howManySteps: 100; //this needs to be even.
                         }
                     }
                 }
-                .clendar-warpper{
-                    .head-calendar{
-                        margin-bottom: 20px;
-                        .title-calendar{
-                            display: flex;
-                            align-items: center;
-                            .month-title{
-                                font-size: 2.6rem;
-                                font-weight: $font-regular;
-                                margin-right: 10px;
-                            }
-                            .year-title{
-                                font-size: 2.6rem;
-                                font-weight: $font-regular;
-                            }
-                        }
-                        .calendar-wrapper-btn{
-                            text-align: right;
-                            #prev{
-                                border-radius: 0;
-                                background-color: #525252;
-                                width: 50px;
-                                height: 40px;
-                                background-image: url('../../assets/images/icons/icon-slide-prev.png');
-                                background-repeat: no-repeat;
-                                background-position: center center;
-                                &:focus{
-                                    outline: none;
-                                    box-shadow: none;
-                                }
-                            }
-                            #next{
-                                border-radius: 0;
-                                background-color: #525252;
-                                width: 50px;
-                                height: 40px;
-                                background-image: url('../../assets/images/icons/icon-slide-next.png');
-                                background-repeat: no-repeat;
-                                background-position: center center;
-                                &:focus{
-                                    outline: none;
-                                    box-shadow: none;
-                                }
-                            }
-                        }
-                    }
+                .calendar-wrapper{
+                    position: relative;
                     .fc .fc-scrollgrid-section>*{
                         border-right-width: 0;
                     }
-                    #calendar{
-
-                        table{
-                            // border: none;
-                            border-width: 0;
-                            border-collapse: separate;
-                            border-spacing: 2px;
-                            thead{
-                                tr{
-                                    td{
-                                        border-right-width: 0;
+                    .filter-date{
+                        .search-content{
+                            margin-bottom: 20px;
+                        }
+                        .remark-calendar{
+                            position: relative;
+                            ul{
+                                margin: 0;
+                                padding: 0;
+                                li{
+                                    list-style: none;
+                                    margin-right: 10px;
+                                    color: #525252;
+                                    &.activity-calendar{
+                                        &::before{
+                                            content: '';
+                                            display: inline-block;
+                                            width: 8px;
+                                            height: 8px;
+                                            background-color: $color-secondary;
+                                            border-radius: 100%;
+                                            margin-right: 5px;
+                                        }
+    
                                     }
-                                }
-                            }
-                        }
-                        .fc-daygrid-day-top{
-                            justify-content: center;
-                            a{
-                                font-weight: $font-regular;
-                                color: #525252;
-                            }
-                        }
-                        
-                        .fc-col-header {
-                            tbody{
-                                tr{
-                                    .fc-col-header-cell{
-                                        .fc-scrollgrid-sync-inner{
-                                            .fc-col-header-cell-cushion {
-                                                padding: 4px;
-                                                color: #fff;
-                                                font-weight: $font-regular;
-                                            }
+                                    &.today-calendar{
+                                        margin-right: 0;
+                                        &::before{
+                                            content: '';
+                                            display: inline-block;
+                                            width: 8px;
+                                            height: 8px;
+                                            border: 1px solid $color-secondary;
+                                            margin-right: 5px;
                                         }
                                     }
                                 }
                             }
                         }
-                        .fc-daygrid-day.fc-day-today{
-                            background-color: #fff;
+                        .select-wrapper{
+                            padding: 0 4px;
+                        }
+                        @media only screen and (max-width: 767px) {
+                            margin-bottom: 20px;
                         }
                     }
+                    .main-calendar{
+                        #calendar{
+                            table{
+                                // border: none;
+                                border-width: 0;
+                                border-collapse: separate;
+                                border-spacing: 4px 2px;
+                                thead{
+                                    tr{
+                                        th{
+                                            border: 1px solid #fff;
+                                            background-color: #fff;
+                                            padding: 8px 0;
+                                            span{
+                                                font-weight: $font-medium;
+                                                color: #525252;
+                                            }
+                                        }
+                                        td{
+                                            border: none;
+                                        }
+                                    }
+                                }
+                                .fc-body{
+                                    >tr{
+                                        >td.fc-widget-content{
+                                            border: none;
+                                        }
+                                    }
+                                }
+                            }
+                            .fc-day{
+                                background-color: #f8f8f8;
+                                border: 1px solid #cfd1d4;
+                            }
+                            .fc-day-number{
+                                font-size: 1.6rem;
+                                text-align: center;
+                                width: 100%;
+                                color: #525252;
+                            }
+                            .fc-bg{
+                                .fc-today{
+                                    border: 1px solid $color-primary;
+                                }
+                            }
+                            .fc-content-skeleton{
+                                .fc-day-top{
+                                    padding-top: 5px;
+                                }
+                                .fc-today{
+                                    color: $color-secondary;
+                                }
+                            }
+                            .fc-event-container{
+                                .fc-event{
+                                    background-color: $color-secondary;
+                                    border: 1px solid $color-secondary;
+                                    padding: 2px;
+                                }
+                            }
+                            .fc-more-cell{
+                                div{
+                                    a{
+                                        color: $color-secondary;
+                                    }
+                                }
+                            }
+                            .fc-head{
+                                .fc-head-container{
+                                    table{
+                                        thead{
+                                            tr{
+                                                th.fc-day-header{
+                                                    background-color: $color-secondary;
+                                                    span{
+                                                        color: #fff;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            
+                        }
+                    }
+                    
+                    
                 }
 
                 .page-list-item-wrapper{
@@ -1938,6 +1983,8 @@ $howManySteps: 100; //this needs to be even.
                             border-radius: 0;
                             border: none;
                             margin-bottom: 30px;
+                            position: relative;
+                            overflow: inherit;
                             .card-header{
                                 padding: 0;
                                 border: none;
@@ -2043,7 +2090,7 @@ $howManySteps: 100; //this needs to be even.
                         }
                         .contact-gov{
                             .tel-gov{
-                                background-color: $color-green-secondary;
+                                background-color: $color-secondary;
                                 padding: 5px 10px;
                                 width: 50%;
                                 .on{
@@ -2062,7 +2109,7 @@ $howManySteps: 100; //this needs to be even.
                                 }
                             }
                             .tel-internal{
-                                background-color: $color-green-primary;
+                                background-color: $color-primary;
                                 padding: 5px 10px;
                                 width: 50%;
                                 text-align: right;
@@ -2670,7 +2717,7 @@ $howManySteps: 100; //this needs to be even.
             &.-album{
                 .cover-album{
                     .bg-layer{
-                        background-color: rgba(0, 102, 0, 0.5);
+                        background-color: rgba($color: $color-primary, $alpha: 0.5);
                         opacity: 1;
                         
                     }
@@ -2888,8 +2935,8 @@ $howManySteps: 100; //this needs to be even.
 }
 
 .group-link-mainbkk{
-    position: absolute;
-    z-index: 9;
+    position: absolute; 
+    z-index: 100;
     right: 88px;
     padding: 8px;
     background-color: #d9d9d9;
@@ -3079,6 +3126,92 @@ $howManySteps: 100; //this needs to be even.
             }
         }
     }                   
+}
+
+// ita
+.relate-link-container{
+    position: relative;
+    margin: 0 auto 30px;
+    .top-content{
+        .group-text{
+            .title{
+                color: $color-primary;
+            }
+        }
+    }
+    .item-group{
+        margin-bottom: 30px;
+
+        .item-title{
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+
+            .title-icon{
+                padding: 10px;
+                border: 1px solid $color-primary;
+                background-color: $color-primary;
+
+                .st0{fill:white;}
+            }
+
+            .title-text{
+                font-weight: $font-regular;
+                font-size: 2.6rem;
+                line-height: 3.2rem;
+                color: $color-primary;
+                padding: 0 15px;
+            }
+        }
+
+        .item-content{
+            display: block;
+            //padding: 20px;
+            //margin: 5px 0 0;
+            //border-top: solid 2px $color-primary;
+            background-color: white;
+
+            ul{
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: grid;
+                // grid-template-columns: auto auto auto auto;
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+                //grid-gap: 30px;
+
+                li{
+                    // width: auto;
+                    height: auto;
+                    // display: block;
+
+                    a{
+                        font-size: 2.2rem;
+                        line-height: 2.6rem;
+                        color: $color-text;
+                        padding: 20px;
+                        display: block;
+                        &:hover{
+                            background-color: $color-secondary;
+                            color: #fff;
+                        }
+                    }
+                }
+
+                @include media-breakpoint-down(lg) {
+                    grid-template-columns: repeat(3, minmax(0, 1fr));
+                }
+
+                @include media-breakpoint-down(md) {
+                    grid-template-columns: repeat(2, minmax(0, 1fr));
+                }
+
+                @include media-breakpoint-down(sm) {
+                    grid-template-columns: repeat(1, minmax(0, 1fr));
+                }
+            }
+        }
+    }
 }
 
 

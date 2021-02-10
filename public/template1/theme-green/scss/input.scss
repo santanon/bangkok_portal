@@ -225,7 +225,7 @@
     }
     .form-control{
         &:focus{
-            border-color: $color-green-primary;
+            border-color: $color-primary;
             box-shadow: none;
             outline: none;
         }
@@ -305,7 +305,7 @@
 
 
 .ui-datepicker{
-    z-index: 99 !important;
+    z-index: 999 !important;
 }
 .ui-widget button, .ui-widget input, .ui-widget select, .ui-widget textarea{
     font-family: 'Kanit' !important;

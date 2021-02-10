@@ -26,7 +26,7 @@
             <ul>
                 <li class="">
                     <div class="group-canvas-top">
-                        <a href="">
+                        <a href="http://siamedigital.com:8002/login" target="_blank">
                             <div class="icon-top">
                                 <img src="{{ asset('template2/assets/images/icons/icon-signin-mobile.svg')}}" alt="icon">
                             </div>
@@ -37,7 +37,7 @@
                 </li>
                 <li class="">
                     <div class="group-canvas-top">
-                        <a href="">
+                        <a href="http://siamedigital.com:8002/register" target="_blank">
                             <div class="icon-top">
                                 <img src="{{ asset('template2/assets/images/icons/icon-register-mobile.svg')}}" alt="icon">
                             </div>
@@ -114,12 +114,12 @@
                         <div class="account-wrapper">
                             <ul>
                                 <li>
-                                    <a href="">
+                                    <a href="http://siamedigital.com:8002/register" target="_blank">
                                         Register<span class="icon-register"></span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="">
+                                    <a href="http://siamedigital.com:8002/login" target="_blank">
                                         Sign in<span class="icon-signin"></span>
                                     </a>
                                 </li>
@@ -446,9 +446,9 @@
                         <div class="increase" id="increase-size"></div>
                     </div>
                     <div class="group-link-mainbkk">
-                        <a href="">
+                        <a href="http://siamedigital.com:8002/" target="_blank">
                             <div class="icon-bkk">
-                                <img src="{{ asset('template2/assets/images/icons/icon-bkk.png')}}" alt="icon">
+                                <img src="{{ asset('template2/assets/images/icons/icon-bkk.png')}}" alt="icon bangkok">
                             </div>
                             <div class="text-bkk">
                                 <strong>กรุงเทพมหานคร</strong>

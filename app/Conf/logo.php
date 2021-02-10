@@ -15,18 +15,18 @@ class Logo
 	var $config_search_field = array('');
 	 
 	public function index()
-	{   
+	{    
 		$CustomHelper = new \App\CustomHelper;
-		$TextLanguage = new \App\TextLanguage;
-		  
+		$TextLanguage = new \App\TextLanguage;		 
 		 
-		$data['this_cat'] = $TextLanguage->lang('logo');
-		$data['this_page'] = $TextLanguage->lang('edit');
-		$data['title'] = $data['this_page'] . ' : ' . $data['this_cat'] . ' - ' . $TextLanguage->lang('bangkok_portal');
+		$data['this_cat'] = $TextLanguage->lang(@$this->mod);
+		$data['this_page'] = $TextLanguage->lang('add');
+		$data['title'] = $data['this_page'] . ' : ' . $data['this_cat'] . ' - ' . $TextLanguage->lang('bangkok_portal');  
+		$data['config_mod'] = $this->mod;     
+		$data['config_header_info'] = $TextLanguage->lang('help_gallery_edit');
+		$data['config_footer_js'] = 'mainmenuFocus(1,11,1); btn2stageFocus(0,2);';        
 		  
-		$data['config_mod'] = $this->mod;       
-		   
-		$this->load->view('panel/logo/index', $data); 
+		return $data;   
 	} 
 	
 	public function url_submit()

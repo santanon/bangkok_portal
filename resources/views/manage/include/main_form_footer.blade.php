@@ -36,7 +36,7 @@ $(function(){
 	
 	// side menu group id = 0
 	
-	<?php echo $config_footer_js; ?>
+	<?php echo @$config_footer_js; ?>
 	  
 });
 <?php

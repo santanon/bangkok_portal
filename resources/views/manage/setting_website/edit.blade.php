@@ -5,6 +5,11 @@ $TextLanguage = new \App\TextLanguage;
 ?>   
 @include('manage.include.main_form_header') 
 
+<script>
+	parent.document.getElementById('modal_full_span').innerHTML = 'ตั้งค่าเว็บไซต์' 
+	</script>
+
+
 <script type="text/javascript">
 function check_form()
 {

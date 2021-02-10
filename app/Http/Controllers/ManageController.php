@@ -275,35 +275,28 @@ class ManageController extends Controller
 		$m->edit_submit();
     } 	 
     public function edit_logo()
-    {        
-        $CustomHelper = new \App\CustomHelper;
-		$TextLanguage = new \App\TextLanguage;
+    {      
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage; 
 		$this->include_check_login();  
-         
-        $m = $CustomHelper->module_setting($_GET['m']);
-        
-        $data['mode']                       = 'edit';
-        $data['text_header']                = $m['text_header'].' : แก้ไข';
-        $data['text_header_description']    = $m['text_header_description'];
-        $data['col_list']                   = explode(',',$m['col_list']);
+
+		$c = "\App\Conf\\".$_GET['m'];
+		$m = new $c();  
+		$data = $m->index();
+		  
+        return view('manage.'.$_GET['m'].'.index',$data);  
+    }  
+	public function edit_website()
+    {      
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage; 
+		$this->include_check_login();  
+
+		$c = "\App\Conf\\".$_GET['m'];
+		$m = new $c();  
+		$data = $m->edit();
  
-        $q = "SELECT * FROM tbl_".$m['table_name']." WHERE id = ?";
-        $v = $_SESSION['panel_id'];
-        $res = $CustomHelper->API_CALL($CustomHelper->API_URL('api_'.$m['api_name']),$q,$v);
- 
-        if($res != '')
-        {
-            $data['rows'] = json_decode($res);
-        }
-        else
-        {
-            ?>
-            ไม่พบข้อมูล...
-            <?php
-            exit;
-        }
-         
-        return view('manage.form_logo',$data);
+        return view('manage.'.$_GET['m'].'.edit',$data);  
     } 
     public function include_check_login()
 	{ 

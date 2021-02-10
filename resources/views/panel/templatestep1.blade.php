@@ -7,9 +7,12 @@
 
 <div class="main-wrapper bg-post-login">
     <header class="panel-header -admin">
+        
+        <!--
         <div class="header-top">
             @include('panel/include.head-top')
         </div>
+        -->
 
         <div class="header-main">
             <div class="container">
@@ -25,33 +28,33 @@
                                 <li>
                                     <div class="step -1">
                                         <div class="line active">
-                                            <div class="circle active">10%</div>
+                                            <div class="circle active">1</div>
                                         </div>
                                         <div class="text-step">
-                                            <span>step 1</span>
-                                            เลือกแบบ Web Template
+                                            <span>ขั้นตอนที่ 1</span>
+                                            เลือกแบบเว็บ Template และสี
                                         </div>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="step -2">
                                         <div class="line">
-                                            <div class="circle">50%</div>
+                                            <div class="circle">2</div>
                                         </div>
                                         <div class="text-step">
-                                            <span>step 2</span>
-                                            Create Content
+                                            <span>ขั้นตอนที่ 2</span>
+                                            กำหนดเนื้อหาเว็บไซต์เบื้องต้น
                                         </div>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="step -3">
                                         <div class="line">
-                                            <div class="circle">100%</div>
+                                            <div class="circle">3</div>
                                         </div>
                                         <div class="text-step">
-                                            <span>step 3</span>
-                                            Completed
+                                            <span>ขั้นตอนที่ 3</span>
+                                            ตรวจสอบและเข้าสู่หน้าเว็บไซต์
                                         </div>
                                     </div>
                                 </li>
@@ -72,18 +75,18 @@
                         <div class="img-template">
                             <img src="{{ asset('panel/assets/images/template/template01.png')}}" alt="icon" title="Template01">
                             <div class="name-template">
-                                Template 01
+                                Template 1
                             </div>
                         </div>
                         <div class="theme-color">
                             <div class="input-custom">
                                 <div class="select-wrapper width-full">
-                                    <select class="slc" name="" id="">
-                                        <option value="green" selected>Green</option>
-                                        <option value="blue">Blue</option>
-                                        <option value="orange">Orange</option>
-                                        <option value="pink">Pink</option>
-                                        <option value="purple">Purple</option>
+                                    <select class="slc" name="t1" id="t1">
+                                        <option value="11" selected>สีเขียว</option>
+                                        <option value="12">สีฟ้า</option>
+                                        <option value="13">สีส้ม</option>
+                                        <option value="14">สีชมพู</option>
+                                        <option value="15">สีม่วง</option> 
                                     </select>
                                 </div>
                             </div>
@@ -101,9 +104,10 @@
                                 </div>
                                 <div class="col-lg-6 col-md-12">
                                     <div class="btn-manage">
-                                        <button type="button" class="btn btn-blue" onclick="window.location='{{ url("/") }}'">
+                                        <a href="javascript:;" onclick="window.location = '/panel-admin/templatestep1_submit?id='+document.getElementById('t1').value;">
+                                        <button type="button" class="btn btn-blue">
                                             เลือกแบบนี้
-                                        </button>
+                                        </button></a>
                                     </div>
                                 </div>
                             </div>
@@ -116,18 +120,18 @@
                         <div class="img-template">
                             <img src="{{ asset('panel/assets/images/template/template02.png')}}" alt="icon" title="Template02">
                             <div class="name-template">
-                                Template 02
+                                Template 2
                             </div>
                         </div>
                         <div class="theme-color">
                             <div class="input-custom">
                                 <div class="select-wrapper width-full">
-                                    <select class="slc" name="" id="">
-                                        <option value="green">Green</option>
-                                        <option value="blue">Blue</option>
-                                        <option value="orange" selected>Orange</option>
-                                        <option value="pink">Pink</option>
-                                        <option value="purple">Purple</option>
+                                    <select class="slc" name="t2" id="t2">
+                                        <option value="21">สีเขียว</option>
+                                        <option value="22">สีฟ้า</option>
+                                        <option value="23" selected>สีส้ม</option>
+                                        <option value="24">สีชมพู</option>
+                                        <option value="25">สีม่วง</option>
                                     </select>
                                 </div>
                             </div>
@@ -145,9 +149,10 @@
                                 </div>
                                 <div class="col-lg-6 col-md-12">
                                     <div class="btn-manage">
+                                        <a href="javascript:;" onclick="window.location = '/panel-admin/templatestep1_submit?id='+document.getElementById('t2').value;">
                                         <button type="button" class="btn btn-blue">
                                             เลือกแบบนี้
-                                        </button>
+                                        </button></a>
                                     </div>
                                 </div>
                             </div>
@@ -159,18 +164,18 @@
                         <div class="img-template">
                             <img src="{{ asset('panel/assets/images/template/template03.png')}}" alt="icon" title="Template03">
                             <div class="name-template">
-                                Template 03
+                                Template 3
                             </div>
                         </div>
                         <div class="theme-color">
                             <div class="input-custom">
                                 <div class="select-wrapper width-full">
-                                    <select class="slc" name="" id="">
-                                        <option value="green">Green</option>
-                                        <option value="blue">Blue</option>
-                                        <option value="orange">Orange</option>
-                                        <option value="pink">Pink</option>
-                                        <option value="purple" selected>Purple</option>
+                                    <select class="slc" name="t3" id="t3"> 
+                                        <option value="31">สีเขียว</option>
+                                        <option value="32">สีฟ้า</option>
+                                        <option value="33">สีส้ม</option>
+                                        <option value="34">สีชมพู</option>
+                                        <option value="35" selected>สีม่วง</option>
                                     </select>
                                 </div>
                             </div>
@@ -188,9 +193,10 @@
                                 </div>
                                 <div class="col-lg-6 col-md-12">
                                     <div class="btn-manage">
+                                        <a href="javascript:;" onclick="window.location = '/panel-admin/templatestep1_submit?id='+document.getElementById('t3').value;">
                                         <button type="button" class="btn btn-blue">
                                             เลือกแบบนี้
-                                        </button>
+                                        </button></a>
                                     </div>
                                 </div>
                             </div>
@@ -203,18 +209,18 @@
                         <div class="img-template">
                             <img src="{{ asset('panel/assets/images/template/template04.png')}}" alt="icon" title="Template04">
                             <div class="name-template">
-                                Template 04
+                                Template 4
                             </div>
                         </div>
                         <div class="theme-color">
                             <div class="input-custom">
                                 <div class="select-wrapper width-full">
-                                    <select class="slc" name="" id="">
-                                        <option value="green">Green</option>
-                                        <option value="blue">Blue</option>
-                                        <option value="orange">Orange</option>
-                                        <option value="pink" selected>Pink</option>
-                                        <option value="purple">Purple</option>
+                                    <select class="slc" name="t4" id="t4">
+                                        <option value="41">สีเขียว</option>
+                                        <option value="42">สีฟ้า</option>
+                                        <option value="43">สีส้ม</option>
+                                        <option value="44" selected>สีชมพู</option>
+                                        <option value="45">สีม่วง</option> 
                                     </select>
                                 </div>
                             </div>
@@ -232,9 +238,10 @@
                                 </div>
                                 <div class="col-lg-6 col-md-12">
                                     <div class="btn-manage">
+                                        <a href="javascript:;" onclick="window.location = '/panel-admin/templatestep1_submit?id='+document.getElementById('t4').value;">
                                         <button type="button" class="btn btn-blue">
                                             เลือกแบบนี้
-                                        </button>
+                                        </button></a>
                                     </div>
                                 </div>
                             </div>
@@ -246,18 +253,18 @@
                         <div class="img-template">
                             <img src="{{ asset('panel/assets/images/template/template05.png')}}" alt="icon" title="Template05">
                             <div class="name-template">
-                                Template 05
+                                Template 5
                             </div>
                         </div>
                         <div class="theme-color">
                             <div class="input-custom">
                                 <div class="select-wrapper width-full">
-                                    <select class="slc" name="" id="">
-                                        <option value="green">Green</option>
-                                        <option value="blue" selected>Blue</option>
-                                        <option value="orange">Orange</option>
-                                        <option value="pink">Pink</option>
-                                        <option value="purple">Purple</option>
+                                    <select class="slc" name="t5" id="t5"> 
+                                        <option value="51">สีเขียว</option>
+                                        <option value="52" selected>สีฟ้า</option>
+                                        <option value="53">สีส้ม</option>
+                                        <option value="54">สีชมพู</option>
+                                        <option value="55">สีม่วง</option> 
                                     </select>
                                 </div>
                             </div>
@@ -275,9 +282,10 @@
                                 </div>
                                 <div class="col-lg-6 col-md-12">
                                     <div class="btn-manage">
+                                        <a href="javascript:;" onclick="window.location = '/panel-admin/templatestep1_submit?id='+document.getElementById('t5').value;">
                                         <button type="button" class="btn btn-blue">
                                             เลือกแบบนี้
-                                        </button>
+                                        </button></a>
                                     </div>
                                 </div>
                             </div>

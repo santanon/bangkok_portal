@@ -1,4 +1,4 @@
-@section('title', 'Login')
+@section('title', 'หน้าเข้าสู่ระบบ - หน่วยงานกรุงเทพมหานคร')
 @section('tagkeyword', '')
 @section('tagdescription', '')
 
@@ -40,23 +40,23 @@
                 <div class="bglayer"></div>
             </div>
             <div class="right" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="5000">
-                <h3>Login</h3>
-                <h6>Please insert your Username & Password </h6>
+                <h3>หน่วยงานกรุงเทพมหานคร</h3>
+                <h6>กรุณากรอกชื่อผู้ใช้งาน และรหัสผ่านระบบหน่วยงาน</h6>
                 <form action="{{url('panel-admin/login_check')}}" method="post">
                 @csrf <!-- {{ csrf_field() }} -->
                     @csrf
                     <div class="input-box">
                         <input type="text" name="u" required="">
-                        <label for="">Username</label>
+                        <label for="">ชื่อผู้ใช้งาน</label>
                     </div>
                     <div class="input-box">
                         <input type="password" name="p" required="">
-                        <label for="">Password</label>
+                        <label for="">รหัสผ่าน</label>
                     </div>
                     <div class="forgot-password" data-toggle="modal" data-target="#exampleModal">
-                        <a href="#">Forgot password</a>
+                        <!--<a href="javascript:void(0);">ลืมรหัสผ่าน</a>-->
                     </div>
-                    <input class="btn-submit" type="submit" name="" value="Submit">
+                    <input class="btn-submit" type="submit" name="" value="เข้าสู่ระบบ">
                 </form>
             </div>
         </div>

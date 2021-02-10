@@ -447,21 +447,137 @@ class PanelController extends Controller
 		?><script>window.location = '/';</script><?php
         exit;
 	}
-	
+
+	public function templatestep1()
+    {        
+		$CustomHelper = new \App\CustomHelper;
+
+		if($CustomHelper->check_panel_login() == 1)
+        { 
+			return view('panel.templatestep1'); 
+        } 
+    }
+
+	public function templatestep2()
+    {        
+		$CustomHelper = new \App\CustomHelper;
+
+		if($CustomHelper->check_panel_login() == 1)
+        { 
+			$icon_logo_have = false;
+			$icon_topmenu_have = false;
+			$icon_mainmenu_have = false;
+			$icon_slide_have = false;
+			$icon_footmenu_have = false;
+			$icon_text_have = false;
+
+
+			if($_SESSION['panel_style_logo_img1'] != '')
+			{
+				$icon_logo_have = true;
+			}
+			 
+			$q = "SELECT COUNT(id) AS count_id FROM tbl_portal_website_top_menu_page WHERE web_id = ?";
+        	$v = $_SESSION['panel_id'];
+			$res = $CustomHelper->API_CALL($CustomHelper->API_URL('api_website_top_menu_page'),$q,$v);
+			$obj_check = json_decode($res);
+			 
+			if($obj_check[0]->count_id > 0)
+			{
+				$icon_topmenu_have = true;
+			}
+
+			$q = "SELECT COUNT(id) AS count_id FROM tbl_portal_website_main_menu_page WHERE web_id = ?";
+        	$v = $_SESSION['panel_id'];
+			$res = $CustomHelper->API_CALL($CustomHelper->API_URL('api_website_main_menu_page'),$q,$v);
+			$obj_check = json_decode($res);
+			 
+			if($obj_check[0]->count_id > 0)
+			{
+				$icon_mainmenu_have = true;
+			}
+
+			$q = "SELECT COUNT(id) AS count_id FROM tbl_portal_website_bg WHERE web_id = ?";
+        	$v = $_SESSION['panel_id'];
+			$res = $CustomHelper->API_CALL($CustomHelper->API_URL('api_website_bg'),$q,$v);
+			$obj_check = json_decode($res);
+			 
+			if($obj_check[0]->count_id > 0)
+			{
+				$icon_slide_have = true;
+			}
+
+			$q = "SELECT COUNT(id) AS count_id FROM tbl_portal_website_footer_menu_page WHERE web_id = ?";
+        	$v = $_SESSION['panel_id'];
+			$res = $CustomHelper->API_CALL($CustomHelper->API_URL('api_website_footer_menu_page'),$q,$v);
+			$obj_check = json_decode($res);
+			 
+			if($obj_check[0]->count_id > 0)
+			{
+				$icon_footmenu_have = true;
+			}
+
+			$q = "SELECT web_name FROM tbl_portal_website WHERE id = ?";
+        	$v = $_SESSION['panel_id'];
+			$res = $CustomHelper->API_CALL($CustomHelper->API_URL('api_website'),$q,$v);
+			$obj_check = json_decode($res);
+ 
+			if($obj_check[0]->web_name != '')
+			{
+				$icon_text_have = true;
+			}
+
+			$data['icon_logo_have'] = $icon_logo_have;
+			$data['icon_topmenu_have'] = $icon_topmenu_have;
+			$data['icon_mainmenu_have'] = $icon_mainmenu_have;
+			$data['icon_slide_have'] = $icon_slide_have;
+			$data['icon_footmenu_have'] = $icon_footmenu_have;
+			$data['icon_text_have'] = $icon_text_have;
+			
+			return view('panel.templatestep2',$data); 
+        } 
+    }
+
+	public function templatestep3()
+    {        
+		$CustomHelper = new \App\CustomHelper;
+
+		if($CustomHelper->check_panel_login() == 1)
+        { 
+			return view('panel.templatestep3'); 
+        } 
+    }
+
+	public function templatestep1_submit()
+    {        
+		$CustomHelper = new \App\CustomHelper;
+
+		if($CustomHelper->check_panel_login() == 1)
+        {
+			$q = "UPDATE tbl_portal_website_style SET template_id = ?, template_lastupdate = '".date('U')."' WHERE web_id = '".$_SESSION['panel_id']."'";
+			$v = $_GET['id'];
+			$res = $CustomHelper->API_CALL($CustomHelper->API_URL('api_website_style'),$q,$v); 
+
+			$_SESSION['panel_style_template_id'] = $_GET['id'];
+
+			?><script>window.location = '/เริ่มต้นใช้งานเว็บไซต์/ขั้นตอนที่2';</script><?php
+        	exit;
+        } 
+    }
+ 
 	public function web_home()
     {    
 		$CustomHelper = new \App\CustomHelper;
-  
+		 
 		if($CustomHelper->check_panel_login() == 1)
-		{  
+		{   
 			if($_SESSION['panel_style_template_id'] == '0' || $_SESSION['panel_style_template_id'] == '')
 			{
 				?>
-				<script>window.location = '/panel-admin/templatestep1';</script>
+				<script>window.location = '/เริ่มต้นใช้งานเว็บไซต์/ขั้นตอนที่1';</script>
 				<?php
 				exit;
-			}
-			
+			} 			
 		}
 		
 		$this->include_header();

@@ -11,15 +11,6 @@
 #modal_full_span{ font-size:30px; }
 </style>
 
-<script>
-var main_iframe_url = '';
-function sfi(title,url)
-{
-    document.getElementById('iframe_full').src = '';
-    document.getElementById('modal_full_span').innerHTML = title;
-    main_iframe_url = url;
-}
-</script>
  
 <div class="main-wrapper">
     <div class="panel-header">

@@ -23,6 +23,16 @@
 </head>
 <body class="color-green<?php if(isset($_SESSION['panel_login']) && $_SESSION['panel_login'] == '1'){ ?> manage<?php }?>">
 
+    <script>
+        var main_iframe_url = '';
+        function sfi(title,url)
+        {
+            document.getElementById('iframe_full').src = '';
+            document.getElementById('modal_full_span').innerHTML = title;
+            main_iframe_url = url;
+        }
+        </script>
+
     <!-- Script Loading -->
     <div class="se-pre-con loading">
         <div class="group-loading">
@@ -48,6 +58,8 @@
             });
         });
     </script>
+
+
 
 </body>
 </html>

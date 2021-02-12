@@ -24,15 +24,32 @@
 
         this.draw = function(){
             $container.empty().append(rootNodes[0].render(opts));
+
+            console.log($container.find('.node'));
+
             $container.find('.node').click(function(){
+                console.log("click");
                 if(self.opts.onClickNode !== null){
+                    console.log($(this).attr('node-id'));
+                    console.log(nodes);
                     self.opts.onClickNode(nodes[$(this).attr('node-id')]);
+                    console.log(nodes);
                 }
             });
 
             if(opts.allowEdit){
-                $container.find('.node h2').click(function(e){
-                    var thisId = $(this).parent().attr('node-id');
+                console.log("draw");
+                console.log($container);
+
+                console.log($container.find('.node .content h2'));
+
+                $container.find('.node .content h2').click(function(e){
+
+                    
+                    var thisId = $(this).closest(".node").attr('node-id');
+
+                    console.log(thisId);
+
                     self.startEdit(thisId);
                     e.stopPropagation();
                 });
@@ -71,17 +88,24 @@
         }
 
         this.startEdit = function(id){
+            console.log(nodes);
+            console.log(id);
             //h2
-            var inputElement = $('<input class="org-input" type="text" value="'+nodes[id].data.name+'"/>');
-            $container.find('div[node-id='+id+'] h2').replaceWith(inputElement);
+            var inputElement = $('<input class="org-input" type="text" value="'+nodes[id].data.name+'"/> <input class="org-input" type="text" value="'+nodes[id].data.name+'"/>' );
+            //var inputElement2 = $('<input class="org-input" type="text" value="'+nodes[id].data.name+'"/> ' );
+
+            $container.find('div[node-id='+id+'] .content h2').replaceWith(inputElement);
             var commitChange = function(){
                 var h2Element = $('<h2>'+nodes[id].data.name+'</h2>');
+                //var h2ElementLink = $('<h2> <a href="/">'+nodes[id].data.name+'</a></h2>');
                 if(opts.allowEdit){
                     h2Element.click(function(){
                         self.startEdit(id);
                     })
                 }
                 inputElement.replaceWith(h2Element);
+                console.log("input replaceWith test");
+                //inputElement.replaceWith($("<p>test</p>"));
             }  
             inputElement.focus();
             inputElement.keyup(function(event){
@@ -97,32 +121,32 @@
             })
         }
 
-        // this.startEditDesc = function(id){
-        //     //Description
-        //     var inputElementDesc = $('<input class="org-input" type="text" value="'+nodes[id].data.description+'"/>');
-        //     $container.find('div[node-id='+id+'] p').replaceWith(inputElementDesc);
-        //     var commitChangeDesc = function(){
-        //         var PElement = $('<p>'+nodes[id].data.description+'</p>');
-        //         if(opts.allowEdit){
-        //             PElement.click(function(){
-        //                 self.startEditDesc(id);
-        //             })
-        //         }
-        //         inputElementDesc.replaceWith(PElement);
-        //     }  
-        //     inputElementDesc.focus();
-        //     inputElementDesc.keyup(function(event){
-        //         if(event.which == 13){
-        //             commitChangeDesc();
-        //         }
-        //         else{
-        //             nodes[id].data.description = inputElementDesc.val();
-        //         }
-        //     });
-        //     inputElementDesc.blur(function(event){
-        //         commitChangeDesc();
-        //     })
-        // }
+        this.startEditDesc = function(id){
+            //Description
+            var inputElementDesc = $('<input class="org-input link" type="text" value="'+nodes[id].data.description+'"/>');
+            $container.find('div[node-id='+id+'] p').replaceWith(inputElementDesc);
+            var commitChangeDesc = function(){
+                var PElement = $('<p>'+nodes[id].data.description+'</p>');
+                if(opts.allowEdit){
+                    PElement.click(function(){
+                        self.startEditDesc(id);
+                    })
+                }
+                inputElementDesc.replaceWith(PElement);
+            }  
+            inputElementDesc.focus();
+            inputElementDesc.keyup(function(event){
+                if(event.which == 13){
+                    commitChangeDesc();
+                }
+                else{
+                    nodes[id].data.description = inputElementDesc.val();
+                }
+            });
+            inputElementDesc.blur(function(event){
+                commitChangeDesc();
+            })
+        }
 
         this.newNode = function(parentId){
             var nextId = Object.keys(nodes).length;
@@ -134,12 +158,15 @@
         }
 
         this.addNode = function(data){
+            console.log("addNode");
+            console.log(data);
+
             var newNode = new Node(data);
             nodes[data.id] = newNode;
             nodes[data.parent].addChild(newNode);
 
             self.draw();
-            //self.startEditDesc(data.id);
+            self.startEditDesc(data.id);
             self.startEdit(data.id);
             
         }
@@ -262,8 +289,9 @@
             else{
                 buttonsHtml = '';
             }
-            //return "<div class='node' node-id='"+this.data.id+"'>"+nameString+descString+buttonsHtml+"</div>";
-            return "<div class='node' node-id='"+this.data.id+"'>"+nameString+buttonsHtml+"</div>";
+            return "<div class='node' node-id='"+this.data.id+"'><div class='content'>"+ nameString +"</div>"+ descString + buttonsHtml+"</div>";
+
+            //return "<div class='node' node-id='"+this.data.id+"'>"+nameString+buttonsHtml+"</div>";
         }
     }
 

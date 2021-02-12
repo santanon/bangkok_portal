@@ -142,6 +142,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 
     <footer id="footer-wrapper">
@@ -204,13 +205,12 @@
 <script type="text/javascript">
     var dataOrg = [
         {id: 1, name: 'My Organization', parent: 0},
-        
     ];
     $(function(){
         org_chart = $('#orgChart').orgChart({
             data: dataOrg,
             showControls: true,
-            allowEdit: false,
+            allowEdit: true,
             onAddNode: function(node){ 
                 //log('Created new node on node '+node.data.id);
                 org_chart.newNode(node.data.id); 
@@ -222,9 +222,9 @@
             onClickNode: function(node){
                 //log('Clicked node '+node.data.id);
             }
-
         });
     });
 </script>
+
 @endsection
 

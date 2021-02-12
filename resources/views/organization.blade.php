@@ -204,7 +204,7 @@
 
 <script type="text/javascript">
     var dataOrg = [
-        {id: 1, name: 'My Organization', parent: 0},
+        {id: 1, name: 'My Organization', link:'', parent: 0},
     ];
     $(function(){
         org_chart = $('#orgChart').orgChart({

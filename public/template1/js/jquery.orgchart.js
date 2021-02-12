@@ -5,7 +5,7 @@
     }
 
     $.fn.orgChart.defaults = {
-        data: [{id:1, name:'Root', parent: 0}],
+        data: [{id:1, name:'Root', link:'', parent: 0}],
         showControls: false,
         allowEdit: false,
         onAddNode: null,
@@ -15,6 +15,9 @@
     };
 
     function OrgChart($container, opts){
+        console.log($container.data.id+'<<<');
+        console.log(opts+'<<<');
+        
         var data = opts.data;
         var nodes = {};
         var rootNodes = [];
@@ -25,30 +28,30 @@
         this.draw = function(){
             $container.empty().append(rootNodes[0].render(opts));
 
-            console.log($container.find('.node'));
+            //console.log($container.find('.node'));
 
             $container.find('.node').click(function(){
-                console.log("click");
+                //console.log("click");
                 if(self.opts.onClickNode !== null){
-                    console.log($(this).attr('node-id'));
-                    console.log(nodes);
+                    //console.log($(this).attr('node-id'));
+                    //console.log(nodes);
                     self.opts.onClickNode(nodes[$(this).attr('node-id')]);
-                    console.log(nodes);
+                    //console.log(nodes);
                 }
             });
 
             if(opts.allowEdit){
-                console.log("draw");
-                console.log($container);
+                //console.log("draw");
+                //console.log($container);
 
-                console.log($container.find('.node .content h2'));
+                //console.log($container.find('.node .content h2'));
 
                 $container.find('.node .content h2').click(function(e){
 
                     
                     var thisId = $(this).closest(".node").attr('node-id');
 
-                    console.log(thisId);
+                    //console.log(thisId);
 
                     self.startEdit(thisId);
                     e.stopPropagation();
@@ -63,7 +66,7 @@
 
             // add "add button" listener
             $container.find('.org-add-button').click(function(e){
-                var thisId = $(this).parent().attr('node-id');
+                var thisId = $(this).closest(".node").attr('node-id');
 
                 if(self.opts.onAddNode !== null){
                     self.opts.onAddNode(nodes[thisId]);
@@ -75,7 +78,7 @@
             });
 
             $container.find('.org-del-button').click(function(e){
-                var thisId = $(this).parent().attr('node-id');
+                var thisId = $(this).closest(".node").attr('node-id');
 
                 if(self.opts.onDeleteNode !== null){
                     self.opts.onDeleteNode(nodes[thisId]);
@@ -88,24 +91,24 @@
         }
 
         this.startEdit = function(id){
-            console.log(nodes);
-            console.log(id);
-            //h2
-            var inputElement = $('<input class="org-input" type="text" value="'+nodes[id].data.name+'"/> <input class="org-input" type="text" value="'+nodes[id].data.name+'"/>' );
-            //var inputElement2 = $('<input class="org-input" type="text" value="'+nodes[id].data.name+'"/> ' );
+            var inputElement = $('<input class="org-input" type="text" value="'+nodes[id].data.name+'" placeholder="หัวข้อ" />' );
+            var inputElement2 = $('<input class="org-input link" type="text" value="'+nodes[id].data.link+'" placeholder="ลิ้งค์" />');
+            //console.log(nodes[id].data.link)
 
             $container.find('div[node-id='+id+'] .content h2').replaceWith(inputElement);
+            $container.find('div[node-id='+id+'] .content').append(inputElement2);
             var commitChange = function(){
-                var h2Element = $('<h2>'+nodes[id].data.name+'</h2>');
-                //var h2ElementLink = $('<h2> <a href="/">'+nodes[id].data.name+'</a></h2>');
+                //var h2Element = $('<h2>'+nodes[id].data.name+'</h2>');
+                var Text_link = $container.find('div[node-id='+id+'] .content .link').val();
+                var h2ElementLink = $('<h2 class="title"> <a href="/'+Text_link+'">'+nodes[id].data.name+'</a></h2>');
+                nodes[id].data.link = Text_link;
                 if(opts.allowEdit){
-                    h2Element.click(function(){
+                    h2ElementLink.click(function(){
                         self.startEdit(id);
                     })
                 }
-                inputElement.replaceWith(h2Element);
-                console.log("input replaceWith test");
-                //inputElement.replaceWith($("<p>test</p>"));
+                inputElement.replaceWith(h2ElementLink);
+                $('.link').remove();
             }  
             inputElement.focus();
             inputElement.keyup(function(event){
@@ -116,37 +119,38 @@
                     nodes[id].data.name = inputElement.val();
                 }
             });
-            inputElement.blur(function(event){
+            $('.link').blur(function(event){
                 commitChange();
+                console.log(nodes[id].data)
             })
         }
 
-        this.startEditDesc = function(id){
-            //Description
-            var inputElementDesc = $('<input class="org-input link" type="text" value="'+nodes[id].data.description+'"/>');
-            $container.find('div[node-id='+id+'] p').replaceWith(inputElementDesc);
-            var commitChangeDesc = function(){
-                var PElement = $('<p>'+nodes[id].data.description+'</p>');
-                if(opts.allowEdit){
-                    PElement.click(function(){
-                        self.startEditDesc(id);
-                    })
-                }
-                inputElementDesc.replaceWith(PElement);
-            }  
-            inputElementDesc.focus();
-            inputElementDesc.keyup(function(event){
-                if(event.which == 13){
-                    commitChangeDesc();
-                }
-                else{
-                    nodes[id].data.description = inputElementDesc.val();
-                }
-            });
-            inputElementDesc.blur(function(event){
-                commitChangeDesc();
-            })
-        }
+        // this.startEditDesc = function(id){
+        //     //Description
+        //     var inputElementDesc = $('<input class="org-input link" type="text" value="'+nodes[id].data.description+'"/>');
+        //     $container.find('div[node-id='+id+'] p').replaceWith(inputElementDesc);
+        //     var commitChangeDesc = function(){
+        //         var PElement = $('<p>'+nodes[id].data.description+'</p>');
+        //         if(opts.allowEdit){
+        //             PElement.click(function(){
+        //                 self.startEditDesc(id);
+        //             })
+        //         }
+        //         inputElementDesc.replaceWith(PElement);
+        //     }  
+        //     inputElementDesc.focus();
+        //     inputElementDesc.keyup(function(event){
+        //         if(event.which == 13){
+        //             commitChangeDesc();
+        //         }
+        //         else{
+        //             nodes[id].data.description = inputElementDesc.val();
+        //         }
+        //     });
+        //     inputElementDesc.blur(function(event){
+        //         commitChangeDesc();
+        //     })
+        // }
 
         this.newNode = function(parentId){
             var nextId = Object.keys(nodes).length;
@@ -154,11 +158,11 @@
                 nextId++;
             }
 
-            self.addNode({id: nextId, name: '', description: '', parent: parentId});
+            self.addNode({id: nextId, name: '', link: '', parent: parentId});
         }
 
         this.addNode = function(data){
-            console.log("addNode");
+            //console.log("addNode");
             console.log(data);
 
             var newNode = new Node(data);
@@ -166,8 +170,10 @@
             nodes[data.parent].addChild(newNode);
 
             self.draw();
-            self.startEditDesc(data.id);
             self.startEdit(data.id);
+
+            console.log(newNode);
+            
             
         }
 
@@ -213,6 +219,7 @@
         this.data = data;
         this.children = [];
         var self = this;
+        
 
         this.addChild = function(childNode){
             this.children.push(childNode);
@@ -276,8 +283,9 @@
         this.formatNode = function(opts){
             var nameString = '',
                 descString = '';
+            
             if(typeof data.name !== 'undefined'){
-                nameString = '<h2>'+self.data.name+'</h2>';
+                nameString = '<h2 class="title"><a href="/'+self.data.link+'">'+self.data.name+'</a></h2>';
             }
             if(typeof data.description !== 'undefined'){
                 descString = '<p>'+self.data.description+'</p>';
@@ -289,7 +297,7 @@
             else{
                 buttonsHtml = '';
             }
-            return "<div class='node' node-id='"+this.data.id+"'><div class='content'>"+ nameString +"</div>"+ descString + buttonsHtml+"</div>";
+            return "<div class='node' node-id='"+this.data.id+"'><div class='content'>"+ nameString +"</div>" + buttonsHtml+"</div>";
 
             //return "<div class='node' node-id='"+this.data.id+"'>"+nameString+buttonsHtml+"</div>";
         }

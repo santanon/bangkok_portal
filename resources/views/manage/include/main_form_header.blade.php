@@ -7,7 +7,7 @@ table{ width:100%; }
 			<div id="se-maincontainer-wrapper" class="page01">
 				<div id="se-maincontainer"> 
 					<div id="page1col">
-						<div id="content-slide-container">  <?php if(isset($no_back) && $no_back == 1){ ?><?php } else { ?><a href="list?m=<?php echo $config_mod ?>" style="color:#000; font-size:12px;"><< ย้อนกลับ</a><?php } ?>
+						<div id="content-slide-container">  <?php if(isset($no_back) && $no_back == 1){ ?><?php } else { ?><a href="list?m=<?php echo $config_mod ?>" class="back_link"><< ย้อนกลับ</a><?php } ?>
 							<div class="content-slide-box expanded">  
 								<div class="content-slide-detail"> 
 									<div class="right"> 

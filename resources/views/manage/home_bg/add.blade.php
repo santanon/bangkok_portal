@@ -42,7 +42,7 @@ $TextLanguage = new \App\TextLanguage;
                 <input type="button" name="upload" value="<?php echo $TextLanguage->lang('file_manager'); ?>" onclick="callLightbox('<?php echo base_url(); ?>panel/fm/form/img1',1120,640);return false;" /><br />
                 <?php echo $TextLanguage->lang('image_size_home_bg'); ?><br />
                 <img width="300" id="img1_preview" style="border:1px solid #CCC;" />
-                <br><input onchange="document.getElementById('img1_preview').src = this.value" type="text" name="img1" id="img1" />
+                <br><input onchange="document.getElementById('img1_preview').src = this.value" type="text" class="sm-input" name="img1" id="img1" style="width:210px" />
                 </td>
             </tr>
              

@@ -84,7 +84,7 @@ function check_list()
 if($config_use_sort)
 {
 	?>
-    <th width="50"><span class="fontfacetext"><?php echo $TextLanguage->lang('sort'); ?>
+    <th width="100"><span class="fontfacetext"><?php echo $TextLanguage->lang('sort'); ?>
     <?php
     if($_SESSION[$config_mod.'_sort_1'] == 'sort' && $_SESSION[$config_mod.'_sort_2'] == 'asc')
     {

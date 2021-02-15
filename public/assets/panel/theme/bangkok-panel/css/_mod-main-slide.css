@@ -1,0 +1,40 @@
+.slider-container {
+  position: relative;
+  display: none; }
+  .slider-container.main-slider {
+    overflow: hidden;
+    position: relative;
+    margin-top: 50px;
+    width: 100%; }
+  .slider-container.bg-slider {
+    position: absolute;
+    z-index: -1; }
+  .slider-container img {
+    width: 100%;
+    height: auto;
+    vertical-align: top; }
+
+.slider-controller {
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  width: 100%; }
+
+#foo_pager {
+  z-index: 10;
+  float: right;
+  width: auto;
+  font-size: 13px; }
+  #foo_pager span.pager_list {
+    float: left;
+    display: block;
+    margin-right: 5px;
+    width: 11px;
+    height: 11px; }
+    #foo_pager span.pager_list > a {
+      display: block;
+      width: 11px;
+      height: 11px;
+      background: url("../images/slider/bull_pager.png") left top no-repeat; }
+    #foo_pager span.pager_list.selected a {
+      background: url("../images/slider/bull_pager.png") left -22px no-repeat; }

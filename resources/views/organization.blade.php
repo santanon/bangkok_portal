@@ -206,6 +206,10 @@
     var dataOrg = [
         {id: 1, name: 'My Organization', link:'', parent: 0},
     ];
+    //console.log(dataOrg);
+
+    var allNode = [];
+
     $(function(){
         org_chart = $('#orgChart').orgChart({
             data: dataOrg,
@@ -214,6 +218,10 @@
             onAddNode: function(node){ 
                 //log('Created new node on node '+node.data.id);
                 org_chart.newNode(node.data.id); 
+
+                //outData
+                allNode = org_chart.getData();
+                console.log(allNode);
             },
             onDeleteNode: function(node){
                 //log('Deleted node '+node.data.id);

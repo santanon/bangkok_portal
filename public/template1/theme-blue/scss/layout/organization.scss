@@ -129,6 +129,18 @@
             cursor: pointer;
         }
     }
+    .org-outData{
+        width: 20px;
+        height: 20px;
+        &:before{
+            font-family: 'Font Awesome 5 Free';
+            font-size: 1.4rem;
+            font-weight: 900;
+            content: '\f0fe';
+            margin-right: 5px;
+            color: #000;
+        }
+    }
 
     .org-input { 
         width: 100%;

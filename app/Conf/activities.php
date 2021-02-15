@@ -84,6 +84,12 @@ class Activities
 	{   
 		$CustomHelper = new \App\CustomHelper;
 		$TextLanguage = new \App\TextLanguage;
+
+
+
+		$uf = 'img1';
+		${$uf} = $CustomHelper->update_user_files($uf,$this->mod.'_'.$uf);
+
 		  
 		 
 		$_SESSION[$this->mod.'_group'] = $CustomHelper->input_post('cat_id', TRUE); 
@@ -110,7 +116,7 @@ class Activities
 		$d->info = htmlspecialchars_decode($CustomHelper->input_post('info', FALSE));  
 		$d->en_info = htmlspecialchars_decode($CustomHelper->input_post('en_info', FALSE));  
 		 
-		$d->img1 = $CustomHelper->input_post('img1', TRUE);    
+		$d->img1 = $img1.'^'.$_POST['img1_alt'];  
 		
 		$date_news_1 = 0;
 		
@@ -227,7 +233,9 @@ class Activities
 			$data['config_header_info'] = $TextLanguage->lang('help_'.$this->mod.'_edit'); 
 			$data['config_footer_js'] = 'mainmenuFocus(1,10,2); btn2stageFocus(0,1);'; 
 			$data['config_dropdown_title'] = $TextLanguage->lang(@$this->mod_cat_dropdown_title);
-			
+
+			$data['get_alt'] = $CustomHelper->update_file_and_alt('img1',$row[0]->img1,$this->mod);
+  
 			if(@$this->mod_cat_model <> '')
 			{
 				$q = "SELECT * FROM ".$CustomHelper->model_to_table($this->mod_cat_model)." WHERE web_id = ? ORDER BY ".$this->mod_cat_order_by;	 	
@@ -250,6 +258,10 @@ class Activities
 	{   
 		$CustomHelper = new \App\CustomHelper;
 		$TextLanguage = new \App\TextLanguage;
+
+
+		$uf = 'img1';
+		${$uf} = $CustomHelper->update_user_files($uf,$this->mod.'_'.$uf);
 		  
 		  
 		$_SESSION[$this->mod.'_group'] = $CustomHelper->input_post('cat_id', TRUE); 
@@ -262,7 +274,7 @@ class Activities
 		$d->info = htmlspecialchars_decode($CustomHelper->input_post('info', FALSE));  
 		$d->en_info = htmlspecialchars_decode($CustomHelper->input_post('en_info', FALSE));  
 		
-		$d->img1 = $CustomHelper->input_post('img1', TRUE);   
+		$d->img1 = $img1.'^'.$_POST['img1_alt'];
 		
 		if(@$_POST['img1_delete'] == '1')
 		{

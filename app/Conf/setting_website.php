@@ -79,16 +79,16 @@ class Setting_website
 		
 		$d->info_keyword = $CustomHelper->input_post('info_keyword', TRUE);
 		$d->info_description = $CustomHelper->input_post('info_description', TRUE);
-		$d->lang_start = $CustomHelper->input_post('lang_start', TRUE);
+		/*$d->lang_start = $CustomHelper->input_post('lang_start', TRUE);
 		$d->block_ip = $CustomHelper->input_post('block_ip', TRUE);
 		$d->close_status = $CustomHelper->input_post('close_status', TRUE);
 		$d->close_type = $CustomHelper->input_post('close_type', TRUE);
 		$d->close_info = $CustomHelper->input_post('close_info', TRUE);
-		$d->close_redirect = $CustomHelper->input_post('close_redirect', TRUE); 
-		$d->slogan_1 = $CustomHelper->input_post('slogan_1', TRUE);
+		$d->close_redirect = $CustomHelper->input_post('close_redirect', TRUE); */
+		/*$d->slogan_1 = $CustomHelper->input_post('slogan_1', TRUE);
 		$d->slogan_2 = $CustomHelper->input_post('slogan_2', TRUE);
 		$d->slogan_1_en = $CustomHelper->input_post('slogan_1_en', TRUE);
-		$d->slogan_2_en = $CustomHelper->input_post('slogan_2_en', TRUE);
+		$d->slogan_2_en = $CustomHelper->input_post('slogan_2_en', TRUE);*/
 		 
 		$this_qr = ''; 
 		foreach($d as $key=>$value) 
@@ -100,22 +100,25 @@ class Setting_website
 		  
 		$_SESSION['panel_style_info_keyword'] = $CustomHelper->input_post('info_keyword', TRUE);
 		$_SESSION['panel_style_info_description'] = $CustomHelper->input_post('info_description', TRUE);
-		$_SESSION['panel_style_lang_start'] = $CustomHelper->input_post('lang_start', TRUE);
+		/*$_SESSION['panel_style_lang_start'] = $CustomHelper->input_post('lang_start', TRUE);
 		$_SESSION['panel_style_block_ip'] = $CustomHelper->input_post('block_ip', TRUE);
 		$_SESSION['panel_style_close_status'] = $CustomHelper->input_post('close_status', TRUE);
 		$_SESSION['panel_style_close_type'] = $CustomHelper->input_post('close_type', TRUE);
 		$_SESSION['panel_style_close_info'] = $CustomHelper->input_post('close_info', TRUE);
-		$_SESSION['panel_style_close_redirect'] = $CustomHelper->input_post('close_redirect', TRUE); 
+		$_SESSION['panel_style_close_redirect'] = $CustomHelper->input_post('close_redirect', TRUE); */
 		
+		/*
 		$_SESSION['panel_style_slogan_1'] = $CustomHelper->input_post('slogan_1', TRUE); 
 		$_SESSION['panel_style_slogan_2'] = $CustomHelper->input_post('slogan_2', TRUE); 
 		$_SESSION['panel_style_slogan_1_en'] = $CustomHelper->input_post('slogan_1_en', TRUE); 
 		$_SESSION['panel_style_slogan_2_en'] = $CustomHelper->input_post('slogan_2_en', TRUE);
-		  
+		*/
+
 		$CustomHelper->add_log('' . $this->mod_title . ' - Edit ',$_SESSION['panel_username'],$_SESSION['panel_id'],strtoupper($this->mod).'_EDIT'); 
 		  
 		?>
-        <meta http-equiv="refresh" content="0;URL=<?php echo 'http://127.0.0.1:8000/manage-admin/edit?m='.$this->mod.'' ?>" />
+		<script>alert('บันทึกสำเร็จ');</script>
+        <meta http-equiv="refresh" content="0;URL=<?php echo 'http://127.0.0.1:8000/manage-admin/edit_website?m=setting_website' ?>" />
         <?php
         exit;
 	}  

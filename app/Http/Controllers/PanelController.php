@@ -270,6 +270,165 @@ class PanelController extends Controller
 	public function include_lang()
     {
 	}
+
+	public function link_helper()
+	{  
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		
+		$type = $_GET['type'];
+		$field = $_GET['field'];
+ 
+		if($CustomHelper->check_panel_login() == 1)
+        {
+			 
+        }
+        else
+        {
+            return view('panel.login');
+        } 
+	   
+		$data['title'] = $TextLanguage->lang('title_main'); 
+		$data['type'] = $type;
+		$data['field'] = $field;
+ 
+		$q = "SELECT * FROM tbl_portal_website_main_menu_page WHERE web_id = ? ORDER BY sort ASC";	 	
+		$v = $_SESSION['panel_id'];
+		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('website_main_menu_page')),$q,$v);
+		$r = json_decode($res);
+
+		
+ 
+		$main_str = ''; 
+		foreach ($r as $row_cat)
+		{    
+			if($row_cat->page_type == 'group')
+			{
+				$main_str = $main_str . '<tr style="height:25px;"><td>&nbsp; - <a style="color:#666666">' . $row_cat->title . '</a></td></tr>';
+			}
+			else
+			{
+			 	$main_str = $main_str . '<tr style="height:25px;"><td>&nbsp; - <a href="javascript:;" Onclick="window.parent.update_img(\'' . $field . '\',\'' . 'http://127.0.0.1:8000/'.$_SESSION['panel_web_url'].'/page/main/'.$row_cat->id . '\');" style="color:#666666">' . $row_cat->title . '</a></td></tr>';	
+			}
+ 
+			$q = "SELECT * FROM tbl_portal_website_page WHERE page_id = '0' AND cat_id = '".$row_cat->id."' AND web_id = ? ORDER BY sort ASC";	 	
+			$v = $_SESSION['panel_id'];
+			$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('website_page')),$q,$v);
+			$r_sub1 = json_decode($res);
+ 
+			foreach ($r_sub1 as $row_cat_sub1)
+			{ 
+				if($row_cat_sub1->page_type == 'group')
+				{
+					$main_str = $main_str . '<tr><td style="padding-left:50px;height:25px;">&nbsp; - <a style="color:#666666">' . $row_cat_sub1->title . '</a></td></tr>';	
+				}
+				else
+				{
+					$main_str = $main_str . '<tr><td style="padding-left:50px;height:25px;">&nbsp; - <a href="javascript:;" Onclick="window.parent.update_img(\'' . $field . '\',\'' . 'http://127.0.0.1:8000/'.$_SESSION['panel_web_url'].'/page/sub/'.$row_cat_sub1->id . '\');" style="color:#666666">' . $row_cat_sub1->title . '</a></td></tr>';	
+				} 
+
+				$q = "SELECT * FROM tbl_portal_website_page WHERE page_id = '".$row_cat_sub1->id."' AND cat_id = '".$row_cat->id."' AND web_id = ? ORDER BY sort ASC";	 	
+				$v = $_SESSION['panel_id'];
+				$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('website_page')),$q,$v);
+				$r_sub2 = json_decode($res);
+ 
+				foreach ($r_sub2 as $row_cat_sub2)
+				{	  
+					if($row_cat_sub2->page_type == 'group')
+					{
+						$main_str = $main_str . '<tr><td style="padding-left:100px;height:25px;">&nbsp; - <a style="color:#666666">' . $row_cat_sub2->title . '</a></td></tr>';	
+					}
+					else
+					{
+						$main_str = $main_str . '<tr><td style="padding-left:100px;height:25px;">&nbsp; - <a href="javascript:;" Onclick="window.parent.update_img(\'' . $field . '\',\'' . 'http://127.0.0.1:8000/'.$_SESSION['panel_web_url'].'/page/sub/'.$row_cat_sub2->id . '\');" style="color:#666666">' . $row_cat_sub2->title . '</a></td></tr>';	
+					}
+
+					$q = "SELECT * FROM tbl_portal_website_page WHERE page_id = '".$row_cat_sub2->id."' AND cat_id = '".$row_cat->id."' AND web_id = ? ORDER BY sort ASC";	 	
+					$v = $_SESSION['panel_id'];
+					$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('website_page')),$q,$v);
+					$r_sub3 = json_decode($res);
+ 
+					foreach ($r_sub3 as $row_cat_sub3)
+					{	
+						if($row_cat_sub3->page_type == 'group')
+						{
+							$main_str = $main_str . '<tr><td style="padding-left:150px;height:25px;">&nbsp; - <a style="color:#666666">' . $row_cat_sub3->title . '</a></td></tr>'; 	
+						}
+						else
+						{
+							$main_str = $main_str . '<tr><td style="padding-left:150px;height:25px;">&nbsp; - <a href="javascript:;" Onclick="window.parent.update_img(\'' . $field . '\',\'' . 'http://127.0.0.1:8000/'.$_SESSION['panel_web_url'].'/page/sub/'.$row_cat_sub3->id . '\');" style="color:#666666">' . $row_cat_sub3->title . '</a></td></tr>'; 	
+						}
+
+						$q = "SELECT * FROM tbl_portal_website_page WHERE page_id = '".$row_cat_sub3->id."' AND cat_id = '".$row_cat->id."' AND web_id = ? ORDER BY sort ASC";	 	
+						$v = $_SESSION['panel_id'];
+						$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('website_page')),$q,$v);
+						$r_sub4 = json_decode($res);
+						  
+						foreach ($r_sub4 as $row_cat_sub4)
+						{
+							if($row_cat_sub4->page_type == 'group')
+							{
+								$main_str = $main_str . '<tr><td style="padding-left:200px;height:25px;">&nbsp; - <a style="color:#666666">' . $row_cat_sub4->title . '</a></td></tr>';  	
+							}
+							else
+							{
+								$main_str = $main_str . '<tr><td style="padding-left:200px;height:25px;">&nbsp; - <a href="javascript:;" Onclick="window.parent.update_img(\'' . $field . '\',\'' . 'http://127.0.0.1:8000/'.$_SESSION['panel_web_url'].'/page/sub/'.$row_cat_sub4->id . '\');" style="color:#666666">' . $row_cat_sub4->title . '</a></td></tr>';  	
+							}
+
+							$q = "SELECT * FROM tbl_portal_website_page WHERE page_id = '".$row_cat_sub4->id."' AND cat_id = '".$row_cat->id."' AND web_id = ? ORDER BY sort ASC";	 	
+							$v = $_SESSION['panel_id'];
+							$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('website_page')),$q,$v);
+							$r_sub5 = json_decode($res);
+ 
+							foreach ($r_sub5 as $row_cat_sub5)
+							{
+								$main_str = $main_str . '<tr><td style="padding-left:250px;height:25px;">&nbsp; - <a href="javascript:;" Onclick="window.parent.update_img(\'' . $field . '\',\'' . 'http://127.0.0.1:8000/'.$_SESSION['panel_web_url'].'/page/sub/'.$row_cat_sub5->id . '\');" style="color:#666666">' . $row_cat_sub5->title . '</a></td></tr>';   
+							}
+						}
+					}
+				}
+			}  
+		} 
+		
+		$data['main_str'] = $main_str;
+		  
+		$q = "SELECT * FROM tbl_portal_website_top_menu_page WHERE web_id = ? ORDER BY sort ASC";	 	
+		$v = $_SESSION['panel_id'];
+		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('website_top_menu_page')),$q,$v);
+		$r = json_decode($res);
+ 
+		$main_str = '';
+		
+		foreach ($r as $row_cat)
+		{ 
+			$main_str = $main_str . '<tr style="height:25px;"><td>&nbsp; - <a href="javascript:;" Onclick="window.parent.update_img(\'' . $field . '\',\'' . 'http://127.0.0.1:8000/'.$_SESSION['panel_web_url'].'/page/top/'.$row_cat->id . '\');" style="color:#666666">' . $row_cat->title . '</a></td></tr>';	
+		}
+		
+		$data['main_str_top'] = $main_str;
+		
+		
+		
+		
+	 
+		$q = "SELECT * FROM tbl_portal_website_footer_menu_page WHERE web_id = ? ORDER BY sort ASC";	 	
+		$v = $_SESSION['panel_id'];
+		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('website_footer_menu_page')),$q,$v);
+		$r = json_decode($res);
+
+
+
+		
+		$main_str = '';
+		
+		foreach ($r as $row_cat)
+		{ 
+			$main_str = $main_str . '<tr style="height:25px;"><td>&nbsp; - <a href="javascript:;" Onclick="window.parent.update_img(\'' . $field . '\',\'' . 'http://127.0.0.1:8000/'.$_SESSION['panel_web_url'].'/page/footer/'.$row_cat->id . '\');" style="color:#666666">' . $row_cat->title . '</a></td></tr>';	
+		}
+		
+		$data['main_str_footer'] = $main_str;
+		 
+		return view('panel.frame_link_helper',$data);
+	}
 	
 	public function login()
     {        
@@ -426,11 +585,20 @@ class PanelController extends Controller
 			$q = $this->Portal_website_all_bg_model->select_data($d);   
 			*/
 
-			?><script>window.location = '/panel-admin/login';</script><?php
-        	exit;
-		}
-		
-
+			if($_SESSION['panel_web_package'] == '1')
+			{
+				?><script>window.location = '/panel-admin/login';</script>
+				<?php
+        		exit;
+			} 
+			else
+			{
+				?>
+				<script>window.location = '/เริ่มต้นใช้งานเว็บไซต์/ขั้นตอนที่1';</script>
+				<?php
+				exit;
+			} 
+		} 
         exit;
 	}
 	
@@ -456,6 +624,11 @@ class PanelController extends Controller
         { 
 			return view('panel.templatestep1'); 
         } 
+		else
+		{
+			?><script>window.location = '/';</script><?php
+            exit;
+		}
     }
 
 	public function templatestep2()
@@ -477,7 +650,7 @@ class PanelController extends Controller
 				$icon_logo_have = true;
 			}
 			 
-			$q = "SELECT COUNT(id) AS count_id FROM tbl_portal_website_top_menu_page WHERE web_id = ?";
+			$q = "SELECT COUNT(id) AS count_id FROM tbl_portal_website_top_menu_page WHERE web_id = ? AND status = '1'";
         	$v = $_SESSION['panel_id'];
 			$res = $CustomHelper->API_CALL($CustomHelper->API_URL('api_website_top_menu_page'),$q,$v);
 			$obj_check = json_decode($res);
@@ -487,7 +660,7 @@ class PanelController extends Controller
 				$icon_topmenu_have = true;
 			}
 
-			$q = "SELECT COUNT(id) AS count_id FROM tbl_portal_website_main_menu_page WHERE web_id = ?";
+			$q = "SELECT COUNT(id) AS count_id FROM tbl_portal_website_main_menu_page WHERE web_id = ? AND status = '1'";
         	$v = $_SESSION['panel_id'];
 			$res = $CustomHelper->API_CALL($CustomHelper->API_URL('api_website_main_menu_page'),$q,$v);
 			$obj_check = json_decode($res);
@@ -497,7 +670,7 @@ class PanelController extends Controller
 				$icon_mainmenu_have = true;
 			}
 
-			$q = "SELECT COUNT(id) AS count_id FROM tbl_portal_website_bg WHERE web_id = ?";
+			$q = "SELECT COUNT(id) AS count_id FROM tbl_portal_website_bg WHERE web_id = ? AND status = '1'";
         	$v = $_SESSION['panel_id'];
 			$res = $CustomHelper->API_CALL($CustomHelper->API_URL('api_website_bg'),$q,$v);
 			$obj_check = json_decode($res);
@@ -507,7 +680,7 @@ class PanelController extends Controller
 				$icon_slide_have = true;
 			}
 
-			$q = "SELECT COUNT(id) AS count_id FROM tbl_portal_website_footer_menu_page WHERE web_id = ?";
+			$q = "SELECT COUNT(id) AS count_id FROM tbl_portal_website_footer_menu_page WHERE web_id = ? AND status = '1'";
         	$v = $_SESSION['panel_id'];
 			$res = $CustomHelper->API_CALL($CustomHelper->API_URL('api_website_footer_menu_page'),$q,$v);
 			$obj_check = json_decode($res);
@@ -517,7 +690,7 @@ class PanelController extends Controller
 				$icon_footmenu_have = true;
 			}
 
-			$q = "SELECT web_name FROM tbl_portal_website WHERE id = ?";
+			$q = "SELECT web_name FROM tbl_portal_website WHERE id = ? AND status = '1'";
         	$v = $_SESSION['panel_id'];
 			$res = $CustomHelper->API_CALL($CustomHelper->API_URL('api_website'),$q,$v);
 			$obj_check = json_decode($res);
@@ -536,6 +709,11 @@ class PanelController extends Controller
 			
 			return view('panel.templatestep2',$data); 
         } 
+		else
+		{
+			?><script>window.location = '/';</script><?php
+            exit;
+		}
     }
 
 	public function templatestep3()
@@ -544,8 +722,18 @@ class PanelController extends Controller
 
 		if($CustomHelper->check_panel_login() == 1)
         { 
+			$q = "UPDATE tbl_portal_website SET web_package = '1' WHERE id = ?";
+			$v = $_SESSION['panel_id'];
+			$res = $CustomHelper->API_CALL($CustomHelper->API_URL('api_website'),$q,$v);  
+			$_SESSION['panel_web_package'] = '1';
+			
 			return view('panel.templatestep3'); 
         } 
+		else
+		{
+			?><script>window.location = '/';</script><?php
+            exit;
+		}
     }
 
 	public function templatestep1_submit()
@@ -554,15 +742,42 @@ class PanelController extends Controller
 
 		if($CustomHelper->check_panel_login() == 1)
         {
+			$this_value = 1;
+			if($_GET['id'] == 'blue')
+			{
+				$this_value = 1;
+			}
+			else if($_GET['id'] == 'orange')
+			{
+				$this_value = 2;
+			}
+			else if($_GET['id'] == 'green')
+			{
+				$this_value = 3;
+			}
+			else if($_GET['id'] == 'pink')
+			{
+				$this_value = 4;
+			}
+			else if($_GET['id'] == 'purple')
+			{
+				$this_value = 5;
+			}
+			
 			$q = "UPDATE tbl_portal_website_style SET template_id = ?, template_lastupdate = '".date('U')."' WHERE web_id = '".$_SESSION['panel_id']."'";
-			$v = $_GET['id'];
+			$v = $_GET['no'].$this_value;
 			$res = $CustomHelper->API_CALL($CustomHelper->API_URL('api_website_style'),$q,$v); 
 
-			$_SESSION['panel_style_template_id'] = $_GET['id'];
+			$_SESSION['panel_style_template_id'] = $_GET['no'].$this_value;
 
 			?><script>window.location = '/เริ่มต้นใช้งานเว็บไซต์/ขั้นตอนที่2';</script><?php
         	exit;
         } 
+		else
+		{
+			?><script>window.location = '/';</script><?php
+            exit;
+		}
     }
  
 	public function web_home()
@@ -571,15 +786,9 @@ class PanelController extends Controller
 		 
 		if($CustomHelper->check_panel_login() == 1)
 		{   
-			if($_SESSION['panel_style_template_id'] == '0' || $_SESSION['panel_style_template_id'] == '')
-			{
-				?>
-				<script>window.location = '/เริ่มต้นใช้งานเว็บไซต์/ขั้นตอนที่1';</script>
-				<?php
-				exit;
-			} 			
+						
 		}
-		
+		 
 		$this->include_header();
  
 		$data['mod'] = $this->mod;  

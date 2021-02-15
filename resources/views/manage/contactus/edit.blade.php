@@ -25,37 +25,28 @@ $TextLanguage = new \App\TextLanguage;
         <tbody>
             <tr>
 			<th width="120" valign="top" style="padding-top:10px;"><?php echo $TextLanguage->lang('text_header'); ?> <img align="absmiddle" src="<?php echo base_url() ?>assets/panel/f_th.jpg">   </th>
-			<td> 
-			 <?php
-			 $this_name = 'contact_text_1'
-			 ?>
-			 <textarea id='<?php echo $this_name ?>' name='<?php echo $this_name ?>' rows='10'><?php echo @$edit_contact_text_1 ?></textarea>
-			 <script type="text/javascript"> 
-			 CKEDITOR.replace( '<?php echo $this_name ?>' , 
-			 { 
-				enterMode : CKEDITOR.ENTER_BR,
-				shiftEnterMode: CKEDITOR.ENTER_BR 
-			 }); 
-			 </script>
-			 
+			<td>
+				
+			<?php
+			$this_name = 'contact_text_1';
+			$this_value = @$edit_contact_text_1;
+			?>
+			@include('manage.include.input_texteditor')
+
+ 
 			</td>
 		</tr>
         
             <tr>
 			<th width="120" valign="top" style="padding-top:10px;"><?php echo $TextLanguage->lang('text_header'); ?> <img align="absmiddle" src="<?php echo base_url() ?>assets/panel/f_en.jpg">   </th>
 			<td> 
-			 <?php
-			 $this_name = 'contact_text_2'
-			 ?>
-			 <textarea id='<?php echo $this_name ?>' name='<?php echo $this_name ?>' rows='10'><?php echo @$edit_contact_text_2 ?></textarea>
-			 <script type="text/javascript"> 
-			 CKEDITOR.replace( '<?php echo $this_name ?>' , 
-			 { 
-				enterMode : CKEDITOR.ENTER_BR,
-				shiftEnterMode: CKEDITOR.ENTER_BR 
-			 }); 
-			 </script>
-			 
+
+				<?php
+				$this_name = 'contact_text_2';
+				$this_value = @$edit_contact_text_2;
+				?>
+				@include('manage.include.input_texteditor')
+		 
 			</td>
 		</tr>
             

@@ -2,7 +2,7 @@
 <textarea id='<?php echo  $this_name ?>' name='<?php echo  $this_name ?>' rows='10'><?php echo  stripslashes($this_value) ?></textarea>
 <script>  
 	var uploadTargetHash = 'l1_Lw'; 
-	var connectorUrl = '../../elfinder/php/connector.php';
+	var connectorUrl = '../assets/panel/js/elfinder/php/connector.php';
 	ClassicEditor
 		.create( document.querySelector( '#<?php echo  $this_name ?>' ), {
 			toolbar: {

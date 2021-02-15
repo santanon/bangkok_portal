@@ -86,10 +86,17 @@ $(function()
               <tr>
                 <th width="120" valign="top" style="padding-top:10px;"><?php echo $TextLanguage->lang('image'); ?></th>
                 <td>
-                <input type="button" name="upload" value="<?php echo $TextLanguage->lang('file_manager'); ?>" onclick="callLightbox('<?php echo base_url(); ?>panel/fm/form/img1',1120,640);return false;" /><br />
-                <?php echo $TextLanguage->lang('image_size_gallery'); ?><br />
-                <img width="300" id="img1_preview" style="border:1px solid #CCC;" src="<?php echo $edit_img1 ?>" />
-                <br><input type="text" name="img1" id="img1" value="<?php echo $edit_img1 ?>" />
+                    
+                    <?php 
+                    $this_name = 'img1';
+                    $this_w = '130';
+                    $this_h = '90';
+                    $this_limit = '1';
+                    $this_value = $edit_img1;
+                    ?>
+                    @include('manage.include.input_file_tools')
+
+ 
                 </td>
             </tr>     
             

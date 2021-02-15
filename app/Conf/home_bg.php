@@ -57,6 +57,14 @@ class Home_bg
 	{      
 		$CustomHelper = new \App\CustomHelper;
 		$TextLanguage = new \App\TextLanguage;
+
+
+
+		$uf = 'img1';
+		${$uf} = $CustomHelper->update_user_files($uf,$this->mod.'_'.$uf);
+
+
+
 		  
 		$q = "SELECT * FROM tbl_portal_website_bg WHERE web_id = ? ORDER BY sort DESC";	 	
 		$v = $_SESSION['panel_id'];
@@ -74,7 +82,9 @@ class Home_bg
 		$d = new \stdClass();
 		$d->web_id = $_SESSION['panel_id']; 
 		$d->title = htmlspecialchars($CustomHelper->input_post('title', TRUE));   
-		$d->img1 = $CustomHelper->input_post('img1', TRUE);   
+		 
+		$d->img1 = $img1.'^'.$_POST['img1_alt'];
+
 		$d->en_img1 = '';
 		$d->url = $CustomHelper->input_post('url', TRUE);  
 		$d->en_url = $CustomHelper->input_post('en_url', TRUE);  
@@ -154,8 +164,10 @@ class Home_bg
 			$data['config_submenu_title'] = $this->config_submenu_title;
 			$data['config_submenu_mod'] = $this->config_submenu_mod;    
 			$data['config_header_info'] = $TextLanguage->lang('help_'.$this->mod.'_edit'); 
-			$data['config_footer_js'] = 'mainmenuFocus(1,1,4); btn2stageFocus(0,1);';        
-			  
+			$data['config_footer_js'] = 'mainmenuFocus(1,1,4); btn2stageFocus(0,1);';  
+			
+			$data['get_alt'] = $CustomHelper->update_file_and_alt('img1',$row[0]->img1,$this->mod);
+ 
 			//$this->load->view('panel/'.$this->mod.'/edit', $data); 
 			return $data; 
 		}
@@ -169,13 +181,15 @@ class Home_bg
 	{   
 		$CustomHelper = new \App\CustomHelper;
 		$TextLanguage = new \App\TextLanguage;
-		 
-		  
-		  
+		 		
+		$uf = 'img1';
+		${$uf} = $CustomHelper->update_user_files($uf,$this->mod.'_'.$uf);  
 		 
 		$d = new \stdClass();  
 		$d->title = htmlspecialchars($CustomHelper->input_post('title', TRUE));
-		$d->img1 = $CustomHelper->input_post('img1', TRUE); 
+		 
+		$d->img1 = $img1.'^'.$_POST['img1_alt'];
+
 		$d->url = $CustomHelper->input_post('url', TRUE);  
 		$d->en_url = $CustomHelper->input_post('en_url', TRUE);  
 		$d->url_target = $CustomHelper->input_post('url_target', TRUE);     

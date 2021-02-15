@@ -136,6 +136,9 @@ class Top_menu
 	{   
 		$CustomHelper = new \App\CustomHelper;
 		$TextLanguage = new \App\TextLanguage;
+
+		$uf = 'img1';
+		${$uf} = $CustomHelper->update_user_files($uf,$this->mod.'_'.$uf);
 		  
 		  
 		  
@@ -264,7 +267,9 @@ class Top_menu
 		 
 		$d = new \stdClass(); 
 		$d->web_id = $_SESSION['panel_id'];  
-		$d->img1 = $CustomHelper->input_post('img1', TRUE);
+		
+		$d->img1 = $img1.'^'.$_POST['img1_alt'];
+
 		$d->title = htmlspecialchars($CustomHelper->input_post('title', TRUE));
 		$d->en_title = htmlspecialchars($CustomHelper->input_post('en_title', TRUE));  
 		$d->page_type = $CustomHelper->input_post('page_type', TRUE);
@@ -330,7 +335,17 @@ class Top_menu
 		 
 			
 		$CustomHelper->add_log(''.$this->mod_title.' - Add ('.$CustomHelper->input_post('title', TRUE).')',$_SESSION['panel_username'],$_SESSION['panel_id'],strtoupper($this->mod).'_ADD');   
-		 
+		
+
+
+
+
+
+
+
+
+
+
 		
 		if($redirect_new)
 		{ 
@@ -398,6 +413,8 @@ class Top_menu
 			$data['config_footer_js'] = 'mainmenuFocus(1,4,2); btn2stageFocus(0,1);';   
 			$data['config_dropdown_title'] = $TextLanguage->lang(@$this->mod_cat_dropdown_title); 
 			
+			$data['get_alt'] = $CustomHelper->update_file_and_alt('img1',$row[0]->img1,$this->mod);
+			 
 			if(@$this->mod_cat_model <> '')
 			{
 				if(empty($_SESSION[$this->mod.'_group']))
@@ -469,11 +486,14 @@ class Top_menu
 		$CustomHelper = new \App\CustomHelper;
 		$TextLanguage = new \App\TextLanguage;
 		 
-		  
+		$uf = 'img1';
+		${$uf} = $CustomHelper->update_user_files($uf,$this->mod.'_'.$uf);  
 		 
 		   
 		$d = new \stdClass();  
-		$d->img1 = $CustomHelper->input_post('img1', TRUE);
+		
+		$d->img1 = $img1.'^'.$_POST['img1_alt'];
+		
 		$d->title = htmlspecialchars($CustomHelper->input_post('title', TRUE));
 		$d->en_title = htmlspecialchars($CustomHelper->input_post('en_title', TRUE));  
 		$d->page_type = $CustomHelper->input_post('page_type', TRUE); 

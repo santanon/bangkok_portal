@@ -66,7 +66,7 @@ foreach ($list_comment as $row_comment)
 	?>
 	<table width="500" border="1" cellspacing="0" cellpadding="0">
 	<tr style="background-color:#004e6c; color:#FFF">
-	<td><?php echo $TextLanguage->lang('comment') ?>#<?php echo $run ?> [<a onclick="if(!confirm('<?php echo $TextLanguage->lang('confirm') ?>')){ return false; }" style="color:#FFF" href="http://127.0.0.1:8000/manage-admin/comment_delete?m=<?php echo $this->mod ?>&id=<?php echo $row_comment->id ?>&id2=<?php echo $edit_id ?>&main_type=<?php echo $row_comment->main_type ?>"><b><?php echo $TextLanguage->lang('delete') ?></b></a>] <?php if($row_comment->status <> '1'){ ?>  &nbsp;  <b style="color:#FF4040">( <?php echo $TextLanguage->lang('delete_report') ?> )</b> <?php } ?> </td>
+	<td><?php echo $TextLanguage->lang('comment') ?>#<?php echo $run ?> [<a onclick="if(!confirm('<?php echo $TextLanguage->lang('confirm') ?>')){ return false; }" style="color:#FFF" href="http://127.0.0.1:8000/manage-admin/comment_delete?m=<?php echo $config_mod ?>&id=<?php echo $row_comment->id ?>&id2=<?php echo $edit_id ?>&main_type=<?php echo $row_comment->main_type ?>"><b><?php echo $TextLanguage->lang('delete') ?></b></a>] <?php if($row_comment->status <> '1'){ ?>  &nbsp;  <b style="color:#FF4040">( <?php echo $TextLanguage->lang('delete_report') ?> )</b> <?php } ?> </td>
 	</tr>
 	<tr>
 	<td><?php echo $row_comment->title ?></td>

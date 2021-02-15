@@ -1,7 +1,7 @@
 @include('manage.include.header') 
 <style>
 table{ width:100%; }
-</style>
+</style> 
 	<div id="se-wrapper">
 		<div id="page-container" class="no-bg-slider"> 
 			<div id="se-maincontainer-wrapper" class="page01">

@@ -243,6 +243,33 @@ class ManageController extends Controller
 		  
 		$t = $q;
 		$this_title = $t[0]->title; 
+
+		$arr_list_img_field = array('img1','en_img1','file1','en_file1');
+
+
+		foreach($arr_list_img_field as $v)
+		{
+			if(isset($t[0]->{$v}) && $t[0]->{$v} != '')
+			{
+				$this_f = $t[0]->{$v}; 
+				if(strpos($this_f,'|') > -1)
+				{
+					$each_v = explode('|',$this_f);
+					foreach($each_v as $item_v) 
+					{
+						if(trim($item_v) != '')
+						{
+							@unlink($_SERVER['DOCUMENT_ROOT'].'/user_files/'.$_SESSION['panel_id'].'/'.basename($item_v));
+						}
+					}
+				}
+				else
+				{
+					@unlink($_SERVER['DOCUMENT_ROOT'].'/user_files/'.$_SESSION['panel_id'].'/'.basename($this_f));
+				}
+			}
+		}
+		
 		 
 		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),"DELETE FROM ".$CustomHelper->model_to_table($this->mod_model)." WHERE web_id = '".$_SESSION['panel_id']."' AND id = '".$id."'",''); 
 		 
@@ -673,18 +700,18 @@ class ManageController extends Controller
 						$this_field_model_name = 'cat_id';
 						break; 
 				} 
-				
+				 
 				if($this_field_model <> '')
-				{
-					$q = "SELECT COUNT(id) AS count_id FROM ".$CustomHelper->model_to_table($this->{$this_field_model})." WHERE web_id = ? AND ".$this_field_model_name." = '".$row->data_id."' ";
+				{ 
+					$q = "SELECT COUNT(id) AS count_id FROM ".$CustomHelper->model_to_table($this_field_model)." WHERE web_id = ? AND ".$this_field_model_name." = '".$row->data_id."' ";
 					$v = $_SESSION['panel_id'];
-					$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->{$this_field_model})),$q,$v);				
+					$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this_field_model)),$q,$v);				
 					$count_res = json_decode($res);  
 					$data['list_page_mod_count'][$row->id] = $count_res[0]->count_id;     
 					  
-					$q = "SELECT * FROM ".$CustomHelper->model_to_table($this->{$this_field_model_cat})." WHERE web_id = ? AND id = '".$row->data_id."' ";
+					$q = "SELECT * FROM ".$CustomHelper->model_to_table($this_field_model_cat)." WHERE web_id = ? AND id = '".$row->data_id."' ";
 					$v = $_SESSION['panel_id'];
-					$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->{$this_field_model_cat})),$q,$v);  
+					$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this_field_model_cat)),$q,$v);  
 					$r_ex1 = json_decode($res);
 					    
 					$data['list_page_mod_title'][$row->id] = $r_ex1[0]->title;
@@ -1527,5 +1554,16 @@ class ManageController extends Controller
         ?><meta http-equiv="refresh" content="0;URL=http://127.0.0.1:8000/manage-admin/list?m=<?php echo $this->mod ?>" /><?php
         
 		exit;
-	}		
+	}
+	
+	public function url_submit()
+    {        
+        $CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		$this->include_check_login();
+		 
+		$c = "\App\Conf\\".$_GET['m'];
+		$m = new $c();  
+		$m->url_submit();
+    } 
 }

@@ -74,8 +74,8 @@ $TextLanguage = new \App\TextLanguage;
 <input name="page_type" type="radio" id="page_type_11" value="poll" onclick="show_it('tr_poll');" <?php if($edit_page_type == 'poll'){ ?> checked="checked" <?php } ?>/>&nbsp;
 <label class="input-label" for="page_type_11"><?php echo $TextLanguage->lang('poll_vote') ?></label><br /> 
  
-<input name="page_type" type="radio" id="page_type_12" value="webboard" onclick="show_it('tr_webboard');" <?php if($edit_page_type == 'webboard'){ ?> checked="checked" <?php } ?>/>&nbsp;
-<label class="input-label" for="page_type_12"><?php echo $TextLanguage->lang('webboard1') ?></label><br /> 
+<!-- <input name="page_type" type="radio" id="page_type_12" value="webboard" onclick="show_it('tr_webboard');" <?php if($edit_page_type == 'webboard'){ ?> checked="checked" <?php } ?>/>&nbsp;
+<label class="input-label" for="page_type_12"><?php echo $TextLanguage->lang('webboard1') ?></label><br />--> 
                     
                 </td>
             </tr> 
@@ -120,17 +120,10 @@ function show_it(v1)
 <th width="120" valign="top" style="padding-top:10px;"><?php echo $TextLanguage->lang('texteditor'); ?>&nbsp; <img align="absmiddle" src="<?php echo base_url() ?>assets/panel/f_th.jpg" /> </th>
 <td> 
 <?php
-$this_name = 'info'
+$this_name = 'info';
+$this_value = @$edit_info;
 ?>
-<textarea id='<?php echo $this_name ?>' name='<?php echo $this_name ?>' rows='10'><?php echo @$edit_info ?></textarea>
-<script type="text/javascript"> 
-CKEDITOR.replace( '<?php echo $this_name ?>' , 
-{ 
-enterMode : CKEDITOR.ENTER_BR,
-shiftEnterMode: CKEDITOR.ENTER_BR 
-}); 
-</script>
-
+@include('manage.include.input_texteditor')
 </td>
 </tr> 
 
@@ -138,17 +131,12 @@ shiftEnterMode: CKEDITOR.ENTER_BR
 <th width="120" valign="top" style="padding-top:10px;"><?php echo $TextLanguage->lang('texteditor'); ?>&nbsp; <img align="absmiddle" src="<?php echo base_url() ?>assets/panel/f_en.jpg" /></th>
 <td> 
 <?php
-$this_name = 'en_info'
+$this_name = 'en_info';
+$this_value = @$edit_en_info;
 ?>
-<textarea id='<?php echo $this_name ?>' name='<?php echo $this_name ?>' rows='10'><?php echo @$edit_en_info ?></textarea>
-<script type="text/javascript"> 
-CKEDITOR.replace( '<?php echo $this_name ?>' , 
-{ 
-enterMode : CKEDITOR.ENTER_BR,
-shiftEnterMode: CKEDITOR.ENTER_BR 
-}); 
-</script>
+@include('manage.include.input_texteditor')
 
+ 
 </td>
 </tr>  
 
@@ -167,10 +155,17 @@ shiftEnterMode: CKEDITOR.ENTER_BR
 <tr id="tr_main_bg">
 <th width="120" valign="top" style="padding-top:10px;"><?php echo $TextLanguage->lang('background'); ?></th>
 <td>
-<input type="button" name="upload" value="<?php echo $TextLanguage->lang('file_manager'); ?>" onclick="callLightbox('<?php echo base_url(); ?>panel/fm/form/img1',1120,640);return false;" /><br />
-  <?php echo $TextLanguage->lang('image_size_footermenu_texteditor'); ?><br />              
-                <img width="300" id="img1_preview" style="border:1px solid #CCC;" src="<?php echo $edit_img1 ?>" />
-                <br><input type="text" name="img1" id="img1" value="<?php echo $edit_img1 ?>" />
+
+<?php 
+$this_name = 'img1';
+$this_w = '130';
+$this_h = '90';
+$this_limit = '1';
+$this_value = $edit_img1;
+?>
+@include('manage.include.input_file_tools')
+
+ 
 </td>
 </tr> 
 
@@ -178,14 +173,14 @@ shiftEnterMode: CKEDITOR.ENTER_BR
 <tr id="tr_url">
 <th width="120" valign="top" style="padding-top:15px;"><?php echo $TextLanguage->lang('url'); ?></th>
 <td>
-<input name="url" type="text" class="sm-input--flag-th" id="url" style="width:235px" placeholder="http://" value="<?php echo $edit_url ?>"><br />
-<input type="button" name="upload" value="<?php echo $TextLanguage->lang('link_helper'); ?>" onclick="callLightbox('<?php echo base_url(); ?>panel/lh/form/url',500,640);return false;" />  
-<input type="button" name="upload" value="<?php echo $TextLanguage->lang('file_manager'); ?>" onclick="callLightbox('<?php echo base_url(); ?>panel/fm/form/url',1120,640);return false;" /> <br /><br />
 
-<input name="en_url" type="text" class="sm-input--flag-en" id="en_url" style="width:235px" placeholder="http://" value="<?php echo $edit_en_url ?>">
-<br />
-<input type="button" name="upload" value="<?php echo $TextLanguage->lang('link_helper'); ?>" onclick="callLightbox('<?php echo base_url(); ?>panel/lh/form/en_url',500,640);return false;" />  
-<input type="button" name="upload" value="<?php echo $TextLanguage->lang('file_manager'); ?>" onclick="callLightbox('<?php echo base_url(); ?>panel/fm/form/en_url',1120,640);return false;" />
+	<input value="<?php echo $edit_url ?>" name="url" type="text" class="sm-input--flag-th" id="url" style="width:235px" placeholder="http://"><br />
+	<input type="button" name="upload" value="<?php echo $TextLanguage->lang('link_helper'); ?>" onclick="callLightbox('http://127.0.0.1:8000/panel-admin/link_helper?type=form&field=url',500,640);return false;" />
+	<br><br>
+	<input value="<?php echo $edit_en_url ?>" name="en_url" type="text" class="sm-input--flag-en" id="en_url" style="width:235px" placeholder="http://"><br />
+	<input type="button" name="upload" value="<?php echo $TextLanguage->lang('link_helper'); ?>" onclick="callLightbox('http://127.0.0.1:8000/panel-admin/link_helper?type=form&field=en_url',500,640);return false;" />
+
+ 
 </td>
 </tr>
 

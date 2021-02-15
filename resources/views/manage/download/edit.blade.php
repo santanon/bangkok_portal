@@ -78,15 +78,35 @@ $(function()
              <tr>
                 <th width="120" valign="top" style="padding-top:12px;"><?php echo $TextLanguage->lang('url'); ?></th>
                 <td>
-                    <input name="file1" type="text" class="sm-input--flag-th" id="file1_preview" style="width:510px" placeholder="http://" value="<?php echo $edit_file1 ?>"><br />
-                    <input type="button" name="upload" value="<?php echo $TextLanguage->lang('file_manager'); ?>" onclick="callLightbox('<?php echo base_url(); ?>panel/fm/form/file1',1120,640);return false;" /> 
-                    <input type="text" name="file1_hide" id="file1" value="<?php echo $edit_file1 ?>" /> 
-                    
-                    <br /><br /> 
-                     
-                    <input name="en_file1" type="text" class="sm-input--flag-en" id="en_file1_preview" style="width:510px" placeholder="http://" value="<?php echo $edit_en_file1 ?>"><br />
-					 <input type="button" name="upload" value="<?php echo $TextLanguage->lang('file_manager'); ?>" onclick="callLightbox('<?php echo base_url(); ?>panel/fm/form/en_file1',1120,640);return false;" />  
-                     <input type="text" name="en_file1_hide" id="en_file1" value="<?php echo $edit_en_file1 ?>" /> 
+                <?php
+                $this_get_alt = 
+                ?>
+
+
+
+                 <?php 
+                $this_name = 'file1';
+                $this_w = '0';
+                $this_h = '0';
+                $this_limit = '1';
+                $this_value = $edit_file1;
+
+                $get_alt = $get_alt_1;
+                ?>
+                @include('manage.include.input_file_tools') 
+                
+                <?php 
+                $this_name = 'en_file1';
+                $this_w = '0';
+                $this_h = '0';
+                $this_limit = '1';
+                $this_value = $edit_en_file1;
+
+                $get_alt = $get_alt_2;
+                ?>
+                @include('manage.include.input_file_tools')
+
+ 
                 </td>
             </tr>
               

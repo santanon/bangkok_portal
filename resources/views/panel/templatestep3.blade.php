@@ -77,7 +77,7 @@
             <div class="col-md-8">
                 <div class="group-list-menu">
                     <div class="row">
-                        <div class="col-md-12"><div align="center" style="font-size: 20px; color:#FFFFFF"><br><br>หน้าเว็บไซต์ของท่านพร้อมใช้งานแล้ว<br>URL ของเว็บไซต์คือ <a href="http://www.bangkok.go.th/dusit" target="_blank" style="text-decoration: underline; color:#FFFFFF;">http://www.bangkok.go.th/dusit</a><br><br>หลังจากนี้ ท่านสามารถบริหารจัดการเนื้อหาเว็บไซต์ได้โดยคลิกที่รูป 
+                        <div class="col-md-12"><div align="center" style="font-size: 20px; color:#FFFFFF"><br><br>หน้าเว็บไซต์ของท่านพร้อมใช้งานแล้ว<br>URL ของเว็บไซต์คือ <a href="http://www.bangkok.go.th/<?php echo $_SESSION['panel_web_url'] ?>" target="_blank" style="text-decoration: underline; color:#FFFFFF;">http://www.bangkok.go.th/<?php echo $_SESSION['panel_web_url'] ?></a><br><br>หลังจากนี้ ท่านสามารถบริหารจัดการเนื้อหาเว็บไซต์ได้โดยคลิกที่รูป 
                         <img src="/template1/assets/images/icons/icon-edit.svg" alt="icon">    
                         <br>เมื่อใช้งานระบบเสร็จแล้ว กรุณาออกจากระบบเพื่อความปลอดภัย</div></div> 
                     </div>

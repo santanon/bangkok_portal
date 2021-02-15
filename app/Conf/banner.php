@@ -85,6 +85,10 @@ class Banner
 	{   
 		$CustomHelper = new \App\CustomHelper;
 		$TextLanguage = new \App\TextLanguage;
+
+
+		$uf = 'img1';
+		${$uf} = $CustomHelper->update_user_files($uf,$this->mod.'_'.$uf);
 		  
 		 
 		$_SESSION[$this->mod.'_group'] = $CustomHelper->input_post('cat_id', TRUE); 
@@ -106,7 +110,9 @@ class Banner
 		$d->web_id = $_SESSION['panel_id']; 
 		$d->cat_id = $CustomHelper->input_post('cat_id', TRUE);
 		$d->title = htmlspecialchars($CustomHelper->input_post('title', TRUE));   
-		$d->img1 = $CustomHelper->input_post('img1', TRUE);   
+		
+		$d->img1 = $img1.'^'.$_POST['img1_alt'];
+		  
 		$d->en_img1 = '';
 		$d->url = $CustomHelper->input_post('url', TRUE);  
 		$d->en_url = $CustomHelper->input_post('en_url', TRUE);  
@@ -194,6 +200,8 @@ class Banner
 			$data['config_footer_js'] = 'mainmenuFocus(1,7,2); btn2stageFocus(0,1);'; 
 			$data['config_dropdown_title'] = $TextLanguage->lang(@$this->mod_cat_dropdown_title);  			
 			
+			$data['get_alt'] = $CustomHelper->update_file_and_alt('img1',$row[0]->img1,$this->mod);
+			 
 			if(@$this->mod_cat_model <> '')
 			{
 				$q = "SELECT * FROM ".$CustomHelper->model_to_table($this->mod_cat_model)." WHERE web_id = ? ORDER BY ".$this->mod_cat_order_by;	 	
@@ -215,14 +223,17 @@ class Banner
 	{   
 		$CustomHelper = new \App\CustomHelper;
 		$TextLanguage = new \App\TextLanguage;
-		  
+		
+		$uf = 'img1';
+		${$uf} = $CustomHelper->update_user_files($uf,$this->mod.'_'.$uf);
 		  
 		$_SESSION[$this->mod.'_group'] = $CustomHelper->input_post('cat_id', TRUE); 
 		 
 		$d = new \stdClass();  
 		$d->cat_id = $CustomHelper->input_post('cat_id', TRUE);
 		$d->title = htmlspecialchars($CustomHelper->input_post('title', TRUE));
-		$d->img1 = $CustomHelper->input_post('img1', TRUE); 
+		
+		$d->img1 = $img1.'^'.$_POST['img1_alt']; 
 		
 		if(@$_POST['img1_delete'] == '1')
 		{

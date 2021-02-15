@@ -17,6 +17,15 @@
         font-weight: 300;
         min-height: 20px;
     }
+    a{
+        // display: block;
+        // width: 100%;
+        margin-bottom : 0px 0 10px;
+        font-size : 1.6rem;
+        font-weight: 300;
+        min-height: 20px;
+        color: #525252 !important;
+    }
     ul{
         list-style : none;
         margin : 4px;
@@ -118,6 +127,18 @@
         }
         &:hover{
             cursor: pointer;
+        }
+    }
+    .org-outData{
+        width: 20px;
+        height: 20px;
+        &:before{
+            font-family: 'Font Awesome 5 Free';
+            font-size: 1.4rem;
+            font-weight: 900;
+            content: '\f0fe';
+            margin-right: 5px;
+            color: #000;
         }
     }
 

@@ -142,6 +142,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 
     <footer id="footer-wrapper">
@@ -203,17 +204,24 @@
 
 <script type="text/javascript">
     var dataOrg = [
-        {id: 1, name: 'My Organization', parent: 0},
-        
+        {id: 1, name: 'My Organization', link:'', parent: 0},
     ];
+    //console.log(dataOrg);
+
+    var allNode = [];
+
     $(function(){
         org_chart = $('#orgChart').orgChart({
             data: dataOrg,
             showControls: true,
-            allowEdit: false,
+            allowEdit: true,
             onAddNode: function(node){ 
                 //log('Created new node on node '+node.data.id);
                 org_chart.newNode(node.data.id); 
+
+                //outData
+                allNode = org_chart.getData();
+                console.log(allNode);
             },
             onDeleteNode: function(node){
                 //log('Deleted node '+node.data.id);
@@ -222,9 +230,9 @@
             onClickNode: function(node){
                 //log('Clicked node '+node.data.id);
             }
-
         });
     });
 </script>
+
 @endsection
 

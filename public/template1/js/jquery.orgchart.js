@@ -5,7 +5,7 @@
     }
 
     $.fn.orgChart.defaults = {
-        data: [{id:1, name:'Root', parent: 0}],
+        data: [{id:1, name:'Root', link:'', parent: 0}],
         showControls: false,
         allowEdit: false,
         onAddNode: null,
@@ -15,6 +15,7 @@
     };
 
     function OrgChart($container, opts){
+        
         var data = opts.data;
         var nodes = {};
         var rootNodes = [];
@@ -31,22 +32,19 @@
             });
 
             if(opts.allowEdit){
-                $container.find('.node h2').click(function(e){
-                    var thisId = $(this).parent().attr('node-id');
+
+                $container.find('.node .content h2').click(function(e){
+
+                    
+                    var thisId = $(this).closest(".node").attr('node-id');
                     self.startEdit(thisId);
                     e.stopPropagation();
                 });
-
-                // $container.find('.node p').click(function(e){
-                //     var thisId = $(this).parent().attr('node-id');
-                //     self.startEditDesc(thisId);
-                //     e.stopPropagation();
-                // });
             }
 
             // add "add button" listener
             $container.find('.org-add-button').click(function(e){
-                var thisId = $(this).parent().attr('node-id');
+                var thisId = $(this).closest(".node").attr('node-id');
 
                 if(self.opts.onAddNode !== null){
                     self.opts.onAddNode(nodes[thisId]);
@@ -58,7 +56,7 @@
             });
 
             $container.find('.org-del-button').click(function(e){
-                var thisId = $(this).parent().attr('node-id');
+                var thisId = $(this).closest(".node").attr('node-id');
 
                 if(self.opts.onDeleteNode !== null){
                     self.opts.onDeleteNode(nodes[thisId]);
@@ -71,17 +69,23 @@
         }
 
         this.startEdit = function(id){
-            //h2
-            var inputElement = $('<input class="org-input" type="text" value="'+nodes[id].data.name+'"/>');
-            $container.find('div[node-id='+id+'] h2').replaceWith(inputElement);
+            var inputElement = $('<input class="org-input" type="text" value="'+nodes[id].data.name+'" placeholder="หัวข้อ" />' );
+            var inputElement2 = $('<input class="org-input link" type="text" value="'+nodes[id].data.link+'" placeholder="ลิ้งค์" />');
+
+            $container.find('div[node-id='+id+'] .content h2').replaceWith(inputElement);
+            $container.find('div[node-id='+id+'] .content').append(inputElement2);
             var commitChange = function(){
-                var h2Element = $('<h2>'+nodes[id].data.name+'</h2>');
+                //var h2Element = $('<h2>'+nodes[id].data.name+'</h2>');
+                var Text_link = $container.find('div[node-id='+id+'] .content .link').val();
+                var h2ElementLink = $('<h2 class="title"> <a href="/'+Text_link+'">'+nodes[id].data.name+'</a></h2>');
+                nodes[id].data.link = Text_link;
                 if(opts.allowEdit){
-                    h2Element.click(function(){
+                    h2ElementLink.click(function(){
                         self.startEdit(id);
                     })
                 }
-                inputElement.replaceWith(h2Element);
+                inputElement.replaceWith(h2ElementLink);
+                $('.link').remove();
             }  
             inputElement.focus();
             inputElement.keyup(function(event){
@@ -92,14 +96,14 @@
                     nodes[id].data.name = inputElement.val();
                 }
             });
-            inputElement.blur(function(event){
+            $('.link').blur(function(event){
                 commitChange();
             })
         }
 
         // this.startEditDesc = function(id){
         //     //Description
-        //     var inputElementDesc = $('<input class="org-input" type="text" value="'+nodes[id].data.description+'"/>');
+        //     var inputElementDesc = $('<input class="org-input link" type="text" value="'+nodes[id].data.description+'"/>');
         //     $container.find('div[node-id='+id+'] p').replaceWith(inputElementDesc);
         //     var commitChangeDesc = function(){
         //         var PElement = $('<p>'+nodes[id].data.description+'</p>');
@@ -130,18 +134,17 @@
                 nextId++;
             }
 
-            self.addNode({id: nextId, name: '', description: '', parent: parentId});
+            self.addNode({id: nextId, name: '', link: '', parent: parentId});
         }
 
         this.addNode = function(data){
+
             var newNode = new Node(data);
             nodes[data.id] = newNode;
             nodes[data.parent].addChild(newNode);
 
             self.draw();
-            //self.startEditDesc(data.id);
-            self.startEdit(data.id);
-            
+            self.startEdit(data.id);            
         }
 
         this.deleteNode = function(id){
@@ -249,8 +252,9 @@
         this.formatNode = function(opts){
             var nameString = '',
                 descString = '';
+            
             if(typeof data.name !== 'undefined'){
-                nameString = '<h2>'+self.data.name+'</h2>';
+                nameString = '<h2 class="title"><a href="/'+self.data.link+'">'+self.data.name+'</a></h2>';
             }
             if(typeof data.description !== 'undefined'){
                 descString = '<p>'+self.data.description+'</p>';
@@ -262,8 +266,9 @@
             else{
                 buttonsHtml = '';
             }
-            //return "<div class='node' node-id='"+this.data.id+"'>"+nameString+descString+buttonsHtml+"</div>";
-            return "<div class='node' node-id='"+this.data.id+"'>"+nameString+buttonsHtml+"</div>";
+            return "<div class='node' node-id='"+this.data.id+"'><div class='content'>"+ nameString +"</div>" + buttonsHtml+"</div>";
+
+            //return "<div class='node' node-id='"+this.data.id+"'>"+nameString+buttonsHtml+"</div>";
         }
     }
 

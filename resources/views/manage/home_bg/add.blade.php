@@ -39,6 +39,7 @@ $TextLanguage = new \App\TextLanguage;
             <tr>
                 <th width="120" valign="top" style="padding-top:10px;"><?php echo $TextLanguage->lang('image'); ?></th>
                 <td>
+
                     <?php 
                     $this_name = 'img1';
                     $this_w = '130';
@@ -48,7 +49,6 @@ $TextLanguage = new \App\TextLanguage;
                     ?>
                     @include('manage.include.input_file_tools')
 
- 
                 </td>
             </tr>
              

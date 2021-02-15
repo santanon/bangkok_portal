@@ -70,11 +70,16 @@ $TextLanguage = new \App\TextLanguage;
             <tr>
                 <th width="120" valign="top" style="padding-top:10px;"><?php echo $TextLanguage->lang('image'); ?></th>
                 <td>
-                <input type="button" name="upload" value="<?php echo $TextLanguage->lang('file_manager'); ?>" onclick="callLightbox('<?php echo base_url(); ?>panel/fm/form/img1',1120,640);return false;" /><br />
-                <?php echo $TextLanguage->lang('image_size_banner'); ?><br />
 
-                <img width="300" id="img1_preview" style="border:1px solid #CCC;" />
-                <br><input type="text" name="img1" id="img1" />
+                <?php 
+                $this_name = 'img1';
+                $this_w = '130';
+                $this_h = '90';
+                $this_limit = '1';
+                $this_value = '';
+                ?>
+                @include('manage.include.input_file_tools')
+ 
                 </td>
             </tr>
              
@@ -83,12 +88,14 @@ $TextLanguage = new \App\TextLanguage;
             <tr>
                 <th width="120" valign="top" style="padding-top:15px;"><?php echo $TextLanguage->lang('url'); ?></th>
                 <td>
-                    <input name="url" type="text" class="sm-input--flag-th" id="url" style="width:235px" placeholder="http://"> 
-					 <br /><input type="button" name="upload" value="<?php echo $TextLanguage->lang('link_helper'); ?>" onclick="callLightbox('<?php echo base_url(); ?>panel/lh/form/url',500,640);return false;" />  <input type="button" name="upload" value="<?php echo $TextLanguage->lang('file_manager'); ?>" onclick="callLightbox('<?php echo base_url(); ?>panel/fm/form/url',1120,640);return false;" /> <br /><br />
 
-													
-                    <input name="en_url" type="text" class="sm-input--flag-en" id="en_url" style="width:235px" placeholder="http://">
-                     <br /><input type="button" name="upload" value="<?php echo $TextLanguage->lang('link_helper'); ?>" onclick="callLightbox('<?php echo base_url(); ?>panel/lh/form/en_url',500,640);return false;" />  <input type="button" name="upload" value="<?php echo $TextLanguage->lang('file_manager'); ?>" onclick="callLightbox('<?php echo base_url(); ?>panel/fm/form/en_url',1120,640);return false;" /> <br /><br />
+                    <input name="url" type="text" class="sm-input--flag-th" id="url" style="width:235px" placeholder="http://"><br />
+                    <input type="button" name="upload" value="<?php echo $TextLanguage->lang('link_helper'); ?>" onclick="callLightbox('http://127.0.0.1:8000/panel-admin/link_helper?type=form&field=url',500,640);return false;" />
+                    <br><br>
+                    <input name="en_url" type="text" class="sm-input--flag-en" id="en_url" style="width:235px" placeholder="http://"><br />
+                    <input type="button" name="upload" value="<?php echo $TextLanguage->lang('link_helper'); ?>" onclick="callLightbox('http://127.0.0.1:8000/panel-admin/link_helper?type=form&field=en_url',500,640);return false;" />
+
+                     
                 </td>
             </tr>
             

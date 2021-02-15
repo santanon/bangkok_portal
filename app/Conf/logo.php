@@ -17,8 +17,10 @@ class Logo
 	public function index()
 	{    
 		$CustomHelper = new \App\CustomHelper;
-		$TextLanguage = new \App\TextLanguage;		 
-		 
+		$TextLanguage = new \App\TextLanguage;	
+
+		$data['get_alt'] = $CustomHelper->update_file_and_alt('url',$_SESSION['panel_style_logo_img1'],$this->mod);
+	  
 		$data['this_cat'] = $TextLanguage->lang(@$this->mod);
 		$data['this_page'] = $TextLanguage->lang('add');
 		$data['title'] = $data['this_page'] . ' : ' . $data['this_cat'] . ' - ' . $TextLanguage->lang('bangkok_portal');  
@@ -33,11 +35,12 @@ class Logo
 	{   
 		$CustomHelper = new \App\CustomHelper;
 		$TextLanguage = new \App\TextLanguage;
-		  
 		 
-		$url = $CustomHelper->input_post('url', TRUE);
-		 
-		 
+		$uf = 'url';
+		${$uf} = $CustomHelper->update_user_files($uf,$this->mod.'_'.$uf);
+  
+		$url = $url . '^' . $_POST['url_alt'];
+
 		$d = new \stdClass(); 
 		$d->logo_type = '2';
 		$d->logo_img1 = $url;
@@ -54,14 +57,17 @@ class Logo
 		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('Portal_website_style_model')),"UPDATE ".$CustomHelper->model_to_table('Portal_website_style_model')." SET ".$this_qr." WHERE web_id = '".$_SESSION['panel_id']."'",'');
 		
 		  
-		$CustomHelper->add_log(''.$this->mod_title.' - Change Logo ('.$CustomHelper->input_post('title', TRUE).')',$_SESSION['panel_username'],$_SESSION['panel_id'],strtoupper($this->mod).'_EDIT');   
+		$CustomHelper->add_log(''.$this->mod_title.' - Change Logo ',$_SESSION['panel_username'],$_SESSION['panel_id'],strtoupper($this->mod).'_EDIT');   
 		 
 		$_SESSION['panel_style_logo_type'] = '2';
 		$_SESSION['panel_style_logo_img1'] = $url;
 		$_SESSION['panel_style_logo_url'] = $url;
 		$_SESSION['panel_style_logo_lastupdate'] = date('U');     
+		
+  
 		?> 
-        <meta http-equiv="refresh" content="0;URL=<?php echo 'http://127.0.0.1:8000/manage-admin/index?m=' . $this->mod . '' ?>" />
+		<script>alert('บันทึกสำเร็จ');</script>
+        <meta http-equiv="refresh" content="0;URL=<?php echo 'http://127.0.0.1:8000/manage-admin/edit_logo?m=' . $this->mod . '' ?>" />
 		<?php
 		exit;	
 	}

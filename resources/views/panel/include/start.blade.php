@@ -23,18 +23,31 @@
 
 <body>
 
-    <!-- Script Loading -->
-    <div class="se-pre-con loading">
-        <div class="group-loading">
-            <div class="lds-ellipsis">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+    <?php
+    if(isset($_GET['noload']))
+    {
+
+    }
+    else 
+    {
+        ?>
+        <!-- Script Loading -->
+        <div class="se-pre-con loading">
+            <div class="group-loading">
+                <div class="lds-ellipsis">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- /Script Loading -->
+        <!-- /Script Loading -->
+        <?php
+    }
+    ?>
+    
+    
     
     
     @yield('contentpage')

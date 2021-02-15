@@ -1,7 +1,7 @@
 <?php 
 $CustomHelper = new \App\CustomHelper; 
 $TextLanguage = new \App\TextLanguage; 
- 
+$no_back = 1;
 ?>   
 @include('manage.include.main_form_header') 
 
@@ -86,7 +86,7 @@ foreach ($list_cat as $row_cat)
          
          
         
-         <tr>
+        <!-- <tr>
 			<th width="120"><?php echo $TextLanguage->lang('slogan_website'); ?> 1 &nbsp;<img align="absmiddle" src="<?php echo base_url() ?>assets/panel/f_th.jpg"></th>
 			<td>
 			<input id="slogan_1" name="slogan_1" type="text" class="sm-input" style="width:500px" value="<?php echo @$_SESSION['panel_style_slogan_1'] ?>"> 
@@ -113,8 +113,7 @@ foreach ($list_cat as $row_cat)
 			<td>
 			<input id="slogan_2_en" name="slogan_2_en" type="text" class="sm-input" style="width:500px" value="<?php echo @$_SESSION['panel_style_slogan_2_en'] ?>"> 
 			</td>
-		</tr>
-        
+		</tr> -->
         
         
         <tr>
@@ -131,7 +130,7 @@ foreach ($list_cat as $row_cat)
 			</td>
 		</tr>
  
-        <tr>
+        <!-- <tr>
 			<th width="120"><?php echo $TextLanguage->lang('language_start'); ?> <span style="color:red">*</span></th>
 			<td> 
             
@@ -192,17 +191,15 @@ foreach ($list_cat as $row_cat)
         <tr id="hide_close_info" style="display:none;">
 			<th width="120" valign="top" style="padding-top:10px;"><?php echo $TextLanguage->lang('close_info'); ?>  </th>
 			<td> 
-			 <?php
-			 $this_name = 'close_info'
-			 ?>
-			 <textarea id='<?php echo $this_name ?>' name='<?php echo $this_name ?>' rows='10'><?php echo @$_SESSION['panel_style_close_info'] ?></textarea>
-			 <script type="text/javascript"> 
-			 CKEDITOR.replace( '<?php echo $this_name ?>' , 
-			 { 
-				enterMode : CKEDITOR.ENTER_BR,
-				shiftEnterMode: CKEDITOR.ENTER_BR 
-			 }); 
-			 </script>
+
+
+				<?php
+				$this_name = 'close_info';
+				$this_value =  @$_SESSION['panel_style_close_info'];
+				?>
+				@include('manage.include.input_texteditor')
+
+ 
 			 
 			</td>
 		</tr>
@@ -213,7 +210,7 @@ foreach ($list_cat as $row_cat)
 			<td>
 			<input id="close_redirect" name="close_redirect" type="text" class="sm-input" style="width:500px" value="<?php echo @$_SESSION['panel_style_close_redirect'] ?>"> 
 			</td>
-		</tr>
+		</tr> -->
          
          
 		<tr>
@@ -221,7 +218,7 @@ foreach ($list_cat as $row_cat)
 			<td>
 			
 			<span class="btn round big blue"><input type="submit" class="fontfacetext" value="<?php echo $TextLanguage->lang('save'); ?>"></span>&nbsp;
-			<span class="btn round big gray"><input type="button" class="fontfacetext" value="<?php echo $TextLanguage->lang('cancel'); ?>" onclick="window.history.back();"></span>
+			<!-- <span class="btn round big gray"><input type="button" class="fontfacetext" value="<?php echo $TextLanguage->lang('cancel'); ?>" onclick="window.history.back();"></span> -->
 
 			</td>
 		</tr>

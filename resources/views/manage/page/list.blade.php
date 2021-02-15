@@ -145,15 +145,7 @@ foreach ($list as $row)
 } 
 ?>                                                     
  
-<?php
-if($show_extra == "1")
-{
-	?>
-    <tr><td colspan="8"><div align="center" style="font-size:14px;">หากเมนูแสดงไม่ถูกต้อง <a href="http://www.siamedigital.com:81/bkk-lib/assets/update_menu_1.php?a=<?php echo $show_extra_id ?>&b=<?php echo $show_extra_cat_id ?>&c=<?php echo $_SESSION['panel_web_url'] ?>" target="_blank">กรุณากดที่นี่</a></div></td></tr>
-    
-    <?php
-}
-?>
+
 
 
 

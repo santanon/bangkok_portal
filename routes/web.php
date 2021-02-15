@@ -26,6 +26,7 @@ Route::any('เริ่มต้นใช้งานเว็บไซต์/�
 Route::any('panel-admin/templatestep1_submit',     [PanelController::class,'templatestep1_submit']);
 Route::any('panel-admin/templatestep2_submit',     [PanelController::class,'templatestep2_submit']);
 Route::any('panel-admin/templatestep3_submit',     [PanelController::class,'templatestep3_submit']);
+Route::any('panel-admin/link_helper',              [PanelController::class,'link_helper']);
 
 /* Management */
 Route::any('manage-admin/list',         [ManageController::class,'list']);
@@ -54,6 +55,7 @@ Route::any('manage-admin/set_order_by',	[ManageController::class,'set_order_by']
 Route::any('manage-admin/set_status_show',	[ManageController::class,'set_status_show']);
 Route::any('manage-admin/set_status_hide',	[ManageController::class,'set_status_hide']);
 Route::any('manage-admin/set_sort',		[ManageController::class,'set_sort']);
+Route::any('manage-admin/url_submit',   [ManageController::class,'url_submit']);
 Route::any('manage-admin/panels/{mod}',	[ManageController::class,'panels']);
 Route::any('manage-admin/panels/{mod}/{act}',	[ManageController::class,'panels']);
 Route::any('manage-admin/panels/{mod}/{act}/{id}',	[ManageController::class,'panels']);

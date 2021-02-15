@@ -57,17 +57,15 @@ $TextLanguage = new \App\TextLanguage;
             <tr>
                <th width="120" valign="top" style="padding-top:10px;"><?php echo $TextLanguage->lang('message'); ?>   <span style="color:red">*</span></th>
                 <td> 
-				 <?php
-                 $this_name = 'info'
-                 ?>
-                 <textarea id='<?php echo $this_name ?>' name='<?php echo $this_name ?>' rows='10'><?php echo $edit_info ?></textarea>
-                 <script type="text/javascript"> 
-                 CKEDITOR.replace( '<?php echo $this_name ?>' , 
-                 { 
-                    enterMode : CKEDITOR.ENTER_BR,
-                    shiftEnterMode: CKEDITOR.ENTER_BR 
-                 }); 
-                 </script>
+
+
+                    <?php
+				$this_name = 'info';
+				$this_value = $edit_info;
+				?>
+				@include('manage.include.input_texteditor')
+
+ 
                  
                 </td>
             </tr>

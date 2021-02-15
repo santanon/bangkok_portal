@@ -67,36 +67,28 @@ $TextLanguage = new \App\TextLanguage;
             <tr>
                <th width="120" valign="top" style="padding-top:10px;"><?php echo $TextLanguage->lang('answer'); ?> <img align="absmiddle" src="<?php echo base_url() ?>assets/panel/f_th.jpg" /> <span style="color:red">*</span></th>
                 <td> 
-				 <?php
-                 $this_name = 'info'
-                 ?>
-                 <textarea id='<?php echo $this_name ?>' name='<?php echo $this_name ?>' rows='10'></textarea>
-                 <script type="text/javascript"> 
-                 CKEDITOR.replace( '<?php echo $this_name ?>' , 
-                 { 
-                    enterMode : CKEDITOR.ENTER_BR,
-                    shiftEnterMode: CKEDITOR.ENTER_BR 
-                 }); 
-                 </script>
-                 
+ 
+                <?php
+				$this_name = 'info';
+				$this_value = '';
+				?>
+				@include('manage.include.input_texteditor')
+ 
                 </td>
             </tr>
             
             
              <tr>
                <th width="120" valign="top" style="padding-top:10px;"><?php echo $TextLanguage->lang('answer'); ?> <img align="absmiddle" src="<?php echo base_url() ?>assets/panel/f_en.jpg" /> <span style="color:red">*</span></th>
-                <td> 
-				 <?php
-                 $this_name = 'en_info'
-                 ?>
-                 <textarea id='<?php echo $this_name ?>' name='<?php echo $this_name ?>' rows='10'></textarea>
-                 <script type="text/javascript"> 
-                 CKEDITOR.replace( '<?php echo $this_name ?>' , 
-                 { 
-                    enterMode : CKEDITOR.ENTER_BR,
-                    shiftEnterMode: CKEDITOR.ENTER_BR 
-                 }); 
-                 </script>
+                <td>
+                    
+                    
+                    <?php
+				$this_name = 'en_info';
+				$this_value = '';
+				?>
+				@include('manage.include.input_texteditor')
+ 
                  
                 </td>
             </tr>

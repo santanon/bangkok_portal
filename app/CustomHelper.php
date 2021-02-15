@@ -727,4 +727,119 @@ class CustomHelper
     {  
 		return @$_GET[$v];
     }  
+
+	function update_user_files($f,$p)
+	{
+		$this_f = $this->input_post($f, TRUE);
+ 
+		if(strpos($this_f,'|') > -1)
+		{
+			$each_v = explode('|',$this_f);
+			foreach($each_v as $item_v) 
+			{
+				if(trim($item_v) != '')
+				{
+					@unlink($_SERVER['DOCUMENT_ROOT'].'/user_files/'.$_SESSION['panel_id'].'/'.basename($item_v));
+				}
+			}
+		}
+		else
+		{
+			@unlink($_SERVER['DOCUMENT_ROOT'].'/user_files/'.$_SESSION['panel_id'].'/'.basename($this_f));
+		}
+ 
+		$this_url = ""; 
+		$list_files = scandir($_SERVER['DOCUMENT_ROOT'].'/upload_tools/server/php/files/'.$_SESSION['panel_id'].'/'.$p.'');
+		foreach($list_files as $this_file) 
+		{ 
+			if($this_file != '.' && $this_file != '..')
+			{
+				if(trim($this_file) != '')
+				{
+					$each_ext = explode('.',$this_file);
+					$new_file_name = uniqid(rand(), true).'.'.$each_ext[count($each_ext)-1];
+					  
+					copy($_SERVER['DOCUMENT_ROOT'].'/upload_tools/server/php/files/'.$_SESSION['panel_id'].'/'.$p.'/'.$this_file,$_SERVER['DOCUMENT_ROOT'].'/user_files/'.$_SESSION['panel_id'].'/'.$new_file_name);
+	
+					$this_url = $this_url.'http://127.0.0.1:8000/user_files/'.$_SESSION['panel_id'].'/'.$new_file_name.'|';	
+				} 
+			} 
+		}
+
+		return $this_url;
+	}
+
+	function update_user_files_reverse($f,$m,$c)
+	{ 
+		try 
+		{
+			$this_url = ""; 
+			$list_files = scandir($_SERVER['DOCUMENT_ROOT'].'/upload_tools/server/php/files/'.$_SESSION['panel_id'].'/'.$m.'_'.$c);
+	
+			foreach($list_files as $this_file) 
+			{ 
+				if($this_file != '.' && $this_file != '..')
+				{
+					if(trim($this_file) != '')
+					{
+						$each_ext = explode('.',$this_file);
+						$new_file_name = uniqid(rand(), true).'.'.$each_ext[count($each_ext)-1];
+	
+						@unlink($_SERVER['DOCUMENT_ROOT'].'/upload_tools/server/php/files/'.$_SESSION['panel_id'].'/'.$m.'_'.$c.'/'.$this_file); 
+						@unlink($_SERVER['DOCUMENT_ROOT'].'/upload_tools/server/php/thumbnails/'.$_SESSION['panel_id'].'/'.$m.'_'.$c.'/'.$this_file); 
+					} 
+				} 
+			}
+			 
+			$this_f = $f;
+	 
+			if(strpos($this_f,'|') > -1)
+			{
+				$each_v = explode('|',$this_f);
+				foreach($each_v as $item_v) 
+				{
+					if(trim($item_v) != '')
+					{ 
+						copy($_SERVER['DOCUMENT_ROOT'].'/user_files/'.$_SESSION['panel_id'].'/'.basename($item_v),$_SERVER['DOCUMENT_ROOT'].'/upload_tools/server/php/files/'.$_SESSION['panel_id'].'/'.$m.'_'.$c.'/'.basename($item_v));
+					 
+						copy($_SERVER['DOCUMENT_ROOT'].'/user_files/'.$_SESSION['panel_id'].'/'.basename($item_v),$_SERVER['DOCUMENT_ROOT'].'/upload_tools/server/php/thumbnails/'.$_SESSION['panel_id'].'/'.$m.'_'.$c.'/'.basename($item_v));
+					}
+				}
+			}
+			else
+			{ 
+				@copy($_SERVER['DOCUMENT_ROOT'].'/user_files/'.$_SESSION['panel_id'].'/'.basename($this_f),$_SERVER['DOCUMENT_ROOT'].'/upload_tools/server/php/files/'.$_SESSION['panel_id'].'/'.$m.'_'.$c.'/'.basename($this_f));
+					 
+				@copy($_SERVER['DOCUMENT_ROOT'].'/user_files/'.$_SESSION['panel_id'].'/'.basename($this_f),$_SERVER['DOCUMENT_ROOT'].'/upload_tools/server/php/thumbnails/'.$_SESSION['panel_id'].'/'.$m.'_'.$c.'/'.basename($this_f));
+			}
+		} 
+		catch ( \Exception $ex ) 
+		{
+			
+		} 
+
+		return '';
+	}
+
+	function update_file_and_alt($f,$v,$m)
+	{
+		$data_get_alt = '';
+		$get_alt_field = $f;
+		$get_alt_value = $v;
+		if($get_alt_value != '')
+		{
+			if(strpos($get_alt_value,'^') > -1)
+			{
+				$get_only_file = explode('^',$get_alt_value);
+				$data_get_alt = $get_only_file[1];
+				$this->update_user_files_reverse($get_only_file[0],$m,$get_alt_field);
+			}
+			else
+			{
+				$this->update_user_files_reverse($get_alt_value,$m,$get_alt_field);
+			} 
+		}
+
+		return $data_get_alt;
+	}
 }

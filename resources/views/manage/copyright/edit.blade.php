@@ -26,36 +26,28 @@ $TextLanguage = new \App\TextLanguage;
             <tr>
 			<th width="120" valign="top" style="padding-top:10px;"><?php echo $TextLanguage->lang('message'); ?> <img align="absmiddle" src="<?php echo base_url() ?>assets/panel/f_th.jpg"> <span style="color:red">*</span></th>
 			<td> 
-			 <?php
-			 $this_name = 'copyright_info'
-			 ?>
-			 <textarea id='<?php echo $this_name ?>' name='<?php echo $this_name ?>' rows='10'><?php echo @$edit_copyright_info ?></textarea>
-			 <script type="text/javascript"> 
-			 CKEDITOR.replace( '<?php echo $this_name ?>' , 
-			 { 
-				enterMode : CKEDITOR.ENTER_BR,
-				shiftEnterMode: CKEDITOR.ENTER_BR 
-			 }); 
-			 </script>
+
+				<?php
+				$this_name = 'copyright_info';
+				$this_value = @$edit_copyright_info;
+				?>
+				@include('manage.include.input_texteditor')
+ 
 			 
 			</td>
 		</tr>
         
          <tr>
 			<th width="120" valign="top" style="padding-top:10px;"><?php echo $TextLanguage->lang('message'); ?> <img align="absmiddle" src="<?php echo base_url() ?>assets/panel/f_en.jpg"> <span style="color:red">*</span></th>
-			<td> 
-			 <?php
-			 $this_name = 'copyright_info_en'
-			 ?>
-			 <textarea id='<?php echo $this_name ?>' name='<?php echo $this_name ?>' rows='10'><?php echo @$edit_copyright_info_en ?></textarea>
-			 <script type="text/javascript"> 
-			 CKEDITOR.replace( '<?php echo $this_name ?>' , 
-			 { 
-				enterMode : CKEDITOR.ENTER_BR,
-				shiftEnterMode: CKEDITOR.ENTER_BR 
-			 }); 
-			 </script>
-			 
+			<td>
+				
+				<?php
+				$this_name = 'copyright_info_en';
+				$this_value = @$edit_copyright_info_en;
+				?>
+				@include('manage.include.input_texteditor')
+
+
 			</td>
 		</tr>
         

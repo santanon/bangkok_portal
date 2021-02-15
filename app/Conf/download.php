@@ -82,6 +82,15 @@ class Download
 	{   
 		$CustomHelper = new \App\CustomHelper;
 		$TextLanguage = new \App\TextLanguage;
+
+
+
+		$uf = 'file1';
+		${$uf} = $CustomHelper->update_user_files($uf,$this->mod.'_'.$uf);
+
+		$uf = 'en_file1';
+		${$uf} = $CustomHelper->update_user_files($uf,$this->mod.'_'.$uf);
+
 		  
 		 
 		$_SESSION[$this->mod.'_group'] = $CustomHelper->input_post('cat_id', TRUE); 
@@ -106,10 +115,10 @@ class Download
 		$d->cat_id = $CustomHelper->input_post('cat_id', TRUE);
 		$d->title = htmlspecialchars($CustomHelper->input_post('title', TRUE));   
 		$d->en_title = htmlspecialchars($CustomHelper->input_post('en_title', TRUE));   
-		$d->file1 = $CustomHelper->input_post('file1', TRUE);   
-		$d->en_file1 = $CustomHelper->input_post('en_file1', TRUE); 
-		
-		
+
+		$file1 = $file1 . '^' . $_POST['file1_alt'];
+		$en_file1 = $en_file1 . '^' . $_POST['en_file1_alt'];
+		 
 		$date_news_1 = 0;
 		
 		if(strlen($CustomHelper->input_post('date_news', TRUE)) > 3)
@@ -206,7 +215,10 @@ class Download
 			$data['config_header_info'] = $TextLanguage->lang('help_'.$this->mod.'_edit');										   
 			$data['config_footer_js'] = 'mainmenuFocus(1,17,2); btn2stageFocus(0,1);'; 
 			$data['config_dropdown_title'] = $TextLanguage->lang(@$this->mod_cat_dropdown_title);  
-			
+
+			$data['get_alt_1'] = $CustomHelper->update_file_and_alt('file1',$row[0]->file1,$this->mod);
+			$data['get_alt_2'] = $CustomHelper->update_file_and_alt('en_file1',$row[0]->en_file1,$this->mod);
+ 
 			if(@$this->mod_cat_model <> '')
 			{
 				$q = "SELECT * FROM ".$CustomHelper->model_to_table($this->mod_cat_model)." WHERE web_id = ? ORDER BY ".$this->mod_cat_order_by;	 	
@@ -228,7 +240,11 @@ class Download
 	{   
 		$CustomHelper = new \App\CustomHelper;
 		$TextLanguage = new \App\TextLanguage;
-		  
+		
+		$uf = 'file1';
+		${$uf} = $CustomHelper->update_user_files($uf,$this->mod.'_'.$uf);
+		$uf = 'en_file1';
+		${$uf} = $CustomHelper->update_user_files($uf,$this->mod.'_'.$uf);
 		  
 		$_SESSION[$this->mod.'_group'] = $CustomHelper->input_post('cat_id', TRUE); 
 		 
@@ -237,8 +253,12 @@ class Download
 		$d->cat_id = $CustomHelper->input_post('cat_id', TRUE);
 		$d->title = htmlspecialchars($CustomHelper->input_post('title', TRUE));
 		$d->en_title = htmlspecialchars($CustomHelper->input_post('en_title', TRUE));
-		$d->file1 = $CustomHelper->input_post('file1', TRUE); 
-		$d->en_file1 = $CustomHelper->input_post('en_file1', TRUE); 
+
+		$file1 = $file1 . '^' . $_POST['file1_alt'];
+		$en_file1 = $en_file1 . '^' . $_POST['en_file1_alt'];
+
+		$d->file1 = $file1; 
+		$d->en_file1 = $en_file1; 
 		
 		$date_news_1 = 0;
 		

@@ -138,7 +138,7 @@ class TextLanguage
 		$lang['idcard'] 				= "บัตรประชาชน";  
 		$lang['image']					= "รูปภาพ";  
 		$lang['image_gallery']			= "อัลบั้มรูปภาพ"; 
-		$lang['image_url']				= "รูปภาพจาก URL";  
+		$lang['image_url']				= "รูปภาพ";  
 		$lang['images_list'] 			= "รายการรูปภาพ";
 		$lang['information']			= "รายละเอียด"; 
 		$lang['input_list'] 			= "รายการคำถาม"; 

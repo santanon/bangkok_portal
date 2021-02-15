@@ -80,15 +80,25 @@ $(function()
             <tr>
                 <th width="120" valign="top" style="padding-top:12px;"><?php echo $TextLanguage->lang('url'); ?></th>
                 <td>
-                    <input name="file1" type="text" class="sm-input--flag-th" id="file1_preview" style="width:510px" placeholder="http://"><br />
-                    <input type="button" name="upload" value="<?php echo $TextLanguage->lang('file_manager'); ?>" onclick="callLightbox('<?php echo base_url(); ?>panel/fm/form/file1',1120,640);return false;" /> 
-                    <input type="text" name="file1_hide" id="file1" /> 
-                    
-                    <br /><br /> 
-                     
-                    <input name="en_file1" type="text" class="sm-input--flag-en" id="en_file1_preview" style="width:510px" placeholder="http://"><br />
-					 <input type="button" name="upload" value="<?php echo $TextLanguage->lang('file_manager'); ?>" onclick="callLightbox('<?php echo base_url(); ?>panel/fm/form/en_file1',1120,640);return false;" />  
-                     <input type="text" name="en_file1_hide" id="en_file1" /> 
+
+                <?php 
+                $this_name = 'file1';
+                $this_w = '0';
+                $this_h = '0';
+                $this_limit = '3';
+                $this_value = '';
+                ?>
+                @include('manage.include.input_file_tools') 
+                
+                <?php 
+                $this_name = 'en_file1';
+                $this_w = '0';
+                $this_h = '0';
+                $this_limit = '3';
+                $this_value = '';
+                ?>
+                @include('manage.include.input_file_tools') 
+ 
                 </td>
             </tr>
             

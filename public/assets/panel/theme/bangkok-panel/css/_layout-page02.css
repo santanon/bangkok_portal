@@ -1,0 +1,53 @@
+#se-maincontainer-wrapper.page02 {
+  min-height: 320px;
+  background: #f5f5f5; }
+
+#page2col {
+  overflow: hidden;
+  padding: 20px 40px 0 40px; }
+  #page2col .content-slide-box {
+    float: left;
+    width: 620px; }
+    #page2col .content-slide-box .content-slide-detail {
+      padding: 115px 18px 18px 18px !important; }
+      #page2col .content-slide-box .content-slide-detail .header-text {
+        font-size: 26px; }
+  #page2col .sidebox {
+    float: left;
+    margin: 25px 0 0 9px;
+    padding: 5px 10px;
+    width: 275px;
+    min-height: 125px;
+    background: #fff;
+    border: 1px solid #ccc; }
+    #page2col .sidebox .header-text {
+      font-size: 26px; }
+
+#logo-select .mod_tab-content > .header {
+  height: 35px;
+  vertical-align: top;
+  line-height: 20px; }
+  #logo-select .mod_tab-content > .header .header-text {
+    margin: 0 10px 0 0;
+    height: 29px; }
+
+#logo-select .mod_tab-content > .content {
+  padding: 8px 10px 20px 10px;
+  min-height: 200px;
+  border: 1px dotted #333333; }
+
+#logo-select-pc {
+  text-align: center; }
+  #logo-select-pc .text-box {
+    display: block;
+    font-size: 26px;
+    color: #999; }
+  #logo-select-pc .btn-line {
+    margin: 45px 0 0 0; }
+
+#logo-current {
+  margin-top: 10px;
+  width: 100%; }
+  #logo-current > img {
+    max-width: 100%;
+    width: auto; }

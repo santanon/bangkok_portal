@@ -1,13 +1,13 @@
 /* set global config vars */
 
 /* defualt font family */
-$font-header: "kittithada_roman_55_pregular";
-$font-header-bold: "kittithada_medium_65_pregular";
-$font-content: tahoma,arial;
+$font-header: 'Kanit', sans-serif;
+$font-header-bold: 'Kanit', sans-serif;
+$font-content: 'Kanit', sans-serif;
 
 /* defualt page width setting(PC) */
 $page-min-width: 1265px;
-$page-max-width: 1265px;
+$page-max-width: 100%;
 
 /* off canvas menu width *ex. 70px or 70% */
 $offcanvas-width: 200px;
@@ -63,7 +63,6 @@ $tablet-landscape: "#{$screen} and (min-width: 40.063em) and (max-width: 64em) a
 @import "layout-page01";
 @import "layout-page02";
 @import "footer01";
-
 
 
 /* Import responsive control stylesheet */

@@ -1,0 +1,263 @@
+.banner-wrapper{
+    position: relative;
+    .list-banner{
+        margin: 0;
+        padding: 0;
+        position: relative;
+        li{
+            list-style: none;
+            position: relative;
+            outline: none;
+            .bg-layer{
+                position: absolute;
+                background-image: url('../../assets/images/bg-layer-onbanner.png');
+                width: 100%;
+                height: 100%;
+                background-repeat: repeat;
+            }
+            .banner{
+                height: 430px;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .item-Onbanner-outer{
+                position: absolute;
+                width: 60%;
+                height: 30rem;
+                z-index: 99;
+                right: 0;
+                bottom: 0;
+                background-color: rgba($color: white, $alpha: 0.7);
+                .item-Onbanner-inner{
+                    display: table;
+                    width: 100%;
+                    height: 100%;
+                    padding: 20px;
+                    text-align: left;
+                    .list{
+                        display: table-cell;
+                        vertical-align: middle;
+                        .title-banner{
+                            margin-bottom: 20px;
+                            color: $color-secondary;
+                            font-size: 3.6rem;
+                            line-height: 4rem;
+                            font-weight: $font-medium;
+                        }
+                        .desc-banner{
+                            margin-bottom: 20px;
+                            color: $color-text;
+                            font-size: 2.2rem;
+                            line-height: 2.6rem;
+                            font-weight: $font-regular;
+                        }
+                        .action-link{
+                            padding: 10px 15px;
+                            display: inline-block;
+                            background-color: $color-secondary;
+                            transition: all 0.3s ease;
+                            a{
+                                color: #fff;
+                                font-size: 16px;
+                                font-weight: $font-regular;
+                                
+                                &:hover{
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .slick-arrow{
+            position: absolute;
+            z-index: 9;
+            left: auto;
+            right: auto;
+            &.slick-prev{
+                text-indent: -9999px;
+                left: -90px;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: $color-primary;
+                width: 70px;
+                height: 70px;
+                background-image: url('../../assets/images/icons/icon-slide-prev.png');
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+            &.slick-next{
+                text-indent: -9999px;
+                right: -90px;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: $color-primary;
+                width: 70px;
+                height: 70px;
+                background-image: url('../../assets/images/icons/icon-slide-next.png');
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+            &.slick-disabled{
+                background-color: #cfd1d4;
+                opacity: 1.0;
+                cursor: not-allowed;
+            }
+        }
+
+        @include media-breakpoint-down(md){
+            li{
+                .banner{
+                    height: 550px;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+                .item-Onbanner-outer{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 99;
+                    top: 0;
+                    left: 0;
+                    
+                    .item-Onbanner-inner{
+                        .list{
+                            display: table-cell;
+                            vertical-align: middle;
+                            .title-banner{
+                                font-size: 3rem;
+                                line-height: 4rem;
+                            }
+                            .desc-banner{
+                                font-size: 2rem;
+                                line-height: 3rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .slick-arrow{
+                &.slick-prev{
+                    left: 0;
+                }
+                &.slick-next{
+                    right: 0;
+                }
+            }
+        }
+    }
+    .slick-dots{
+        left: 13px;
+        bottom: 18px;
+        li{
+            float: left;
+            width: 80px;
+            height: 7px;
+            background-color: #d7d9db;
+            margin: 0 5px 0 0;
+            transition: all 0.5s;
+            button{
+                display: none;
+            }
+
+            &.slick-active{
+                background-color: $color-primary;
+            }
+        }
+        // li.slick-active Css infile color.scss
+        @include media-breakpoint-down(md){
+            left: 0;
+            bottom: 0;
+            li{
+                width: auto;
+                margin: 0;
+            }
+        }
+    }
+
+    &.onlyOne{
+        position: relative;
+        ul{
+            margin: 0;
+            padding: 0;
+            position: relative;
+            li{
+                list-style: none;
+                position: relative;
+                outline: none;
+                .bg-layer{
+                    position: absolute;
+                    background-image: url('../../assets/images/bg-layer-onbanner.png');
+                    width: 100%;
+                    height: 100%;
+                    background-repeat: repeat;
+                }
+                .banner{
+                    height: 430px;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center center;
+                }
+                .item-Onbanner-outer{
+                    position: absolute;
+                    width: 100%;
+                    height: auto;
+                    z-index: 99;
+                    bottom: 0;
+                    left: 0;
+                    background-color: rgba($color: white, $alpha: 0.7);
+                    .item-Onbanner-inner{
+                        display: table;
+                        width: 100%;
+                        height: 100%;
+                        padding: 15px;
+                        text-align: center;
+                        .list{
+                            display: table-cell;
+                            vertical-align: middle;
+                            .title-banner{
+                                color: $color-secondary;
+                                font-size: 3.6rem;
+                                line-height: 4rem;
+                                font-weight: $font-medium;
+                            }
+                            .desc-banner{
+                                color: $color-text;
+                                font-size: 2.2rem;
+                                line-height: 2.6rem;
+                                font-weight: $font-regular;
+                            }
+                        }
+                    }
+                }
+            }
+
+            @include media-breakpoint-down(md){
+                li{
+                    .item-Onbanner-outer{
+                        .item-Onbanner-inner{
+                            .list{
+                                display: table-cell;
+                                vertical-align: middle;
+                                .title-banner{
+                                    font-size: 3rem;
+                                    line-height: 4rem;
+                                }
+                                .desc-banner{
+                                    font-size: 2rem;
+                                    line-height: 3rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-down(md){
+        overflow: hidden;
+    }
+}

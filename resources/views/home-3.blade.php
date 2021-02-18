@@ -291,7 +291,12 @@ function sfi(title,url)
 
 
 <!-- calendar -->
+<!-- <link rel="stylesheet" href="{{ asset('template3/theme-blue/css/calendar-fixed.css')}}"> -->
+<!-- <link rel="stylesheet" href="{{ asset('template3/theme-orange/css/calendar-fixed.css')}}"> -->
 <link rel="stylesheet" href="{{ asset('template3/theme-green/css/calendar-fixed.css')}}">
+<!-- <link rel="stylesheet" href="{{ asset('template3/theme-pink/css/calendar-fixed.css')}}"> -->
+<!-- <link rel="stylesheet" href="{{ asset('template3/theme-purple/css/calendar-fixed.css')}}"> -->
+
 <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
 <script type="text/javascript" src="{{ asset('template3/js/calendar-manual.js') }}"></script>
 <script>

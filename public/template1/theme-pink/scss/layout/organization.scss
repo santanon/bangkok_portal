@@ -1,0 +1,167 @@
+
+
+.orgChart{
+    width: 1140px;
+    margin : 40px auto;
+    overflow: auto;
+
+    h2{
+        margin-bottom : 0px 0 10px;
+        font-size : 2rem;
+        font-weight: 500;
+        min-height: 20px;
+    }
+    p{
+        margin-bottom : 0px 0 10px;
+        font-size : 1.6rem;
+        font-weight: 300;
+        min-height: 20px;
+    }
+    a{
+        // display: block;
+        // width: 100%;
+        margin-bottom : 0px 0 10px;
+        font-size : 1.6rem;
+        font-weight: 300;
+        min-height: 20px;
+        color: #525252 !important;
+    }
+    ul{
+        list-style : none;
+        margin : 4px;
+        padding : 0px;
+        font-size : 0.8em;
+        text-align : left;
+        &.stack{
+            text-align : center;
+            ul{
+                text-align: center;
+            }
+        }
+    }
+    table{
+        width: 100%;
+        tbody{
+            tr{
+                &.lines{
+                    td{
+                        position: relative;
+                        &.line{
+                            width: 1px;
+                            height: 20px;
+                        }
+                        &.top{
+                            border-top : 1px solid black;
+                        }
+                        &.left{
+                            border-right : 1px solid black;
+                        }
+                        &.right{
+                            border-left : 0px solid black;
+                        }
+                        &.half{
+                            width: 50%;
+                        }
+                    }
+                }
+                td{
+                    text-align : center;
+                    vertical-align : top;
+                    //padding : 0px 2px;
+                }
+            }
+        }
+    }
+    .node{
+        cursor : default;
+        border : 1px solid #e7e7e7;
+        display : inline-block;
+        padding : 5px 5px 30px;
+        width : 150px;
+        height : auto;
+        background: #ffffff; /* Old browsers */
+        background: -moz-linear-gradient(top, #ffffff 0%, #fbfbfb 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #fbfbfb)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, #ffffff 0%, #fbfbfb 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, #ffffff 0%, #fbfbfb 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, #ffffff 0%, #fbfbfb 100%); /* IE10+ */
+        background: linear-gradient(to bottom, #ffffff 0%, #fbfbfb 100%); /* W3C */
+        line-height : 1.3em;
+        border-radius : 4px;
+        -moz-border-radius : 4px;
+        -webkit-border-radius : 4px;
+        position: relative;
+        box-shadow: 1px 1px 0px #ddd;
+        margin: 0 5px;
+    }
+
+    .org-add-button, .org-del-button, .org-confirm-del-button {
+        position: absolute;
+    }
+    .org-add-button {
+        padding-left: 5px;
+        bottom: 3px;
+        left: 5px;
+        &:before{
+            font-family: 'Font Awesome 5 Free';
+            font-size: 1.4rem;
+            font-weight: 900;
+            content: '\f0fe';
+            margin-right: 5px;
+            color: #00c851;
+        }
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    .org-del-button {
+        padding-right: 5px;
+        bottom: 3px;
+        right: 5px;
+        &:before{
+            font-family: 'Font Awesome 5 Free';
+            font-size: 1.4rem;
+            font-weight: 900;
+            content: '\f2ed';
+            color: #ff4444;
+        }
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    .org-outData{
+        width: 20px;
+        height: 20px;
+        &:before{
+            font-family: 'Font Awesome 5 Free';
+            font-size: 1.4rem;
+            font-weight: 900;
+            content: '\f0fe';
+            margin-right: 5px;
+            color: #000;
+        }
+    }
+
+    .org-input { 
+        width: 100%;
+        padding: 0 10px;
+        height: 40px;
+        font-size: 1.4rem;
+        border: 1px solid #cfd1d4;
+        background-color: #fff;
+        margin-bottom: 10px;
+        &:focus{
+            outline: none;
+        }
+    }
+  
+    .org-confirm-del-button { display: none; }
+}
+
+
+  
+
+  
+  
+  
+  

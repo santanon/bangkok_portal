@@ -54,6 +54,7 @@
         <button class="" data-toggle="modal" data-target="#modalpanel">Modal Full Screen</button>
         -->
 
+
     </div>
 
     <footer id="footer-wrapper">
@@ -246,6 +247,7 @@
                 ghostClass: "sortable-ghost",
                 chosenClass: "sortable-chosen",
                 dragClass: "sortable-drag",
+                forceFallback: true,
                 swapThreshold: 1,
                 animation: 150,
                 dataIdAttr: "data-id",

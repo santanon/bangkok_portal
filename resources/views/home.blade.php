@@ -53,7 +53,20 @@
         <button type="button" data-toggle="modal" data-target="#modal_Alert">Modal Alert System</button> 
         <button class="" data-toggle="modal" data-target="#modalpanel">Modal Full Screen</button>
         -->
-
+        <!-- <video
+            id="my-video"
+            class="video-js"
+            controls
+            preload="auto"
+            width="640"
+            height="264"
+            
+            data-setup="{}"
+        >
+            <source src="{{ asset('Video/ocean.mp4')}}" type="video/mp4" />
+            <source src="{{ asset('Video/ocean.ogv')}}" type="video/ogg" />
+            <source src="{{ asset('Video/ocean.webm')}}" type="video/webm" />
+        </video> -->
 
     </div>
 
@@ -234,6 +247,9 @@
  
 @include('template1/include.css_scripts')
 
+
+<!-- <link href="https://vjs.zencdn.net/7.10.2/video-js.css" rel="stylesheet" />
+<script src="https://vjs.zencdn.net/7.10.2/video.min.js"></script> -->
 
 <script type="text/javascript">
     $(document).ready(function () {

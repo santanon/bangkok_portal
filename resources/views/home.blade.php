@@ -28,6 +28,17 @@
             @include('template1/main-slide')
         </div>
 
+
+        <!-- Swiper -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+            </div>
+            <!-- Add Scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </div>
         
 
         <div class="group-section-content" id="manage_dragdrop">
@@ -254,9 +265,9 @@
 <script src="https://vjs.zencdn.net/7.10.2/video.min.js"></script> -->
 
 
-<!-- <link rel="stylesheet" href="{{ asset('swiper/swiper-bundle.min.css')}}">
+<link rel="stylesheet" href="{{ asset('swiper/swiper-bundle.min.css')}}">
 <script type="text/javascript" src="{{ asset('swiper/swiper-bundle.js') }}"></script>
-<script type="text/javascript" src="{{ asset('swiper/swiper-bundle.min.js') }}"></script> -->
+<script type="text/javascript" src="{{ asset('swiper/swiper-bundle.min.js') }}"></script>
 
 
 <script type="text/javascript">
@@ -289,6 +300,13 @@
         }else{
             $("div.group-section-content").removeAttr("id");
         }
+
+        var swiper = new Swiper('.swiper-container', {
+            scrollbar: {
+                el: '.swiper-scrollbar',
+                hide: true,
+            },
+        });
 
 
     });

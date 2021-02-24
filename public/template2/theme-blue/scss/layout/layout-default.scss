@@ -394,7 +394,7 @@ $howManySteps: 100; //this needs to be even.
                             font-size: 3rem;
                             line-height: 3rem;
                             content: '';
-                            background-image: url('../../theme-orange/assets/images/icons/arrow-right.svg');
+                            background-image: url('../../theme-blue/assets/images/icons/arrow_right.svg');
                             background-size: 30px 30px;
                             background-position: 0 0;
                             background-repeat: no-repeat;
@@ -449,6 +449,26 @@ $howManySteps: 100; //this needs to be even.
 
                         &.txt-center{
                             align-items: center;
+                        }
+                        &.-icon{
+                            a{
+                                &:after{
+                                    position: absolute;
+                                    top: 11px;
+                                    right: 5px;
+                                    width: 30px;
+                                    height: 30px;
+                                    padding: 0;
+                                    font-size: 3rem;
+                                    line-height: 3rem;
+                                    content: '';
+                                    background-image: url('../../theme-blue/assets/images/icons/arrow_right.svg');
+                                    background-size: 30px 30px;
+                                    background-position: 0 0;
+                                    background-repeat: no-repeat;
+                                }
+                            }
+                            
                         }
                     }
                 }
@@ -718,6 +738,7 @@ $howManySteps: 100; //this needs to be even.
                             position: relative;
                             .desc-news{
                                 max-width: unset;
+                                -webkit-line-clamp: inherit;
                             }
                         }
                     }
@@ -809,6 +830,10 @@ $howManySteps: 100; //this needs to be even.
                                     color: $color-secondary;
                                 }
                             }
+
+                            &.-bannerlink{
+                                -webkit-line-clamp: 5;
+                            }
                         }
 
                         .social-wrapper{
@@ -822,6 +847,7 @@ $howManySteps: 100; //this needs to be even.
                             position: relative;
                             .desc-news{
                                 max-width: unset;
+                                -webkit-line-clamp: inherit !important;
                             }
                         }
                     }

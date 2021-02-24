@@ -830,6 +830,27 @@ $howManySteps: 100; //this needs to be even.
                                 }
                             }
                         }
+
+                        &.-bannerlink{
+                            height: 191px;
+                            .date{
+                                img{
+                                    position: relative;
+                                }
+                            }
+                            .desc-news{
+                                -webkit-line-clamp: 5;
+                            }
+                        }
+
+                        @media only screen and (max-width: 992px) {
+                            &.-bannerlink{
+                                height: auto;
+                                .desc-news{
+                                    -webkit-line-clamp: inherit !important;
+                                }
+                            }
+                        }
                     }
                     &:hover{
                         .img-news{
@@ -3620,8 +3641,8 @@ $howManySteps: 100; //this needs to be even.
                     background-repeat: repeat;
                     opacity: 0;
                     transition: all 0.5s ease-in-out;
-                    background: rgb(0,93,171);
-                    background: linear-gradient(0deg, rgba(0,93,171,1) 0%, rgba(0,93,171,0) 100%);
+                    background: rgb(105,80,161);
+                    background: linear-gradient(0deg, rgba(105,80,161,1) 0%, rgba(105,80,161,0) 100%);
                     border-radius: 15px;
                     .icon-search-hover{
                         display: flex;
@@ -3779,8 +3800,8 @@ $howManySteps: 100; //this needs to be even.
                     background-repeat: repeat;
                     opacity: 0;
                     transition: all 0.5s ease-in-out;
-                    background: rgb(0,93,171);
-                    background: linear-gradient(0deg, rgba(0,93,171,1) 0%, rgba(0,93,171,0) 100%);
+                    background: rgb(105,80,161);
+                    background: linear-gradient(0deg, rgba(105,80,161,1) 0%, rgba(105,80,161,0) 100%);
                     border-radius: 15px;
                     .icon-video-hover{
                         display: flex;
@@ -3947,8 +3968,8 @@ $howManySteps: 100; //this needs to be even.
                         opacity: 1;
                         &.show-icon{
                             opacity: 1;
-                            background: rgb(0,93,171);
-                            background: linear-gradient(0deg, rgba(0,93,171,1) 0%, rgba(0,93,171,0) 100%);
+                            background: rgb(105,80,161);
+                            background: linear-gradient(0deg, rgba(105,80,161,1) 0%, rgba(105,80,161,0) 100%);
                             transition: all 0.5s ease-in-out;
                             .icon-video-hover{
                                 .icon-video{

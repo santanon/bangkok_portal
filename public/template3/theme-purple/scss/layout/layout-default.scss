@@ -661,6 +661,7 @@ $howManySteps: 100; //this needs to be even.
                             position: relative;
                             .desc-news{
                                 max-width: unset;
+                                -webkit-line-clamp: inherit;
                             }
                         }
                     }
@@ -741,6 +742,17 @@ $howManySteps: 100; //this needs to be even.
                                 }
                             }
                         }
+                        &.-bannerlink{
+                            min-height: 191px;
+                            .date{
+                                img{
+                                    position: relative;
+                                }
+                            }
+                            .desc-news{
+                                -webkit-line-clamp: 5;
+                            }
+                        }
                     }
                     &:hover{
                         .img-news{
@@ -761,6 +773,10 @@ $howManySteps: 100; //this needs to be even.
                             position: relative;
                             .desc-news{
                                 max-width: unset;
+                                -webkit-line-clamp: inherit !important;
+                            }
+                            &.-bannerlink{
+                                min-height: unset;
                             }
                         }
                     }

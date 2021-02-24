@@ -87,7 +87,7 @@
                                         <div class="col-lg-12">
                                             <div class="content -bannerlink">
                                                 <div class="desc-news">
-                                                    <a href="/news-detail-4">
+                                                    <a href="#">
                                                         หน่วยงานภาครัฐและภาคเอกชนประชุมกรรมการดำเนินงานด้านการป้องกัน...
                                                     </a>
                                                 </div>
@@ -122,7 +122,7 @@
                                         <div class="col-lg-12">
                                             <div class="content -bannerlink">
                                                 <div class="desc-news">
-                                                    <a href="/news-detail-4">
+                                                    <a href="#">
                                                         หน่วยงานภาครัฐและภาคเอกชนประชุมกรรมการดำเนินงานด้านการป้องกัน...
                                                     </a>
                                                 </div>
@@ -157,7 +157,7 @@
                                         <div class="col-lg-12">
                                             <div class="content -bannerlink">
                                                 <div class="desc-news">
-                                                    <a href="/news-detail-4">
+                                                    <a href="#">
                                                         หน่วยงานภาครัฐและภาคเอกชนประชุมกรรมการดำเนินงานด้านการป้องกัน...
                                                     </a>
                                                 </div>
@@ -192,7 +192,7 @@
                                         <div class="col-lg-12">
                                             <div class="content -bannerlink">
                                                 <div class="desc-news">
-                                                    <a href="/news-detail-4">
+                                                    <a href="#">
                                                         หน่วยงานภาครัฐและภาคเอกชนประชุมกรรมการดำเนินงานด้านการป้องกัน...
                                                     </a>
                                                 </div>
@@ -227,7 +227,7 @@
                                         <div class="col-lg-12">
                                             <div class="content -bannerlink">
                                                 <div class="desc-news">
-                                                    <a href="/news-detail-4">
+                                                    <a href="#">
                                                         หน่วยงานภาครัฐและภาคเอกชนประชุมกรรมการดำเนินงานด้านการป้องกัน...
                                                     </a>
                                                 </div>
@@ -262,7 +262,7 @@
                                         <div class="col-lg-12">
                                             <div class="content -bannerlink">
                                                 <div class="desc-news">
-                                                    <a href="/news-detail-4">
+                                                    <a href="#">
                                                         หน่วยงานภาครัฐและภาคเอกชนประชุมกรรมการดำเนินงานด้านการป้องกัน...
                                                     </a>
                                                 </div>
@@ -297,7 +297,7 @@
                                         <div class="col-lg-12">
                                             <div class="content -bannerlink">
                                                 <div class="desc-news">
-                                                    <a href="/news-detail-4">
+                                                    <a href="#">
                                                         หน่วยงานภาครัฐและภาคเอกชนประชุมกรรมการดำเนินงานด้านการป้องกัน...
                                                     </a>
                                                 </div>
@@ -332,7 +332,7 @@
                                         <div class="col-lg-12">
                                             <div class="content -bannerlink">
                                                 <div class="desc-news">
-                                                    <a href="/news-detail-4">
+                                                    <a href="#">
                                                         หน่วยงานภาครัฐและภาคเอกชนประชุมกรรมการดำเนินงานด้านการป้องกัน...
                                                     </a>
                                                 </div>
@@ -367,7 +367,7 @@
                                         <div class="col-lg-12">
                                             <div class="content -bannerlink">
                                                 <div class="desc-news">
-                                                    <a href="/news-detail-4">
+                                                    <a href="#">
                                                         หน่วยงานภาครัฐและภาคเอกชนประชุมกรรมการดำเนินงานด้านการป้องกัน...
                                                     </a>
                                                 </div>
@@ -402,7 +402,7 @@
                                         <div class="col-lg-12">
                                             <div class="content -bannerlink">
                                                 <div class="desc-news">
-                                                    <a href="/news-detail-4">
+                                                    <a href="#">
                                                         หน่วยงานภาครัฐและภาคเอกชนประชุมกรรมการดำเนินงานด้านการป้องกัน...
                                                     </a>
                                                 </div>

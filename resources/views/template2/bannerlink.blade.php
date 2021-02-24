@@ -21,8 +21,8 @@
                         <div class="row">
                             <div class="col-lg-3">
                                 <div class="top-content">
-                                    <div class="group-text__no-styled">
-                                        <a href="#nogo" class="title">BANNER</a>
+                                    <div class="group-text__no-styled -icon">
+                                        <a href="/bannerlink-2" class="title">BANNER</a>
                                         <p class="desc">The Bangkok Metropolitan Council Secretariat </p>
                                     </div>
                                 </div>

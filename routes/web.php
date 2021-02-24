@@ -119,6 +119,9 @@ Route::any('/ita', function () {
 Route::any('/organization', function () {
     return view('organization');
 });
+Route::any('/bannerlink', function () {
+    return view('bannerlink-main');
+});
 
 
 
@@ -190,6 +193,9 @@ Route::any('/sitemap-2', function () {
 Route::any('/ita-2', function () {
     return view('ita-page-2');
 });
+Route::any('/bannerlink-2', function () {
+    return view('bannerlink-main-2');
+});
 
 
 //Template3
@@ -244,6 +250,11 @@ Route::any('/sitemap-3', function () {
 Route::any('/ita-3', function () {
     return view('ita-page-3');
 });
+Route::any('/bannerlink-3', function () {
+    return view('bannerlink-main-3');
+});
+
+
 
 //template4
 Route::any('/home-4', function () {
@@ -296,6 +307,9 @@ Route::any('/sitemap-4', function () {
 });
 Route::any('/ita-4', function () {
     return view('ita-page-4');
+});
+Route::any('/bannerlink-4', function () {
+    return view('bannerlink-main-4');
 });
 
 
@@ -351,4 +365,7 @@ Route::any('/sitemap-5', function () {
 });
 Route::any('/ita-5', function () {
     return view('ita-page-5');
+});
+Route::any('/bannerlink-5', function () {
+    return view('bannerlink-main-5');
 });

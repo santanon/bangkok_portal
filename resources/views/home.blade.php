@@ -28,6 +28,8 @@
             @include('template1/main-slide')
         </div>
 
+        
+
         <div class="group-section-content" id="manage_dragdrop">
             @include('template1/news')
             
@@ -251,6 +253,12 @@
 <!-- <link href="https://vjs.zencdn.net/7.10.2/video-js.css" rel="stylesheet" />
 <script src="https://vjs.zencdn.net/7.10.2/video.min.js"></script> -->
 
+
+<!-- <link rel="stylesheet" href="{{ asset('swiper/swiper-bundle.min.css')}}">
+<script type="text/javascript" src="{{ asset('swiper/swiper-bundle.js') }}"></script>
+<script type="text/javascript" src="{{ asset('swiper/swiper-bundle.min.js') }}"></script> -->
+
+
 <script type="text/javascript">
     $(document).ready(function () {
         
@@ -281,6 +289,7 @@
         }else{
             $("div.group-section-content").removeAttr("id");
         }
+
 
     });
 </script>

@@ -634,6 +634,10 @@ $howManySteps: 100; //this needs to be even.
                                     text-decoration: none;
                                 }
                             }
+
+                            &.-bannerlink{
+                                -webkit-line-clamp: 5;
+                            }
                         }
                     }
                     &:hover{
@@ -658,7 +662,7 @@ $howManySteps: 100; //this needs to be even.
                             position: relative;
                             .desc-news{
                                 max-width: unset;
-                                -webkit-line-clamp: inherit;
+                                -webkit-line-clamp: inherit !important;
                             }
                         }
                     }

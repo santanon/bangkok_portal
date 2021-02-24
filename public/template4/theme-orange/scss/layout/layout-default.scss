@@ -824,7 +824,7 @@ $howManySteps: 100; //this needs to be even.
                             left: 0;
                             width: 46px;
                             height: 15px;
-                            background-image: url('../../theme-pink/assets/images/icons/icon-new.png');
+                            background-image: url('../../theme-orange/assets/images/icons/icon-new.png');
                             background-position: left top;
                             background-size: cover;
                         }
@@ -900,12 +900,20 @@ $howManySteps: 100; //this needs to be even.
                             left: 20px;
                             bottom: 0;
                         }
+
+                        &.-bannerlink{
+                            .desc-news{
+                                -webkit-line-clamp: 5;
+                            }
+                        }
+
                     }
                     @media only screen and (max-width: 992px) {
                         .content{
                             position: relative;
                             .desc-news{
                                 max-width: unset;
+                                -webkit-line-clamp: inherit !important;
                             }
                         }
                     }
@@ -3095,7 +3103,7 @@ $howManySteps: 100; //this needs to be even.
         &.bg-faq{
             padding: 25px 0 70px;
             background-color: white;
-            background-image: url('../../theme-pink/assets/images/bg-index-faq.jpg');
+            background-image: url('../../theme-orange/assets/images/bg-index-faq.jpg');
             background-repeat: no-repeat;
             background-position: center center;
         }

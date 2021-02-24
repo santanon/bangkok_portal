@@ -560,6 +560,7 @@ $howManySteps: 100; //this needs to be even.
                             position: relative;
                             .desc-news{
                                 max-width: unset;
+                                -webkit-line-clamp: inherit;
                             }
                         }
                     }
@@ -633,6 +634,10 @@ $howManySteps: 100; //this needs to be even.
                                     text-decoration: none;
                                 }
                             }
+
+                            &.-bannerlink{
+                                -webkit-line-clamp: 5;
+                            }
                         }
                     }
                     &:hover{
@@ -650,10 +655,14 @@ $howManySteps: 100; //this needs to be even.
                         }
                     }
                     @media only screen and (max-width: 992px) {
+                        .img-news{
+                            height: 412px;
+                        }
                         .content{
                             position: relative;
                             .desc-news{
                                 max-width: unset;
+                                -webkit-line-clamp: inherit !important;
                             }
                         }
                     }
@@ -2271,6 +2280,9 @@ $howManySteps: 100; //this needs to be even.
     }
 
     .group-mange-section{
+        display: none;
+    }
+    .tools{
         display: none;
     }
       

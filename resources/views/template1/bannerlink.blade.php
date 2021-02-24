@@ -23,6 +23,9 @@
                                 <h3 class="title color-primary">BANNER</h3>
                                 <p class="desc color-secondary">The Bangkok Metropolitan Council Secretariat </p>
                             </div>
+                            <div class="group-gotoall">
+                                <a href="/bannerlink" class="btn btn-outline-dark">แบนเนอร์ทั้งหมด</a>
+                            </div>
                         </div>
                         <div class="main-content">
                             <div class="action-slide dis-flex justify-end">

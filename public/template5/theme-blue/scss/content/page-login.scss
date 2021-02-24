@@ -1,0 +1,141 @@
+.bg-wrapper{
+    background-image: url('../../assets/images/banner/bg-login.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 100vh;
+    position: relative;
+    padding: 15px 0 0;
+
+
+    .header{
+        //position: absolute;
+        width: 100%;
+        display: flex;
+        align-items: top;
+        justify-content: space-between;
+        .logo-login{
+            width: 182px;
+            height: 125px;
+            img{
+                width: 100%;
+            }
+            @media only screen and (max-width: 767px) {
+                img{
+                    width: 70%;
+                }
+            }
+        }
+        .lang{
+            ul{
+                margin: 0;
+                padding: 0;
+                li{
+                    list-style: none;
+                    border: 1px solid #fff;
+                    padding: 5px 8px;
+                    display: inline-block;
+                    cursor: pointer;
+                    transition: all 0.5s ease;
+                    a{
+                        color: #fff;
+                    }
+                    &.active{
+                        background-color: #1e6eaf;
+                    }
+                    &:hover{
+                        background-color: #1e6eaf;
+                        a{
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .section-formlogin{
+        margin-top: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        .left{
+            position: relative;
+            .group-text{
+                position: relative;
+                z-index: 100;
+                width: 295px;
+                h1, h5, h6{
+                    color: #fff;
+                    margin: 0;
+                }
+            }
+            .bglayer{
+                background-image: url('../../assets/images/bglayer-group-text.png');
+                display: inline-block;
+                position: absolute;
+                top: -135px;
+                left: -15px;
+                width: 195px;
+                height: 213px;
+                z-index: 1;
+            }
+        }
+        .right{
+            background-color: rgba($color: #fff, $alpha: 0.7);
+            //background-color: #fff;
+            padding: 10px;
+            padding-bottom: 30px;
+            border-bottom: 5px solid #1e6eaf;
+            h3, h6{
+                color: #333;
+            }
+            
+            .forgot-password{
+                margin-bottom: 20px;
+                a{
+                    color: #999;
+                    font-size: 1.4rem;
+                    transition: all 0.5s ease;
+                    &:before{
+                        content: "\f054";
+                        font-family: "Font Awesome 5 Free";
+                        font-weight: 900;
+                        color: #999;
+                        font-size: 1.2rem;
+                        margin-right: 5px;
+                    }
+                    &:hover{
+                        text-decoration: none;
+                        color: #333;
+                        &:before{
+                            color: #333;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    @media only screen and (max-width: 767px) {
+        height: 100%;
+        .section-formlogin{
+            flex-wrap: wrap;
+            margin-top: 30px;
+            margin-bottom: 50px;
+            .left{
+                .group-text{
+                    width: auto;
+                    margin-bottom: 20px;
+                }
+                .bglayer{
+                    display: none;
+                }
+            }
+            .right{
+                width: 100%;
+            }
+        }
+    }
+}

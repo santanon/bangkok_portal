@@ -345,6 +345,7 @@ function sfi(title,url)
                 ghostClass: "sortable-ghost",
                 chosenClass: "sortable-chosen",
                 dragClass: "sortable-drag",
+                forceFallback: true,
                 swapThreshold: 1,
                 animation: 150,
                 dataIdAttr: "data-id",

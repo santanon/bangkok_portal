@@ -36,14 +36,14 @@ if(!function_exists('base_url'))
         <div class="banner-wrapper">
             @include('template1/main-slide')
         </div>
-
+ 
         <div align="center" class="tools">
             <a href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('กำลังโหลด...','/manage-admin/list?m=contentbox_cat');"><img src="http://127.0.0.1:8000/template1/assets/images/icons/icon-edit.svg" alt="icon">&nbsp; <b style="font-size:18px;">จัดการ BOX</b></a><br><br>
         
         
             <button onmouseover="this.innerHTML = 'บันทึกจัดเรียง'" id="btn_save_sort_box" type="button" class="getOrder_ele" style="font-size: 20px;">บันทึกจัดเรียง</button>  <br><br> 
          
-        </div>
+        </div> 
 
         <div class="group-section-content" id="manage_dragdrop">
  
@@ -118,7 +118,29 @@ if(!function_exists('base_url'))
             ?> 
  
         </div>
-          
+ 
+        
+        <!--
+        <button type="button" class="getOrder_ele">Get Order of Elements</button> 
+        <button type="button" data-toggle="modal" data-target="#modal_Alert">Modal Alert System</button> 
+        <button class="" data-toggle="modal" data-target="#modalpanel">Modal Full Screen</button>
+        -->
+        <!-- <video
+            id="my-video"
+            class="video-js"
+            controls
+            preload="auto"
+            width="640"
+            height="264"
+            
+            data-setup="{}"
+        >
+            <source src="{{ asset('Video/ocean.mp4')}}" type="video/mp4" />
+            <source src="{{ asset('Video/ocean.ogv')}}" type="video/ogg" />
+            <source src="{{ asset('Video/ocean.webm')}}" type="video/webm" />
+        </video> -->
+
+ 
     </div>
 
     <footer id="footer-wrapper">
@@ -299,6 +321,15 @@ if(!function_exists('base_url'))
 @include('template1/include.css_scripts')
 
 
+<!-- <link href="https://vjs.zencdn.net/7.10.2/video-js.css" rel="stylesheet" />
+<script src="https://vjs.zencdn.net/7.10.2/video.min.js"></script> -->
+
+
+<link rel="stylesheet" href="{{ asset('swiper/swiper-bundle.min.css')}}">
+<script type="text/javascript" src="{{ asset('swiper/swiper-bundle.js') }}"></script>
+<script type="text/javascript" src="{{ asset('swiper/swiper-bundle.min.js') }}"></script>
+
+
 <script type="text/javascript">
     $(document).ready(function () {
         
@@ -311,6 +342,7 @@ if(!function_exists('base_url'))
                 ghostClass: "sortable-ghost",
                 chosenClass: "sortable-chosen",
                 dragClass: "sortable-drag",
+                forceFallback: true,
                 swapThreshold: 1,
                 animation: 150,
                 dataIdAttr: "data-id"
@@ -332,6 +364,14 @@ if(!function_exists('base_url'))
             $("div.group-section-content").removeAttr("id");
         }
 
+ 
+        var swiper = new Swiper('.swiper-container', {
+            scrollbar: {
+                el: '.swiper-scrollbar',
+                hide: true,
+            },
+        });
+ 
 
 
     });

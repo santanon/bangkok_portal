@@ -24,6 +24,13 @@
                                     <div class="group-text">
                                         <div class="title_gotoall">
                                             <h3 class="title color-primary txt-align-center-left p-0">BANNER</h3>
+                                            <div class="group-gotoall">
+                                                <a href="/bannerlink-5">
+                                                    <div class="icon-more">
+                                                        <i class="fas fa-arrow-right"></i>
+                                                    </div>
+                                                </a>
+                                            </div>
                                         </div>
                                         <p class="desc txt-align-center-left">The Bangkok Metropolitan Council Secretariat</p>
                                     </div>

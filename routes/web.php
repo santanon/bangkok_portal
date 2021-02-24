@@ -114,5 +114,6 @@ foreach($q as $web_obj)
  
 /* Front */
 Route::any('/video', function () {
-    return view('video-main');
+    return view('video-main'); 
 });   
+ 

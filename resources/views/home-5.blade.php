@@ -262,6 +262,7 @@ function sfi(title,url)
                 ghostClass: "sortable-ghost",
                 chosenClass: "sortable-chosen",
                 dragClass: "sortable-drag",
+                forceFallback: true,
                 swapThreshold: 1,
                 animation: 150,
                 dataIdAttr: "data-id",
@@ -307,6 +308,15 @@ function sfi(title,url)
 
 <!-- calendar -->
 <link rel="stylesheet" href="{{ asset('template5/theme-purple/css/calendar-fixed.css')}}">
+
+<!-- <link rel="stylesheet" href="{{ asset('template5/theme-blue/css/calendar-fixed.css')}}"> -->
+<!-- <link rel="stylesheet" href="{{ asset('template5/theme-orange/css/calendar-fixed.css')}}"> -->
+<!-- <link rel="stylesheet" href="{{ asset('template5/theme-green/css/calendar-fixed.css')}}"> -->
+<!-- <link rel="stylesheet" href="{{ asset('template5/theme-pink/css/calendar-fixed.css')}}"> -->
+<link rel="stylesheet" href="{{ asset('template5/theme-purple/css/calendar-fixed.css')}}">
+
+
+
 <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
 <script type="text/javascript" src="{{ asset('template5/js/calendar-manual.js') }}"></script>
 <script>

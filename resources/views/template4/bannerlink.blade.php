@@ -18,15 +18,13 @@
     </div>
     <div class="container">
         <div class="inner-content">
-            <div class="top-content flex-row-arrow">
+            <div class="top-content title-top-x flex-row bg-color-secondary">
                 <div class="group-text">
                     <h3 class="title">BANNER</h3>
                     <p class="desc">The Bangkok Metropolitan Council Secretariat </p>
-
-                    <div class="slide-wrapper" id="action-slide_5">
-                        <div class="slide-arrow slide-prev"></div>
-                        <div class="slide-arrow slide-next"></div>
-                    </div>
+                </div>
+                <div class="group-gotoall">
+                    <a href="/bannerlink-4" class="btn btn-outline-white">แบนเนอร์ทั้งหมด</a>
                 </div>
             </div>
             <div class="main-content">

@@ -1,7 +1,7 @@
 <?php 
 $CustomHelper = new \App\CustomHelper; 
 $TextLanguage = new \App\TextLanguage; 
- 
+$no_back = 1; 
 ?>   
 @include('manage.include.main_form_header') 
 
@@ -42,21 +42,21 @@ function check_form()
 		<tr>
 			<th width="120"><?php echo $TextLanguage->lang('profile_name'); ?> <span style="color:red">*</span></th>
 			<td>
-			<input id="profile_name" name="profile_name" type="text" class="sm-input" style="width:235px" value="<?php echo @$_SESSION['panel_profile_name'] ?>"> 
+			<input id="profile_name" name="profile_name" type="text" class="sm-input" style="width:40%" value="<?php echo @$_SESSION['panel_profile_name'] ?>"> 
 			</td>
 		</tr>
 		
 		<tr>
 			<th width="120"><?php echo $TextLanguage->lang('profile_lastname'); ?> <span style="color:red">*</span></th>
 			<td>
-			<input id="profile_lastname" name="profile_lastname" type="text" class="sm-input" style="width:235px" value="<?php echo @$_SESSION['panel_profile_lastname'] ?>"> 
+			<input id="profile_lastname" name="profile_lastname" type="text" class="sm-input" style="width:40%" value="<?php echo @$_SESSION['panel_profile_lastname'] ?>"> 
 			</td>
 		</tr>
         
         <tr>
 			<th width="120"><?php echo $TextLanguage->lang('profile_email'); ?> <span style="color:red">*</span></th>
 			<td>
-			<input id="profile_email" name="profile_email" type="text" class="sm-input" style="width:235px" value="<?php echo @$_SESSION['panel_profile_email'] ?>" disabled="disabled">   
+			<input id="profile_email" name="profile_email" type="text" class="sm-input" style="width:40%" value="<?php echo @$_SESSION['panel_profile_email'] ?>" disabled="disabled">   
             &nbsp; <span class="link-text"><a href="http://127.0.0.1:8000/manage-admin/change_email?m=setting_account">Change E-mail</a></span> 
 			</td>
 		</tr>
@@ -64,14 +64,14 @@ function check_form()
         <tr>
 			<th width="120"><?php echo $TextLanguage->lang('profile_mobile'); ?> <span style="color:red">*</span></th>
 			<td>
-			<input id="profile_mobile" name="profile_mobile" type="text" class="sm-input" style="width:235px" value="<?php echo @$_SESSION['panel_profile_mobile'] ?>"> 
+			<input id="profile_mobile" name="profile_mobile" type="text" class="sm-input" style="width:40%" value="<?php echo @$_SESSION['panel_profile_mobile'] ?>"> 
 			</td>
 		</tr>
         
         <tr>
 			<th width="120"><?php echo $TextLanguage->lang('profile_idcard'); ?> <span style="color:red">*</span></th>
 			<td>
-			<input id="profile_idcard" name="profile_idcard" type="text" class="sm-input" style="width:235px" value="<?php echo @$_SESSION['panel_profile_idcard'] ?>"> 
+			<input id="profile_idcard" name="profile_idcard" type="text" class="sm-input" style="width:40%" value="<?php echo @$_SESSION['panel_profile_idcard'] ?>"> 
 			</td>
 		</tr>
 	

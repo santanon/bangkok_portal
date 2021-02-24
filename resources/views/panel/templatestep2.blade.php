@@ -323,6 +323,7 @@ $(document).ready(function(){
 
 
     $('#modalpanel').on('hidden.bs.modal', function () { 
+    document.getElementById('div_full_screen').style = '';
     window.location = '?noload=1';
 });
 

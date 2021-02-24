@@ -1,5 +1,5 @@
 <!-- ข่าวสาร -->
-<div id="news" data-id="news" class="section-content">
+<div id="news" data-id="1_<?php echo $this_box_id ?>" class="section-content">
                 <div class="group-mange-section">
                     <!--<div class="manage-tools">
                         <ul>
@@ -12,7 +12,7 @@
                     <div class="manage-dragdrop">
                         <img src="{{ asset('../../assets/images/icons/icon-dragdrop.svg')}}" alt="icon" title="Drag and Drop">
                     </div>
-                    <a href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('กำลังโหลด...','manage-admin/list?m=news');">
+                    <a href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('กำลังโหลด...','/manage-admin/list?m=news');">
                         <div class="manage-edit">
                             <img src="{{ asset('../../assets/images/icons/icon-edit.svg')}}" alt="icon">
                         </div>
@@ -36,7 +36,7 @@
                                     <!-- <div class="group-mange-section">
                                         <div class="manage-tools">
                                             <ul>
-                                                <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('กำลังโหลด...','manage-admin/edit?m=news');">แก้ไข</a></li> 
+                                                <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('กำลังโหลด...','/manage-admin/edit?m=news');">แก้ไข</a></li> 
                                                 <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_hide">ซ่อน</a></li>
                                                 <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_delete">ลบ</a></li> 
                                                 <li class="order-list order-close">ปิด</li>
@@ -101,7 +101,7 @@
                                             <!-- <div class="group-mange-section">
                                                 <div class="manage-tools">
                                                     <ul>
-                                                        <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('กำลังโหลด...','manage-admin/edit?m=news');">แก้ไข</a></li> 
+                                                        <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('กำลังโหลด...','/manage-admin/edit?m=news');">แก้ไข</a></li> 
                                                         <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_hide">ซ่อน</a></li>
                                                         <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_delete">ลบ</a></li>
                                                         <li class="order-list order-close">ปิด</li>
@@ -169,7 +169,7 @@
                                             <!-- <div class="group-mange-section">
                                                 <div class="manage-tools">
                                                     <ul>
-                                                        <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('กำลังโหลด...','manage-admin/edit?m=news');">แก้ไข</a></li> 
+                                                        <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('กำลังโหลด...','/manage-admin/edit?m=news');">แก้ไข</a></li> 
                                                         <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_hide">ซ่อน</a></li>
                                                         <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_delete">ลบ</a></li>
                                                         <li class="order-list order-close">ปิด</li>

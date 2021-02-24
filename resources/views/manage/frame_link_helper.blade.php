@@ -37,6 +37,18 @@ $TextLanguage = new \App\TextLanguage;
                                         </div>
                                         <div class="content">
 											<div class="form-box">
+
+<br />
+<b style="font-size:12px;"><?php echo $TextLanguage->lang('other') ?> : </b> <br />
+
+<table width="380" align="center" border="1" style="font-size:12px; font-family:Tahoma">
+<tr style="height:25px;"><td>&nbsp; - <a href="javascript:;" Onclick="window.parent.update_img('<?php echo $_GET['field'] ?>','<?php echo "http://127.0.0.1:8000/".$_SESSION['panel_web_url'] ?>/index');" style="color:#666666"><?php echo $TextLanguage->lang('home') ?></a></td></tr>
+<tr style="height:25px;"><td>&nbsp; - <a href="javascript:;" Onclick="window.parent.update_img('<?php echo $_GET['field'] ?>','<?php echo "http://127.0.0.1:8000/".$_SESSION['panel_web_url'] ?>/ita');" style="color:#666666"><?php echo $TextLanguage->lang('ita') ?></a></td></tr>
+<tr style="height:25px;"><td>&nbsp; - <a href="javascript:;" Onclick="window.parent.update_img('<?php echo $_GET['field'] ?>','<?php echo "http://127.0.0.1:8000/".$_SESSION['panel_web_url'] ?>/organization');" style="color:#666666"><?php echo $TextLanguage->lang('organization') ?></a></td></tr>
+<tr style="height:25px;"><td>&nbsp; - <a href="javascript:;" Onclick="window.parent.update_img('<?php echo $_GET['field'] ?>','<?php echo "http://127.0.0.1:8000/".$_SESSION['panel_web_url'] ?>/contact');" style="color:#666666"><?php echo $TextLanguage->lang('contactus') ?></a></td></tr>
+<tr style="height:25px;"><td>&nbsp; - <a href="javascript:;" Onclick="window.parent.update_img('<?php echo $_GET['field'] ?>','<?php echo "http://127.0.0.1:8000/".$_SESSION['panel_web_url'] ?>/sitemap');" style="color:#666666"><?php echo $TextLanguage->lang('sitemap') ?></a></td></tr> 
+</table>
+												
 <br />
 <b style="font-size:12px;"><?php echo $TextLanguage->lang('top_menu') ?>  : </b> <br />
 
@@ -64,16 +76,7 @@ echo $main_str_footer;
 ?>   
 </table>
 
-<br />
-<b style="font-size:12px;"><?php echo $TextLanguage->lang('other') ?> : </b> <br />
-
-<table width="380" align="center" border="1" style="font-size:12px; font-family:Tahoma">
-<tr style="height:25px;"><td>&nbsp; - <a href="javascript:;" Onclick="window.parent.update_img('url','<?php echo base_url().$_SESSION['panel_web_url'] ?>/contact');" style="color:#666666"><?php echo $TextLanguage->lang('contactus') ?></a></td></tr>
-<tr style="height:25px;"><td>&nbsp; - <a href="javascript:;" Onclick="window.parent.update_img('url','<?php echo base_url().$_SESSION['panel_web_url'] ?>/register');" style="color:#666666"><?php echo $TextLanguage->lang('register') ?></a></td></tr>
-<tr style="height:25px;"><td>&nbsp; - <a href="javascript:;" Onclick="window.parent.update_img('url','<?php echo base_url().$_SESSION['panel_web_url'] ?>/login');" style="color:#666666"><?php echo $TextLanguage->lang('login') ?></a></td></tr>
-<tr style="height:25px;"><td>&nbsp; - <a href="javascript:;" Onclick="window.parent.update_img('url','<?php echo base_url().$_SESSION['panel_web_url'] ?>/forgot_password');" style="color:#666666"><?php echo $TextLanguage->lang('forgot_password') ?></a></td></tr>
-<tr style="height:25px;"><td>&nbsp; - <a href="javascript:;" Onclick="window.parent.update_img('url','<?php echo base_url().$_SESSION['panel_web_url'] ?>/sitemap');" style="color:#666666"><?php echo $TextLanguage->lang('sitemap') ?></a></td></tr> 
-</table>									
+									
                                         
                                         
                                         

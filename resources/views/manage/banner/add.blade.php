@@ -63,7 +63,7 @@ $TextLanguage = new \App\TextLanguage;
             
             <tr>
                 <th width="120"><?php echo $TextLanguage->lang('name'); ?></th>
-                <td><input name="title" type="text" class="sm-input" id="title" style="width:210px" placeholder="<?php echo $TextLanguage->lang('name'); ?>"> 
+                <td><input name="title" type="text" class="sm-input" id="title" style="width:40%" placeholder="<?php echo $TextLanguage->lang('name'); ?>"> 
                 </td>
             </tr> 
  
@@ -89,10 +89,10 @@ $TextLanguage = new \App\TextLanguage;
                 <th width="120" valign="top" style="padding-top:15px;"><?php echo $TextLanguage->lang('url'); ?></th>
                 <td>
 
-                    <input name="url" type="text" class="sm-input--flag-th" id="url" style="width:235px" placeholder="http://"><br />
+                    <input name="url" type="text" class="sm-input--flag-th" id="url" style="width:40%" placeholder="http://"><br />
                     <input type="button" name="upload" value="<?php echo $TextLanguage->lang('link_helper'); ?>" onclick="callLightbox('http://127.0.0.1:8000/panel-admin/link_helper?type=form&field=url',500,640);return false;" />
                     <br><br>
-                    <input name="en_url" type="text" class="sm-input--flag-en" id="en_url" style="width:235px" placeholder="http://"><br />
+                    <input name="en_url" type="text" class="sm-input--flag-en" id="en_url" style="width:40%" placeholder="http://"><br />
                     <input type="button" name="upload" value="<?php echo $TextLanguage->lang('link_helper'); ?>" onclick="callLightbox('http://127.0.0.1:8000/panel-admin/link_helper?type=form&field=en_url',500,640);return false;" />
 
                      

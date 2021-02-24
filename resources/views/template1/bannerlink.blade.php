@@ -1,5 +1,5 @@
 <!-- BANNER -->
-<div id="banner" data-id="banner" class="section-content bg-color-white">
+<div id="banner" data-id="7_<?php echo $this_box_id ?>" class="section-content bg-color-white">
                 <div class="group-mange-section">
                     <div class="manage-tools">
                         <ul>

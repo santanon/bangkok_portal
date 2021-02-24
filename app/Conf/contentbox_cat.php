@@ -56,157 +56,40 @@ class Contentbox_cat
 		$data['config_header_info'] = $TextLanguage->lang('help_'.$this->mod.'_add');									   
 		$data['config_footer_js'] = 'mainmenuFocus(1,1,5); btn2stageFocus(0,2);';  
 		$data['config_dropdown_title'] = $TextLanguage->lang(@$this->mod_cat_dropdown_title);
-		 
-		$q = "SELECT * FROM ".$CustomHelper->model_to_table('Portal_website_main_menu_page_model')." WHERE web_id = ? AND status = '1' ORDER BY sort ASC";	 	
-		$v = $_SESSION['panel_id'];
-		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('Portal_website_main_menu_page_model')),$q,$v);
-		$r = json_decode($res); 
-		 
-		$main_str = '';
 		
-		foreach ($r as $row_cat)
-		{    
-			$check_insert = true; 
-			if($row_cat->page_type == 'group' || $row_cat->page_type == 'texteditor' || $row_cat->page_type == 'url' || $row_cat->page_type == 'question')
-			{
-				$check_insert = false;
-			} 
-			if($check_insert)
-			{
-				$main_str = $main_str . '<option value="m' . $row_cat->id . '">- ' . $row_cat->title . '(' . $row_cat->page_type . ')</option>';	
-			}	
-			
-			$q = "SELECT * FROM ".$CustomHelper->model_to_table('Portal_website_page_model')." WHERE web_id = ? AND cat_id = '".$row_cat->id."' AND page_id = '0' AND status = '1' ORDER BY sort ASC";	 	
+		$index = 0;
+		$all_mod = array('Portal_website_news_cat_model','Portal_website_faq_cat_model','Portal_website_activities_cat_model','Portal_website_gallery_cat_model','Portal_website_download_cat_model','Portal_website_banner_cat_model','Portal_website_question_cat_model','Portal_website_poll_cat_model','Portal_website_webboard_cat_model');
+		foreach($all_mod as $all)
+		{
+			$q = "SELECT * FROM ".$CustomHelper->model_to_table($all)." WHERE web_id = ? AND status = '1' ORDER BY title ASC";	 	
 			$v = $_SESSION['panel_id'];
-			$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('Portal_website_page_model')),$q,$v);
-			$r_sub1 = json_decode($res); 
-			  
-			foreach ($r_sub1 as $row_cat_sub1)
-			{ 
-				$check_insert = true; 
-				if($row_cat_sub1->page_type == 'group' || $row_cat_sub1->page_type == 'texteditor' || $row_cat_sub1->page_type == 'url' || $row_cat_sub1->page_type == 'question')
-				{
-					$check_insert = false;
-				} 
-				if($check_insert) 
-				{
-					$main_str = $main_str . '<option value="' . $row_cat_sub1->id . '">- ' . $row_cat->title . ' / ' . $row_cat_sub1->title . '</option>';	
-				}				
-				
-				$q = "SELECT * FROM ".$CustomHelper->model_to_table('Portal_website_page_model')." WHERE web_id = ? AND cat_id = '".$row_cat->id."' AND page_id = '".$row_cat_sub1->id."' AND status = '1' ORDER BY sort ASC";	 	
-				$v = $_SESSION['panel_id'];
-				$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('Portal_website_page_model')),$q,$v);
-				$r_sub2 = json_decode($res); 
-				 
-				foreach ($r_sub2 as $row_cat_sub2)
-				{	  
-					$check_insert = true; 
-					if($row_cat_sub2->page_type == 'group' || $row_cat_sub2->page_type == 'texteditor' || $row_cat_sub2->page_type == 'url' || $row_cat_sub2->page_type == 'question')
-					{
-						$check_insert = false;
-					} 
-					if($check_insert)  
-					{
-						$main_str = $main_str . '<option value="' . $row_cat_sub2->id . '">- ' . $row_cat->title . ' / ' . $row_cat_sub1->title . ' / ' . $row_cat_sub2->title . '</option>';
-					}	
-					
-					$q = "SELECT * FROM ".$CustomHelper->model_to_table('Portal_website_page_model')." WHERE web_id = ? AND cat_id = '".$row_cat->id."' AND page_id = '".$row_cat_sub2->id."' AND status = '1' ORDER BY sort ASC";	 	
-					$v = $_SESSION['panel_id'];
-					$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('Portal_website_page_model')),$q,$v);
-					$r_sub3 = json_decode($res); 
-					 
-					foreach ($r_sub3 as $row_cat_sub3)
-					{	
-						$check_insert = true; 
-						if($row_cat_sub3->page_type == 'group' || $row_cat_sub3->page_type == 'texteditor' || $row_cat_sub3->page_type == 'url' || $row_cat_sub3->page_type == 'question')
-						{
-							$check_insert = false;
-						} 
-						if($check_insert)   
-						{
-							$main_str = $main_str . '<option value="' . $row_cat_sub3->id . '">- ' . $row_cat->title . ' / ' . $row_cat_sub1->title . ' / ' . $row_cat_sub2->title . ' / ' . $row_cat_sub3->title . '</option>';
-						}
-						
-						$q = "SELECT * FROM ".$CustomHelper->model_to_table('Portal_website_page_model')." WHERE web_id = ? AND cat_id = '".$row_cat->id."' AND page_id = '".$row_cat_sub3->id."' AND status = '1' ORDER BY sort ASC";	 	
-						$v = $_SESSION['panel_id'];
-						$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('Portal_website_page_model')),$q,$v);
-						$r_sub4 = json_decode($res);
-						 
-						foreach ($r_sub4 as $row_cat_sub4)
-						{
-							$check_insert = true; 
-							if($row_cat_sub4->page_type == 'group' || $row_cat_sub4->page_type == 'texteditor' || $row_cat_sub4->page_type == 'url' || $row_cat_sub4->page_type == 'question')
-							{
-								$check_insert = false;
-							} 
-							if($check_insert)    
-							{
-								$main_str = $main_str . '<option value="' . $row_cat_sub4->id . '">- ' . $row_cat->title . ' / ' . $row_cat_sub1->title . ' / ' . $row_cat_sub2->title . ' / ' . $row_cat_sub3->title . ' / ' . $row_cat_sub4->title . '</option>';
-							}
-							
-							$q = "SELECT * FROM ".$CustomHelper->model_to_table('Portal_website_page_model')." WHERE web_id = ? AND cat_id = '".$row_cat->id."' AND page_id = '".$row_cat_sub4->id."' AND status = '1' ORDER BY sort ASC";	 	
-							$v = $_SESSION['panel_id'];
-							$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('Portal_website_page_model')),$q,$v);
-							$r_sub5 = json_decode($res);
-							  
-							foreach ($r_sub5 as $row_cat_sub5)
-							{
-								$check_insert = true; 
-								if($row_cat_sub5->page_type == 'group' || $row_cat_sub5->page_type == 'texteditor' || $row_cat_sub5->page_type == 'url' || $row_cat_sub5->page_type == 'question')
-								{
-									$check_insert = false;
-								} 
-								if($check_insert)     
-								{
-									$main_str = $main_str . '<option value="' . $row_cat_sub5->id . '">- ' . $row_cat->title . ' / ' . $row_cat_sub1->title . ' / ' . $row_cat_sub2->title . ' / ' . $row_cat_sub3->title . ' / ' . $row_cat_sub4->title . ' /  ' . $row_cat_sub5->title . '</option>';
-								} 
-								
-								$q = "SELECT * FROM ".$CustomHelper->model_to_table('Portal_website_page_model')." WHERE web_id = ? AND cat_id = '".$row_cat->id."' AND page_id = '".$row_cat_sub5->id."' AND status = '1' ORDER BY sort ASC";	 	
-								$v = $_SESSION['panel_id'];
-								$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('Portal_website_page_model')),$q,$v);
-								$r_sub6 = json_decode($res);
-								 
-								foreach ($r_sub6 as $row_cat_sub6)
-								{
-									$check_insert = true; 
-									if($row_cat_sub6->page_type == 'group' || $row_cat_sub6->page_type == 'texteditor' || $row_cat_sub6->page_type == 'url' || $row_cat_sub6->page_type == 'question')
-									{
-										$check_insert = false;
-									} 
-									if($check_insert)      
-									{
-										$main_str = $main_str . '<option value="' . $row_cat_sub6->id . '">- ' . $row_cat->title . ' / ' . $row_cat_sub1->title . ' / ' . $row_cat_sub2->title . ' / ' . $row_cat_sub3->title . ' / ' . $row_cat_sub4->title . ' /  ' . $row_cat_sub5->title . ' /  ' . $row_cat_sub6->title . '</option>';
-									}	
-								}
-							}
-						}
-					}
-				}
-			}  
+			$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($all)),$q,$v);
+			$r = json_decode($res); 
+			
+			$main_str[$index] = '';
+			foreach ($r as $row_cat)
+			{    
+				$main_str[$index] = $main_str[$index] . '<option value="' . $row_cat->id . '">'.$row_cat->title.'</option>';
+			}
+
+			$index++;
 		} 
-		
 		$data['main_str'] = $main_str;
-		
-		   
+		  
 		return $data;
 		//return view('manage.'.$this->mod.'.add',$data);
 		//$this->load->view('panel/'.$this->mod.'/add', $data); 
 	}
 	
 	public function add_submit()
-	{   
+	{    
 		$CustomHelper = new \App\CustomHelper;
 		$TextLanguage = new \App\TextLanguage;
-		  
-		 
-		
-		
+		   
 		$q = "SELECT * FROM ".$CustomHelper->model_to_table($this->mod_model)." WHERE web_id = ? ORDER BY sort DESC";	 	
 		$v = $_SESSION['panel_id'];
 		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),$q,$v);
 		$q = json_decode($res); 
-		
-		
 		 
 		$sort = '1';
 		if(count($q) > 0)
@@ -218,13 +101,13 @@ class Contentbox_cat
 		 
 		$d = new \stdClass(); 
 		$d->web_id = $_SESSION['panel_id'];    
-		$d->title = htmlspecialchars($CustomHelper->input_post('title', TRUE));   
-		$d->en_title = htmlspecialchars($CustomHelper->input_post('en_title', TRUE));   
-		$d->box_number = $CustomHelper->input_post('box_number', TRUE);   
-		$d->box1 = $CustomHelper->input_post('box1', TRUE);   
-		$d->box2 = $CustomHelper->input_post('box2', TRUE);   
-		$d->box3 = $CustomHelper->input_post('box3', TRUE);   
-		$d->box4 = $CustomHelper->input_post('box4', TRUE);      
+		$d->title = $_POST['a'];
+		$d->en_title = $_POST['b'];
+		$d->box_number = $_POST['box'];
+		$d->box1 = $_POST['box'.($_POST['box']-1)];
+		$d->box2 = '';
+		$d->box3 = '';
+		$d->box4 = '';
 		$d->last_create = date('U');  
 		$d->last_update = date('U');    
 		$d->sort = $sort;
@@ -303,7 +186,6 @@ class Contentbox_cat
 			$data['this_cat'] = $TextLanguage->lang(@$this->mod);
 			$data['this_page'] = $TextLanguage->lang('edit');
 			$data['title'] = $data['this_page'] . ' : ' . $data['this_cat'] . ' - ' . $TextLanguage->lang('bangkok_portal');    
-			
 			 
 			$data['config_mod'] = $this->mod; 
 			
@@ -315,138 +197,26 @@ class Contentbox_cat
 			$data['config_footer_js'] = 'mainmenuFocus(1,1,5); btn2stageFocus(0,1);';   
 			$data['config_dropdown_title'] = $TextLanguage->lang(@$this->mod_cat_dropdown_title);
 			     
-			
-			$q = "SELECT * FROM ".$CustomHelper->model_to_table('Portal_website_main_menu_page_model')." WHERE web_id = ? ORDER BY sort ASC";	 	
-			$v = $_SESSION['panel_id'];
-			$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('Portal_website_main_menu_page_model')),$q,$v);
-			$r = json_decode($res);   
-			 
-			$main_str = '';
-			
-			foreach ($r as $row_cat)
-			{    
-				$check_insert = true; 
-				if($row_cat->page_type == 'group' || $row_cat->page_type == 'texteditor' || $row_cat->page_type == 'url' || $row_cat->page_type == 'question')
-				{
-					$check_insert = false;
-				} 
-				if($check_insert)
-				{
-					$main_str = $main_str . '<option value="m' . $row_cat->id . '">- ' . $row_cat->title . '(' . $row_cat->page_type . ')</option>';	
-				}	
-				
-				$q = "SELECT * FROM ".$CustomHelper->model_to_table('Portal_website_page_model')." WHERE web_id = ? AND cat_id = '".$row_cat->id."' AND page_id = '0' AND status = '1' ORDER BY sort ASC"; 
+			$index = 0;
+			$all_mod = array('Portal_website_news_cat_model','Portal_website_faq_cat_model','Portal_website_activities_cat_model','Portal_website_gallery_cat_model','Portal_website_download_cat_model','Portal_website_banner_cat_model','Portal_website_question_cat_model','Portal_website_poll_cat_model','Portal_website_webboard_cat_model');
+			foreach($all_mod as $all)
+			{
+				$q = "SELECT * FROM ".$CustomHelper->model_to_table($all)." WHERE web_id = ? AND status = '1' ORDER BY title ASC";	 	
 				$v = $_SESSION['panel_id'];
-				$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('Portal_website_page_model')),$q,$v);
-				$r_sub1 = json_decode($res); 
-				 
-				foreach ($r_sub1 as $row_cat_sub1)
-				{ 
-					$check_insert = true; 
-					if($row_cat_sub1->page_type == 'group' || $row_cat_sub1->page_type == 'texteditor' || $row_cat_sub1->page_type == 'url' || $row_cat_sub1->page_type == 'question')
-					{
-						$check_insert = false;
-					} 
-					if($check_insert) 
-					{
-						$main_str = $main_str . '<option value="' . $row_cat_sub1->id . '">- ' . $row_cat->title . ' / ' . $row_cat_sub1->title . '</option>';	
-					}	
-					
-					$q = "SELECT * FROM ".$CustomHelper->model_to_table('Portal_website_page_model')." WHERE web_id = ? AND cat_id = '".$row_cat->id."' AND page_id = '".$row_cat_sub1->id."' AND status = '1' ORDER BY sort ASC"; 
-					$v = $_SESSION['panel_id'];
-					$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('Portal_website_page_model')),$q,$v);
-					$r_sub2 = json_decode($res); 			
-					  
-					foreach ($r_sub2 as $row_cat_sub2)
-					{	  
-						$check_insert = true; 
-						if($row_cat_sub2->page_type == 'group' || $row_cat_sub2->page_type == 'texteditor' || $row_cat_sub2->page_type == 'url' || $row_cat_sub2->page_type == 'question')
-						{
-							$check_insert = false;
-						} 
-						if($check_insert)  
-						{
-							$main_str = $main_str . '<option value="' . $row_cat_sub2->id . '">- ' . $row_cat->title . ' / ' . $row_cat_sub1->title . ' / ' . $row_cat_sub2->title . '</option>';
-						}	
-						
-						$q = "SELECT * FROM ".$CustomHelper->model_to_table('Portal_website_page_model')." WHERE web_id = ? AND cat_id = '".$row_cat->id."' AND page_id = '".$row_cat_sub2->id."' AND status = '1' ORDER BY sort ASC"; 
-						$v = $_SESSION['panel_id'];
-						$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('Portal_website_page_model')),$q,$v);
-						$r_sub3 = json_decode($res); 
-						 
-						foreach ($r_sub3 as $row_cat_sub3)
-						{	
-							$check_insert = true; 
-							if($row_cat_sub3->page_type == 'group' || $row_cat_sub3->page_type == 'texteditor' || $row_cat_sub3->page_type == 'url' || $row_cat_sub3->page_type == 'question')
-							{
-								$check_insert = false;
-							} 
-							if($check_insert)   
-							{
-								$main_str = $main_str . '<option value="' . $row_cat_sub3->id . '">- ' . $row_cat->title . ' / ' . $row_cat_sub1->title . ' / ' . $row_cat_sub2->title . ' / ' . $row_cat_sub3->title . '</option>';
-							}
-							
-							$q = "SELECT * FROM ".$CustomHelper->model_to_table('Portal_website_page_model')." WHERE web_id = ? AND cat_id = '".$row_cat->id."' AND page_id = '".$row_cat_sub3->id."' AND status = '1' ORDER BY sort ASC"; 
-							$v = $_SESSION['panel_id'];
-							$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('Portal_website_page_model')),$q,$v);
-							$r_sub4 = json_decode($res); 
-							 
-							foreach ($r_sub4 as $row_cat_sub4)
-							{
-								$check_insert = true; 
-								if($row_cat_sub4->page_type == 'group' || $row_cat_sub4->page_type == 'texteditor' || $row_cat_sub4->page_type == 'url' || $row_cat_sub4->page_type == 'question')
-								{
-									$check_insert = false;
-								} 
-								if($check_insert)    
-								{
-									$main_str = $main_str . '<option value="' . $row_cat_sub4->id . '">- ' . $row_cat->title . ' / ' . $row_cat_sub1->title . ' / ' . $row_cat_sub2->title . ' / ' . $row_cat_sub3->title . ' / ' . $row_cat_sub4->title . '</option>';
-								}
-								
-								$q = "SELECT * FROM ".$CustomHelper->model_to_table('Portal_website_page_model')." WHERE web_id = ? AND cat_id = '".$row_cat->id."' AND page_id = '".$row_cat_sub4->id."' AND status = '1' ORDER BY sort ASC"; 
-								$v = $_SESSION['panel_id'];
-								$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('Portal_website_page_model')),$q,$v);
-								$r_sub5 = json_decode($res); 
-								  
-								foreach ($r_sub5 as $row_cat_sub5)
-								{
-									$check_insert = true; 
-									if($row_cat_sub5->page_type == 'group' || $row_cat_sub5->page_type == 'texteditor' || $row_cat_sub5->page_type == 'url' || $row_cat_sub5->page_type == 'question')
-									{
-										$check_insert = false;
-									} 
-									if($check_insert)     
-									{
-										$main_str = $main_str . '<option value="' . $row_cat_sub5->id . '">- ' . $row_cat->title . ' / ' . $row_cat_sub1->title . ' / ' . $row_cat_sub2->title . ' / ' . $row_cat_sub3->title . ' / ' . $row_cat_sub4->title . ' /  ' . $row_cat_sub5->title . '</option>';
-									} 
-									
-									$q = "SELECT * FROM ".$CustomHelper->model_to_table('Portal_website_page_model')." WHERE web_id = ? AND cat_id = '".$row_cat->id."' AND page_id = '".$row_cat_sub5->id."' AND status = '1' ORDER BY sort ASC"; 
-									$v = $_SESSION['panel_id'];
-									$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('Portal_website_page_model')),$q,$v);
-									$r_sub6 = json_decode($res); 
-									 
-									foreach ($r_sub6 as $row_cat_sub6)
-									{
-										$check_insert = true; 
-										if($row_cat_sub6->page_type == 'group' || $row_cat_sub6->page_type == 'texteditor' || $row_cat_sub6->page_type == 'url' || $row_cat_sub6->page_type == 'question')
-										{
-											$check_insert = false;
-										} 
-										if($check_insert)      
-										{
-											$main_str = $main_str . '<option value="' . $row_cat_sub6->id . '">- ' . $row_cat->title . ' / ' . $row_cat_sub1->title . ' / ' . $row_cat_sub2->title . ' / ' . $row_cat_sub3->title . ' / ' . $row_cat_sub4->title . ' /  ' . $row_cat_sub5->title . ' /  ' . $row_cat_sub6->title . '</option>';
-										}	
-									}
-								}
-							}
-						}
-					}
-				}  
-			}  
-		
+				$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($all)),$q,$v);
+				$r = json_decode($res); 
+				
+				$main_str[$index] = '';
+				foreach ($r as $row_cat)
+				{    
+					$main_str[$index] = $main_str[$index] . '<option value="' . $row_cat->id . '">'.$row_cat->title.'</option>';
+				}
+
+				$index++;
+			} 
 			$data['main_str'] = $main_str;
-		  
-			return $data; 
+			
+			return $data;  
 		}
 		else
 		{
@@ -458,20 +228,19 @@ class Contentbox_cat
 	{   
 		$CustomHelper = new \App\CustomHelper;
 		$TextLanguage = new \App\TextLanguage;
-		  
-		 
+		   
 		$_SESSION[$this->mod.'_group'] = $CustomHelper->input_post('cat_id', TRUE);  
 		 
-		$d = new \stdClass();   
-		$d->title = htmlspecialchars($CustomHelper->input_post('title', TRUE));
-		$d->en_title = htmlspecialchars($CustomHelper->input_post('en_title', TRUE));
-		$d->box_number = $CustomHelper->input_post('box_number', TRUE);  
-		$d->box1 = $CustomHelper->input_post('box1', TRUE);  
-		$d->box2 = $CustomHelper->input_post('box2', TRUE);  
-		$d->box3 = $CustomHelper->input_post('box3', TRUE);  
-		$d->box4 = $CustomHelper->input_post('box4', TRUE);       
-		$d->last_update = date('U');    
-		
+		$d = new \stdClass();      
+		$d->title = $_POST['a'];
+		$d->en_title = $_POST['b'];
+		$d->box_number = $_POST['box'];
+		$d->box1 = $_POST['box'.($_POST['box']-1)];
+		$d->box2 = '';
+		$d->box3 = '';
+		$d->box4 = '';  
+		$d->last_update = date('U');     
+ 
 		$date_1 = 0;
 		
 		if(strlen($CustomHelper->input_post('date_start', TRUE)) > 3)
@@ -499,15 +268,15 @@ class Contentbox_cat
 		$d->date_start = $date_1;
 		$d->date_end = $date_2;
 		$d->date_set = $CustomHelper->input_post('date_set', TRUE);
-		    
+ 
 		$this_qr = ''; 
 		foreach($d as $key=>$value) 
 		{
 			$this_qr = $this_qr.$key." = '".addslashes($value)."',";
 		}
 		$this_qr = substr($this_qr,0,-1);  	 
-		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),"UPDATE ".$CustomHelper->model_to_table($this->mod_model)." SET ".$this_qr." WHERE web_id = '".$_SESSION['panel_id']."' AND id = '".$CustomHelper->input_post('id', TRUE)."'",'');    
- 	
+		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),"UPDATE ".$CustomHelper->model_to_table($this->mod_model)." SET ".$this_qr." WHERE web_id = '".$_SESSION['panel_id']."' AND id = '".$CustomHelper->input_post('id', TRUE)."'",''); 
+		 
 		$CustomHelper->add_log(''.$this->mod_title.' - Edit ('.$CustomHelper->input_post('title', TRUE).')',$_SESSION['panel_username'],$_SESSION['panel_id'],strtoupper($this->mod).'_EDIT');   
 		?>
         <meta http-equiv="refresh" content="0;URL=<?php echo  'http://127.0.0.1:8000/manage-admin/list?m='.$this->mod.'' ?>" />

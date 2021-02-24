@@ -1,5 +1,5 @@
 <!-- VOTE -->
-<div id="vote" data-id="vote" class="section-content bg-color-white">
+<div id="vote" data-id="9_<?php echo $this_box_id ?>" class="section-content bg-color-white">
     <div class="group-mange-section">
         <div class="manage-tools">
             <ul>

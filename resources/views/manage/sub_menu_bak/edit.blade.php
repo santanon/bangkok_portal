@@ -55,8 +55,8 @@ $TextLanguage = new \App\TextLanguage;
         <tbody>
             <tr>
                 <th width="120"><?php echo $TextLanguage->lang('name'); ?></th>
-                <td><input value="<?php echo $edit_title ?>" name="title" type="text" class="sm-input--flag-th" id="title" style="width:210px" placeholder="<?php echo $TextLanguage->lang('name'); ?>">&nbsp;&nbsp;
-                    <input value="<?php echo $edit_en_title ?>" name="en_title" type="text" class="sm-input--flag-en" id="en_title" style="width:210px" placeholder="<?php echo $TextLanguage->lang('name'); ?>">
+                <td><input value="<?php echo $edit_title ?>" name="title" type="text" class="sm-input--flag-th" id="title" style="width:40%" placeholder="<?php echo $TextLanguage->lang('name'); ?>">&nbsp;&nbsp;
+                    <input value="<?php echo $edit_en_title ?>" name="en_title" type="text" class="sm-input--flag-en" id="en_title" style="width:40%" placeholder="<?php echo $TextLanguage->lang('name'); ?>">
                 </td>
             </tr>  
             
@@ -65,7 +65,7 @@ $TextLanguage = new \App\TextLanguage;
                 <td><div class="align-box" style="width:90px;">
                 <input id="test-radio3" name="link_type" value="1" type="radio" <?php if($edit_link_type == '1'){ ?> checked="checked" <?php } ?>  > 
                 <label class="input-label" for="test-radio3"><?php echo $TextLanguage->lang('internal'); ?></label></div>&nbsp;&nbsp;
-                <input name="link_page" id="link_page" type="text" class="sm-input" style="width:235px" value="<?php echo $edit_link_page ?>">  
+                <input name="link_page" id="link_page" type="text" class="sm-input" style="width:40%" value="<?php echo $edit_link_page ?>">  
                 <input type="button" name="upload" value="<?php echo $TextLanguage->lang('link_helper'); ?>" onclick="callLightbox('<?php echo base_url(); ?>panel/lh/form/link_page',500,640);return false;" />
                 <input type="button" name="upload" value="<?php echo $TextLanguage->lang('file_manager'); ?>" onclick="callLightbox('<?php echo base_url(); ?>panel/fm/form/link_page',1120,640);return false;" /> 
                 </td>
@@ -74,8 +74,8 @@ $TextLanguage = new \App\TextLanguage;
                 <th width="120">&nbsp;</th>
                 <td><div class="align-box" style="width:90px;"><input id="test-radio4" name="link_type" value="2" type="radio" <?php if($edit_link_type == '2'){ ?> checked="checked" <?php } ?>> 
                 <label class="input-label" for="test-radio4"><?php echo $TextLanguage->lang('external'); ?></label></div>&nbsp;&nbsp;
-                    <input name="url" type="text" class="sm-input--flag-th" id="url" style="width:235px" placeholder="http://" value="<?php echo $edit_url; ?>">
-                    <input name="en_url" type="text" class="sm-input--flag-en" id="en_url" style="width:235px" placeholder="http://" value="<?php echo $edit_en_url; ?>">
+                    <input name="url" type="text" class="sm-input--flag-th" id="url" style="width:40%" placeholder="http://" value="<?php echo $edit_url; ?>">
+                    <input name="en_url" type="text" class="sm-input--flag-en" id="en_url" style="width:40%" placeholder="http://" value="<?php echo $edit_en_url; ?>">
                     <br><div class="align-box" style="margin-left:102px;padding-top:2px;width:200px;"><span class="note-text">(e.g. "http://www.yourlink.com")</span></div>&nbsp;&nbsp;
                 </td>
             </tr> 

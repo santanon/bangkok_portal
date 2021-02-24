@@ -6,7 +6,7 @@ $no_back = 1;
 @include('manage.include.main_form_header') 
 
 <script>
-	parent.document.getElementById('modal_full_span').innerHTML = 'ตั้งค่าเว็บไซต์' 
+	parent.document.getElementById('modal_full_span').innerHTML = 'ตั้งค่าเว็บไซต์';
 	</script>
 
 

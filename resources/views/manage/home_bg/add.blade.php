@@ -31,15 +31,19 @@ $TextLanguage = new \App\TextLanguage;
     <table>
         <tbody>
             <tr>
-                <th width="120"><?php echo $TextLanguage->lang('name'); ?></th>
-                <td><input name="title" type="text" class="sm-input" id="title" style="width:210px" placeholder="<?php echo $TextLanguage->lang('name'); ?>"> 
+                <th width="120" valign="top"><?php echo $TextLanguage->lang('name'); ?></th>
+                <td>
+                <input class="sm-input--flag-th" id="title1" name="title[]" type="text" class="sm-input" id="title1" style="width:40%" placeholder="<?php echo $TextLanguage->lang('txt_line_1'); ?>"> <br />
+                <input class="sm-input--flag-th" id="title2" name="title[]" type="text" class="sm-input" id="title2" style="width:40%" placeholder="<?php echo $TextLanguage->lang('txt_line_2'); ?>">
+                <br /><br />
+                <input class="sm-input--flag-en" id="en_title1" name="en_title[]" type="text" class="sm-input" id="en_title1" style="width:40%" placeholder="<?php echo $TextLanguage->lang('txt_line_1'); ?>"><br />
+                <input class="sm-input--flag-en" id="en_title2" name="en_title[]" type="text" class="sm-input" id="en_title2" style="width:40%" placeholder="<?php echo $TextLanguage->lang('txt_line_2'); ?>">
                 </td>
             </tr> 
  
             <tr>
                 <th width="120" valign="top" style="padding-top:10px;"><?php echo $TextLanguage->lang('image'); ?></th>
-                <td>
-
+                <td> 
                     <?php 
                     $this_name = 'img1';
                     $this_w = '130';
@@ -53,13 +57,13 @@ $TextLanguage = new \App\TextLanguage;
             </tr>
              
             
-            <!--<tr>
+            <tr>
                 <th width="120" valign="top" style="padding-top:15px;"><?php echo $TextLanguage->lang('url'); ?></th>
                 <td>
-                   <input name="url" type="text" class="sm-input--flag-th" id="url" style="width:235px" placeholder="http://"><br />
+                   <input name="url" type="text" class="sm-input--flag-th" id="url" style="width:40%" placeholder="http://"><br />
 	<input type="button" name="upload" value="<?php echo $TextLanguage->lang('link_helper'); ?>" onclick="callLightbox('http://127.0.0.1:8000/panel-admin/link_helper?type=form&field=url',500,640);return false;" />
 	<br><br>
-	<input name="en_url" type="text" class="sm-input--flag-en" id="en_url" style="width:235px" placeholder="http://"><br />
+	<input name="en_url" type="text" class="sm-input--flag-en" id="en_url" style="width:40%" placeholder="http://"><br />
 	<input type="button" name="upload" value="<?php echo $TextLanguage->lang('link_helper'); ?>" onclick="callLightbox('http://127.0.0.1:8000/panel-admin/link_helper?type=form&field=en_url',500,640);return false;" />
                 </td>
             </tr>
@@ -76,7 +80,7 @@ $TextLanguage = new \App\TextLanguage;
                     </div>&nbsp;&nbsp; 
                 </td>
             </tr> 
-             -->
+             
             
 
 			@include('manage.include.date_start_end_add')            
@@ -98,8 +102,7 @@ $TextLanguage = new \App\TextLanguage;
 <script>
 function update_img(v1,v2)
 { 
-	document.getElementById(v1).value = v2; 
-	document.getElementById(v1+'_preview').src = v2; 
+	document.getElementById(v1).value = v2;  
 	$.fancybox.close();
 } 
 </script>

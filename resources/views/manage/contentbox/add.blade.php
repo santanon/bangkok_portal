@@ -44,8 +44,8 @@ $TextLanguage = new \App\TextLanguage;
             
              <tr>
                 <th width="120"><?php echo $TextLanguage->lang('name'); ?> <span style="color:red">*</span></th>
-                <td><input name="title" type="text" class="sm-input--flag-th" id="title" style="width:210px" placeholder='<?php echo $TextLanguage->lang('name'); ?>'>&nbsp;&nbsp;
-                    <input name="en_title" type="text" class="sm-input--flag-en" id="en_title" style="width:210px" placeholder='<?php echo $TextLanguage->lang('name'); ?>'>
+                <td><input name="title" type="text" class="sm-input--flag-th" id="title" style="width:40%" placeholder='<?php echo $TextLanguage->lang('name'); ?>'>&nbsp;&nbsp;
+                    <input name="en_title" type="text" class="sm-input--flag-en" id="en_title" style="width:40%" placeholder='<?php echo $TextLanguage->lang('name'); ?>'>
                 </td>
             </tr> 
             
@@ -106,8 +106,7 @@ $TextLanguage = new \App\TextLanguage;
 <script>
 function update_img(v1,v2)
 { 
-	document.getElementById(v1).value = v2; 
-	document.getElementById(v1+'_preview').src = v2; 
+	document.getElementById(v1).value = v2;  
 	$.fancybox.close();
 } 
 function hide_all()

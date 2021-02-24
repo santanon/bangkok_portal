@@ -1,9 +1,13 @@
 <?php 
 $CustomHelper = new \App\CustomHelper; 
 $TextLanguage = new \App\TextLanguage; 
- 
+$no_back = 1; 
 ?>   
 @include('manage.include.main_form_header') 
+
+<script>
+	parent.document.getElementById('modal_full_span').innerHTML = 'สังคมออนไลน์';
+	</script>
 
 
 <script type="text/javascript">
@@ -48,7 +52,7 @@ function show_link(v1)
 }
 </script>
     
-    <form method="post" enctype="multipart/form-data" onsubmit="return check_form();" action="http://127.0.0.1:8000/manage-admin/edit_submit?m=<?php echo $config_mod;  ?>">
+    <form method="post" enctype="multipart/form-data" onsubmit="return check_form();" action="http://127.0.0.1:8000/manage-admin/edit_social_submit?m=<?php echo $config_mod;  ?>">
     @csrf <!-- {{ csrf_field() }} -->
     <table>
         <tbody>
@@ -102,7 +106,7 @@ function show_link(v1)
                 <th width="120"><?php echo $TextLanguage->lang('facebook_url'); ?></th>
                 <td>
             <div class="align-box" style="width:110px;">  
-                    <input class="sm-input" name="social_fb" type="text" id="social_fb" style="width:235px" value="<?php echo $edit_social_fb; ?>" placeholder="http://www.facebook.com/xxx">
+                    <input class="sm-input" name="social_fb" type="text" id="social_fb" style="width:40%" value="<?php echo $edit_social_fb; ?>" placeholder="http://www.facebook.com/xxx">
             </div>
                     
                 </td>
@@ -111,7 +115,7 @@ function show_link(v1)
                 <th width="120"><?php echo $TextLanguage->lang('twitter_url'); ?></th>
                 <td>
             <div class="align-box" style="width:110px;">  
-                    <input class="sm-input" name="social_tw" type="text" id="social_tw" style="width:235px" value="<?php echo $edit_social_tw; ?>" placeholder="http://www.twitter.com/xxx">
+                    <input class="sm-input" name="social_tw" type="text" id="social_tw" style="width:40%" value="<?php echo $edit_social_tw; ?>" placeholder="http://www.twitter.com/xxx">
             </div>
                     
                 </td>
@@ -120,7 +124,7 @@ function show_link(v1)
                 <th width="120"><?php echo $TextLanguage->lang('instagram_url'); ?></th>
                 <td>
             <div class="align-box" style="width:110px;">  
-                    <input class="sm-input" name="social_ins" type="text" id="social_ins" style="width:235px" value="<?php echo $edit_social_ins; ?>" placeholder="http://www.instagram.com/xxx">
+                    <input class="sm-input" name="social_ins" type="text" id="social_ins" style="width:40%" value="<?php echo $edit_social_ins; ?>" placeholder="http://www.instagram.com/xxx">
             </div>
                     
                 </td>
@@ -129,7 +133,7 @@ function show_link(v1)
                 <th width="120"><?php echo $TextLanguage->lang('youtube_url'); ?></th>
                 <td>
             <div class="align-box" style="width:110px;">  
-                    <input class="sm-input" name="social_yt" type="text" id="social_yt" style="width:235px" value="<?php echo $edit_social_yt; ?>" placeholder="http://www.youtube.com/xxx">
+                    <input class="sm-input" name="social_yt" type="text" id="social_yt" style="width:40%" value="<?php echo $edit_social_yt; ?>" placeholder="http://www.youtube.com/xxx">
             </div>
                     
                 </td>
@@ -141,8 +145,7 @@ function show_link(v1)
                 <td>
                 
                 <span class="btn round big blue"><input type="submit" class="fontfacetext" value="<?php echo $TextLanguage->lang('save'); ?>"></span>&nbsp;
-                <span class="btn round big gray"><input type="button" class="fontfacetext" value="<?php echo $TextLanguage->lang('cancel'); ?>" onclick="window.location = '<?php echo base_url() . 'panel/' ?>';"></span>
-
+               
                 </td>
             </tr>
         </tbody>

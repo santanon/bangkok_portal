@@ -1,9 +1,14 @@
 <?php 
 $CustomHelper = new \App\CustomHelper; 
 $TextLanguage = new \App\TextLanguage; 
- 
+$no_back = 1;
 ?>   
 @include('manage.include.main_form_header') 
+
+<script>
+	parent.document.getElementById('modal_full_span').innerHTML = 'ค้นหา';
+	</script>
+
 
 
 <script type="text/javascript">
@@ -45,7 +50,7 @@ function show_link(v1)
 }
 </script>
     
-    <form method="post" enctype="multipart/form-data" onsubmit="return check_form();" action="http://127.0.0.1:8000/manage-admin/edit_submit?m=<?php echo $config_mod;  ?>">
+    <form method="post" enctype="multipart/form-data" onsubmit="return check_form();" action="http://127.0.0.1:8000/manage-admin/edit_search_submit?m=<?php echo $config_mod;  ?>">
     @csrf <!-- {{ csrf_field() }} -->
     <table>
         <tbody>
@@ -84,7 +89,7 @@ function show_link(v1)
                 <th width="120"><?php echo $TextLanguage->lang('id'); ?></th>
                 <td>
             <div class="align-box" style="width:110px;">  
-                    <input class="sm-input" name="search_id" type="text" id="search_id" style="width:235px" value="<?php echo $edit_search_id; ?>">
+                    <input class="sm-input" name="search_id" type="text" id="search_id" style="width:40%" value="<?php echo $edit_search_id; ?>">
             </div>
                     
                 </td>
@@ -98,8 +103,7 @@ function show_link(v1)
                 <td>
                 
                 <span class="btn round big blue"><input type="submit" class="fontfacetext" value="<?php echo $TextLanguage->lang('save'); ?>"></span>&nbsp;
-                <span class="btn round big gray"><input type="button" class="fontfacetext" value="<?php echo $TextLanguage->lang('cancel'); ?>" onclick="window.location = '<?php echo base_url() . 'panel/' ?>';"></span>
-
+            
                 </td>
             </tr>
         </tbody>

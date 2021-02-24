@@ -10,8 +10,8 @@
 <meta name="keywords" content="@yield('tagkeyword')" />
 <meta name="description" content="@yield('tagdescription')" />
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:site" content="@thailife" />
-<meta name="twitter:creator" content="@thailife" />
+<meta name="twitter:site" content="@<?php echo $_SESSION['portal_website_'.$mod.'_web_url'] ?>" />
+<meta name="twitter:creator" content="@<?php echo $_SESSION['portal_website_'.$mod.'_web_url'] ?>" />
 
 <link rel="canonical" href=""/>
 <link rel="icon" href="{{ asset('assets/images/favicon.ico')}}" type="image/x-icon">
@@ -34,7 +34,7 @@
         </script>
 
     <!-- Script Loading -->
-    <div class="se-pre-con loading">
+    <!--<div class="se-pre-con loading">
         <div class="group-loading">
             <div class="lds-ellipsis">
                 <div></div>
@@ -43,7 +43,7 @@
                 <div></div>
             </div>
         </div>
-    </div>
+    </div>-->
     <!-- /Script Loading -->
     
     

@@ -1,5 +1,5 @@
 <!-- คำถามที่พบบ่อย -->
-<div id="faq" data-id="faq" class="section-content">
+<div id="faq" data-id="2_<?php echo $this_box_id ?>" class="section-content">
                 <div class="group-mange-section">
                     <div class="manage-tools">
                         <ul>

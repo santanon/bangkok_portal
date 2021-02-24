@@ -1,7 +1,6 @@
 <?php 
 $CustomHelper = new \App\CustomHelper; 
-$TextLanguage = new \App\TextLanguage; 
- 
+$TextLanguage = new \App\TextLanguage;  
 ?>   
   
 
@@ -51,7 +50,7 @@ $TextLanguage = new \App\TextLanguage;
                                                     
                                                     
 <?php
-if($list_comment->num_rows > 0)
+if(count($list_comment) > 0)
 {
 	?>
      <tr >
@@ -72,7 +71,7 @@ foreach ($list_comment as $row_comment)
 	<td><?php echo $row_comment->title ?></td>
 	</tr>
 	<tr>
-	<td><?php echo $TextLanguage->lang('post_by') ?> : <b><?php echo $row_comment->post_user ?></b> &nbsp; IP : <b><?php echo $row_comment->ip ?></b><br /><?php echo $TextLanguage->lang('last_post') ?> : <b><?php echo $ci_obj->util->time_elapsed_string($row_comment->last_create); ?></b> ( <?php echo date('d/m/y [H:i:s]',$row_comment->last_create) ?> )</td> 
+	<td><?php echo $TextLanguage->lang('post_by') ?> : <b><?php echo $row_comment->post_user ?></b> &nbsp; IP : <b><?php echo $row_comment->ip ?></b><br /><?php echo $TextLanguage->lang('last_post') ?> : <b><?php echo $CustomHelper->time_elapsed_string($row_comment->last_create); ?></b> ( <?php echo date('d/m/y [H:i:s]',$row_comment->last_create) ?> )</td> 
 	</tr>
 	</table><br />
 	<?php

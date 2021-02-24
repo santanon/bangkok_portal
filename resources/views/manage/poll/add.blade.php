@@ -58,8 +58,8 @@ $TextLanguage = new \App\TextLanguage;
             
             <tr>
                 <th width="120"><?php echo $TextLanguage->lang('question1'); ?></th>
-                <td><input name="title" type="text" class="sm-input--flag-th" id="title" style="width:210px" placeholder="<?php echo $TextLanguage->lang('question1'); ?>">&nbsp;&nbsp;
-                    <input name="en_title" type="text" class="sm-input--flag-en" id="en_title" style="width:210px" placeholder="<?php echo $TextLanguage->lang('question1'); ?>">
+                <td><input name="title" type="text" class="sm-input--flag-th" id="title" style="width:40%" placeholder="<?php echo $TextLanguage->lang('question1'); ?>">&nbsp;&nbsp;
+                    <input name="en_title" type="text" class="sm-input--flag-en" id="en_title" style="width:40%" placeholder="<?php echo $TextLanguage->lang('question1'); ?>">
                 </td>
             </tr> 
             
@@ -69,8 +69,8 @@ $TextLanguage = new \App\TextLanguage;
 				?>
                 <tr>
                     <th width="120"><?php echo $TextLanguage->lang('choice'); ?> <?php echo $i ?></th>
-                    <td><input name="c<?php echo $i ?>" type="text" class="sm-input--flag-th" id="c<?php echo $i ?>" style="width:210px" placeholder="<?php echo $TextLanguage->lang('choice'); ?> <?php echo $i ?>">&nbsp;&nbsp;
-                        <input name="en_c<?php echo $i ?>" type="text" class="sm-input--flag-en" id="en_c<?php echo $i ?>" style="width:210px" placeholder="<?php echo $TextLanguage->lang('choice'); ?> <?php echo $i ?>">
+                    <td><input name="c<?php echo $i ?>" type="text" class="sm-input--flag-th" id="c<?php echo $i ?>" style="width:40%" placeholder="<?php echo $TextLanguage->lang('choice'); ?> <?php echo $i ?>">&nbsp;&nbsp;
+                        <input name="en_c<?php echo $i ?>" type="text" class="sm-input--flag-en" id="en_c<?php echo $i ?>" style="width:40%" placeholder="<?php echo $TextLanguage->lang('choice'); ?> <?php echo $i ?>">
                         &nbsp; <?php echo $TextLanguage->lang('point'); ?> &nbsp;
                         <input name="p<?php echo $i ?>" type="text" class="sm-input" id="p<?php echo $i ?>" style="width:50px; min-width:50px;" placeholder="<?php echo $TextLanguage->lang('choice'); ?> <?php echo $i ?>" value="0" maxlength="6">
                     </td>

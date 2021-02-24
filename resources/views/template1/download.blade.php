@@ -1,5 +1,5 @@
 <!-- DOWNLOAD -->
-<div id="download" data-id="download" class="section-content">
+<div id="download" data-id="6_<?php echo $this_box_id ?>" class="section-content">
                 <div class="group-mange-section">
                     <div class="manage-tools">
                         <ul>

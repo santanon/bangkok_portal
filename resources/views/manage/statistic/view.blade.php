@@ -1,9 +1,13 @@
 <?php 
 $CustomHelper = new \App\CustomHelper; 
 $TextLanguage = new \App\TextLanguage; 
- 
+$no_back = 1; 
 ?>   
 @include('manage.include.main_form_header') 
+
+<script>
+	parent.document.getElementById('modal_full_span').innerHTML = 'สถิติเว็บไซต์';
+	</script>
 
  
   <br />

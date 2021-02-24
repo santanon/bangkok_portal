@@ -117,7 +117,7 @@ class Top_menu
 			$data['list_str_navi'] = $str_navi;
 		}  
 		  
-		$model_arr = array('Portal_website_activities_cat_model','Portal_website_banner_cat_model','Portal_website_download_cat_model','Portal_website_enew_cat_model','Portal_website_faq_cat_model','Portal_website_gallery_cat_model','Portal_website_news_cat_model','Portal_website_poll_cat_model','Portal_website_question_cat_model','Portal_website_webboard_cat_model');
+		$model_arr = array('Portal_website_activities_cat_model','Portal_website_banner_cat_model','Portal_website_download_cat_model','Portal_website_enew_cat_model','Portal_website_faq_cat_model','Portal_website_gallery_cat_model','Portal_website_news_cat_model','Portal_website_poll_cat_model','Portal_website_question_cat_model','Portal_website_webboard_cat_model','Portal_website_vdo_cat_model');
 		
 		foreach($model_arr as $each_model)
 		{ 
@@ -203,6 +203,12 @@ class Top_menu
 				$str_path = 'webboard';
 				$redirect_new = true; 
 			}
+			if($CustomHelper->input_post('page_type', TRUE) == 'vdo')
+			{
+				$str_model = 'Portal_website_vdo_cat_model';
+				$str_path = 'vdo';
+				$redirect_new = true; 
+			}
 			
 			 
 			$q = "SELECT * FROM ".$CustomHelper->model_to_table($str_model)." WHERE web_id = ? ORDER BY sort DESC";	 	
@@ -267,8 +273,8 @@ class Top_menu
 		 
 		$d = new \stdClass(); 
 		$d->web_id = $_SESSION['panel_id'];  
-		
-		$d->img1 = $img1.'^'.$_POST['img1_alt'];
+		 
+		$d->img1 = $img1.'^'.$_POST['img1_alt'].';'.$_POST['img1_alt_en'].';'.$_POST['img1_alt_sort'];
 
 		$d->title = htmlspecialchars($CustomHelper->input_post('title', TRUE));
 		$d->en_title = htmlspecialchars($CustomHelper->input_post('en_title', TRUE));  
@@ -414,6 +420,8 @@ class Top_menu
 			$data['config_dropdown_title'] = $TextLanguage->lang(@$this->mod_cat_dropdown_title); 
 			
 			$data['get_alt'] = $CustomHelper->update_file_and_alt('img1',$row[0]->img1,$this->mod);
+			$data['get_alt_en'] = $CustomHelper->update_file_and_alt_en('img1',$row[0]->img1,$this->mod);
+			$data['get_alt_sort'] = $CustomHelper->update_file_and_alt_sort('img1',$row[0]->img1,$this->mod);
 			 
 			if(@$this->mod_cat_model <> '')
 			{
@@ -463,7 +471,7 @@ class Top_menu
 				$_SESSION[$this->mod.'_group_page'] = $row[0]->page_id;  
 			}
 			 
-			$model_arr = array('Portal_website_activities_cat_model','Portal_website_banner_cat_model','Portal_website_download_cat_model','Portal_website_enew_cat_model','Portal_website_faq_cat_model','Portal_website_gallery_cat_model','Portal_website_news_cat_model','Portal_website_poll_cat_model','Portal_website_question_cat_model','Portal_website_webboard_cat_model');
+			$model_arr = array('Portal_website_activities_cat_model','Portal_website_banner_cat_model','Portal_website_download_cat_model','Portal_website_enew_cat_model','Portal_website_faq_cat_model','Portal_website_gallery_cat_model','Portal_website_news_cat_model','Portal_website_poll_cat_model','Portal_website_question_cat_model','Portal_website_webboard_cat_model','Portal_website_vdo_cat_model');
 		
 			foreach($model_arr as $each_model)
 			{ 
@@ -491,8 +499,8 @@ class Top_menu
 		 
 		   
 		$d = new \stdClass();  
-		
-		$d->img1 = $img1.'^'.$_POST['img1_alt'];
+		 
+		$d->img1 = $img1.'^'.$_POST['img1_alt'].';'.$_POST['img1_alt_en'].';'.$_POST['img1_alt_sort'];
 		
 		$d->title = htmlspecialchars($CustomHelper->input_post('title', TRUE));
 		$d->en_title = htmlspecialchars($CustomHelper->input_post('en_title', TRUE));  

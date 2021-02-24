@@ -1,3 +1,14 @@
+<?php
+$CustomHelper = new \App\CustomHelper;
+$TextLanguage = new \App\TextLanguage;
+if(!function_exists('base_url')) 
+{
+    function base_url()
+    {
+        return 'http://127.0.0.1:8000/';
+    }
+} 
+?> 
 @section('title', 'รายละเอียดโหวต')
 @section('tagkeyword', '')
 @section('tagdescription', '')

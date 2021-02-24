@@ -25,47 +25,103 @@ $TextLanguage = new \App\TextLanguage;
     <table>
         <tbody>
           
-             <tr>
-                <th width="120"><?php echo $TextLanguage->lang('name'); ?> <span style="color:red">*</span></th>
-                <td><input name="title" type="text" class="sm-input--flag-th" id="title" style="width:210px" placeholder='<?php echo $TextLanguage->lang('name'); ?>'>&nbsp;&nbsp;
-                    <input name="en_title" type="text" class="sm-input--flag-en" id="en_title" style="width:210px" placeholder='<?php echo $TextLanguage->lang('name'); ?>'>
+ <script>
+function switch_cat(v)
+{
+    document.getElementById('box0').style.display = 'none';
+    document.getElementById('box1').style.display = 'none';
+    document.getElementById('box2').style.display = 'none';
+    document.getElementById('box3').style.display = 'none';
+    document.getElementById('box4').style.display = 'none';
+    document.getElementById('box5').style.display = 'none';
+    document.getElementById('box6').style.display = 'none';
+    document.getElementById('box7').style.display = 'none';
+    document.getElementById('box8').style.display = 'none';
+
+    document.getElementById('box'+v).style.display = '';
+    
+}
+ </script>             
+            <tr>
+                <th width="120" valign="top" ><?php echo $TextLanguage->lang('box_data2'); ?></th>
+                <td> 
+                    <div class="align-box"> 
+                    <select onchange="document.getElementById('this_a').value = this.options[this.selectedIndex].text;switch_cat(this.value-1);" name="box" id="box" style="width:500px; height:30px; font-size:16px;"  > 
+                    <option value="1">ข่าวสาร</option>  
+                    <option value="2">คำถามที่พบบ่อย</option> 
+                    <option value="3">ปฏิทินกิจกรรม</option> 
+                    <option value="4">ภาพกิจกรรม</option> 
+                    <option value="5">วิดิทัศน์</option> 
+                    <option value="6">ดาวน์โหลด</option> 
+                    <option value="7">แบนเนอร์</option> 
+                    <option value="8">แบบสอบถาม</option> 
+                    <option value="9">โพลล์/โหวต</option>    
+                    </select> 
+
+                    <input type="hidden" name="a" id="this_a" value="ข่าวสาร">
+                    <input type="hidden" name="b" id="this_b" value="ข้อมูลล่าสุด">
+                    </div>  
                 </td>
             </tr> 
-            
-            
-             <tr>
-                <th width="120"><?php echo $TextLanguage->lang('box_number'); ?></th>
-                <td>
-                 <select class="selectric" name="box_number" id="box_number" onchange="show_it(this.value);"> 
-                 <option value="1">1</option> 
-                 <option value="2">2</option> 
-                 <option value="3">3</option> 
-                 <option value="4">4</option> 
-                 </select>
-                </td>
-            </tr> 
-            
-            
              <tr>
                 <th width="120" valign="top" style="padding-top:15px;"><?php echo $TextLanguage->lang('box_data'); ?></th>
-                <td>
-                
-                <?php
-				for($i=1;$i<=4;$i++)
-				{
-					?>
-                    <div class="align-box" style="width:160px; display:none;" id="div<?php echo $i ?>"> 
-                    <select class="selectric" name="box<?php echo $i ?>" id="box_number" style="width:500px;"> 
-					<?php
-                    echo $main_str;
+                <td> 
+                    <div class="align-box"> 
+                    <select onchange="document.getElementById('this_b').value = this.options[this.selectedIndex].text;" name="box0" id="box0" style="width:500px;width:500px; height:30px; font-size:16px;"> 
+                    <option value=""><?php echo $TextLanguage->lang('box_last'); ?></option>
+                    <?php
+                    echo $main_str[0];
+                    ?>    
+                    </select>
+                    <select onchange="document.getElementById('this_b').value = this.options[this.selectedIndex].text;" name="box1" id="box1" style="width:500px;display:none;width:500px; height:30px; font-size:16px;">
+                    <option value=""><?php echo $TextLanguage->lang('box_last'); ?></option>    
+                    <?php
+                    echo $main_str[1];
+                    ?>    
+                    </select>
+                    <select onchange="document.getElementById('this_b').value = this.options[this.selectedIndex].text;" name="box2" id="box2" style="width:500px;display:none;width:500px; height:30px; font-size:16px;">
+                    <option value=""><?php echo $TextLanguage->lang('box_last'); ?></option>    
+                    <?php
+                    echo $main_str[2];
+                    ?>    
+                    </select>
+                    <select onchange="document.getElementById('this_b').value = this.options[this.selectedIndex].text;" name="box3" id="box3" style="width:500px;display:none;width:500px; height:30px; font-size:16px;">
+                    <option value=""><?php echo $TextLanguage->lang('box_last'); ?></option>
+                    <?php
+                    echo $main_str[3];
+                    ?>    
+                    </select>
+                    <select onchange="document.getElementById('this_b').value = this.options[this.selectedIndex].text;" name="box4" id="box4" style="width:500px;display:none;width:500px; height:30px; font-size:16px;">
+                    <option value=""><?php echo $TextLanguage->lang('box_last'); ?></option>
+                    <?php
+                    echo $main_str[4];
+                    ?>    
+                    </select>
+                    <select onchange="document.getElementById('this_b').value = this.options[this.selectedIndex].text;" name="box5" id="box5" style="width:500px;display:none;width:500px; height:30px; font-size:16px;">
+                    <option value=""><?php echo $TextLanguage->lang('box_last'); ?></option>
+                    <?php
+                    echo $main_str[5];
+                    ?>    
+                    </select>
+                    <select onchange="document.getElementById('this_b').value = this.options[this.selectedIndex].text;" name="box6" id="box6" style="width:500px;display:none;width:500px; height:30px; font-size:16px;">
+                    <option value=""><?php echo $TextLanguage->lang('box_last'); ?></option>    
+                    <?php
+                    echo $main_str[6];
+                    ?>    
+                    </select>
+                    <select onchange="document.getElementById('this_b').value = this.options[this.selectedIndex].text;" name="box7" id="box7" style="width:500px;display:none;width:500px; height:30px; font-size:16px;">
+                    <option value=""><?php echo $TextLanguage->lang('box_last'); ?></option>    
+                    <?php
+                    echo $main_str[7];
+                    ?>    
+                    </select>
+                    <select onchange="document.getElementById('this_b').value = this.options[this.selectedIndex].text;" name="box8" id="box8" style="width:500px;display:none;width:500px; height:30px; font-size:16px;">
+                    <option value=""><?php echo $TextLanguage->lang('box_last'); ?></option>
+                    <?php
+                    echo $main_str[8];
                     ?>    
                     </select> 
-                    </div><br />
-                    <?php
-				}	
-				?>
-                
-                 
+                    </div>  
                 </td>
             </tr> 
             
@@ -86,47 +142,6 @@ $TextLanguage = new \App\TextLanguage;
     </table>
     </form>
     
-<script>
-function update_img(v1,v2)
-{ 
-	document.getElementById(v1).value = v2; 
-	document.getElementById(v1+'_preview').src = v2; 
-	$.fancybox.close();
-} 
-function hide_all()
-{
-	document.getElementById('div1').style.display = 'none';
-	document.getElementById('div2').style.display = 'none';
-	document.getElementById('div3').style.display = 'none';
-	document.getElementById('div4').style.display = 'none';
-}
-function show_it(v1)
-{
-	hide_all();
-	if(v1 == '1')
-	{
-		document.getElementById('div1').style.display = '';	
-	}
-	if(v1 == '2')
-	{
-		document.getElementById('div1').style.display = '';	
-		document.getElementById('div2').style.display = '';	
-	}
-	if(v1 == '3')
-	{
-		document.getElementById('div1').style.display = '';	
-		document.getElementById('div2').style.display = '';	
-		document.getElementById('div3').style.display = '';	
-	}
-	if(v1 == '4')
-	{
-		document.getElementById('div1').style.display = '';	
-		document.getElementById('div2').style.display = '';	
-		document.getElementById('div3').style.display = '';	
-		document.getElementById('div4').style.display = '';	
-	} 
-}
-show_it('1');
-</script>
+ 
     
 @include('manage.include.main_form_footer') 

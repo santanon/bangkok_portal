@@ -28,10 +28,35 @@ $TextLanguage = new \App\TextLanguage;
     <form method="post" enctype="multipart/form-data" onsubmit="return check_form();" action="http://127.0.0.1:8000/manage-admin/edit_submit?m=<?php echo $config_mod;  ?>">
     @csrf <!-- {{ csrf_field() }} -->
     <table>
-        <tbody>
+        <tbody> 
+            <?php
+            if(strpos($edit_title,'|') > -1)
+            {
+                $arr_edit_title = explode('|',$edit_title);
+            }
+            else
+            {
+                $arr_edit_title[0] = $edit_title;
+                $arr_edit_title[1] = '';
+            } 
+            if(strpos($edit_en_title,'|') > -1)
+            {
+                $arr_edit_en_title = explode('|',$edit_en_title);
+            }
+            else
+            {
+                $arr_edit_en_title[0] = $edit_en_title;
+                $arr_edit_en_title[1] = '';
+            } 
+            ?>
             <tr>
-                <th width="120"><?php echo $TextLanguage->lang('name'); ?></th>
-                <td><input name="title" type="text" class="sm-input" id="title" style="width:210px" placeholder="<?php echo $TextLanguage->lang('name'); ?>" value="<?php echo $edit_title ?>"> 
+                <th width="120" valign="top"><?php echo $TextLanguage->lang('name'); ?></th>
+                <td>
+                <input value="<?php echo $arr_edit_title[0] ?>" class="sm-input--flag-th" id="title1" name="title[]" type="text" class="sm-input" id="title1" style="width:40%" placeholder="<?php echo $TextLanguage->lang('txt_line_1'); ?>"> <br />
+                <input value="<?php echo $arr_edit_title[1] ?>" class="sm-input--flag-th" id="title2" name="title[]" type="text" class="sm-input" id="title2" style="width:40%" placeholder="<?php echo $TextLanguage->lang('txt_line_2'); ?>">
+                <br /><br />
+                <input value="<?php echo $arr_edit_en_title[0] ?>" class="sm-input--flag-en" id="en_title1" name="en_title[]" type="text" class="sm-input" id="en_title1" style="width:40%" placeholder="<?php echo $TextLanguage->lang('txt_line_1'); ?>"><br />
+                <input value="<?php echo $arr_edit_en_title[1] ?>" class="sm-input--flag-en" id="en_title2" name="en_title[]" type="text" class="sm-input" id="en_title2" style="width:40%" placeholder="<?php echo $TextLanguage->lang('txt_line_2'); ?>">
                 </td>
             </tr> 
  
@@ -46,21 +71,20 @@ $TextLanguage = new \App\TextLanguage;
                     $this_value = $edit_img1;
                     ?>
                     @include('manage.include.input_file_tools')
-
-                     
+ 
                 </td>
             </tr>
              
             
-           <!-- 
+            
             <tr>
                 <th width="120" valign="top" style="padding-top:15px;"><?php echo $TextLanguage->lang('url'); ?></th>
                 <td>
                 
-                    <input value="<?php echo $edit_url ?>" name="url" type="text" class="sm-input--flag-th" id="url" style="width:235px" placeholder="http://"><br />
+                    <input value="<?php echo $edit_url ?>" name="url" type="text" class="sm-input--flag-th" id="url" style="width:40%" placeholder="http://"><br />
 	<input type="button" name="upload" value="<?php echo $TextLanguage->lang('link_helper'); ?>" onclick="callLightbox('http://127.0.0.1:8000/panel-admin/link_helper?type=form&field=url',500,640);return false;" />
 	<br><br>
-	<input value="<?php echo $edit_en_url ?>" name="en_url" type="text" class="sm-input--flag-en" id="en_url" style="width:235px" placeholder="http://"><br />
+	<input value="<?php echo $edit_en_url ?>" name="en_url" type="text" class="sm-input--flag-en" id="en_url" style="width:40%" placeholder="http://"><br />
 	<input type="button" name="upload" value="<?php echo $TextLanguage->lang('link_helper'); ?>" onclick="callLightbox('http://127.0.0.1:8000/panel-admin/link_helper?type=form&field=en_url',500,640);return false;" />
                      
                 </td>
@@ -77,7 +101,7 @@ $TextLanguage = new \App\TextLanguage;
                     <label class="input-label" for="test-radio2"><?php echo $TextLanguage->lang('new_window'); ?></label>
                     </div>&nbsp;&nbsp; 
                 </td>
-            </tr>-->
+            </tr>
              
 
 <?php
@@ -106,8 +130,7 @@ $this_data['edit_date_end'] = $edit_date_end;
 <script>
 function update_img(v1,v2)
 { 
-	document.getElementById(v1).value = v2; 
-	document.getElementById(v1+'_preview').src = v2; 
+	document.getElementById(v1).value = v2;  
 	$.fancybox.close();
 } 
 </script>

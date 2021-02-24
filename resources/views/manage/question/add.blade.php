@@ -45,8 +45,8 @@ $TextLanguage = new \App\TextLanguage;
             
             <tr>
                 <th width="120"><?php echo $TextLanguage->lang('title'); ?></th>
-                <td><input name="title" type="text" class="sm-input--flag-th" id="title" style="width:210px" placeholder="<?php echo $TextLanguage->lang('title'); ?>">&nbsp;&nbsp;
-                    <input name="en_title" type="text" class="sm-input--flag-en" id="en_title" style="width:210px" placeholder="<?php echo $TextLanguage->lang('title'); ?>">
+                <td><input name="title" type="text" class="sm-input--flag-th" id="title" style="width:40%" placeholder="<?php echo $TextLanguage->lang('title'); ?>">&nbsp;&nbsp;
+                    <input name="en_title" type="text" class="sm-input--flag-en" id="en_title" style="width:40%" placeholder="<?php echo $TextLanguage->lang('title'); ?>">
                 </td>
             </tr> 
             

@@ -1,9 +1,13 @@
 <?php 
 $CustomHelper = new \App\CustomHelper; 
 $TextLanguage = new \App\TextLanguage; 
- 
+$no_back = 1;
 ?>   
 @include('manage.include.main_form_header') 
+
+<script>
+	parent.document.getElementById('modal_full_span').innerHTML = 'รูปพื้นหลังทั้งหมด';
+	</script>
 
 <script type="text/javascript">
 function check_form()
@@ -19,7 +23,7 @@ function check_form()
 $ro = $list_cat;
 ?>  
 
-<form method="post" enctype="multipart/form-data" onsubmit="return check_form();" action="http://127.0.0.1:8000/manage-admin/edit_submit?m=setting_bg">
+<form method="post" enctype="multipart/form-data" onsubmit="return check_form();" action="http://127.0.0.1:8000/manage-admin/edit_bg_submit?m=setting_bg">
 @csrf <!-- {{ csrf_field() }} -->
 <table>
 	<tbody>
@@ -27,24 +31,30 @@ $ro = $list_cat;
          
      
 <?php 
-$all_list = array('mod_activities','mod_banner','mod_contact','mod_download','mod_faq','mod_gallery','mod_member','mod_news','mod_poll','mod_question','mod_search','mod_sitemap','mod_texteditor','mod_webboard');   
-$all_list_name = array('activities','banner','contactus','download','faq','gallery','member','news','poll','question','search','sitemap','texteditor','webboard1');  
-     
-while($each = each($all_list))
+$all_list = array('mod_activities','mod_banner','mod_contact','mod_download','mod_faq','mod_gallery','mod_news','mod_poll','mod_question','mod_search','mod_sitemap','mod_texteditor');   
+$all_list_name = array('activities','banner','contactus','download','faq','gallery','news','poll','question','search','sitemap','texteditor');  
+
+$run = 0;
+foreach($all_list as $all_list_item)
 {
-	$this_mod_input = $each['value']; 
-	$each_name = each($all_list_name);
+	$this_mod_input = $all_list_item; 
+	$each_name = $all_list_name[$run];
 	?>
     <tr>
-    <th width="120" valign="top" style="padding-top:10px;"><?php echo $TextLanguage->lang($each_name['value']); ?></th>
-    <td>
-    <input type="button" name="upload" value="<?php echo $TextLanguage->lang('file_manager'); ?>" onclick="callLightbox('<?php echo base_url(); ?>panel/fm/form/<?php echo $this_mod_input ?>',1120,640);return false;" /> <?php if(strlen($ro[0]->{$this_mod_input}) > 5){ ?><input type="button" value="<?php echo $TextLanguage->lang('reset'); ?>" onclick="if(confirm('<?php echo $TextLanguage->lang('confirm'); ?>?'))window.location = 'http://127.0.0.1:8000/manage-admin/reset_bg?m=setting_bg&data=<?php echo $each[1] ?>';" /><?php } ?><br />
-    <?php echo $TextLanguage->lang('image_size_setting_bg'); ?><br />      
-    <img width="150" id="<?php echo $this_mod_input ?>_preview" style="border:1px solid #CCC;" src="<?php echo $ro[0]->{$this_mod_input} ?>" />
-    <input type="text" name="<?php echo $this_mod_input ?>" id="<?php echo $this_mod_input ?>" value="<?php echo $ro[0]->{$this_mod_input} ?>" />
+    <th width="120" valign="top" style="padding-top:10px;"><?php echo $TextLanguage->lang($each_name); ?></th>
+    <td> 
+	<?php 
+	$this_name = $this_mod_input;
+	$this_w = '1280';
+	$this_h = '741';
+	$this_limit = '5';
+	$this_value = $ro[0]->{$this_mod_input};
+	?>
+	@include('manage.include.input_file_tools_arr') 
     </td>
     </tr> 
     <?php
+	$run = $run + 1;
 } 
 ?>
   
@@ -60,8 +70,7 @@ while($each = each($all_list))
 			<td>
 			
 			<span class="btn round big blue"><input type="submit" class="fontfacetext" value="<?php echo $TextLanguage->lang('save'); ?>"></span>&nbsp;
-			<span class="btn round big gray"><input type="button" class="fontfacetext" value="<?php echo $TextLanguage->lang('cancel'); ?>" onclick="window.history.back();"></span>
-
+			 
 			</td>
 		</tr>
 		
@@ -73,8 +82,7 @@ while($each = each($all_list))
 <script>
 function update_img(v1,v2)
 { 
-	document.getElementById(v1).value = v2; 
-	document.getElementById(v1+'_preview').src = v2; 
+	document.getElementById(v1).value = v2;   
 	$.fancybox.close();
 } 
 </script>

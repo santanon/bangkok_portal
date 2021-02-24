@@ -70,8 +70,8 @@ $(function()
             <tr>
                 <th width="120"><?php echo $TextLanguage->lang('name'); ?></th>
                 <td>
-                <input name="title" type="text" class="sm-input--flag-th" id="title" style="width:235px" placeholder="<?php echo $TextLanguage->lang('name'); ?>"> 
-                <input name="en_title" type="text" class="sm-input--flag-en" id="en_title" style="width:235px" placeholder="<?php echo $TextLanguage->lang('name'); ?>"> 
+                <input name="title" type="text" class="sm-input--flag-th" id="title" style="width:40%" placeholder="<?php echo $TextLanguage->lang('name'); ?>"> 
+                <input name="en_title" type="text" class="sm-input--flag-en" id="en_title" style="width:40%" placeholder="<?php echo $TextLanguage->lang('name'); ?>"> 
                 </td>
             </tr> 
  
@@ -85,19 +85,19 @@ $(function()
                 $this_name = 'file1';
                 $this_w = '0';
                 $this_h = '0';
-                $this_limit = '3';
+                $this_limit = '1';
                 $this_value = '';
                 ?>
-                @include('manage.include.input_file_tools') 
+                @include('manage.include.input_file_tools_arr') 
                 
                 <?php 
                 $this_name = 'en_file1';
                 $this_w = '0';
                 $this_h = '0';
-                $this_limit = '3';
+                $this_limit = '1';
                 $this_value = '';
                 ?>
-                @include('manage.include.input_file_tools') 
+                @include('manage.include.input_file_tools_arr') 
  
                 </td>
             </tr>

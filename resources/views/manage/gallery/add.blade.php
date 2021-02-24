@@ -9,28 +9,12 @@ $TextLanguage = new \App\TextLanguage;
 <script type="text/javascript">
     function check_form()
     { 
-        
-		if(document.getElementById('title').value == '' && document.getElementById('en_title').value == '')
+       if(document.getElementById('title').value == '' && document.getElementById('en_title').value == '')
         {
             document.getElementById('title').focus();
             return false;
-        }
-		/* if(document.getElementById('img1').value == '')
-        {
-            document.getElementById('img1').focus();
-            return false;
-        }
-		if(CKEDITOR.instances.info.getData() == '')
-		{
-			CKEDITOR.instances.info.focus();
-			return false;
-		}	
-		 if(CKEDITOR.instances.en_info.getData() == '')
-		{
-			CKEDITOR.instances.en_info.focus();
-			return false;
-		}*/	
-                                                                                    
+        }  
+		                                                                 
         if(!confirm('<?php echo $TextLanguage->lang('confirm'); ?>?'))
         {
             return false;
@@ -42,7 +26,7 @@ $TextLanguage = new \App\TextLanguage;
     <table>
         <tbody>
         
-  <tr>
+         <tr>
                 <th width="120"><?php echo $config_dropdown_title; ?></th>
                 <td> 
                 
@@ -58,9 +42,9 @@ $TextLanguage = new \App\TextLanguage;
                     </select>
                 
                 </td>
-            </tr>   
-        
- <tr >
+            </tr>
+            
+            <tr >
     <th width="120"><?php echo $TextLanguage->lang('date'); ?></th>
     <td><div class="align-box" style="width:120px;">
     <input name="date_news" id="date_news" type="text" class="sm-input" style="width:150px" readonly="readonly" value="<?php echo date('d-m-Y') ?>"> 
@@ -72,71 +56,43 @@ $(function()
 });
 </script> 
     </td>
-</tr>  
+</tr>
+            
             <tr>
-                <th width="120"><?php echo $TextLanguage->lang('title'); ?></th>
-                <td><input name="title" type="text" class="sm-input--flag-th" id="title" style="width:210px" placeholder="<?php echo $TextLanguage->lang('title'); ?>">&nbsp;&nbsp;
-                    <input name="en_title" type="text" class="sm-input--flag-en" id="en_title" style="width:210px" placeholder="<?php echo $TextLanguage->lang('title'); ?>">
+                <th width="120"><?php echo $TextLanguage->lang('name'); ?></th>
+                <td>
+                <input name="title" type="text" class="sm-input--flag-th" id="title" style="width:40%" placeholder="<?php echo $TextLanguage->lang('name'); ?>"> 
+                <input name="en_title" type="text" class="sm-input--flag-en" id="en_title" style="width:40%" placeholder="<?php echo $TextLanguage->lang('name'); ?>"> 
                 </td>
             </tr> 
+ 
+           
             
- <tr>
-                <th width="120" valign="top" style="padding-top:10px;"><?php echo $TextLanguage->lang('image'); ?></th>
+            <tr>
+                <th width="120" valign="top" style="padding-top:12px;"><?php echo $TextLanguage->lang('url'); ?></th>
                 <td>
 
-
-<?php 
-$this_name = 'img1';
-$this_w = '130';
-$this_h = '90';
-$this_limit = '1';
-$this_value = '';
-?>
-@include('manage.include.input_file_tools')
-
- 
+                <?php 
+                $this_name = 'img1';
+                $this_w = '0';
+                $this_h = '0';
+                $this_limit = '20';
+                $this_value = '';
+                ?>
+                @include('manage.include.input_file_tools') 
+                  
                 </td>
-            </tr> 
+            </tr>
+            
+             
+            
+
+			@include('manage.include.date_start_end_add')    
             
             
- 			<tr>
-                <th width="120"><?php echo $config_dropdown_title; ?></th>
-                <td> 
-                
-                    <select class="selectric" name="folder" id="folder">
-                    <option value="">--</option>  
-                    <?php 
-					$dirs = array_filter(glob('upload/user/'.sprintf('%08d', $_SESSION['panel_id']).'/*'), 'is_dir');
-					
-					while($a = each($dirs))
-					{
-						?>
-                        <option value="<?php echo str_replace('upload/user/'.sprintf('%08d', $_SESSION['panel_id']).'','',$a[1]) ?>"><?php echo str_replace('upload/user/'.sprintf('%08d', $_SESSION['panel_id']).'','',$a[1]) ?></option> 
-                        <?php	
-					} 
-                    ?> 
-                    </select>
-                    
-                </td>
-            </tr>              
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
- 
-			@include('manage.include.date_start_end_add')
-         
-              
-            
-            
-            
+                     
+        
+           
             <tr>
                 <th valign="top">&nbsp;</th>
                 <td>
@@ -149,5 +105,7 @@ $this_value = '';
         </tbody>
     </table>
     </form>
+    
+
     
 @include('manage.include.main_form_footer') 

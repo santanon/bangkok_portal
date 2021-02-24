@@ -7,31 +7,13 @@ $TextLanguage = new \App\TextLanguage;
 
 
 <script type="text/javascript">
-   function check_form()
+    function check_form()
     { 
-      	if(document.getElementById('title').value == '' && document.getElementById('en_title').value == '')
+       if(document.getElementById('title').value == '' && document.getElementById('en_title').value == '')
         {
             document.getElementById('title').focus();
             return false;
-        }
-		/*
-		 if(document.getElementById('img1').value == '')
-        {
-            document.getElementById('img1').focus();
-            return false;
-        } */  
-		/*      
-        if(CKEDITOR.instances.info.getData() == '')
-		{
-			CKEDITOR.instances.info.focus();
-			return false;
-		}	
-		 if(CKEDITOR.instances.en_info.getData() == '')
-		{
-			CKEDITOR.instances.en_info.focus();
-			return false;
-		}	
-         */                                                                           
+        }                                                                              
         if(!confirm('<?php echo $TextLanguage->lang('confirm'); ?>?'))
         {
             return false;
@@ -42,11 +24,11 @@ $TextLanguage = new \App\TextLanguage;
     @csrf <!-- {{ csrf_field() }} -->
     <table>
         <tbody>
-             <tr>
+        <tr>
                 <th width="120"><?php echo $config_dropdown_title; ?></th>
-                <td> 
+                <td>
                 
-                    <select class="selectric" name="cat_id" id="cat_id"> 
+               <select class="selectric" name="cat_id" id="cat_id"> 
                     <?php 
                     foreach ($list_cat as $row_cat)
                     {   
@@ -56,11 +38,10 @@ $TextLanguage = new \App\TextLanguage;
                     } 
                     ?> 
                     </select>
-                
+                 
                 </td>
-            </tr> 
-            
- <tr >
+            </tr>
+             <tr >
     <th width="120"><?php echo $TextLanguage->lang('date'); ?></th>
     <td><div class="align-box" style="width:120px;">
     <input name="date_news" id="date_news" type="text" class="sm-input" style="width:150px" readonly="readonly" value="<?php if($edit_date_news > 0){echo date('d-m-Y',$edit_date_news);} ?>"> 
@@ -75,57 +56,34 @@ $(function()
     
     
 </tr>
-            
-  <tr>
-                <th width="120"><?php echo $TextLanguage->lang('title'); ?></th>
-                <td><input value="<?php echo $edit_title ?>" name="title" type="text" class="sm-input--flag-th" id="title" style="width:210px" placeholder="<?php echo $TextLanguage->lang('title'); ?>">&nbsp;&nbsp;
-                    <input value="<?php echo $edit_en_title ?>" name="en_title" type="text" class="sm-input--flag-en" id="en_title" style="width:210px" placeholder="<?php echo $TextLanguage->lang('title'); ?>">
-                </td>
-            </tr>   
-            
-              <tr>
-                <th width="120" valign="top" style="padding-top:10px;"><?php echo $TextLanguage->lang('image'); ?></th>
+             <tr>
+                <th width="120"><?php echo $TextLanguage->lang('name'); ?></th>
                 <td>
-                    
-                    <?php 
-                    $this_name = 'img1';
-                    $this_w = '130';
-                    $this_h = '90';
-                    $this_limit = '1';
-                    $this_value = $edit_img1;
-                    ?>
-                    @include('manage.include.input_file_tools')
+                <input name="title" type="text" class="sm-input--flag-th" id="title" style="width:40%" placeholder="<?php echo $TextLanguage->lang('name'); ?>" value="<?php echo $edit_title ?>"> 
+                <input name="en_title" type="text" class="sm-input--flag-en" id="en_title" style="width:40%" placeholder="<?php echo $TextLanguage->lang('name'); ?>" value="<?php echo $edit_en_title ?>"> 
+                </td>
+            </tr> 
+            
+            
+             <tr>
+                <th width="120" valign="top" style="padding-top:12px;"><?php echo $TextLanguage->lang('url'); ?></th>
+                <td>
+                 
+                 <?php 
+                $this_name = 'img1';
+                $this_w = '0';
+                $this_h = '0';
+                $this_limit = '20';
+                $this_value = $edit_img1; 
+                ?>
+                @include('manage.include.input_file_tools') 
+                  
+                </td>
+            </tr>
+              
+              
+            
 
- 
-                </td>
-            </tr>     
-            
-            
-            
-            <tr>
-                <th width="120"><?php echo $config_dropdown_title; ?></th>
-                <td> 
-                
-                    <select class="selectric" name="folder" id="folder"> 
-                    <option value="">--</option> 
-                    <?php 
-					$dirs = array_filter(glob('upload/user/'.sprintf('%08d', $_SESSION['panel_id']).'/*'), 'is_dir');
-					
-					while($a = each($dirs))
-					{
-						?>
-                        <option value="<?php echo str_replace('upload/user/'.sprintf('%08d', $_SESSION['panel_id']).'','',$a[1]) ?>" <?php if($edit_folder == str_replace('upload/user/'.sprintf('%08d', $_SESSION['panel_id']).'','',$a[1])){ ?> selected="selected" <?php } ?>><?php echo str_replace('upload/user/'.sprintf('%08d', $_SESSION['panel_id']).'','',$a[1]) ?></option> 
-                        <?php	
-					} 
-                    ?> 
-                    </select>
-                    
-                </td>
-            </tr>  
-            
-            
- 
-            
 <?php
 $this_data['edit_date_set'] = $edit_date_set;
 $this_data['edit_date_start'] = $edit_date_start;
@@ -135,11 +93,10 @@ $this_data['edit_date_end'] = $edit_date_end;
 
 
 
- 
+
+			 
             
-            
-            
-            
+           
             <tr>
                 <th valign="top">&nbsp;</th>
                 <td>
@@ -154,7 +111,13 @@ $this_data['edit_date_end'] = $edit_date_end;
     <input type="hidden" name="id" value="<?php echo $edit_id ?>" />
     </form>
     
- 
+<script>
+function update_img(v1,v2)
+{ 
+	document.getElementById(v1).value = v2;  
+	$.fancybox.close();
+} 
+</script>
 <?php
 if($edit_date_set == '1')
 {

@@ -1,9 +1,14 @@
 <?php 
 $CustomHelper = new \App\CustomHelper; 
 $TextLanguage = new \App\TextLanguage; 
- 
+$no_back = 1;
 ?>   
 @include('manage.include.main_form_header') 
+
+<script>
+	parent.document.getElementById('modal_full_span').innerHTML = 'ข้อความด่านล่าง';
+	</script>
+
 
 
 <script type="text/javascript">
@@ -19,7 +24,7 @@ $TextLanguage = new \App\TextLanguage;
             
  
     
-    <form method="post" enctype="multipart/form-data" onsubmit="return check_form();" action="http://127.0.0.1:8000/manage-admin/edit_submit?m=<?php echo $config_mod;  ?>">
+    <form method="post" enctype="multipart/form-data" onsubmit="return check_form();" action="http://127.0.0.1:8000/manage-admin/edit_copyright_submit?m=<?php echo $config_mod;  ?>">
     @csrf <!-- {{ csrf_field() }} -->
     <table>
         <tbody>
@@ -53,7 +58,7 @@ $TextLanguage = new \App\TextLanguage;
         
             <tr>
                 <th valign="top" style="padding-top:10px;"><?php echo $TextLanguage->lang('call_center'); ?>&nbsp;</th>
-                <td><input value="<?php echo @$edit_call_center_info ?>" name="call_center_info" type="call_center_info" class="sm-input" id="call_center_info" style="width:210px"> </td>
+                <td><input value="<?php echo @$edit_call_center_info ?>" name="call_center_info" type="call_center_info" class="sm-input" id="call_center_info" style="width:40%"> </td>
             </tr> 
              
             <tr>
@@ -61,8 +66,7 @@ $TextLanguage = new \App\TextLanguage;
                 <td>
                 
                 <span class="btn round big blue"><input type="submit" class="fontfacetext" value="<?php echo $TextLanguage->lang('save'); ?>"></span>&nbsp;
-                <span class="btn round big gray"><input type="button" class="fontfacetext" value="<?php echo $TextLanguage->lang('cancel'); ?>" onclick="window.location = '<?php echo base_url() . 'panel/' ?>';"></span>
-
+               
                 </td>
             </tr>
         </tbody>

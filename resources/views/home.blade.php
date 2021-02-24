@@ -1,11 +1,20 @@
-@section('title', 'กรุงเทพมหานคร')
-@section('tagkeyword', '')
-@section('tagdescription', '')
+<?php
+$CustomHelper = new \App\CustomHelper;
+$TextLanguage = new \App\TextLanguage;
+if(!function_exists('base_url')) 
+{
+    function base_url()
+    {
+        return 'http://127.0.0.1:8000/';
+    }
+} 
+?> 
+@section('title', $CustomHelper->L($_SESSION['portal_website_'.$mod.'_web_name_th'],$_SESSION['portal_website_'.$mod.'_web_name_en']))
+@section('tagkeyword', $CustomHelper->L($_SESSION['portal_website_style_'.$mod.'_info_keyword'],$_SESSION['portal_website_style_'.$mod.'_info_keyword']))
+@section('tagdescription', $CustomHelper->L($_SESSION['portal_website_style_'.$mod.'_info_description'],$_SESSION['portal_website_style_'.$mod.'_info_description']))
 
-@extends('template1/include/start')
+@extends('template1/include/start') 
 @section('contentpage')
- 
-<!--<?php //print_r($_SESSION) ?>-->
 
 <style>
 #modal_full_span{ font-size:30px; }
@@ -27,39 +36,89 @@
         <div class="banner-wrapper">
             @include('template1/main-slide')
         </div>
-
-
-        <!-- Swiper -->
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">Slide 1</div>
-                <div class="swiper-slide">Slide 2</div>
-                <div class="swiper-slide">Slide 3</div>
-            </div>
-            <!-- Add Scrollbar -->
-            <div class="swiper-scrollbar"></div>
-        </div>
+ 
+        <div align="center" class="tools">
+            <a href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('กำลังโหลด...','/manage-admin/list?m=contentbox_cat');"><img src="http://127.0.0.1:8000/template1/assets/images/icons/icon-edit.svg" alt="icon">&nbsp; <b style="font-size:18px;">จัดการ BOX</b></a><br><br>
         
+        
+            <button onmouseover="this.innerHTML = 'บันทึกจัดเรียง'" id="btn_save_sort_box" type="button" class="getOrder_ele" style="font-size: 20px;">บันทึกจัดเรียง</button>  <br><br> 
+         
+        </div> 
 
         <div class="group-section-content" id="manage_dragdrop">
-            @include('template1/news')
-            
-            @include('template1/faq')
-
-            @include('template1/calendar')
  
-            @include('template1/album')
-
-            @include('template1/vdo')
-
-            @include('template1/download')
-
-            @include('template1/bannerlink')
-
-            @include('template1/questionnaire')
-
-            @include('template1/vote')
+            <?php  
+            $count_this = 1;
+            foreach($box as $r)
+            {
+                if($r->box_number == 1)
+                {
+                    $this_box_id = $r->box1;
+                    ?>
+                    @include('template1/news')
+                    <?php
+                }
+                else if($r->box_number == 2)
+                {
+                    $this_box_id = $r->box1;
+                    ?>
+                    @include('template1/faq')
+                    <?php
+                }
+                else if($r->box_number == 3)
+                {
+                    $this_box_id = $r->box1;
+                    ?>
+                    @include('template1/calendar')
+                    <?php
+                }
+                else if($r->box_number == 4)
+                {
+                    $this_box_id = $r->box1;
+                    ?>
+                    @include('template1/album')
+                    <?php
+                }
+                else if($r->box_number == 5)
+                {
+                    $this_box_id = $r->box1;
+                    ?>
+                    @include('template1/vdo')
+                    <?php
+                }
+                else if($r->box_number == 6)
+                {
+                    $this_box_id = $r->box1;
+                    ?>
+                    @include('template1/download')
+                    <?php
+                }
+                else if($r->box_number == 7)
+                {
+                    $this_box_id = $r->box1;
+                    ?>
+                    @include('template1/bannerlink')
+                    <?php
+                }
+                else if($r->box_number == 8)
+                {
+                    $this_box_id = $r->box1;
+                    ?>
+                    @include('template1/questionnaire')
+                    <?php
+                }
+                else if($r->box_number == 9)
+                {
+                    $this_box_id = $r->box1;
+                    ?>
+                    @include('template1/vote')
+                    <?php
+                } 
+            }
+            ?> 
+ 
         </div>
+ 
         
         <!--
         <button type="button" class="getOrder_ele">Get Order of Elements</button> 
@@ -81,6 +140,7 @@
             <source src="{{ asset('Video/ocean.webm')}}" type="video/webm" />
         </video> -->
 
+ 
     </div>
 
     <footer id="footer-wrapper">
@@ -285,28 +345,33 @@
                 forceFallback: true,
                 swapThreshold: 1,
                 animation: 150,
-                dataIdAttr: "data-id",
+                dataIdAttr: "data-id"
                 //handle: '.manage-dragdrop',
             });
             //var order = sortable.toArray();
             //console.log(order);
             $('.getOrder_ele').click(function() {
-                var order = sortable.toArray();
-                alert(order);
-                // for (var i = 0; i < order.length; i++) {
-                //     alert("Position: " + i + " ID: " + order[i]);
-                // }
+
+                document.getElementById('btn_save_sort_box').innerHTML = 'กำลังบันทึก...';
+
+                var order = sortable.toArray(); 
+                //alert(order);
+                $.ajax({url: "../manage-admin/save_sort_box?o="+order, success: function(result){
+                    document.getElementById('btn_save_sort_box').innerHTML = 'บันทึกสำเร็จ!';
+                }}); 
             });
         }else{
             $("div.group-section-content").removeAttr("id");
         }
 
+ 
         var swiper = new Swiper('.swiper-container', {
             scrollbar: {
                 el: '.swiper-scrollbar',
                 hide: true,
             },
         });
+ 
 
 
     });

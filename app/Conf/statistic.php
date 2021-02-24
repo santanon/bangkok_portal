@@ -171,7 +171,7 @@ class Statistic
 									   
 		$data['config_footer_js'] = 'mainmenuFocus(1,1,8); btn2stageFocus(0,1);';
 		  
-		$this->load->view('panel/'.$this->mod.'/view', $data);  
+		return $data;
 	}    
 	
 	public function edit($v1 = '0')

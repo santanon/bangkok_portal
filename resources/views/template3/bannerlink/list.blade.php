@@ -272,16 +272,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
-                                    <div class="row no-gutters">
-                                        <div class="col-lg-6">
-                                            <div class="add-news">
-                                                <i class="fas fa-plus"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
                             </div>
 
                             <div class="pagination-custom d-flex justify-content-end align-items-center">

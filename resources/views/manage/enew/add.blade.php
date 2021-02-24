@@ -43,7 +43,7 @@ $TextLanguage = new \App\TextLanguage;
             </tr>
             <tr>
                 <th width="120"><?php echo $TextLanguage->lang('email'); ?></th>
-                <td><input name="title" type="text" class="sm-input" id="title" style="width:210px" placeholder="<?php echo $TextLanguage->lang('email'); ?>">
+                <td><input name="title" type="text" class="sm-input" id="title" style="width:40%" placeholder="<?php echo $TextLanguage->lang('email'); ?>">
                 </td>
             </tr> 
             

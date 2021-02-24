@@ -69,8 +69,8 @@ $(function()
              <tr>
                 <th width="120"><?php echo $TextLanguage->lang('name'); ?></th>
                 <td>
-                <input name="title" type="text" class="sm-input--flag-th" id="title" style="width:235px" placeholder="<?php echo $TextLanguage->lang('name'); ?>" value="<?php echo $edit_title ?>"> 
-                <input name="en_title" type="text" class="sm-input--flag-en" id="en_title" style="width:235px" placeholder="<?php echo $TextLanguage->lang('name'); ?>" value="<?php echo $edit_en_title ?>"> 
+                <input name="title" type="text" class="sm-input--flag-th" id="title" style="width:40%" placeholder="<?php echo $TextLanguage->lang('name'); ?>" value="<?php echo $edit_title ?>"> 
+                <input name="en_title" type="text" class="sm-input--flag-en" id="en_title" style="width:40%" placeholder="<?php echo $TextLanguage->lang('name'); ?>" value="<?php echo $edit_en_title ?>"> 
                 </td>
             </tr> 
             
@@ -78,33 +78,25 @@ $(function()
              <tr>
                 <th width="120" valign="top" style="padding-top:12px;"><?php echo $TextLanguage->lang('url'); ?></th>
                 <td>
-                <?php
-                $this_get_alt = 
-                ?>
-
-
+                
 
                  <?php 
                 $this_name = 'file1';
                 $this_w = '0';
                 $this_h = '0';
                 $this_limit = '1';
-                $this_value = $edit_file1;
-
-                $get_alt = $get_alt_1;
+                $this_value = $edit_file1; 
                 ?>
-                @include('manage.include.input_file_tools') 
+                @include('manage.include.input_file_tools_arr') 
                 
                 <?php 
                 $this_name = 'en_file1';
                 $this_w = '0';
                 $this_h = '0';
                 $this_limit = '1';
-                $this_value = $edit_en_file1;
-
-                $get_alt = $get_alt_2;
+                $this_value = $edit_en_file1; 
                 ?>
-                @include('manage.include.input_file_tools')
+                @include('manage.include.input_file_tools_arr')
 
  
                 </td>
@@ -143,8 +135,7 @@ $this_data['edit_date_end'] = $edit_date_end;
 <script>
 function update_img(v1,v2)
 { 
-	document.getElementById(v1).value = v2; 
-	document.getElementById(v1+'_preview').src = v2; 
+	document.getElementById(v1).value = v2;  
 	$.fancybox.close();
 } 
 </script>

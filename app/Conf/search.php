@@ -37,13 +37,13 @@ class Search
 		exit;
 	}
 	 
-	public function edit($v1 = '0')
+	public function edit()
 	{   
 		$CustomHelper = new \App\CustomHelper;
 		$TextLanguage = new \App\TextLanguage;
 		
-		$q = "SELECT * FROM ".$CustomHelper->model_to_table($this->mod_model)." WHERE web_id = '".$_SESSION['panel_id']."' AND id = ?";	 	
-		$v = $v1;
+		$q = "SELECT * FROM ".$CustomHelper->model_to_table($this->mod_model)." WHERE web_id = '".$_SESSION['panel_id']."'";	 	
+		$v = "";
 		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),$q,$v);
 		$q = json_decode($res); 
 		  
@@ -101,7 +101,12 @@ class Search
 		$CustomHelper->add_log(''.$this->mod_title.' - Edit ('.$CustomHelper->input_post('title', TRUE).')',$_SESSION['panel_username'],$_SESSION['panel_id'],strtoupper($this->mod).'_EDIT');  
 		 
 		?>
-        <meta http-equiv="refresh" content="0;URL=<?php echo  'http://127.0.0.1:8000/manage-admin/list?m='.$this->mod.'' ?>" />
-        <?php  } 
+		<script>
+		alert("บันทึกสำเร็จ");
+		</script>
+        <meta http-equiv="refresh" content="0;URL=<?php echo  'http://127.0.0.1:8000/manage-admin/edit_search?m='.$this->mod.'' ?>" />
+        <?php  
+		exit;	
+	} 
 }
 ?>

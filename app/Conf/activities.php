@@ -115,8 +115,8 @@ class Activities
 		
 		$d->info = htmlspecialchars_decode($CustomHelper->input_post('info', FALSE));  
 		$d->en_info = htmlspecialchars_decode($CustomHelper->input_post('en_info', FALSE));  
-		 
-		$d->img1 = $img1.'^'.$_POST['img1_alt'];  
+		   
+		$d->img1 = $img1.'^'.$_POST['img1_alt'].';'.$_POST['img1_alt_en'].';'.$_POST['img1_alt_sort'];
 		
 		$date_news_1 = 0;
 		
@@ -235,6 +235,8 @@ class Activities
 			$data['config_dropdown_title'] = $TextLanguage->lang(@$this->mod_cat_dropdown_title);
 
 			$data['get_alt'] = $CustomHelper->update_file_and_alt('img1',$row[0]->img1,$this->mod);
+			$data['get_alt_en'] = $CustomHelper->update_file_and_alt_en('img1',$row[0]->img1,$this->mod);
+			$data['get_alt_sort'] = $CustomHelper->update_file_and_alt_sort('img1',$row[0]->img1,$this->mod);
   
 			if(@$this->mod_cat_model <> '')
 			{
@@ -273,8 +275,8 @@ class Activities
 		   
 		$d->info = htmlspecialchars_decode($CustomHelper->input_post('info', FALSE));  
 		$d->en_info = htmlspecialchars_decode($CustomHelper->input_post('en_info', FALSE));  
-		
-		$d->img1 = $img1.'^'.$_POST['img1_alt'];
+		 
+		$d->img1 = $img1.'^'.$_POST['img1_alt'].';'.$_POST['img1_alt_en'].';'.$_POST['img1_alt_sort'];
 		
 		if(@$_POST['img1_delete'] == '1')
 		{

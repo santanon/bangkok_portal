@@ -294,7 +294,7 @@ class PanelController extends Controller
  
 		$q = "SELECT * FROM tbl_portal_website_main_menu_page WHERE web_id = ? ORDER BY sort ASC";	 	
 		$v = $_SESSION['panel_id'];
-		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('website_main_menu_page')),$q,$v);
+		$res = $CustomHelper->API_CALL_route($CustomHelper->API_URL($CustomHelper->model_to_api('website_main_menu_page')),$q,$v);
 		$r = json_decode($res);
 
 		
@@ -313,7 +313,7 @@ class PanelController extends Controller
  
 			$q = "SELECT * FROM tbl_portal_website_page WHERE page_id = '0' AND cat_id = '".$row_cat->id."' AND web_id = ? ORDER BY sort ASC";	 	
 			$v = $_SESSION['panel_id'];
-			$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('website_page')),$q,$v);
+			$res = $CustomHelper->API_CALL_route($CustomHelper->API_URL($CustomHelper->model_to_api('website_page')),$q,$v);
 			$r_sub1 = json_decode($res);
  
 			foreach ($r_sub1 as $row_cat_sub1)
@@ -329,7 +329,7 @@ class PanelController extends Controller
 
 				$q = "SELECT * FROM tbl_portal_website_page WHERE page_id = '".$row_cat_sub1->id."' AND cat_id = '".$row_cat->id."' AND web_id = ? ORDER BY sort ASC";	 	
 				$v = $_SESSION['panel_id'];
-				$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('website_page')),$q,$v);
+				$res = $CustomHelper->API_CALL_route($CustomHelper->API_URL($CustomHelper->model_to_api('website_page')),$q,$v);
 				$r_sub2 = json_decode($res);
  
 				foreach ($r_sub2 as $row_cat_sub2)
@@ -345,7 +345,7 @@ class PanelController extends Controller
 
 					$q = "SELECT * FROM tbl_portal_website_page WHERE page_id = '".$row_cat_sub2->id."' AND cat_id = '".$row_cat->id."' AND web_id = ? ORDER BY sort ASC";	 	
 					$v = $_SESSION['panel_id'];
-					$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('website_page')),$q,$v);
+					$res = $CustomHelper->API_CALL_route($CustomHelper->API_URL($CustomHelper->model_to_api('website_page')),$q,$v);
 					$r_sub3 = json_decode($res);
  
 					foreach ($r_sub3 as $row_cat_sub3)
@@ -361,7 +361,7 @@ class PanelController extends Controller
 
 						$q = "SELECT * FROM tbl_portal_website_page WHERE page_id = '".$row_cat_sub3->id."' AND cat_id = '".$row_cat->id."' AND web_id = ? ORDER BY sort ASC";	 	
 						$v = $_SESSION['panel_id'];
-						$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('website_page')),$q,$v);
+						$res = $CustomHelper->API_CALL_route($CustomHelper->API_URL($CustomHelper->model_to_api('website_page')),$q,$v);
 						$r_sub4 = json_decode($res);
 						  
 						foreach ($r_sub4 as $row_cat_sub4)
@@ -377,7 +377,7 @@ class PanelController extends Controller
 
 							$q = "SELECT * FROM tbl_portal_website_page WHERE page_id = '".$row_cat_sub4->id."' AND cat_id = '".$row_cat->id."' AND web_id = ? ORDER BY sort ASC";	 	
 							$v = $_SESSION['panel_id'];
-							$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('website_page')),$q,$v);
+							$res = $CustomHelper->API_CALL_route($CustomHelper->API_URL($CustomHelper->model_to_api('website_page')),$q,$v);
 							$r_sub5 = json_decode($res);
  
 							foreach ($r_sub5 as $row_cat_sub5)
@@ -394,7 +394,7 @@ class PanelController extends Controller
 		  
 		$q = "SELECT * FROM tbl_portal_website_top_menu_page WHERE web_id = ? ORDER BY sort ASC";	 	
 		$v = $_SESSION['panel_id'];
-		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('website_top_menu_page')),$q,$v);
+		$res = $CustomHelper->API_CALL_route($CustomHelper->API_URL($CustomHelper->model_to_api('website_top_menu_page')),$q,$v);
 		$r = json_decode($res);
  
 		$main_str = '';
@@ -412,7 +412,7 @@ class PanelController extends Controller
 	 
 		$q = "SELECT * FROM tbl_portal_website_footer_menu_page WHERE web_id = ? ORDER BY sort ASC";	 	
 		$v = $_SESSION['panel_id'];
-		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('website_footer_menu_page')),$q,$v);
+		$res = $CustomHelper->API_CALL_route($CustomHelper->API_URL($CustomHelper->model_to_api('website_footer_menu_page')),$q,$v);
 		$r = json_decode($res);
 
 
@@ -436,7 +436,7 @@ class PanelController extends Controller
 
 		if($CustomHelper->check_panel_login() == 1)
         {
-			?><script>window.location = '/';</script><?php
+			?><script>window.location = '/<?php echo $_SESSION['panel_web_url'] ?>';</script><?php
             exit;
         }
         else
@@ -587,7 +587,7 @@ class PanelController extends Controller
 
 			if($_SESSION['panel_web_package'] == '1')
 			{
-				?><script>window.location = '/panel-admin/login';</script>
+				?><script>window.location = '/<?php echo $_SESSION['panel_web_url'] ?>';</script>
 				<?php
         		exit;
 			} 
@@ -770,7 +770,14 @@ class PanelController extends Controller
 
 			$_SESSION['panel_style_template_id'] = $_GET['no'].$this_value;
 
-			?><script>window.location = '/เริ่มต้นใช้งานเว็บไซต์/ขั้นตอนที่2';</script><?php
+			if(isset($_GET['re']) && $_GET['re'] == '1')
+			{
+				?><script>window.location = '/manage-admin/setting';</script><?php
+			}
+			else
+			{
+				?><script>window.location = '/เริ่มต้นใช้งานเว็บไซต์/ขั้นตอนที่2';</script><?php
+			} 
         	exit;
         } 
 		else

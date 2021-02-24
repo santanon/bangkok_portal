@@ -1,9 +1,13 @@
 <?php 
 $CustomHelper = new \App\CustomHelper; 
 $TextLanguage = new \App\TextLanguage; 
- 
+$no_back = 1;
 ?>   
 @include('manage.include.main_form_header') 
+
+<script>
+	parent.document.getElementById('modal_full_span').innerHTML = 'เปลี่ยนรหัสผ่าน';
+	</script>
 
 <script type="text/javascript">
 function check_form()
@@ -61,21 +65,21 @@ function check_form()
 		<tr>
 			<th width="120"><?php echo $TextLanguage->lang('current_password'); ?> <span style="color:red">*</span></th>
 			<td>
-			<input id="p1" name="p1" type="password" class="sm-input" style="width:235px" placeholder="<?php echo $TextLanguage->lang('current_password'); ?>"> 
+			<input id="p1" name="p1" type="password" class="sm-input" style="width:40%" placeholder="<?php echo $TextLanguage->lang('current_password'); ?>"> 
 			</td>
 		</tr>
 		
 		<tr>
 			<th width="120"><?php echo $TextLanguage->lang('new_password'); ?> <span style="color:red">*</span></th>
 			<td>
-			<input id="p2" name="p2" type="password" class="sm-input" style="width:235px" placeholder="<?php echo $TextLanguage->lang('new_password'); ?>"> 
+			<input id="p2" name="p2" type="password" class="sm-input" style="width:40%" placeholder="<?php echo $TextLanguage->lang('new_password'); ?>"> 
 			</td>
 		</tr>
 		
 		<tr>
 			<th width="120"><?php echo $TextLanguage->lang('confirm_new_password'); ?> <span style="color:red">*</span></th>
 			<td>
-			<input id="p3" name="p3" type="password" class="sm-input" style="width:235px" placeholder="<?php echo $TextLanguage->lang('confirm_new_password'); ?>"> 
+			<input id="p3" name="p3" type="password" class="sm-input" style="width:40%" placeholder="<?php echo $TextLanguage->lang('confirm_new_password'); ?>"> 
 			</td>
 		</tr>
 		
@@ -86,8 +90,7 @@ function check_form()
 			<td>
 			
 			<span class="btn round big blue"><input type="submit" class="fontfacetext" value="<?php echo $TextLanguage->lang('save'); ?>"></span>&nbsp;
-			<span class="btn round big gray"><input type="button" class="fontfacetext" value="<?php echo $TextLanguage->lang('cancel'); ?>" onclick="window.history.back();"></span>
-
+			
 			</td>
 		</tr>
 		

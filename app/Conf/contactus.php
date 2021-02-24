@@ -41,15 +41,11 @@ class Contactus
 		$CustomHelper = new \App\CustomHelper;
 		$TextLanguage = new \App\TextLanguage;
 		  
-		  
-		
-		$q = "SELECT * FROM ".$CustomHelper->model_to_table($this->mod_model)." WHERE web_id = ? ORDER BY sort DESC";	 	
+		$q = "SELECT * FROM ".$CustomHelper->model_to_table($this->mod_model)." WHERE web_id = ? ORDER BY id DESC";	 	
 		$v = $_SESSION['panel_id'];
 		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),$q,$v);
 		$q = json_decode($res); 
-		
-		 
-		 
+ 
 		if(count($q) > 0)
 		{  
 			$row = $q;  
@@ -71,7 +67,7 @@ class Contactus
 			 
 			$data['config_mod'] = $this->mod;       
 			   
-			$this->load->view('panel/contactus/read', $data); 
+			return $data;
 		} 
 	}
 	
@@ -112,7 +108,7 @@ class Contactus
 										   
 			$data['config_footer_js'] = 'mainmenuFocus(1,1,9); btn2stageFocus(0,2);';        
 			  
-			$this->load->view('panel/'.$this->mod.'/edit', $data); 
+			return $data;
 		}
 		else
 		{

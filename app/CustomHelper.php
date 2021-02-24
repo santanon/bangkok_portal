@@ -51,55 +51,137 @@ class CustomHelper
         //$v = str_replace('=','|',$v);
 
         $this_date = date('Y-m-d H:i:s');
-		
-		
-		
-		$ch = curl_init();
-		curl_setopt($ch,CURLOPT_URL, $url);
-		curl_setopt($ch, CURLOPT_POST, 1);
-		curl_setopt($ch, CURLOPT_POSTFIELDS,"q=".$q."&v=".$v);
-		curl_setopt($ch,CURLOPT_RETURNTRANSFER, true); 
-		curl_setopt($ch,CURLOPT_TIMEOUT, 30);
-		curl_setopt($ch,CURLOPT_SSL_VERIFYPEER, false);
-		curl_setopt($ch,CURLOPT_SSL_VERIFYHOST, false); 
-		$output = curl_exec($ch); 
-		/*
-		$connect_count = 1;
-		while($output == FALSE && $connect_count <= 1)
+ 
+		if(isset($_SESSION['panel_login']) && $_SESSION['panel_login'] == '1')
 		{
-			$output = curl_exec($ch); 
-			//sleep(3);
-			$connect_count++;
-		} 
-		*/
-		$httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-		curl_close ($ch);
-
-		$this_return = '';
-
-		if($output == FALSE)
-		{
-			$this_return = '';
+			$_SESSION['cache_time'] = 0;
 		}
 		else
 		{
-			if(trim($httpcode) == '200')
+			$_SESSION['cache_time'] = 600;
+		}
+ 
+		return Cache::remember(openssl_encrypt($url.$q.$v,$algo,$k), $_SESSION['cache_time'], function() use ($url,$q,$v,$old_q,$old_v,$this_date)
+        { 
+            $ch = curl_init();
+			curl_setopt($ch,CURLOPT_URL, $url);
+			curl_setopt($ch, CURLOPT_POST, 1);
+			curl_setopt($ch, CURLOPT_POSTFIELDS,"q=".$q."&v=".$v);
+			curl_setopt($ch,CURLOPT_RETURNTRANSFER, true); 
+			curl_setopt($ch,CURLOPT_TIMEOUT, 30);
+			curl_setopt($ch,CURLOPT_SSL_VERIFYPEER, false);
+			curl_setopt($ch,CURLOPT_SSL_VERIFYHOST, false); 
+			$output = curl_exec($ch); 
+			/*
+			$connect_count = 1;
+			while($output == FALSE && $connect_count <= 1)
 			{
-				$this_return = $output;
+				$output = curl_exec($ch); 
+				//sleep(3);
+				$connect_count++;
+			} 
+			*/
+			$httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+			curl_close ($ch);
+
+			$this_return = '';
+
+			if($output == FALSE)
+			{
+				$this_return = '';
 			}
 			else
 			{
-				$this_return = '';
-			}  
-		} 
-		//Storage::append('api/'.date('Y-m-d').'.log', "date real =".$this_date."\ndate cache=".date('Y-m-d H:i:s')."\nurl=".$url."\nq=".$q."\nv=".$v."\nold_q=".$old_q."\nold_v=".$old_v."\no=".$output."\n-------------------");
-		return $this_return;
-		  
+				if(trim($httpcode) == '200')
+				{
+					$this_return = $output;
+				}
+				else
+				{
+					$this_return = '';
+				}  
+			} 
+			//Storage::append('api/'.date('Y-m-d').'.log', "date real =".$this_date."\ndate cache=".date('Y-m-d H:i:s')."\nurl=".$url."\nq=".$q."\nv=".$v."\nold_q=".$old_q."\nold_v=".$old_v."\no=".$output."\n-------------------");
+			return $this_return;
+        });
+		 
         /*return Cache::remember(openssl_encrypt($url.$q.$v,$algo,$k), 1, function() use ($url,$q,$v,$old_q,$old_v,$this_date)
         { 
             
         });*/
-    } 
+    }
+
+	function API_CALL_route($url,$q,$v)
+    {  
+		$k = 'Si@mEPoRtaL@2564';  
+        $algo = 'AES-128-ECB';  
+
+        $old_q = $q;
+        $old_v = $v;
+ 
+        $q = openssl_encrypt($q,$algo,$k);
+ 
+        $q = str_replace('=','|',$q);
+        $q = str_replace('+','^',$q);
+ 
+        $v = openssl_encrypt($v,$algo,$k);
+        $v = str_replace('=','|',$v);
+        $v = str_replace('+','^',$v);
+  
+        //$v = base64_encode($v);
+        //$v = str_replace('=','|',$v);
+
+        $this_date = date('Y-m-d H:i:s');
+  
+		return Cache::remember(openssl_encrypt($url.$q.$v,$algo,$k),99999, function() use ($url,$q,$v,$old_q,$old_v,$this_date)
+        { 
+            $ch = curl_init();
+			curl_setopt($ch,CURLOPT_URL, $url);
+			curl_setopt($ch, CURLOPT_POST, 1);
+			curl_setopt($ch, CURLOPT_POSTFIELDS,"q=".$q."&v=".$v);
+			curl_setopt($ch,CURLOPT_RETURNTRANSFER, true); 
+			curl_setopt($ch,CURLOPT_TIMEOUT, 30);
+			curl_setopt($ch,CURLOPT_SSL_VERIFYPEER, false);
+			curl_setopt($ch,CURLOPT_SSL_VERIFYHOST, false); 
+			$output = curl_exec($ch); 
+			/*
+			$connect_count = 1;
+			while($output == FALSE && $connect_count <= 1)
+			{
+				$output = curl_exec($ch); 
+				//sleep(3);
+				$connect_count++;
+			} 
+			*/
+			$httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+			curl_close ($ch);
+
+			$this_return = '';
+
+			if($output == FALSE)
+			{
+				$this_return = '';
+			}
+			else
+			{
+				if(trim($httpcode) == '200')
+				{
+					$this_return = $output;
+				}
+				else
+				{
+					$this_return = '';
+				}  
+			} 
+			//Storage::append('api/'.date('Y-m-d').'.log', "date real =".$this_date."\ndate cache=".date('Y-m-d H:i:s')."\nurl=".$url."\nq=".$q."\nv=".$v."\nold_q=".$old_q."\nold_v=".$old_v."\no=".$output."\n-------------------");
+			return $this_return;
+        });
+		 
+        /*return Cache::remember(openssl_encrypt($url.$q.$v,$algo,$k), 1, function() use ($url,$q,$v,$old_q,$old_v,$this_date)
+        { 
+            
+        });*/
+    }
 
     function API_URL($file)
     {
@@ -339,8 +421,85 @@ class CustomHelper
 			return $en;
 		}
 	}*/
-	
-	 function remove_to_url($th,$en)
+ 
+	function get_file_form_code($a,$index)
+	{ 		
+		if(strpos($a,'^') > -1)
+		{
+			$arr = explode('^',$a);
+
+			if(strpos($arr[0],'|') > -1)
+			{
+				$arr = explode('|',$arr[0]);
+				return $arr[$index];
+			} 
+			else
+			{
+				return $arr[0];
+			}
+		} 
+		else
+		{
+			if(strpos($a,'|') > -1)
+			{
+				$arr = explode('|',$a);
+				return $arr[$index];
+			} 
+			else
+			{
+				return $a;
+			}
+		} 
+	}
+ 
+	function get_text_form_code($a,$index,$lang)
+	{
+		if(strpos($a,'^') > -1)
+		{
+			$arr = explode('^',$a);
+			if(strpos($arr[1],';') > -1)
+			{
+				$arr = explode(';',$arr[1]); 
+
+				if($lang == "thai")
+				{
+					if(strpos($arr[0],'|') > -1)
+					{
+						$arr = explode('|',$arr[0]); 
+						return $arr[$index];
+					}	
+					else
+					{
+						return $arr[0];
+					}
+				}
+				else
+				{
+					if(strpos($arr[1],'|') > -1)
+					{
+						$arr = explode('|',$arr[1]); 
+						return $arr[$index];
+					}	
+					else
+					{
+						return $arr[0];
+					}
+				}
+
+				
+			} 
+			else
+			{
+				return $arr[1];
+			}
+		} 
+		else
+		{
+			return $a;
+		}
+	}
+
+	function remove_to_url($th,$en)
 	{
 		$str = '';
 		
@@ -831,7 +990,9 @@ class CustomHelper
 			if(strpos($get_alt_value,'^') > -1)
 			{
 				$get_only_file = explode('^',$get_alt_value);
-				$data_get_alt = $get_only_file[1];
+				$get_only_file_arr = explode(';',$get_only_file[1]);
+				$data_get_alt = $get_only_file_arr[0];
+
 				$this->update_user_files_reverse($get_only_file[0],$m,$get_alt_field);
 			}
 			else
@@ -841,5 +1002,76 @@ class CustomHelper
 		}
 
 		return $data_get_alt;
+	}
+
+	function update_file_and_alt_en($f,$v,$m)
+	{
+		$data_get_alt = '';
+		$get_alt_field = $f;
+		$get_alt_value = $v;
+		if($get_alt_value != '')
+		{
+			if(strpos($get_alt_value,'^') > -1)
+			{
+				$get_only_file = explode('^',$get_alt_value);
+				$get_only_file_arr = explode(';',$get_only_file[1]);
+				$data_get_alt = $get_only_file_arr[1];
+				
+				//$this->update_user_files_reverse($get_only_file[0],$m,$get_alt_field);
+			}
+			else
+			{
+				//$this->update_user_files_reverse($get_alt_value,$m,$get_alt_field);
+			} 
+		}
+
+		return $data_get_alt;
+	}
+
+	function update_file_and_alt_sort($f,$v,$m)
+	{
+		$data_get_alt = '';
+		$get_alt_field = $f;
+		$get_alt_value = $v;
+		if($get_alt_value != '')
+		{
+			if(strpos($get_alt_value,'^') > -1)
+			{
+				$get_only_file = explode('^',$get_alt_value);
+				$get_only_file_arr = explode(';',$get_only_file[1]);
+				$data_get_alt = $get_only_file_arr[2];
+				
+				//$this->update_user_files_reverse($get_only_file[0],$m,$get_alt_field);
+			}
+			else
+			{
+				//$this->update_user_files_reverse($get_alt_value,$m,$get_alt_field);
+			} 
+		}
+
+		return $data_get_alt;
+	}
+
+	function get_img_url($img)
+	{
+		if(strpos($img,'^') > -1)
+		{
+			$a = explode('^',$img);
+			if(strpos($a[0],'|') > -1)
+			{
+				$b = explode('|',$a[0]);
+				$img = $b[0];
+			}
+		}
+		else
+		{
+			if(strpos($img,'|') > -1)
+			{
+				$a = explode('|',$img);
+				$img = $a[0];
+			}
+		}
+
+		return $img;
 	}
 }

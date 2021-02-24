@@ -1,5 +1,5 @@
 <!-- QUESTIONNAIRE -->
-<div id="questionnaire" data-id="questionnaire" class="section-content">
+<div id="questionnaire" data-id="8_<?php echo $this_box_id ?>" class="section-content">
                 <div class="group-mange-section">
                     <div class="manage-tools">
                         <ul>

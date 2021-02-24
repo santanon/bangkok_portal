@@ -44,7 +44,7 @@ class Setting_account
 									   
 		$data['config_footer_js'] = 'mainmenuFocus(1,2,2);btn2stageFocus(0,2);';
           
-		$this->load->view('panel/' . $this->mod . '/change_email', $data); 
+		return $data;
 	}
 	
 	public function change_email_submit()
@@ -104,7 +104,7 @@ class Setting_account
 			?><meta charset="utf-8" />
 			<script type="text/javascript">
 			alert('<?php echo $TextLanguage->lang('change_email_success'); ?>');
-			window.location = 'http://127.0.0.1:8000/manage-admin/list?m=<?php echo $this->mod ?>&change_email=1';
+			window.location = 'http://127.0.0.1:8000/manage-admin/edit_profile?m=setting_account&change_email=1';
 			</script>
 			<?php  
 			exit;
@@ -140,7 +140,7 @@ class Setting_account
 									   
 		$data['config_footer_js'] = 'mainmenuFocus(1,2,2);btn2stageFocus(0,1);';     
           
-		$this->load->view('panel/' . $this->mod . '/change_password', $data); 
+		return $data;
 	}
 	
 	public function change_password_submit()
@@ -183,7 +183,7 @@ class Setting_account
 				?><meta charset="utf-8" />
 				<script type="text/javascript">
 				alert('<?php echo $TextLanguage->lang('change_password_success'); ?>');
-				window.location = 'http://127.0.0.1:8000/manage-admin/list?m=<?php echo $this->mod ?>';
+				window.location = 'http://127.0.0.1:8000/manage-admin/edit_account?m=setting_account';
 				</script>
 				<?php  
 				exit;
@@ -225,14 +225,13 @@ class Setting_account
 				}
 				$this_qr = substr($this_qr,0,-1);  	 
 				$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),"UPDATE ".$CustomHelper->model_to_table($this->mod_model)." SET ".$this_qr." WHERE password = '".md5($current_password)."' AND id = '".$_SESSION['panel_id']."'",''); 
-				
 				 
 				$CustomHelper->add_log('Account Setting - Change Password',$_SESSION['panel_username'],$_SESSION['panel_id'],strtoupper($this->mod).'_EDIT');
-				
+				 
 				?><meta charset="utf-8" />
 				<script type="text/javascript">
 				alert('<?php echo $TextLanguage->lang('change_password_success'); ?>');
-				window.location = 'http://127.0.0.1:8000/manage-admin/list?m=<?php echo $this->mod ?>';
+				window.location = 'http://127.0.0.1:8000/manage-admin/edit_account?m=setting_account';
 				</script>
 				<?php  
 				exit;

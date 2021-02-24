@@ -1,8 +1,11 @@
-<?php
-function base_url()
+<?php 
+if(!function_exists('base_url')) 
 {
-	return 'http://127.0.0.1:8000/';	
-}
+    function base_url()
+	{
+		return 'http://127.0.0.1:8000/';	
+	}
+} 
 ?>
 <!doctype html>
 <!--[if lt IE 8]>      <html class="lt-ie11 lt-ie10 lt-ie9 lt-ie8" lang="en"> <![endif]-->
@@ -51,7 +54,7 @@ function base_url()
 	<style>
 	.this_iframe {
 	border: 1px solid #CCCCCC;
-	}	
+	}	 
 	</style>
 </head>
 <body style="background-color:#f5f5f5;">

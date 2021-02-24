@@ -20,6 +20,8 @@ class Logo
 		$TextLanguage = new \App\TextLanguage;	
 
 		$data['get_alt'] = $CustomHelper->update_file_and_alt('url',$_SESSION['panel_style_logo_img1'],$this->mod);
+		$data['get_alt_en'] = $CustomHelper->update_file_and_alt_en('url',$_SESSION['panel_style_logo_img1'],$this->mod);
+		$data['get_alt_sort'] = $CustomHelper->update_file_and_alt_sort('url',$_SESSION['panel_style_logo_img1'],$this->mod);
 	  
 		$data['this_cat'] = $TextLanguage->lang(@$this->mod);
 		$data['this_page'] = $TextLanguage->lang('add');
@@ -39,7 +41,7 @@ class Logo
 		$uf = 'url';
 		${$uf} = $CustomHelper->update_user_files($uf,$this->mod.'_'.$uf);
   
-		$url = $url . '^' . $_POST['url_alt'];
+		$url = $url.'^'.$_POST['url_alt'].';'.$_POST['url_alt_en'].';'.$_POST['url_alt_sort'];
 
 		$d = new \stdClass(); 
 		$d->logo_type = '2';

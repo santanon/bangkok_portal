@@ -1,9 +1,14 @@
 <?php 
 $CustomHelper = new \App\CustomHelper; 
 $TextLanguage = new \App\TextLanguage; 
- 
+$no_back = 1;
 ?>   
 @include('manage.include.main_form_header')  
+
+<script>
+	parent.document.getElementById('modal_full_span').innerHTML = 'โค้ด HTML & CSS';
+	</script>
+
 <script type="text/javascript">
 function check_form()    
 { 
@@ -33,7 +38,7 @@ function check_form()
 	}
 }
 </script>
-<form method="post" enctype="multipart/form-data" onsubmit="return check_form();" action="http://127.0.0.1:8000/manage-admin/edit_submit?m=<setting_html_css">
+<form method="post" enctype="multipart/form-data" onsubmit="return check_form();" action="http://127.0.0.1:8000/manage-admin/edit_html_css_submit?m=setting_html_css">
 @csrf <!-- {{ csrf_field() }} -->
 <table>
 	<tbody>  
@@ -80,8 +85,7 @@ function check_form()
 			<th valign="top">&nbsp;</th>
 			<td> 
 			<span class="btn round big blue"><input type="submit" class="fontfacetext" value="<?php echo $TextLanguage->lang('save'); ?>"></span>&nbsp;
-			<span class="btn round big gray"><input type="button" class="fontfacetext" value="<?php echo $TextLanguage->lang('cancel'); ?>" onclick="window.history.back();"></span> 
-			</td>
+			 </td>
 		</tr>
 		
 		

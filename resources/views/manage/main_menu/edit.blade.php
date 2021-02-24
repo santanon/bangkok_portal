@@ -28,8 +28,8 @@ $TextLanguage = new \App\TextLanguage;
        
             <tr>
                 <th width="120"><?php echo $TextLanguage->lang('name'); ?></th>
-                <td><input value="<?php echo $edit_title ?>" name="title" type="text" class="sm-input--flag-th" id="title" style="width:210px" placeholder="<?php echo $TextLanguage->lang('name'); ?>">&nbsp;&nbsp;
-                    <input value="<?php echo $edit_en_title ?>" name="en_title" type="text" class="sm-input--flag-en" id="en_title" style="width:210px" placeholder="<?php echo $TextLanguage->lang('name'); ?>">
+                <td><input value="<?php echo $edit_title ?>" name="title" type="text" class="sm-input--flag-th" id="title" style="width:40%" placeholder="<?php echo $TextLanguage->lang('name'); ?>">&nbsp;&nbsp;
+                    <input value="<?php echo $edit_en_title ?>" name="en_title" type="text" class="sm-input--flag-en" id="en_title" style="width:40%" placeholder="<?php echo $TextLanguage->lang('name'); ?>">
                 </td>
             </tr>  
             
@@ -98,6 +98,7 @@ function hide_all()
 	document.getElementById('tr_poll').style.display = 'none';
 	document.getElementById('tr_webboard').style.display = 'none';  
 	document.getElementById('tr_main_bg').style.display = 'none';  
+	document.getElementById('tr_vdo').style.display = 'none';
 }
 function show_it(v1)
 {
@@ -176,10 +177,10 @@ $this_value = $edit_img1;
 <th width="120" valign="top" style="padding-top:15px;"><?php echo $TextLanguage->lang('url'); ?></th>
 <td>
 
-	<input value="<?php echo $edit_url ?>" name="url" type="text" class="sm-input--flag-th" id="url" style="width:235px" placeholder="http://"><br />
+	<input value="<?php echo $edit_url ?>" name="url" type="text" class="sm-input--flag-th" id="url" style="width:40%" placeholder="http://"><br />
 	<input type="button" name="upload" value="<?php echo $TextLanguage->lang('link_helper'); ?>" onclick="callLightbox('http://127.0.0.1:8000/panel-admin/link_helper?type=form&field=url',500,640);return false;" />
 	<br><br>
-	<input value="<?php echo $edit_en_url ?>" name="en_url" type="text" class="sm-input--flag-en" id="en_url" style="width:235px" placeholder="http://"><br />
+	<input value="<?php echo $edit_en_url ?>" name="en_url" type="text" class="sm-input--flag-en" id="en_url" style="width:40%" placeholder="http://"><br />
 	<input type="button" name="upload" value="<?php echo $TextLanguage->lang('link_helper'); ?>" onclick="callLightbox('http://127.0.0.1:8000/panel-admin/link_helper?type=form&field=en_url',500,640);return false;" /> 
 </td>
 </tr>
@@ -355,6 +356,24 @@ foreach ($Portal_website_webboard_cat_model as $row_cat)
 </select>
 </td>
 </tr>
+<tr id="tr_vdo">   
+	<th width="120">VDO</th>
+	<td>
+	<select class="selectric" name="page_type_vdo">  
+	<?php  
+	foreach ($Portal_website_vdo_cat_model as $row_cat)
+	{   
+		?>
+		<option value="<?php echo $row_cat->id; ?>" <?php if($edit_data_id == $row_cat->id){ ?> selected="selected" <?php } ?>><?php echo $row_cat->title; ?> <?php   
+		?> 
+		</option> 
+		<?php 
+	} 
+	?> 
+	
+	</select> 
+	</td>
+	</tr>
              
 <script>
 hide_all();

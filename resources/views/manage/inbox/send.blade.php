@@ -43,7 +43,7 @@ function check_form()
 		<tr>
 			<th width="120"><?php echo $TextLanguage->lang('to'); ?> <span style="color:red">*</span></th>
 			<td>
-			<input id="username" name="username" type="text" class="sm-input" style="width:235px" placeholder="<?php echo $TextLanguage->lang('username'); ?>" value="<?php echo @$read_username ?>"> 
+			<input id="username" name="username" type="text" class="sm-input" style="width:40%" placeholder="<?php echo $TextLanguage->lang('username'); ?>" value="<?php echo @$read_username ?>"> 
 			</td>
 		</tr>
 		

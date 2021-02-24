@@ -79,25 +79,25 @@ $TextLanguage = new \App\TextLanguage;
                 <th width="120"><?php echo $TextLanguage->lang('password'); ?></th>
                 <td>
                 <input type="checkbox" id="change_password" name="change_password" value="1" /> Change password <br />
-				<input name="password" type="password" class="sm-input" id="password" style="width:210px" maxlength="20">   
+				<input name="password" type="password" class="sm-input" id="password" style="width:40%" maxlength="20">   
                 </td>
             </tr>  
             <tr>
                 <th width="120"><?php echo $TextLanguage->lang('name'); ?></th>
                 <td>
-                <input value="<?php echo $edit_title ?>" name="title" type="text" class="sm-input" id="title" style="width:210px">   
+                <input value="<?php echo $edit_title ?>" name="title" type="text" class="sm-input" id="title" style="width:40%">   
                 </td>
             </tr>  
              <tr>
                 <th width="120"><?php echo $TextLanguage->lang('lastname'); ?></th>
                 <td>
-                <input value="<?php echo $edit_lastname ?>" name="lastname" type="text" class="sm-input" id="lastname" style="width:210px">   
+                <input value="<?php echo $edit_lastname ?>" name="lastname" type="text" class="sm-input" id="lastname" style="width:40%">   
                 </td>
             </tr> 
              <tr>
                 <th width="120"><?php echo $TextLanguage->lang('email'); ?></th>
                 <td>
-                <input value="<?php echo $edit_email ?>" name="email" type="text" class="sm-input" id="email" style="width:210px">   
+                <input value="<?php echo $edit_email ?>" name="email" type="text" class="sm-input" id="email" style="width:40%">   
                 </td>
             </tr>   
              <tr>
@@ -113,25 +113,25 @@ $TextLanguage = new \App\TextLanguage;
             <!-- <tr>
                 <th width="120"><?php echo $TextLanguage->lang('birthday'); ?></th>
                 <td>
-                <input value="<?php echo $edit_birthday ?>" name="birthday" type="text" class="sm-input" id="birthday" style="width:210px">   
+                <input value="<?php echo $edit_birthday ?>" name="birthday" type="text" class="sm-input" id="birthday" style="width:40%">   
                 </td>
             </tr>    -->
              <tr>
                 <th width="120"><?php echo $TextLanguage->lang('tel'); ?></th>
                 <td>
-                <input value="<?php echo $edit_tel ?>" name="tel" type="text" class="sm-input" id="tel" style="width:210px">   
+                <input value="<?php echo $edit_tel ?>" name="tel" type="text" class="sm-input" id="tel" style="width:40%">   
                 </td>
             </tr>   
              <tr>
                 <th width="120" valign="top" style="padding-top:12px;"><?php echo $TextLanguage->lang('address'); ?></th>
                 <td>
-                <textarea name="address" type="text" id="address" rows="5" style="width:210px"><?php echo $edit_address ?></textarea>   
+                <textarea name="address" type="text" id="address" rows="5" style="width:40%"><?php echo $edit_address ?></textarea>   
                 </td>
             </tr>   
              <tr>
                 <th width="120"><?php echo $TextLanguage->lang('zip_code'); ?></th>
                 <td>
-                <input value="<?php echo $edit_zip_code ?>" name="zip_code" type="text" class="sm-input" id="zip_code" style="width:210px">   
+                <input value="<?php echo $edit_zip_code ?>" name="zip_code" type="text" class="sm-input" id="zip_code" style="width:40%">   
                 </td>
             </tr>   
              <tr>
@@ -237,7 +237,7 @@ $("#province option").each(function()
              <tr>
                 <th width="120"><?php echo $TextLanguage->lang('idcard'); ?></th>
                 <td>
-                <input value="<?php echo $edit_idcard ?>" name="idcard" type="text" class="sm-input" id="idcard" style="width:210px">   
+                <input value="<?php echo $edit_idcard ?>" name="idcard" type="text" class="sm-input" id="idcard" style="width:40%">   
                 </td>
             </tr>
              <tr>

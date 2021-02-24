@@ -115,9 +115,9 @@ class Download
 		$d->cat_id = $CustomHelper->input_post('cat_id', TRUE);
 		$d->title = htmlspecialchars($CustomHelper->input_post('title', TRUE));   
 		$d->en_title = htmlspecialchars($CustomHelper->input_post('en_title', TRUE));   
-
-		$file1 = $file1 . '^' . $_POST['file1_alt'];
-		$en_file1 = $en_file1 . '^' . $_POST['en_file1_alt'];
+ 
+		$d->file1 = $file1.'^'.$_POST['file1_alt'].';'.$_POST['file1_alt_en'].';'.$_POST['file1_alt_sort'];
+		$d->en_file1 = $en_file1.'^'.$_POST['en_file1_alt'].';'.$_POST['en_file1_alt_en'].';'.$_POST['en_file1_alt_sort'];
 		 
 		$date_news_1 = 0;
 		
@@ -216,8 +216,15 @@ class Download
 			$data['config_footer_js'] = 'mainmenuFocus(1,17,2); btn2stageFocus(0,1);'; 
 			$data['config_dropdown_title'] = $TextLanguage->lang(@$this->mod_cat_dropdown_title);  
 
-			$data['get_alt_1'] = $CustomHelper->update_file_and_alt('file1',$row[0]->file1,$this->mod);
-			$data['get_alt_2'] = $CustomHelper->update_file_and_alt('en_file1',$row[0]->en_file1,$this->mod);
+
+			$main_arr = array("file1","en_file1");
+
+			foreach($main_arr as $main_arr_item)
+			{
+				$data['get_alt_'.$main_arr_item] 		= $CustomHelper->update_file_and_alt($main_arr_item,$q[0]->{$main_arr_item},$this->mod);
+				$data['get_alt_en_'.$main_arr_item] 	= $CustomHelper->update_file_and_alt_en($main_arr_item,$q[0]->{$main_arr_item},$this->mod);
+				$data['get_alt_sort_'.$main_arr_item] 	= $CustomHelper->update_file_and_alt_sort($main_arr_item,$q[0]->{$main_arr_item},$this->mod);
+			}
  
 			if(@$this->mod_cat_model <> '')
 			{
@@ -253,12 +260,10 @@ class Download
 		$d->cat_id = $CustomHelper->input_post('cat_id', TRUE);
 		$d->title = htmlspecialchars($CustomHelper->input_post('title', TRUE));
 		$d->en_title = htmlspecialchars($CustomHelper->input_post('en_title', TRUE));
-
-		$file1 = $file1 . '^' . $_POST['file1_alt'];
-		$en_file1 = $en_file1 . '^' . $_POST['en_file1_alt'];
-
-		$d->file1 = $file1; 
-		$d->en_file1 = $en_file1; 
+		
+ 
+		$d->file1 = $file1.'^'.$_POST['file1_alt'].';'.$_POST['file1_alt_en'].';'.$_POST['file1_alt_sort'];
+		$d->en_file1 = $en_file1.'^'.$_POST['en_file1_alt'].';'.$_POST['en_file1_alt_en'].';'.$_POST['en_file1_alt_sort'];
 		
 		$date_news_1 = 0;
 		

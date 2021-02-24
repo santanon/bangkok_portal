@@ -1,5 +1,5 @@
 <!-- ปฏิทินกิจกรรม -->
-<div id="calendar" data-id="calendar" class="section-content bg-color-white">
+<div id="calendar" data-id="3_<?php echo $this_box_id ?>" class="section-content bg-color-white">
                 <div class="group-mange-section">
                     <div class="manage-tools">
                         <ul>

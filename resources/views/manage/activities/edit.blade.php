@@ -77,15 +77,15 @@ $(function()
             
   <tr>
                 <th width="120"><?php echo $TextLanguage->lang('title'); ?></th>
-                <td><input value="<?php echo $edit_title ?>" name="title" type="text" class="sm-input--flag-th" id="title" style="width:210px" placeholder="<?php echo $TextLanguage->lang('title'); ?>">&nbsp;&nbsp;
-                    <input value="<?php echo $edit_en_title ?>" name="en_title" type="text" class="sm-input--flag-en" id="en_title" style="width:210px" placeholder="<?php echo $TextLanguage->lang('title'); ?>">
+                <td><input value="<?php echo $edit_title ?>" name="title" type="text" class="sm-input--flag-th" id="title" style="width:40%" placeholder="<?php echo $TextLanguage->lang('title'); ?>">&nbsp;&nbsp;
+                    <input value="<?php echo $edit_en_title ?>" name="en_title" type="text" class="sm-input--flag-en" id="en_title" style="width:40%" placeholder="<?php echo $TextLanguage->lang('title'); ?>">
                 </td>
             </tr>   
             
               <tr>
                 <th width="120" valign="top" style="padding-top:10px;"><?php echo $TextLanguage->lang('image'); ?><br><span style="font-size:12px;font-weight:normal;">กว้าง 1280 px, สูง 741 px </span></th>
                 <td>
-
+ 
                 <?php 
                 $this_name = 'img1';
                 $this_w = '130';

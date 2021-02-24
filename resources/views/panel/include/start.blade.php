@@ -18,11 +18,26 @@
 <link rel="stylesheet" href="{{ asset('panel/css/main.css')}}">
 
 <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,500;1,300&display=swap" rel="stylesheet">
-    
+
+
+<style>
+html, body {
+height: 100%;
+}
+.full-height {
+height: 100%;
+background-color: black; 
+text-align: center; 
+color:#FFFFFF;
+font-size:30px;
+}
+
+
+</style>
 </head>
 
 <body>
-
+    <div id="div_full_screen" class="full-height" style="display: none;"><br><br><br><br><br><br><br><br><br>กำลังโหลด...</div>
     <?php
     if(isset($_GET['noload']))
     {

@@ -57,15 +57,10 @@ class Home_bg
 	{      
 		$CustomHelper = new \App\CustomHelper;
 		$TextLanguage = new \App\TextLanguage;
-
-
-
+ 
 		$uf = 'img1';
 		${$uf} = $CustomHelper->update_user_files($uf,$this->mod.'_'.$uf);
-
-
-
-		  
+  
 		$q = "SELECT * FROM tbl_portal_website_bg WHERE web_id = ? ORDER BY sort DESC";	 	
 		$v = $_SESSION['panel_id'];
 		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),$q,$v);
@@ -81,9 +76,11 @@ class Home_bg
 		 
 		$d = new \stdClass();
 		$d->web_id = $_SESSION['panel_id']; 
-		$d->title = htmlspecialchars($CustomHelper->input_post('title', TRUE));   
+ 
+		$d->title = htmlspecialchars($_POST['title'][0].'|'.$_POST['title'][1]);
+		$d->en_title = htmlspecialchars($_POST['en_title'][0].'|'.$_POST['en_title'][1]);     
 		 
-		$d->img1 = $img1.'^'.$_POST['img1_alt'];
+		$d->img1 = $img1.'^'.$_POST['img1_alt'].';'.$_POST['img1_alt_en'].';'.$_POST['img1_alt_sort']; 
 
 		$d->en_img1 = '';
 		$d->url = $CustomHelper->input_post('url', TRUE);  
@@ -128,7 +125,7 @@ class Home_bg
 		$this_qr = substr($this_qr,0,-1);  	 
 		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),"INSERT INTO tbl_portal_website_bg SET ".$this_qr."",'');  
 		 
-		$CustomHelper->add_log(''.$this->mod_title.' - Add ('.$CustomHelper->input_post('title', TRUE).')',$_SESSION['panel_username'],$_SESSION['panel_id'],strtoupper($this->mod).'_ADD');     
+		$CustomHelper->add_log(''.$this->mod_title.' - Add ('.$_POST['title'][0].')',$_SESSION['panel_username'],$_SESSION['panel_id'],strtoupper($this->mod).'_ADD');     
 		?>
         <meta http-equiv="refresh" content="0;URL=<?php echo  'http://127.0.0.1:8000/manage-admin/list?m='.$this->mod.'' ?>" />
         <?php  } 
@@ -150,6 +147,7 @@ class Home_bg
 			$data['edit_id'] = $row[0]->id;
 			$data['edit_web_id'] = $row[0]->web_id;
 			$data['edit_title'] = $row[0]->title; 
+			$data['edit_en_title'] = $row[0]->en_title; 
 			$data['edit_img1'] = $row[0]->img1; 
 			$data['edit_url'] = $row[0]->url;
 			$data['edit_en_url'] = $row[0]->en_url; 
@@ -167,6 +165,8 @@ class Home_bg
 			$data['config_footer_js'] = 'mainmenuFocus(1,1,4); btn2stageFocus(0,1);';  
 			
 			$data['get_alt'] = $CustomHelper->update_file_and_alt('img1',$row[0]->img1,$this->mod);
+			$data['get_alt_en'] = $CustomHelper->update_file_and_alt_en('img1',$row[0]->img1,$this->mod);
+			$data['get_alt_sort'] = $CustomHelper->update_file_and_alt_sort('img1',$row[0]->img1,$this->mod);
  
 			//$this->load->view('panel/'.$this->mod.'/edit', $data); 
 			return $data; 
@@ -186,9 +186,11 @@ class Home_bg
 		${$uf} = $CustomHelper->update_user_files($uf,$this->mod.'_'.$uf);  
 		 
 		$d = new \stdClass();  
-		$d->title = htmlspecialchars($CustomHelper->input_post('title', TRUE));
-		 
-		$d->img1 = $img1.'^'.$_POST['img1_alt'];
+		
+		$d->title = htmlspecialchars($_POST['title'][0].'|'.$_POST['title'][1]);
+		$d->en_title = htmlspecialchars($_POST['en_title'][0].'|'.$_POST['en_title'][1]);
+		  
+		$d->img1 = $img1.'^'.$_POST['img1_alt'].';'.$_POST['img1_alt_en'].';'.$_POST['img1_alt_sort']; 
 
 		$d->url = $CustomHelper->input_post('url', TRUE);  
 		$d->en_url = $CustomHelper->input_post('en_url', TRUE);  
@@ -231,7 +233,7 @@ class Home_bg
 		$this_qr = substr($this_qr,0,-1);  	 
 		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),"UPDATE ".$CustomHelper->model_to_table($this->mod_model)." SET ".$this_qr." WHERE web_id = '".$_SESSION['panel_id']."' AND id = '".$CustomHelper->input_post('id', TRUE)."'",'');    
  	
-		$CustomHelper->add_log(''.$this->mod_title.' - Edit ('.$CustomHelper->input_post('title', TRUE).')',$_SESSION['panel_username'],$_SESSION['panel_id'],strtoupper($this->mod).'_EDIT');   
+		$CustomHelper->add_log(''.$this->mod_title.' - Edit ('.$_POST['title'][0].')',$_SESSION['panel_username'],$_SESSION['panel_id'],strtoupper($this->mod).'_EDIT');   
 		?>
         <meta http-equiv="refresh" content="0;URL=<?php echo  'http://127.0.0.1:8000/manage-admin/list?m='.$this->mod.'' ?>" />
         <?php  } 

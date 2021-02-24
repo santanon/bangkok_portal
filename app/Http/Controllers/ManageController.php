@@ -116,8 +116,11 @@ class ManageController extends Controller
 			exit;	
         }   
     }
-    public function comment_text($v1 = '0',$v2 = '')
+    public function comment_text()
 	{
+		$v1 = $_GET['id'];
+		$v2 = $_GET['main_type'];
+		
 		$CustomHelper = new \App\CustomHelper;
 		$TextLanguage = new \App\TextLanguage;
 		$this->include_check_login();  
@@ -126,7 +129,7 @@ class ManageController extends Controller
 		$v = $_SESSION['panel_id'];
 		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),$q,$v);
 		$q = json_decode($res);
-		 
+  
 		if(count($q) > 0)
 		{  
 			$row = $q;  
@@ -155,8 +158,8 @@ class ManageController extends Controller
 			$v = $_SESSION['panel_id'];
 			$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($comment_model)),$q,$v);
 			$data['list_comment'] = json_decode($res);
-			  
-			$this->load->view('panel/comment', $data); 
+			
+			return view('manage.comment',$data); 
 		}
 		else
 		{
@@ -165,11 +168,19 @@ class ManageController extends Controller
     }
     public function comment_delete($v1 = '0',$v2 = '0',$v3 = '')
 	{
+		$v1 = $_GET['id'];
+		$v2 = $_GET['id2'];
+		$v3 = $_GET['main_type'];
+		
 		$CustomHelper = new \App\CustomHelper;
 		$TextLanguage = new \App\TextLanguage;
 		$this->include_check_login();  
 		 
-		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('portal_website_main_comment_model')),"DELETE FROM ".$CustomHelper->model_to_table('portal_website_main_comment_model')." WHERE web_id = '".$_SESSION['panel_id']."' AND id = '".$v1."'",'');
+		$res = $CustomHelper->API_CALL($CustomHelper->API_URL('api_website_main_comment'),"DELETE FROM tbl_portal_website_main_comment WHERE web_id = '".$_SESSION['panel_id']."' AND id = '".$v1."'",''); 
+ 
+		?> <meta http-equiv="refresh" content="0;URL=<?php echo 'http://127.0.0.1:8000/manage-admin/comment_text?m='.$_GET['m'].'&id='.$v2.'&main_type='.$v3.'"' ?> /><?php
+		exit;	
+
     }    
     public function delete($id = '0')
 	{ 
@@ -324,6 +335,222 @@ class ManageController extends Controller
 		$data = $m->edit();
  
         return view('manage.'.$_GET['m'].'.edit',$data);  
+    } 
+	public function edit_account()
+    {      
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage; 
+		$this->include_check_login();  
+
+		$c = "\App\Conf\\".$_GET['m'];
+		$m = new $c();  
+		$data = $m->change_password();
+ 
+        return view('manage.'.$_GET['m'].'.change_password',$data);  
+    }
+	public function change_password_submit()
+    {      
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage; 
+		$this->include_check_login();  
+
+		$c = "\App\Conf\\".$_GET['m'];
+		$m = new $c();  
+		$data = $m->change_password_submit();
+ 
+        return view('manage.'.$_GET['m'].'.change_password',$data);  
+    }
+	public function edit_profile()
+    {      
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage; 
+		$this->include_check_login();  
+
+		$c = "\App\Conf\\".$_GET['m'];
+		$m = new $c();  
+		$data = $m->change_email();
+ 
+        return view('manage.'.$_GET['m'].'.change_email',$data);  
+    }
+	public function change_email_submit()
+    {      
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage; 
+		$this->include_check_login();  
+
+		$c = "\App\Conf\\".$_GET['m'];
+		$m = new $c();  
+		$data = $m->change_email_submit();
+ 
+        return view('manage.'.$_GET['m'].'.change_email',$data);  
+    }
+	public function edit_bg()
+    {      
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage; 
+		$this->include_check_login();  
+
+		$c = "\App\Conf\\".$_GET['m'];
+		$m = new $c();  
+		$data = $m->edit();
+ 
+        return view('manage.'.$_GET['m'].'.edit',$data);  
+    } 
+	public function edit_bg_submit()
+    {      
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage; 
+		$this->include_check_login();  
+
+		$c = "\App\Conf\\".$_GET['m'];
+		$m = new $c();  
+		$data = $m->edit_submit();
+ 
+        return view('manage.'.$_GET['m'].'.edit',$data);  
+    }
+	public function edit_html_css()
+    {      
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage; 
+		$this->include_check_login();  
+
+		$c = "\App\Conf\\".$_GET['m'];
+		$m = new $c();  
+		$data = $m->edit();
+ 
+        return view('manage.'.$_GET['m'].'.edit',$data);  
+    }
+	public function edit_html_css_submit()
+    {      
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage; 
+		$this->include_check_login();  
+
+		$c = "\App\Conf\\".$_GET['m'];
+		$m = new $c();  
+		$data = $m->edit_submit();
+ 
+        return view('manage.'.$_GET['m'].'.edit',$data);  
+    }
+	public function edit_copyright()
+    {      
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage; 
+		$this->include_check_login();  
+
+		$c = "\App\Conf\\".$_GET['m'];
+		$m = new $c();  
+		$data = $m->edit();
+ 
+        return view('manage.'.$_GET['m'].'.edit',$data);  
+    }
+	public function edit_copyright_submit()
+    {      
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage; 
+		$this->include_check_login();  
+
+		$c = "\App\Conf\\".$_GET['m'];
+		$m = new $c();  
+		$data = $m->edit_submit();
+ 
+        return view('manage.'.$_GET['m'].'.edit',$data);  
+    }
+	public function edit_social()
+    {      
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage; 
+		$this->include_check_login();  
+
+		$c = "\App\Conf\\".$_GET['m'];
+		$m = new $c();  
+		$data = $m->edit();
+ 
+        return view('manage.'.$_GET['m'].'.edit',$data);  
+    }
+	public function edit_social_submit()
+    {      
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage; 
+		$this->include_check_login();  
+
+		$c = "\App\Conf\\".$_GET['m'];
+		$m = new $c();  
+		$data = $m->edit_submit();
+ 
+        return view('manage.'.$_GET['m'].'.edit',$data);  
+    }
+	public function edit_statistic()
+    {      
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage; 
+		$this->include_check_login();  
+
+		$c = "\App\Conf\\".$_GET['m'];
+		$m = new $c();  
+		$data = $m->view();
+ 
+        return view('manage.'.$_GET['m'].'.view',$data);  
+    }
+	public function edit_search()
+    {      
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage; 
+		$this->include_check_login();  
+
+		$c = "\App\Conf\\".$_GET['m'];
+		$m = new $c();  
+		$data = $m->edit();
+ 
+        return view('manage.'.$_GET['m'].'.edit',$data);  
+    }
+	public function edit_search_submit()
+    {      
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage; 
+		$this->include_check_login();  
+
+		$c = "\App\Conf\\".$_GET['m'];
+		$m = new $c();  
+		$data = $m->edit_submit();
+ 
+        return view('manage.'.$_GET['m'].'.edit',$data);  
+    }
+	public function edit_ga()
+    {      
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage; 
+		$this->include_check_login();  
+
+		$c = "\App\Conf\\".$_GET['m'];
+		$m = new $c();  
+		$data = $m->edit();
+ 
+        return view('manage.'.$_GET['m'].'.edit',$data);  
+    }
+	public function edit_ga_submit()
+    {      
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage; 
+		$this->include_check_login();  
+
+		$c = "\App\Conf\\".$_GET['m'];
+		$m = new $c();  
+		$data = $m->edit_submit();
+ 
+        return view('manage.'.$_GET['m'].'.edit',$data);  
+    }
+	public function export()
+    {        
+        $CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		$this->include_check_login();
+		 
+		$c = "\App\Conf\\".$_GET['m'];
+		$m = new $c();  
+		$data = $m->export();
+		  
+        return view('manage.'.$_GET['m'].'.export',$data);
     } 
     public function include_check_login()
 	{ 
@@ -1157,6 +1384,18 @@ class ManageController extends Controller
 		$data['config_list_footer_js'] = 'mainmenuFocus(1,11,2); btn2stageFocus(0,2);'; 
 		$this->load->view('panel/' . $this->mod . '/list_sort', $data);
 	}	
+	public function read()
+    {        
+        $CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		$this->include_check_login();
+		 
+		$c = "\App\Conf\\".$_GET['m'];
+		$m = new $c();  
+		$data = $m->read($_GET['id']);
+		  
+        return view('manage.'.$_GET['m'].'.read',$data); 
+    }
 	public function save_list()
 	{ 
         $CustomHelper = new \App\CustomHelper;
@@ -1555,7 +1794,6 @@ class ManageController extends Controller
         
 		exit;
 	}
-	
 	public function url_submit()
     {        
         $CustomHelper = new \App\CustomHelper;
@@ -1566,4 +1804,153 @@ class ManageController extends Controller
 		$m = new $c();  
 		$m->url_submit();
     } 
+	public function save_sort_box()
+	{ 
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+ 
+		if(isset($_SESSION['panel_login']) && $_SESSION['panel_login'] == 1)
+		{   
+			$q = "DELETE FROM tbl_portal_website_contentbox WHERE web_id = ?";
+			$v = $_SESSION['panel_id'];
+			$res = $CustomHelper->API_CALL($CustomHelper->API_URL('api_website_contentbox'),$q,$v);
+			 
+			$j = '';
+			 
+			$a = explode(',',$_GET['o']);  
+			foreach($a as $item)
+			{  
+				if(strpos($item,'_') > -1)
+				{  
+					$txt_box_number = '';
+					$txt_box1 = '';
+					$txt_en_title = 'ข้อมูลล่าสุด';
+					
+					$b = explode('_',$item);
+ 
+					if($b[1] != '')
+					{ 
+						$txt_box_number = $b[0];
+						$txt_box1 = $b[1];
+  
+						$all_mod = array('Portal_website_news_cat_model','Portal_website_faq_cat_model','Portal_website_activities_cat_model','Portal_website_gallery_cat_model','Portal_website_webboard_cat_model','Portal_website_download_cat_model','Portal_website_banner_cat_model','Portal_website_question_cat_model','Portal_website_poll_cat_model');
+
+						$q = "SELECT * FROM ".$CustomHelper->model_to_table($all_mod[$txt_box_number-1])." WHERE id = ?";	 	
+						$v = $txt_box1;
+						$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($all_mod[$txt_box_number-1])),$q,$v);
+						$r = json_decode($res); 
+						$txt_en_title = $r[0]->title; 
+					}
+					else
+					{  
+						$txt_box_number = $b[0];
+					}
+					  
+					$q = "SELECT * FROM tbl_portal_website_contentbox WHERE web_id = ? ORDER BY sort DESC";	 	
+					$v = $_SESSION['panel_id'];
+					$res = $CustomHelper->API_CALL($CustomHelper->API_URL('api_website_contentbox'),$q,$v);
+					$q = json_decode($res); 
+					
+					$sort = '1';
+					if(count($q) > 0)
+					{  
+						$row = $q; 
+						$sort = $row[0]->sort;	 
+						$sort = $sort + 1;
+					} 
+					
+					$d = new \stdClass(); 
+					$d->web_id = $_SESSION['panel_id'];    
+					$d->title = '';
+					$d->en_title = $txt_en_title;
+					$d->box_number = $txt_box_number;
+					$d->box1 = $txt_box1;
+					$d->box2 = '';
+					$d->box3 = '';
+					$d->box4 = '';
+					$d->last_create = date('U');  
+					$d->last_update = date('U');    
+					$d->sort = $sort;
+					$d->status = '1';
+					
+					$date_1 = 0;
+					
+					if(strlen($CustomHelper->input_post('date_start', TRUE)) > 3)
+					{
+						$arr = explode('-',$CustomHelper->input_post('date_start', TRUE));
+						$start_d = $arr[0];
+						$start_m = $arr[1];
+						$start_y = $arr[2];	
+						
+						$date_1 = mktime(0,0,0,$start_m,$start_d,$start_y);
+					}
+					
+					$date_2 = 0;
+					
+					if(strlen($CustomHelper->input_post('date_end', TRUE)) > 3)
+					{
+						$arr = explode('-',$CustomHelper->input_post('date_end', TRUE));
+						$end_d = $arr[0];
+						$end_m = $arr[1];
+						$end_y = $arr[2];
+						
+						$date_2 = mktime(23,59,59,$end_m,$end_d,$end_y);
+					} 
+					
+					$d->date_start = $date_1;
+					$d->date_end = $date_2;
+					$d->date_set = '0';
+					
+					$this_qr = ''; 
+					foreach($d as $key=>$value) 
+					{
+						$this_qr = $this_qr.$key." = '".addslashes($value)."',";
+					}
+					$this_qr = substr($this_qr,0,-1);   
+					$res = $CustomHelper->API_CALL($CustomHelper->API_URL('api_website_contentbox'),"INSERT INTO tbl_portal_website_contentbox SET ".$this_qr."","");  
+
+					$j = $j . "INSERT INTO tbl_portal_website_contentbox SET ".$this_qr."";
+ 
+				} 
+			} 
+		} 
+		
+		return '';
+	}
+	public function setting()
+    {     
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage; 
+
+		if(isset($_SESSION['panel_login']) && $_SESSION['panel_login'] == 1)
+		{ 
+
+		} 
+		else
+		{
+            session_destroy();
+            ?><script>window.top.location = '/panel-admin/login';</script><?php
+			 exit;
+		} 
+ 
+        return view('panel.setting');  
+    }
+	public function change_template()
+    {     
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage; 
+
+		if(isset($_SESSION['panel_login']) && $_SESSION['panel_login'] == 1)
+		{ 
+
+		} 
+		else
+		{
+            session_destroy();
+            ?><script>window.top.location = '/panel-admin/login';</script><?php
+			 exit;
+		} 
+ 
+        return view('panel.change_template');  
+    }
 }

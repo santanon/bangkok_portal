@@ -54,8 +54,8 @@ $TextLanguage = new \App\TextLanguage;
             </tr> 
              <tr>
                 <th width="120"><?php echo $TextLanguage->lang('question1'); ?></th>
-                <td><input value="<?php echo $edit_title ?>" name="title" type="text" class="sm-input--flag-th" id="title" style="width:210px" placeholder="<?php echo $TextLanguage->lang('question1'); ?>">&nbsp;&nbsp;
-                    <input value="<?php echo $edit_en_title ?>" name="en_title" type="text" class="sm-input--flag-en" id="en_title" style="width:210px" placeholder="<?php echo $TextLanguage->lang('question1'); ?>">
+                <td><input value="<?php echo $edit_title ?>" name="title" type="text" class="sm-input--flag-th" id="title" style="width:40%" placeholder="<?php echo $TextLanguage->lang('question1'); ?>">&nbsp;&nbsp;
+                    <input value="<?php echo $edit_en_title ?>" name="en_title" type="text" class="sm-input--flag-en" id="en_title" style="width:40%" placeholder="<?php echo $TextLanguage->lang('question1'); ?>">
                 </td>
             </tr>
              
@@ -66,8 +66,8 @@ $TextLanguage = new \App\TextLanguage;
 				?>
                 <tr>
                     <th width="120"><?php echo $TextLanguage->lang('choice'); ?> <?php echo $i ?></th>
-                    <td><input value="<?php echo ${"edit_c".$i} ?>" name="c<?php echo $i ?>" type="text" class="sm-input--flag-th" id="c<?php echo $i ?>" style="width:210px" placeholder="<?php echo $TextLanguage->lang('choice'); ?> <?php echo $i ?>">&nbsp;&nbsp;
-                        <input value="<?php echo ${"edit_en_c".$i} ?>" name="en_c<?php echo $i ?>" type="text" class="sm-input--flag-en" id="en_c<?php echo $i ?>" style="width:210px" placeholder="<?php echo $TextLanguage->lang('choice'); ?> <?php echo $i ?>">
+                    <td><input value="<?php echo ${"edit_c".$i} ?>" name="c<?php echo $i ?>" type="text" class="sm-input--flag-th" id="c<?php echo $i ?>" style="width:40%" placeholder="<?php echo $TextLanguage->lang('choice'); ?> <?php echo $i ?>">&nbsp;&nbsp;
+                        <input value="<?php echo ${"edit_en_c".$i} ?>" name="en_c<?php echo $i ?>" type="text" class="sm-input--flag-en" id="en_c<?php echo $i ?>" style="width:40%" placeholder="<?php echo $TextLanguage->lang('choice'); ?> <?php echo $i ?>">
                         &nbsp; <?php echo $TextLanguage->lang('point'); ?> &nbsp;
                         <input value="<?php echo ${"edit_p".$i} ?>" name="p<?php echo $i ?>" type="text" class="sm-input" id="p<?php echo $i ?>" style="width:50px; min-width:50px;" placeholder="<?php echo $TextLanguage->lang('choice'); ?> <?php echo $i ?>" maxlength="6">
                     </td>

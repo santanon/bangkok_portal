@@ -55,15 +55,7 @@ function update_img(v1,v2)
 { 
 	document.getElementById(v1).value = v2; 
 	 
-	try 
-	{
-		document.getElementById(v1+'_preview').src = v2; 	
-		document.getElementById(v1+'_preview').value = v2; 	
-	}
-	catch(err) 
-	{
-		 
-	}
+	 
 	
 	$.fancybox.close();
 } 

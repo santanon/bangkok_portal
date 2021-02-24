@@ -1,7 +1,7 @@
 <?php 
 $CustomHelper = new \App\CustomHelper; 
 $TextLanguage = new \App\TextLanguage; 
- 
+$no_back = 1;
 ?>   
 @include('manage.include.main_form_header') 
 
@@ -84,7 +84,7 @@ function show_link(v1)
                 <th width="120"><?php echo $TextLanguage->lang('id'); ?></th>
                 <td>
             <div class="align-box" style="width:110px;">  
-                    <input class="sm-input" name="search_id" type="text" id="search_id" style="width:235px" value="<?php echo $edit_search_id; ?>">
+                    <input class="sm-input" name="search_id" type="text" id="search_id" style="width:40%" value="<?php echo $edit_search_id; ?>">
             </div>
                     
                 </td>

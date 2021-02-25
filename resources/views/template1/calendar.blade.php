@@ -76,7 +76,7 @@ foreach(${"data_box_".$r->box_number} as $r_sub)
                             <?php echo $CustomHelper->L($r_sub->title,$r_sub->en_title); ?>
                         </a>
                     </div>
-                    <!--<div class="text-onbottom"><i class="fas fa-map-marker-alt"></i> ถนนเสรีไทย ฝั่งเลขคู่</div>-->
+                    <!--<div class="text-onbottom"><em class="fas fa-map-marker-alt"></em> ถนนเสรีไทย ฝั่งเลขคู่</div>-->
                 </div>
             </div>
         </div>

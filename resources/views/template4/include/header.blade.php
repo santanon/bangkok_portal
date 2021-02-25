@@ -3,7 +3,7 @@
         <!-- Close -->
         <div class="canvas-header">
             <div class="close-menu" id="nav-close">
-                Close <i class="fas fa-times"></i> 
+                Close <em class="fas fa-times"></em> 
             </div>
             <div class="clearPrefix"></div>
         </div>
@@ -157,7 +157,7 @@
                         <div class="increase" id="increase-size"></div>
                     </div>
                     <div class="lang-site">
-                        <span>TH</span><i class="fas fa-angle-up"></i>
+                        <span>TH</span><em class="fas fa-angle-up"></em>
                         <ul class="multi-lang">
                             <li>
                                 <a href="/">EN</a>
@@ -419,7 +419,7 @@
 
 <div class="bar-menu" id="nav-expander">
     <div class="icon-menu">
-        Menu <i class="fas fa-bars"></i>
+        Menu <em class="fas fa-bars"></em>
     </div>
 </div>
 

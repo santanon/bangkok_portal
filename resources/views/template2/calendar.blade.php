@@ -69,7 +69,7 @@
                                                             บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือ
                                                         </a>
                                                     </div>
-                                                    <div class="text-onbottom"><i class="fas fa-map-marker-alt"></i> ถนนเสรีไทย ฝั่งเลขคู่</div>
+                                                    <div class="text-onbottom"><em class="fas fa-map-marker-alt"></em> ถนนเสรีไทย ฝั่งเลขคู่</div>
                                                 </div>
                                             </div>
                                         </div>

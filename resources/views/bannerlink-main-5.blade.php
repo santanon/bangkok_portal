@@ -52,7 +52,7 @@
 
     <!-- Manage Save -->
     <!-- <div class="manage-save">
-        <i class="fas fa-save"></i> SAVED
+        <em class="fas fa-save"></em> SAVED
     </div> -->
 
 </div>
@@ -68,7 +68,7 @@
       <div class="modal-body">
         <div class="group-modal">
             <div class="text-modal text-alert-system d-flex align-items-center">
-                <i class="fas fa-exclamation-circle"></i> ข้อความระบบ
+                <em class="fas fa-exclamation-circle"></em> ข้อความระบบ
             </div>
         </div>
       </div>

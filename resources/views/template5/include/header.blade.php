@@ -3,7 +3,7 @@
         <!-- Close -->
         <div class="canvas-header">
             <div class="close-menu" id="nav-close">
-                <i class="fas fa-times"></i> 
+                <em class="fas fa-times"></em> 
             </div>
             <div class="clearPrefix"></div>
         </div>
@@ -170,7 +170,7 @@
         <div id="menu_sticky" class="menu-sizefonts-wrapper">
             <div class="bar-menu" id="nav-expander">
                 <div class="icon-menu">
-                    <i class="fas fa-bars"></i>
+                    <em class="fas fa-bars"></em>
                 </div>
             </div>
             <div class="tools-sizefonts">

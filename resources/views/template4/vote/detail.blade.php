@@ -269,7 +269,7 @@
                                                 </ul>
                                             </div>
                                             <div class="btn-custom btn-custom-skew">
-                                                <button class="btn btn-primary btn-skew" type="button"><i class="far fa-thumbs-up"></i> VOTE</button>
+                                                <button class="btn btn-primary btn-skew" type="button"><em class="far fa-thumbs-up"></em> VOTE</button>
                                             </div>
                                         </div>
                                     </form>

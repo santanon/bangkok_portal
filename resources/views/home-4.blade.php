@@ -162,7 +162,7 @@ function sfi(title,url)
 
     <!-- Manage Save -->
     <!-- <div class="manage-save">
-        <i class="fas fa-save"></i> SAVED
+        <em class="fas fa-save"></em> SAVED
     </div> -->
 
 </div>
@@ -243,7 +243,7 @@ function sfi(title,url)
       <div class="modal-body">
         <div class="group-modal">
             <div class="text-modal text-alert-system d-flex align-items-center">
-                <i class="fas fa-exclamation-circle"></i> ข้อความระบบ
+                <em class="fas fa-exclamation-circle"></em> ข้อความระบบ
             </div>
         </div>
       </div>
@@ -297,7 +297,7 @@ function sfi(title,url)
       <div class="modal-body">
         <div class="group-modal">
             <div class="text-modal text-alert-system d-flex align-items-center">
-                <i class="fas fa-exclamation-circle" style="color: red;"></i> ยืนยันการลบ?
+                <em class="fas fa-exclamation-circle" style="color: red;"></em> ยืนยันการลบ?
             </div>
         </div>
       </div>
@@ -318,7 +318,7 @@ function sfi(title,url)
         <div class="modal-body">
           <div class="group-modal">
               <div class="text-modal text-alert-system d-flex align-items-center">
-                  <i class="fas fa-exclamation-circle"></i> ต้องการซ่อนหรือไม่?
+                  <em class="fas fa-exclamation-circle"></em> ต้องการซ่อนหรือไม่?
               </div>
           </div>
         </div>

@@ -22,13 +22,13 @@
                                     <div class="col-lg-3">
                                         <div class="input-custom inp-calendar">
                                             <input id="start_date" class="style-input" type="text" name="datefilter" placeholder="จากวันที่" autocomplete="off" data-provide="datepicker" data-date-language="th-th" />
-                                            <div class="icon-calendar"><i class="far fa-calendar"></i></div>
+                                            <div class="icon-calendar"><em class="far fa-calendar"></em></div>
                                         </div>
                                     </div>
                                     <div class="col-lg-3">
                                         <div class="input-custom inp-calendar">
                                             <input id="end_date" class="style-input" type="text" name="datefilter" placeholder="ถึงวันที่" autocomplete="off" data-provide="datepicker" data-date-language="th-th" />
-                                            <div class="icon-calendar"><i class="far fa-calendar"></i></div>
+                                            <div class="icon-calendar"><em class="far fa-calendar"></em></div>
                                         </div>
                                     </div>
                                     <div class="col-lg-1">
@@ -285,7 +285,7 @@
                                     <div class="row no-gutters">
                                         <div class="col-lg-6">
                                             <div class="add-news">
-                                                <i class="fas fa-plus"></i>
+                                                <em class="fas fa-plus"></em>
                                             </div>
                                         </div>
                                     </div>

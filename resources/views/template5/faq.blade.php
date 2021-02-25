@@ -27,7 +27,7 @@
                                             <div class="group-gotoall">
                                                 <a href="/faq-5">
                                                     <div class="icon-more">
-                                                        <i class="fas fa-arrow-right"></i>
+                                                        <em class="fas fa-arrow-right"></em>
                                                     </div>
                                                 </a>
                                             </div>

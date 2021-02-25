@@ -53,7 +53,7 @@
                     </li>
                     <li>
                         <div class="lang-site">
-                            <span>TH</span><i class="fas fa-angle-up"></i>
+                            <span>TH</span><em class="fas fa-angle-up"></em>
                             <ul class="multi-lang">
                                 <li>
                                     <a href="/">EN</a>

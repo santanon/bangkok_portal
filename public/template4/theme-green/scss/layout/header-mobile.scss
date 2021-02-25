@@ -165,7 +165,7 @@ body.nav-expanded {
                 font-weight: $font-regular;
                 color: white;
                 background-color: $color-primary;
-                i{
+                .fas, .far, .fa{
                     font-size: 2.2rem;
                     line-height: 3rem;
                     color: white;

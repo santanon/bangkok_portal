@@ -165,7 +165,7 @@
                         color: $color-text;
                         &.text-alert-system{
                             font-size: 2rem;
-                            i{
+                            .fas, .far, .fa{
                                 font-size: 50px;
                                 margin-right: 10px;
                             }
@@ -495,7 +495,7 @@ $howManySteps: 100; //this needs to be even.
                     font-size: 1.8rem;
                     font-weight: $font-regular;
                     color: $color-text;
-                    i{
+                    .fas, .far, .fa{
                         font-size: 1.4rem;
                         color: $color-text;
                     }
@@ -507,7 +507,7 @@ $howManySteps: 100; //this needs to be even.
                         color: white;
                         padding: 5px 8px;
                         margin-left: 5px;
-                        i{
+                        .fas, .far, .fa{
                             margin-right: 5px;
                         }
                     }
@@ -586,7 +586,7 @@ $howManySteps: 100; //this needs to be even.
 
                         .public-post{
                             color: white;
-                            i{
+                            .fas, .far, .fa{
                                 color: white;
                             }
                         }
@@ -636,7 +636,7 @@ $howManySteps: 100; //this needs to be even.
                             top: 10px;
                             right: 10px;
                             color: $color-primary;
-                            i{
+                            .fas, .far, .fa{
                                 font-size: 2rem;
                             }
                         }
@@ -761,7 +761,7 @@ $howManySteps: 100; //this needs to be even.
                             position: absolute;
                             top: 10px;
                             right: 10px;
-                            i{
+                            .fas, .far, .fa{
                                 font-size: 2rem;
                             }
                         }
@@ -1016,7 +1016,7 @@ $howManySteps: 100; //this needs to be even.
                                     font-size: 1.6rem;
                                     font-weight: $font-regular;
 
-                                    i{
+                                    .fas, .far, .fa{
                                         font-size: 1.4rem;
                                         margin-right: 5px;
                                     }
@@ -2682,7 +2682,7 @@ $howManySteps: 100; //this needs to be even.
                             justify-content: flex-end;
                             .btn{
                                 &.icon{
-                                    i{
+                                    .fas, .far, .fa{
                                         font-size: 1.4rem;
                                         margin-right: 10px;
                                     }
@@ -3211,7 +3211,7 @@ $howManySteps: 100; //this needs to be even.
                     color: $color-text;
                     font-size: 1.6rem;
                     font-weight: $font-regular;
-                    i{
+                    .fas, .far, .fa{
                         font-size: 1.4rem;
                         margin-right: 5px;
                     }
@@ -3371,7 +3371,7 @@ $howManySteps: 100; //this needs to be even.
                 height: 40px;
                 text-align: center;
                 transition: all 0.3s ease;
-                i{
+                .fas, .far, .fa{
                     color: white;
                     font-size: 1.6rem;
                 }

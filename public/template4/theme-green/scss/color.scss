@@ -37,7 +37,7 @@
 .input-custom{
     &.inp-calendar{
         .icon-calendar{
-            i{
+            .fas, .far, .fa{
                 color: $color-secondary;
             }
         }

@@ -35,7 +35,7 @@
                         &.sign-out{
                             a{
                                 transition: none;
-                                i{
+                                .fas, .far, .fa{
                                     font-size: 1.2rem;
                                     margin-right: 3px;
                                     transition: none;
@@ -63,7 +63,7 @@
                             font-size: 1.4rem;
                             font-weight: 300;
                             transition: none;
-                            i{
+                            .fas, .far, .fa{
                                 font-size: 1.2rem;
                                 margin-right: 3px;
                                 transition: none;
@@ -405,7 +405,7 @@ body.menu-open{
                         font-size: 1.6rem;
                         font-weight: $font-light;
                     }
-                    i{
+                    .fas, .far, .fa{
                         color: #fff;
                         font-size: 1.4rem;
                         position: relative;
@@ -444,7 +444,7 @@ body.menu-open{
                         }
                     }
                     &.active{
-                        i{
+                        .fas, .far, .fa{
                             transform: rotate(0deg);
                             -webkit-transform: rotate(0deg);
                         }

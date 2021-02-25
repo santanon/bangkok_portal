@@ -1,0 +1,18 @@
+@media only screen and (max-width: 992px) {
+  #footer-wrapper .group-footer .title-footer .title {
+    font-size: 2.8rem; }
+  #footer-wrapper .group-footer .group-content-footer {
+    margin-bottom: 15px; }
+    #footer-wrapper .group-footer .group-content-footer .text-content {
+      font-size: 1.6rem;
+      line-height: 2rem; }
+      #footer-wrapper .group-footer .group-content-footer .text-content a.link-tel {
+        font-size: 2.4rem;
+        margin-bottom: 0; }
+  #footer-wrapper .group-footer .footer-bottom {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    #footer-wrapper .group-footer .footer-bottom .sitemap {
+      width: 100%; }
+      #footer-wrapper .group-footer .footer-bottom .sitemap ul li {
+        display: block; } }

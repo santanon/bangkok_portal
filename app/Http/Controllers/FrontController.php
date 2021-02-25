@@ -60,7 +60,75 @@ class FrontController extends Controller
 		{
 			$str_template = 'home-5';
 		}
-
+ 
+		$count_this = 1;
+		foreach($r_box as $r)
+		{  
+			switch($r->box_number)
+			{
+				case "7" : 
+					$this_model = 'Portal_website_banner_model';    
+					$this_order_by = 'sort ASC';
+					$this_limit = ' LIMIT 0,10 ';
+					break;	
+				case "3" : 
+					$this_model = 'Portal_website_activities_model';   
+					$this_order_by = 'sort ASC';  
+					$this_limit = ' LIMIT 0,10 '; 
+					break;	
+				case "6" : 
+					$this_model = 'Portal_website_download_model';
+					$this_order_by = 'sort ASC';  
+					$this_limit = ' LIMIT 0,10 '; 
+					break;	
+				case "2" : 
+					$this_model = 'Portal_website_faq_model'; 
+					$this_order_by = 'sort ASC';
+					$this_limit = ' LIMIT 0,10 ';  
+					break;	
+				case "4" : 
+					$this_model = 'Portal_website_gallery_model';  
+					$this_order_by = 'sort ASC';
+					$this_limit = ' LIMIT 0,10 '; 
+					break; 
+				case "1" : 
+					$this_model = 'Portal_website_news_model';
+					$this_order_by = 'sort DESC ';
+					$this_limit = ' LIMIT 0,3 ';
+					break;	
+				case "5" : 
+					$this_model = 'Portal_website_vdo_model';
+					$this_order_by = 'sort DESC';
+					$this_limit = ' LIMIT 0,10 ';
+					break; 
+				case "9" : 
+					$this_model = 'Portal_website_poll_model';
+					$this_order_by = 'id DESC';
+					$this_limit = ' LIMIT 0,10 '; 		
+					break;	
+				case "8" : 
+					$this_model = 'Portal_website_question_model';
+					$this_order_by = 'sort ASC';
+					$this_limit = ' LIMIT 0,10 ';
+					break;   	
+			}  
+			
+			if($r->box1 != '')
+			{
+				$q = "SELECT * FROM ".$CustomHelper->model_to_table($this_model)." WHERE web_id = ? AND status = '1' AND cat_id = '".$r->box1."' ORDER BY ".$this_order_by."".$this_limit;	
+			}
+			else
+			{
+				$q = "SELECT * FROM ".$CustomHelper->model_to_table($this_model)." WHERE web_id = ? AND status = '1' ORDER BY id DESC".$this_limit;
+			}
+				 	
+			$v = $_SESSION['portal_website_' . $this->mod . '_id'];
+			$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('Portal_website_contentbox_model')),$q,$v);
+			$q = json_decode($res);
+ 
+			$data['data_box_'.$r->box_number] = $q; 
+		}  
+		  
 		return view($str_template,$data); 
 	} 
 

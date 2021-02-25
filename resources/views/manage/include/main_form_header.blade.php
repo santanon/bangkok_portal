@@ -1,4 +1,18 @@
 @include('manage.include.header') 
+
+<?php 
+if(isset($this_cat))
+{
+	?>
+<script>
+	parent.document.getElementById('modal_full_span').innerHTML = '<?php echo $this_cat ?>' 
+	</script>
+	<?php
+}
+?>
+
+
+
 <style>
 table{ width:100%; }
 </style> 

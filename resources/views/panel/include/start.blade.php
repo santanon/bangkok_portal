@@ -47,7 +47,7 @@ font-size:30px;
     {
         ?>
         <!-- Script Loading -->
-        <div class="se-pre-con loading">
+        <!--<div class="se-pre-con loading">
             <div class="group-loading">
                 <div class="lds-ellipsis">
                     <div></div>
@@ -56,7 +56,7 @@ font-size:30px;
                     <div></div>
                 </div>
             </div>
-        </div>
+        </div>-->
         <!-- /Script Loading -->
         <?php
     }
@@ -70,11 +70,11 @@ font-size:30px;
 
 
     <script type="text/javascript">
-        $(document).ready(function() {
+       /* $(document).ready(function() {
             $(window).load(function () {
                 $(".se-pre-con.loading").fadeOut(1000);
             });
-        });
+        });*/
     </script>
 
 </body>

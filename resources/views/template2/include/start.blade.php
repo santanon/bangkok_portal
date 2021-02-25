@@ -42,11 +42,11 @@
 
 
     <script type="text/javascript">
-        $(document).ready(function() {
+       /* $(document).ready(function() {
             $(window).load(function () {
                 $(".se-pre-con.loading").fadeOut(1000);
             });
-        });
+        });*/
     </script>
 
 </body>

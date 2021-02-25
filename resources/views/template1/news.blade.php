@@ -46,77 +46,76 @@
                                             <img src="{{ asset('../../assets/images/icons/icon-edit.svg')}}" alt="icon">
                                         </div> 
                                     </div> -->
-
-                                    <div class="main-news">
-                                        <div class="group-mange-section">
-                                            <div class="manage-tools">
-                                                <ul>
-                                                    <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('NEWS','manage-admin/edit?m=portal_website_news');">แก้ไข</a></li> 
-                                                    <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_hide">ซ่อน</a></li>
-                                                    <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_delete">ลบ</a></li> 
-                                                    <li class="order-list order-close">ปิด</li>
-                                                </ul>
+                                    
+                                    <?php 
+                                    if(isset(${"data_box_".$r->box_number}[0]->title))
+                                    {
+                                        ?>
+                                        <div class="main-news">
+                                            <div class="group-mange-section">
+                                                <div class="manage-tools">
+                                                    <ul>
+                                                        <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('NEWS','manage-admin/edit?m=portal_website_news');">แก้ไข</a></li> 
+                                                        <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_hide">ซ่อน</a></li>
+                                                        <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_delete">ลบ</a></li> 
+                                                        <li class="order-list order-close">ปิด</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="manage-edit">
+                                                    <img src="{{ asset('../../assets/images/icons/icon-edit.svg')}}" alt="icon">
+                                                </div> 
                                             </div>
-                                            <div class="manage-edit">
-                                                <img src="{{ asset('../../assets/images/icons/icon-edit.svg')}}" alt="icon">
-                                            </div> 
-                                        </div>
-                                        <a href="/news-detail">
-                                            <div class="img-news" style="background-image: url('../../assets/images/img-news-demo1.png');"></div>
-                                        </a>
-                                        <div class="content-news-main">
-                                            <div class="date">
-                                                <span>ข่าววันที่ : 25 พ.ย.</span> <img src="{{ asset('../../assets/images/icons/icon-new.png')}}" alt="icon">
+                                            <a href="/news-detail">
+                                                <div class="img-news" style="background-image: url('../../assets/images/img-news-demo1.png');"></div>
+                                            </a>
+                                            <div class="content-news-main">
+                                                <div class="date">
+                                                    <span>ข่าววันที่ : 25 พ.ย.</span> <img src="{{ asset('../../assets/images/icons/icon-new.png')}}" alt="icon">
+                                                </div>
+                                                <div class="desc-news">
+                                                    <a href="/news-detail">
+                                                        <?php echo $CustomHelper->L(${"data_box_".$r->box_number}[0]->title,${"data_box_".$r->box_number}[0]->en_title) ?>
+                                                    </a>
+                                                </div>
+                                                <div class="social-wrapper">
+                                                    <ul class="d-flex align-items-center">
+                                                        <li class="facebook d-flex align-items-center not-hover">
+                                                            <img src="{{ asset('../../assets/images/icons/icon-social-facebook.svg')}}" alt="icon"><span class="color-secondary">5</span> 
+                                                        </li>
+                                                        <li class="twitter d-flex align-items-center not-hover">
+                                                            <img src="{{ asset('../../assets/images/icons/icon-social-twitter.svg')}}" alt="icon"> <span class="color-secondary">5</span> 
+                                                        </li>
+                                                        <li class="line d-flex align-items-center not-hover">
+                                                            <img src="{{ asset('../../assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"> <span class="color-secondary">5</span> 
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
-                                            <div class="desc-news">
+                                            <div class="read-news-outer">
                                                 <a href="/news-detail">
-                                                    หน่วยงานภาครัฐและภาคเอกชนประชุมกรรมการดำเนินงานด้านการป้องกัน
+                                                    อ่านข่าวสาร
                                                 </a>
                                             </div>
-                                            <div class="social-wrapper">
-                                                <ul class="d-flex align-items-center">
-                                                    <li class="facebook d-flex align-items-center not-hover">
-                                                        <img src="{{ asset('../../assets/images/icons/icon-social-facebook.svg')}}" alt="icon"><span class="color-secondary">5</span> 
-                                                    </li>
-                                                    <li class="twitter d-flex align-items-center not-hover">
-                                                        <img src="{{ asset('../../assets/images/icons/icon-social-twitter.svg')}}" alt="icon"> <span class="color-secondary">5</span> 
-                                                    </li>
-                                                    <li class="line d-flex align-items-center not-hover">
-                                                        <img src="{{ asset('../../assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"> <span class="color-secondary">5</span> 
-                                                    </li>
-                                                </ul>
-                                            </div>
                                         </div>
-                                        <div class="read-news-outer">
-                                            <a href="/news-detail">
-                                                อ่านข่าวสาร
-                                            </a>
-                                        </div>
-                                    </div>
+                                        <?php
+                                    }
+                                    ?>
+                                    
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="row">
-                                        <div class="col-lg-12">
 
-                                            <!-- <div class="group-mange-section">
-                                                <div class="manage-tools">
-                                                    <ul>
-                                                        <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('กำลังโหลด...','/manage-admin/edit?m=news');">แก้ไข</a></li> 
-                                                        <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_hide">ซ่อน</a></li>
-                                                        <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_delete">ลบ</a></li>
-                                                        <li class="order-list order-close">ปิด</li>
-                                                    </ul>
-                                                </div>
-                                                <div class="manage-edit">
-                                                    <img src="{{ asset('../../assets/images/icons/icon-edit.svg')}}" alt="icon">
-                                                </div> 
-                                            </div> -->
+                                    <?php 
+                                    if(isset(${"data_box_".$r->box_number}[1]->title))
+                                    {
+                                        ?>
+                                        <div class="row">
+                                        
+                                            <div class="col-lg-12">
 
-                                            <div class="sub-news">
-                                                <div class="group-mange-section">
+                                                <!-- <div class="group-mange-section">
                                                     <div class="manage-tools">
                                                         <ul>
-                                                            <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('NEWS','manage-admin/edit?m=portal_website_news');">แก้ไข</a></li> 
+                                                            <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('กำลังโหลด...','/manage-admin/edit?m=news');">แก้ไข</a></li> 
                                                             <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_hide">ซ่อน</a></li>
                                                             <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_delete">ลบ</a></li>
                                                             <li class="order-list order-close">ปิด</li>
@@ -125,66 +124,67 @@
                                                     <div class="manage-edit">
                                                         <img src="{{ asset('../../assets/images/icons/icon-edit.svg')}}" alt="icon">
                                                     </div> 
-                                                </div>
-                                                <div class="row no-gutters">
-                                                    <div class="col-lg-6">
-                                                        <div class="img-news" style="background-image: url('../../assets/images/img-news-demo2.png');">
-                                                            <div class="read-news-outer">
-                                                                <a href="/news-detail">
-                                                                    อ่านข่าวสาร
-                                                                </a>
+                                                </div> -->
+
+                                                <div class="sub-news">
+                                                    <div class="group-mange-section">
+                                                        <div class="manage-tools">
+                                                            <ul>
+                                                                <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('NEWS','manage-admin/edit?m=portal_website_news');">แก้ไข</a></li> 
+                                                                <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_hide">ซ่อน</a></li>
+                                                                <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_delete">ลบ</a></li>
+                                                                <li class="order-list order-close">ปิด</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="manage-edit">
+                                                            <img src="{{ asset('../../assets/images/icons/icon-edit.svg')}}" alt="icon">
+                                                        </div> 
+                                                    </div>
+                                                    <div class="row no-gutters">
+                                                        <div class="col-lg-6">
+                                                            <div class="img-news" style="background-image: url('../../assets/images/img-news-demo2.png');">
+                                                                <div class="read-news-outer">
+                                                                    <a href="/news-detail">
+                                                                        อ่านข่าวสาร
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="content">
+                                                                <div class="date color-secondary">
+                                                                    <span>ข่าววันที่ : 5 พ.ย.</span>
+                                                                </div>
+                                                                <div class="desc-news">
+                                                                    <a href="">
+                                                                        <?php echo $CustomHelper->L(${"data_box_".$r->box_number}[1]->title,${"data_box_".$r->box_number}[1]->en_title) ?>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="social-wrapper">
+                                                                    <ul class="d-flex align-items-center">
+                                                                        <li class="facebook d-flex align-items-center not-hover">
+                                                                            <img src="{{ asset('../../assets/images/icons/icon-social-facebook.svg')}}" alt="icon"><span class="color-secondary">5</span> 
+                                                                        </li>
+                                                                        <li class="twitter d-flex align-items-center not-hover">
+                                                                            <img src="{{ asset('../../assets/images/icons/icon-social-twitter.svg')}}" alt="icon"><span class="color-secondary">5</span> 
+                                                                        </li>
+                                                                        <li class="line d-flex align-items-center not-hover">
+                                                                            <img src="{{ asset('../../assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"><span class="color-secondary">5</span> 
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-6">
-                                                        <div class="content">
-                                                            <div class="date color-secondary">
-                                                                <span>ข่าววันที่ : 5 พ.ย.</span>
-                                                            </div>
-                                                            <div class="desc-news">
-                                                                <a href="">
-                                                                    หน่วยงานภาครัฐและภาคเอกชนประชุมกรรมการดำเนินงานด้านการป้องกัน...
-                                                                </a>
-                                                            </div>
-                                                            <div class="social-wrapper">
-                                                                <ul class="d-flex align-items-center">
-                                                                    <li class="facebook d-flex align-items-center not-hover">
-                                                                        <img src="{{ asset('../../assets/images/icons/icon-social-facebook.svg')}}" alt="icon"><span class="color-secondary">5</span> 
-                                                                    </li>
-                                                                    <li class="twitter d-flex align-items-center not-hover">
-                                                                        <img src="{{ asset('../../assets/images/icons/icon-social-twitter.svg')}}" alt="icon"><span class="color-secondary">5</span> 
-                                                                    </li>
-                                                                    <li class="line d-flex align-items-center not-hover">
-                                                                        <img src="{{ asset('../../assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"><span class="color-secondary">5</span> 
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
                                                 </div>
+
                                             </div>
-                                        </div>
-                                        <div class="col-lg-12">
+                                            <div class="col-lg-12">
 
-                                            <!-- <div class="group-mange-section">
-                                                <div class="manage-tools">
-                                                    <ul>
-                                                        <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('กำลังโหลด...','/manage-admin/edit?m=news');">แก้ไข</a></li> 
-                                                        <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_hide">ซ่อน</a></li>
-                                                        <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_delete">ลบ</a></li>
-                                                        <li class="order-list order-close">ปิด</li>
-                                                    </ul>
-                                                </div>
-                                                <div class="manage-edit">
-                                                    <img src="{{ asset('../../assets/images/icons/icon-edit.svg')}}" alt="icon">
-                                                </div> 
-                                            </div> -->
-
-                                            <div class="sub-news">
-                                                <div class="group-mange-section">
+                                                <!-- <div class="group-mange-section">
                                                     <div class="manage-tools">
                                                         <ul>
-                                                            <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('NEWS','manage-admin/edit?m=portal_website_news');">แก้ไข</a></li> 
+                                                            <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('กำลังโหลด...','/manage-admin/edit?m=news');">แก้ไข</a></li> 
                                                             <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_hide">ซ่อน</a></li>
                                                             <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_delete">ลบ</a></li>
                                                             <li class="order-list order-close">ปิด</li>
@@ -193,46 +193,76 @@
                                                     <div class="manage-edit">
                                                         <img src="{{ asset('../../assets/images/icons/icon-edit.svg')}}" alt="icon">
                                                     </div> 
-                                                </div>
-                                                <div class="row no-gutters">
-                                                    <div class="col-lg-6">
-                                                        <div class="img-news" style="background-image: url('../../assets/images/img-news-demo3.png');">
-                                                            <div class="read-news-outer">
-                                                                <a href="/news-detail">
-                                                                    อ่านข่าวสาร
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6">
-                                                    <div class="content">
-                                                            <div class="date color-secondary">
-                                                                <span>ข่าววันที่ : 5 พ.ย.</span>
-                                                            </div>
-                                                            <div class="desc-news">
-                                                                <a href="/news-detail">
-                                                                    หน่วยงานภาครัฐและภาคเอกชนประชุมกรรมการดำเนินงานด้านการป้องกัน...
-                                                                </a>
-                                                            </div>
-                                                            <div class="social-wrapper">
-                                                                <ul class="d-flex align-items-center">
-                                                                    <li class="facebook d-flex align-items-center not-hover">
-                                                                        <img src="{{ asset('../../assets/images/icons/icon-social-facebook.svg')}}" alt="icon"><span class="color-secondary">5</span> 
-                                                                    </li>
-                                                                    <li class="twitter d-flex align-items-center not-hover">
-                                                                        <img src="{{ asset('../../assets/images/icons/icon-social-twitter.svg')}}" alt="icon"><span class="color-secondary">5</span> 
-                                                                    </li>
-                                                                    <li class="line d-flex align-items-center not-hover">
-                                                                        <img src="{{ asset('../../assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"><span class="color-secondary">5</span> 
-                                                                    </li>
+                                                </div> -->
+                                                
+                                                <?php 
+                                                if(isset(${"data_box_".$r->box_number}[2]->title))
+                                                {
+                                                    ?>
+                                                    <div class="sub-news">
+                                                        <div class="group-mange-section">
+                                                            <div class="manage-tools">
+                                                                <ul>
+                                                                    <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('NEWS','manage-admin/edit?m=portal_website_news');">แก้ไข</a></li> 
+                                                                    <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_hide">ซ่อน</a></li>
+                                                                    <li class="order-list"><a style="color: #000;" href="#" data-toggle="modal" data-target="#modal_Alert_delete">ลบ</a></li>
+                                                                    <li class="order-list order-close">ปิด</li>
                                                                 </ul>
                                                             </div>
+                                                            <div class="manage-edit">
+                                                                <img src="{{ asset('../../assets/images/icons/icon-edit.svg')}}" alt="icon">
+                                                            </div> 
+                                                        </div>
+                                                        <div class="row no-gutters">
+                                                            <div class="col-lg-6">
+                                                                <div class="img-news" style="background-image: url('../../assets/images/img-news-demo3.png');">
+                                                                    <div class="read-news-outer">
+                                                                        <a href="/news-detail">
+                                                                            อ่านข่าวสาร
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                            <div class="content">
+                                                                    <div class="date color-secondary">
+                                                                        <span>ข่าววันที่ : 5 พ.ย.</span>
+                                                                    </div>
+                                                                    <div class="desc-news">
+                                                                        <a href="/news-detail">
+                                                                            <?php echo $CustomHelper->L(${"data_box_".$r->box_number}[2]->title,${"data_box_".$r->box_number}[2]->en_title) ?>
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="social-wrapper">
+                                                                        <ul class="d-flex align-items-center">
+                                                                            <li class="facebook d-flex align-items-center not-hover">
+                                                                                <img src="{{ asset('../../assets/images/icons/icon-social-facebook.svg')}}" alt="icon"><span class="color-secondary">5</span> 
+                                                                            </li>
+                                                                            <li class="twitter d-flex align-items-center not-hover">
+                                                                                <img src="{{ asset('../../assets/images/icons/icon-social-twitter.svg')}}" alt="icon"><span class="color-secondary">5</span> 
+                                                                            </li>
+                                                                            <li class="line d-flex align-items-center not-hover">
+                                                                                <img src="{{ asset('../../assets/images/icons/icon-social-googleplus.svg')}}" alt="icon"><span class="color-secondary">5</span> 
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                    <?php
+                                                }
+                                                ?>
+                                                
+
                                             </div>
                                         </div>
-                                    </div>
+                                        <?php
+                                    }
+                                    ?>
+
+                                    
+
                                 </div>
                             </div>
                         </div>

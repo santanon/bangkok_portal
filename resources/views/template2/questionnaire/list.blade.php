@@ -22,7 +22,7 @@
                         <div class="col-lg-3">
                             <div class="input-custom inp-calendar">
                                 <input class="style-input" type="text" name="datefilter" placeholder="จากวันที่ - ถึงวันที่" />
-                                <div class="icon-calendar"><i class="far fa-calendar"></i></div>
+                                <div class="icon-calendar"><em class="far fa-calendar"></em></div>
                             </div>
                         </div>
                         <div class="col-lg-4">

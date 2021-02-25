@@ -54,12 +54,12 @@
                                                         <ul>
                                                             <li>
                                                                 <a href="" title="facebook">
-                                                                    <i class="fab fa-facebook-f"></i>
+                                                                    <em class="fab fa-facebook-f"></em>
                                                                 </a>
                                                             </li>
                                                             <li>
                                                                 <a href="" title="twitter">
-                                                                    <i class="fab fa-twitter"></i>
+                                                                    <em class="fab fa-twitter"></em>
                                                                 </a>
                                                             </li>
                                                         </ul>
@@ -89,12 +89,12 @@
                                                         <ul>
                                                             <li>
                                                                 <a href="" title="facebook">
-                                                                    <i class="fab fa-facebook-f"></i>
+                                                                    <em class="fab fa-facebook-f"></em>
                                                                 </a>
                                                             </li>
                                                             <li>
                                                                 <a href="" title="twitter">
-                                                                    <i class="fab fa-twitter"></i>
+                                                                    <em class="fab fa-twitter"></em>
                                                                 </a>
                                                             </li>
                                                         </ul>
@@ -124,12 +124,12 @@
                                                         <ul>
                                                             <li>
                                                                 <a href="" title="facebook">
-                                                                    <i class="fab fa-facebook-f"></i>
+                                                                    <em class="fab fa-facebook-f"></em>
                                                                 </a>
                                                             </li>
                                                             <li>
                                                                 <a href="" title="twitter">
-                                                                    <i class="fab fa-twitter"></i>
+                                                                    <em class="fab fa-twitter"></em>
                                                                 </a>
                                                             </li>
                                                         </ul>
@@ -159,12 +159,12 @@
                                                         <ul>
                                                             <li>
                                                                 <a href="" title="facebook">
-                                                                    <i class="fab fa-facebook-f"></i>
+                                                                    <em class="fab fa-facebook-f"></em>
                                                                 </a>
                                                             </li>
                                                             <li>
                                                                 <a href="" title="twitter">
-                                                                    <i class="fab fa-twitter"></i>
+                                                                    <em class="fab fa-twitter"></em>
                                                                 </a>
                                                             </li>
                                                         </ul>

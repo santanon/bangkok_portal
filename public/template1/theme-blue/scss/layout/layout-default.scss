@@ -165,7 +165,7 @@
                         color: #525252;
                         &.text-alert-system{
                             font-size: 2rem;
-                            i{
+                            .fas, .far, .fa{
                                 font-size: 50px;
                                 margin-right: 10px;
                             }
@@ -396,7 +396,7 @@ $howManySteps: 100; //this needs to be even.
                     font-size: 1.8rem;
                     font-weight: $font-regular;
                     color: #525252;
-                    i{
+                    .fas, .far, .fa{
                         font-size: 1.4rem;
                         color: #525252;
                     }
@@ -408,7 +408,7 @@ $howManySteps: 100; //this needs to be even.
                         color: #fff;
                         padding: 5px 8px;
                         margin-left: 5px;
-                        i{
+                        .fas, .far, .fa{
                             margin-right: 5px;
                         }
                     }
@@ -579,7 +579,7 @@ $howManySteps: 100; //this needs to be even.
                             position: absolute;
                             top: 10px;
                             right: 10px;
-                            i{
+                            .fas, .far, .fa{
                                 font-size: 2rem;
                             }
                         }
@@ -1029,7 +1029,7 @@ $howManySteps: 100; //this needs to be even.
                                     font-size: 1.6rem;
                                     font-weight: $font-regular;
 
-                                    i{
+                                    .fas, .far, .fa{
                                         font-size: 1.4rem;
                                         margin-right: 5px;
                                     }
@@ -2199,7 +2199,7 @@ $howManySteps: 100; //this needs to be even.
                                 color: #fff;
                                 border-radius: 0;
                                 &.icon{
-                                    i{
+                                    .fas, .far, .fa{
                                         font-size: 1.4rem;
                                         margin-right: 10px;
                                     }
@@ -2477,7 +2477,7 @@ $howManySteps: 100; //this needs to be even.
                 color: #525252;
                 font-size: 1.6rem;
                 font-weight: $font-regular;
-                i{
+                .fas, .far, .fa{
                     font-size: 1.4rem;
                     margin-right: 5px;
                 }
@@ -2836,7 +2836,7 @@ $howManySteps: 100; //this needs to be even.
                     color: #525252;
                     font-size: 1.6rem;
                     font-weight: $font-regular;
-                    i{
+                    .fas, .far, .fa{
                         font-size: 1.4rem;
                         margin-right: 5px;
                     }
@@ -3021,7 +3021,7 @@ $howManySteps: 100; //this needs to be even.
                 height: 35px;
                 text-align: center;
                 transition: all 0.3s ease;
-                i{
+                .fas, .far, .fa{
                     color: #fff;
                     font-size: 1.6rem;
                 }

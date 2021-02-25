@@ -86,7 +86,7 @@
                                                         ๘๗-๘๙
                                                     </a>
                                                 </div>
-                                                <div class="text-onbottom"><i class="fas fa-map-marker-alt"></i> ถนนเสรีไทย ฝั่งเลขคู่ <i class="fas fa-angle-double-right"></i></div>
+                                                <div class="text-onbottom"><em class="fas fa-map-marker-alt"></em> ถนนเสรีไทย ฝั่งเลขคู่ <em class="fas fa-angle-double-right"></em></div>
                                             </div>
                                         </div>
                                     </div>

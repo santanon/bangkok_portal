@@ -90,7 +90,8 @@ function sfi(title,url)
 <div class="col-md-3">
 <div class="list-menu success" data-toggle="modal" data-target="#modalpanel" onclick="sfi('กำลังโหลด...','/manage-admin/edit_website?m=setting_website');">
 <div class="icon-menu">
-<img src="{{ asset('assets/panel/icon-1.png')}}" alt="icon">
+    <!-- <img src="{{ asset('assets/panel/icon-1.png')}}" alt="icon"> -->
+    <i class="fas fa-cog"></i>
 </div>
 <div class="text-menu">ตั้งค่าเว็บไซต์</div> 
 </div>

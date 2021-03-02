@@ -3,7 +3,7 @@
         <!-- Close -->
         <div class="canvas-header">
             <div class="close-menu" id="nav-close">
-                <i class="fas fa-times"></i> 
+                <em class="fas fa-times"></em> 
             </div>
             <div class="clearPrefix"></div>
         </div>
@@ -287,7 +287,7 @@ foreach($_SESSION['portal_website_main_menu_' . $mod . '_list'] as $r)
                                             if($_SESSION["portal_lang"] == "english")
                                             {
                                                 ?>
-                                                <span>EN</span><i class="fas fa-angle-up"></i>
+                                                <span>EN</span><em class="fas fa-angle-up"></em>
                                                 <ul class="multi-lang">
                                                     <li>
                                                         <a href="javascript:;" onclick="window.location = a_lang;">TH</a>
@@ -298,7 +298,7 @@ foreach($_SESSION['portal_website_main_menu_' . $mod . '_list'] as $r)
                                             else 
                                             {
                                                 ?>
-                                                <span>TH</span><i class="fas fa-angle-up"></i>
+                                                <span>TH</span><em class="fas fa-angle-up"></em>
                                                 <ul class="multi-lang">
                                                     <li>
                                                         <a href="javascript:;" onclick="window.location = b;">EN</a>
@@ -537,7 +537,7 @@ foreach($_SESSION['portal_website_main_menu_' . $mod . '_list'] as $r)
         <div id="menu_sticky" class="menu-sizefonts-wrapper">
             <div class="bar-menu" id="nav-expander">
                 <div class="icon-menu">
-                    <i class="fas fa-bars"></i>
+                    <em class="fas fa-bars"></em>
                 </div>
             </div>
             <div class="tools-sizefonts">

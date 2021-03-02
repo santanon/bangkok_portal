@@ -86,7 +86,7 @@
                                                 </div>
                                             </div>
                                             <div class="icon-angle">
-                                                <i class="fas fa-angle-double-right"></i>
+                                                <em class="fas fa-angle-double-right"></em>
                                             </div>
                                         </a>
                                     </div>

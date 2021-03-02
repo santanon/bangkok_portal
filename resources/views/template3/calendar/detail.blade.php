@@ -11,9 +11,9 @@
                                  2 ก.ค. 63
                             </div>
                             <div class="source-post d-flex align-items-center flex-wrap no-bg pb-3">
-                                <span><i class="far fa-calendar"></i> วันอังคาร ที่ 2 กรกฎาคม พ.ศ. 2556</span>
-                                <span><i class="fas fa-clock"></i> 06.00 น.</span>
-                                <span><i class="fas fa-map-marker-alt"></i> ถนนเสรีไทย ฝั่งเลขคู่</span>
+                                <span><em class="far fa-calendar"></em> วันอังคาร ที่ 2 กรกฎาคม พ.ศ. 2556</span>
+                                <span><em class="fas fa-clock"></em> 06.00 น.</span>
+                                <span><em class="fas fa-map-marker-alt"></em> ถนนเสรีไทย ฝั่งเลขคู่</span>
                             </div>
                         </div>
 
@@ -37,11 +37,11 @@
                                                             <input type="file" class="upload up" id="upOnly" onchange="readURL(this);" />
                                                         </div><!-- btn-orange -->
                                                     </div><!-- col-3 -->
-                                                    <div class="col-sm-1"><a class="btn-check-only"><i class="fa fa-times"></i></a></div><!-- col-1 -->
+                                                    <div class="col-sm-1"><a class="btn-check-only"><em class="fa fa-times"></em></a></div><!-- col-1 -->
                                                 </div><!--row-->
                                             </div><!--uploader-->
                                             <div class="text-center">
-                                                <a class="btn btn-save"><i class="fa fa-save"></i> Save</a>
+                                                <a class="btn btn-save"><em class="fa fa-save"></em> Save</a>
                                             </div>
                                         </div>
                                     </div>

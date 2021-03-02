@@ -36,13 +36,13 @@
                                     <div class="col-lg-2">
                                         <div class="input-custom inp-calendar">
                                             <input id="start_date" class="style-input" type="text" name="datefilter" placeholder="จากวันที่" autocomplete="off" data-provide="datepicker" data-date-language="th-th" />
-                                            <div class="icon-calendar"><i class="far fa-calendar"></i></div>
+                                            <div class="icon-calendar"><em class="far fa-calendar"></em></div>
                                         </div>
                                     </div>
                                     <div class="col-lg-2">
                                         <div class="input-custom inp-calendar">
                                             <input id="end_date" class="style-input" type="text" name="datefilter" placeholder="ถึงวันที่" autocomplete="off" data-provide="datepicker" data-date-language="th-th" />
-                                            <div class="icon-calendar"><i class="far fa-calendar"></i></div>
+                                            <div class="icon-calendar"><em class="far fa-calendar"></em></div>
                                         </div>
                                     </div>
                                     <div class="col-lg-4">
@@ -87,7 +87,7 @@
                                         <div class="row no-gutters">
                                             <div class="col-sm-8">
                                                 <div class="img-news" style="background-image: url('../../assets/images/img-news-demo1.png');">
-                                                    <div class="pin"><i class="fas fa-thumbtack"></i></div>
+                                                    <div class="pin"><em class="fas fa-thumbtack"></em></div>
                                                     <div class="read-news-outer">
                                                         <a href="/news-detail-2">
                                                             อ่านข่าวสาร
@@ -615,7 +615,7 @@
                                     <div class="row no-gutters">
                                         <div class="col-lg-6">
                                             <div class="add-news">
-                                                <i class="fas fa-plus"></i>
+                                                <em class="fas fa-plus"></em>
                                             </div>
                                         </div>
                                     </div>

@@ -16,7 +16,7 @@
             </div>
             <div class="post-content d-flex justify-content-between align-items-center">
                 <div class="public-post">
-                    <i class="far fa-calendar"></i> 2 กรกฎาคม 2556
+                    <em class="far fa-calendar"></em> 2 กรกฎาคม 2556
                 </div>
                 <div class="source-post">
                     แหล่งที่มา : <span>PR BKK</span>
@@ -80,11 +80,11 @@
                                                 <input type="file" class="upload up" id="upOnly" onchange="readURL(this);" />
                                             </div><!-- btn-orange -->
                                         </div><!-- col-3 -->
-                                        <div class="col-sm-1"><a class="btn-check-only"><i class="fa fa-times"></i></a></div><!-- col-1 -->
+                                        <div class="col-sm-1"><a class="btn-check-only"><em class="fa fa-times"></em></a></div><!-- col-1 -->
                                     </div><!--row-->
                                 </div><!--uploader-->
                                 <div class="text-center">
-                                    <a class="btn btn-save"><i class="fa fa-save"></i> Save</a>
+                                    <a class="btn btn-save"><em class="fa fa-save"></em> Save</a>
                                 </div>
                             </div>
                         </div>
@@ -151,12 +151,12 @@
                                                 <input type="file" class="upload up" id="up" onchange="readURL(this);" />
                                             </div><!-- btn-orange -->
                                         </div><!-- col-3 -->
-                                        <div class="col-sm-1"><a class="btn-check"><i class="fa fa-times"></i></a></div><!-- col-1 -->
+                                        <div class="col-sm-1"><a class="btn-check"><em class="fa fa-times"></em></a></div><!-- col-1 -->
                                     </div><!--row-->
                                 </div><!--uploader-->
                                 <div class="text-center">
-                                    <a class="btn btn-new"><i class="fa fa-plus"></i> Add new</a>
-                                    <a class="btn btn-save"><i class="fa fa-save"></i> Save</a>
+                                    <a class="btn btn-new"><em class="fa fa-plus"></em> Add new</a>
+                                    <a class="btn btn-save"><em class="fa fa-save"></em> Save</a>
                                 </div>
                             </div>
                         </div>
@@ -182,7 +182,7 @@
                                     </div>
                                 </div><!--row-->
                                 <div class="text-center">
-                                    <a class="btn btn-save"><i class="fa fa-save"></i> Save</a>
+                                    <a class="btn btn-save"><em class="fa fa-save"></em> Save</a>
                                 </div>
                             </div>
                         </div>
@@ -211,11 +211,11 @@
                                                 <input type="file" class="upload up" id="upOnly" onchange="readURL(this);" />
                                             </div><!-- btn-orange -->
                                         </div><!-- col-3 -->
-                                        <div class="col-sm-1"><a class="btn-check-only-media"><i class="fa fa-times"></i></a></div><!-- col-1 -->
+                                        <div class="col-sm-1"><a class="btn-check-only-media"><em class="fa fa-times"></em></a></div><!-- col-1 -->
                                     </div><!--row-->
                                 </div><!--uploader-->
                                 <div class="text-center">
-                                    <a class="btn btn-save"><i class="fa fa-save"></i> Save</a>
+                                    <a class="btn btn-save"><em class="fa fa-save"></em> Save</a>
                                 </div>
                             </div>
                         </div>
@@ -354,7 +354,7 @@
                                         </ul>
                                     </div>
                                     <div class="btn-custom btn-custom-skew">
-                                        <button class="btn btn-primary btn-skew" type="button"><i class="far fa-thumbs-up"></i> VOTE</button>
+                                        <button class="btn btn-primary btn-skew" type="button"><em class="far fa-thumbs-up"></em> VOTE</button>
                                     </div>
                                 </div>
                             </form>

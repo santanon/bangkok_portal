@@ -158,12 +158,13 @@ if(!function_exists('base_url'))
 
     <!-- Manage Save -->
     <!-- <div class="manage-save">
-        <i class="fas fa-save"></i> SAVED
+        <em class="fas fa-save"></em> SAVED
     </div> -->
 
 </div>
 
 
+ 
  
 @include('template1/include.css_scripts')
 

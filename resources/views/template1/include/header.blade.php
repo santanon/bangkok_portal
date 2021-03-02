@@ -388,15 +388,14 @@ foreach($_SESSION['portal_website_main_menu_' . $mod . '_list'] as $r)
         <div class="row bg-color-secondary">
             <div class="col-lg-12 p-0">
                 <div class="group-mange-section no-mg right-0">
-                    <!--<div class="manage-tools">
+                    <div class="manage-tools">
                         <ul>
-                            <li class="order-list">จัดการ</li>
-                            <li class="order-list">ลบ</li>
-                            <li class="order-list">ซ่อน</li>
+                            <li class="order-list"><a style="color:#000000" href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('กำลังโหลด...','/manage-admin/add?m=main_menu');">เพิ่มข้อมูล</a></li>
+                            <li class="order-list"><a style="color:#000000" href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('กำลังโหลด...','/manage-admin/list?m=main_menu');">จัดการข้อมูล</a></li>
                             <li class="order-list order-close">ปิด</li>
                         </ul>
-                    </div> --> 
-                    <a href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('กำลังโหลด...','/manage-admin/list?m=main_menu');">
+                    </div>
+                    <a href="javascript:;">
                         <div class="manage-edit">
                             <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
                         </div>

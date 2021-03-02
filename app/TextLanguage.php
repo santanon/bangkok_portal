@@ -38,7 +38,7 @@ class TextLanguage
 		$lang['always'] 				= "ตลอดเวลา";
 		$lang['answer'] 				= "คำตอบ";
 		$lang['back']			 		= "ย้อนกลับ";
-		$lang['background']				= "พื้นหลัง";
+		$lang['background']				= "รูปภาพสไลด์";
 		$lang['back_to'] 				= "ย้อนกลับไปที่";  
 		$lang['bangkok_portal'] 		= "หน่วยงานกรุงเทพมหานคร";  
 		$lang['banner']				 	= "แบนเนอร์";  
@@ -140,7 +140,7 @@ class TextLanguage
 		$lang['highlight_banner_1']		= "ไฮไลท์";  
 		$lang['highlight_banner_2']		= "แบนเนอร์";  
 		$lang['home']					= "หน้าหลัก";  
-		$lang['home_bg']				= "รูปภาพพื้นหลัง"; 
+		$lang['home_bg']				= "รูปภาพสไลด์"; 
 		$lang['css_info']				= "โค้ด CSS"; 
 		$lang['html_head_info']			= "โค้ด HTML (ด้านบน)"; 
 		$lang['html_body_info']			= "โค้ด HTML (เนื้อหา)"; 
@@ -271,11 +271,11 @@ class TextLanguage
 		$lang['send_message']			= "ส่งข้อความ";  
 		$lang['send_message_success']	= "ส่งข้อความสำเร็จ";  
 		$lang['setting'] 				= "ตั้งค่า";
-		$lang['setting_bg'] 			= "ตั้งค่าพื้นหลัง";
+		$lang['setting_bg'] 			= "ตั้งค่ารูปภาพสไลด์";
 		$lang['setting_website'] 		= "ตั้งค่าเว็บไซต์";
 		$lang['share_center'] 			= "ศุนย์กลางข้อมูล";
 		$lang['sitemap'] 				= "แผนผังเว็บไซต์";
-		$lang['slide_background'] 		= "พื้นหลัง";  
+		$lang['slide_background'] 		= "รูปภาพสไลด์";  
 		$lang['slogan_website'] 		= "สโลแกนเว็บไซต์";   
 		$lang['social'] 				= "สังคมออนไลน์"; 
 		$lang['sort'] 					= "เรียง"; 
@@ -320,7 +320,7 @@ class TextLanguage
 		$lang['url_target'] 			= "การเปิด URL";
 		$lang['use'] 					= "ใช้งาน"; 
 		$lang['use_count'] 				= "จำนวนผู้เลือก"; 
-		$lang['use_template_background']	= "เปลี่ยนไปใช้รูปพื้นหลังของเทมเพลตแทนรูปเดิม";
+		$lang['use_template_background']	= "เปลี่ยนไปใช้รูปภาพสไลด์ของเทมเพลตแทนรูปเดิม";
 		$lang['username'] 				= "ชื่อผู้ใช้"; 
 		$lang['username_is_invalid'] 	= "ชื่อผู้ใช้ หรือ รหัสผ่าน ไม่ถูกต้อง";
 		$lang['username_does_not_exist'] = "ชื่อผู้ใช้ไม่มีในระบบ"; 
@@ -378,7 +378,7 @@ class TextLanguage
 		$lang['menu_sub_home_mainmenu'] = "เมนูหลัก"; 
 		$lang['menu_sub_home_search']	= "ค้นหา"; 
 		$lang['menu_sub_home_lang']		= "ภาษา"; 
-		$lang['menu_sub_home_bg']		= "รูปภาพพื้นหลัง"; 
+		$lang['menu_sub_home_bg']		= "รูปภาพสไลด์"; 
 		$lang['menu_sub_home_contentbox'] = "กล่องเนื้อหา"; 
 		$lang['menu_sub_home_footmenu']	= "เมนูด้านล่าง"; 
 		$lang['menu_sub_home_copyright'] = "ข้อความด้านล่าง"; 
@@ -389,7 +389,7 @@ class TextLanguage
 		$lang['menu_sub_setting_website'] = "เว็บไซต์"; 
 		$lang['menu_sub_setting_account'] = "ข้อมูลบัญชี"; 
 		$lang['menu_sub_setting_profile'] = "ข้อมูลส่วนตัว"; 
-		$lang['menu_sub_setting_bg']	  = "รูปพื้นหลังทั้งหมด"; 
+		$lang['menu_sub_setting_bg']	  = "รูปภาพสไลด์ทุกหน้า"; 
 		$lang['menu_sub_setting_html_css']	  = "โค้ด HTML & CSS"; 
 		
 		$lang['menu_sub_member_add']	= "เพิ่มสมาชิก";

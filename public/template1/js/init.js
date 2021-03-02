@@ -105,6 +105,7 @@ $(function () {
 
 
     // ปฏิทินกิจกรรม
+    /*
     const check_list_1 = $('#slide_1').children('.item').length;
     $('#slide_1').on('init', function (event, slick, direction) {
         if (check_list_1 < 3) {
@@ -133,9 +134,10 @@ $(function () {
             }
         ]
     });
-
+*/
 
     // คำถามที่พบบ่อย
+    /*
     const check_list_2 = $('#slide_2').children('.item').length;
     $('#slide_2').on('init', function (event, slick, direction) {
         if (check_list_2 < 3) {
@@ -164,6 +166,7 @@ $(function () {
             }
         ]
     });
+*/
 
     // อัลบั้มภาพ
     const check_list_3 = $('#slide_3').children('li').length;
@@ -210,7 +213,7 @@ $(function () {
     });
 
     // DOWNLOAD
-    const check_list_4 = $('#slide_4').children('li').length;
+    /*const check_list_4 = $('#slide_4').children('li').length;
     $('#slide_4').on('init', function (event, slick, direction) {
         if (check_list_4 < 5) {
             $('#action-slide_4').parents('.action-slide').css('display','none');
@@ -251,9 +254,10 @@ $(function () {
               }
             }
         ]
-    });
+    });*/
 
     // BANNER
+    /*
     const check_list_5 = $('#slide_5').children('li').length;
     $('#slide_5').on('init', function (event, slick, direction) {
         if (check_list_4 < 5) {
@@ -295,9 +299,10 @@ $(function () {
               }
             }
         ]
-    });
+    });*/
 
     // QUESTIONNAIRE
+    /*
     const check_list_6 = $('#slide_6').children('.item').length;
     $('#slide_6').on('init', function (event, slick, direction) {
         if (check_list_6 < 3) {
@@ -326,7 +331,7 @@ $(function () {
             }
         ]
     });
-
+*/
     // สถานี VDO
     const check_list_7 = $('#slide_7').children('li').length;
     $('#slide_7').on('init', function (event, slick, direction) {

@@ -3,9 +3,8 @@
     <div class="group-mange-section">
         <div class="manage-tools">
             <ul>
-                <li class="order-list">จัดการ</li>
-                <li class="order-list">ลบ</li>
-                <li class="order-list">ซ่อน</li>
+                <li class="order-list"><a style="color:#000000" href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('กำลังโหลด...','/manage-admin/add?m=poll');">เพิ่มข้อมูล</a></li>
+                <li class="order-list"><a style="color:#000000" href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('กำลังโหลด...','/manage-admin/set_cat?m=poll&id=<?php echo @${"data_box_".$r->box_number."_".$this_box_real_id}[0]->cat_id ?>');">จัดการข้อมูล</a></li>
                 <li class="order-list order-close">ปิด</li>
             </ul>
         </div> 
@@ -20,13 +19,43 @@
         <div class="inner-content">
             <div class="top-content">
                 <div class="group-text">
-                    <h3 class="title color-primary">VOTE</h3>
-                    <p class="desc color-secondary">The Bangkok Metropolitan Council Secretariat </p>
+                    <h3 class="title color-primary"><?php
+                        
+                        if($this_box_id != '')
+                        {
+                            echo $CustomHelper->L(${"data_box_cat_".$r->box_number."_".$this_box_real_id}[0]->title,${"data_box_cat_".$r->box_number."_".$this_box_real_id}[0]->en_title);
+                        }
+                        else 
+                        {
+                            ?>โพลล์/โหวต<?php
+                        }
+                        
+                         ?></h3>
+                                <p class="desc color-secondary"><?php 
+                                
+                                if($this_box_id != '')
+                                {
+                                    echo $CustomHelper->L(${"data_box_cat_".$r->box_number."_".$this_box_real_id}[0]->en_title,"");
+                                }
+                                
+                                 ?> </p> 
                 </div>
                 <div class="group-gotoall">
-                    <a href="/vote" class="btn btn-outline-dark">หัวข้อโหวตทั้งหมด</a>
+                    <?php 
+                    if(isset(${"data_box_link_".$r->box_number."_".$this_box_real_id}) && ${"data_box_link_".$r->box_number."_".$this_box_real_id} != '')
+                    {
+                        ?><a href="<?php echo ${"data_box_link_".$r->box_number."_".$this_box_real_id} ?>" class="btn btn-outline-dark">หัวข้อโหวตทั้งหมด</a><?php
+                    }
+                    else
+                    {
+                        ?><?php
+                    }
+                    ?>  
                 </div>
             </div>
+
+ 
+
             <div class="main-content">
                 <div class="group-vote">
                     <div class="score-wrapper bg-color-primary">
@@ -63,54 +92,32 @@
                         @csrf <!-- {{ csrf_field() }} -->
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <div class="text-question">
-                                        ร่วมส่งแรงใจให้เยาวชนนักเตะรุ่นใหม่ชิงชัยเอกสารที่ต้องใช้ 
-                                        1. สูติบัตร พร้อมสำเนา  2. ทะเบียนบ้าน พร้อมสำเนา
+                                    <div class="text-question"> 
+                                        <?php echo $CustomHelper->L(${"data_box_".$r->box_number."_".$this_box_real_id}[0]->title,${"data_box_".$r->box_number."_".$this_box_real_id}[0]->en_title) ?>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="choice-question">
                                         <ul>
-                                            <li>
-                                                <div class="input-custom">
-                                                    <div class="custom-control custom-switch">
-                                                        <input type="radio" class="custom-control-input" id="customSwitch1" name="Ans_Vote">
-                                                        <label class="custom-control-label" for="customSwitch1">พอใจมากที่สุด</label>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="input-custom">
-                                                    <div class="custom-control custom-switch">
-                                                        <input type="radio" class="custom-control-input" id="customSwitch2" name="Ans_Vote">
-                                                        <label class="custom-control-label" for="customSwitch2">พอใจมาก</label>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="input-custom">
-                                                    <div class="custom-control custom-switch">
-                                                        <input type="radio" class="custom-control-input" id="customSwitch3" name="Ans_Vote">
-                                                        <label class="custom-control-label" for="customSwitch3">ปานกลาง</label>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="input-custom">
-                                                    <div class="custom-control custom-switch">
-                                                        <input type="radio" class="custom-control-input" id="customSwitch4" name="Ans_Vote">
-                                                        <label class="custom-control-label" for="customSwitch4">เฉยๆ</label>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="input-custom">
-                                                    <div class="custom-control custom-switch">
-                                                        <input type="radio" class="custom-control-input" id="customSwitch5" name="Ans_Vote">
-                                                        <label class="custom-control-label" for="customSwitch5">ไม่น่าพอใจ</label>
-                                                    </div>
-                                                </div>
-                                            </li>
+                                            <?php 
+                                            for($i=1;$i<=10;$i++)
+                                            {
+                                                if($CustomHelper->L(${"data_box_".$r->box_number."_".$this_box_real_id}[0]->{'c'.$i},${"data_box_".$r->box_number."_".$this_box_real_id}[0]->{'en_c'.$i}) != '')
+                                                {
+                                                    ?>
+                                                    <li>
+                                                        <div class="input-custom">
+                                                            <div class="custom-control custom-switch">
+                                                                <input type="radio" class="custom-control-input" id="customSwitch<?php echo $i ?>" name="Ans_Vote" value="<?php echo $i ?>"> 
+                                                                <label class="custom-control-label" for="customSwitch<?php echo $i ?>"><?php echo $CustomHelper->L(${"data_box_".$r->box_number."_".$this_box_real_id}[0]->{'c'.$i},${"data_box_".$r->box_number."_".$this_box_real_id}[0]->{'en_c'.$i}) ?></label>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <?php
+                                                }
+                                               
+                                            }
+                                            ?> 
                                         </ul>
                                         <div class="btn-custom width-full d-flex justify-content-end">
                                             <button class="btn btn-primary" type="button">VOTE</button>
@@ -141,36 +148,24 @@
 
                     <div class="score-choice">
                         <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                                <div class="text-score">
-                                    <div class="num-vote color-primary">545</div>
-                                    <div class="text-vote">พอใจมากที่สุด</div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                                <div class="text-score">
-                                    <div class="num-vote color-primary">224</div>
-                                    <div class="text-vote">พอใจมาก</div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                                <div class="text-score">
-                                    <div class="num-vote color-primary">105</div>
-                                    <div class="text-vote">ปานกลาง</div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                                <div class="text-score">
-                                    <div class="num-vote color-primary">105</div>
-                                    <div class="text-vote">เฉยๆ</div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                                <div class="text-score">
-                                    <div class="num-vote color-primary">0</div>
-                                    <div class="text-vote">ไม่น่าพอใจ</div>
-                                </div>
-                            </div>
+
+                            <?php 
+                            for($i=1;$i<=10;$i++)
+                            {
+                                if($CustomHelper->L(${"data_box_".$r->box_number."_".$this_box_real_id}[0]->{'c'.$i},${"data_box_".$r->box_number."_".$this_box_real_id}[0]->{'en_c'.$i}) != '')
+                                {
+                                    ?>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                        <div class="text-score">
+                                            <div class="num-vote color-primary"><?php echo ${"data_box_".$r->box_number."_".$this_box_real_id}[0]->{'p'.$i} ?></div>
+                                            <div class="text-vote"><?php echo $CustomHelper->L(${"data_box_".$r->box_number."_".$this_box_real_id}[0]->{'c'.$i},${"data_box_".$r->box_number."_".$this_box_real_id}[0]->{'en_c'.$i}) ?></div>
+                                        </div>
+                                    </div> 
+                                    <?php
+                                }
+                               
+                            }
+                            ?>  
                         </div>
                     </div>
                 </div>

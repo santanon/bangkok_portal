@@ -48,75 +48,83 @@ if(!function_exists('base_url'))
         <div class="group-section-content" id="manage_dragdrop">
  
             <?php  
+            $_SESSION['arr_script_slide'] = "";
+            $_SESSION['arr_script_slide_d'] = "";
+            $_SESSION['arr_script_slide_b'] = "";
+            $_SESSION['arr_script_slide_f'] = "";
+            $_SESSION['arr_script_slide_q'] = "";
+            $have_gallery = false;
             $count_this = 1;
+            $gallery_id = "0";
+            $vdo_id = "0"; 
             foreach($box as $r)
-            {
-                if($r->box_number == 1)
+            { 
+                if(trim($r->box2) == '')
                 {
                     $this_box_id = $r->box1;
-                    ?>
-                    @include('template1/news')
-                    <?php
-                }
-                else if($r->box_number == 2)
-                {
-                    $this_box_id = $r->box1;
-                    ?>
-                    @include('template1/faq')
-                    <?php
-                }
-                else if($r->box_number == 3)
-                {
-                    $this_box_id = $r->box1;
-                    ?>
-                    @include('template1/calendar')
-                    <?php
-                }
-                else if($r->box_number == 4)
-                {
-                    $this_box_id = $r->box1;
-                    ?>
-                    @include('template1/album')
-                    <?php
-                }
-                else if($r->box_number == 5)
-                {
-                    $this_box_id = $r->box1;
-                    ?>
-                    @include('template1/vdo')
-                    <?php
-                }
-                else if($r->box_number == 6)
-                {
-                    $this_box_id = $r->box1;
-                    ?>
-                    @include('template1/download')
-                    <?php
-                }
-                else if($r->box_number == 7)
-                {
-                    $this_box_id = $r->box1;
-                    ?>
-                    @include('template1/bannerlink')
-                    <?php
-                }
-                else if($r->box_number == 8)
-                {
-                    $this_box_id = $r->box1;
-                    ?>
-                    @include('template1/questionnaire')
-                    <?php
-                }
-                else if($r->box_number == 9)
-                {
-                    $this_box_id = $r->box1;
-                    ?>
-                    @include('template1/vote')
-                    <?php
+                    $this_box_real_id = $r->id;
+ 
+                    if($r->box_number == 1)
+                    { 
+                        ?>
+                        @include('template1/news')
+                        <?php
+                    }
+                    else if($r->box_number == 2)
+                    { 
+                        ?>
+                        @include('template1/faq')
+                        <?php
+                    }
+                    else if($r->box_number == 3)
+                    { 
+                        ?>
+                        @include('template1/calendar')
+                        <?php
+                    }
+                    else if($r->box_number == 4)
+                    { 
+                        $have_gallery = true; 
+                        $gallery_id = $this_box_real_id;
+                        ?>
+                        @include('template1/album')
+                        <?php
+                    }
+                    else if($r->box_number == 5)
+                    { 
+                        $have_gallery = true; 
+                        $vdo_id = $this_box_real_id;
+                        ?>
+                        @include('template1/vdo')
+                        <?php
+                    }
+                    else if($r->box_number == 6)
+                    { 
+                        ?>
+                        @include('template1/download')
+                        <?php
+                    }
+                    else if($r->box_number == 7)
+                    { 
+                        ?>
+                        @include('template1/bannerlink')
+                        <?php
+                    }
+                    else if($r->box_number == 8)
+                    { 
+                        ?>
+                        @include('template1/questionnaire')
+                        <?php
+                    }
+                    else if($r->box_number == 9)
+                    {
+                        ?>
+                        @include('template1/vote')
+                        <?php
+                    } 
                 } 
             }
-            ?> 
- 
+            ?>  
         </div>
  
         
@@ -156,167 +164,7 @@ if(!function_exists('base_url'))
 </div>
 
 
-<!-- Modal -->
-<div class="modal fade" id="Modal_" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content no-border bg-color-inherit">
-            <div class="modal-close" data-dismiss="modal" aria-label="Close">
-                <div class="icon-close"></div>
-            </div>
-            <div class="modal-body p-0">
-                <div class="row no-gutters">
-                    <!-- กรณีไม่มีข้อความ -->
-                    <!-- <div class="col-md-12">
-                        <div class="group-modal">
-                            <div class="img-modal">
-                                <img src="{{ asset('template1/assets/images/img-modal-demo.png')}}" alt="icon">
-                            </div>
-                            <div class="section-btn">
-                                <ul>
-                                    <li class="bg-color-gray">
-                                        <a href="/">อ่านข่าวสาร</a>
-                                    </li>
-                                    <li class="bg-color-primary">
-                                        <a href="/">เข้าสู่เว็บไซต์</a>
-                                    </li>
-                                    <li class="bg-color-secondary">
-                                        <a href="/">Enter Site</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div> -->
-                    <!-- กรณีมีข้อความ -->
-                    <div class="col-md-12">
-                        <div class="group-modal">
-                            <div class="img-modal">
-                                <img src="{{ asset('template1/assets/images/img-modal-demo.png')}}" alt="icon">
-                            </div>
-                            <div class="section-btn">
-                                <ul>
-                                    <li class="bg-color-gray">
-                                        <a href="/">อ่านข่าวสาร</a>
-                                    </li>
-                                    <li class="bg-color-primary">
-                                        <a href="/">เข้าสู่เว็บไซต์</a>
-                                    </li>
-                                    <li class="bg-color-secondary">
-                                        <a href="/">Enter Site</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="group-modal">
-                            <div class="text-modal">
-                                Lorem Ipsum คือ เนื้อหาจำลองแบบเรียบๆ ที่ใช้กันในธุรกิจงานพิมพ์หรืองานเรียงพิมพ์ 
-                                มันได้กลายมาเป็นเนื้อหาจำลองมาตรฐานของธุรกิจดังกล่าวมาตั้งแต่ศตวรรษที่ 16
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal alert -->
-<div class="modal fade" id="modal_Alert" tabindex="-1" role="dialog" aria-labelledby="alertModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content no-border">
-      <div class="modal-header">
-        <h5 class="modal-title" id="alertModalLabel">แจ้งเตือน</h5>
-      </div>
-      <div class="modal-body">
-        <div class="group-modal">
-            <div class="text-modal text-alert-system d-flex align-items-center">
-                <em class="fas fa-exclamation-circle"></em> ข้อความระบบ
-            </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal Full screen -->
-<div class="modal fade modal-custom" id="modalpanel" tabindex="-1" role="dialog" aria-labelledby="modalpanelLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl" role="document">
-    <div class="modal-content no-border">
-        <div class="modal-header">
-            <h3 class="modal-title" id="alertModalLabel">ระบบหลังบ้าน</h3>
-            <div class="modal-close" data-dismiss="modal" aria-label="Close">
-                <div class="icon-close"></div>
-            </div>
-        </div>
-        <div class="modal-body">
-            <iframe src="/user/dashboard" height="600px" frameborder="0" allowtransparency="true"></iframe>  
-        </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade modal-custom" id="modal_full" tabindex="-1" role="dialog" aria-labelledby="modalpanelLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl" role="document">
-        <div class="modal-content no-border">
-            <div class="modal-header">
-                <h3 class="modal-title" id="alertModalLabel"><span id="modal_full_span">INFORMATION</span></h3>
-                <div class="modal-close" data-dismiss="modal" aria-label="Close">
-                    <div class="icon-close"></div>
-                </div>
-            </div>
-            <div class="modal-body">
-                <iframe id="iframe_full" height="600px" frameborder="0" allowtransparency="true"></iframe>  
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="modal_Alert_delete" tabindex="-1" role="dialog" aria-labelledby="alertModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content no-border">
-      <div class="modal-header">
-        <h5 class="modal-title" id="alertModalLabel">แจ้งเตือน</h5>
-      </div>
-      <div class="modal-body">
-        <div class="group-modal">
-            <div class="text-modal text-alert-system d-flex align-items-center">
-                <em class="fas fa-exclamation-circle" style="color: red;"></em> ยืนยันการลบ?
-            </div>
-        </div>
-      </div>
-      <div class="modal-footer"> 
-        <button type="button" class="btn btn-primary" style="background-color:red;">ลบข้อมูล</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">ยกเลิก</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="modal_Alert_hide" tabindex="-1" role="dialog" aria-labelledby="alertModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content no-border">
-        <div class="modal-header">
-          <h5 class="modal-title" id="alertModalLabel">แจ้งเตือน</h5>
-        </div>
-        <div class="modal-body">
-          <div class="group-modal">
-              <div class="text-modal text-alert-system d-flex align-items-center">
-                  <em class="fas fa-exclamation-circle"></em> ต้องการซ่อนหรือไม่?
-              </div>
-          </div>
-        </div>
-        <div class="modal-footer"> 
-          <button type="button" class="btn btn-primary">ซ่อนข้อมูล</button>
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">ยกเลิก</button>
-        </div>
-      </div>
-    </div>
-  </div>
+ 
  
 @include('template1/include.css_scripts')
 
@@ -331,70 +179,72 @@ if(!function_exists('base_url'))
 
 
 <script type="text/javascript">
-    $(document).ready(function () {
-        
-        //$('#exampleModal').modal('show')
-        
-        if($('body').hasClass('manage')){
-            $("div.group-section-content").attr('id', 'manage_dragdrop');
-            // DragDrop
-            var sortable = new Sortable(manage_dragdrop, {
-                ghostClass: "sortable-ghost",
-                chosenClass: "sortable-chosen",
-                dragClass: "sortable-drag",
-                forceFallback: true,
-                swapThreshold: 1,
-                animation: 150,
-                dataIdAttr: "data-id"
-                //handle: '.manage-dragdrop',
-            });
-            //var order = sortable.toArray();
-            //console.log(order);
-            $('.getOrder_ele').click(function() {
-
-                document.getElementById('btn_save_sort_box').innerHTML = 'กำลังบันทึก...';
-
-                var order = sortable.toArray(); 
-                //alert(order);
-                $.ajax({url: "../manage-admin/save_sort_box?o="+order, success: function(result){
-                    document.getElementById('btn_save_sort_box').innerHTML = 'บันทึกสำเร็จ!';
-                }}); 
-            });
-        }else{
-            $("div.group-section-content").removeAttr("id");
-        }
-
- 
-        var swiper = new Swiper('.swiper-container', {
-            scrollbar: {
-                el: '.swiper-scrollbar',
-                hide: true,
-            },
+$(document).ready(function () {
+    
+    //$('#exampleModal').modal('show')
+    
+    if($('body').hasClass('manage')){
+        $("div.group-section-content").attr('id', 'manage_dragdrop');
+        // DragDrop
+        var sortable = new Sortable(manage_dragdrop, {
+            ghostClass: "sortable-ghost",
+            chosenClass: "sortable-chosen",
+            dragClass: "sortable-drag",
+            forceFallback: true,
+            swapThreshold: 1,
+            animation: 150,
+            dataIdAttr: "data-id"
+            //handle: '.manage-dragdrop',
         });
- 
+        //var order = sortable.toArray();
+        //console.log(order);
+        $('.getOrder_ele').click(function() {
 
+            document.getElementById('btn_save_sort_box').innerHTML = 'กำลังบันทึก...';
 
-    });
-</script>
-<!-- Gallery -->
-<link rel="stylesheet" href="{{ asset('gallery/lightgallery.css')}}">
-<script type="text/javascript" src="{{ asset('gallery/lightgallery.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('gallery/lg-thumbnail.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('gallery/lg-zoom.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('gallery/lg-fullscreen.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('gallery/lg-video.min.js') }}"></script>
-<style type="text/css">
-    #lg-zoom-in, #lg-zoom-out{
-        display: none;
+            var order = sortable.toArray(); 
+            //alert(order);
+            $.ajax({url: "../manage-admin/save_sort_box?o="+order, success: function(result){
+                document.getElementById('btn_save_sort_box').innerHTML = 'บันทึกสำเร็จ!';
+            }}); 
+        });
+    }else{
+        $("div.group-section-content").removeAttr("id");
     }
-</style>
-<script type="text/javascript">
+
+
+    var swiper = new Swiper('.swiper-container', {
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            hide: true,
+        },
+    });
+});
+</script>
+
+<?php 
+if($have_gallery == true)
+{
+    ?>
+    <!-- Gallery -->
+    <link rel="stylesheet" href="{{ asset('gallery/lightgallery.css')}}">
+    <script type="text/javascript" src="{{ asset('gallery/lightgallery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('gallery/lg-thumbnail.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('gallery/lg-zoom.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('gallery/lg-fullscreen.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('gallery/lg-video.min.js') }}"></script>
+    <style type="text/css">
+        #lg-zoom-in, #lg-zoom-out{
+            display: none;
+        }
+    </style>
+    <script type="text/javascript">
     $(document).ready(function(){
         $('#video-gallery').lightGallery({
         });
     });
-</script>
-<script>
+    </script>
+    <script>
     $(document).ready(function() {
         let $document = $(this);
 
@@ -402,90 +252,348 @@ if(!function_exists('base_url'))
             $document.data('lightGallery').destroy(true);
         });
 
-        $('#dynamic1').on('click', function(e) {
+        <?php
+        $this_loop = 1;
+        foreach(${'data_box_4_'.$gallery_id} as $r_sub)
+        { 
+            ?>
+            $('#dynamic<?php echo $this_loop ?>').on('click', function(e) {
             $(document).lightGallery({
-                dynamic: true,
-                dynamicEl: [{
-                    src: 'https://sachinchoolur.github.io/lightGallery/static/img/1.jpg',
-                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-1.jpg'
-                },{
-                    src: 'https://www.youtube.com/watch?v=meBbDqAXago',
-                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-v-y-1.jpg',
-                    poster: 'https://sachinchoolur.github.io/lightGallery/static/img/videos/y-video1-cover.jpg'
-                },{
-                    html: '#video2',
-                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/videos/y-video1-cover.jpg',
-                    poster: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-v-y-1.jpg'
-                },{
-                    src: 'https://sachinchoolur.github.io/lightGallery/static/img/4.jpg',
-                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-4.jpg'
-                }],
-                slideEndAnimatoin: false,
-                loop: false,
-                hideControlOnEnd: true,
-                download: false,
-            });
-        });
+            dynamic: true,
+            dynamicEl: [  
+            <?php 
+            if(strpos($r_sub->img1,'^') > -1)
+            {
+                $arr = explode('^',$r_sub->img1);
 
-        $('#dynamic2').on('click', function(e) {
+                if(strpos($arr[0],'|') > -1)
+                {
+                    $arr_d = explode('|',$arr[1]);
+                    $arr = explode('|',$arr[0]);
+                        
+                    $this_loop_sub = 0;
+                    foreach($arr as $arr_item)
+                    {
+                        if($arr_item != '')
+                        {
+                            ?>
+                            {
+                                src:    '<?php echo $arr_item ?>',
+                                thumb:  '<?php echo $arr_item ?>',
+                                subHtml:'<?php echo $arr_d[$this_loop_sub] ?>'
+                            },
+                            <?php
+                            $this_loop_sub++;
+                        } 
+                    }
+                }  
+            }
+            else
+            {
+                ?>
+                {
+                    src: '<?php echo $r_sub->img1 ?>',
+                    thumb: '<?php echo $r_sub->img1 ?>'
+                } 
+                <?php
+            }
+            ?> 
+            ],
+            slideEndAnimatoin: false,
+            loop: false,
+            hideControlOnEnd: true,
+            download: false,
+                });
+            });
+            <?php
+            $this_loop++;
+        }
+ 
+        $this_loop = 1;
+        foreach(${'data_box_5_'.$vdo_id} as $r_sub)
+        { 
+            ?>
+            $('#dynamicvdo<?php echo $this_loop ?>').on('click', function(e) {
             $(document).lightGallery({
-                dynamic: true,
-                dynamicEl: [{
-                    src: 'https://sachinchoolur.github.io/lightGallery/static/img/1.jpg',
-                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-1.jpg'
-                },{
-                    src: 'https://www.youtube.com/watch?v=meBbDqAXago',
-                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-v-y-1.jpg',
-                    poster: 'https://sachinchoolur.github.io/lightGallery/static/img/videos/y-video1-cover.jpg'
-                },{
-                    src: 'https://sachinchoolur.github.io/lightGallery/static/img/4.jpg',
-                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-4.jpg'
-                }],
-                slideEndAnimatoin: false,
-                loop: false,
-                hideControlOnEnd: true,
-                download: false,
+            dynamic: true,
+            dynamicEl: [  
+            <?php 
+            if(strpos($r_sub->file1,'^') > -1)
+            {
+                $arr = explode('^',$r_sub->file1);
+
+                if(strpos($arr[0],'|') > -1)
+                {
+                    $arr_d = explode('|',$arr[1]);
+                    $arr = explode('|',$arr[0]);
+                        
+                    $this_loop_sub = 0;
+                    foreach($arr as $arr_item)
+                    {
+                        if($arr_item != '')
+                        {
+                            ?>
+                            {
+                                src:    '<?php echo $arr_item ?>',
+                                thumb:  '<?php echo $arr_item ?>',
+                                subHtml:'<?php echo $arr_d[$this_loop_sub] ?>'
+                            },
+                            <?php
+                            $this_loop_sub++;
+                        } 
+                    }
+                }  
+            }
+            else
+            {
+                ?>
+                {
+                    src: '<?php echo $r_sub->img1 ?>',
+                    thumb: '<?php echo $r_sub->img1 ?>'
+                } 
+                <?php
+            }
+            ?> 
+            ],
+            slideEndAnimatoin: false,
+            loop: false,
+            hideControlOnEnd: true,
+            download: false,
+                });
             });
-        });
+            <?php
+            $this_loop++;
+        } 
+    ?>});
+    </script>
+    <?php
+}
+ ?>
+        
 
-        $('#dynamic3').on('click', function(e) {
-            $(document).lightGallery({
-                dynamic: true,
-                dynamicEl: [{
-                    src: 'https://youtu.be/YD_gvR234qg',
-                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-1.jpg'
-                },{
-                    src: 'https://youtu.be/YD_gvR234qg',
-                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-1.jpg'
-                }],
-                slideEndAnimatoin: false,
-                loop: false,
-                hideControlOnEnd: true,
-                download: false,
-            });
+ 
+<?php
+$footer1 = explode("|",$_SESSION['arr_script_slide']);
+foreach($footer1 as $script_item)
+{
+    ?>
+    <script>
+    $(document).ready(function() {
+        check_list_1 = $('#<?php echo $script_item ?>').children('.item').length;
+        $('#<?php echo $script_item ?>').on('init', function (event, slick, direction) {
+            if (check_list_1 < 3) {
+                $('#action-<?php echo $script_item ?>').parents('.action-slide .slide-wrapper').css('display','none');
+            }else{
+                $('#action-<?php echo $script_item ?>').parents('.action-slide .slide-wrapper').show();
+            }
         });
-
-
-        $('#dynamic4').on('click', function(e) {
-            $(document).lightGallery({
-                dynamic: true,
-                dynamicEl: [{
-                    src: 'https://www.youtube.com/watch?v=meBbDqAXago',
-                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-v-y-1.jpg',
-                    poster: 'https://sachinchoolur.github.io/lightGallery/static/img/videos/y-video1-cover.jpg'
-                }],
-                slideEndAnimatoin: false,
-                loop: false,
-                hideControlOnEnd: true,
-                download: false,
-            });
+        $('#<?php echo $script_item ?>').slick({
+            autoplay: false,
+            autoplaySpeed: 6000,
+            infinite: false,
+            dots: false,
+            arrows: true,
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            prevArrow: $('#action-<?php echo $script_item ?> .slide-prev'),
+            nextArrow: $('#action-<?php echo $script_item ?> .slide-next'),
+            responsive: [
+                {
+                    breakpoint: 481,
+                    settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                    }
+                }
+            ]
         });
+    } );
+    </script>
+    <?php
+}
+$footer1 = explode("|",$_SESSION['arr_script_slide_d']);
+foreach($footer1 as $script_item)
+{
+    ?>
+    <script>
+    $(document).ready(function() {
 
-        $('#modal_full').on('shown.bs.modal',function(){
-            $(this).find('iframe').attr('src',main_iframe_url); 
-            })
+         check_list_4 = $('#<?php echo $script_item ?>').children('li').length;
+    $('#<?php echo $script_item ?>').on('init', function (event, slick, direction) {
+        if (check_list_4 < 5) {
+            $('#action-<?php echo $script_item ?>').parents('.action-slide').css('display','none');
+        }else{
+            $('#action-<?php echo $script_item ?>').parents('.action-slide').show();
+        }
+    });
+    $('#<?php echo $script_item ?>').slick({
+        autoplay: false,
+        autoplaySpeed: 6000,
+        infinite: false,
+        dots: false,
+        arrows: true,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        prevArrow: $('#action-<?php echo $script_item ?> .slide-prev'),
+        nextArrow: $('#action-<?php echo $script_item ?> .slide-next'),
+        responsive: [
+            {
+              breakpoint: 1025,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+              }
+            },
+            {
+              breakpoint: 993,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 481,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+            ]
         });
-</script>
+    } );
+    </script>
+    <?php
+}
+$footer1 = explode("|",$_SESSION['arr_script_slide_b']);
+foreach($footer1 as $script_item)
+{
+    ?>
+    <script>
+    $(document).ready(function() {
+     check_list_5 = $('#<?php echo $script_item ?>').children('li').length;
+    $('#<?php echo $script_item ?>').on('init', function (event, slick, direction) {
+        if (check_list_4 < 5) {
+            $('#action-<?php echo $script_item ?>').parents('.action-slide').css('display','none');
+        }else{
+            $('#action-<?php echo $script_item ?>').parents('.action-slide').show();
+        }
+    });
+    $('#<?php echo $script_item ?>').slick({
+        autoplay: false,
+        autoplaySpeed: 6000,
+        infinite: false,
+        dots: false,
+        arrows: true,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        prevArrow: $('#action-<?php echo $script_item ?> .slide-prev'),
+        nextArrow: $('#action-<?php echo $script_item ?> .slide-next'),
+        responsive: [
+            {
+              breakpoint: 1025,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+              }
+            },
+            {
+              breakpoint: 993,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 481,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+            ]
+        });
+    } );
+    </script>
+    <?php
+}
+$footer1 = explode("|",$_SESSION['arr_script_slide_f']);
+foreach($footer1 as $script_item)
+{
+    ?>
+    <script>
+    $(document).ready(function() {
+
+        check_list_2 = $('#<?php echo $script_item ?>').children('.item').length;
+        $('#<?php echo $script_item ?>').on('init', function (event, slick, direction) {
+            if (check_list_2 < 3) {
+                $('#action-<?php echo $script_item ?>').parents('.action-slide').css('display','none');
+            }else{
+                $('#action-<?php echo $script_item ?>').parents('.action-slide').show();
+            }
+        });
+        $('#<?php echo $script_item ?>').slick({
+            autoplay: false,
+            autoplaySpeed: 6000,
+            infinite: false,
+            dots: false,
+            arrows: true,
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            prevArrow: $('#action-<?php echo $script_item ?> .slide-prev'),
+            nextArrow: $('#action-<?php echo $script_item ?> .slide-next'),
+            responsive: [
+                {
+                breakpoint: 481,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+                }
+            ]
+        }); 
+    } );
+    </script>
+    <?php
+}
+$footer1 = explode("|",$_SESSION['arr_script_slide_q']);
+foreach($footer1 as $script_item)
+{
+    ?>
+    <script>
+    $(document).ready(function() {
+          check_list_6 = $('#<?php echo $script_item ?>').children('.item').length;
+    $('#<?php echo $script_item ?>').on('init', function (event, slick, direction) {
+        if (check_list_6 < 3) {
+            $('#action-<?php echo $script_item ?>').parents('.action-slide').css('display','none');
+        }else{
+            $('#action-<?php echo $script_item ?>').parents('.action-slide').show();
+        }
+    });
+    $('#<?php echo $script_item ?>').slick({
+        autoplay: false,
+        autoplaySpeed: 6000,
+        infinite: false,
+        dots: false,
+        arrows: true,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        prevArrow: $('#action-<?php echo $script_item ?> .slide-prev'),
+        nextArrow: $('#action-<?php echo $script_item ?> .slide-next'),
+        responsive: [
+            {
+              breakpoint: 769,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+        ]
+    });
+    } );
+    </script>
+    <?php
+}
+?>
 
 @endsection
 

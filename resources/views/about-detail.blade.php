@@ -9,12 +9,16 @@ if(!function_exists('base_url'))
     }
 } 
 ?> 
-@section('title', 'เกี่ยวกับหน่วยงาน')
-@section('tagkeyword', '')
-@section('tagdescription', '')
+@section('title', $CustomHelper->L($r_title,$r_en_title).' - '.$CustomHelper->L($_SESSION['portal_website_'.$mod.'_web_name_th'],$_SESSION['portal_website_'.$mod.'_web_name_en']))
+@section('tagkeyword', $CustomHelper->L($r_title,$r_en_title).' - '.$CustomHelper->L($_SESSION['portal_website_'.$mod.'_web_name_th'],$_SESSION['portal_website_'.$mod.'_web_name_en']))
+@section('tagdescription', $CustomHelper->L($r_title,$r_en_title).' - '.$CustomHelper->L($_SESSION['portal_website_'.$mod.'_web_name_th'],$_SESSION['portal_website_'.$mod.'_web_name_en']))
 
 @extends('template1/include/start')
 @section('contentpage')
+
+<style>
+    #modal_full_span{ font-size:30px; }
+    </style>
 
 <div class="main-wrapper">
     <div class="panel-header">
@@ -27,44 +31,17 @@ if(!function_exists('base_url'))
         @include('template1/include.header')
     </header>
     
-    <div id="site-content">
-
-        <div class="banner-wrapper onlyOne">
-            <div class="group-mange-section no-mg right-0">
-                <div class="manage-tools">
-                    <ul>
-                        <li class="order-list">จัดการ</li>
-                        <li class="order-list">ลบ</li>
-                        <li class="order-list">ซ่อน</li>
-                        <li class="order-list order-close">ปิด</li>
-                    </ul>
-                </div> 
-                <div class="manage-edit">
-                    <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
-                </div>
-            </div>
-            <ul>
-                <li>
-                    <div class="bg-layer"></div>
-                    <div class="banner" style="background-image: url('../../template1/assets/images/banner/img-banner-demo2.png');"></div>
-                    <div class="item-Onbanner-outer">
-                        <div class="item-Onbanner-inner">
-                            <div class="list">
-                                <h2 class="title-banner">ข่าวสาร</h2>
-                                <p class="desc-banner">มุ่งมั่นการทำงาน แหล่งค้นคว้าการประชุม เครือข่ายมหานครอาเซียน</p>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
+    <div id="site-content"> 
+        <div class="banner-wrapper"> 
+            @include('template1/main-slide-sub')
         </div>
 
         <div class="group-section-breadcrumb">
             <div class="container">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">หน้าแรก</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">เกี่ยวกับหน่วยงาน</li>
+                        <li class="breadcrumb-item"><a href="/<?php echo $mod ?>"><?php echo $CustomHelper->L('หน้าแรก','Home') ?></a></li>
+                        <li class="breadcrumb-item active" aria-current="page"><?php echo $CustomHelper->L($r_title,$r_en_title) ?></li>
                     </ol>
                 </nav>
             </div>

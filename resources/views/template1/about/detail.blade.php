@@ -1,20 +1,21 @@
+<div align="center" class="tools">
+    <a href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('กำลังโหลด...','/manage-admin/edit?m=<?php echo $this_manage ?>&id=<?php echo $r_id ?>');"><img src="http://127.0.0.1:8000/template1/assets/images/icons/icon-edit.svg" alt="icon">&nbsp; <b style="font-size:18px;">แก้ไขข้อมูล</b></a><br><br> 
+</div>
+
 <div class="section-content">
                 <div class="container">
                     <div class="inner-content">
                         <div class="top-content">
                             <div class="group-text">
-                                <h3 class="title color-primary">เกี่ยวกับหน่วยงาน</h3>
-                                <p class="desc color-secondary">The Bangkok Metropolitan Council Secretariat </p>
+                                <h3 class="title color-primary"><?php echo $CustomHelper->L($r_title,$r_en_title) ?></h3>
+                                <p class="desc color-secondary"><?php echo $CustomHelper->L($r_en_title,$r_title) ?></p>
                             </div>
                         </div>
                         <div class="main-content border-bottom">
 
                             <!-- text editor -->
                             <div class="group-editor" id="editor">
-                                ได้จัดทำสื่อประชาสัมพันธ์สื่อองค์ความรู้ที่เกี่ยวข้องกับการป้องกันโรคติดเชื้อไวรัสโคโรนา 2109 (covid) 
-                                เพื่อสร้างความตระหนักรู้แก่กลุ่มแรงงาน ผู้ประกอบกิจการและประชาชนทั่วไปในการป้องกันตนเอง 
-                                และลดการเผยแพร่ของเชื้อดรคดังกล่าว
-                                ผ่านทางเว็บไซต์ <a href="http://www.tosh.or.th/">http://www.tosh.or.th/</a> แอพลิเคชั่น T-OSH Guide และผ่านทางช่องทาง QR Code ท้ายหนังสือนี้
+                                <?php echo $r_info ?>
                             </div>
                             
                             <!-- <div class="group-back">

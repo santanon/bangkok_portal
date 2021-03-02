@@ -58,7 +58,7 @@ class Contentbox_cat
 		$data['config_dropdown_title'] = $TextLanguage->lang(@$this->mod_cat_dropdown_title);
 		
 		$index = 0;
-		$all_mod = array('Portal_website_news_cat_model','Portal_website_faq_cat_model','Portal_website_activities_cat_model','Portal_website_gallery_cat_model','Portal_website_download_cat_model','Portal_website_banner_cat_model','Portal_website_question_cat_model','Portal_website_poll_cat_model','Portal_website_webboard_cat_model');
+		$all_mod = array('Portal_website_news_cat_model','Portal_website_faq_cat_model','Portal_website_activities_cat_model','Portal_website_gallery_cat_model','Portal_website_vdo_cat_model','Portal_website_download_cat_model','Portal_website_banner_cat_model','Portal_website_question_cat_model','Portal_website_poll_cat_model');
 		foreach($all_mod as $all)
 		{
 			$q = "SELECT * FROM ".$CustomHelper->model_to_table($all)." WHERE web_id = ? AND status = '1' ORDER BY title ASC";	 	
@@ -197,8 +197,9 @@ class Contentbox_cat
 			$data['config_footer_js'] = 'mainmenuFocus(1,1,5); btn2stageFocus(0,1);';   
 			$data['config_dropdown_title'] = $TextLanguage->lang(@$this->mod_cat_dropdown_title);
 			     
-			$index = 0;
-			$all_mod = array('Portal_website_news_cat_model','Portal_website_faq_cat_model','Portal_website_activities_cat_model','Portal_website_gallery_cat_model','Portal_website_download_cat_model','Portal_website_banner_cat_model','Portal_website_question_cat_model','Portal_website_poll_cat_model','Portal_website_webboard_cat_model');
+			$index = 0; 
+			$all_mod = array('Portal_website_news_cat_model','Portal_website_faq_cat_model','Portal_website_activities_cat_model','Portal_website_gallery_cat_model','Portal_website_vdo_cat_model','Portal_website_download_cat_model','Portal_website_banner_cat_model','Portal_website_question_cat_model','Portal_website_poll_cat_model');
+
 			foreach($all_mod as $all)
 			{
 				$q = "SELECT * FROM ".$CustomHelper->model_to_table($all)." WHERE web_id = ? AND status = '1' ORDER BY title ASC";	 	

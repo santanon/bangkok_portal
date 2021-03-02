@@ -122,7 +122,7 @@ function sfi(title,url)
                         <div class="col-md-3">
  <div class="list-menu success" data-toggle="modal" data-target="#modalpanel" onclick="sfi('กำลังโหลด...','/manage-admin/edit_logo?m=logo');">
                                 <div class="icon-menu">
-                                    <img src="{{ asset('assets/panel/icon-1.png')}}" alt="icon">
+                                    <i class="fab fa-slack"></i>
                                 </div>
                                 <div class="text-menu">โลโก้เว็บไซต์</div>
                                 <?php
@@ -140,7 +140,7 @@ function sfi(title,url)
                         <div class="col-md-3">
 <div class="list-menu success" data-toggle="modal" data-target="#modalpanel" onclick="sfi('กำลังโหลด...','/manage-admin/list?m=top_menu');">
                                 <div class="icon-menu">
-                                    <img src="{{ asset('assets/panel/icon-3.png')}}" alt="icon">
+                                    <i class="fas fa-grip-lines"></i>
                                 </div>
 <div class="text-menu">เมนูด้านบน</div> 
                                 <?php
@@ -158,7 +158,7 @@ function sfi(title,url)
                         <div class="col-md-3">
                             <div class="list-menu success" data-toggle="modal" data-target="#modalpanel" onclick="sfi('กำลังโหลด...','/manage-admin/list?m=main_menu');">
                                 <div class="icon-menu">
-                                    <img src="{{ asset('assets/panel/icon-3.png')}}" alt="icon">
+                                    <i class="fas fa-bars"></i>
                                 </div>
                                 <div class="text-menu">เมนูหลัก</div> 
                                 <?php 
@@ -176,9 +176,9 @@ function sfi(title,url)
                         <div class="col-md-3">
                             <div class="list-menu success" data-toggle="modal" data-target="#modalpanel" onclick="sfi('กำลังโหลด...','/manage-admin/list?m=home_bg');">
                                 <div class="icon-menu">
-                                    <img src="{{ asset('assets/panel/icon-4.png')}}" alt="icon">
+                                    <i class="fas fa-images"></i>
                                 </div>
-                                <div class="text-menu">ภาพสไลด์หน้าแรก</div> 
+                                <div class="text-menu">รูปภาพสไลด์หน้าแรก</div> 
                                 <?php 
                                 if($icon_slide_have == true)
                                 {
@@ -194,7 +194,7 @@ function sfi(title,url)
                         <div class="col-md-3">
 <div class="list-menu success" data-toggle="modal" data-target="#modalpanel" onclick="sfi('กำลังโหลด...','/manage-admin/list?m=footer_menu');">
                                 <div class="icon-menu">
-                                    <img src="{{ asset('assets/panel/icon-4.png')}}" alt="icon">
+                                    <i class="fas fa-grip-lines"></i>
                                 </div>
                                 <div class="text-menu">เมนูด้านล่าง</div>
                                 <?php 
@@ -212,7 +212,7 @@ function sfi(title,url)
                         <div class="col-md-3">
                             <div class="list-menu success" data-toggle="modal" data-target="#modalpanel" onclick="sfi('กำลังโหลด...','/manage-admin/edit_website?m=setting_website');">
                                 <div class="icon-menu">
-                                    <img src="{{ asset('assets/panel/icon-2.png')}}" alt="icon">
+                                    <i class="fas fa-cog"></i>
                                 </div>
                                 <div class="text-menu">ตั้งค่าเว็บไซต์</div>
                                 <?php 

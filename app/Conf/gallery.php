@@ -87,8 +87,8 @@ class Gallery
 
 
 		$uf = 'img1';
-		${$uf} = $CustomHelper->update_user_files($uf,$this->mod.'_'.$uf);
-
+		//${$uf} = $CustomHelper->update_user_files($uf,$this->mod.'_'.$uf);
+		${$uf} = $CustomHelper->update_user_files_sort($uf,$this->mod.'_'.$uf,$_POST[$uf.'_alt_sort']);
 
 		     
 		$_SESSION[$this->mod.'_group'] = $CustomHelper->input_post('cat_id', TRUE); 

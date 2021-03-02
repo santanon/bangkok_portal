@@ -31,13 +31,14 @@ class FrontController extends Controller
 		}
 		$data['title'] = $_SESSION['portal_website_' . $this->mod . '_web_name']; 
    
-		$q = "SELECT * FROM ".$CustomHelper->model_to_table('Portal_website_contentbox_model')." WHERE web_id = ? AND status = '1' ORDER BY sort ASC";	 	
+		$q = "SELECT * FROM ".$CustomHelper->model_to_table('Portal_website_contentbox_model')." WHERE web_id = ? AND status = '1' ORDER BY sort ASC"; 	 	
 		$v = $_SESSION['portal_website_' . $this->mod . '_id'];
 		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('Portal_website_contentbox_model')),$q,$v);
 		$q = json_decode($res);
+ 
 		$data['box'] = $q;
 		$r_box = $q;
-		
+ 
 		$template_id = substr($_SESSION['portal_website_style_' . $this->mod . '_template_id'],0,1);
 		$str_template = '';
 		if($template_id == '1')
@@ -60,75 +61,283 @@ class FrontController extends Controller
 		{
 			$str_template = 'home-5';
 		}
+  
+		$str_template = 'home';
  
-		$count_this = 1;
+		$is_convert_box = false;
 		foreach($r_box as $r)
+		{    
+			if(trim($r->box2) != '')
+			{
+				$is_convert_box = true;
+
+				$arr_box[] = $r->box1;
+				$arr_box[] = $r->box2;
+				$arr_box[] = $r->box3;
+				$arr_box[] = $r->box4;
+			} 
+		}
+		 
+		if($is_convert_box == true)
 		{  
+			$s_index = 0;
+			foreach($arr_box as $item)
+			{     
+				if(strpos($item,"m") > -1)
+				{
+					$item = str_replace("m","",$item);
+					
+					$q = "SELECT page_type,data_id FROM ".$CustomHelper->model_to_table('Portal_website_main_menu_page_model')." WHERE web_id = ? AND id = '".$item."'";	 
+					$v = $_SESSION['portal_website_' . $this->mod . '_id'];
+					$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('Portal_website_main_menu_page_model')),$q,$v);
+					$q = json_decode($res);					
+				}
+				else
+				{
+					$q = "SELECT page_type,data_id FROM ".$CustomHelper->model_to_table('Portal_website_page_model')." WHERE web_id = ? AND id = '".$item."'"; 
+					$v = $_SESSION['portal_website_' . $this->mod . '_id'];
+					$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('Portal_website_page_model')),$q,$v);
+					$q = json_decode($res);
+				} 
+ 
+				if(count($q) > 0)
+				{
+					$this_box_number = 1;
+					if($q[0]->page_type == 'news')
+					{
+						$this_box_number = 1;
+					}
+					else if($q[0]->page_type == 'faq')
+					{
+						$this_box_number = 2;
+					}
+					else if($q[0]->page_type == 'calendar')
+					{
+						$this_box_number = 3;
+					}
+					else if($q[0]->page_type == 'gallery')
+					{
+						$this_box_number = 4;
+					}
+					else if($q[0]->page_type == 'vdo')
+					{
+						$this_box_number = 5;
+					}
+					else if($q[0]->page_type == 'download')
+					{
+						$this_box_number = 6;
+					}
+					else if($q[0]->page_type == 'banner')
+					{
+						$this_box_number = 7;
+					}
+					else if($q[0]->page_type == 'question')
+					{
+						$this_box_number = 8;
+					}
+					else if($q[0]->page_type == 'poll')
+					{
+						$this_box_number = 9;
+					}
+					
+					$r_box[$s_index] = new \stdClass(); 
+					$r_box[$s_index]->id = $s_index;
+					$r_box[$s_index]->web_id = $_SESSION['portal_website_' . $this->mod . '_id'];
+					$r_box[$s_index]->cat_id = '0';
+					$r_box[$s_index]->title = '';
+					$r_box[$s_index]->en_title = '';
+					$r_box[$s_index]->box_number = $this_box_number;
+					$r_box[$s_index]->box1 = $q[0]->data_id;
+					$r_box[$s_index]->box2 = '';
+					$r_box[$s_index]->box3 = '';
+					$r_box[$s_index]->box4 = '';
+					$r_box[$s_index]->last_create = '1614525283';
+					$r_box[$s_index]->last_update = '1614525283';
+					$r_box[$s_index]->sort = '1';
+					$r_box[$s_index]->status = '1';
+					$r_box[$s_index]->date_start = '0';
+					$r_box[$s_index]->date_end = '0';
+					$r_box[$s_index]->date_set = '0';
+					 
+					$s_index++;
+				} 
+			}
+
+			$data['box'] = $r_box;
+		}
+ 
+		$count_this = 1; 		 
+		foreach($r_box as $r)
+		{    
 			switch($r->box_number)
 			{
 				case "7" : 
-					$this_model = 'Portal_website_banner_model';    
+					$this_model = 'Portal_website_banner_model';
+					$this_model_cat = 'Portal_website_banner_cat_model';    
 					$this_order_by = 'sort ASC';
 					$this_limit = ' LIMIT 0,10 ';
+					$this_type = 'banner';
 					break;	
 				case "3" : 
-					$this_model = 'Portal_website_activities_model';   
-					$this_order_by = 'sort ASC';  
-					$this_limit = ' LIMIT 0,10 '; 
+					$this_model = 'Portal_website_activities_model';
+					$this_model_cat = 'Portal_website_activities_cat_model'; 
+					$this_order_by = 'date_news DESC';  
+					$this_limit = ' LIMIT 0,20 '; 
+					$this_type = 'calendar';
 					break;	
 				case "6" : 
 					$this_model = 'Portal_website_download_model';
+					$this_model_cat = 'Portal_website_download_cat_model';
 					$this_order_by = 'sort ASC';  
 					$this_limit = ' LIMIT 0,10 '; 
+					$this_type = 'download';
 					break;	
 				case "2" : 
 					$this_model = 'Portal_website_faq_model'; 
+					$this_model_cat = 'Portal_website_faq_cat_model';
 					$this_order_by = 'sort ASC';
 					$this_limit = ' LIMIT 0,10 ';  
+					$this_type = 'faq';
 					break;	
 				case "4" : 
-					$this_model = 'Portal_website_gallery_model';  
+					$this_model = 'Portal_website_gallery_model';
+					$this_model_cat = 'Portal_website_gallery_cat_model';
 					$this_order_by = 'sort ASC';
 					$this_limit = ' LIMIT 0,10 '; 
+					$this_type = 'gallery';
 					break; 
 				case "1" : 
 					$this_model = 'Portal_website_news_model';
+					$this_model_cat = 'Portal_website_news_cat_model';
 					$this_order_by = 'sort DESC ';
 					$this_limit = ' LIMIT 0,3 ';
+					$this_type = 'news';
 					break;	
 				case "5" : 
 					$this_model = 'Portal_website_vdo_model';
+					$this_model_cat = 'Portal_website_vdo_cat_model';
 					$this_order_by = 'sort DESC';
-					$this_limit = ' LIMIT 0,10 ';
+					$this_limit = ' LIMIT 0,4 ';
+					$this_type = 'vdo';
 					break; 
 				case "9" : 
 					$this_model = 'Portal_website_poll_model';
+					$this_model_cat = 'Portal_website_poll_cat_model';
 					$this_order_by = 'id DESC';
-					$this_limit = ' LIMIT 0,10 '; 		
+					$this_limit = ' LIMIT 0,1 '; 
+					$this_type = 'poll';		
 					break;	
 				case "8" : 
-					$this_model = 'Portal_website_question_model';
+					$this_model = 'Portal_website_question_cat_model';
+					$this_model_cat = 'Portal_website_question_cat_model';
 					$this_order_by = 'sort ASC';
-					$this_limit = ' LIMIT 0,10 ';
+					$this_limit = ' LIMIT 0,2 ';
+					$this_type = 'question';
 					break;   	
 			}  
 			
+			$add_qr = ""; 
+			if(isset($_GET['f_m']) && $_GET['f_m'] != '' && $r->box_number == 3)
+			{
+				$m_y = explode("_",$_GET['f_m']);
+
+				$d_start = mktime(0,0,0,$m_y[0],1,$m_y[1]); 
+				$last_day = date("t",mktime(23,59,59,$m_y[0],1,$m_y[1])); 
+				$d_end = mktime(23,59,59,$m_y[0],$last_day,$m_y[1]);
+	
+				$add_qr = " AND (date_news >= '".$d_start."' AND date_news <= '".$d_end."') ";
+			}
+
 			if($r->box1 != '')
 			{
-				$q = "SELECT * FROM ".$CustomHelper->model_to_table($this_model)." WHERE web_id = ? AND status = '1' AND cat_id = '".$r->box1."' ORDER BY ".$this_order_by."".$this_limit;	
+				$q = "SELECT * FROM ".$CustomHelper->model_to_table($this_model)." WHERE web_id = ? AND status = '1' AND cat_id = '".$r->box1."' ".$add_qr." ORDER BY ".$this_order_by."".$this_limit; 
 			}
 			else
 			{
-				$q = "SELECT * FROM ".$CustomHelper->model_to_table($this_model)." WHERE web_id = ? AND status = '1' ORDER BY id DESC".$this_limit;
+				$q = "SELECT * FROM ".$CustomHelper->model_to_table($this_model)." WHERE web_id = ? AND status = '1' ".$add_qr." ORDER BY id DESC".$this_limit;
+			
+				if($r->box_number == 3)
+				{
+					$q = "SELECT * FROM ".$CustomHelper->model_to_table($this_model)." WHERE web_id = ? AND status = '1' ".$add_qr." ORDER BY date_news DESC".$this_limit;			
+				}
 			}
-				 	
+ 
 			$v = $_SESSION['portal_website_' . $this->mod . '_id'];
-			$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('Portal_website_contentbox_model')),$q,$v);
+			$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this_model)),$q,$v);
 			$q = json_decode($res);
  
-			$data['data_box_'.$r->box_number] = $q; 
+			$data['data_box_'.$r->box_number.'_'.$r->id] = $q; 
+
+			if($r->box_number == 8)
+			{ 
+				if(isset($data['data_box_'.$r->box_number.'_'.$r->id][0]->id))
+				{
+					$data['data_box_'.$r->box_number.'_'.$r->id][0]->cat_id = $data['data_box_'.$r->box_number.'_'.$r->id][0]->id;
+				} 
+			}
+			 
+			if(isset($data['data_box_'.$r->box_number.'_'.$r->id][0]->id) && isset($data['data_box_'.$r->box_number.'_'.$r->id][0]->cat_id))
+			{ 
+				$q = "SELECT title,en_title FROM ".$CustomHelper->model_to_table($this_model_cat)." WHERE id = '".$data['data_box_'.$r->box_number.'_'.$r->id][0]->cat_id."' LIMIT 0,1"; 
+				$v = $_SESSION['portal_website_' . $this->mod . '_id'];
+				$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this_model_cat)),$q,$v);
+				$q = json_decode($res);
+ 
+				$data['data_box_cat_'.$r->box_number.'_'.$r->id] = $q;
+
+				$q = "SELECT id FROM tbl_portal_website_main_menu_page WHERE web_id = ? AND page_type = '".$this_type."' AND data_id = '".$data['data_box_'.$r->box_number.'_'.$r->id][0]->cat_id."'  LIMIT 0,1"; 
+
+				$v = $_SESSION['portal_website_' . $this->mod . '_id'];
+				$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this_model_cat)),$q,$v);
+				$q = json_decode($res);
+ 
+				if(count($q) > 0)
+				{
+					$data['data_box_link_'.$r->box_number.'_'.$r->id] = "http://127.0.0.1:8000/".$this->mod."/page/main/".$q[0]->id."/".$data['data_box_cat_'.$r->box_number.'_'.$r->id][0]->title;
+				}
+				else
+				{
+					$q = "SELECT id FROM tbl_portal_website_page WHERE web_id = ? AND page_type = '".$this_type."' AND data_id = '".$data['data_box_'.$r->box_number.'_'.$r->id][0]->cat_id."'  LIMIT 0,1"; 
+					$v = $_SESSION['portal_website_' . $this->mod . '_id'];
+					$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this_model_cat)),$q,$v);
+					$q = json_decode($res);
+
+					if(count($q) > 0)
+					{
+						$data['data_box_link_'.$r->box_number.'_'.$r->id] = "http://127.0.0.1:8000/".$this->mod."/page/sub/".$q[0]->id."/".$data['data_box_cat_'.$r->box_number.'_'.$r->id][0]->title;
+					}
+					else
+					{
+						$q = "SELECT id FROM tbl_portal_website_top_menu_page WHERE web_id = ? AND page_type = '".$this_type."' AND data_id = '".$data['data_box_'.$r->box_number.'_'.$r->id][0]->cat_id."'  LIMIT 0,1"; 
+						$v = $_SESSION['portal_website_' . $this->mod . '_id'];
+						$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this_model_cat)),$q,$v);
+						$q = json_decode($res);
+
+						if(count($q) > 0)
+						{
+							$data['data_box_link_'.$r->box_number.'_'.$r->id] = "http://127.0.0.1:8000/".$this->mod."/page/top/".$q[0]->id."/".$data['data_box_cat_'.$r->box_number.'_'.$r->id][0]->title;
+						}
+						else
+						{
+							$q = "SELECT id FROM tbl_portal_website_footer_menu_page WHERE web_id = ? AND page_type = '".$this_type."' AND data_id = '".$data['data_box_'.$r->box_number.'_'.$r->id][0]->cat_id."'  LIMIT 0,1"; 
+							$v = $_SESSION['portal_website_' . $this->mod . '_id'];
+							$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this_model_cat)),$q,$v);
+							$q = json_decode($res);
+
+							if(count($q) > 0)
+							{
+								$data['data_box_link_'.$r->box_number.'_'.$r->id] = "http://127.0.0.1:8000/".$this->mod."/page/footer/".$q[0]->id."/".$data['data_box_cat_'.$r->box_number.'_'.$r->id][0]->title;
+							}
+							else
+							{
+								$data['data_box_link_'.$r->box_number.'_'.$r->id] = "";
+							}
+						}
+					}
+				} 
+			} 
 		}  
-		  
+ 
 		return view($str_template,$data); 
 	} 
 
@@ -1474,7 +1683,7 @@ class FrontController extends Controller
 			
 			$data['r_data_count_all'] = $sum;	
 		}
-		 
+ 
 		return view('portal/'.$this_page, $data); 	
 	}
 
@@ -1883,22 +2092,28 @@ class FrontController extends Controller
 	{   
 		$CustomHelper = new \App\CustomHelper;
 		$TextLanguage = new \App\TextLanguage; 
+
+		$this_manage = 'main_menu';
 		  
 		if($type == 'sub')
 		{
-			$setting_model = 'Portal_website_page_model';	
+			$setting_model = 'Portal_website_page_model';
+			$this_manage = 'page';	
 		}
 		else if($type == 'main')
 		{
 			$setting_model = 'Portal_website_main_menu_page_model';	
+			$this_manage = 'main_menu';
 		}
 		else if($type == 'top')
 		{
-			$setting_model = 'Portal_website_top_menu_page_model';	
+			$setting_model = 'Portal_website_top_menu_page_model';
+			$this_manage = 'top_menu';	
 		}
 		else if($type == 'footer')
 		{
-			$setting_model = 'Portal_website_footer_menu_page_model';	
+			$setting_model = 'Portal_website_footer_menu_page_model';
+			$this_manage = 'footer_menu';	
 		}
 		else 
 		{
@@ -2023,7 +2238,9 @@ class FrontController extends Controller
 		{
 			$str_navi = '<li class="current"><a href="#">' . $CustomHelper->L($r[0]->title,$r[0]->en_title) . '</a> </li>' . $str_navi;	
 		} 
-		$data['list_str_navi'] = $str_navi_main.$str_navi; 
+		$data['list_str_navi'] = $str_navi_main.$str_navi;  
+		$data['this_page_type'] = $type;
+		$data['this_manage'] = $this_manage;
  
 		switch($r[0]->page_type)
 		{
@@ -2212,7 +2429,7 @@ class FrontController extends Controller
 					$data['r_data_total_pages'] = $total_pages+1; 
 					$data['r_data_this_page'] = $_SESSION[$this->mod.'_'.$v1.'_page_num']+1; 
 					 
-					return view('portal/page-banner', $data);  	
+					return view('bannerlink-main', $data);  	
 				}
 				
 				break;
@@ -3618,7 +3835,8 @@ class FrontController extends Controller
 				{
 					$data['main_bg'] = $r[0]->img1;
 				}
-				$data['r_title'] = $CustomHelper->L($r[0]->title,$r[0]->en_title);
+				$data['r_title'] = $CustomHelper->L($r[0]->title,$r[0]->title);
+				$data['r_en_title'] = $CustomHelper->L($r[0]->en_title,$r[0]->en_title);
 				$data['r_info'] = $CustomHelper->L($r[0]->info,$r[0]->en_info); 
 				
 				$data['r_click_view'] = $r[0]->click_view;

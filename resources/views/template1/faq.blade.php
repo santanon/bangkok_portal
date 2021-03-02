@@ -1,10 +1,13 @@
+<?php 
+$_SESSION['arr_script_slide_f'] = $_SESSION['arr_script_slide_f']."slide_faq_".$this_box_real_id."|";
+?>
 <!-- คำถามที่พบบ่อย -->
 <div id="faq" data-id="2_<?php echo $this_box_id ?>" class="section-content">
                 <div class="group-mange-section">
                     <div class="manage-tools">
                         <ul>
                             <li class="order-list"><a style="color:#000000" href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('กำลังโหลด...','/manage-admin/add?m=faq');">เพิ่มข้อมูล</a></li>
-                            <li class="order-list"><a style="color:#000000" href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('กำลังโหลด...','/manage-admin/list?m=faq');">บริหารจัดการ</a></li> 
+                            <li class="order-list"><a style="color:#000000" href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('กำลังโหลด...','/manage-admin/set_cat?m=faq&id=<?php echo @${"data_box_".$r->box_number."_".$this_box_real_id}[0]->cat_id ?>');">จัดการข้อมูล</a></li>
                             <li class="order-list order-close">ปิด</li>
                         </ul>
                     </div> 
@@ -19,25 +22,55 @@
                     <div class="inner-content">
                         <div class="top-content">
                             <div class="group-text">
-                                <h3 class="title color-primary">คำถามที่พบบ่อย</h3>
-                                <p class="desc color-secondary">The Bangkok Metropolitan Council Secretariat </p>
+
+
+                                <h3 class="title color-primary"><?php
+                        
+                                    if($this_box_id != '')
+                                    {
+                                        echo $CustomHelper->L(${"data_box_cat_".$r->box_number."_".$this_box_real_id}[0]->title,${"data_box_cat_".$r->box_number."_".$this_box_real_id}[0]->en_title);
+                                    }
+                                    else 
+                                    {
+                                        ?>คำถามที่พบบ่อย<?php
+                                    }
+                                    
+                                     ?></h3>
+                                            <p class="desc color-secondary"><?php 
+                                            
+                                            if($this_box_id != '')
+                                            {
+                                                echo $CustomHelper->L(${"data_box_cat_".$r->box_number."_".$this_box_real_id}[0]->en_title,"");
+                                            }
+                                            
+                                             ?> </p> 
+ 
                             </div>
                             <div class="group-gotoall">
-                                <a href="/faq" class="btn btn-outline-dark">คำถามทั้งหมด</a>
+                                <?php 
+                                if(isset(${"data_box_link_".$r->box_number."_".$this_box_real_id}) && ${"data_box_link_".$r->box_number."_".$this_box_real_id} != '')
+                                {
+                                    ?><a href="<?php echo ${"data_box_link_".$r->box_number."_".$this_box_real_id} ?>" class="btn btn-outline-dark">คำถามทั้งหมด</a><?php
+                                }
+                                else
+                                {
+                                    ?><?php
+                                }
+                                ?> 
                             </div>
                         </div>
                         <div class="main-content">
                             <div class="action-slide dis-flex justify-end">
-                                <div class="slide-wrapper" id="action-slide_2">
+                                <div class="slide-wrapper" id="action-slide_faq_<?php echo $this_box_real_id ?>">
                                     <div class="slide-arrow slide-prev"></div>
                                     <div class="slide-arrow slide-next"></div>
                                 </div>
                             </div>
                             
                             <div class="group-slide">
-                                <div class="list-item" id="slide_2"> 
+                                <div class="list-item" id="slide_faq_<?php echo $this_box_real_id ?>"> 
 <?php
-foreach(${"data_box_".$r->box_number} as $r_sub)
+foreach(${"data_box_".$r->box_number."_".$this_box_real_id} as $r_sub)
 {
     ?>
     <div class="item">
@@ -56,9 +89,20 @@ foreach(${"data_box_".$r->box_number} as $r_sub)
             <div class="col-lg-8 col-md-8 col-sm-8">
                 <div class="right">
                     <div class="text-content">
-                        <a href="/faq">
-                        <?php echo $CustomHelper->L($r_sub->title,$r_sub->en_title); ?>
-                        </a>
+                        <?php 
+                        if(isset(${"data_box_link_".$r->box_number."_".$this_box_real_id}) && ${"data_box_link_".$r->box_number."_".$this_box_real_id} != '')
+                        {
+                            ?><a href="<?php echo ${"data_box_link_".$r->box_number."_".$this_box_real_id} ?>?i=<?php echo $r_sub->id ?>">
+                            <?php echo $CustomHelper->L($r_sub->title,$r_sub->en_title); ?>
+                            </a><?php
+                        }
+                        else
+                        {
+                            ?><a href="javascript:;">
+                            <?php echo $CustomHelper->L($r_sub->title,$r_sub->en_title); ?>
+                            </a><?php
+                        }
+                        ?>  
                     </div>
                 </div>
             </div>

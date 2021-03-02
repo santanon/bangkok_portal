@@ -6,7 +6,7 @@ $no_back = 1;
 @include('manage.include.main_form_header') 
 
 <script>
-	parent.document.getElementById('modal_full_span').innerHTML = 'รูปพื้นหลังทั้งหมด';
+	parent.document.getElementById('modal_full_span').innerHTML = 'รูปภาพสไลด์ทุกหน้า';
 	</script>
 
 <script type="text/javascript">

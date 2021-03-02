@@ -51,19 +51,10 @@ class CustomHelper
         //$v = str_replace('=','|',$v);
 
         $this_date = date('Y-m-d H:i:s');
- 
+  
 		if(isset($_SESSION['panel_login']) && $_SESSION['panel_login'] == '1')
 		{
-			$_SESSION['cache_time'] = 0;
-		}
-		else
-		{
-			$_SESSION['cache_time'] = 600;
-		}
- 
-		return Cache::remember(openssl_encrypt($url.$q.$v,$algo,$k), $_SESSION['cache_time'], function() use ($url,$q,$v,$old_q,$old_v,$this_date)
-        { 
-            $ch = curl_init();
+			$ch = curl_init();
 			curl_setopt($ch,CURLOPT_URL, $url);
 			curl_setopt($ch, CURLOPT_POST, 1);
 			curl_setopt($ch, CURLOPT_POSTFIELDS,"q=".$q."&v=".$v);
@@ -103,7 +94,55 @@ class CustomHelper
 			} 
 			//Storage::append('api/'.date('Y-m-d').'.log', "date real =".$this_date."\ndate cache=".date('Y-m-d H:i:s')."\nurl=".$url."\nq=".$q."\nv=".$v."\nold_q=".$old_q."\nold_v=".$old_v."\no=".$output."\n-------------------");
 			return $this_return;
-        });
+		}
+		else
+		{
+			return Cache::remember(openssl_encrypt($url.$q.$v,$algo,$k),99999, function() use ($url,$q,$v,$old_q,$old_v,$this_date)
+			{ 
+				$ch = curl_init();
+				curl_setopt($ch,CURLOPT_URL, $url);
+				curl_setopt($ch, CURLOPT_POST, 1);
+				curl_setopt($ch, CURLOPT_POSTFIELDS,"q=".$q."&v=".$v);
+				curl_setopt($ch,CURLOPT_RETURNTRANSFER, true); 
+				curl_setopt($ch,CURLOPT_TIMEOUT, 30);
+				curl_setopt($ch,CURLOPT_SSL_VERIFYPEER, false);
+				curl_setopt($ch,CURLOPT_SSL_VERIFYHOST, false); 
+				$output = curl_exec($ch); 
+				/*
+				$connect_count = 1;
+				while($output == FALSE && $connect_count <= 1)
+				{
+					$output = curl_exec($ch); 
+					//sleep(3);
+					$connect_count++;
+				} 
+				*/
+				$httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+				curl_close ($ch);
+
+				$this_return = '';
+
+				if($output == FALSE)
+				{
+					$this_return = '';
+				}
+				else
+				{
+					if(trim($httpcode) == '200')
+					{
+						$this_return = $output;
+					}
+					else
+					{
+						$this_return = '';
+					}  
+				} 
+				//Storage::append('api/'.date('Y-m-d').'.log', "date real =".$this_date."\ndate cache=".date('Y-m-d H:i:s')."\nurl=".$url."\nq=".$q."\nv=".$v."\nold_q=".$old_q."\nold_v=".$old_v."\no=".$output."\n-------------------");
+				return $this_return;
+			});
+		}
+ 
+		
 		 
         /*return Cache::remember(openssl_encrypt($url.$q.$v,$algo,$k), 1, function() use ($url,$q,$v,$old_q,$old_v,$this_date)
         { 
@@ -451,6 +490,36 @@ class CustomHelper
 			}
 		} 
 	}
+
+	function get_file_form_code_sort($a,$index)
+	{ 
+		if(strpos($a,'^') > -1)
+		{
+			$arr = explode('^',$a);
+
+			if(strpos($arr[0],'|') > -1)
+			{
+				$arr = explode('|',$arr[0]);
+				return $arr[$index];
+			} 
+			else
+			{
+				return $arr[0];
+			}
+		} 
+		else
+		{
+			if(strpos($a,'|') > -1)
+			{
+				$arr = explode('|',$a);
+				return $arr[$index];
+			} 
+			else
+			{
+				return $a;
+			}
+		} 
+	}
  
 	function get_text_form_code($a,$index,$lang)
 	{
@@ -757,6 +826,111 @@ class CustomHelper
 		}*/
 		return $day;
 	}
+
+	function date_unix_to_thai($day)
+	{
+		$d = date("d",$day);
+		$m = date("m",$day);
+		$mm = date("M",$day);
+		$y = date("Y",$day);
+
+		if($_SESSION['portal_lang'] == "thai")
+		{
+			$month_long = array('มกราคม', 'กุมภาพันธ์', 'มีนาคม', 'เมษายน', 'พฤษภาคม', 'มิถุนายน', 'กรกฎาคม', 'สิงหาคม', 'กันยายน', 'ตุลาคม', 'พฤศจิกายน', 'ธันวาคม');
+			$month_short = array('ม.ค.', 'ก.พ.', 'มี.ค.', 'เม.ย.', 'พ.ค.', 'มิ.ย.', 'ก.ค.', 'ส.ค.', 'ก.ย.', 'ต.ค.', 'พ.ย.', 'ธ.ค.');
+	
+			$day_long = array('อาทิตย์', 'จันทร์', 'อังคาร', 'พุธ', 'พฤหัสบดี', 'ศุกร์', 'เสาร์');
+			$day_short = array('อา.', 'จ.', 'อ.', 'พ.', 'พฤ.', 'ศ.', 'ส.');
+
+			$y = $y+543;
+	
+			$day = (int)$d." &nbsp;".$month_short[$m-1]." ".$y;
+			
+			/*$day_eng = array('Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday');
+			$day_thai = array('อาทิตย์','จันทร์','อังคาร','พุธ','พฤหัสบดี','ศุกร์','เสาร์'); 
+			for($run = 0;$run < count($day_thai); $run++)
+			{
+				$day = preg_replace($day_eng[$run],$day_thai[$run],$day); 
+			}*/	
+		}
+		else
+		{
+			$day = (int)$d." &nbsp;".$mm." ".$y;
+		}
+
+		
+		return $day;
+	}
+
+	function date_unix_to_thai_mon($day)
+	{
+		$d = date("d",$day);
+		$m = date("m",$day);
+		$mm = date("M",$day);
+		$y = date("Y",$day);
+
+		if($_SESSION['portal_lang'] == "thai")
+		{
+			$month_long = array('มกราคม', 'กุมภาพันธ์', 'มีนาคม', 'เมษายน', 'พฤษภาคม', 'มิถุนายน', 'กรกฎาคม', 'สิงหาคม', 'กันยายน', 'ตุลาคม', 'พฤศจิกายน', 'ธันวาคม');
+			$month_short = array('ม.ค.', 'ก.พ.', 'มี.ค.', 'เม.ย.', 'พ.ค.', 'มิ.ย.', 'ก.ค.', 'ส.ค.', 'ก.ย.', 'ต.ค.', 'พ.ย.', 'ธ.ค.');
+	
+			$day_long = array('อาทิตย์', 'จันทร์', 'อังคาร', 'พุธ', 'พฤหัสบดี', 'ศุกร์', 'เสาร์');
+			$day_short = array('อา.', 'จ.', 'อ.', 'พ.', 'พฤ.', 'ศ.', 'ส.');
+
+			$y = $y+543;
+	
+			$day = $month_short[$m-1]." ".$y;
+			
+			/*$day_eng = array('Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday');
+			$day_thai = array('อาทิตย์','จันทร์','อังคาร','พุธ','พฤหัสบดี','ศุกร์','เสาร์'); 
+			for($run = 0;$run < count($day_thai); $run++)
+			{
+				$day = preg_replace($day_eng[$run],$day_thai[$run],$day); 
+			}*/	
+		}
+		else
+		{
+			$day = $mm." ".$y;
+		}
+
+		
+		return $day;
+	}
+
+	function date_unix_to_thai_mon2($day)
+	{
+		$d = date("d",$day);
+		$m = date("m",$day);
+		$mm = date("M",$day);
+		$y = date("Y",$day);
+
+		if($_SESSION['portal_lang'] == "thai")
+		{
+			$month_long = array('มกราคม', 'กุมภาพันธ์', 'มีนาคม', 'เมษายน', 'พฤษภาคม', 'มิถุนายน', 'กรกฎาคม', 'สิงหาคม', 'กันยายน', 'ตุลาคม', 'พฤศจิกายน', 'ธันวาคม');
+			$month_short = array('ม.ค.', 'ก.พ.', 'มี.ค.', 'เม.ย.', 'พ.ค.', 'มิ.ย.', 'ก.ค.', 'ส.ค.', 'ก.ย.', 'ต.ค.', 'พ.ย.', 'ธ.ค.');
+	
+			$day_long = array('อาทิตย์', 'จันทร์', 'อังคาร', 'พุธ', 'พฤหัสบดี', 'ศุกร์', 'เสาร์');
+			$day_short = array('อา.', 'จ.', 'อ.', 'พ.', 'พฤ.', 'ศ.', 'ส.');
+
+			$y = $y+543;
+	
+			$day = $month_short[$m-1];
+			
+			/*$day_eng = array('Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday');
+			$day_thai = array('อาทิตย์','จันทร์','อังคาร','พุธ','พฤหัสบดี','ศุกร์','เสาร์'); 
+			for($run = 0;$run < count($day_thai); $run++)
+			{
+				$day = preg_replace($day_eng[$run],$day_thai[$run],$day); 
+			}*/	
+		}
+		else
+		{
+			$day = $mm;
+		}
+
+		
+		return $day;
+	}
 	
 	 function tran_mon_thai($mon)
 	{
@@ -921,6 +1095,51 @@ class CustomHelper
 					copy($_SERVER['DOCUMENT_ROOT'].'/upload_tools/server/php/files/'.$_SESSION['panel_id'].'/'.$p.'/'.$this_file,$_SERVER['DOCUMENT_ROOT'].'/user_files/'.$_SESSION['panel_id'].'/'.$new_file_name);
 	
 					$this_url = $this_url.'http://127.0.0.1:8000/user_files/'.$_SESSION['panel_id'].'/'.$new_file_name.'|';	
+				} 
+			} 
+		}
+
+		return $this_url;
+	}
+
+	function update_user_files_sort($f,$p,$post_sort)
+	{
+		$this_f = $this->input_post($f, TRUE);
+ 
+		if(strpos($this_f,'|') > -1)
+		{
+			$each_v = explode('|',$this_f);
+			foreach($each_v as $item_v) 
+			{
+				if(trim($item_v) != '')
+				{
+					@unlink($_SERVER['DOCUMENT_ROOT'].'/user_files/'.$_SESSION['panel_id'].'/'.basename($item_v));
+				}
+			}
+		}
+		else
+		{
+			@unlink($_SERVER['DOCUMENT_ROOT'].'/user_files/'.$_SESSION['panel_id'].'/'.basename($this_f));
+		}
+
+		$post_sort = explode('|',$post_sort);
+		$post_index = 0;
+		$this_url = ""; 
+		$list_files = scandir($_SERVER['DOCUMENT_ROOT'].'/upload_tools/server/php/files/'.$_SESSION['panel_id'].'/'.$p.'');
+		foreach($list_files as $this_file) 
+		{ 
+			if($this_file != '.' && $this_file != '..')
+			{
+				if(trim($this_file) != '')
+				{
+					$each_ext = explode('.',$this_file);
+					$new_file_name = $post_sort[$post_index].'_'.uniqid(rand(), true).'.'.$each_ext[count($each_ext)-1];
+					  
+					copy($_SERVER['DOCUMENT_ROOT'].'/upload_tools/server/php/files/'.$_SESSION['panel_id'].'/'.$p.'/'.$this_file,$_SERVER['DOCUMENT_ROOT'].'/user_files/'.$_SESSION['panel_id'].'/'.$new_file_name);
+	
+					$this_url = $this_url.'http://127.0.0.1:8000/user_files/'.$_SESSION['panel_id'].'/'.$new_file_name.'|';	
+
+					$post_index++;
 				} 
 			} 
 		}

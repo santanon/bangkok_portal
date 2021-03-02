@@ -26,8 +26,8 @@
     <script>
         var main_iframe_url = '';
         function sfi(title,url)
-        {
-            document.getElementById('iframe_full').src = '';
+        { 
+            document.getElementById('iframe_full').src = ''; 
             document.getElementById('modal_full_span').innerHTML = title;
             main_iframe_url = url;
         }

@@ -252,7 +252,7 @@ function sfi(title,url)
   @include('template5/include.css_scripts')
 
 
-<script type="text/javascript">
+<script>
     $(document).ready(function () {
         //$('#exampleModal').modal('show')
         if($('body').hasClass('manage')){
@@ -285,20 +285,20 @@ function sfi(title,url)
 </script>
 <!-- Gallery -->
 <link rel="stylesheet" href="{{ asset('gallery/lightgallery.css')}}">
-<script type="text/javascript" src="{{ asset('gallery/lightgallery.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('gallery/lg-thumbnail.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('gallery/lg-zoom.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('gallery/lg-fullscreen.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('gallery/lg-video.min.js') }}"></script>
+<script src="{{ asset('gallery/lightgallery.min.js') }}"></script>
+<script src="{{ asset('gallery/lg-thumbnail.min.js') }}"></script>
+<script src="{{ asset('gallery/lg-zoom.min.js') }}"></script>
+<script src="{{ asset('gallery/lg-fullscreen.min.js') }}"></script>
+<script src="{{ asset('gallery/lg-video.min.js') }}"></script>
 <!-- Matchheight -->
-<script type="text/javascript" rel="preload" src="{{ asset('template5/js/jquery.matchHeight.js') }}"></script>
+<script rel="preload" src="{{ asset('template5/js/jquery.matchHeight.js') }}"></script>
 
 <style type="text/css">
     #lg-zoom-in, #lg-zoom-out{
         display: none;
     }
 </style>
-<script type="text/javascript">
+<script>
     $(document).ready(function(){
         $('#video-gallery').lightGallery({
         });
@@ -318,7 +318,7 @@ function sfi(title,url)
 
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
-<script type="text/javascript" src="{{ asset('template5/js/calendar-manual.js') }}"></script>
+<script src="{{ asset('template5/js/calendar-manual.js') }}"></script>
 <script>
     $(document).ready(function() {
         let $document = $(this);

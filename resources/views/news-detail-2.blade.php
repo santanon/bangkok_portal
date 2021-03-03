@@ -139,13 +139,13 @@ if(!function_exists('base_url'))
 @include('template2/include.css_scripts')
 <!-- FlexSlider -->
 <link rel="stylesheet" href="{{ asset('template2/css/flexslider.css')}}">
-<script type="text/javascript" src="{{ asset('template2/js/jquery.flexslider.js') }}"></script>
+<script src="{{ asset('template2/js/jquery.flexslider.js') }}"></script>
 
 <!-- CKeditor -->
 <script src="https://cdn.ckeditor.com/ckeditor5/23.1.0/inline/ckeditor.js"></script>
 
 
-<script type="text/javascript">
+<script>
     $(window).load(function(){
         $('#carousel').flexslider({
             animation: "slide",

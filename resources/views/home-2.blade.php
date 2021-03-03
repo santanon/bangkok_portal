@@ -251,7 +251,7 @@ function sfi(title,url)
 @include('template2/include.css_scripts')
 
 
-<script type="text/javascript">
+<script>
     $(document).ready(function () {
         //$('#exampleModal').modal('show')
         if($('body').hasClass('manage')){
@@ -283,17 +283,17 @@ function sfi(title,url)
 </script>
 <!-- Gallery -->
 <link rel="stylesheet" href="{{ asset('gallery/lightgallery.css')}}">
-<script type="text/javascript" src="{{ asset('gallery/lightgallery.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('gallery/lg-thumbnail.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('gallery/lg-zoom.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('gallery/lg-fullscreen.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('gallery/lg-video.min.js') }}"></script>
+<script src="{{ asset('gallery/lightgallery.min.js') }}"></script>
+<script src="{{ asset('gallery/lg-thumbnail.min.js') }}"></script>
+<script src="{{ asset('gallery/lg-zoom.min.js') }}"></script>
+<script src="{{ asset('gallery/lg-fullscreen.min.js') }}"></script>
+<script src="{{ asset('gallery/lg-video.min.js') }}"></script>
 <style type="text/css">
     #lg-zoom-in, #lg-zoom-out{
         display: none;
     }
 </style>
-<script type="text/javascript">
+<script>
     $(document).ready(function(){
         $('#video-gallery').lightGallery({
         });
@@ -392,9 +392,9 @@ function sfi(title,url)
 
 
 <link rel="stylesheet" href="{{ asset('template2/js/calendar3_9/fullcalendar.min.css')}}">
-<script type="text/javascript" src="{{ asset('template2/js/calendar3_9/lib/moment.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('template2/js/calendar3_9/fullcalendar.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('template2/js/calendar3_9/locale-all.js') }}"></script>
+<script src="{{ asset('template2/js/calendar3_9/lib/moment.min.js') }}"></script>
+<script src="{{ asset('template2/js/calendar3_9/fullcalendar.min.js') }}"></script>
+<script src="{{ asset('template2/js/calendar3_9/locale-all.js') }}"></script>
 <script>
 
   $(document).ready(function() {

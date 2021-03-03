@@ -133,8 +133,5 @@ if(!function_exists('base_url'))
 @include('template1/include.css_scripts')
 
 
-<script type="text/javascript">
-    
-</script>
 @endsection
 

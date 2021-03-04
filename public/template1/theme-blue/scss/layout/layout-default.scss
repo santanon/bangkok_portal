@@ -3150,6 +3150,62 @@ $howManySteps: 100; //this needs to be even.
 }
 
 
+// Search Page
+.list-search{
+    margin-bottom: 30px;
+    ul{
+        margin: 0;
+        padding: 0;
+        li{
+            list-style: none;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #cfd1d4;
+            padding-bottom: 15px;
+            a{
+                .article-wrap{
+                    .top-rubric{
+                        font-size: 1.6rem;
+                        margin-bottom: 5px;
+                        .rubric{
+                            font-weight: $font-medium;
+                            color: #333;
+                        }
+                        .time{
+                            font-weight: $font-light;
+                            color: #525252;
+                            padding: 0 0 0 9px;
+                            &:before{
+                                background: $color-primary;
+                                background: linear-gradient(#fff 1px,$color-primary 2px,$color-primary 20px,#fff 13px);
+                                content: '';
+                                display: inline;
+                                margin: 0 9px 0 0;
+                                padding: 0 1px 0 0;
+                            }
+                        }
+                    }
+                    .main-article-content{
+                        font-size: 1.8rem;
+                        font-weight: $font-regular;
+                        color: #333;
+                    }
+                }
+                &:hover{
+                    .article-wrap{
+                        .main-article-content{
+                            color: $color-primary;
+                        }
+                    }
+                }
+            }
+            &:last-child{
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+
 // For Progress Circle
 /* This for loop creates the necessary css animation names 
 Due to the split circle of progress-left and progress right, we must use the animations on each side. 

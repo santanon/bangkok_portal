@@ -176,7 +176,7 @@ if(!function_exists('base_url'))
 
 @include('template1/include.css_scripts')
 
-<script type="text/javascript" src="{{ asset('template1/js/jquery.orgchart.js') }}"></script>
+<script src="{{ asset('template1/js/jquery.orgchart.js') }}"></script>
 <link rel="stylesheet" href="{{ asset('template1/theme-blue/css/layout/organization.css')}}">
 
 <script type="text/javascript">
@@ -185,6 +185,7 @@ if(!function_exists('base_url'))
         <?php echo $this_data[0]->organize_data; ?>
 
     ;
+
     //console.log(dataOrg);
 
     var allNode = [];

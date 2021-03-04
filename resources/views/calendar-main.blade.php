@@ -107,9 +107,9 @@ if(!function_exists('base_url'))
 @include('template1/include.css_scripts')
 
 <link rel="stylesheet" href="{{ asset('template1/js/calendar3_9/fullcalendar.min.css')}}">
-<script type="text/javascript" src="{{ asset('template1/js/calendar3_9/lib/moment.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('template1/js/calendar3_9/fullcalendar.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('template1/js/calendar3_9/locale-all.js') }}"></script>
+<script src="{{ asset('template1/js/calendar3_9/lib/moment.min.js') }}"></script>
+<script src="{{ asset('template1/js/calendar3_9/fullcalendar.min.js') }}"></script>
+<script src="{{ asset('template1/js/calendar3_9/locale-all.js') }}"></script>
 
 <script>
 

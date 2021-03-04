@@ -142,11 +142,11 @@ if(!function_exists('base_url'))
 @include('template2/include.css_scripts')
 <!-- Gallery -->
 <link rel="stylesheet" href="{{ asset('gallery/lightgallery.css')}}">
-<script type="text/javascript" src="{{ asset('gallery/lightgallery.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('gallery/lg-thumbnail.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('gallery/lg-zoom.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('gallery/lg-fullscreen.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('gallery/lg-video.min.js') }}"></script>
+<script src="{{ asset('gallery/lightgallery.min.js') }}"></script>
+<script src="{{ asset('gallery/lg-thumbnail.min.js') }}"></script>
+<script src="{{ asset('gallery/lg-zoom.min.js') }}"></script>
+<script src="{{ asset('gallery/lg-fullscreen.min.js') }}"></script>
+<script src="{{ asset('gallery/lg-video.min.js') }}"></script>
 <style type="text/css">
     #lg-zoom-in, #lg-zoom-out{
         display: none;
@@ -196,7 +196,7 @@ if(!function_exists('base_url'))
         });
 </script>
 
-<script type="text/javascript">
+<script>
 
 // TH
 $.datepicker.regional['th'] ={

@@ -191,13 +191,19 @@
 
 <script>
     $(document).ready(function() {
-        $("#increase-size").on("click",function(){
+        $("#increase-size, #increase-size-mb").on("click",function(){
+            $('.reduce, .normal').removeClass('active');
+            $('.increase').addClass('active');
             $("html").css("font-size",'72.5' + "%");
         });
-        $("#normal-size").on("click",function(){
+        $("#normal-size, #normal-size-mb").on("click",function(){
+            $('.reduce, .increase').removeClass('active');
+            $('.normal').addClass('active');
             $("html").css("font-size",'62.5' + "%");
         });
-        $("#reduce-size").on("click",function(){
+        $("#reduce-size, #reduce-size-md").on("click",function(){
+            $('.normal, .increase').removeClass('active');
+            $('.reduce').addClass('active');
             $("html").css("font-size",'52.5'+ "%");
         });
     });

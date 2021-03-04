@@ -238,7 +238,7 @@ if(!function_exists('base_url'))
  
 @include('template3/include.css_scripts')
 
-<script type="text/javascript">
+<script>
     $(document).ready(function () {
         
         //$('#exampleModal').modal('show')
@@ -273,17 +273,17 @@ if(!function_exists('base_url'))
 </script>
 <!-- Gallery -->
 <link rel="stylesheet" href="{{ asset('gallery/lightgallery.css')}}">
-<script type="text/javascript" src="{{ asset('gallery/lightgallery.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('gallery/lg-thumbnail.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('gallery/lg-zoom.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('gallery/lg-fullscreen.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('gallery/lg-video.min.js') }}"></script>
+<script src="{{ asset('gallery/lightgallery.min.js') }}"></script>
+<script src="{{ asset('gallery/lg-thumbnail.min.js') }}"></script>
+<script src="{{ asset('gallery/lg-zoom.min.js') }}"></script>
+<script src="{{ asset('gallery/lg-fullscreen.min.js') }}"></script>
+<script src="{{ asset('gallery/lg-video.min.js') }}"></script>
 <style type="text/css">
     #lg-zoom-in, #lg-zoom-out{
         display: none;
     }
 </style>
-<script type="text/javascript">
+<script>
     $(document).ready(function(){
         $('#video-gallery').lightGallery({
         });
@@ -299,7 +299,7 @@ if(!function_exists('base_url'))
 <!-- <link rel="stylesheet" href="{{ asset('template3/theme-purple/css/calendar-fixed.css')}}"> -->
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
-<script type="text/javascript" src="{{ asset('template3/js/calendar-manual.js') }}"></script>
+<script src="{{ asset('template3/js/calendar-manual.js') }}"></script>
 <script>
     $(document).ready(function() {
         let $document = $(this);

@@ -121,7 +121,7 @@
 
 @include('template3/include.css_scripts')
 
-<script type="text/javascript">
+<script>
 
 // TH
 $.datepicker.regional['th'] ={

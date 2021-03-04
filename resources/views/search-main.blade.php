@@ -9,11 +9,11 @@ if(!function_exists('base_url'))
     }
 } 
 ?> 
-@section('title', 'QUESTIONNAIRE')
+@section('title', 'ค้นหา')
 @section('tagkeyword', '')
 @section('tagdescription', '')
 
-@extends('template2/include/start')
+@extends('template1/include/start')
 @section('contentpage')
 
 <div class="main-wrapper">
@@ -24,47 +24,39 @@ if(!function_exists('base_url'))
     </div>
 
     <header id="header-wrapper">
-        @include('template2/include.header')
+        @include('template1/include.header')
     </header>
     
     <div id="site-content">
+
         <div class="banner-wrapper onlyOne">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="banner-wrapper">
-                            <div class="group-mange-section no-mg right-0">
-                                <div class="manage-tools">
-                                    <ul>
-                                        <li class="order-list">จัดการ</li>
-                                        <li class="order-list">ลบ</li>
-                                        <li class="order-list">ซ่อน</li>
-                                        <li class="order-list order-close">ปิด</li>
-                                    </ul>
-                                </div> 
-                                <div class="manage-edit">
-                                    <img src="{{ asset('template2/assets/images/icons/icon-edit.svg')}}" alt="icon">
-                                </div>
-                            </div>
-                            <ul>
-                                <li>
-                                    <div class="bg-layer"></div>
-                                    <div class="banner" style="background-image: url('../../template2/assets/images/banner/img-banner-demo.png');"></div>
-                                    <div class="item-Onbanner-outer">
-                                        <div class="item-Onbanner-inner">
-                                            <div class="list">
-                                                <h2 class="title-banner">การรับฟังปัญหา/ข้อคิดเห็น</h2>
-                                                <p class="desc-banner">มุ่งมั่นการทำงาน แหล่งค้นคว้าการประชุม เครือข่ายมหานครอาเซียน</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+            <div class="group-mange-section no-mg right-0">
+                <div class="manage-tools">
+                    <ul>
+                        <li class="order-list">จัดการ</li>
+                        <li class="order-list">ลบ</li>
+                        <li class="order-list">ซ่อน</li>
+                        <li class="order-list order-close">ปิด</li>
+                    </ul>
+                </div> 
+                <div class="manage-edit">
+                    <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
                 </div>
             </div>
-            
+            <ul>
+                <li>
+                    <div class="bg-layer"></div>
+                    <div class="banner" style="background-image: url('../../template1/assets/images/banner/img-banner-demo.png');"></div>
+                    <div class="item-Onbanner-outer">
+                        <div class="item-Onbanner-inner">
+                            <div class="list">
+                                <h2 class="title-banner">ข่าวสาร</h2>
+                                <p class="desc-banner">มุ่งมั่นการทำงาน แหล่งค้นคว้าการประชุม เครือข่ายมหานครอาเซียน</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
 
         <div class="group-section-breadcrumb">
@@ -72,7 +64,7 @@ if(!function_exists('base_url'))
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">หน้าแรก</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">การรับฟังปัญหา/ข้อคิดเห็น</li>
+                        <li class="breadcrumb-item active" aria-current="page">ค้นหา</li>
                     </ol>
                 </nav>
             </div>
@@ -80,13 +72,13 @@ if(!function_exists('base_url'))
         </div> 
 
         <div class="group-section-content">
-            @include('template2/questionnaire.list')
+            @include('template1/search.list')
         </div>
 
     </div>
 
     <footer id="footer-wrapper">
-        @include('template2/include.footer')
+        @include('template1/include.footer')
     </footer>
 
 
@@ -138,9 +130,10 @@ if(!function_exists('base_url'))
 </div>
 
 
-@include('template2/include.css_scripts')
+@include('template1/include.css_scripts')
 
 <script>
+
 // TH
 $.datepicker.regional['th'] ={
         dateFormat: 'dd/mm/yy',

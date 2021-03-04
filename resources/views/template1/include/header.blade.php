@@ -595,7 +595,9 @@ foreach($_SESSION['portal_website_main_menu_' . $mod . '_list'] as $r)
 <div class="header-sm">
     <div class="logo-mobile">
         <div class="logo">
-            <img style="max-width: 500px;" src="<?php echo $CustomHelper->get_file_form_code($_SESSION['portal_website_style_'.$mod.'_logo_img1'],0) ?>" alt="<?php echo $CustomHelper->get_text_form_code($_SESSION['portal_website_style_'.$mod.'_logo_img1'],0,$_SESSION["portal_lang"]) ?>">
+            <a href="/<?php echo $mod ?>" title="<?php echo $CustomHelper->get_text_form_code($_SESSION['portal_website_style_'.$mod.'_logo_img1'],0,$_SESSION["portal_lang"]) ?>">
+                <img style="max-width: 500px;" src="<?php echo $CustomHelper->get_file_form_code($_SESSION['portal_website_style_'.$mod.'_logo_img1'],0) ?>" alt="<?php echo $CustomHelper->get_text_form_code($_SESSION['portal_website_style_'.$mod.'_logo_img1'],0,$_SESSION["portal_lang"]) ?>">
+            </a>
         </div>
         <div id="menu_sticky" class="menu-sizefonts-wrapper">
             <div class="bar-menu" id="nav-expander">
@@ -605,9 +607,9 @@ foreach($_SESSION['portal_website_main_menu_' . $mod . '_list'] as $r)
             </div>
             <div class="tools-sizefonts">
                 <div class="sizefonts-wrapper">
-                    <div class="reduce"></div>
-                    <div class="normal active"></div>
-                    <div class="increase"></div>
+                    <div id="reduce-size-md" class="reduce"></div>
+                    <div id="normal-size-mb" class="normal active"></div>
+                    <div id="increase-size-mb" class="increase"></div>
                 </div>
             </div>
         </div>

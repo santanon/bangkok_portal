@@ -105,11 +105,11 @@ if(!function_exists('base_url'))
 @include('template1/include.css_scripts')
 <!-- Gallery -->
 <link rel="stylesheet" href="{{ asset('gallery/lightgallery.css')}}">
-<script type="text/javascript" src="{{ asset('gallery/lightgallery.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('gallery/lg-thumbnail.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('gallery/lg-fullscreen.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('gallery/lg-video.min.js') }}"></script>
-<script type="text/javascript">
+<script src="{{ asset('gallery/lightgallery.min.js') }}"></script>
+<script src="{{ asset('gallery/lg-thumbnail.min.js') }}"></script>
+<script src="{{ asset('gallery/lg-fullscreen.min.js') }}"></script>
+<script src="{{ asset('gallery/lg-video.min.js') }}"></script>
+<script>
     $(document).ready(function(){
         let $document = $(this);
 
@@ -176,7 +176,7 @@ foreach($r_data as $r)
     });
 </script>
 
-<script type="text/javascript">
+<script>
     // TH
     $.datepicker.regional['th'] ={
         dateFormat: 'dd/mm/yy',

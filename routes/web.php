@@ -38,6 +38,7 @@ Route::any('manage-admin/add',          [ManageController::class,'add']);
 Route::any('manage-admin/edit',         [ManageController::class,'edit']);
 Route::any('manage-admin/add_submit',   [ManageController::class,'add_submit']);
 Route::any('manage-admin/edit_submit',  [ManageController::class,'edit_submit']);
+Route::any('manage-admin/edit_submit2',  [ManageController::class,'edit_submit2']);
 Route::any('manage-admin/edit_logo',    [ManageController::class,'edit_logo']);
 
 Route::any('manage-admin/edit_website', [ManageController::class,'edit_website']);
@@ -49,6 +50,11 @@ Route::any('manage-admin/edit_bg',      [ManageController::class,'edit_bg']);
 Route::any('manage-admin/edit_bg_submit',[ManageController::class,'edit_bg_submit']); 
 Route::any('manage-admin/edit_html_css',[ManageController::class,'edit_html_css']);
 Route::any('manage-admin/edit_html_css_submit',[ManageController::class,'edit_html_css_submit']);
+
+Route::any('manage-admin/contact_info1',[ManageController::class,'contact_info1']);
+Route::any('manage-admin/info_submit',[ManageController::class,'info_submit']);
+
+
 Route::any('manage-admin/edit_copyright',[ManageController::class,'edit_copyright']);
 Route::any('manage-admin/edit_copyright_submit',[ManageController::class,'edit_copyright_submit']);
 Route::any('manage-admin/edit_social',  [ManageController::class,'edit_social']);
@@ -91,6 +97,7 @@ Route::any('manage-admin/panels/{mod}/{act}/{id}/{id2}/{main_type}',	[ManageCont
 Route::any('manage-admin/save_sort_box', [ManageController::class,'save_sort_box']);
 Route::any('manage-admin/read',         [ManageController::class,'read']);
 Route::any('manage-admin/export',       [ManageController::class,'export']);
+Route::any('manage-admin/organize_submit',       [ManageController::class,'organize_submit']);
 
 Route::any('/', function () {
     return redirect('เข้าสู่ระบบ');
@@ -100,6 +107,7 @@ $q = "SELECT web_url,web_name FROM tbl_portal_website WHERE status = '1'";
 $v = '';
 $res = $CustomHelper->API_CALL_route($CustomHelper->API_URL('api_website'),$q,$v);
 $q = json_decode($res);
+
 foreach($q as $web_obj) 
 {  
     Route::any($web_obj->web_url,[FrontController::class,'index']); 
@@ -110,10 +118,5 @@ foreach($q as $web_obj)
     Route::any($web_obj->web_url.'/organization',[FrontController::class,'organization']);
     Route::any($web_obj->web_url.'/sitemap',[FrontController::class,'sitemap']);
     Route::any($web_obj->web_url.'/page/{v1?}/{v2?}/{v3?}/{v4?}/{v5?}/{v6?}/{v7?}/{v8?}/{v9?}/{v10?}',[FrontController::class,'page']);
-} 
- 
-/* Front */
-Route::any('/video', function () {
-    return view('video-main'); 
-});   
+}   
  

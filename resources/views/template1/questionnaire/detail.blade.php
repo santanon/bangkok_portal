@@ -1,3 +1,7 @@
+<div align="center" class="tools">
+    <a href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('กำลังโหลด...','/manage-admin/list?m=question&id=<?php echo $r_news_info_cat[0]->id ?>');"><img src="http://127.0.0.1:8000/template1/assets/images/icons/icon-edit.svg" alt="icon">&nbsp; <b style="font-size:18px;">แก้ไขข้อมูล</b></a><br><br> 
+</div>
+
 <div class="section-content">
     <div class="container">
         <div class="inner-content">
@@ -33,11 +37,10 @@
                                             <div class="right">                                          
                                                 <div class="text-content page-detail">
                                                     <div class="title color-primary">
-                                                        ร่วมส่งแรงใจให้เยาวชนนักเตะรุ่นใหม่ชิงชัยเอกสารที่ต้องใช้ 1. สูติบัตร พร้อมสำเนา 2. ทะเบียนบ้าน พร้อมสำเนา
+                                                        <?php echo $CustomHelper->L($r_news_info_cat[0]->title,$r_news_info_cat[0]->en_title); ?>
                                                     </div>
                                                     <p>
-                                                        ระหว่างวันที่ 30 ต.ค. - 5 ธ.ค. 2563 ณ สนามศูนย์เยาวชนกรุงเทพมหานคร (ไทย-ญี่ปุ่น) ดินแดง ชิงถ้วยเกียรติยศ
-                                                        พร้อมทุนการศึกษารวม 250,000 บาท
+                                                         
                                                     </p>
                                                 </div>
                                             </div>

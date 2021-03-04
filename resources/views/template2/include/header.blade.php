@@ -7,21 +7,89 @@
             </div>
             <div class="clearPrefix"></div>
         </div>
-        <div class="canvas-lang">
-            <ul>
-                <li class="lang active">
-                    <a href="">TH</a>
-                </li>
-                <li class="lang">
-                    <a href="">EN</a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="{{ asset('template2/assets/images/icons/icon-search-mobile.svg')}}" alt="icon">
-                    </a>
-                </li>
-            </ul>
-        </div>
+
+<script>
+var a_lang = top.location.href; 
+a_lang = a_lang.replace("&lang=th",""); 
+a_lang = a_lang.replace("?lang=th&","?"); 
+a_lang = a_lang.replace("?lang=th",""); 
+a_lang = a_lang.replace("&lang=en",""); 
+a_lang = a_lang.replace("?lang=en&","?"); 
+a_lang = a_lang.replace("?lang=en",""); 
+if(a_lang.indexOf("?") > -1)
+{ 
+    a_lang = a_lang + "&lang=th";	 
+}
+else
+{  
+    a_lang = a_lang + "?lang=th";	
+} 
+</script> 
+                    
+<script>
+var b = top.location.href; 
+b = b.replace("&lang=th",""); 
+b = b.replace("?lang=th&","?"); 
+b = b.replace("?lang=th",""); 
+b = b.replace("&lang=en",""); 
+b = b.replace("?lang=en&","?"); 
+b = b.replace("?lang=en",""); 
+if(b.indexOf("?") > -1)
+{ 
+    b = b + "&lang=en";	 
+}
+else
+{  
+    b = b + "?lang=en";	
+} 
+</script> 
+
+<?php 
+if($_SESSION["portal_lang"] == "english")
+{
+    ?>
+     <div class="canvas-lang">
+        <ul>
+            <li class="lang">
+                <a href="javascript:;" onclick="window.location = a_lang;">TH</a>
+            </li>
+            <li class="lang active">
+                <a href="javascript:;">EN</a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="{{ asset('template2/assets/images/icons/icon-search-mobile.svg')}}" alt="icon">
+                </a>
+            </li>
+        </ul>
+    </div>
+    <?php
+}
+else 
+{
+    ?>
+     <div class="canvas-lang">
+        <ul>
+            <li class="lang active">
+                <a href="javascript:;">TH</a>
+            </li>
+            <li class="lang">
+                <a href="javascript:;" onclick="window.location = b;">EN</a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="{{ asset('template2/assets/images/icons/icon-search-mobile.svg')}}" alt="icon">
+                </a>
+            </li>
+        </ul>
+    </div>
+    <?php 
+}
+?>
+        
+
+
+
         <div class="canvas-top">
             <ul>
                 <li class="">
@@ -50,33 +118,119 @@
         </div>
         <div class="canvas-list-menu">
             <ul class="nav-menu-MB">
-                <li><a href="">ศูนย์ข้อมูลกรุงเทพมหานคร</a></li>
-                <li><a href="">หน่วยงานกรุงเทพมหานคร</a></li>
-                <li><a href="">ติดต่อสำนักงานเลขานุการสภา กทม.</a></li>
-                <li><a href="home-2">หน้าหลัก</a></li>
-                <li><a href="">สภากรุงเทพมหานคร</a></li>
-                <li><a href="about-2">เกี่ยวกับหน่วยงาน</a>
-                    <ul class="menu-lv2">
-                        <li><a href="#">วิสัยทัศน์</a></li>
-                        <li><a href="#">ภารกิจหน้าที่</a></li>
-                        <li><a href="#">โครงสร้างหน่วยงาน</a></li>
-                        <li><a href="#">แผนปฏิบัติราชการและผลการดำเนินการ</a></li>
-                        <li>
-                            <a href="#">ติดตามและรายงานผลการปฏิบัติงานตามแผนปฏิบัติราชการ</a>
-                            <ul class="menu-lv3">
-                                <li><a href="">ระบบติดตามผลการปฏิบัติราชการสำหรับผู้บริหาร (BMA MONITOR)</a></li>
-                                <li><a href="">ระบบติดตามและประเมินผลแผนพัฒนากรุงเทพมหานคร (Daily plans)</a></li>
-                                <li><a href="">ระบบติดตามและประเมินผลแผนพัฒนากรุงเทพมหานคร (Digital plans)</a></li>
-                            </ul>
+                <?php
+                foreach($_SESSION['portal_website_sub_menu_' . $mod . '_list'] as $r)
+                {
+                    if($r->page_type == 'group')
+                    {
+                        ?>
+                        <li><a href="#"><?php echo $CustomHelper->L($r->title,$r->en_title) ?></a></li>
+                        <?php
+                    }
+                    else
+                    {
+                        ?>
+                        <li><a title="<?php echo $CustomHelper->L($r->title,$r->en_title) ?>" href="<?php echo base_url() ?><?php echo $mod ?>/page/top/<?php echo $r->id ?>/<?php echo $CustomHelper->remove_to_url($r->title,$r->en_title) ?>" target="<?php if($r->url_target == '') { echo '_top'; } else if($r->url_target == '0') { echo '_top'; } else { echo $r->url_target; } ?>"><?php echo $CustomHelper->L($r->title,$r->en_title) ?></a></li> 
+                        <?php  
+                    }  
+                } 
+                foreach($_SESSION['portal_website_main_menu_' . $mod . '_list'] as $r)
+                { 
+                    if($r->page_type == 'group')
+                    {
+                        ?>
+                        <li><a href="#"><?php echo $CustomHelper->L($r->title,$r->en_title) ?></a>
+                        <ul class="menu-lv2">           
+                        <?php
+                        if(isset($_SESSION['portal_website_page_' . $r->id . '_' . $mod . '_list']))
+                        {
+                            foreach($_SESSION['portal_website_page_' . $r->id . '_' . $mod . '_list'] as $r_sub)
+                            { 
+                                if($r_sub->page_type == 'group')
+                                {
+                                    ?>
+                                    <li><a href="#"><?php echo $CustomHelper->L($r_sub->title,$r_sub->en_title) ?></a>
+                                    <ul class="menu-lv3">
+                 
+                                        <?php 
+                                        if(isset($_SESSION['portal_website_page_' . $r->id . '_' . $r_sub->id . '_' . $mod . '_list']))
+                                        {
+                                            ?> 
+                                            <?php
+                                            $menu_cache_name = "menu_cache/".$r->id."_".$r_sub->id."_".$mod.".php";
+                
+                                            ?><!-- ***<?php echo  $menu_cache_name ?> --><?php
+                
+                                            if (file_exists($menu_cache_name)) 
+                                            {
+                                                ?><!-- Yes files --><?php
+                                            }
+                                            else
+                                            {
+                                                ?><!-- No files<?php
+                                                $str_gen_1 = '';
+                                                
+                                                foreach($_SESSION['portal_website_page_' . $r->id . '_' . $r_sub->id . '_' . $mod . '_list'] as $r_sub_sub)
+                                                {
+                                                    $str_gen_1 = $str_gen_1.'<li>';
+                                                    
+                                                    $str_gen_1 = $str_gen_1.'<a title="'.$CustomHelper->L($r_sub_sub->title,$r_sub_sub->en_title).'" href="'.base_url().$mod.'/page/sub/'.$r_sub_sub->id.'/'.$CustomHelper->remove_to_url($r_sub_sub->title,$r_sub_sub->en_title).'" target="'.$r_sub_sub->url_target.'">'.$CustomHelper->L($r_sub_sub->title,$r_sub_sub->en_title).'</a>'; 
+                                                    
+                                                    $str_gen_1 = $str_gen_1.'</li>';  	
+                                                }
+                                                ?>
+                                                
+                                                [[<?php echo  $str_gen_1 ?>]]
+                                                
+                                                --><?php
+                                                
+                                                @file_put_contents($menu_cache_name,$str_gen_1); 
+                                            }
+                
+                                            include($menu_cache_name);
+                                        }
+                                        ?>
+                                    </ul>
+                                    </li>
+                                    <?php
+                                }
+                                else
+                                {
+                                    ?>
+                                    <li>
+                                    <a title="<?php echo $CustomHelper->L($r_sub->title,$r_sub->en_title) ?>" href="<?php echo base_url() ?><?php echo $mod ?>/page/sub/<?php echo $r_sub->id ?>/<?php echo $CustomHelper->remove_to_url($r_sub->title,$r_sub->en_title) ?>" target="<?php if($r_sub->url_target == '') { echo '_top'; } else if($r_sub->url_target == '0') { echo '_top'; } else { echo $r_sub->url_target; } ?>"><?php echo $CustomHelper->L($r_sub->title,$r_sub->en_title) ?></a>
+                                    </li>
+                                    <?php	
+                                    
+                                    /*if($r_sub->page_type == 'url')
+                                    {
+                                        ?>
+                                        <a title="<?php echo $CustomHelper->L($r_sub->title,$r_sub->en_title) ?>" href="<?php echo $CustomHelper->L($r_sub->url,$r_sub->en_url) ?>" target="<?php echo $r_sub->url_target ?>"><?php echo $CustomHelper->L($r_sub->title,$r_sub->en_title) ?></a>
+                                        <?php		
+                                    }
+                                    else
+                                    {
+                                        ?>
+                                        <a title="<?php echo $CustomHelper->L($r_sub->title,$r_sub->en_title) ?>" href="<?php echo base_url() ?><?php echo $mod ?>/page/sub/<?php echo $r_sub->id ?>/<?php echo $CustomHelper->remove_to_url($r_sub->title,$r_sub->en_title) ?>" target="_top"><?php echo $CustomHelper->L($r_sub->title,$r_sub->en_title) ?></a>
+                                        <?php		
+                                    } */
+                                }
+                            } 
+                        }
+                        ?> 
+                        </ul> 
                         </li>
-                        <li><a href="">คู่มือการปฏิบัติงาน</a></li>
-                        <li><a href="">การบริหารเงินงบประมาณ</a></li>
-                    </ul>
-                </li>
-                <li><a href="newss-2">ข่าวสาร</a></li>
-                <li><a href="#">การให้บริการ</a></li>
-                <li><a href="calendar-2">ปฏิทินกิจกรรม</a></li>
-                <li><a href="">การรับฟังปัญหา/ข้อคิดเห็น</a></li>
+                        <?php
+                 
+                    }
+                    else
+                    { 
+                        ?>
+                        <li><a title="<?php echo $CustomHelper->L($r->title,$r->en_title) ?>" href="<?php echo base_url() ?><?php echo $mod ?>/page/main/<?php echo $r->id ?>/<?php echo $CustomHelper->remove_to_url($r->title,$r->en_title) ?>" target="<?php if($r->url_target == '') { echo '_top'; } else if($r->url_target == '0') { echo '_top'; } else { echo $r->url_target; } ?>"><?php echo $CustomHelper->L($r->title,$r->en_title) ?></a></li>
+                        <?php
+                    }
+                }
+                ?> 
             </ul>
         </div>
     </div>
@@ -87,24 +241,16 @@
     <div class="container-fluid">
         <div class="row">
             <div class="logo-wrapper">
-                <div class="group-mange-section no-mg right-0">
-                    <!--<div class="manage-tools">
-                        <ul>
-                            <li class="order-list">บริหารจัดการ</li>
-                            <li class="order-list">ลบ</li>
-                            <li class="order-list">ซ่อน</li>
-                            <li class="order-list order-close">ปิด</li>
-                        </ul>
-                    </div>-->
-                    <a href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('LOGO','manage-admin/edit_logo?m=portal_website');">
+                <div class="group-mange-section no-mg right-0"> 
+                    <a href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('กำลังโหลด...','/manage-admin/edit_logo?m=logo');">
                         <div class="manage-edit">
                             <img src="{{ asset('template2/assets/images/icons/icon-edit.svg')}}" alt="icon">
                         </div>
                     </a>
                 </div>
                 <div class="logo">
-                    <a href="/home-2">
-                        <img src="{{ asset('template2/assets/images/logo.png')}}" alt="logo">
+                    <a href="/<?php echo $mod ?>" title="<?php echo $CustomHelper->get_text_form_code($_SESSION['portal_website_style_'.$mod.'_logo_img1'],0,$_SESSION["portal_lang"]) ?>">
+                        <img style="max-width: 500px;" src="<?php echo $CustomHelper->get_file_form_code($_SESSION['portal_website_style_'.$mod.'_logo_img1'],0) ?>" alt="<?php echo $CustomHelper->get_text_form_code($_SESSION['portal_website_style_'.$mod.'_logo_img1'],0,$_SESSION["portal_lang"]) ?>">
                     </a>
                 </div>
             </div>
@@ -125,6 +271,43 @@
                                 </li>
                             </ul>
                         </div>
+
+                        <script>
+                            var a_lang = top.location.href; 
+                            a_lang = a_lang.replace("&lang=th",""); 
+                            a_lang = a_lang.replace("?lang=th&","?"); 
+                            a_lang = a_lang.replace("?lang=th",""); 
+                            a_lang = a_lang.replace("&lang=en",""); 
+                            a_lang = a_lang.replace("?lang=en&","?"); 
+                            a_lang = a_lang.replace("?lang=en",""); 
+                            if(a_lang.indexOf("?") > -1)
+                            { 
+                                a_lang = a_lang + "&lang=th";	 
+                            }
+                            else
+                            {  
+                                a_lang = a_lang + "?lang=th";	
+                            } 
+                            </script> 
+                                                
+                            <script>
+                            var b = top.location.href; 
+                            b = b.replace("&lang=th",""); 
+                            b = b.replace("?lang=th&","?"); 
+                            b = b.replace("?lang=th",""); 
+                            b = b.replace("&lang=en",""); 
+                            b = b.replace("?lang=en&","?"); 
+                            b = b.replace("?lang=en",""); 
+                            if(b.indexOf("?") > -1)
+                            { 
+                                b = b + "&lang=en";	 
+                            }
+                            else
+                            {  
+                                b = b + "?lang=en";	
+                            } 
+                            </script> 
+
                         <div class="tools-web">
                             <ul>
                                 <!-- <li>
@@ -139,16 +322,43 @@
                                         <div class="increase" id="increase-size"></div>
                                     </div>
                                 </li> -->
-                                <li>
-                                    <div class="lang-site">
-                                        <span>TH</span><em class="fas fa-angle-up"></em>
-                                        <ul class="multi-lang">
-                                            <li>
-                                                <a href="/">EN</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
+
+
+                                <?php 
+                                if($_SESSION["portal_lang"] == "english")
+                                {
+                                    ?>
+                                    <li>
+                                        <div class="lang-site">
+                                            <span>EN</span><em class="fas fa-angle-up"></em>
+                                            <ul class="multi-lang">
+                                                <li>
+                                                    <a href="javascript:;" onclick="window.location = a_lang;">TH</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li> 
+                                    <?php
+                                }
+                                else 
+                                {
+                                    ?>
+                                    <li>
+                                        <div class="lang-site">
+                                            <span>TH</span><em class="fas fa-angle-up"></em>
+                                            <ul class="multi-lang">
+                                                <li>
+                                                    <a href="javascript:;" onclick="window.location = b_lang;">EN</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li> 
+                                    <?php 
+                                }
+                                ?>
+
+                                
+                                
                             </ul>
                         </div>
                     </div>

@@ -7,13 +7,76 @@
             </div>
             <div class="clearPrefix"></div>
         </div>
+
+<script>
+var a_lang = top.location.href; 
+a_lang = a_lang.replace("&lang=th",""); 
+a_lang = a_lang.replace("?lang=th&","?"); 
+a_lang = a_lang.replace("?lang=th",""); 
+a_lang = a_lang.replace("&lang=en",""); 
+a_lang = a_lang.replace("?lang=en&","?"); 
+a_lang = a_lang.replace("?lang=en",""); 
+if(a_lang.indexOf("?") > -1)
+{ 
+    a_lang = a_lang + "&lang=th";	 
+}
+else
+{  
+    a_lang = a_lang + "?lang=th";	
+} 
+</script> 
+                    
+<script>
+var b = top.location.href; 
+b = b.replace("&lang=th",""); 
+b = b.replace("?lang=th&","?"); 
+b = b.replace("?lang=th",""); 
+b = b.replace("&lang=en",""); 
+b = b.replace("?lang=en&","?"); 
+b = b.replace("?lang=en",""); 
+if(b.indexOf("?") > -1)
+{ 
+    b = b + "&lang=en";	 
+}
+else
+{  
+    b = b + "?lang=en";	
+} 
+</script> 
+
+ 
+<?php 
+if($_SESSION["portal_lang"] == "english")
+{
+    ?>
+    <span>EN</span><em class="fas fa-angle-up"></em>
+    <ul class="multi-lang">
+        <li>
+            <a href="javascript:;" onclick="window.location = a_lang;">TH</a>
+        </li>
+    </ul>
+    <?php
+}
+else 
+{
+    ?>
+    <span>TH</span><em class="fas fa-angle-up"></em>
+    <ul class="multi-lang">
+        <li>
+            <a href="javascript:;" onclick="window.location = b;">EN</a>
+        </li>
+    </ul>
+    <?php 
+}
+?>
+   
         <div class="canvas-lang">
             <ul>
                 <li class="lang active">
-                    <a href="">TH</a>
+                    <a href="javascript:;" onclick="window.location = a_lang;">TH</a>
                 </li>
                 <li class="lang">
-                    <a href="">EN</a>
+                    <a hhref="javascript:;" onclick="window.location = b;>EN</a>
                 </li>
                 <li>
                     <a href="">

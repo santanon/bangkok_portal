@@ -15,11 +15,6 @@ if(!function_exists('base_url'))
 
 @extends('template1/include/start') 
 @section('contentpage')
-
-<style>
-#modal_full_span{ font-size:30px; }
-</style>
-
  
 <div class="main-wrapper">
     <div class="panel-header">
@@ -213,11 +208,90 @@ $(document).ready(function () {
     }
 
 
-    var swiper = new Swiper('.swiper-container', {
+    const swiper = new Swiper('.swiper-container', {
+        speed: 1200,
+        lazy: true,
+        //autoHeight: true, //enable auto height
+        //loop: true,
+        // autoplay: {
+        //     delay: 5000,
+        //     disableOnInteraction: false,
+        // }, 
+        <?php 
+        $effect = 1;
+        if($effect == 1)
+        {
+            //Effect Fade
+            ?> 
+            effect: 'fade',
+            fadeEffect: {
+            crossFade: true
+            },
+            <?php
+        }
+        else if($effect == 2)
+        {
+            //Effect Flip
+            ?> 
+            effect: 'flip',
+            grabCursor: true,
+            <?php
+        }
+        else if($effect == 3)
+        {
+            //Effect Cube
+            ?>  
+            effect: 'cube',
+            grabCursor: true,
+            cubeEffect: {
+                shadow: true,
+                slideShadows: true,
+                shadowOffset: 20,
+                shadowScale: 0.94,
+                },
+            <?php
+        }
+        else if($effect == 4)
+        {
+            //Effect Cover Flow
+            ?>  
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            <?php
+        }
+        ?>  
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
         scrollbar: {
             el: '.swiper-scrollbar',
-            hide: true,
         },
+        // pagination: {
+        //     el: '.swiper-pagination',
+        //     type: 'fraction',// Number
+        // },
+
+        // on: {
+        //     slideChange: function (el) {
+        //     console.log('1');
+        //     $('.swiper-slide').each(function () {
+        //         var audioPlayer = $(this).find('audio').get(0);
+        //         if (audioPlayer) {
+        //             audioPlayer.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+        //         }
+        //     });
+        //     },
+        // },
     });
 });
 </script>
@@ -254,116 +328,124 @@ if($have_gallery == true)
 
         <?php
         $this_loop = 1;
-        foreach(${'data_box_4_'.$gallery_id} as $r_sub)
-        { 
-            ?>
-            $('#dynamic<?php echo $this_loop ?>').on('click', function(e) {
-            $(document).lightGallery({
-            dynamic: true,
-            dynamicEl: [  
-            <?php 
-            if(strpos($r_sub->img1,'^') > -1)
-            {
-                $arr = explode('^',$r_sub->img1);
-
-                if(strpos($arr[0],'|') > -1)
-                {
-                    $arr_d = explode('|',$arr[1]);
-                    $arr = explode('|',$arr[0]);
-                        
-                    $this_loop_sub = 0;
-                    foreach($arr as $arr_item)
-                    {
-                        if($arr_item != '')
-                        {
-                            ?>
-                            {
-                                src:    '<?php echo $arr_item ?>',
-                                thumb:  '<?php echo $arr_item ?>',
-                                subHtml:'<?php echo $arr_d[$this_loop_sub] ?>'
-                            },
-                            <?php
-                            $this_loop_sub++;
-                        } 
-                    }
-                }  
-            }
-            else
-            {
+        if(isset(${'data_box_4_'.$gallery_id}))
+        {
+            foreach(${'data_box_4_'.$gallery_id} as $r_sub)
+            { 
                 ?>
+                $('#dynamic<?php echo $this_loop ?>').on('click', function(e) {
+                $(document).lightGallery({
+                dynamic: true,
+                dynamicEl: [  
+                <?php 
+                if(strpos($r_sub->img1,'^') > -1)
                 {
-                    src: '<?php echo $r_sub->img1 ?>',
-                    thumb: '<?php echo $r_sub->img1 ?>'
-                } 
-                <?php
-            }
-            ?> 
-            ],
-            slideEndAnimatoin: false,
-            loop: false,
-            hideControlOnEnd: true,
-            download: false,
+                    $arr = explode('^',$r_sub->img1);
+
+                    if(strpos($arr[0],'|') > -1)
+                    {
+                        $arr_d = explode('|',$arr[1]);
+                        $arr = explode('|',$arr[0]);
+                            
+                        $this_loop_sub = 0;
+                        foreach($arr as $arr_item)
+                        {
+                            if($arr_item != '')
+                            {
+                                ?>
+                                {
+                                    src:    '<?php echo $arr_item ?>',
+                                    thumb:  '<?php echo $arr_item ?>',
+                                    subHtml:'<?php echo $arr_d[$this_loop_sub] ?>'
+                                },
+                                <?php
+                                $this_loop_sub++;
+                            } 
+                        }
+                    }  
+                }
+                else
+                {
+                    ?>
+                    {
+                        src: '<?php echo $r_sub->img1 ?>',
+                        thumb: '<?php echo $r_sub->img1 ?>'
+                    } 
+                    <?php
+                }
+                ?> 
+                ],
+                slideEndAnimatoin: false,
+                loop: false,
+                hideControlOnEnd: true,
+                download: false,
+                    });
                 });
-            });
-            <?php
-            $this_loop++;
+                <?php
+                $this_loop++;
+            }
         }
+        
  
         $this_loop = 1;
-        foreach(${'data_box_5_'.$vdo_id} as $r_sub)
-        { 
-            ?>
-            $('#dynamicvdo<?php echo $this_loop ?>').on('click', function(e) {
-            $(document).lightGallery({
-            dynamic: true,
-            dynamicEl: [  
-            <?php 
-            if(strpos($r_sub->file1,'^') > -1)
-            {
-                $arr = explode('^',$r_sub->file1);
-
-                if(strpos($arr[0],'|') > -1)
-                {
-                    $arr_d = explode('|',$arr[1]);
-                    $arr = explode('|',$arr[0]);
-                        
-                    $this_loop_sub = 0;
-                    foreach($arr as $arr_item)
-                    {
-                        if($arr_item != '')
-                        {
-                            ?>
-                            {
-                                src:    '<?php echo $arr_item ?>',
-                                thumb:  '<?php echo $arr_item ?>',
-                                subHtml:'<?php echo $arr_d[$this_loop_sub] ?>'
-                            },
-                            <?php
-                            $this_loop_sub++;
-                        } 
-                    }
-                }  
-            }
-            else
-            {
+        if(isset(${'data_box_5_'.$vdo_id}))
+        {
+            foreach(${'data_box_5_'.$vdo_id} as $r_sub)
+            { 
                 ?>
+                $('#dynamicvdo<?php echo $this_loop ?>').on('click', function(e) {
+                $(document).lightGallery({
+                dynamic: true,
+                dynamicEl: [  
+                <?php 
+                if(strpos($r_sub->file1,'^') > -1)
                 {
-                    src: '<?php echo $r_sub->img1 ?>',
-                    thumb: '<?php echo $r_sub->img1 ?>'
-                } 
-                <?php
-            }
-            ?> 
-            ],
-            slideEndAnimatoin: false,
-            loop: false,
-            hideControlOnEnd: true,
-            download: false,
+                    $arr = explode('^',$r_sub->file1);
+
+                    if(strpos($arr[0],'|') > -1)
+                    {
+                        $arr_d = explode('|',$arr[1]);
+                        $arr = explode('|',$arr[0]);
+                            
+                        $this_loop_sub = 0;
+                        foreach($arr as $arr_item)
+                        {
+                            if($arr_item != '')
+                            {
+                                ?>
+                                {
+                                    src:    '<?php echo $arr_item ?>',
+                                    thumb:  '<?php echo $arr_item ?>',
+                                    subHtml:'<?php echo $arr_d[$this_loop_sub] ?>'
+                                },
+                                <?php
+                                $this_loop_sub++;
+                            } 
+                        }
+                    }  
+                }
+                else
+                {
+                    ?>
+                    {
+                        src: '<?php echo $r_sub->img1 ?>',
+                        thumb: '<?php echo $r_sub->img1 ?>'
+                    } 
+                    <?php
+                }
+                ?> 
+                ],
+                slideEndAnimatoin: false,
+                loop: false,
+                hideControlOnEnd: true,
+                download: false,
+                    });
                 });
-            });
-            <?php
-            $this_loop++;
-        } 
+                <?php
+                $this_loop++;
+            } 
+        }
+        
     ?>});
     </script>
     <?php

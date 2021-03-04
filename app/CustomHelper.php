@@ -52,7 +52,8 @@ class CustomHelper
 
         $this_date = date('Y-m-d H:i:s');
   
-		if(isset($_SESSION['panel_login']) && $_SESSION['panel_login'] == '1')
+		//if(isset($_SESSION['panel_login']) && $_SESSION['panel_login'] == '1')
+		if(true)
 		{
 			$ch = curl_init();
 			curl_setopt($ch,CURLOPT_URL, $url);
@@ -171,10 +172,10 @@ class CustomHelper
         //$v = str_replace('=','|',$v);
 
         $this_date = date('Y-m-d H:i:s');
-  
-		return Cache::remember(openssl_encrypt($url.$q.$v,$algo,$k),99999, function() use ($url,$q,$v,$old_q,$old_v,$this_date)
-        { 
-            $ch = curl_init();
+
+		return Cache::remember(openssl_encrypt($url.$q.$v.'1',$algo,$k),0, function() use ($url,$q,$v,$old_q,$old_v,$this_date)
+		{ 
+			$ch = curl_init();
 			curl_setopt($ch,CURLOPT_URL, $url);
 			curl_setopt($ch, CURLOPT_POST, 1);
 			curl_setopt($ch, CURLOPT_POSTFIELDS,"q=".$q."&v=".$v);
@@ -214,12 +215,7 @@ class CustomHelper
 			} 
 			//Storage::append('api/'.date('Y-m-d').'.log', "date real =".$this_date."\ndate cache=".date('Y-m-d H:i:s')."\nurl=".$url."\nq=".$q."\nv=".$v."\nold_q=".$old_q."\nold_v=".$old_v."\no=".$output."\n-------------------");
 			return $this_return;
-        });
-		 
-        /*return Cache::remember(openssl_encrypt($url.$q.$v,$algo,$k), 1, function() use ($url,$q,$v,$old_q,$old_v,$this_date)
-        { 
-            
-        });*/
+		}); 
     }
 
     function API_URL($file)
@@ -894,6 +890,40 @@ class CustomHelper
 		}
 
 		
+		return $day;
+	}
+
+	function date_unix_to_thai_mon_long($day)
+	{
+		$d = date("j",$day);
+		$m = date("m",$day);
+		$mm = date("M",$day);
+		$y = date("Y",$day);
+
+		if($_SESSION['portal_lang'] == "thai")
+		{
+			$month_long = array('มกราคม', 'กุมภาพันธ์', 'มีนาคม', 'เมษายน', 'พฤษภาคม', 'มิถุนายน', 'กรกฎาคม', 'สิงหาคม', 'กันยายน', 'ตุลาคม', 'พฤศจิกายน', 'ธันวาคม');
+			$month_short = array('ม.ค.', 'ก.พ.', 'มี.ค.', 'เม.ย.', 'พ.ค.', 'มิ.ย.', 'ก.ค.', 'ส.ค.', 'ก.ย.', 'ต.ค.', 'พ.ย.', 'ธ.ค.');
+	
+			$day_long = array('อาทิตย์', 'จันทร์', 'อังคาร', 'พุธ', 'พฤหัสบดี', 'ศุกร์', 'เสาร์');
+			$day_short = array('อา.', 'จ.', 'อ.', 'พ.', 'พฤ.', 'ศ.', 'ส.');
+
+			$y = $y+543;
+	
+			$day = "วัน".$day_long[date('w',$day)]."ที่ ".$d." ".$month_long[$m-1]." พ.ศ. ".$y;
+ 
+			/*$day_eng = array('Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday');
+			$day_thai = array('อาทิตย์','จันทร์','อังคาร','พุธ','พฤหัสบดี','ศุกร์','เสาร์'); 
+			for($run = 0;$run < count($day_thai); $run++)
+			{
+				$day = preg_replace($day_eng[$run],$day_thai[$run],$day); 
+			}*/	
+		}
+		else
+		{
+			$day = $d.' '.$mm.' '.$y;
+		}
+ 
 		return $day;
 	}
 

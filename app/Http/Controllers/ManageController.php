@@ -200,7 +200,7 @@ class ManageController extends Controller
         
          
          
-		
+		/*
 		if($this->mod == 'page')
 		{
 			$q = "SELECT * FROM ".$CustomHelper->model_to_table($this->mod_model)." WHERE web_id = ? AND page_id = '".$id."'";	 	
@@ -220,6 +220,7 @@ class ManageController extends Controller
 				exit;
 			}
 		}
+		*/
 		  
 		if($this->mod == 'inbox')
 		{  
@@ -311,8 +312,28 @@ class ManageController extends Controller
 		$c = "\App\Conf\\".$_GET['m'];
 		$m = new $c();  
 		$m->edit_submit();
+    } 
+	public function edit_submit2()
+    {        
+        $CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		$this->include_check_login();
+		 
+		$c = "\App\Conf\\".$_GET['m'];
+		$m = new $c();  
+		$m->edit_submit2();
     } 	 
-    public function edit_logo()
+    public function organize_submit()
+    {        
+        $CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		$this->include_check_login();
+		 
+		$c = "\App\Conf\\".$_GET['m'];
+		$m = new $c();  
+		$m->organize_submit();
+    } 
+	public function edit_logo()
     {      
 		$CustomHelper = new \App\CustomHelper;
 		$TextLanguage = new \App\TextLanguage; 
@@ -432,6 +453,33 @@ class ManageController extends Controller
  
         return view('manage.'.$_GET['m'].'.edit',$data);  
     }
+
+	public function contact_info1()
+    {      
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage; 
+		$this->include_check_login();  
+
+		$c = "\App\Conf\\".$_GET['m'];
+		$m = new $c();  
+		$data = $m->info();
+ 
+        return view('manage.'.$_GET['m'].'.edit',$data); 
+    }
+	public function info_submit()
+    {      
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage; 
+		$this->include_check_login();  
+
+		$c = "\App\Conf\\".$_GET['m'];
+		$m = new $c();  
+		$data = $m->info_submit();
+ 
+        return view('manage.contactus.edit',$data);  
+    }
+
+
 	public function edit_copyright()
     {      
 		$CustomHelper = new \App\CustomHelper;
@@ -653,6 +701,7 @@ class ManageController extends Controller
 		{
 			$_SESSION[$this->mod.'_group_page'] = '0';
 		}
+
 		 
 		$start_rows = $_SESSION[$this->mod.'_page_num'] * $_SESSION[$this->mod.'_max_rows'];
 		 
@@ -662,7 +711,7 @@ class ManageController extends Controller
 			$qr_d = " AND ".$this->mod_cat_field." = '".$_SESSION[$this->mod.'_group']."' AND web_id = ? AND page_id = '".$_SESSION[$this->mod.'_group_page']."' "; 
 		}
 		else
-		{
+		{ 
 			if($_SESSION[$this->mod.'_group'] <> '0')
 			{
 				$qr_d = " AND ".$this->mod_cat_field." = '".$_SESSION[$this->mod.'_group']."' AND web_id = ?"; 
@@ -687,8 +736,8 @@ class ManageController extends Controller
 				$qr_d = $qr_d." AND ".$f." LIKE '%".$_SESSION[$this->mod.'_search']."%'"; 
 			} 
 		} 
-		 
-		$q = "SELECT COUNT(id) AS count_id FROM ".$CustomHelper->model_to_table($this->mod_model)." WHERE id > 0 ".$qr_d;   
+
+		$q = "SELECT COUNT(id) AS count_id FROM ".$CustomHelper->model_to_table($this->mod_model)." WHERE id > 0 ".$qr_d;    
 		$v = $_SESSION['panel_id'];
 		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),$q,$v);
 		$total_rows = json_decode($res); 

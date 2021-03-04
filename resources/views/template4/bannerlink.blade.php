@@ -24,7 +24,7 @@
                     <p class="desc">The Bangkok Metropolitan Council Secretariat </p>
                 </div>
                 <div class="group-gotoall">
-                    <a href="/bannerlink-4" class="btn btn-outline-white">แบนเนอร์ทั้งหมด</a>
+                    <a href="/bannerlink-4" class="btn btn-outline-white">แบนเนอร์ลิงค์ทั้งหมด</a>
                 </div>
             </div>
             <div class="main-content">

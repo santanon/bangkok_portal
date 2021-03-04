@@ -1,4 +1,4 @@
-@section('title', 'ตั้งค่าเว็บไซต์')
+@section('title', 'ตั้งค่าเว็บไซต์ - '.$_SESSION['panel_web_name'])
 @section('tagkeyword', '')
 @section('tagdescription', '')
 

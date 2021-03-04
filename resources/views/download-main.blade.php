@@ -9,9 +9,9 @@ if(!function_exists('base_url'))
     }
 } 
 ?> 
-@section('title', 'ดาวน์โหลดคู่มือ')
-@section('tagkeyword', '')
-@section('tagdescription', '')
+@section('title', $title)
+@section('tagkeyword', $CustomHelper->L($_SESSION['portal_website_style_'.$mod.'_info_keyword'],$_SESSION['portal_website_style_'.$mod.'_info_keyword']))
+@section('tagdescription', $CustomHelper->L($_SESSION['portal_website_style_'.$mod.'_info_description'],$_SESSION['portal_website_style_'.$mod.'_info_description']))
 
 @extends('template1/include/start')
 @section('contentpage')
@@ -29,46 +29,19 @@ if(!function_exists('base_url'))
     
     <div id="site-content">
 
-        <div class="banner-wrapper onlyOne">
-            <div class="group-mange-section no-mg right-0">
-                <div class="manage-tools">
-                    <ul>
-                        <li class="order-list">จัดการ</li>
-                        <li class="order-list">ลบ</li>
-                        <li class="order-list">ซ่อน</li>
-                        <li class="order-list order-close">ปิด</li>
-                    </ul>
-                </div> 
-                <div class="manage-edit">
-                    <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
-                </div>
-            </div>
-            <ul>
-                <li>
-                    <div class="bg-layer"></div>
-                    <div class="banner" style="background-image: url('../../template1/assets/images/banner/img-banner-demo.png');"></div>
-                    <div class="item-Onbanner-outer">
-                        <div class="item-Onbanner-inner">
-                            <div class="list">
-                                <h2 class="title-banner">การให้บริการ</h2>
-                                <p class="desc-banner">มุ่งมั่นการทำงาน แหล่งค้นคว้าการประชุม เครือข่ายมหานครอาเซียน</p>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
+        <div class="banner-wrapper"> 
+            @include('template1/main-slide-app')
         </div>
 
         <div class="group-section-breadcrumb">
             <div class="container">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">หน้าแรก</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">ดาวน์โหลดไฟล์เอกสาร</li>
+                        <li class="breadcrumb-item"><a href="/<?php echo $mod ?>"><?php echo $CustomHelper->L('หน้าแรก','Home') ?></a></li>
+                        <li class="breadcrumb-item active" aria-current="page"><?php echo $CustomHelper->L($r_title,$r_en_title) ?></li>
                     </ol>
                 </nav>
-            </div>
-            
+            </div> 
         </div> 
 
         <div class="group-section-content">

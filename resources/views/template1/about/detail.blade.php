@@ -12,12 +12,17 @@
                             </div>
                         </div>
                         <div class="main-content border-bottom">
-
+                             <form method="post"  action="http://127.0.0.1:8000/manage-admin/edit_submit2?m=<?php echo $this_manage ?>" onsubmit="document.getElementById('this_info').value = page_editor.getData();">
                             <!-- text editor -->
                             <div class="group-editor" id="editor">
                                 <?php echo $r_info ?>
                             </div>
                             
+                            <div align="center" class="tools"><input type="submit" value="บันทึกข้อมูล"><br><br><br></div>
+                            @csrf <!-- {{ csrf_field() }} -->
+                            <input type="hidden" name="this_info" id="this_info" value="">
+                            <input type="hidden" name="id" id="id" value="<?php echo $r_id ?>">
+                            </form>
                             <!-- <div class="group-back">
                                 <a href="/">ย้อนกลับ</a>
                             </div> -->
@@ -73,4 +78,4 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> 

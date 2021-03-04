@@ -144,9 +144,12 @@ if(!function_exists('base_url'))
 
 <script>
     InlineEditor
-        .create( document.querySelector( '#editor' ) )
+        .create( document.querySelector( '#editor' ) ) 
+        .then( newEditor => {
+        page_editor = newEditor;
+    } )
         .catch( error => {
             console.error( error );
         } );
-</script>
+</script
 @endsection

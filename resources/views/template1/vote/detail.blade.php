@@ -1,9 +1,13 @@
+<div align="center" class="tools">
+    <a href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('กำลังโหลด...','/manage-admin/edit?m=poll&id=<?php echo $r_data_this[0]->id ?>');"><img src="http://127.0.0.1:8000/template1/assets/images/icons/icon-edit.svg" alt="icon">&nbsp; <b style="font-size:18px;">แก้ไขข้อมูล</b></a><br><br> 
+</div>
+
 <div class="section-content">
     <div class="container">
         <div class="inner-content">
             <div class="top-content">
                 <div class="group-text">
-                    <h3 class="title color-primary">กรุงเทพฯ เป็นเมืองน่าท่องเที่ยวที่สุดในโลก และเป็นเมืองจุดหมายปลายทางที่ได้รับความนิยมมากที่สุดในโลก</h3>
+                    <h3 class="title color-primary"><?php echo $CustomHelper->L($r_data_this[0]->title,$r_data_this[0]->en_title); ?></h3>
                 </div>
             </div>
 

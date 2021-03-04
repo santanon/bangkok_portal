@@ -211,7 +211,7 @@ class Main_menu
 				$str_path = 'vdo';
 				$redirect_new = true; 
 			}
-			 
+ 
 			$q = "SELECT * FROM ".$CustomHelper->model_to_table($str_model)." WHERE web_id = ? ORDER BY sort DESC";	 	
 			$v = $_SESSION['panel_id'];
 			$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($str_model)),$q,$v);
@@ -242,25 +242,21 @@ class Main_menu
 			}
 			$this_qr = substr($this_qr,0,-1);  	 
 			$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($str_model)),"INSERT INTO ".$CustomHelper->model_to_table($str_model)." SET ".$this_qr."",'');  
-			
-			
+ 
 			$q = "SELECT * FROM ".$CustomHelper->model_to_table($str_model)." WHERE web_id = ? ORDER BY id DESC";	 	
 			$v = $_SESSION['panel_id'];
 			$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($str_model)),$q,$v);
 			$q = json_decode($res);  
 			$row = $q; 
 			
-			$sub_new_id = $row[0]->id; 
+			$sub_new_id = $row[0]->id;
 		} 
-		  
-		 
+		   
 		$q = "SELECT * FROM ".$CustomHelper->model_to_table($this->mod_model)." WHERE web_id = ? ORDER BY sort DESC";	 	
 		$v = $_SESSION['panel_id'];
 		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),$q,$v);
 		$q = json_decode($res);  
-		
-		 
-		 
+  
 		$sort = '1';
 		if(count($q) > 0)
 		{  
@@ -345,16 +341,13 @@ class Main_menu
 		}
 		$this_qr = substr($this_qr,0,-1);  	 
 		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),"INSERT INTO ".$CustomHelper->model_to_table($this->mod_model)." SET ".$this_qr."",'');  
-		 
-		 
-			
+ 	
 		$CustomHelper->add_log(''.$this->mod_title.' - Add ('.$CustomHelper->input_post('title', TRUE).')',$_SESSION['panel_username'],$_SESSION['panel_id'],strtoupper($this->mod).'_ADD');   
-		 
-		
+ 
 		if($redirect_new)
 		{ 
 			?> 
-            <meta http-equiv="refresh" content="0;URL=<?php echo  'http://127.0.0.1:8000/manage-admin/set_cat?m='.$this->mod.'&id='.$sub_new_id ?>" /> 
+            <meta http-equiv="refresh" content="0;URL=<?php echo  'http://127.0.0.1:8000/manage-admin/set_cat?m='.$str_path.'&id='.$sub_new_id ?>" /> 
 			<?php
 			exit;
 		}
@@ -549,6 +542,43 @@ class Main_menu
 		 
 		?>
         <meta http-equiv="refresh" content="0;URL=<?php echo  'http://127.0.0.1:8000/manage-admin/list?m='.$this->mod.'' ?>" />
-        <?php  } 
+        <?php  
+	} 
+
+	public function edit_submit2()
+	{   
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		   
+		$d = new \stdClass();  
+		
+		if($_SESSION['portal_lang'] == 'thai')
+		{ 
+			$d->info = htmlspecialchars_decode($CustomHelper->input_post('this_info', FALSE));   
+		}
+		else
+		{
+			$d->en_info = htmlspecialchars_decode($CustomHelper->input_post('this_info', FALSE)); 
+		}
+		
+		$d->last_update = date('U');   
+		     
+		$this_qr = ''; 
+		foreach($d as $key=>$value) 
+		{
+			$this_qr = $this_qr.$key." = '".addslashes($value)."',";
+		}
+		$this_qr = substr($this_qr,0,-1);   
+		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),"UPDATE ".$CustomHelper->model_to_table($this->mod_model)." SET ".$this_qr." WHERE web_id = '".$_SESSION['panel_id']."' AND id = '".$CustomHelper->input_post('id', TRUE)."'",'');    
+ 	
+		$CustomHelper->add_log(''.$this->mod_title.' - Edit ('.$CustomHelper->input_post('title', TRUE).')',$_SESSION['panel_username'],$_SESSION['panel_id'],strtoupper($this->mod).'_EDIT');  
+		 
+		?>
+		<script>
+		window.history.back();
+		</script>
+        <?php  
+		exit;
+	} 
 }
 ?>

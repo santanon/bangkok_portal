@@ -67,11 +67,14 @@ class Contentbox_cat
 			$r = json_decode($res); 
 			
 			$main_str[$index] = '';
-			foreach ($r as $row_cat)
-			{    
-				$main_str[$index] = $main_str[$index] . '<option value="' . $row_cat->id . '">'.$row_cat->title.'</option>';
+			if(isset($r))
+			{
+				foreach ($r as $row_cat)
+				{    
+					$main_str[$index] = $main_str[$index] . '<option value="' . $row_cat->id . '">'.$row_cat->title.'</option>';
+				}
 			}
-
+			 
 			$index++;
 		} 
 		$data['main_str'] = $main_str;

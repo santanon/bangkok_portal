@@ -13,6 +13,9 @@ class PanelController extends Controller
 	public function include_header()
     {      
 		$CustomHelper = new \App\CustomHelper;
+
+		echo '1';
+		exit;
 		
 		if(isset($_SESSION['member_login']) && $_SESSION['member_login'] == 1)
 		{
@@ -190,6 +193,11 @@ class PanelController extends Controller
 		$_SESSION['portal_website_all_bg_' . $this->mod . '_mod_banner'] = $obj_portal_website_all_bg[0]->mod_banner; 
 		$_SESSION['portal_website_all_bg_' . $this->mod . '_mod_texteditor'] = $obj_portal_website_all_bg[0]->mod_texteditor; 
 		$_SESSION['portal_website_all_bg_' . $this->mod . '_mod_contact'] = $obj_portal_website_all_bg[0]->mod_contact; 
+		$_SESSION['portal_website_all_bg_' . $this->mod . '_mod_vdo'] = $obj_portal_website_all_bg[0]->mod_vdo; 
+		$_SESSION['portal_website_all_bg_' . $this->mod . '_mod_organize'] = $obj_portal_website_all_bg[0]->mod_organize; 
+
+		print_r($_SESSION);
+		exit;
  
 		/*$q = "SELECT * FROM tbl_portal_website_bg WHERE ( web_id = 1 AND status = '1' AND date_set = '0' ) OR ( web_id = 1 AND status = '1' AND date_set = '1' AND date_start < '" . date('U') . "' AND date_end > '" . date('U') . "' ) ORDER BY sort ASC LIMIT 0,99";*/
 

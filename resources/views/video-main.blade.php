@@ -9,9 +9,9 @@ if(!function_exists('base_url'))
     }
 } 
 ?> 
-@section('title', 'วิดิทัศน์')
-@section('tagkeyword', '')
-@section('tagdescription', '')
+@section('title', $title)
+@section('tagkeyword', $CustomHelper->L($_SESSION['portal_website_style_'.$mod.'_info_keyword'],$_SESSION['portal_website_style_'.$mod.'_info_keyword']))
+@section('tagdescription', $CustomHelper->L($_SESSION['portal_website_style_'.$mod.'_info_description'],$_SESSION['portal_website_style_'.$mod.'_info_description']))
 
 @extends('template1/include/start')
 @section('contentpage')
@@ -28,47 +28,19 @@ if(!function_exists('base_url'))
     </header>
     
     <div id="site-content">
-        <div class="banner-wrapper onlyOne">
-            <div class="group-mange-section no-mg right-0">
-                <div class="manage-tools">
-                    <ul>
-                        <li class="order-list">จัดการ</li>
-                        <li class="order-list">ลบ</li>
-                        <li class="order-list">ซ่อน</li>
-                        <li class="order-list order-close">ปิด</li>
-                    </ul>
-                </div> 
-                <div class="manage-edit">
-                    <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
-                </div>
-            </div>
-            <ul>
-                <li>
-                    <div class="bg-layer"></div>
-                    <div class="banner" style="background-image: url('../../template1/assets/images/banner/img-banner-demo.png');"></div>
-                    <div class="item-Onbanner-outer">
-                        <div class="item-Onbanner-inner">
-                            <div class="list">
-                                <h2 class="title-banner">ข่าวสาร</h2>
-                                <p class="desc-banner">มุ่งมั่นการทำงาน แหล่งค้นคว้าการประชุม เครือข่ายมหานครอาเซียน</p>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
+        <div class="banner-wrapper"> 
+            @include('template1/main-slide-app')
         </div>
 
         <div class="group-section-breadcrumb">
             <div class="container">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">หน้าแรก</a></li>
-                        <li class="breadcrumb-item"><a href="#">ข่าวสาร</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">สถานี VDO</li>
+                        <li class="breadcrumb-item"><a href="/<?php echo $mod ?>"><?php echo $CustomHelper->L('หน้าแรก','Home') ?></a></li>
+                        <li class="breadcrumb-item active" aria-current="page"><?php echo $CustomHelper->L($r_title,$r_en_title) ?></li>
                     </ol>
                 </nav>
-            </div>
-            
+            </div> 
         </div> 
 
         <div class="group-section-content">
@@ -145,39 +117,62 @@ if(!function_exists('base_url'))
             $document.data('lightGallery').destroy(true);
         });
 
-        $('#dynamic3').on('click', function(e) {
+<?php 
+$no_run = 1;
+foreach($r_data as $r)
+{
+    ?>
+    $('#dynamic<?php echo $no_run ?>').on('click', function(e) {
             $(document).lightGallery({
                 dynamic: true,
-                dynamicEl: [{
-                    src: 'https://www.youtube.com/watch?v=rJaQrQmCqvw',
-                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-v-y-1.jpg',
-                },{
-                    src: 'https://www.youtube.com/watch?v=COz95PuG5vQ',
-                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-v-y-1.jpg',
-                }],
-                slideEndAnimatoin: false,
-                loop: false,
-                hideControlOnEnd: true,
-                download: false,
-            });
-        });
+                dynamicEl: [ 
+                <?php 
+                if(strpos($r->file1,'^') > -1)
+                {
+                    $arr = explode('^',$r->file1);
 
-        $('#dynamic4').on('click', function(e) {
-            $(document).lightGallery({
-                dynamic: true,
-                dynamicEl: [{
-                    src: 'https://www.youtube.com/watch?v=hE4dFMdaMhQ',
-                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-v-y-1.jpg',
-                },{
-                    src: 'https://www.youtube.com/watch?v=dTRtpvawXpo',
-                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-v-y-1.jpg',
-                }],
+                    if(strpos($arr[0],'|') > -1)
+                    {
+                        $arr_d = explode('|',$arr[1]);
+                        $arr = explode('|',$arr[0]);
+                            
+                        $this_loop_sub = 0;
+                        foreach($arr as $arr_item)
+                        {
+                            if($arr_item != '')
+                            {
+                                ?>
+                                {
+                                    src:    '<?php echo $arr_item ?>',
+                                    thumb:  '<?php echo $arr_item ?>',
+                                    subHtml:'<?php echo $arr_d[$this_loop_sub] ?>'
+                                },
+                                <?php
+                                $this_loop_sub++;
+                            } 
+                        }
+                    }  
+                }
+                else
+                {
+                    ?>
+                    {
+                        src: '<?php echo $r_sub->img1 ?>',
+                        thumb: '<?php echo $r_sub->img1 ?>'
+                    } 
+                    <?php
+                }
+                ?>  
+                ],
                 slideEndAnimatoin: false,
                 loop: false,
                 hideControlOnEnd: true,
                 download: false,
             });
         });
+    <?php
+}
+?>   
     });
 </script>
 

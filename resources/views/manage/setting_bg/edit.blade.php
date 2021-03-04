@@ -31,8 +31,8 @@ $ro = $list_cat;
          
      
 <?php 
-$all_list = array('mod_activities','mod_banner','mod_contact','mod_download','mod_faq','mod_gallery','mod_news','mod_poll','mod_question','mod_search','mod_sitemap','mod_texteditor');   
-$all_list_name = array('activities','banner','contactus','download','faq','gallery','news','poll','question','search','sitemap','texteditor');  
+$all_list = array('mod_activities','mod_banner','mod_contact','mod_download','mod_faq','mod_gallery','mod_news','mod_poll','mod_question','mod_search','mod_sitemap','mod_texteditor','mod_vdo','mod_organize');   
+$all_list_name = array('activities','banner','contactus','download','faq','gallery','news','poll','question','search','sitemap','ita','vdo','organize');  
 
 $run = 0;
 foreach($all_list as $all_list_item)
@@ -47,7 +47,7 @@ foreach($all_list as $all_list_item)
 	$this_name = $this_mod_input;
 	$this_w = '1280';
 	$this_h = '741';
-	$this_limit = '5';
+	$this_limit = '1';
 	$this_value = $ro[0]->{$this_mod_input};
 	?>
 	@include('manage.include.input_file_tools_arr') 

@@ -9,24 +9,12 @@ if(!function_exists('base_url'))
     }
 } 
 ?> 
-@section('title', 'กรุงเทพมหานคร')
-@section('tagkeyword', '')
-@section('tagdescription', '')
+@section('title', $CustomHelper->L($_SESSION['portal_website_'.$mod.'_web_name_th'],$_SESSION['portal_website_'.$mod.'_web_name_en']))
+@section('tagkeyword', $CustomHelper->L($_SESSION['portal_website_style_'.$mod.'_info_keyword'],$_SESSION['portal_website_style_'.$mod.'_info_keyword']))
+@section('tagdescription', $CustomHelper->L($_SESSION['portal_website_style_'.$mod.'_info_description'],$_SESSION['portal_website_style_'.$mod.'_info_description']))
 
 @extends('template2/include/start')
 @section('contentpage')
- 
-<!--<?php print_r($_SESSION) ?>-->
-
-<script>
-var main_iframe_url = '';
-function sfi(title,url)
-{
-    document.getElementById('iframe_full').src = '';
-    document.getElementById('modal_full_span').innerHTML = title;
-    main_iframe_url = url;
-}
-</script>
  
 <div class="main-wrapper">
     <div class="panel-header">

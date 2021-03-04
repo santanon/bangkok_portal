@@ -150,11 +150,14 @@
 </table>
 <br />
 <script>
-ClassicEditor
-.create( document.querySelector( '#editor' ) )
-.catch( error => {
-	console.error( error );
-} );
-</script>
+  InlineEditor
+      .create( document.querySelector( '#editor' ) ) 
+      .then( newEditor => {
+      page_editor = newEditor;
+  } )
+      .catch( error => {
+          console.error( error );
+      } );
+</script
 </body>
 </html>

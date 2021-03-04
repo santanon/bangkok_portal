@@ -1,39 +1,43 @@
+<div align="center" class="tools">
+    <a href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('กำลังโหลด...','/manage-admin/edit?m=activities&id=<?php echo $r_id ?>');"><img src="http://127.0.0.1:8000/template1/assets/images/icons/icon-edit.svg" alt="icon">&nbsp; <b style="font-size:18px;">แก้ไขข้อมูล</b></a><br><br> 
+</div>
+
 <div class="section-content">
                 <div class="container">
                     <div class="inner-content">
                         <div class="group-inner d-flex">
                             <div class="date">
-                                <div class="text-content bg-color-primary">2</div>
-                                <div class="text-onbottom bg-color-secondary">พ.ย.</div>
+                                <div class="text-content bg-color-primary"><?php echo date('j',$r_news_info[0]->date_news)  ?></div>
+                                <div class="text-onbottom bg-color-secondary"><?php echo $CustomHelper->date_unix_to_thai_mon($r_news_info[0]->date_news) ?></div>
                             </div>
                             <div class="content">
                                 <div class="top-content">
                                     <div class="group-text">
-                                        <h3 class="title color-primary">บึงกุ่มชวนร่วมกิจกรรมบ้านหนังสือ หนุนเด็กรักการอ่าน</h3>
+                                        <h3 class="title color-primary"><?php echo $CustomHelper->L($r_news_info[0]->title,$r_news_info[0]->en_title); ?></h3>
                                         <p class="desc color-secondary">
-                                            กล่าวว่า เขตบึงกุ่มได้จัดทำโครงการ ครอบครัวรักการอ่านขึ้นเพื่อส่งเสริมให้เด็กและเยาวชนในพื้นที่เขตบึงกุ่ม
-                                            รักการอ่าน รู้จักใช้เวลาว่างให้เป็นประโยชน์ ตลอดจนเป็นการสร้างจิตสำนึกในการเรียนรู้ โดยให้ผู้เรียนเป็นศูนย์กลาง
+                                             
                                         </p>
                                     </div>
                                 </div>
                                 <div class="post-content d-flex justify-content-between align-items-center">
                                     <div class="public-post">
-                                        <em class="far fa-calendar"></em> วันอังคาร ที่ 2 กรกฎาคม พ.ศ. 2556
+                                        <em class="far fa-calendar"></em> <?php echo $CustomHelper->date_unix_to_thai_mon_long($r_news_info[0]->date_news) ?>
                                     </div>
                                     <div class="source-post no-bg">
-                                        <span><em class="fas fa-clock"></em> 06.00 น.</span>
-                                        <span><em class="fas fa-map-marker-alt"></em> ถนนเสรีไทย ฝั่งเลขคู่</span>
+                                        <?php /*<span><em class="fas fa-clock"></em> <?php echo date('H:i',$r_news_info[0]->date_news) ?> น.</span>
+                                        <span><em class="fas fa-map-marker-alt"></em></span>*/ ?>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="main-content border-bottom">
+                            <form method="post"  action="http://127.0.0.1:8000/manage-admin/edit_submit2?m=activities" onsubmit="document.getElementById('this_info').value = page_editor.getData();">
                             <!-- One image -->
                             <div class="group-oneimage">
-                                <img src="{{ asset('template1/assets/images/img-album-demo3_2.jpg')}}" alt="image">
+                                <img src="<?php echo $CustomHelper->get_file_form_code($r_news_info[0]->img1,0) ?>" alt="image">
 
                                 <!-- upload -->
-                                <div class="group-mange-upload">
+                                <?php /*<div class="group-mange-upload">
                                     <div class="row manage-upload">
                                         <div class="col box_upload">
                                             <h3 class="text-center">Upload</h3>
@@ -55,21 +59,23 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div>*/ ?>
                             </div>
 
                             <!-- text editor -->
                             <div class="group-editor" id="editor">
-                                ได้จัดทำสื่อประชาสัมพันธ์สื่อองค์ความรู้ที่เกี่ยวข้องกับการป้องกันโรคติดเชื้อไวรัสโคโรนา 2109 (covid) 
-                                เพื่อสร้างความตระหนักรู้แก่กลุ่มแรงงาน ผู้ประกอบกิจการและประชาชนทั่วไปในการป้องกันตนเอง 
-                                และลดการเผยแพร่ของเชื้อดรคดังกล่าว
-                                ผ่านทางเว็บไซต์ <a href="http://www.tosh.or.th/">http://www.tosh.or.th/</a> แอพลิเคชั่น T-OSH Guide และผ่านทางช่องทาง QR Code ท้ายหนังสือนี้
-                            </div>
-
+                                <?php echo $CustomHelper->L($r_news_info[0]->info,$r_news_info[0]->en_info); ?>
+                            </div> 
                             
                             <div class="group-back">
-                                <a href="/calendar">ย้อนกลับ</a>
+                                <a href="javascript:window.history.back();">ย้อนกลับ</a>
                             </div>
+
+                            <div align="center" class="tools"><input type="submit" value="บันทึกข้อมูล"><br><br><br></div>
+                            @csrf <!-- {{ csrf_field() }} -->
+                            <input type="hidden" name="this_info" id="this_info" value="">
+                            <input type="hidden" name="id" id="id" value="<?php echo $r_id ?>">
+                            </form>
 
                             <div class="group-social-share d-flex align-items-center justify-content-between">
                                 <div class="shared-email d-flex align-items-center">

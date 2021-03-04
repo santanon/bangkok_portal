@@ -411,7 +411,7 @@ foreach ($Portal_website_webboard_cat_model as $row_cat)
 	<th width="120">VDO</th>
 	<td>
 	<select class="selectric" name="page_type_vdo"> 
-	<option value="vdo" selected="selected">+ <?php echo $TextLanguage->lang('create_new') ?></option>
+	<option value="new" selected="selected">+ <?php echo $TextLanguage->lang('create_new') ?></option>
 	<?php  
 	foreach ($Portal_website_vdo_cat_model as $row_cat)
 	{   
@@ -446,6 +446,37 @@ if(@$this_hide_group == '1')
                 <th>&nbsp;</th>
                 <td>&nbsp;</td>
             </tr>  
+
+			<tr>   
+				<th width="120">ITA</th>
+				<td>
+				<select name="ita" style="height: 25px;"> 
+				<option value="" selected="selected">- เลือก -</option>
+				<optgroup label="ตัวชี้วัดย่อยที่ 9.1 ข้อมูลพื้นฐาน">
+				<option value="ข้อมูลพื้นฐาน">ข้อมูลพื้นฐาน</option>
+				<option value="ข่าวประชาสัมพันธ์">ข่าวประชาสัมพันธ์</option>
+				<option value="การปฏิสัมพันธ์ข้อมูล">การปฏิสัมพันธ์ข้อมูล</option>
+				<optgroup label="ตัวชี้วัดย่อยที่ 9.2 การบริหารงาน">
+				<option value="แผนดำเนินงาน">แผนดำเนินงาน</option>
+				<option value="การให้บริการ">การให้บริการ</option>
+				<option value="การปฏิบัติงาน">การปฏิบัติงาน</option>
+				<optgroup label="ตัวชี้วัดย่อยที่ 9.3 การบริหารเงินงบประมาณ">
+				<option value="แผนการใช้จ่ายงบประมาณประจำปี">แผนการใช้จ่ายงบประมาณประจำปี</option>
+				<optgroup label="ตัวชี้วัดย่อยที่ 9.4 การบริหาร และพัฒนาทรัพยากรบุคคล">
+				<option value="การบริหาร และพัฒนาทรัพยากรบุคคล">การบริหาร และพัฒนาทรัพยากรบุคคล</option>
+				<optgroup label="ตัวชี้วัดย่อยที่ 9.5 การส่งเสริมความโปร่งใส">
+			    <option value="การจัดการเรื่องร้องเรียนการทุจริต">การจัดการเรื่องร้องเรียนการทุจริต</option>
+				<option value="การเปิดโอกาสให้เกิดการมีส่วนร่วม">การเปิดโอกาสให้เกิดการมีส่วนร่วม</option>
+				<optgroup label="ตัวชี้วัดย่อยที่ 10.1 การดำเนินการเพื่อป้องกันการทุจริต">
+				<option value="เจตจำนงสุจริตของผู้บริหาร">เจตจำนงสุจริตของผู้บริหาร</option>
+				<option value="การประเมินความเสี่ยงเพื่อป้องกันการทุจริต">การประเมินความเสี่ยงเพื่อป้องกันการทุจริต</option>
+				<option value="แผนปฏิบัติการป้องกันการทุจริต">แผนปฏิบัติการป้องกันการทุจริต</option>
+				<option value="การเสริมสร้างวัฒนธรรมองค์กร">การเสริมสร้างวัฒนธรรมองค์กร</option>
+				<optgroup label="ตัวชี้วัดย่อยที่ 10.2 มาตรการภายในเพื่อป้องกันการทุจริต">
+				<option value="มาตรการภายในเพื่อส่งเสริมความโปร่งใส และป้องกันการทุจริต">มาตรการภายในเพื่อส่งเสริมความโปร่งใส และป้องกันการทุจริต</option>
+				</select> 
+				</td>
+				</tr>
             
              
 			@include('manage.include.date_start_end_add')

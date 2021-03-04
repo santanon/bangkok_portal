@@ -1,1 +1,1 @@
-http://siamedigital.com:8000/api/services?m=portal_website_all_bg
+http://127.0.0.1:8001/api/services?m=portal_website_all_bg

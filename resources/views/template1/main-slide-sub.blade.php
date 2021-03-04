@@ -20,7 +20,7 @@
         <li>
         <div class="bg-layer"></div>
         <div class="banner" style="background-image: url('<?php echo $CustomHelper->get_file_form_code($main_bg,0) ?>');"></div>
-        <div class="item-Onbanner-outer">3
+        <div class="item-Onbanner-outer">
             <div class="item-Onbanner-inner">
                 <div class="list">
                     <h2 class="title-banner"><?php echo $CustomHelper->get_text_form_code($main_bg,0,$_SESSION['portal_lang']) ?></h2>

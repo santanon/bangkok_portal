@@ -9,9 +9,9 @@ if(!function_exists('base_url'))
     }
 } 
 ?> 
-@section('title', 'ภาพกิจกรรม')
-@section('tagkeyword', '')
-@section('tagdescription', '')
+@section('title', $title)
+@section('tagkeyword', $CustomHelper->L($_SESSION['portal_website_style_'.$mod.'_info_keyword'],$_SESSION['portal_website_style_'.$mod.'_info_keyword']))
+@section('tagdescription', $CustomHelper->L($_SESSION['portal_website_style_'.$mod.'_info_description'],$_SESSION['portal_website_style_'.$mod.'_info_description']))
 
 @extends('template1/include/start')
 @section('contentpage')
@@ -28,49 +28,20 @@ if(!function_exists('base_url'))
     </header>
     
     <div id="site-content">
-
-        <div class="banner-wrapper onlyOne">
-            <div class="group-mange-section no-mg right-0">
-                <div class="manage-tools">
-                    <ul>
-                        <li class="order-list">จัดการ</li>
-                        <li class="order-list">ลบ</li>
-                        <li class="order-list">ซ่อน</li>
-                        <li class="order-list order-close">ปิด</li>
-                    </ul>
-                </div> 
-                <div class="manage-edit">
-                    <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
-                </div>
-            </div>
-            <ul>
-                <li>
-                    <div class="bg-layer"></div>
-                    <div class="banner" style="background-image: url('../../template1/assets/images/banner/img-banner-demo.png');"></div>
-                    <div class="item-Onbanner-outer">
-                        <div class="item-Onbanner-inner">
-                            <div class="list">
-                                <h2 class="title-banner">ข่าวสาร</h2>
-                                <p class="desc-banner">มุ่งมั่นการทำงาน แหล่งค้นคว้าการประชุม เครือข่ายมหานครอาเซียน</p>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
+        <div class="banner-wrapper"> 
+            @include('template1/main-slide-app')
         </div>
 
         <div class="group-section-breadcrumb">
             <div class="container">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">หน้าแรก</a></li>
-                        <li class="breadcrumb-item"><a href="#">ข่าวสาร</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">อัลบั้มภาพ</li>
+                        <li class="breadcrumb-item"><a href="/<?php echo $mod ?>"><?php echo $CustomHelper->L('หน้าแรก','Home') ?></a></li>
+                        <li class="breadcrumb-item active" aria-current="page"><?php echo $CustomHelper->L($r_title,$r_en_title) ?></li>
                     </ol>
                 </nav>
-            </div>
-            
-        </div> 
+            </div> 
+        </div>  
 
         <div class="group-section-content">
             @include('template1/gallery.list')
@@ -143,59 +114,71 @@ if(!function_exists('base_url'))
     }
 </style>
 <script>
-    $(document).ready(function() {
-        let $document = $(this);
+$(document).ready(function() {
+    let $document = $(this);
 
-        $document.on('onCloseAfter.lg', function(event) {
-            $document.data('lightGallery').destroy(true);
-        });
-
-        $('#dynamic1').on('click', function(e) {
-            $(document).lightGallery({
-                dynamic: true,
-                dynamicEl: [{
-                    src: 'https://sachinchoolur.github.io/lightGallery/static/img/1.jpg',
-                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-1.jpg'
-                },{
-                    src: 'https://www.youtube.com/watch?v=meBbDqAXago',
-                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-v-y-1.jpg',
-                    poster: 'https://sachinchoolur.github.io/lightGallery/static/img/videos/y-video1-cover.jpg'
-                },{
-                    html: '#video2',
-                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/videos/y-video1-cover.jpg',
-                    poster: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-v-y-1.jpg'
-                },{
-                    src: 'https://sachinchoolur.github.io/lightGallery/static/img/4.jpg',
-                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-4.jpg'
-                }],
-                slideEndAnimatoin: false,
-                loop: false,
-                hideControlOnEnd: true,
-                download: false,
-            });
-        });
-
-        $('#dynamic2').on('click', function(e) {
-            $(document).lightGallery({
-                dynamic: true,
-                dynamicEl: [{
-                    src: 'https://sachinchoolur.github.io/lightGallery/static/img/1.jpg',
-                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-1.jpg'
-                },{
-                    src: 'https://www.youtube.com/watch?v=meBbDqAXago',
-                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-v-y-1.jpg',
-                    poster: 'https://sachinchoolur.github.io/lightGallery/static/img/videos/y-video1-cover.jpg'
-                },{
-                    src: 'https://sachinchoolur.github.io/lightGallery/static/img/4.jpg',
-                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-4.jpg'
-                }],
-                slideEndAnimatoin: false,
-                loop: false,
-                hideControlOnEnd: true,
-                download: false,
-            });
-        });
+    $document.on('onCloseAfter.lg', function(event) {
+        $document.data('lightGallery').destroy(true);
     });
+
+    <?php
+    $this_loop = 1;
+    foreach($r_data as $r)
+    {
+        ?>
+        $('#dynamic<?php echo $this_loop ?>').on('click', function(e) {
+        $(document).lightGallery({
+        dynamic: true,
+        dynamicEl: [  
+        <?php 
+        if(strpos($r->img1,'^') > -1)
+        {
+            $arr = explode('^',$r->img1);
+
+            if(strpos($arr[0],'|') > -1)
+            {
+                $arr_d = explode('|',$arr[1]);
+                $arr = explode('|',$arr[0]);
+                    
+                $this_loop_sub = 0;
+                foreach($arr as $arr_item)
+                {
+                    if($arr_item != '')
+                    {
+                        ?>
+                        {
+                            src:    '<?php echo $arr_item ?>',
+                            thumb:  '<?php echo $arr_item ?>',
+                            subHtml:'<?php echo $arr_d[$this_loop_sub] ?>'
+                        },
+                        <?php
+                        $this_loop_sub++;
+                    } 
+                }
+            }  
+        }
+        else
+        {
+            ?>
+            {
+                src: '<?php echo $r->img1 ?>',
+                thumb: '<?php echo $r->img1 ?>'
+            } 
+            <?php
+        }
+        ?> 
+        ],
+        slideEndAnimatoin: false,
+        loop: false,
+        hideControlOnEnd: true,
+        download: false,
+            });
+        });
+        <?php
+        $this_loop++;
+    }  
+    ?>  
+});
 </script>
 @endsection
 

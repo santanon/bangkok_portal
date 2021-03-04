@@ -9,17 +9,13 @@ if(!function_exists('base_url'))
     }
 } 
 ?> 
-@section('title', $CustomHelper->L($r_title,$r_en_title).' - '.$CustomHelper->L($_SESSION['portal_website_'.$mod.'_web_name_th'],$_SESSION['portal_website_'.$mod.'_web_name_en']))
-@section('tagkeyword', $CustomHelper->L($r_title,$r_en_title).' - '.$CustomHelper->L($_SESSION['portal_website_'.$mod.'_web_name_th'],$_SESSION['portal_website_'.$mod.'_web_name_en']))
-@section('tagdescription', $CustomHelper->L($r_title,$r_en_title).' - '.$CustomHelper->L($_SESSION['portal_website_'.$mod.'_web_name_th'],$_SESSION['portal_website_'.$mod.'_web_name_en']))
+@section('title', $title)
+@section('tagkeyword', $CustomHelper->L($_SESSION['portal_website_style_'.$mod.'_info_keyword'],$_SESSION['portal_website_style_'.$mod.'_info_keyword']))
+@section('tagdescription', $CustomHelper->L($_SESSION['portal_website_style_'.$mod.'_info_description'],$_SESSION['portal_website_style_'.$mod.'_info_description']))
 
 @extends('template1/include/start')
 @section('contentpage')
-
-<style>
-    #modal_full_span{ font-size:30px; }
-    </style>
-
+ 
 <div class="main-wrapper">
     <div class="panel-header">
         <div class="header-top">
@@ -108,14 +104,17 @@ if(!function_exists('base_url'))
 @include('template1/include.css_scripts')
 
 <!-- CKeditor -->
-<script src="https://cdn.ckeditor.com/ckeditor5/23.1.0/inline/ckeditor.js"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/23.1.0/inline/ckeditor.js"></script> 
 
 <script>
     InlineEditor
-        .create( document.querySelector( '#editor' ) )
+        .create( document.querySelector( '#editor' ) ) 
+        .then( newEditor => {
+        page_editor = newEditor;
+    } )
         .catch( error => {
             console.error( error );
         } );
-</script>
+</script
 @endsection
 

@@ -40,6 +40,8 @@ class FrontController extends Controller
 		$r_box = $q;
  
 		$template_id = substr($_SESSION['portal_website_style_' . $this->mod . '_template_id'],0,1);
+		$data['template_id'] = $_SESSION['portal_website_style_' . $this->mod . '_template_id'];
+		$_SESSION[$this->mod.'_template_id'] = $_SESSION['portal_website_style_' . $this->mod . '_template_id'];
 		$str_template = '';
 		if($template_id == '1')
 		{
@@ -61,9 +63,12 @@ class FrontController extends Controller
 		{
 			$str_template = 'home-5';
 		}
-  
-		$str_template = 'home';
- 
+
+		if($this->mod != 'ballsite')
+		{
+			$str_template = 'home';
+		}
+   
 		$is_convert_box = false;
 		foreach($r_box as $r)
 		{    
@@ -528,7 +533,9 @@ class FrontController extends Controller
 			$_SESSION['portal_website_all_bg_' . $this->mod . '_mod_sitemap'] = $r[0]->mod_sitemap; 
 			$_SESSION['portal_website_all_bg_' . $this->mod . '_mod_banner'] = $r[0]->mod_banner; 
 			$_SESSION['portal_website_all_bg_' . $this->mod . '_mod_texteditor'] = $r[0]->mod_texteditor; 
-			$_SESSION['portal_website_all_bg_' . $this->mod . '_mod_contact'] = $r[0]->mod_contact; 
+			$_SESSION['portal_website_all_bg_' . $this->mod . '_mod_contact'] = $r[0]->mod_contact;  
+			$_SESSION['portal_website_all_bg_' . $this->mod . '_mod_vdo'] = $r[0]->mod_vdo; 
+			$_SESSION['portal_website_all_bg_' . $this->mod . '_mod_organize'] = $r[0]->mod_organize; 
 			 
 			$q = "SELECT * FROM ".$CustomHelper->model_to_table('Portal_website_bg_model')." WHERE (web_id = '".$web_id."' AND status = '1' AND date_set = '0') OR (web_id = '".$web_id."' AND status = '1' AND date_set = '1' AND date_start < '" . date('U') . "' AND date_end > '" . date('U') . "') LIMIT 0,99";	 	
 			$v = '';
@@ -1083,13 +1090,20 @@ class FrontController extends Controller
 		$TextLanguage = new \App\TextLanguage;
 		
 		$this->include_header();  
-		 
-		
+		  
 		$data['mod'] = $this->mod;   
 		$data['theme'] = 'theme_'.$_SESSION['portal_website_style_' . $this->mod . '_template_id'];  
-		$data['title'] = $TextLanguage->lang('contact_us') . ' - ' . $_SESSION['portal_website_' . $this->mod . '_web_name']; 
+		$data['title'] = 'ติดต่อเรา' . ' - ' . $_SESSION['portal_website_' . $this->mod . '_web_name']; 
 		$data['list_str_navi'] = '<li class="current"><a href="#">' . $TextLanguage->lang('contact_us') . '</a> </li>'; 
-		$data['main_bg'] = $_SESSION['portal_website_all_bg_' . $this->mod . '_mod_contact'];  
+		$data['main_bg'] = $_SESSION['portal_website_all_bg_' . $this->mod . '_mod_contact']; 
+		 
+		$q = "SELECT * FROM ".$CustomHelper->model_to_table('Portal_website_contactus_sub_model')." WHERE web_id = ? AND status = '1' ORDER BY sort ASC";	 	
+		$v = $_SESSION['portal_website_' . $this->mod . '_id'];
+		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('Portal_website_contactus_sub_model')),$q,$v);
+		$q = json_decode($res);
+
+		$data['r_sub'] = $q;
+		 
 		return view('contact-main', $data);    
 	}
 
@@ -1845,9 +1859,9 @@ class FrontController extends Controller
 		
 		$data['mod'] = $this->mod;   
 		$data['theme'] = 'theme_'.$_SESSION['portal_website_style_' . $this->mod . '_template_id'];  
-		$data['title'] = $TextLanguage->lang('contact_us') . ' - ' . $_SESSION['portal_website_' . $this->mod . '_web_name']; 
+		$data['title'] = $TextLanguage->lang('ita') . ' - ' . $_SESSION['portal_website_' . $this->mod . '_web_name']; 
 		$data['list_str_navi'] = '<li class="current"><a href="#">' . $TextLanguage->lang('contact_us') . '</a> </li>'; 
-		$data['main_bg'] = $_SESSION['portal_website_all_bg_' . $this->mod . '_mod_contact'];  
+		$data['main_bg'] = $_SESSION['portal_website_all_bg_' . $this->mod . '_mod_texteditor'];  
 		return view('ita-page', $data);    
 	}
 	 
@@ -2082,9 +2096,18 @@ class FrontController extends Controller
 		
 		$data['mod'] = $this->mod;   
 		$data['theme'] = 'theme_'.$_SESSION['portal_website_style_' . $this->mod . '_template_id'];  
-		$data['title'] = $TextLanguage->lang('contact_us') . ' - ' . $_SESSION['portal_website_' . $this->mod . '_web_name']; 
+		$data['title'] = $TextLanguage->lang('organize') . ' - ' . $_SESSION['portal_website_' . $this->mod . '_web_name']; 
 		$data['list_str_navi'] = '<li class="current"><a href="#">' . $TextLanguage->lang('contact_us') . '</a> </li>'; 
-		$data['main_bg'] = $_SESSION['portal_website_all_bg_' . $this->mod . '_mod_contact'];  
+		$data['main_bg'] = $_SESSION['portal_website_all_bg_' . $this->mod . '_mod_organize'];    
+
+		$q = "SELECT organize_data FROM ".$CustomHelper->model_to_table('Portal_website_style_model')." WHERE web_id = ?";	 	
+		$v = $_SESSION['portal_website_' . $this->mod . '_id'];
+		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('Portal_website_style_model')),$q,$v);
+		$q = json_decode($res);
+
+		$data['this_data'] = $q;
+
+
 		return view('organization', $data);    
 	}
 	
@@ -2269,10 +2292,9 @@ class FrontController extends Controller
 						
 					}
 					else
-					{
-						//redirect($this->mod.'/page/'.$type.'/'.$v1.'/'.$title.'/'.$page);
+					{ 
 						?>
-						<meta http-equiv="refresh" content="0;URL=<?php echo $this->mod.'/page/'.$type.'/'.$v1.'/'.$title.'/'.$page ?>" />
+						<script> window.history.back(); </script> 
 						<?php
 						exit;	
 					}
@@ -2311,9 +2333,11 @@ class FrontController extends Controller
 				else
 				{ 
 					$data['main_bg'] = $_SESSION['portal_website_all_bg_' . $this->mod . '_mod_banner']; 
-					$data['r_title'] = $CustomHelper->L($r[0]->title,$r[0]->en_title); 
+					$data['r_title'] = $CustomHelper->L($r[0]->title,$r[0]->title); 
+					$data['r_en_title'] = $CustomHelper->L($r[0]->en_title,$r[0]->en_title); 
 					$data['r_page_type'] = $type;
 					$data['r_page_id'] = $v1; 
+					$data['r_cat_id'] = @$_SESSION[$this->mod.'_'.$v1.'_group']; 
 					 
 					if(empty($_SESSION[$this->mod.'_'.$v1.'_group']))
 					{
@@ -2321,7 +2345,7 @@ class FrontController extends Controller
 					} 
 					if(empty($_SESSION[$this->mod.'_'.$v1.'_max_rows']))
 					{
-						$_SESSION[$this->mod.'_'.$v1.'_max_rows'] = 10;
+						$_SESSION[$this->mod.'_'.$v1.'_max_rows'] = 9999;
 					}  
 					if(empty($_SESSION[$this->mod.'_'.$v1.'_page_num']))
 					{
@@ -2410,11 +2434,12 @@ class FrontController extends Controller
 					 
 					$q = "SELECT * FROM ".$CustomHelper->model_to_table($this_model)." WHERE web_id = ? ".$qr_like." AND cat_id = '".$_SESSION[$this->mod.'_'.$v1.'_group']."' AND status = '1' ORDER BY ".$_SESSION[$this->mod.'_'.$v1.'_sort_1'] . ' ' . $_SESSION[$this->mod.'_'.$v1.'_sort_2']." LIMIT ".$start_rows.",".$_SESSION[$this->mod.'_'.$v1.'_max_rows'];	 	
 					$v = $_SESSION['portal_website_' . $this->mod . '_id'];
-					$data['r_data'] = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this_model)),$q,$v);
-					
-					$q = "SELECT * FROM ".$CustomHelper->model_to_table($this_model)." WHERE web_id = ? AND status = '1' ORDER BY sort ASC";	 	
-					$v = $_SESSION['portal_website_' . $this->mod . '_id'];
 					$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this_model)),$q,$v);
+					$data['r_data'] = json_decode($res);
+					
+					$q = "SELECT * FROM ".$CustomHelper->model_to_table($this_model_cat)." WHERE web_id = ? AND status = '1' ORDER BY sort ASC";	 	
+					$v = $_SESSION['portal_website_' . $this->mod . '_id'];
+					$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this_model_cat)),$q,$v);
 					$q = json_decode($res);  	
  
 					$data['r_data_cat'] = $q;
@@ -2428,6 +2453,10 @@ class FrontController extends Controller
 					$data['r_data_title'] = $title;
 					$data['r_data_total_pages'] = $total_pages+1; 
 					$data['r_data_this_page'] = $_SESSION[$this->mod.'_'.$v1.'_page_num']+1; 
+
+					/*echo '<pre>';
+					print_r($data);
+					exit;*/
 					 
 					return view('bannerlink-main', $data);  	
 				}
@@ -2440,15 +2469,15 @@ class FrontController extends Controller
 				$this_model_cat = 'Portal_website_activities_cat_model'; 
 				
 				if($action == 'info')
-				{
+				{ 
 					$can_pass = false;
-					
+ 
 					if($info_id <> '')
 					{
-						$q = "SELECT * FROM ".$CustomHelper->model_to_table($setting_model)." WHERE web_id = ? AND status = '1' AND id = '".$info_id."'";	 	
+						$q = "SELECT * FROM ".$CustomHelper->model_to_table($this_model)." WHERE web_id = ? AND status = '1' AND id = '".$info_id."'";	 
 						$v = $_SESSION['portal_website_' . $this->mod . '_id'];
-						$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($setting_model)),$q,$v);
-						$q = json_decode($res);  
+						$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this_model)),$q,$v);
+						$q = json_decode($res);   
 						if(count($q) > 0)
 						{
 							$can_pass = true;	
@@ -2461,10 +2490,9 @@ class FrontController extends Controller
 					}
 					else
 					{
-						//redirect($this->mod.'/page/'.$type.'/'.$v1.'/'.$title.'/'.$page);
 						?>
-                        <meta http-equiv="refresh" content="0;URL=<?php echo $this->mod.'/page/'.$type.'/'.$v1.'/'.$title.'/'.$page ?>" />
-                        <?php
+						<script> window.history.back(); </script> 
+						<?php
 						exit;	
 					}
 					 
@@ -2476,15 +2504,14 @@ class FrontController extends Controller
    
 					$data['r_news_info'] = $q; 
 					$data['main_bg'] = $_SESSION['portal_website_all_bg_' . $this->mod . '_mod_activities']; 
-					$data['r_title'] = $CustomHelper->L($r[0]->title,$r[0]->en_title);  
+					$data['r_title'] = $CustomHelper->L($r[0]->title,$r[0]->title);  
+					$data['r_en_title'] = $CustomHelper->L($r[0]->en_title,$r[0]->en_title);  
 					$data['r_page_type'] = $type;
 					$data['r_page_id'] = $v1; 
 					$data['r_data_title'] = $title;
 					$data['r_data_this_page'] = $page;
 					 
 					$r_new_info = $q;
-
-
  
 					$d = new \stdClass(); 
 					$d->click_view = $r_new_info[0]->click_view+1;  
@@ -2540,12 +2567,21 @@ class FrontController extends Controller
 					} 
 					
 					$data['main_bg'] = $_SESSION['portal_website_all_bg_' . $this->mod . '_mod_activities']; 
-					$data['r_title'] = $CustomHelper->L($r[0]->title,$r[0]->en_title); 
+					$data['r_title'] = $CustomHelper->L($r[0]->title,$r[0]->title); 
+					$data['r_en_title'] = $CustomHelper->L($r[0]->en_title,$r[0]->en_title); 
 					$data['r_page_type'] = $type;
 					$data['r_page_id'] = $v1;   
 					$data['r_data_web_id'] = $_SESSION['portal_website_' . $this->mod . '_id'];
 					$data['r_data_cat_id'] = $_SESSION[$this->mod.'_'.$v1.'_group'];  
-
+ 
+					$q = "SELECT * FROM ".$CustomHelper->model_to_table('Portal_website_activities_model')." WHERE web_id = ? AND status = '1' AND  cat_id = '".$_SESSION[$this->mod.'_'.$v1.'_group']."' ORDER BY sort ASC";	
+					 
+					$v = $_SESSION['portal_website_' . $this->mod . '_id'];
+					$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api('Portal_website_activities_model')),$q,$v);
+					$q = json_decode($res); 
+			
+					$data['data_id'] = $q;
+					  
 					return view('calendar-main', $data); 
 					
 				}
@@ -2579,11 +2615,10 @@ class FrontController extends Controller
 					}
 					else
 					{
-						//redirect($this->mod.'/page/'.$type.'/'.$v1.'/'.$title.'/'.$page);
 						?>
-                        <meta http-equiv="refresh" content="0;URL=<?php echo $this->mod.'/page/'.$type.'/'.$v1.'/'.$title.'/'.$page ?>" />
-                        <?php
-						exit;	
+						<script> window.history.back(); </script> 
+						<?php
+						exit;
 					}
 
 					$q = "SELECT * FROM ".$CustomHelper->model_to_table($this_model)." WHERE web_id = ? AND status = '1' AND id = '".$info_id."'";	 	
@@ -2613,8 +2648,10 @@ class FrontController extends Controller
 				{ 
 					$data['main_bg'] = $_SESSION['portal_website_all_bg_' . $this->mod . '_mod_download']; 
 					$data['r_title'] = $CustomHelper->L($r[0]->title,$r[0]->en_title); 
+					$data['r_en_title'] = $CustomHelper->L($r[0]->en_title,$r[0]->en_title); 
 					$data['r_page_type'] = $type;
 					$data['r_page_id'] = $v1;  
+					$data['r_cat_id'] = @$_SESSION[$this->mod.'_'.$v1.'_group']; 
 					
 					if(empty($_SESSION[$this->mod.'_'.$v1.'_group']))
 					{
@@ -2774,9 +2811,11 @@ class FrontController extends Controller
 				$this_model_cat = 'Portal_website_faq_cat_model'; 
 				
 				$data['main_bg'] = $_SESSION['portal_website_all_bg_' . $this->mod . '_mod_faq']; 
-				$data['r_title'] = $CustomHelper->L($r[0]->title,$r[0]->en_title); 
+				$data['r_title'] = $CustomHelper->L($r[0]->title,$r[0]->title); 
+				$data['r_en_title'] = $CustomHelper->L($r[0]->en_title,$r[0]->en_title); 
 				$data['r_page_type'] = $type;
-				$data['r_page_id'] = $v1;  
+				$data['r_page_id'] = $v1; 
+				$data['r_cat_id'] = @$_SESSION[$this->mod.'_'.$v1.'_group'];  
 				
 				if(empty($_SESSION[$this->mod.'_'.$v1.'_group']))
 				{
@@ -2944,10 +2983,9 @@ class FrontController extends Controller
 					}
 					else
 					{
-						//redirect($this->mod.'/page/'.$type.'/'.$v1.'/'.$title.'/'.$page);
 						?>
-                        <meta http-equiv="refresh" content="0;URL=<?php echo $this->mod.'/page/'.$type.'/'.$v1.'/'.$title.'/'.$page ?>" />
-                        <?php
+						<script> window.history.back(); </script> 
+						<?php
 						exit;	
 					}
 
@@ -2976,9 +3014,11 @@ class FrontController extends Controller
 					$this_model_cat = 'Portal_website_gallery_cat_model'; 
 					
 					$data['main_bg'] = $_SESSION['portal_website_all_bg_' . $this->mod . '_mod_gallery']; 
-					$data['r_title'] = $CustomHelper->L($r[0]->title,$r[0]->en_title); 
+					$data['r_title'] = $CustomHelper->L($r[0]->title,$r[0]->title);
+					$data['r_en_title'] = $CustomHelper->L($r[0]->en_title,$r[0]->en_title); 
 					$data['r_page_type'] = $type;
 					$data['r_page_id'] = $v1;  
+					$data['r_cat_id'] = @$_SESSION[$this->mod.'_'.$v1.'_group']; 
 					
 					if(empty($_SESSION[$this->mod.'_'.$v1.'_group']))
 					{
@@ -3135,7 +3175,229 @@ class FrontController extends Controller
 				}
 				 
 				break;
-				
+			case "vdo" : 
+				if($action == 'info')
+				{
+					$this_model = 'Portal_website_vdo_model';
+					$this_model_cat = 'Portal_website_vdo_cat_model'; 
+					
+					$data['main_bg'] = $_SESSION['portal_website_all_bg_' . $this->mod . '_mod_vdo']; 
+					$data['r_title'] = $CustomHelper->L($r[0]->title,$r[0]->en_title); 
+					$data['r_page_type'] = $type;
+					$data['r_page_id'] = $v1; 
+						
+					$can_pass = false;
+						
+					if($info_id <> '')
+					{ 
+						$q = "SELECT * FROM ".$CustomHelper->model_to_table($this_model)." WHERE web_id = ? AND status = '1' AND id = '".$info_id."'";	 	
+						$v = $_SESSION['portal_website_' . $this->mod . '_id'];
+						$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this_model)),$q,$v);
+						$q = json_decode($res);  
+						if(count($q) > 0)
+						{
+							$can_pass = true;	
+						} 
+					}
+					
+					if($can_pass)
+					{
+						
+					}
+					else
+					{
+						?>
+						<script> window.history.back(); </script> 
+						<?php
+						exit;	
+					}
+
+
+					$q = "SELECT * FROM ".$CustomHelper->model_to_table($this_model)." WHERE web_id = ? AND status = '1' AND id = '".$info_id."'";	 	
+					$v = $_SESSION['portal_website_' . $this->mod . '_id'];
+					$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this_model)),$q,$v);
+					$q = json_decode($res); 
+	
+					$data['r_news_info'] = $q;  
+					$data['main_bg'] = $_SESSION['portal_website_all_bg_' . $this->mod . '_mod_news']; 
+					$data['r_title'] = $CustomHelper->L($r[0]->title,$r[0]->en_title);  
+					$data['r_page_type'] = $type;
+					$data['r_page_id'] = $v1; 
+					$data['r_data_title'] = $title;
+					$data['r_data_this_page'] = $page; 
+					$data['r_back'] = $this->mod.'/page/'.$type.'/'.$v1.'/'.$title.'/'.$page;
+					
+					$data['r_website_id'] = $_SESSION['portal_website_' . $this->mod . '_id']; 
+							
+					return view('portal/page-vdo-inside', $data);  
+				}
+				else
+				{ 
+					$this_model = 'Portal_website_vdo_model';
+					$this_model_cat = 'Portal_website_vdo_cat_model'; 
+					
+					$data['main_bg'] = @$_SESSION['portal_website_all_bg_' . $this->mod . '_mod_vdo']; 
+					$data['r_title'] = $CustomHelper->L($r[0]->title,$r[0]->title);
+					$data['r_en_title'] = $CustomHelper->L($r[0]->en_title,$r[0]->en_title); 
+					$data['r_page_type'] = $type;
+					$data['r_page_id'] = $v1;  
+					$data['r_cat_id'] = @$_SESSION[$this->mod.'_'.$v1.'_group']; 
+					
+					if(empty($_SESSION[$this->mod.'_'.$v1.'_group']))
+					{
+						$_SESSION[$this->mod.'_'.$v1.'_group'] = $r[0]->data_id;
+					} 
+					if(empty($_SESSION[$this->mod.'_'.$v1.'_max_rows']))
+					{
+						$_SESSION[$this->mod.'_'.$v1.'_max_rows'] = 10;
+					}  
+					if(empty($_SESSION[$this->mod.'_'.$v1.'_page_num']))
+					{
+						$_SESSION[$this->mod.'_'.$v1.'_page_num'] = 0;
+					} 
+					if(empty($_SESSION[$this->mod.'_'.$v1.'_sort_1']))
+					{
+						$_SESSION[$this->mod.'_'.$v1.'_sort_1'] = 'sort';
+					}
+					if(empty($_SESSION[$this->mod.'_'.$v1.'_sort_2']))
+					{
+						$_SESSION[$this->mod.'_'.$v1.'_sort_2'] = 'ASC';
+					}
+					if(empty($_SESSION[$this->mod.'_'.$v1.'_search']))
+					{
+						$_SESSION[$this->mod.'_'.$v1.'_search'] = '';
+					}
+					if(empty($_SESSION[$this->mod.'_'.$v1.'_search']))
+					{
+						$_SESSION[$this->mod.'_'.$v1.'_search'] = '';
+					}
+					if(empty($_SESSION[$this->mod.'_'.$v1.'_date_start']))
+					{
+						$_SESSION[$this->mod.'_'.$v1.'_date_start'] = '';
+					} 
+					if(empty($_SESSION[$this->mod.'_'.$v1.'_date_end']))
+					{
+						$_SESSION[$this->mod.'_'.$v1.'_date_end'] = '';
+					} 
+					if(empty($_SESSION[$this->mod.'_'.$v1.'_start_search']))
+					{
+						$_SESSION[$this->mod.'_'.$v1.'_start_search'] = '';
+					} 
+					
+					if($page <> '')
+					{ 
+						$_SESSION[$this->mod.'_'.$v1.'_page_num'] = $page;
+					}
+						
+					$start_rows = $_SESSION[$this->mod.'_'.$v1.'_page_num'] * $_SESSION[$this->mod.'_'.$v1.'_max_rows'];
+						
+					if(@$_POST['start_search'] == '1')
+					{
+						if(isset($_POST['reset']))
+						{
+							$_SESSION[$this->mod.'_'.$v1.'_start_search'] = '';
+							$_SESSION[$this->mod.'_'.$v1.'_group'] = $r[0]->data_id; 
+							$_SESSION[$this->mod.'_'.$v1.'_search'] = '';
+							$_SESSION[$this->mod.'_'.$v1.'_date_start'] = '';
+							$_SESSION[$this->mod.'_'.$v1.'_date_end'] = ''; 
+						} 
+						else
+						{
+							$_SESSION[$this->mod.'_'.$v1.'_start_search'] = '1';
+							
+							if(isset($_POST['cat']))
+							{
+								$_SESSION[$this->mod.'_'.$v1.'_group'] = $CustomHelper->input_post('cat', TRUE); 
+							} 
+							else
+							{
+								$_SESSION[$this->mod.'_'.$v1.'_group'] = $r[0]->data_id; 
+							}
+							
+							if(isset($_POST['mod_search']))
+							{
+								$_SESSION[$this->mod.'_'.$v1.'_search'] = $CustomHelper->input_post('mod_search', TRUE); 
+							}
+							else
+							{
+								$_SESSION[$this->mod.'_'.$v1.'_search'] = '';
+							}
+							
+							if(isset($_POST['date_start']) && isset($_POST['date_end']))
+							{
+								if($_POST['date_start'] <> '' && $_POST['date_end'] <> '')
+								{
+									$a = explode('-',$CustomHelper->input_post('date_start', TRUE));
+									$b = explode('-',$CustomHelper->input_post('date_end', TRUE));
+										
+									$_SESSION[$this->mod.'_'.$v1.'_date_start'] = mktime(0,0,0,(int)$a[1],(int)$a[0],(int)$a[2]);
+									$_SESSION[$this->mod.'_'.$v1.'_date_end'] = mktime(23,59,59,(int)$b[1],(int)$b[0],(int)$b[2]);	
+								} 
+							}
+							else
+							{
+								$_SESSION[$this->mod.'_'.$v1.'_date_start'] = '';
+								$_SESSION[$this->mod.'_'.$v1.'_date_end'] = '';
+							} 	
+						} 
+					}
+
+
+		
+
+					$w1 = "";
+					if($_SESSION[$this->mod.'_'.$v1.'_date_start'] <> '' && $_SESSION[$this->mod.'_'.$v1.'_date_end'] <> '')
+					{					
+						$w1 = " AND web_id = ? AND cat_id = '".$_SESSION[$this->mod.'_'.$v1.'_group']."' AND status = '1' AND date_news >= '".$_SESSION[$this->mod.'_'.$v1.'_date_start']."' AND date_news <= '".$_SESSION[$this->mod.'_'.$v1.'_date_end']."'";  
+					} 
+					else
+					{
+						$w1 = " AND web_id = ? AND cat_id = '".$_SESSION[$this->mod.'_'.$v1.'_group']."' AND status = '1' "; 
+					}
+					
+					$w2 = "";
+					if($_SESSION[$this->mod.'_'.$v1.'_search'] <> '')
+					{
+						$w2 = " AND ".$CustomHelper->L('title','en_title')." LIKE '%".$_SESSION[$this->mod.'_'.$v1.'_search']."%' "; 
+					}
+
+
+					$q = "SELECT * FROM ".$CustomHelper->model_to_table($this_model)." WHERE id > 0 ".$w1.$w2;	 	
+					$v = $_SESSION['portal_website_' . $this->mod . '_id'];
+					$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this_model)),$q,$v);
+					$q = json_decode($res); 
+	
+					$total_rows = count($q);
+					$total_pages = ceil($total_rows/$_SESSION[$this->mod.'_'.$v1.'_max_rows'])-1;  
+					
+					$q = "SELECT * FROM ".$CustomHelper->model_to_table($this_model)." WHERE id > 0 ".$w1.$w2." ORDER BY ".$_SESSION[$this->mod.'_'.$v1.'_sort_1'] . ' ' . $_SESSION[$this->mod.'_'.$v1.'_sort_2']." LIMIT ".$start_rows.",".$_SESSION[$this->mod.'_'.$v1.'_max_rows']."";	 	
+					$v = $_SESSION['portal_website_' . $this->mod . '_id'];
+					$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this_model)),$q,$v);
+					$q = json_decode($res); 
+					$data['r_data'] = $q;
+					
+
+
+					$q = "SELECT * FROM ".$CustomHelper->model_to_table($this_model_cat)." WHERE web_id = ? AND status = '1' ORDER BY sort ASC";	 	
+					$v = $_SESSION['portal_website_' . $this->mod . '_id'];
+					$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this_model_cat)),$q,$v);
+					$q = json_decode($res);  
+					$data['r_data_cat'] = $q;
+					$data['r_data_cat_num_rows'] = count($q);
+						
+					$data['r_data_cat_this'] = $_SESSION[$this->mod.'_'.$v1.'_group'];
+					$data['r_data_date_start'] = @$_SESSION[$this->mod.'_'.$v1.'_date_start'];
+					$data['r_data_date_end'] = @$_SESSION[$this->mod.'_'.$v1.'_date_end'];
+					$data['r_data_search'] = @$_SESSION[$this->mod.'_'.$v1.'_search'];
+					$data['r_data_start_search'] = @$_SESSION[$this->mod.'_'.$v1.'_start_search']; 
+					$data['r_data_title'] = $title;
+					$data['r_data_total_pages'] = $total_pages+1; 
+					$data['r_data_this_page'] = $_SESSION[$this->mod.'_'.$v1.'_page_num']+1; 
+						
+					return view('video-main', $data); 
+				}
+					
+				break;	
 			case "group" :
 			 
 				$q = "SELECT * FROM ".$CustomHelper->model_to_table("Portal_website_page_model")." WHERE web_id = ? AND page_id = '".$r[0]->id."' AND page_type <> 'url'";	 	
@@ -3176,11 +3438,10 @@ class FrontController extends Controller
 					}
 					else
 					{
-						//redirect($this->mod.'/page/'.$type.'/'.$v1.'/'.$title.'/'.$page);
 						?>
-                        <meta http-equiv="refresh" content="0;URL=<?php echo $this->mod.'/page/'.$type.'/'.$v1.'/'.$title.'/'.$page ?>" />
-                        <?php
-						exit;	
+						<script> window.history.back(); </script> 
+						<?php
+						exit;
 					}
 					
 					$q = "SELECT * FROM ".$CustomHelper->model_to_table($this_model)." WHERE web_id = ? AND status = '1' AND id = '".$info_id."'";	 	
@@ -3190,7 +3451,8 @@ class FrontController extends Controller
   
 					$data['r_news_info'] = $q;
 					$data['main_bg'] = $_SESSION['portal_website_all_bg_' . $this->mod . '_mod_news']; 
-					$data['r_title'] = $CustomHelper->L($r[0]->title,$r[0]->en_title);  
+					$data['r_title'] = $CustomHelper->L($r[0]->title,$r[0]->title); 
+					$data['r_en_title'] = $CustomHelper->L($r[0]->en_title,$r[0]->en_title); 
 					$data['r_page_type'] = $type;
 					$data['r_page_id'] = $v1; 
 					$data['r_data_title'] = $title;
@@ -3238,7 +3500,7 @@ class FrontController extends Controller
 							$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($comment_model)),$q,$v);
 							$r_this = json_decode($res);   
 							$ro_this = $r_this;
-							$data['list_comment_photo'][$ro->id] = $ro_this[0]->img1; 
+							$data['list_comment_photo'][$ro->id] = @$ro_this[0]->img1; 
 						}   
 					}
 					   
@@ -3247,9 +3509,11 @@ class FrontController extends Controller
 				else
 				{ 
 					$data['main_bg'] = $_SESSION['portal_website_all_bg_' . $this->mod . '_mod_news']; 
-					$data['r_title'] = $CustomHelper->L($r[0]->title,$r[0]->en_title); 
+					$data['r_title'] = $CustomHelper->L($r[0]->title,$r[0]->title); 
+					$data['r_en_title'] = $CustomHelper->L($r[0]->en_title,$r[0]->en_title); 
 					$data['r_page_type'] = $type;
 					$data['r_page_id'] = $v1;  
+					$data['r_cat_id'] = @$_SESSION[$this->mod.'_'.$v1.'_group']; 
 					
 					if(empty($_SESSION[$this->mod.'_'.$v1.'_group']))
 					{
@@ -3431,17 +3695,16 @@ class FrontController extends Controller
 					}
 					else
 					{
-						//redirect($this->mod.'/page/'.$type.'/'.$v1.'/'.$title.'/'.$page);
 						?>
-                        <meta http-equiv="refresh" content="0;URL=<?php echo $this->mod.'/page/'.$type.'/'.$v1.'/'.$title.'/'.$page ?>" />
-                        <?php
-						exit;	
+						<script> window.history.back(); </script> 
+						<?php
+						exit;
 					}
 
 
-					$q = "SELECT * FROM ".$CustomHelper->model_to_table($this_model)." WHERE web_id = ? AND status = '1' AND id = '".$info_id."'";	 	
+					$q = "SELECT * FROM ".$CustomHelper->model_to_table($this_model_cat)." WHERE web_id = ? AND status = '1' AND id = '".$info_id."'";	 	
 					$v = $_SESSION['portal_website_' . $this->mod . '_id'];
-					$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this_model)),$q,$v);
+					$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this_model_cat)),$q,$v);
 					$q = json_decode($res); 
 					$data['r_news_info_cat'] = $q; 
 						
@@ -3452,18 +3715,21 @@ class FrontController extends Controller
 					 
 					$data['r_news_info'] = $q; 
 					$data['main_bg'] = $_SESSION['portal_website_all_bg_' . $this->mod . '_mod_question']; 
-					$data['r_title'] = $CustomHelper->L($r[0]->title,$r[0]->en_title);  
+					$data['r_title'] = $CustomHelper->L($r[0]->title,$r[0]->title);  
+					$data['r_en_title'] = $CustomHelper->L($r[0]->en_title,$r[0]->en_title); 
 					$data['r_page_type'] = $type;
 					$data['r_page_id'] = $v1; 
 					$data['r_data_title'] = $title;
 					$data['r_data_this_page'] = $page;
+					$data['r_cat_id'] = @$_SESSION[$this->mod.'_'.$v1.'_group']; 
 					 
 					return view('questionnaire-detail', $data);  	
 				}
 				else
 				{ 
 					$data['main_bg'] = $_SESSION['portal_website_all_bg_' . $this->mod . '_mod_question']; 
-					$data['r_title'] = $CustomHelper->L($r[0]->title,$r[0]->en_title); 
+					$data['r_title'] = $CustomHelper->L($r[0]->title,$r[0]->title);
+					$data['r_en_title'] = $CustomHelper->L($r[0]->en_title,$r[0]->en_title);  
 					$data['r_page_type'] = $type;
 					$data['r_page_id'] = $v1;  
 					
@@ -3551,6 +3817,7 @@ class FrontController extends Controller
 					$data['r_data_title'] = $title;
 					$data['r_data_total_pages'] = $total_pages+1; 
 					$data['r_data_this_page'] = $_SESSION[$this->mod.'_'.$v1.'_page_num']+1; 
+					$data['r_cat_id'] = @$_SESSION[$this->mod.'_'.$v1.'_group']; 
 					 
 					return view('questionnaire-main', $data);  	
 				}
@@ -3563,9 +3830,11 @@ class FrontController extends Controller
 				$this_model_cat = 'Portal_website_poll_cat_model'; 
 				
 				$data['main_bg'] = $_SESSION['portal_website_all_bg_' . $this->mod . '_mod_poll']; 
-				$data['r_title'] = $CustomHelper->L($r[0]->title,$r[0]->en_title); 
+				$data['r_title'] = $CustomHelper->L($r[0]->title,$r[0]->title); 
+				$data['r_en_title'] = $CustomHelper->L($r[0]->en_title,$r[0]->en_title); 
 				$data['r_page_type'] = $type;
 				$data['r_page_id'] = $v1;  
+				$data['r_cat_id'] = @$_SESSION[$this->mod.'_'.$v1.'_group'];
 				
 				if(empty($_SESSION[$this->mod.'_'.$v1.'_group']))
 				{
@@ -3710,8 +3979,7 @@ class FrontController extends Controller
 						} 
 					}
 					
-
-					/*
+ 
 					if($can_pass)
 					{
 						
@@ -3719,8 +3987,8 @@ class FrontController extends Controller
 					else
 					{
 						?>
-                        <meta http-equiv="refresh" content="0;URL=http://127.0.0.1:8000/<?php echo $this->mod.'/page/'.$type.'/'.$v1.'/'.$title.'/'.$page ?>" />
-                        <?php
+						<script> window.history.back(); </script> 
+						<?php
 						exit;	
 					}
 
@@ -3759,7 +4027,7 @@ class FrontController extends Controller
 					$sum = $sum + $r_new_info[0]->p10;
 					
 					$data['r_data_count_all'] = $sum;
-					*/
+					 
 					
 					return view('vote-detail', $data); 
 				}
@@ -3856,6 +4124,7 @@ class FrontController extends Controller
                 <?php
 				exit;
 				break;
+				
 			default :
 			
 				?>

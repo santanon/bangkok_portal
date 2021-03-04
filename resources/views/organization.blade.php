@@ -9,9 +9,9 @@ if(!function_exists('base_url'))
     }
 } 
 ?> 
-@section('title', 'แผนผังองค์กร')
-@section('tagkeyword', '')
-@section('tagdescription', '')
+@section('title', $title)
+@section('tagkeyword', $CustomHelper->L($_SESSION['portal_website_style_'.$mod.'_info_keyword'],$_SESSION['portal_website_style_'.$mod.'_info_keyword']))
+@section('tagdescription', $CustomHelper->L($_SESSION['portal_website_style_'.$mod.'_info_description'],$_SESSION['portal_website_style_'.$mod.'_info_description']))
 
 @extends('template1/include/start')
 @section('contentpage')
@@ -27,61 +27,21 @@ if(!function_exists('base_url'))
         @include('template1/include.header')
     </header>
     
-    <div id="site-content">
-
-        <div class="group-link-mainbkk">
-            <a href="">
-                <div class="icon-bkk">
-                    <img src="{{ asset('template1/assets/images/icons/icon-bkk.png')}}" alt="icon">
-                </div>
-                <div class="text-bkk">
-                    <label>กรุงเทพมหานคร</label>
-                    Bangkok.go.th
-                </div>
-            </a>
+    <div id="site-content"> 
+        <div class="banner-wrapper"> 
+            @include('template1/main-slide-app')
         </div>
-
-        <div class="banner-wrapper onlyOne">
-            <div class="group-mange-section no-mg right-0">
-                <div class="manage-tools">
-                    <ul>
-                        <li class="order-list">จัดการ</li>
-                        <li class="order-list">ลบ</li>
-                        <li class="order-list">ซ่อน</li>
-                        <li class="order-list order-close">ปิด</li>
-                    </ul>
-                </div> 
-                <div class="manage-edit">
-                    <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="icon">
-                </div>
-            </div>
-            <ul>
-                <li>
-                    <div class="bg-layer"></div>
-                    <div class="banner" style="background-image: url('../../template1/assets/images/banner/img-banner-demo2.png');"></div>
-                    <div class="item-Onbanner-outer">
-                        <div class="item-Onbanner-inner">
-                            <div class="list">
-                                <h2 class="title-banner">ข่าวสาร</h2>
-                                <p class="desc-banner">มุ่งมั่นการทำงาน แหล่งค้นคว้าการประชุม เครือข่ายมหานครอาเซียน</p>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-
+    
         <div class="group-section-breadcrumb">
             <div class="container">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">หน้าแรก</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">แผนผังองค์กร</li>
+                        <li class="breadcrumb-item"><a href="/<?php echo $mod ?>"><?php echo $CustomHelper->L('หน้าแรก','Home') ?></a></li>
+                        <li class="breadcrumb-item active" aria-current="page">โครงสร้างองค์กร</li>
                     </ol>
                 </nav>
-            </div>
-            
-        </div> 
+            </div> 
+        </div>
 
         <div class="group-section-content">
             <div class="section-content">
@@ -89,8 +49,8 @@ if(!function_exists('base_url'))
                     <div class="inner-content">
                         <div class="top-content">
                             <div class="group-text">
-                                <h3 class="title color-primary">แผนผังองค์กร</h3>
-                                <p class="desc color-secondary">The Bangkok Metropolitan Council Secretariat </p>
+                                <h3 class="title color-primary"><?php echo $CustomHelper->L('โครงสร้างองค์กร','Organization Charts') ?></h3>
+                                <p class="desc color-secondary"><?php echo $CustomHelper->L('Organization Charts','โครงสร้างองค์กร') ?></p>
                             </div>
                         </div>
                         <div class="main-content border-bottom">
@@ -99,6 +59,12 @@ if(!function_exists('base_url'))
                                     <div id="orgChart"></div>
                                 </div>
                             </div>
+
+                            <form method="post"  action="http://127.0.0.1:8000/manage-admin/organize_submit?m=setting_html_css" onsubmit="document.getElementById('this_info').value = JSON.stringify(org_chart.getData());">
+                            @csrf <!-- {{ csrf_field() }} -->
+                            <div align="center"><input type="submit" value="บันทึกข้อมูล"><br><br><br></div>
+                            <input type="hidden" name="this_info" id="this_info" value="">
+                            </form>
 
                             <div class="group-social-share d-flex align-items-center justify-content-between">
                                 <div class="shared-email d-flex align-items-center">
@@ -213,10 +179,13 @@ if(!function_exists('base_url'))
 <script src="{{ asset('template1/js/jquery.orgchart.js') }}"></script>
 <link rel="stylesheet" href="{{ asset('template1/theme-blue/css/layout/organization.css')}}">
 
-<script>
-    var dataOrg = [
-        {id: 1, name: 'My Organization', link:'', parent: 0},
-    ];
+<script type="text/javascript">
+    var dataOrg = 
+
+        <?php echo $this_data[0]->organize_data; ?>
+
+    ;
+
     //console.log(dataOrg);
 
     var allNode = [];
@@ -224,15 +193,31 @@ if(!function_exists('base_url'))
     $(function(){
         org_chart = $('#orgChart').orgChart({
             data: dataOrg,
-            showControls: true,
-            allowEdit: true,
+
+            <?php 
+            if(isset($_SESSION['panel_login']) && $_SESSION['panel_login'] == '1' && trim($_SESSION['panel_web_url']) == trim($_SESSION['portal_website_'.$mod.'_web_url']))
+            { 
+                ?>
+                showControls: true,
+                allowEdit: true,
+                <?php             
+            }
+            else
+            {
+                ?> 
+                showControls: false,
+                allowEdit: false,
+                <?php
+            }
+            ?>
+ 
             onAddNode: function(node){ 
                 //log('Created new node on node '+node.data.id);
                 org_chart.newNode(node.data.id); 
 
                 //outData
-                allNode = org_chart.getData();
-                console.log(allNode);
+                allNode = org_chart.getData(); 
+                //console.log(JSON.stringify(org_chart.getData()));
             },
             onDeleteNode: function(node){
                 //log('Deleted node '+node.data.id);

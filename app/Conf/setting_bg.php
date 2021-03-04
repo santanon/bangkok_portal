@@ -45,7 +45,7 @@ class Setting_bg
 		$q = json_decode($res);  
 		$data['list_cat'] = $q;
 
-		$main_arr = array("mod_activities","mod_banner","mod_contact","mod_download","mod_faq","mod_gallery","mod_news","mod_poll","mod_question","mod_search","mod_sitemap","mod_texteditor");
+		$main_arr = array("mod_activities","mod_banner","mod_contact","mod_download","mod_faq","mod_gallery","mod_news","mod_poll","mod_question","mod_search","mod_sitemap","mod_texteditor","mod_texteditor",'mod_vdo','mod_organize');
 
 		foreach($main_arr as $main_arr_item)
 		{
@@ -97,6 +97,12 @@ class Setting_bg
 
 		$uf = 'mod_texteditor';
 		${$uf} = $CustomHelper->update_user_files($uf,$this->mod.'_'.$uf);
+
+		$uf = 'mod_vdo';
+		${$uf} = $CustomHelper->update_user_files($uf,$this->mod.'_'.$uf);
+
+		$uf = 'mod_organize';
+		${$uf} = $CustomHelper->update_user_files($uf,$this->mod.'_'.$uf);
    
 		$d = new \stdClass(); 
 		$d->mod_activities = $CustomHelper->input_post('mod_activities', FALSE);
@@ -110,7 +116,9 @@ class Setting_bg
 		$d->mod_question = $CustomHelper->input_post('mod_question', TRUE);
 		$d->mod_search = $CustomHelper->input_post('mod_search', TRUE); 
 		$d->mod_sitemap = $CustomHelper->input_post('mod_sitemap', TRUE); 
-		$d->mod_texteditor = $CustomHelper->input_post('mod_texteditor', TRUE); 
+		$d->mod_texteditor = $CustomHelper->input_post('mod_texteditor', TRUE);  
+		$d->mod_vdo = $CustomHelper->input_post('mod_vdo', TRUE); 
+		$d->mod_organize = $CustomHelper->input_post('mod_organize', TRUE); 
 
 		$d->mod_activities = $mod_activities.'^'.$_POST['mod_activities_alt'].';'.$_POST['mod_activities_alt_en'].';'.$_POST['mod_activities_alt_sort']; 
 		$d->mod_banner = $mod_banner.'^'.$_POST['mod_banner_alt'].';'.$_POST['mod_banner_alt_en'].';'.$_POST['mod_banner_alt_sort'];
@@ -124,6 +132,8 @@ class Setting_bg
 		$d->mod_search = $mod_search.'^'.$_POST['mod_search_alt'].';'.$_POST['mod_search_alt_en'].';'.$_POST['mod_search_alt_sort'];
 		$d->mod_sitemap = $mod_sitemap.'^'.$_POST['mod_sitemap_alt'].';'.$_POST['mod_sitemap_alt_en'].';'.$_POST['mod_sitemap_alt_sort'];
 		$d->mod_texteditor = $mod_texteditor.'^'.$_POST['mod_texteditor_alt'].';'.$_POST['mod_texteditor_alt_en'].';'.$_POST['mod_texteditor_alt_sort']; 
+		$d->mod_vdo = $mod_vdo.'^'.$_POST['mod_vdo_alt'].';'.$_POST['mod_vdo_alt_en'].';'.$_POST['mod_vdo_alt_sort']; 
+		$d->mod_organize = $mod_organize.'^'.$_POST['mod_organize_alt'].';'.$_POST['mod_organize_alt_en'].';'.$_POST['mod_organize_alt_sort']; 
   
 		$this_qr = ''; 
 		foreach($d as $key=>$value) 

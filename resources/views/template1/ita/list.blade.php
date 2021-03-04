@@ -1,11 +1,18 @@
 <div class="section-content">
     <div class="group-mange-section">
+        <div class="manage-tools">
+            <ul>
+                <li class="order-list"><a style="color:#000000" href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('กำลังโหลด...','/manage-admin/add?m=page');">เพิ่มข้อมูล</a></li>
+                <li class="order-list"><a style="color:#000000" href="#" data-toggle="modal" data-target="#modal_full" onclick="sfi('กำลังโหลด...','/manage-admin/list?m=page');">จัดการข้อมูล</a></li>
+                <li class="order-list order-close">ปิด</li>
+            </ul>
+        </div> 
         <div class="manage-edit">
             <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="แก้ไข">
         </div>
-        <div class="manage-add">
+        <!--<div class="manage-add">
             <img src="{{ asset('template1/assets/images/icons/icon-add.svg')}}" alt="เพิ่ม">
-        </div>
+        </div>-->
     </div>
     <div class="inner-content">
         <div class="main-content border-bottom">

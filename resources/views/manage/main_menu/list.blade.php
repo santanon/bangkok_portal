@@ -68,7 +68,7 @@ foreach ($list as $row)
 			?> &nbsp; [ <span class="link-text"><a href="http://127.0.0.1:8000/manage-admin/set_cat_from_main_menu?m=webboard&id=<?php echo $row->data_id ?>"> <?php echo $list_page_mod_title[$row->id] ?> ( <?php echo $list_page_mod_count[$row->id] ?> ) </a></span> ]  <?php
 			break; 
 		case "vdo" :
-			?> &nbsp; [ <span class="link-text"><a href="http://127.0.0.1:8000/manage-admin/set_cat_from_top_menu?m=vdo&id=<?php echo $row->data_id ?>"> <?php echo $list_page_mod_title[$row->id] ?> ( <?php echo $list_page_mod_count[$row->id] ?> ) </a></span> ]  <?php
+			?> &nbsp; [ <span class="link-text"><a href="http://127.0.0.1:8000/manage-admin/set_cat_from_top_menu?m=vdo&id=<?php echo $row->data_id ?>"> <?php echo @$list_page_mod_title[$row->id] ?> ( <?php echo @$list_page_mod_count[$row->id] ?> ) </a></span> ]  <?php
 			break;
 		default :
 			?>-<?php

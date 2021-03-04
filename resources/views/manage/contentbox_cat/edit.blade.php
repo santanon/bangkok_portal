@@ -53,7 +53,7 @@ function switch_cat(v)
                     <option value="4">ภาพกิจกรรม</option> 
                     <option value="5">วิดิทัศน์</option> 
                     <option value="6">ดาวน์โหลด</option> 
-                    <option value="7">แบนเนอร์</option> 
+                    <option value="7">แบนเนอร์ลิงค์</option> 
                     <option value="8">แบบสอบถาม</option> 
                     <option value="9">โพลล์/โหวต</option>    
                     </select> 

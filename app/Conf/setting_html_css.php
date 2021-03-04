@@ -77,5 +77,36 @@ class Setting_html_css
         <?php
         exit;
 	}  
+
+	public function organize_submit()
+	{   
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		   
+		 
+	 
+		$d = new \stdClass();
+		$d->organize_data = $CustomHelper->input_post('this_info', FALSE);  
+		 
+		$this_qr = ''; 
+		foreach($d as $key=>$value) 
+		{
+			$this_qr = $this_qr.$key." = '".addslashes($value)."',";
+		}
+		$this_qr = substr($this_qr,0,-1);  	 
+		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),"UPDATE ".$CustomHelper->model_to_table($this->mod_model)." SET ".$this_qr." WHERE web_id = '".$_SESSION['panel_id']."'",''); 
+		  
+		$_SESSION['panel_style_html_this_info'] = $CustomHelper->input_post('this_info', FALSE);
+		   
+		$CustomHelper->add_log('' . $this->mod_title . ' - Edit ',$_SESSION['panel_username'],$_SESSION['panel_id'],strtoupper($this->mod).'_EDIT'); 
+		  
+		?>
+        <script>
+		alert("บันทึกสำเร็จ");
+		window.history.back();
+		</script>
+        <?php
+        exit;
+	}  
 }
 ?>

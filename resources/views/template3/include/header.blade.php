@@ -7,6 +7,45 @@
             </div>
             <div class="clearPrefix"></div>
         </div>
+
+<script>
+var a_lang = top.location.href; 
+a_lang = a_lang.replace("&lang=th",""); 
+a_lang = a_lang.replace("?lang=th&","?"); 
+a_lang = a_lang.replace("?lang=th",""); 
+a_lang = a_lang.replace("&lang=en",""); 
+a_lang = a_lang.replace("?lang=en&","?"); 
+a_lang = a_lang.replace("?lang=en",""); 
+if(a_lang.indexOf("?") > -1)
+{ 
+    a_lang = a_lang + "&lang=th";	 
+}
+else
+{  
+    a_lang = a_lang + "?lang=th";	
+} 
+</script> 
+                    
+<script>
+var b = top.location.href; 
+b = b.replace("&lang=th",""); 
+b = b.replace("?lang=th&","?"); 
+b = b.replace("?lang=th",""); 
+b = b.replace("&lang=en",""); 
+b = b.replace("?lang=en&","?"); 
+b = b.replace("?lang=en",""); 
+if(b.indexOf("?") > -1)
+{ 
+    b = b + "&lang=en";	 
+}
+else
+{  
+    b = b + "?lang=en";	
+} 
+</script> 
+
+ 
+
         <div class="canvas-lang">
             <ul>
                 <li class="lang active">

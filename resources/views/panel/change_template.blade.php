@@ -1,4 +1,4 @@
-@section('title', '')
+@section('title', 'เลือก Template - '.$_SESSION['panel_web_name'])
 @section('tagkeyword', '')
 @section('tagdescription', '')
 

@@ -171,3 +171,278 @@
     }
 
 }
+
+.swiper-container{
+    margin-bottom: 30px;
+    .swiper-wrapper{
+        position: relative;
+        height: 550px;
+        .swiper-slide{
+            .bg-layer{
+                position: absolute;
+                background-image: url('../../assets/images/bg-layer-onbanner.png');
+                width: 100%;
+                height: 100%;
+                background-repeat: repeat;
+            }
+            .banner{
+                height: 550px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+                img{
+                    width: 100%;
+                }
+            }
+            .item-Onbanner-outer{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                z-index: 99;
+                top: 0;
+                .item-Onbanner-inner{
+                    display: table;
+                    width: 100%;
+                    height: 100%;
+                    padding: 0 10px;
+                    text-align: center;
+                    .list{
+                        display: table-cell;
+                        vertical-align: middle;
+                        .title-banner{
+                            color: #fff;
+                            font-size: 3.6rem;
+                            font-weight: $font-medium;
+                        }
+                        .desc-banner{
+                            color: #fff;
+                            font-size: 2.2rem;
+                            font-weight: $font-regular;
+                            margin-bottom: 50px;
+                        }
+                        .action-link{
+                            padding: 10px 15px;
+                            display: inline-block;
+                            transition: all 0.3s ease;
+                            background-color: rgba(0, 93, 171, 0.8);
+                            a{
+                                color: #fff;
+                                font-size: 16px;
+                                font-weight: $font-regular;
+                                
+                                &:hover{
+                                    text-decoration: none;
+                                }
+                            }
+                            &:hover{
+                                background-color: rgba(0, 93, 171, 1);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .list{
+                .item-video{
+                    width: 100%;
+                }
+            }
+
+
+            audio{
+                position: absolute;
+                bottom: 20px;
+                left: 20px;
+                z-index: 99;
+                width: 100%;
+                max-width: 300px;
+                &:focus{
+                    outline: none;
+                }
+            }
+        }
+
+    }
+    .swiper-scrollbar{
+        border-radius: inherit;
+        opacity: 1 !important;
+        background: rgba(215,217,219,1);
+        .swiper-scrollbar-drag{
+            background: rgba(0,93,171,1);
+            border-radius: inherit;
+        }
+    }
+    &.swiper-container-horizontal{
+        .swiper-scrollbar{
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            height: 7px;
+        }
+
+        .swiper-button-next{
+            top: 54%;
+            background-color: #585c5f;
+            width: 50px;
+            height: 70px;
+            background-image: url('../../assets/images/icons/icon-slide-next.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            &:after{
+                display: none;
+            }
+        }
+        .swiper-button-prev{
+            left: auto;
+            right: 10px;
+            top: 40%;
+            background-color: #585c5f;
+            width: 50px;
+            height: 70px;
+            background-image: url('../../assets/images/icons/icon-slide-prev.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            &:after{
+                display: none;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1366px) {
+        .swiper-wrapper{
+            height: 550px;
+        }
+    }
+    @include media-breakpoint-down(lg) {
+        .swiper-wrapper{
+            height: 550px;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        .swiper-wrapper{
+            height: 430px;
+        }
+        &.swiper-container-horizontal{
+            .swiper-button-prev{
+                top: 35%;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(sm){
+        .swiper-wrapper{
+            height: 300px;
+        }
+        &.swiper-container-horizontal{
+            .swiper-button-next{
+                width: 40px;
+                height: 50px;
+                top: 54%;
+            }
+            .swiper-button-prev{
+                width: 40px;
+                height: 50px;
+                top: 35%;
+            }
+        }
+    }
+    @include media-breakpoint-down(xs){
+        .swiper-wrapper{
+            height: 300px;
+        }
+        &.swiper-container-horizontal{
+            .swiper-button-next{
+                width: 30px;
+                height: 40px;
+            }
+            .swiper-button-prev{
+                width: 30px;
+                height: 40px;   
+            }
+        }
+    }
+    @media only screen and (max-width: 414px) {
+        .swiper-wrapper{
+            height: 233px;
+            .swiper-slide{
+                .item-Onbanner-outer{
+                    .item-Onbanner-inner{
+                        .list{
+                            .title-banner{
+                                font-size: 2.4rem;
+                            }
+                            .desc-banner{
+                                font-size: 2rem;
+                                margin-bottom: 10px;
+                            }
+                            .action-link{
+                                padding: 5px 10px;
+                                a{
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (max-width: 375px) {
+        .swiper-wrapper{
+            height: 211px;
+            .swiper-slide{
+                .item-Onbanner-outer{
+                    .item-Onbanner-inner{
+                        .list{
+                            .title-banner{
+                                font-size: 2.4rem;
+                            }
+                            .desc-banner{
+                                font-size: 2rem;
+                                margin-bottom: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.swiper-container-horizontal{
+            .swiper-button-next{
+                top: 56%;
+            }
+        }
+    }
+    @media only screen and (max-width: 320px) {
+        .swiper-wrapper{
+            height: 186px;
+            .swiper-slide{
+                .item-Onbanner-outer{
+                    .item-Onbanner-inner{
+                        .list{
+                            .title-banner{
+                                font-size: 2rem;
+                            }
+                            .desc-banner{
+                                font-size: 1.8rem;
+                                margin-bottom: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.swiper-container-horizontal{
+            .swiper-button-next{
+                width: 30px;
+                height: 40px;
+                top: 63%;
+            }
+            .swiper-button-prev{
+                width: 30px;
+                height: 40px;
+                top: 35%;
+            }
+        }
+    }
+}

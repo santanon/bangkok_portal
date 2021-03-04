@@ -51,7 +51,7 @@
     
 
 
-    <script type="text/javascript">
+    <script>
         /*$(document).ready(function() {
             $(window).load(function () {
                 $(".se-pre-con.loading").fadeOut(1000);

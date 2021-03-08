@@ -10,6 +10,7 @@ class TextLanguage
 { 
     function lang($v)
 	{
+		$lang['section'] 				= "ฝ่าย";
 		$lang['ita'] 					= "ITA";
 		$lang['contactus_sub'] 			= "ติดต่อส่วนราชการ";
 		$lang['contactus_sub_cat'] 		= "ติดต่อส่วนราชการ";
@@ -1475,6 +1476,13 @@ class TextLanguage
 											   - หากต้องการเปลี่ยนชื่อเมนูหรือแก้ไข สามารถคลิกตรง แก้ไข เพื่อทำการเปลี่ยนชื่อเมนูได้ตามความต้องการ<br />';
 		/********************************************************   End Copy Right   ************************************************************/
 		
-		return @$lang[$v];	
+		if(isset($lang[$v]) && $lang[$v] != '')
+		{
+			return $lang[$v];	
+		}
+		else
+		{
+			return $v;
+		} 
 	}
 }

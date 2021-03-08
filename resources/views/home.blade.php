@@ -209,7 +209,7 @@ $(document).ready(function () {
 
 
     const swiper = new Swiper('.swiper-container', {
-        speed: 1200,
+        speed: 12000,
         lazy: true,
         //autoHeight: true, //enable auto height
         //loop: true,

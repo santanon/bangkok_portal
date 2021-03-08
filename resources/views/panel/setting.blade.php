@@ -93,6 +93,15 @@ function sfi(title,url)
                 <div class="group-list-menu">
                     <div class="row">
  
+                            <div class="col-md-3"> 
+                            <div class="list-menu success" data-toggle="modal" data-target="#modalpanel" onclick="sfi('กำลังโหลด...','/manage-admin/edit_cover?m=setting_html_css');">
+                            <div class="icon-menu"> 
+                                <i class="far fa-image"></i>
+                            </div>
+                            <div class="text-menu">Cover Page</div> 
+                            </div>
+                            </div> 
+                        
                             <div class="col-md-3">
                             <div class="list-menu success" data-toggle="modal" data-target="#modalpanel" onclick="sfi('กำลังโหลด...','/manage-admin/edit_website?m=setting_website');">
                             <div class="icon-menu"> 
@@ -175,7 +184,7 @@ function sfi(title,url)
                             </div>
 
                             <div class="col-md-3">
-                            <div class="list-menu success" data-toggle="modal" data-target="#modalpanel" onclick="sfi('กำลังโหลด...','/manage-admin/list?m=member');">
+                            <div class="list-menu success" data-toggle="modal" data-target="#modalpanel" onclick="sfi('กำลังโหลด...','/manage-admin/list?m=user');">
                             <div class="icon-menu">
                                 <i class="fas fa-users"></i>
                             </div>

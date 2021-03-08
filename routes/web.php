@@ -35,11 +35,13 @@ Route::any('panel-admin/link_helper',              [PanelController::class,'link
 /* Management */
 Route::any('manage-admin/list',         [ManageController::class,'list']);
 Route::any('manage-admin/add',          [ManageController::class,'add']);
+Route::any('manage-admin/send',          [ManageController::class,'send']);
 Route::any('manage-admin/edit',         [ManageController::class,'edit']);
 Route::any('manage-admin/add_submit',   [ManageController::class,'add_submit']);
 Route::any('manage-admin/edit_submit',  [ManageController::class,'edit_submit']);
 Route::any('manage-admin/edit_submit2',  [ManageController::class,'edit_submit2']);
 Route::any('manage-admin/edit_logo',    [ManageController::class,'edit_logo']);
+Route::any('manage-admin/edit_cover',    [ManageController::class,'edit_cover']);
 
 Route::any('manage-admin/edit_website', [ManageController::class,'edit_website']);
 Route::any('manage-admin/edit_account', [ManageController::class,'edit_account']);
@@ -117,6 +119,7 @@ foreach($q as $web_obj)
     Route::any($web_obj->web_url.'/ita',[FrontController::class,'ita']);
     Route::any($web_obj->web_url.'/organization',[FrontController::class,'organization']);
     Route::any($web_obj->web_url.'/sitemap',[FrontController::class,'sitemap']);
+    Route::any($web_obj->web_url.'/search',[FrontController::class,'search']);
     Route::any($web_obj->web_url.'/page/{v1?}/{v2?}/{v3?}/{v4?}/{v5?}/{v6?}/{v7?}/{v8?}/{v9?}/{v10?}',[FrontController::class,'page']);
 }   
  

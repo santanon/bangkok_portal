@@ -1,7 +1,7 @@
 <?php 
 $CustomHelper = new \App\CustomHelper; 
 $TextLanguage = new \App\TextLanguage;  
-?>   
+?> 
  
 @include('manage.include.main_list_header')
                                                     

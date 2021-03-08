@@ -1,11 +1,11 @@
 <div class="section-content">
     <div class="group-mange-section">
-        <div class="manage-edit">
+        <!--<div class="manage-edit">
             <img src="{{ asset('template1/assets/images/icons/icon-edit.svg')}}" alt="แก้ไข">
         </div>
         <div class="manage-add">
             <img src="{{ asset('template1/assets/images/icons/icon-add.svg')}}" alt="เพิ่ม">
-        </div>
+        </div>-->
     </div>
                 <div class="container">
                     <div class="inner-content">
@@ -20,10 +20,10 @@
                                 <div class="row">
                                     <div class="col-lg-4">
                                         <div class="input-custom inp-search">
-                                            <input class="style-input" type="text" name="" placeholder="คำค้นหา" />
+                                            <input class="style-input" type="text" name="" placeholder="คำค้นหา" value="<?php echo @$_GET['s'] ?>" />
                                         </div>
                                     </div>
-                                    <div class="col-lg-3">
+                                    <?php /*<div class="col-lg-3">
                                         <div class="input-custom inp-categories">
                                             <div class="select-wrapper width-full">
                                                 <select name="month" class="slc">
@@ -36,7 +36,7 @@
                                                 </select>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> 
                                     <div class="col-lg-2">
                                         <div class="input-custom inp-calendar">
                                             <input id="start_date" class="style-input" type="text" name="datefilter" placeholder="จากวันที่" autocomplete="off" data-provide="datepicker" data-date-language="th-th" />
@@ -48,7 +48,7 @@
                                             <input id="end_date" class="style-input" type="text" name="datefilter" placeholder="ถึงวันที่" autocomplete="off" data-provide="datepicker" data-date-language="th-th" />
                                             <div class="icon-calendar"><em class="far fa-calendar"></em></div>
                                         </div>
-                                    </div>
+                                    </div>*/ ?>
                                     <div class="col-lg-1">
                                         <div class="btn-search ">
                                             <button type="submit" class="icon-search bg-color-primary">
@@ -125,7 +125,7 @@
 
                             <div class="pagination-custom d-flex justify-content-end align-items-center">
                                 <div class="all-page">
-                                    Page <span>1</span> of <span>120</span>
+                                    Page <span>1</span> of <span>1</span>
                                 </div>
                                 <div class="item-page d-flex justify-content-end align-items-center">
                                     <div class="slide-prev disabled"></div>

@@ -41,6 +41,23 @@ class Setting_html_css
 		
 		return $data;
 	}
+
+	public function cover($v1 = '0')
+	{   
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		  
+		$data['this_cat'] = "Cover Page";
+		$data['this_page'] = $TextLanguage->lang('edit');
+		$data['title'] = $data['this_page'] . ' : ' . $data['this_cat'] . ' - ' . $TextLanguage->lang('bangkok_portal');     
+		$data['config_mod'] = $this->mod; 
+		$data['config_submenu_title'] = $this->config_submenu_title;
+		$data['config_submenu_mod'] = $this->config_submenu_mod;  
+		$data['config_header_info'] = $TextLanguage->lang('help_poll_cat_list'); 
+		$data['config_footer_js'] = 'mainmenuFocus(1,2,5);btn2stageFocus(0,1);'; 
+		
+		return $data;
+	}
 	
 	public function edit_submit()
 	{   

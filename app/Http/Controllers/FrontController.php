@@ -4247,7 +4247,7 @@ class FrontController extends Controller
 		 $s = $CustomHelper->input_post('s', TRUE); 
 		 $data['s'] = $s; 
 		 
-		 return view('portal/page-search', $data);   
+		 return view('search-main', $data);   
 	}
 	
 	public function search_iframe($s = '')

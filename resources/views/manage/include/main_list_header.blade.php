@@ -3,8 +3,7 @@
 <script>
 parent.document.getElementById('modal_full_span').innerHTML = '<?php echo $this_cat ?>' 
 </script>
-
-
+ 
  <div id="se-wrapper">
 		<div id="page-container" class="no-bg-slider"> 
 			<div id="se-maincontainer-wrapper" class="page01">
@@ -13,12 +12,11 @@ parent.document.getElementById('modal_full_span').innerHTML = '<?php echo $this_
 						<div id="content-slide-container"> 
 							<div class="content-slide-box expanded"> 
                                  
-								<div class="content-slide-detail">
-									   
+								<div class="content-slide-detail"> 
 									<div class="right"> 
-                                        @include('manage.include.content_head') 
+                                        @include('manage.include.content_head')  
                                         <!--<div class="desc-box"> 
-        								<?php echo $config_list_header_info ?> 
+        								<?php echo $config_list_header_info ?>  
                                         </div>--> 
 										<?php
                                         if($config_use_add == true || $config_use_sort == true)
@@ -34,10 +32,39 @@ parent.document.getElementById('modal_full_span').innerHTML = '<?php echo $this_
                                         ?>   
 										<div class="header">  
                                         	<div class="left">   
-                                            @include('manage.include.list_search_column')	 
-											</div>    
+                                            @include('manage.include.list_search_column')
+											</div>	
+											<?php 
+											if($config_mod == 'home_bg')
+											{
+												?>
+												การเปลี่ยนภาพ : 
+                                                <select style="height: 25px;">
+													<option value="">Slide Show</option>
+													<option value="">Dissolve</option>
+													<option value="">Fade In</option>
+													<option value="">Fade Out</option>
+												</select>
+												<select style="height: 25px;">
+													<option value="">3 วินาที</option>
+													<option value="" selected>5 วินาที</option>
+													<option value="">10 วินาที</option>
+													<option value="">15 วินาที</option>
+													<option value="">30 วินาที</option>
+												</select>
+                                                <?php
+											} 
+											?>   
+											<?php 
+											if($config_mod == 'inbox')
+											{
+												?>
+                                                  <span class="btn round big green"><input onclick="window.location = 'send?m=<?php echo $config_mod ?>';" type="button" class="fontfacetext" value="ส่งข้อความ"></span> 
+                                                <?php
+											} 
+											?>
                                             <div class="right">  
-                                            <?php
+                                            <?php 
 											if($config_use_add)
 											{
 												?>

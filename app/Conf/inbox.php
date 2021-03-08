@@ -25,12 +25,13 @@ class Inbox
 									   
 	var $config_list_footer_js = 'btn2stageFocus(0,1);';
 	
+	var $config_use_send = true;
 	var $config_use_edit = false;
 	var $config_use_delete = true;
 	var $config_use_sort = false;
 	
 	var $mod_cat_field = 'flag_read'; 
-	var $config_dropdown_cat_file = 'panel/include/list_cat_dropdown_inbox';
+	var $config_dropdown_cat_file = 'manage.include.list_cat_dropdown_inbox';
 	var $mod_cat_dropdown_title = 'type'; 
 	
 	var $config_sort1 = 'id'; 
@@ -42,10 +43,10 @@ class Inbox
 		$TextLanguage = new \App\TextLanguage;
 		  
 		 
-		 
+		$v1 = $_GET['id'];
 		 
 		
-		$q = "SELECT * FROM ".$CustomHelper->model_to_table($this->mod_model)." WHERE web_id = ?";	 	
+		$q = "SELECT * FROM ".$CustomHelper->model_to_table($this->mod_model)." WHERE web_id = ? AND id = '".$v1."'";	 	
 		$v = $_SESSION['panel_id'];
 		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),$q,$v);
 		$q = json_decode($res);
@@ -82,7 +83,7 @@ class Inbox
 			  
 			$data['config_mod'] = $this->mod;       
 			   
-			$this->load->view('panel/inbox/read', $data); 
+			return $data; 
 		}
 		else
 		{
@@ -154,8 +155,8 @@ class Inbox
 									   
 		$data['config_footer_js'] = 'btn2stageFocus(0,2);';    
 		$data['config_dropdown_title'] = $TextLanguage->lang(@$this->mod_cat_dropdown_title);      
-		  
-		$this->load->view('panel/inbox/send', $data); 
+		   
+		return $data;
 	}
 	
 	public function send_submit()

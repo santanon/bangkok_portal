@@ -433,11 +433,11 @@ foreach($_SESSION['portal_website_main_menu_' . $mod . '_list'] as $r)
                 <div class="close-search">
                     <div class="icon-close"></div>
                 </div>
-                 <form action="">
+                 <form action="/<?php echo $mod ?>/search">
                 @csrf <!-- {{ csrf_field() }} -->
                     <div class="input-custom">
                         <div class="input-box">
-                            <input type="text" name="" required="">
+                            <input type="text" name="s" required="">
                             <label for="">Search</label>
                         </div>
                         <div class="btn-search">

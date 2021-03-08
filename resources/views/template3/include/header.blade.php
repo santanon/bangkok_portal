@@ -166,11 +166,11 @@ else
 
                         <div class="section-search-wrapper">
                             <div class="group-search">
-                                 <form action="">
+                                 <form action="/<?php echo $mod ?>/search">
                 @csrf <!-- {{ csrf_field() }} -->
                                     <div class="input-custom">
                                         <div class="input-box">
-                                            <input type="text" name="" required="">
+                                            <input type="text" name="s" required="">
                                             <label for="">Search</label>
                                         </div>
                                     </div>

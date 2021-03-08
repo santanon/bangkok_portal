@@ -344,6 +344,18 @@ class ManageController extends Controller
 		$data = $m->index();
 		  
         return view('manage.'.$_GET['m'].'.index',$data);  
+    } 
+	public function edit_cover()
+    {      
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage; 
+		$this->include_check_login();  
+
+		$c = "\App\Conf\\".$_GET['m'];
+		$m = new $c();  
+		$data = $m->cover();
+		  
+        return view('manage.'.$_GET['m'].'.cover',$data);  
     }  
 	public function edit_website()
     {      
@@ -477,9 +489,7 @@ class ManageController extends Controller
 		$data = $m->info_submit();
  
         return view('manage.contactus.edit',$data);  
-    }
-
-
+    } 
 	public function edit_copyright()
     {      
 		$CustomHelper = new \App\CustomHelper;
@@ -782,7 +792,7 @@ class ManageController extends Controller
 		$q = "SELECT * FROM ".$CustomHelper->model_to_table($this->mod_model)." WHERE id > 0 ".$qr_d;
 		$v = $_SESSION['panel_id'];
 		$res = $CustomHelper->API_CALL($CustomHelper->API_URL($CustomHelper->model_to_api($this->mod_model)),$q,$v);
-		    		  
+    		  
 		$data['list'] = json_decode($res); 
 		$data['this_cat'] = $TextLanguage->lang($this->mod);
 		$data['this_page'] = 'แสดงรายการ';
@@ -1797,6 +1807,18 @@ class ManageController extends Controller
 			exit;
 		} 
 		exit;	
+	}
+	public function send()
+	{    
+		$CustomHelper = new \App\CustomHelper;
+		$TextLanguage = new \App\TextLanguage;
+		$this->include_check_login();
+		 
+		$c = "\App\Conf\\".$_GET['m'];
+		$m = new $c();  
+		$data = $m->send();
+		  
+        return view('manage.'.$_GET['m'].'.send',$data);
 	}	
 	public function search()
 	{    

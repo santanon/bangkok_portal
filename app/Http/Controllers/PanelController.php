@@ -461,14 +461,37 @@ class PanelController extends Controller
 		$new_login_type = "";
 		$new_login_id = "";
 		$this_id = 0;
-		 
-        $u = $request->input('u');
-        $p = $request->input('p');
-        
-        $q = "SELECT * FROM tbl_portal_website WHERE username = '".addslashes($u)."' AND password = ?";
-        $v = md5($p);
-		$res = $CustomHelper->API_CALL($CustomHelper->API_URL('api_login_check'),$q,$v);
-		
+		$res = "";
+
+		if(isset($_GET['p']))
+		{
+			$a = $_GET['p'];
+			$a = base64_decode($a);
+			$arr = explode('|',$a); 
+			$diff = date('U') - $arr[2];
+
+			/*echo $a.'<br>'; 
+			echo $diff.'<br>';
+			exit;*/
+ 
+			if($diff < 600)
+			{ 
+				$q = "SELECT * FROM tbl_portal_website WHERE username = '".addslashes($arr[0])."' AND password = ?";  
+				$v = $arr[1]; 
+				$res = $CustomHelper->API_CALL($CustomHelper->API_URL('api_login_check'),$q,$v); 
+			} 	
+		}
+		else
+		{
+			$u = $request->input('u');
+			$p = $request->input('p');
+			
+			$q = "SELECT * FROM tbl_portal_website WHERE username = '".addslashes($u)."' AND password = ?";
+			$v = md5($p);
+			$res = $CustomHelper->API_CALL($CustomHelper->API_URL('api_login_check'),$q,$v);
+
+		}
+   
 		if(trim($res) == '')
         {  
             ?><script>alert('ไม่สามารถเชื่อมต่อ Service : Login ได้ \n\n<?php echo $CustomHelper->API_URL('api_login_check') ?>');window.history.back();</script><?php

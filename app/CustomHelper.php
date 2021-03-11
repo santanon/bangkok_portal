@@ -31,7 +31,7 @@ class CustomHelper
     }  
 	
 	function API_CALL($url,$q,$v)
-    {  
+    {   
 		$k = 'Si@mEPoRtaL@2564';  
         $algo = 'AES-128-ECB';  
 

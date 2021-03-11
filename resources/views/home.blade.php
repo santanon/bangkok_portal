@@ -142,8 +142,8 @@ if(!function_exists('base_url'))
             <source src="{{ asset('Video/ocean.ogv')}}" type="video/ogg" />
             <source src="{{ asset('Video/ocean.webm')}}" type="video/webm" />
         </video> -->
+        
 
- 
     </div>
 
     <footer id="footer-wrapper">
@@ -166,7 +166,6 @@ if(!function_exists('base_url'))
 
 <!-- <link href="https://vjs.zencdn.net/7.10.2/video-js.css" rel="stylesheet" />
 <script src="https://vjs.zencdn.net/7.10.2/video.min.js"></script> -->
-
 
 <link rel="stylesheet" href="{{ asset('swiper/swiper-bundle.min.css')}}">
 <script src="{{ asset('swiper/swiper-bundle.js') }}"></script>
@@ -209,8 +208,9 @@ $(document).ready(function () {
 
 
     const swiper = new Swiper('.swiper-container', {
-        speed: 12000,
+        speed: 2200,
         lazy: true,
+        effect: 'fade',
         //autoHeight: true, //enable auto height
         //loop: true,
         // autoplay: {
@@ -225,7 +225,7 @@ $(document).ready(function () {
             ?> 
             effect: 'fade',
             fadeEffect: {
-            crossFade: true
+             crossFade: true
             },
             <?php
         }
@@ -281,18 +281,25 @@ $(document).ready(function () {
         //     type: 'fraction',// Number
         // },
 
-        // on: {
-        //     slideChange: function (el) {
-        //     console.log('1');
-        //     $('.swiper-slide').each(function () {
-        //         var audioPlayer = $(this).find('audio').get(0);
-        //         if (audioPlayer) {
-        //             audioPlayer.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-        //         }
-        //     });
-        //     },
-        // },
+        on: {
+            slideChangeTransitionStart: function(){
+                //alert('before Change')
+                var activeIndex = this.activeIndex;
+                //this.slides.addClass('sliding');
+
+                $('.swiper-slide').removeClass('effect-slide');
+                this.slides.eq(activeIndex).addClass('effect-slide');
+                //console.log(activeIndex);
+            },
+            slideChangeTransitionEnd: function () {
+                $('.swiper-slide').removeClass('effect-slide');
+                //$('.swiper-slide').removeClass('sliding');
+            },
+            
+        }
     });
+
+
 });
 </script>
 

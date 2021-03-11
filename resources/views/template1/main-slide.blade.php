@@ -112,10 +112,14 @@
             $r_en_title_2 = '';
         }  
         ?>
-        <div class="swiper-slide"> 
+        <div class="swiper-slide effect"> 
             <div class="group-banner-img">
-                <div class="bg-layer"></div>
-                <div class="banner" style="background-image: url('<?php echo $CustomHelper->get_file_form_code($r->img1,0) ?>');"> 
+                <!-- <div class="bg-layer">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/fire-fotos-8e3f9.appspot.com/o/img%2Fnoise.png?alt=media&token=9e1c7d72-c5a2-4973-9af2-a6a17c9050bd" alt="Noise" title="Noise">
+                </div> -->
+                <div class="banner" style="background-image: url('<?php echo $CustomHelper->get_file_form_code($r->img1,0) ?>');"></div>
+                <div class="bg-slide">
+                    <img src="{{ asset('assets/images/noise.png')}}" alt="Noise" title="Noise">
                 </div>
                 <div class="item-Onbanner-outer">
                     <div class="item-Onbanner-inner">

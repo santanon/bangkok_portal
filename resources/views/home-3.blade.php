@@ -238,6 +238,11 @@ if(!function_exists('base_url'))
  
 @include('template3/include.css_scripts')
 
+
+<link rel="stylesheet" href="{{ asset('swiper/swiper-bundle.min.css')}}">
+<script src="{{ asset('swiper/swiper-bundle.js') }}"></script>
+<script src="{{ asset('swiper/swiper-bundle.min.js') }}"></script>
+
 <script>
     $(document).ready(function () {
         
@@ -268,6 +273,99 @@ if(!function_exists('base_url'))
         }else{
             $("div.group-section-content").removeAttr("id");
         }
+
+
+        const swiper = new Swiper('.swiper-container', {
+        speed: 2200,
+        lazy: true,
+        effect: 'fade',
+        autoplay: {
+            delay: 5000,
+        },
+        //autoHeight: true, //enable auto height
+        //loop: true,
+        // autoplay: {
+        //     delay: 5000,
+        //     disableOnInteraction: false,
+        // }, 
+        <?php 
+        $effect = 1;
+        if($effect == 1)
+        {
+            //Effect Fade
+            ?> 
+            effect: 'fade',
+            fadeEffect: {
+             crossFade: true
+            },
+            <?php
+        }
+        else if($effect == 2)
+        {
+            //Effect Flip
+            ?> 
+            effect: 'flip',
+            grabCursor: true,
+            <?php
+        }
+        else if($effect == 3)
+        {
+            //Effect Cube
+            ?>  
+            effect: 'cube',
+            grabCursor: true,
+            cubeEffect: {
+                shadow: true,
+                slideShadows: true,
+                shadowOffset: 20,
+                shadowScale: 0.94,
+                },
+            <?php
+        }
+        else if($effect == 4)
+        {
+            //Effect Cover Flow
+            ?>  
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            <?php
+        }
+        ?>  
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'fraction',// Number
+        },
+
+        on: {
+            slideChangeTransitionStart: function(){
+                //alert('before Change')
+                var activeIndex = this.activeIndex;
+                //this.slides.addClass('sliding');
+
+                $('.swiper-slide').removeClass('effect-slide');
+                this.slides.eq(activeIndex).addClass('effect-slide');
+                //console.log(activeIndex);
+            },
+            slideChangeTransitionEnd: function () {
+                $('.swiper-slide').removeClass('effect-slide');
+                //$('.swiper-slide').removeClass('sliding');
+            },
+            
+        }
+    });
 
     });
 </script>

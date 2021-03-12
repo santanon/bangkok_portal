@@ -211,6 +211,9 @@ $(document).ready(function () {
         speed: 2200,
         lazy: true,
         effect: 'fade',
+        autoplay: {
+            delay: 5000,
+        },
         //autoHeight: true, //enable auto height
         //loop: true,
         // autoplay: {
